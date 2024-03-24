@@ -417,7 +417,7 @@ public open class CfnDeploymentGroup(
    * in the deployment group.
    */
   public open fun ec2TagFilters(`value`: List<Any>) {
-    unwrap(this).setEc2TagFilters(`value`)
+    unwrap(this).setEc2TagFilters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -469,7 +469,7 @@ public open class CfnDeploymentGroup(
    * The target Amazon ECS services in the deployment group.
    */
   public open fun ecsServices(`value`: List<Any>) {
-    unwrap(this).setEcsServices(`value`)
+    unwrap(this).setEcsServices(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -533,7 +533,7 @@ public open class CfnDeploymentGroup(
    * in the deployment group.
    */
   public open fun onPremisesInstanceTagFilters(`value`: List<Any>) {
-    unwrap(this).setOnPremisesInstanceTagFilters(`value`)
+    unwrap(this).setOnPremisesInstanceTagFilters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -662,7 +662,7 @@ public open class CfnDeploymentGroup(
    * Information about triggers associated with the deployment group.
    */
   public open fun triggerConfigurations(`value`: List<Any>) {
-    unwrap(this).setTriggerConfigurations(`value`)
+    unwrap(this).setTriggerConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1667,7 +1667,7 @@ public open class CfnDeploymentGroup(
      * that you want to include in the deployment group. 
      */
     override fun ec2TagFilters(ec2TagFilters: List<Any>) {
-      cdkBuilder.ec2TagFilters(ec2TagFilters)
+      cdkBuilder.ec2TagFilters(ec2TagFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1751,7 +1751,7 @@ public open class CfnDeploymentGroup(
      * @param ecsServices The target Amazon ECS services in the deployment group. 
      */
     override fun ecsServices(ecsServices: List<Any>) {
-      cdkBuilder.ecsServices(ecsServices)
+      cdkBuilder.ecsServices(ecsServices.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1846,7 +1846,7 @@ public open class CfnDeploymentGroup(
      * on-premises instances that you want to include in the deployment group. 
      */
     override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>) {
-      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters)
+      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2034,7 +2034,7 @@ public open class CfnDeploymentGroup(
      * 
      */
     override fun triggerConfigurations(triggerConfigurations: List<Any>) {
-      cdkBuilder.triggerConfigurations(triggerConfigurations)
+      cdkBuilder.triggerConfigurations(triggerConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2208,7 +2208,7 @@ public open class CfnDeploymentGroup(
        * A maximum of 10 alarms can be added.
        */
       override fun alarms(alarms: List<Any>) {
-        cdkBuilder.alarms(alarms)
+        cdkBuilder.alarms(alarms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3862,7 +3862,7 @@ public open class CfnDeploymentGroup(
        * tag groups in the list.
        */
       override fun ec2TagGroup(ec2TagGroup: List<Any>) {
-        cdkBuilder.ec2TagGroup(ec2TagGroup)
+        cdkBuilder.ec2TagGroup(ec2TagGroup.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4015,7 +4015,7 @@ public open class CfnDeploymentGroup(
        * Duplicates are not allowed.
        */
       override fun ec2TagSetList(ec2TagSetList: List<Any>) {
-        cdkBuilder.ec2TagSetList(ec2TagSetList)
+        cdkBuilder.ec2TagSetList(ec2TagSetList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4736,7 +4736,7 @@ public open class CfnDeploymentGroup(
        * Balancers or Network Load Balancers, use the `targetGroupInfoList` array instead of this one.
        */
       override fun elbInfoList(elbInfoList: List<Any>) {
-        cdkBuilder.elbInfoList(elbInfoList)
+        cdkBuilder.elbInfoList(elbInfoList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4775,7 +4775,7 @@ public open class CfnDeploymentGroup(
        * Balancers, use the `elbInfoList` array instead of this one.
        */
       override fun targetGroupInfoList(targetGroupInfoList: List<Any>) {
-        cdkBuilder.targetGroupInfoList(targetGroupInfoList)
+        cdkBuilder.targetGroupInfoList(targetGroupInfoList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4804,7 +4804,7 @@ public open class CfnDeploymentGroup(
        * This is an array of `TargeGroupPairInfo` objects with a maximum size of one.
        */
       override fun targetGroupPairInfoList(targetGroupPairInfoList: List<Any>) {
-        cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList)
+        cdkBuilder.targetGroupPairInfoList(targetGroupPairInfoList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4956,7 +4956,7 @@ public open class CfnDeploymentGroup(
        * @param onPremisesTagGroup Information about groups of on-premises instance tags.
        */
       override fun onPremisesTagGroup(onPremisesTagGroup: List<Any>) {
-        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup)
+        cdkBuilder.onPremisesTagGroup(onPremisesTagGroup.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5111,7 +5111,7 @@ public open class CfnDeploymentGroup(
        * Duplicates are not allowed.
        */
       override fun onPremisesTagSetList(onPremisesTagSetList: List<Any>) {
-        cdkBuilder.onPremisesTagSetList(onPremisesTagSetList)
+        cdkBuilder.onPremisesTagSetList(onPremisesTagSetList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6123,7 +6123,7 @@ public open class CfnDeploymentGroup(
        * that serves traffic after the deployment is complete.
        */
       override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
+        cdkBuilder.targetGroups(targetGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

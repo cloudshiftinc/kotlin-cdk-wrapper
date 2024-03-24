@@ -570,7 +570,7 @@ public open class CfnStorageLensGroup(
        * At least one object tag must be specified. Up to 10 object tags are allowed.
        */
       override fun matchAnyTag(matchAnyTag: List<Any>) {
-        cdkBuilder.matchAnyTag(matchAnyTag)
+        cdkBuilder.matchAnyTag(matchAnyTag.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1043,7 +1043,7 @@ public open class CfnStorageLensGroup(
        * At least one object tag must be specified. Up to 10 object tags are allowed.
        */
       override fun matchAnyTag(matchAnyTag: List<Any>) {
-        cdkBuilder.matchAnyTag(matchAnyTag)
+        cdkBuilder.matchAnyTag(matchAnyTag.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1667,7 +1667,7 @@ public open class CfnStorageLensGroup(
        * At least one object tag must be specified. Up to 10 object tags are allowed.
        */
       override fun matchAnyTag(matchAnyTag: List<Any>) {
-        cdkBuilder.matchAnyTag(matchAnyTag)
+        cdkBuilder.matchAnyTag(matchAnyTag.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

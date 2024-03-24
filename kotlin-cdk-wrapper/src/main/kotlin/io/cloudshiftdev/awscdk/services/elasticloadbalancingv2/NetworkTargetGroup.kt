@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
@@ -68,7 +69,8 @@ public open class NetworkTargetGroup(
    * @param targets 
    */
   public override fun addTarget(vararg targets: INetworkLoadBalancerTarget) {
-    unwrap(this).addTarget(*targets.map(INetworkLoadBalancerTarget::unwrap).toTypedArray())
+    unwrap(this).addTarget(*targets.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget}.toTypedArray())
   }
 
   /**

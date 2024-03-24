@@ -115,7 +115,7 @@ public open class CfnIdentityPoolRoleAttachment(
    * How users for a specific identity provider are mapped to roles.
    */
   public open fun roleMappings(`value`: Map<String, Any>) {
-    unwrap(this).setRoleMappings(`value`)
+    unwrap(this).setRoleMappings(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnIdentityPoolRoleAttachment(
      * @param roleMappings How users for a specific identity provider are mapped to roles. 
      */
     override fun roleMappings(roleMappings: Map<String, Any>) {
-      cdkBuilder.roleMappings(roleMappings)
+      cdkBuilder.roleMappings(roleMappings.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -827,7 +827,7 @@ public open class CfnIdentityPoolRoleAttachment(
        * You can specify up to 25 rules per identity provider.
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

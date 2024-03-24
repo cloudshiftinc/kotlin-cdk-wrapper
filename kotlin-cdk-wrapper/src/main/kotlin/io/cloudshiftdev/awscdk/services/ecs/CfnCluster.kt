@@ -146,7 +146,7 @@ public open class CfnCluster(
    * The settings to use when creating a cluster.
    */
   public open fun clusterSettings(`value`: List<Any>) {
-    unwrap(this).setClusterSettings(`value`)
+    unwrap(this).setClusterSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -198,7 +198,7 @@ public open class CfnCluster(
    * The default capacity provider strategy for the cluster.
    */
   public open fun defaultCapacityProviderStrategy(`value`: List<Any>) {
-    unwrap(this).setDefaultCapacityProviderStrategy(`value`)
+    unwrap(this).setDefaultCapacityProviderStrategy(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -653,7 +653,7 @@ public open class CfnCluster(
      * @param clusterSettings The settings to use when creating a cluster. 
      */
     override fun clusterSettings(clusterSettings: List<Any>) {
-      cdkBuilder.clusterSettings(clusterSettings)
+      cdkBuilder.clusterSettings(clusterSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -723,7 +723,7 @@ public open class CfnCluster(
      * cluster. 
      */
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
-      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy)
+      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -182,7 +182,7 @@ public open class CfnObjectType(
    * A list of field definitions for the object type mapping.
    */
   public open fun fields(`value`: List<Any>) {
-    unwrap(this).setFields(`value`)
+    unwrap(this).setFields(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnObjectType(
    * A list of keys that can be used to map data to the profile or search for the profile.
    */
   public open fun keys(`value`: List<Any>) {
-    unwrap(this).setKeys(`value`)
+    unwrap(this).setKeys(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -547,7 +547,7 @@ public open class CfnObjectType(
      * @param fields A list of field definitions for the object type mapping. 
      */
     override fun fields(fields: List<Any>) {
-      cdkBuilder.fields(fields)
+      cdkBuilder.fields(fields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -577,7 +577,7 @@ public open class CfnObjectType(
      * profile. 
      */
     override fun keys(keys: List<Any>) {
-      cdkBuilder.keys(keys)
+      cdkBuilder.keys(keys.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -888,7 +888,7 @@ public open class CfnObjectType(
        * @param objectTypeKeyList A list of ObjectTypeKey.
        */
       override fun objectTypeKeyList(objectTypeKeyList: List<Any>) {
-        cdkBuilder.objectTypeKeyList(objectTypeKeyList)
+        cdkBuilder.objectTypeKeyList(objectTypeKeyList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

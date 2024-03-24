@@ -168,7 +168,7 @@ public open class CfnAnomalyDetector(
    * The dimensions of the metric associated with the anomaly detection band.
    */
   public open fun dimensions(`value`: List<Any>) {
-    unwrap(this).setDimensions(`value`)
+    unwrap(this).setDimensions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -499,7 +499,7 @@ public open class CfnAnomalyDetector(
      * @param dimensions The dimensions of the metric associated with the anomaly detection band. 
      */
     override fun dimensions(dimensions: List<Any>) {
-      cdkBuilder.dimensions(dimensions)
+      cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -752,7 +752,7 @@ public open class CfnAnomalyDetector(
        * deployments, aren't used when CloudWatch creates or updates the model.
        */
       override fun excludedTimeRanges(excludedTimeRanges: List<Any>) {
-        cdkBuilder.excludedTimeRanges(excludedTimeRanges)
+        cdkBuilder.excludedTimeRanges(excludedTimeRanges.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1646,7 +1646,7 @@ public open class CfnAnomalyDetector(
        * expression must return a single time series.
        */
       override fun metricDataQueries(metricDataQueries: List<Any>) {
-        cdkBuilder.metricDataQueries(metricDataQueries)
+        cdkBuilder.metricDataQueries(metricDataQueries.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1797,7 +1797,7 @@ public open class CfnAnomalyDetector(
        * @param dimensions The dimensions for the metric.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2379,7 +2379,7 @@ public open class CfnAnomalyDetector(
        * @param dimensions The metric dimensions to create the anomaly detection model for.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -655,7 +655,7 @@ public interface CfnNetworkInterfaceProps {
      * IPv4 addresses.
      */
     override fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
-      cdkBuilder.ipv4Prefixes(ipv4Prefixes)
+      cdkBuilder.ipv4Prefixes(ipv4Prefixes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -704,7 +704,7 @@ public interface CfnNetworkInterfaceProps {
      * prefixes.
      */
     override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses)
+      cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -746,7 +746,7 @@ public interface CfnNetworkInterfaceProps {
      * the following: a count of IPv6 prefixes, specific IPv6 addresses, or a count of IPv6 addresses.
      */
     override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
-      cdkBuilder.ipv6Prefixes(ipv6Prefixes)
+      cdkBuilder.ipv6Prefixes(ipv6Prefixes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -792,7 +792,7 @@ public interface CfnNetworkInterfaceProps {
      * count of IPv4 prefixes.
      */
     override fun privateIpAddresses(privateIpAddresses: List<Any>) {
-      cdkBuilder.privateIpAddresses(privateIpAddresses)
+      cdkBuilder.privateIpAddresses(privateIpAddresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

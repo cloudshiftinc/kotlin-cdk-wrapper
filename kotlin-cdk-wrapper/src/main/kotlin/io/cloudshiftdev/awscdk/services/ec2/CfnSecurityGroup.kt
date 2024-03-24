@@ -179,7 +179,7 @@ public open class CfnSecurityGroup(
    * The outbound rules associated with the security group.
    */
   public open fun securityGroupEgress(`value`: List<Any>) {
-    unwrap(this).setSecurityGroupEgress(`value`)
+    unwrap(this).setSecurityGroupEgress(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnSecurityGroup(
    * The inbound rules associated with the security group.
    */
   public open fun securityGroupIngress(`value`: List<Any>) {
-    unwrap(this).setSecurityGroupIngress(`value`)
+    unwrap(this).setSecurityGroupIngress(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -421,7 +421,7 @@ public open class CfnSecurityGroup(
      * @param securityGroupEgress The outbound rules associated with the security group. 
      */
     override fun securityGroupEgress(securityGroupEgress: List<Any>) {
-      cdkBuilder.securityGroupEgress(securityGroupEgress)
+      cdkBuilder.securityGroupEgress(securityGroupEgress.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -456,7 +456,7 @@ public open class CfnSecurityGroup(
      * @param securityGroupIngress The inbound rules associated with the security group. 
      */
     override fun securityGroupIngress(securityGroupIngress: List<Any>) {
-      cdkBuilder.securityGroupIngress(securityGroupIngress)
+      cdkBuilder.securityGroupIngress(securityGroupIngress.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

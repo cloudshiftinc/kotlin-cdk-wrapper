@@ -68,10 +68,10 @@ public abstract class BuildSpec(
         software.amazon.awscdk.services.codebuild.BuildSpec.fromAsset(path).let(BuildSpec::wrap)
 
     public fun fromObject(`value`: Map<String, Any>): BuildSpec =
-        software.amazon.awscdk.services.codebuild.BuildSpec.fromObject(`value`).let(BuildSpec::wrap)
+        software.amazon.awscdk.services.codebuild.BuildSpec.fromObject(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(BuildSpec::wrap)
 
     public fun fromObjectToYaml(`value`: Map<String, Any>): BuildSpec =
-        software.amazon.awscdk.services.codebuild.BuildSpec.fromObjectToYaml(`value`).let(BuildSpec::wrap)
+        software.amazon.awscdk.services.codebuild.BuildSpec.fromObjectToYaml(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(BuildSpec::wrap)
 
     public fun fromSourceFilename(filename: String): BuildSpec =
         software.amazon.awscdk.services.codebuild.BuildSpec.fromSourceFilename(filename).let(BuildSpec::wrap)

@@ -204,7 +204,7 @@ public interface CfnWebACLProps {
      * of the `Rule` , and the ID of the `Rule` .
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

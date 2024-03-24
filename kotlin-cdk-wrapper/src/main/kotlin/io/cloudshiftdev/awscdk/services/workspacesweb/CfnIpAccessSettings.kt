@@ -176,7 +176,7 @@ public open class CfnIpAccessSettings(
    * The IP rules of the IP access settings.
    */
   public open fun ipRules(`value`: List<Any>) {
-    unwrap(this).setIpRules(`value`)
+    unwrap(this).setIpRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -370,7 +370,7 @@ public open class CfnIpAccessSettings(
      * @param ipRules The IP rules of the IP access settings. 
      */
     override fun ipRules(ipRules: List<Any>) {
-      cdkBuilder.ipRules(ipRules)
+      cdkBuilder.ipRules(ipRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

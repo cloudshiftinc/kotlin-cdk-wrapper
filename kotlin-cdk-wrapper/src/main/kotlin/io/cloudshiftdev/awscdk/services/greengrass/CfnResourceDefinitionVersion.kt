@@ -160,7 +160,7 @@ public open class CfnResourceDefinitionVersion(
    * The resources in this version.
    */
   public open fun resources(`value`: List<Any>) {
-    unwrap(this).setResources(`value`)
+    unwrap(this).setResources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnResourceDefinitionVersion(
      * @param resources The resources in this version. 
      */
     override fun resources(resources: List<Any>) {
-      cdkBuilder.resources(resources)
+      cdkBuilder.resources(resources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

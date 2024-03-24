@@ -621,7 +621,7 @@ public open class CfnCalculatedAttributeDefinition(
        * expression. 
        */
       override fun attributes(attributes: List<Any>) {
-        cdkBuilder.attributes(attributes)
+        cdkBuilder.attributes(attributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

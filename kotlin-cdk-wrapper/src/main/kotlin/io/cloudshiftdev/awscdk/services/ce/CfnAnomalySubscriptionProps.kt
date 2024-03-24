@@ -254,7 +254,7 @@ public interface CfnAnomalySubscriptionProps {
      * @param resourceTags Tags to assign to subscription.
      */
     override fun resourceTags(resourceTags: List<Any>) {
-      cdkBuilder.resourceTags(resourceTags)
+      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -273,7 +273,7 @@ public interface CfnAnomalySubscriptionProps {
      * @param subscribers A list of subscribers to notify. 
      */
     override fun subscribers(subscribers: List<Any>) {
-      cdkBuilder.subscribers(subscribers)
+      cdkBuilder.subscribers(subscribers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

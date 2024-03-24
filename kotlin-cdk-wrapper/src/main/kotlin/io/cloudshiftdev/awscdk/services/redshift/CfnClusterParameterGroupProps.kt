@@ -209,7 +209,7 @@ public interface CfnClusterParameterGroupProps {
      * the wlm_json_configuration parameter.
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

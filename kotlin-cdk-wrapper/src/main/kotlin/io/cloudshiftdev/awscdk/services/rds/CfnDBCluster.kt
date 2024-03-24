@@ -232,7 +232,7 @@ public open class CfnDBCluster(
    * the DB cluster.
    */
   public open fun associatedRoles(`value`: List<Any>) {
-    unwrap(this).setAssociatedRoles(`value`)
+    unwrap(this).setAssociatedRoles(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -2735,7 +2735,7 @@ public open class CfnDBCluster(
      * that are associated with the DB cluster. 
      */
     override fun associatedRoles(associatedRoles: List<Any>) {
-      cdkBuilder.associatedRoles(associatedRoles)
+      cdkBuilder.associatedRoles(associatedRoles.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

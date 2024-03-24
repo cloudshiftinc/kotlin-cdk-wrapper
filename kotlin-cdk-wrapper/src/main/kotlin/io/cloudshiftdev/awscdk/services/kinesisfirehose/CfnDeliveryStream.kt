@@ -8614,7 +8614,7 @@ public open class CfnDeliveryStream(
        * @param commonAttributes Describes the metadata sent to the HTTP endpoint destination.
        */
       override fun commonAttributes(commonAttributes: List<Any>) {
-        cdkBuilder.commonAttributes(commonAttributes)
+        cdkBuilder.commonAttributes(commonAttributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10484,7 +10484,7 @@ public open class CfnDeliveryStream(
        * @param processors The data processors.
        */
       override fun processors(processors: List<Any>) {
-        cdkBuilder.processors(processors)
+        cdkBuilder.processors(processors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10744,7 +10744,7 @@ public open class CfnDeliveryStream(
        * @param parameters The processor parameters.
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

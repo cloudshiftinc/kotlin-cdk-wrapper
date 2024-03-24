@@ -234,7 +234,7 @@ public open class CfnSimulationApplication(
    * The sources of the simulation application.
    */
   public open fun sources(`value`: List<Any>) {
-    unwrap(this).setSources(`value`)
+    unwrap(this).setSources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -557,7 +557,7 @@ public open class CfnSimulationApplication(
      * @param sources The sources of the simulation application. 
      */
     override fun sources(sources: List<Any>) {
-      cdkBuilder.sources(sources)
+      cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

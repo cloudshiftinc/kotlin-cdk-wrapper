@@ -350,7 +350,7 @@ public open class CfnConnector(
    * Specifies which plugin to use for the connector.
    */
   public open fun plugins(`value`: List<Any>) {
-    unwrap(this).setPlugins(`value`)
+    unwrap(this).setPlugins(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -924,7 +924,7 @@ public open class CfnConnector(
      * @param plugins Specifies which plugin to use for the connector. 
      */
     override fun plugins(plugins: List<Any>) {
-      cdkBuilder.plugins(plugins)
+      cdkBuilder.plugins(plugins.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

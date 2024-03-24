@@ -141,7 +141,7 @@ public open class CfnAnalyzer(
    * Specifies the archive rules to add for the analyzer.
    */
   public open fun archiveRules(`value`: List<Any>) {
-    unwrap(this).setArchiveRules(`value`)
+    unwrap(this).setArchiveRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -378,7 +378,7 @@ public open class CfnAnalyzer(
      * @param archiveRules Specifies the archive rules to add for the analyzer. 
      */
     override fun archiveRules(archiveRules: List<Any>) {
-      cdkBuilder.archiveRules(archiveRules)
+      cdkBuilder.archiveRules(archiveRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -663,7 +663,7 @@ public open class CfnAnalyzer(
        * @param filter The criteria for the rule. 
        */
       override fun filter(filter: List<Any>) {
-        cdkBuilder.filter(filter)
+        cdkBuilder.filter(filter.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

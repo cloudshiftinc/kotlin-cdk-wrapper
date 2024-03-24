@@ -870,7 +870,7 @@ public interface CfnBucketProps {
      * filter of an Amazon S3 bucket.
      */
     override fun analyticsConfigurations(analyticsConfigurations: List<Any>) {
-      cdkBuilder.analyticsConfigurations(analyticsConfigurations)
+      cdkBuilder.analyticsConfigurations(analyticsConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -988,7 +988,7 @@ public interface CfnBucketProps {
      * storage.
      */
     override fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<Any>) {
-      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations)
+      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1015,7 +1015,7 @@ public interface CfnBucketProps {
      * the *Amazon S3 API Reference* .
      */
     override fun inventoryConfigurations(inventoryConfigurations: List<Any>) {
-      cdkBuilder.inventoryConfigurations(inventoryConfigurations)
+      cdkBuilder.inventoryConfigurations(inventoryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1111,7 +1111,7 @@ public interface CfnBucketProps {
      * .
      */
     override fun metricsConfigurations(metricsConfigurations: List<Any>) {
-      cdkBuilder.metricsConfigurations(metricsConfigurations)
+      cdkBuilder.metricsConfigurations(metricsConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

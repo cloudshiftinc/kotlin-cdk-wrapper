@@ -187,7 +187,7 @@ public interface CfnBudgetProps {
      * `CreateBudget` call, AWS creates the notifications and subscribers for you.
      */
     override fun notificationsWithSubscribers(notificationsWithSubscribers: List<Any>) {
-      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers)
+      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -36,7 +37,7 @@ public open class Result(
 
   public companion object {
     public fun fromArray(`value`: List<Any>): Result =
-        software.amazon.awscdk.services.stepfunctions.Result.fromArray(`value`).let(Result::wrap)
+        software.amazon.awscdk.services.stepfunctions.Result.fromArray(`value`.map{CdkObjectWrappers.unwrap(it)}).let(Result::wrap)
 
     public fun fromArray(vararg `value`: Any): Result = fromArray(`value`.toList())
 
@@ -47,7 +48,7 @@ public open class Result(
         software.amazon.awscdk.services.stepfunctions.Result.fromNumber(`value`).let(Result::wrap)
 
     public fun fromObject(`value`: Map<String, Any>): Result =
-        software.amazon.awscdk.services.stepfunctions.Result.fromObject(`value`).let(Result::wrap)
+        software.amazon.awscdk.services.stepfunctions.Result.fromObject(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(Result::wrap)
 
     public fun fromString(`value`: String): Result =
         software.amazon.awscdk.services.stepfunctions.Result.fromString(`value`).let(Result::wrap)

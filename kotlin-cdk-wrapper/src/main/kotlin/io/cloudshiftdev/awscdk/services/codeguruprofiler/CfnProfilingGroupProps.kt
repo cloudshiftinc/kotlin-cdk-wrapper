@@ -208,7 +208,7 @@ public interface CfnProfilingGroupProps {
      */
     override
         fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>) {
-      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
+      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

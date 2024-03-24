@@ -271,7 +271,7 @@ public open class CfnBranch(
    * The environment variables for the branch.
    */
   public open fun environmentVariables(`value`: List<Any>) {
-    unwrap(this).setEnvironmentVariables(`value`)
+    unwrap(this).setEnvironmentVariables(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -844,7 +844,7 @@ public open class CfnBranch(
      * @param environmentVariables The environment variables for the branch. 
      */
     override fun environmentVariables(environmentVariables: List<Any>) {
-      cdkBuilder.environmentVariables(environmentVariables)
+      cdkBuilder.environmentVariables(environmentVariables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

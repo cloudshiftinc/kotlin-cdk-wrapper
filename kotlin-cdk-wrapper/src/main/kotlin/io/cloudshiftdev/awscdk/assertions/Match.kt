@@ -27,12 +27,12 @@ public abstract class Match(
         software.amazon.awscdk.assertions.Match.anyValue().let(Matcher::wrap)
 
     public fun arrayEquals(pattern: List<Any>): Matcher =
-        software.amazon.awscdk.assertions.Match.arrayEquals(pattern).let(Matcher::wrap)
+        software.amazon.awscdk.assertions.Match.arrayEquals(pattern.map{CdkObjectWrappers.unwrap(it)}).let(Matcher::wrap)
 
     public fun arrayEquals(vararg pattern: Any): Matcher = arrayEquals(pattern.toList())
 
     public fun arrayWith(pattern: List<Any>): Matcher =
-        software.amazon.awscdk.assertions.Match.arrayWith(pattern).let(Matcher::wrap)
+        software.amazon.awscdk.assertions.Match.arrayWith(pattern.map{CdkObjectWrappers.unwrap(it)}).let(Matcher::wrap)
 
     public fun arrayWith(vararg pattern: Any): Matcher = arrayWith(pattern.toList())
 
@@ -43,10 +43,10 @@ public abstract class Match(
         software.amazon.awscdk.assertions.Match.not(pattern).let(Matcher::wrap)
 
     public fun objectEquals(pattern: Map<String, Any>): Matcher =
-        software.amazon.awscdk.assertions.Match.objectEquals(pattern).let(Matcher::wrap)
+        software.amazon.awscdk.assertions.Match.objectEquals(pattern.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(Matcher::wrap)
 
     public fun objectLike(pattern: Map<String, Any>): Matcher =
-        software.amazon.awscdk.assertions.Match.objectLike(pattern).let(Matcher::wrap)
+        software.amazon.awscdk.assertions.Match.objectLike(pattern.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(Matcher::wrap)
 
     public fun serializedJson(pattern: Any): Matcher =
         software.amazon.awscdk.assertions.Match.serializedJson(pattern).let(Matcher::wrap)

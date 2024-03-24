@@ -201,7 +201,7 @@ public open class CfnTable(
    * A list of attributes that describe the key schema for the table and indexes.
    */
   public open fun attributeDefinitions(`value`: List<Any>) {
-    unwrap(this).setAttributeDefinitions(`value`)
+    unwrap(this).setAttributeDefinitions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnTable(
    * You can create up to 20 global secondary indexes.
    */
   public open fun globalSecondaryIndexes(`value`: List<Any>) {
-    unwrap(this).setGlobalSecondaryIndexes(`value`)
+    unwrap(this).setGlobalSecondaryIndexes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnTable(
    * Specifies the attributes that make up the primary key for the table.
    */
   public open fun keySchema(`value`: List<Any>) {
-    unwrap(this).setKeySchema(`value`)
+    unwrap(this).setKeySchema(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnTable(
    * Local secondary indexes to be created on the table.
    */
   public open fun localSecondaryIndexes(`value`: List<Any>) {
-    unwrap(this).setLocalSecondaryIndexes(`value`)
+    unwrap(this).setLocalSecondaryIndexes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1259,7 +1259,7 @@ public open class CfnTable(
      * and indexes. 
      */
     override fun attributeDefinitions(attributeDefinitions: List<Any>) {
-      cdkBuilder.attributeDefinitions(attributeDefinitions)
+      cdkBuilder.attributeDefinitions(attributeDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1435,7 +1435,7 @@ public open class CfnTable(
      * create up to 20 global secondary indexes. 
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1548,7 +1548,7 @@ public open class CfnTable(
      * @param keySchema Specifies the attributes that make up the primary key for the table. 
      */
     override fun keySchema(keySchema: List<Any>) {
-      cdkBuilder.keySchema(keySchema)
+      cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1622,7 +1622,7 @@ public open class CfnTable(
      * @param localSecondaryIndexes Local secondary indexes to be created on the table. 
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes)
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2591,7 +2591,7 @@ public open class CfnTable(
        * together, in sorted order by the sort key value.
        */
       override fun keySchema(keySchema: List<Any>) {
-        cdkBuilder.keySchema(keySchema)
+        cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3598,7 +3598,7 @@ public open class CfnTable(
        * together, in sorted order by the sort key value.
        */
       override fun keySchema(keySchema: List<Any>) {
-        cdkBuilder.keySchema(keySchema)
+        cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

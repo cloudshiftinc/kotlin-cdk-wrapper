@@ -100,7 +100,7 @@ public interface CfnSizeConstraintSetProps {
      * @param sizeConstraints The size constraint and the part of the web request to check. 
      */
     override fun sizeConstraints(sizeConstraints: List<Any>) {
-      cdkBuilder.sizeConstraints(sizeConstraints)
+      cdkBuilder.sizeConstraints(sizeConstraints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

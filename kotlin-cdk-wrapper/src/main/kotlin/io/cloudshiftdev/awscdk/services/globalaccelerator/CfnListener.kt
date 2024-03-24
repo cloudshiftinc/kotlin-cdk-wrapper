@@ -122,7 +122,7 @@ public open class CfnListener(
    * The list of port ranges for the connections from clients to the accelerator.
    */
   public open fun portRanges(`value`: List<Any>) {
-    unwrap(this).setPortRanges(`value`)
+    unwrap(this).setPortRanges(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnListener(
      * accelerator. 
      */
     override fun portRanges(portRanges: List<Any>) {
-      cdkBuilder.portRanges(portRanges)
+      cdkBuilder.portRanges(portRanges.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

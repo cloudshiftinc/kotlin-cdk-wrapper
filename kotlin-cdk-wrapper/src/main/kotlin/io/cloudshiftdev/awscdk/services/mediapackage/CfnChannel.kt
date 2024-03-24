@@ -571,7 +571,7 @@ public open class CfnChannel(
        * @param ingestEndpoints The input URL where the source stream should be sent.
        */
       override fun ingestEndpoints(ingestEndpoints: List<Any>) {
-        cdkBuilder.ingestEndpoints(ingestEndpoints)
+        cdkBuilder.ingestEndpoints(ingestEndpoints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

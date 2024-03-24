@@ -1063,7 +1063,7 @@ public open class CfnIntegration(
        * @param responseParameters the value to be set.
        */
       override fun responseParameters(responseParameters: List<Any>) {
-        cdkBuilder.responseParameters(responseParameters)
+        cdkBuilder.responseParameters(responseParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

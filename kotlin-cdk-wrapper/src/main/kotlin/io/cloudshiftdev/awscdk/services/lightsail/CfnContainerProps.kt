@@ -477,7 +477,7 @@ public interface CfnContainerProps {
      * container service.
      */
     override fun publicDomainNames(publicDomainNames: List<Any>) {
-      cdkBuilder.publicDomainNames(publicDomainNames)
+      cdkBuilder.publicDomainNames(publicDomainNames.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

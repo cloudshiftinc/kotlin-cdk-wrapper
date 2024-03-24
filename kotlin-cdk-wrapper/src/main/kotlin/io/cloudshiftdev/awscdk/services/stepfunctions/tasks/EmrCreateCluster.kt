@@ -883,7 +883,7 @@ public open class EmrCreateCluster(
      * effective result before ResultPath is applied. 
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

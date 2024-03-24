@@ -157,7 +157,7 @@ public open class CfnIPAMPool(
    * Tags that are required for resources that use CIDRs from this IPAM pool.
    */
   public open fun allocationResourceTags(`value`: List<Any>) {
-    unwrap(this).setAllocationResourceTags(`value`)
+    unwrap(this).setAllocationResourceTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -303,7 +303,7 @@ public open class CfnIPAMPool(
    * Information about the CIDRs provisioned to an IPAM pool.
    */
   public open fun provisionedCidrs(`value`: List<Any>) {
-    unwrap(this).setProvisionedCidrs(`value`)
+    unwrap(this).setProvisionedCidrs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -778,7 +778,7 @@ public open class CfnIPAMPool(
      * IPAM pool. 
      */
     override fun allocationResourceTags(allocationResourceTags: List<Any>) {
-      cdkBuilder.allocationResourceTags(allocationResourceTags)
+      cdkBuilder.allocationResourceTags(allocationResourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -903,7 +903,7 @@ public open class CfnIPAMPool(
      * @param provisionedCidrs Information about the CIDRs provisioned to an IPAM pool. 
      */
     override fun provisionedCidrs(provisionedCidrs: List<Any>) {
-      cdkBuilder.provisionedCidrs(provisionedCidrs)
+      cdkBuilder.provisionedCidrs(provisionedCidrs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

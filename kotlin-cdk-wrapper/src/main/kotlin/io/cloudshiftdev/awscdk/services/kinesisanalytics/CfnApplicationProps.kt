@@ -293,7 +293,7 @@ public interface CfnApplicationProps {
      * elements in the streaming source to record columns in the in-app stream.
      */
     override fun inputs(inputs: List<Any>) {
-      cdkBuilder.inputs(inputs)
+      cdkBuilder.inputs(inputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

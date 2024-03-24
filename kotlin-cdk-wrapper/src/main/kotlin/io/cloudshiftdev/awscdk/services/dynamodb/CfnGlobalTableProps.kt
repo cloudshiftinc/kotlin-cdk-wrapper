@@ -625,7 +625,7 @@ public interface CfnGlobalTableProps {
      * table and indexes. 
      */
     override fun attributeDefinitions(attributeDefinitions: List<Any>) {
-      cdkBuilder.attributeDefinitions(attributeDefinitions)
+      cdkBuilder.attributeDefinitions(attributeDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -675,7 +675,7 @@ public interface CfnGlobalTableProps {
      * index that has been added. In that case, you will need to delete the index manually.
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -706,7 +706,7 @@ public interface CfnGlobalTableProps {
      * property.
      */
     override fun keySchema(keySchema: List<Any>) {
-      cdkBuilder.keySchema(keySchema)
+      cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -733,7 +733,7 @@ public interface CfnGlobalTableProps {
      * will have the same local secondary index settings.
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes)
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -790,7 +790,7 @@ public interface CfnGlobalTableProps {
      * replicas after table creation, but you can only add or remove a single replica in each update.
      */
     override fun replicas(replicas: List<Any>) {
-      cdkBuilder.replicas(replicas)
+      cdkBuilder.replicas(replicas.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

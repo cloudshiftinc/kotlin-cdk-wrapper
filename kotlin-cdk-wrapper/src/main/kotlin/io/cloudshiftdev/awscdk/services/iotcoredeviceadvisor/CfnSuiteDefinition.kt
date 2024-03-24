@@ -563,7 +563,7 @@ public open class CfnSuiteDefinition(
        * @param devices Gets the devices configured.
        */
       override fun devices(devices: List<Any>) {
-        cdkBuilder.devices(devices)
+        cdkBuilder.devices(devices.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

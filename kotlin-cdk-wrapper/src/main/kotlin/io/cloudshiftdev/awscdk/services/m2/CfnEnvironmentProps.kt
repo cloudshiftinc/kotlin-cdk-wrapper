@@ -402,7 +402,7 @@ public interface CfnEnvironmentProps {
      * @param storageConfigurations Defines the storage configuration for a runtime environment.
      */
     override fun storageConfigurations(storageConfigurations: List<Any>) {
-      cdkBuilder.storageConfigurations(storageConfigurations)
+      cdkBuilder.storageConfigurations(storageConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

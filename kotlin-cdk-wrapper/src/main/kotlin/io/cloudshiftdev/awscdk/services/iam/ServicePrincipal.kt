@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -117,7 +118,7 @@ public open class ServicePrincipal(
      * @param conditions Additional conditions to add to the Service Principal. 
      */
     override fun conditions(conditions: Map<String, Any>) {
-      cdkBuilder.conditions(conditions)
+      cdkBuilder.conditions(conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

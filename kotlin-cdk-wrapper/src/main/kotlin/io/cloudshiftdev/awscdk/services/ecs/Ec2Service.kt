@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.Boolean
@@ -63,7 +64,8 @@ public open class Ec2Service(
    * @param constraints 
    */
   public open fun addPlacementConstraints(vararg constraints: PlacementConstraint) {
-    unwrap(this).addPlacementConstraints(*constraints.map(PlacementConstraint::unwrap).toTypedArray())
+    unwrap(this).addPlacementConstraints(*constraints.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.PlacementConstraint}.toTypedArray())
   }
 
   /**
@@ -76,7 +78,8 @@ public open class Ec2Service(
    * @param strategies 
    */
   public open fun addPlacementStrategies(vararg strategies: PlacementStrategy) {
-    unwrap(this).addPlacementStrategies(*strategies.map(PlacementStrategy::unwrap).toTypedArray())
+    unwrap(this).addPlacementStrategies(*strategies.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.PlacementStrategy}.toTypedArray())
   }
 
   /**

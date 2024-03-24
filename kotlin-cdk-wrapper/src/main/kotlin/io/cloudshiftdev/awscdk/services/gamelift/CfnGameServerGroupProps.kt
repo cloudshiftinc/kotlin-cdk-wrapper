@@ -561,7 +561,7 @@ public interface CfnGameServerGroupProps {
      * group. 
      */
     override fun instanceDefinitions(instanceDefinitions: List<Any>) {
-      cdkBuilder.instanceDefinitions(instanceDefinitions)
+      cdkBuilder.instanceDefinitions(instanceDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -2114,7 +2114,7 @@ public open class CfnGatewayRoute(
        * @param metadata The gateway route metadata to be matched on.
        */
       override fun metadata(metadata: List<Any>) {
-        cdkBuilder.metadata(metadata)
+        cdkBuilder.metadata(metadata.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3533,7 +3533,7 @@ public open class CfnGatewayRoute(
        * @param headers The client request headers to match on.
        */
       override fun headers(headers: List<Any>) {
-        cdkBuilder.headers(headers)
+        cdkBuilder.headers(headers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3621,7 +3621,7 @@ public open class CfnGatewayRoute(
        * @param queryParameters The query parameter to match on.
        */
       override fun queryParameters(queryParameters: List<Any>) {
-        cdkBuilder.queryParameters(queryParameters)
+        cdkBuilder.queryParameters(queryParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

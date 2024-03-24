@@ -186,7 +186,7 @@ public open class CfnScalableTarget(
    * The scheduled actions for the scalable target.
    */
   public open fun scheduledActions(`value`: List<Any>) {
-    unwrap(this).setScheduledActions(`value`)
+    unwrap(this).setScheduledActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -691,7 +691,7 @@ public open class CfnScalableTarget(
      * @param scheduledActions The scheduled actions for the scalable target. 
      */
     override fun scheduledActions(scheduledActions: List<Any>) {
-      cdkBuilder.scheduledActions(scheduledActions)
+      cdkBuilder.scheduledActions(scheduledActions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

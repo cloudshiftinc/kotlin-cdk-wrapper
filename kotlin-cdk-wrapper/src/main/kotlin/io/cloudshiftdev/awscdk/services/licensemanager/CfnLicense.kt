@@ -164,7 +164,7 @@ public open class CfnLicense(
    * License entitlements.
    */
   public open fun entitlements(`value`: List<Any>) {
-    unwrap(this).setEntitlements(`value`)
+    unwrap(this).setEntitlements(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnLicense(
    * License metadata.
    */
   public open fun licenseMetadata(`value`: List<Any>) {
-    unwrap(this).setLicenseMetadata(`value`)
+    unwrap(this).setLicenseMetadata(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -570,7 +570,7 @@ public open class CfnLicense(
      * @param entitlements License entitlements. 
      */
     override fun entitlements(entitlements: List<Any>) {
-      cdkBuilder.entitlements(entitlements)
+      cdkBuilder.entitlements(entitlements.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -639,7 +639,7 @@ public open class CfnLicense(
      * @param licenseMetadata License metadata. 
      */
     override fun licenseMetadata(licenseMetadata: List<Any>) {
-      cdkBuilder.licenseMetadata(licenseMetadata)
+      cdkBuilder.licenseMetadata(licenseMetadata.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

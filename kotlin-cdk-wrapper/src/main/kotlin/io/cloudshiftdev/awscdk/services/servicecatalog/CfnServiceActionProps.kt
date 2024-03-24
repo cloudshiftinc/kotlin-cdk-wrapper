@@ -148,7 +148,7 @@ public interface CfnServiceActionProps {
      * @param definition A map that defines the self-service action. 
      */
     override fun definition(definition: List<Any>) {
-      cdkBuilder.definition(definition)
+      cdkBuilder.definition(definition.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

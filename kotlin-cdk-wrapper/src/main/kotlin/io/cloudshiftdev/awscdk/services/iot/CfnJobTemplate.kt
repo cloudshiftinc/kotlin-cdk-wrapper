@@ -254,7 +254,7 @@ public open class CfnJobTemplate(
    * target group for a job.
    */
   public open fun maintenanceWindows(`value`: List<Any>) {
-    unwrap(this).setMaintenanceWindows(`value`)
+    unwrap(this).setMaintenanceWindows(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -690,7 +690,7 @@ public open class CfnJobTemplate(
      * job document to all devices in a target group for a job. 
      */
     override fun maintenanceWindows(maintenanceWindows: List<Any>) {
-      cdkBuilder.maintenanceWindows(maintenanceWindows)
+      cdkBuilder.maintenanceWindows(maintenanceWindows.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -838,7 +838,7 @@ public open class CfnJobTemplate(
        * @param criteriaList The list of criteria that determine when and how to abort the job. 
        */
       override fun criteriaList(criteriaList: List<Any>) {
-        cdkBuilder.criteriaList(criteriaList)
+        cdkBuilder.criteriaList(criteriaList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1320,7 +1320,7 @@ public open class CfnJobTemplate(
        * for each failure type for a job.
        */
       override fun retryCriteriaList(retryCriteriaList: List<Any>) {
-        cdkBuilder.retryCriteriaList(retryCriteriaList)
+        cdkBuilder.retryCriteriaList(retryCriteriaList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

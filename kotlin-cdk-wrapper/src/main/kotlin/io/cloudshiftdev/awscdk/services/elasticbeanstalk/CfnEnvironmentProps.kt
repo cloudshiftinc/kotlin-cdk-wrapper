@@ -448,7 +448,7 @@ public interface CfnEnvironmentProps {
      * values.
      */
     override fun optionSettings(optionSettings: List<Any>) {
-      cdkBuilder.optionSettings(optionSettings)
+      cdkBuilder.optionSettings(optionSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

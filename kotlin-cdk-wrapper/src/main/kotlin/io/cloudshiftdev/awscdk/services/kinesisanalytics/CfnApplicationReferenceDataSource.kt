@@ -1425,7 +1425,7 @@ public open class CfnApplicationReferenceDataSource(
        * @param recordColumns A list of RecordColumn objects. 
        */
       override fun recordColumns(recordColumns: List<Any>) {
-        cdkBuilder.recordColumns(recordColumns)
+        cdkBuilder.recordColumns(recordColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

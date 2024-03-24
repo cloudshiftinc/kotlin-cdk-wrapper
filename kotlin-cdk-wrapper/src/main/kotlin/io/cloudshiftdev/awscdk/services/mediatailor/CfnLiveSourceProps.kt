@@ -136,7 +136,7 @@ public interface CfnLiveSourceProps {
      * @param httpPackageConfigurations The HTTP package configurations for the live source. 
      */
     override fun httpPackageConfigurations(httpPackageConfigurations: List<Any>) {
-      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
+      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -151,7 +151,7 @@ public open class CfnMultiRegionAccessPoint(
    * A collection of the Regions and buckets associated with the Multi-Region Access Point.
    */
   public open fun regions(`value`: List<Any>) {
-    unwrap(this).setRegions(`value`)
+    unwrap(this).setRegions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -334,7 +334,7 @@ public open class CfnMultiRegionAccessPoint(
      * Access Point. 
      */
     override fun regions(regions: List<Any>) {
-      cdkBuilder.regions(regions)
+      cdkBuilder.regions(regions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

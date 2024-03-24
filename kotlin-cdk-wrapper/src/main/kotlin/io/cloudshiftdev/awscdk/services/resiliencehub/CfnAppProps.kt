@@ -931,7 +931,7 @@ public interface CfnAppProps {
      * assessment failure* events.
      */
     override fun eventSubscriptions(eventSubscriptions: List<Any>) {
-      cdkBuilder.eventSubscriptions(eventSubscriptions)
+      cdkBuilder.eventSubscriptions(eventSubscriptions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -994,7 +994,7 @@ public interface CfnAppProps {
      * @param resourceMappings An array of `ResourceMapping` objects. 
      */
     override fun resourceMappings(resourceMappings: List<Any>) {
-      cdkBuilder.resourceMappings(resourceMappings)
+      cdkBuilder.resourceMappings(resourceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

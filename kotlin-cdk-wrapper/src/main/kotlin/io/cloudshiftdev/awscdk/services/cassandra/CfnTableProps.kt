@@ -695,7 +695,7 @@ public interface CfnTableProps {
      * @param clusteringKeyColumns One or more columns that determine how the table data is sorted.
      */
     override fun clusteringKeyColumns(clusteringKeyColumns: List<Any>) {
-      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns)
+      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -802,7 +802,7 @@ public interface CfnTableProps {
      * Every table must have a partition key.
      */
     override fun partitionKeyColumns(partitionKeyColumns: List<Any>) {
-      cdkBuilder.partitionKeyColumns(partitionKeyColumns)
+      cdkBuilder.partitionKeyColumns(partitionKeyColumns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -848,7 +848,7 @@ public interface CfnTableProps {
      * You can add regular columns to existing tables by adding them to the template.
      */
     override fun regularColumns(regularColumns: List<Any>) {
-      cdkBuilder.regularColumns(regularColumns)
+      cdkBuilder.regularColumns(regularColumns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -884,7 +884,7 @@ public interface CfnTableProps {
      * (Optional)
      */
     override fun replicaSpecifications(replicaSpecifications: List<Any>) {
-      cdkBuilder.replicaSpecifications(replicaSpecifications)
+      cdkBuilder.replicaSpecifications(replicaSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

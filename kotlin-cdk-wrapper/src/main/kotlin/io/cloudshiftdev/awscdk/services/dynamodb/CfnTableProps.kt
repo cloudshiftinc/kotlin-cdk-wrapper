@@ -796,7 +796,7 @@ public interface CfnTableProps {
      * . Replacement if you edit an existing AttributeDefinition.
      */
     override fun attributeDefinitions(attributeDefinitions: List<Any>) {
-      cdkBuilder.attributeDefinitions(attributeDefinitions)
+      cdkBuilder.attributeDefinitions(attributeDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -932,7 +932,7 @@ public interface CfnTableProps {
      * the same update (for example, by changing the index's logical ID), the update fails.
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1016,7 +1016,7 @@ public interface CfnTableProps {
      * property.
      */
     override fun keySchema(keySchema: List<Any>) {
-      cdkBuilder.keySchema(keySchema)
+      cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1069,7 +1069,7 @@ public interface CfnTableProps {
      * value. The size of each hash key can be up to 10 gigabytes.
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes)
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

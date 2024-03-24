@@ -1,8 +1,10 @@
 package cloudshift.awscdkdsl.build.dsl.model.type
 
 import cloudshift.awscdkdsl.build.dsl.isCdkClass
+import cloudshift.awscdkdsl.build.dsl.isListOfAny
 import cloudshift.awscdkdsl.build.dsl.isListOfCdkObject
 import cloudshift.awscdkdsl.build.dsl.isListOfListsOfCdkObject
+import cloudshift.awscdkdsl.build.dsl.isMapWithAnyValue
 import cloudshift.awscdkdsl.build.dsl.isMapWithCdkListValue
 import cloudshift.awscdkdsl.build.dsl.isMapWithCdkValue
 import cloudshift.awscdkdsl.build.dsl.mapClassName
@@ -25,7 +27,13 @@ internal class DelegateCallGenerator(
             else -> spec.returnType
         }
 
-        return DelegatedCall(spec.cdkName, returnType, spec.enclosingClass.className, directUnwrap, spec.isConstructor,).apply {
+        return DelegatedCall(
+            spec.cdkName,
+            returnType,
+            spec.enclosingClass.className,
+            directUnwrap,
+            spec.isConstructor,
+        ).apply {
             when {
                 spec.isStatic -> receiverType(spec.enclosingClass.className)
                 else -> receiverName(cdkObjectName)
@@ -43,13 +51,13 @@ private class DelegatedCall(
     private val returnType: TypeName,
     private val enclosingClass: ClassName,
     private val directUnwrap: Boolean,
-    private val isCallThisConstructor : Boolean
+    private val isCallThisConstructor: Boolean
 ) {
 
     private var receiverType: ClassName? = null
     private var receiverName: String? = null
 
-    private data class Parameter(val name: String, val type: TypeName, val vararg : Boolean)
+    private data class Parameter(val name: String, val type: TypeName, val vararg: Boolean)
     private data class CallSegment(val formatStr: String, val formatArgs: List<Any>)
 
     private val parameters = mutableListOf<Parameter>()
@@ -86,11 +94,13 @@ private class DelegatedCall(
                         append("%T(")
                         formatArgs.add(enclosingClass)
                     }
+
                     directUnwrap -> {
                         append("%N.%N(")
                         formatArgs.add(receiverName!!)
                         formatArgs.add(methodName)
                     }
+
                     else -> {
                         append("unwrap(this).%N(")
                         formatArgs.add(methodName)
@@ -192,23 +202,14 @@ private class DelegatedCall(
     }
 
     private fun maybeUnwrapParameter(parameter: Parameter): CallSegment {
-        return when {
-            parameter.type.mapClassName() != parameter.type -> {
-                unwrapValue(parameter.name, parameter.type, parameter.vararg)
-            }
-
-            parameter.vararg -> CallSegment("*%N", listOf(parameter.name))
-
-            else -> {
-                CallSegment("%N", listOf(parameter.name))
-            }
-        }
+        return unwrapValue(parameter.name, parameter.type, parameter.vararg)
     }
 
-    private fun unwrapValue(name: String, type: TypeName, vararg : Boolean): CallSegment {
+    private fun unwrapValue(name: String, type: TypeName, vararg: Boolean): CallSegment {
         val nullable = if (type.isNullable) "?" else ""
         val nullableListSuffix = if (type.isNullable) " ?: emptyList()" else ""
         val defaultCallSegment = CallSegment("%N", listOf(name))
+
         return when {
             type is ParameterizedTypeName -> when {
                 type.isMapWithCdkListValue() -> {
@@ -253,13 +254,38 @@ private class DelegatedCall(
                     ),
                 )
 
+                type.isListOfAny() -> CallSegment(
+                    "%N$nullable.map{%T.unwrap(it)}$nullableListSuffix",
+                    listOf(
+                        name,
+                        CdkWrappersGenerator.ClassName,
+                    ),
+                )
+
+                vararg && type.isMapWithAnyValue() -> CallSegment(
+                    "*%N$nullable.map{it.mapValues{%T.unwrap(it.value)}}.toTypedArray()",
+                    listOf(
+                        name,
+                        CdkWrappersGenerator.ClassName,
+                    ),
+                )
+
+                type.isMapWithAnyValue() -> CallSegment(
+                    "%N$nullable.mapValues{%T.unwrap(it.value)}",
+                    listOf(
+                        name,
+                        CdkWrappersGenerator.ClassName,
+                    ),
+                )
+
                 else -> defaultCallSegment
             }
 
             vararg -> CallSegment(
-                "*%N$nullable.map(%T::unwrap).toTypedArray()",
-                listOf(name, type.mapClassName()),
+                "*%N$nullable.map{%T.unwrap(it) as %T}.toTypedArray()",
+                listOf(name, CdkWrappersGenerator.ClassName, type),
             )
+
             type.isCdkClass -> CallSegment(
                 "%N$nullable.let(%T::unwrap)",
                 listOf(name, type.mapClassName()),

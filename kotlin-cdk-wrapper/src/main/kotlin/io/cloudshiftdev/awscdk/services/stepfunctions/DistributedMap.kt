@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -501,7 +502,7 @@ public open class DistributedMap(
      * exclusive  with `parameters`). 
      */
     override fun itemSelector(itemSelector: Map<String, Any>) {
-      cdkBuilder.itemSelector(itemSelector)
+      cdkBuilder.itemSelector(itemSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -612,7 +613,7 @@ public open class DistributedMap(
      * effective result before ResultPath is applied. 
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

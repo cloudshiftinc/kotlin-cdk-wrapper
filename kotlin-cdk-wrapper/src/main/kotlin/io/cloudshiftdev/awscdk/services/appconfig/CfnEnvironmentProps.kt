@@ -157,7 +157,7 @@ public interface CfnEnvironmentProps {
      * @param monitors Amazon CloudWatch alarms to monitor during the deployment process.
      */
     override fun monitors(monitors: List<Any>) {
-      cdkBuilder.monitors(monitors)
+      cdkBuilder.monitors(monitors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -386,7 +386,7 @@ public interface CfnImageBuilderProps {
      * Administrators can connect to the image builder only through the specified endpoints.
      */
     override fun accessEndpoints(accessEndpoints: List<Any>) {
-      cdkBuilder.accessEndpoints(accessEndpoints)
+      cdkBuilder.accessEndpoints(accessEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

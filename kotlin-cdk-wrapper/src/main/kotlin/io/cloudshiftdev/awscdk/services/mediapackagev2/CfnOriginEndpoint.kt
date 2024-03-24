@@ -216,7 +216,7 @@ public open class CfnOriginEndpoint(
    * The HLS manfiests associated with the origin endpoint configuration.
    */
   public open fun hlsManifests(`value`: List<Any>) {
-    unwrap(this).setHlsManifests(`value`)
+    unwrap(this).setHlsManifests(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -249,7 +249,7 @@ public open class CfnOriginEndpoint(
    * The low-latency HLS (LL-HLS) manifests associated with the origin endpoint.
    */
   public open fun lowLatencyHlsManifests(`value`: List<Any>) {
-    unwrap(this).setLowLatencyHlsManifests(`value`)
+    unwrap(this).setLowLatencyHlsManifests(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -546,7 +546,7 @@ public open class CfnOriginEndpoint(
      * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration. 
      */
     override fun hlsManifests(hlsManifests: List<Any>) {
-      cdkBuilder.hlsManifests(hlsManifests)
+      cdkBuilder.hlsManifests(hlsManifests.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -576,7 +576,7 @@ public open class CfnOriginEndpoint(
      * origin endpoint. 
      */
     override fun lowLatencyHlsManifests(lowLatencyHlsManifests: List<Any>) {
-      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests)
+      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -91,7 +91,7 @@ public open class CfnStandard(
    * Specifies which controls are to be disabled in a standard.
    */
   public open fun disabledStandardsControls(`value`: List<Any>) {
-    unwrap(this).setDisabledStandardsControls(`value`)
+    unwrap(this).setDisabledStandardsControls(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnStandard(
      * @param disabledStandardsControls Specifies which controls are to be disabled in a standard. 
      */
     override fun disabledStandardsControls(disabledStandardsControls: List<Any>) {
-      cdkBuilder.disabledStandardsControls(disabledStandardsControls)
+      cdkBuilder.disabledStandardsControls(disabledStandardsControls.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -84,7 +84,7 @@ public open class CfnConformancePack(
    * A list of ConformancePackInputParameter objects.
    */
   public open fun conformancePackInputParameters(`value`: List<Any>) {
-    unwrap(this).setConformancePackInputParameters(`value`)
+    unwrap(this).setConformancePackInputParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnConformancePack(
      * @param conformancePackInputParameters A list of ConformancePackInputParameter objects. 
      */
     override fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
-      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters)
+      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

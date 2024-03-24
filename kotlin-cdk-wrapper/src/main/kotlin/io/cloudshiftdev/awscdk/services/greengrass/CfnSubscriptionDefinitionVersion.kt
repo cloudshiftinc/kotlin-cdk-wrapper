@@ -116,7 +116,7 @@ public open class CfnSubscriptionDefinitionVersion(
    * The subscriptions in this version.
    */
   public open fun subscriptions(`value`: List<Any>) {
-    unwrap(this).setSubscriptions(`value`)
+    unwrap(this).setSubscriptions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnSubscriptionDefinitionVersion(
      * @param subscriptions The subscriptions in this version. 
      */
     override fun subscriptions(subscriptions: List<Any>) {
-      cdkBuilder.subscriptions(subscriptions)
+      cdkBuilder.subscriptions(subscriptions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

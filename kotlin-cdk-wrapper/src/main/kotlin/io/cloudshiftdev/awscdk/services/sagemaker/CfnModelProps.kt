@@ -355,7 +355,7 @@ public interface CfnModelProps {
      * @param containers Specifies the containers in the inference pipeline.
      */
     override fun containers(containers: List<Any>) {
-      cdkBuilder.containers(containers)
+      cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

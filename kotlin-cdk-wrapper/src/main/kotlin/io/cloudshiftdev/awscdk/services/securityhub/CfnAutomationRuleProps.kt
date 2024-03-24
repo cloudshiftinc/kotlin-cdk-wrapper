@@ -428,7 +428,7 @@ public interface CfnAutomationRuleProps {
      * conditions specified in `Criteria` .
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

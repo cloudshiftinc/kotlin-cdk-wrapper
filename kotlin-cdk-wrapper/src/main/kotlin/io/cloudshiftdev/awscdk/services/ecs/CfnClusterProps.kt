@@ -464,7 +464,7 @@ public interface CfnClusterProps {
      * This parameter is used to turn on CloudWatch Container Insights for a cluster.
      */
     override fun clusterSettings(clusterSettings: List<Any>) {
-      cdkBuilder.clusterSettings(clusterSettings)
+      cdkBuilder.clusterSettings(clusterSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -514,7 +514,7 @@ public interface CfnClusterProps {
      * strategy specified, the default capacity provider strategy is used.
      */
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
-      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy)
+      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

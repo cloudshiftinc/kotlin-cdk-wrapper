@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.logs
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -194,7 +195,8 @@ public open class LogGroup(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Give permissions to read and filter events from this log group.

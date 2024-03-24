@@ -668,7 +668,7 @@ public interface CfnDBClusterProps {
      * other Amazon services on your behalf.
      */
     override fun associatedRoles(associatedRoles: List<Any>) {
-      cdkBuilder.associatedRoles(associatedRoles)
+      cdkBuilder.associatedRoles(associatedRoles.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

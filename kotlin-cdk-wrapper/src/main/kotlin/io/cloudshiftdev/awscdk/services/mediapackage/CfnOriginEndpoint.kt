@@ -1616,7 +1616,7 @@ public open class CfnOriginEndpoint(
        * endpoint.
        */
       override fun hlsManifests(hlsManifests: List<Any>) {
-        cdkBuilder.hlsManifests(hlsManifests)
+        cdkBuilder.hlsManifests(hlsManifests.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

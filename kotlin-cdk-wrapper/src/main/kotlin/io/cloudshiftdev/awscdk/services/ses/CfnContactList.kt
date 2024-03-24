@@ -143,7 +143,7 @@ public open class CfnContactList(
    * An interest group, theme, or label within a list.
    */
   public open fun topics(`value`: List<Any>) {
-    unwrap(this).setTopics(`value`)
+    unwrap(this).setTopics(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnContactList(
      * @param topics An interest group, theme, or label within a list. 
      */
     override fun topics(topics: List<Any>) {
-      cdkBuilder.topics(topics)
+      cdkBuilder.topics(topics.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

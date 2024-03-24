@@ -177,7 +177,7 @@ public interface CfnRulesetProps {
      * @param rules Contains metadata about the ruleset. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

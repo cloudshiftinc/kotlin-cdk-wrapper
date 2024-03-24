@@ -168,7 +168,7 @@ public open class CfnWebACL(
    * and the ID of the `Rule` .
    */
   public open fun rules(`value`: List<Any>) {
-    unwrap(this).setRules(`value`)
+    unwrap(this).setRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -366,7 +366,7 @@ public open class CfnWebACL(
      * of the `Rule` , and the ID of the `Rule` . 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

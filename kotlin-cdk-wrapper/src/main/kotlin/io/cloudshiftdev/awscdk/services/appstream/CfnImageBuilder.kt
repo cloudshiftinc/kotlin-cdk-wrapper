@@ -100,7 +100,7 @@ public open class CfnImageBuilder(
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
   public open fun accessEndpoints(`value`: List<Any>) {
-    unwrap(this).setAccessEndpoints(`value`)
+    unwrap(this).setAccessEndpoints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -599,7 +599,7 @@ public open class CfnImageBuilder(
      * @param accessEndpoints The list of virtual private cloud (VPC) interface endpoint objects. 
      */
     override fun accessEndpoints(accessEndpoints: List<Any>) {
-      cdkBuilder.accessEndpoints(accessEndpoints)
+      cdkBuilder.accessEndpoints(accessEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

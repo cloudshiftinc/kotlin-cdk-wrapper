@@ -42,7 +42,8 @@ public interface INetworkTargetGroup : ITargetGroup {
      * @param targets 
      */
     override fun addTarget(vararg targets: INetworkLoadBalancerTarget) {
-      unwrap(this).addTarget(*targets.map(INetworkLoadBalancerTarget::unwrap).toTypedArray())
+      unwrap(this).addTarget(*targets.map{CdkObjectWrappers.unwrap(it) as
+          software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancerTarget}.toTypedArray())
     }
 
     /**

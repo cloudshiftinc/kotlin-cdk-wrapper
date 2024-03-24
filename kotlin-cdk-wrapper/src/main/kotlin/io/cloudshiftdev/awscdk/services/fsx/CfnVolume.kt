@@ -1174,7 +1174,7 @@ public open class CfnVolume(
        * options for mounting the OpenZFS file system. 
        */
       override fun clientConfigurations(clientConfigurations: List<Any>) {
-        cdkBuilder.clientConfigurations(clientConfigurations)
+        cdkBuilder.clientConfigurations(clientConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2481,7 +2481,7 @@ public open class CfnVolume(
        * system.
        */
       override fun nfsExports(nfsExports: List<Any>) {
-        cdkBuilder.nfsExports(nfsExports)
+        cdkBuilder.nfsExports(nfsExports.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2610,7 +2610,7 @@ public open class CfnVolume(
        * volume.
        */
       override fun userAndGroupQuotas(userAndGroupQuotas: List<Any>) {
-        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas)
+        cdkBuilder.userAndGroupQuotas(userAndGroupQuotas.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

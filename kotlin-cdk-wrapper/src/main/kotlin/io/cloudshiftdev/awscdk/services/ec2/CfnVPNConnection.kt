@@ -200,7 +200,7 @@ public open class CfnVPNConnection(
    * The tunnel options for the VPN connection.
    */
   public open fun vpnTunnelOptionsSpecifications(`value`: List<Any>) {
-    unwrap(this).setVpnTunnelOptionsSpecifications(`value`)
+    unwrap(this).setVpnTunnelOptionsSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -435,7 +435,7 @@ public open class CfnVPNConnection(
      * @param vpnTunnelOptionsSpecifications The tunnel options for the VPN connection. 
      */
     override fun vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications: List<Any>) {
-      cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications)
+      cdkBuilder.vpnTunnelOptionsSpecifications(vpnTunnelOptionsSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

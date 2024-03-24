@@ -1082,7 +1082,7 @@ public interface CfnDeploymentGroupProps {
      * You can specify `EC2TagFilters` or `Ec2TagSet` , but not both.
      */
     override fun ec2TagFilters(ec2TagFilters: List<Any>) {
-      cdkBuilder.ec2TagFilters(ec2TagFilters)
+      cdkBuilder.ec2TagFilters(ec2TagFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1141,7 +1141,7 @@ public interface CfnDeploymentGroupProps {
      * `&lt;clustername&gt;:&lt;servicename&gt;` .
      */
     override fun ecsServices(ecsServices: List<Any>) {
-      cdkBuilder.ecsServices(ecsServices)
+      cdkBuilder.ecsServices(ecsServices.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1211,7 +1211,7 @@ public interface CfnDeploymentGroupProps {
      * You can specify `OnPremisesInstanceTagFilters` or `OnPremisesInstanceTagSet` , but not both.
      */
     override fun onPremisesInstanceTagFilters(onPremisesInstanceTagFilters: List<Any>) {
-      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters)
+      cdkBuilder.onPremisesInstanceTagFilters(onPremisesInstanceTagFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1342,7 +1342,7 @@ public interface CfnDeploymentGroupProps {
      * Duplicates are not allowed
      */
     override fun triggerConfigurations(triggerConfigurations: List<Any>) {
-      cdkBuilder.triggerConfigurations(triggerConfigurations)
+      cdkBuilder.triggerConfigurations(triggerConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

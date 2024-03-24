@@ -270,7 +270,7 @@ public open class CfnDomain(
    * The setting for the subdomain.
    */
   public open fun subDomainSettings(`value`: List<Any>) {
-    unwrap(this).setSubDomainSettings(`value`)
+    unwrap(this).setSubDomainSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -681,7 +681,7 @@ public open class CfnDomain(
      * @param subDomainSettings The setting for the subdomain. 
      */
     override fun subDomainSettings(subDomainSettings: List<Any>) {
-      cdkBuilder.subDomainSettings(subDomainSettings)
+      cdkBuilder.subDomainSettings(subDomainSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

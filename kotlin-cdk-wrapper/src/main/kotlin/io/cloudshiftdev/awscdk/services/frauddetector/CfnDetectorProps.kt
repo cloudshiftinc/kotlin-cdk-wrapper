@@ -322,7 +322,7 @@ public interface CfnDetectorProps {
      * You must provide the ARNs of all the models you want to associate.
      */
     override fun associatedModels(associatedModels: List<Any>) {
-      cdkBuilder.associatedModels(associatedModels)
+      cdkBuilder.associatedModels(associatedModels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -408,7 +408,7 @@ public interface CfnDetectorProps {
      * @param rules The rules to include in the detector version. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

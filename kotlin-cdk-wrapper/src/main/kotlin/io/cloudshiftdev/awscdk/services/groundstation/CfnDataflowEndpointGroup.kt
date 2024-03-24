@@ -165,7 +165,7 @@ public open class CfnDataflowEndpointGroup(
    * List of Endpoint Details, containing address and port for each endpoint.
    */
   public open fun endpointDetails(`value`: List<Any>) {
-    unwrap(this).setEndpointDetails(`value`)
+    unwrap(this).setEndpointDetails(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -338,7 +338,7 @@ public open class CfnDataflowEndpointGroup(
      * endpoint. 
      */
     override fun endpointDetails(endpointDetails: List<Any>) {
-      cdkBuilder.endpointDetails(endpointDetails)
+      cdkBuilder.endpointDetails(endpointDetails.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

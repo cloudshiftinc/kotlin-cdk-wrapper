@@ -184,7 +184,7 @@ public open class CfnIndex(
    * Specifies the properties of an index field.
    */
   public open fun documentMetadataConfigurations(`value`: List<Any>) {
-    unwrap(this).setDocumentMetadataConfigurations(`value`)
+    unwrap(this).setDocumentMetadataConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -325,7 +325,7 @@ public open class CfnIndex(
    * Defines the type of user token used for the index.
    */
   public open fun userTokenConfigurations(`value`: List<Any>) {
-    unwrap(this).setUserTokenConfigurations(`value`)
+    unwrap(this).setUserTokenConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -643,7 +643,7 @@ public open class CfnIndex(
      * @param documentMetadataConfigurations Specifies the properties of an index field. 
      */
     override fun documentMetadataConfigurations(documentMetadataConfigurations: List<Any>) {
-      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations)
+      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -809,7 +809,7 @@ public open class CfnIndex(
      * @param userTokenConfigurations Defines the type of user token used for the index. 
      */
     override fun userTokenConfigurations(userTokenConfigurations: List<Any>) {
-      cdkBuilder.userTokenConfigurations(userTokenConfigurations)
+      cdkBuilder.userTokenConfigurations(userTokenConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1882,7 +1882,7 @@ public open class CfnIndex(
        * of a document.
        */
       override fun valueImportanceItems(valueImportanceItems: List<Any>) {
-        cdkBuilder.valueImportanceItems(valueImportanceItems)
+        cdkBuilder.valueImportanceItems(valueImportanceItems.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -297,7 +297,7 @@ public interface CfnImageRecipeProps {
      * recipe.
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -324,7 +324,7 @@ public interface CfnImageRecipeProps {
      * hardening steps. A component is defined using a YAML document format.
      */
     override fun components(components: List<Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

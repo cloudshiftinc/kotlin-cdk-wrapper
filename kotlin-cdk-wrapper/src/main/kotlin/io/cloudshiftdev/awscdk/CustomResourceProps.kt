@@ -221,7 +221,7 @@ public interface CustomResourceProps {
      * @param properties Properties to pass to the Lambda.
      */
     override fun properties(properties: Map<String, Any>) {
-      cdkBuilder.properties(properties)
+      cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

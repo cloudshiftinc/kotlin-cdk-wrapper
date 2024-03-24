@@ -169,7 +169,7 @@ public open class CfnResolverEndpoint(
    * endpoints) or that you forward DNS queries to (for inbound endpoints).
    */
   public open fun ipAddresses(`value`: List<Any>) {
-    unwrap(this).setIpAddresses(`value`)
+    unwrap(this).setIpAddresses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -542,7 +542,7 @@ public open class CfnResolverEndpoint(
      * (for outbound endpoints) or that you forward DNS queries to (for inbound endpoints). 
      */
     override fun ipAddresses(ipAddresses: List<Any>) {
-      cdkBuilder.ipAddresses(ipAddresses)
+      cdkBuilder.ipAddresses(ipAddresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

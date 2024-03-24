@@ -204,7 +204,7 @@ public open class CfnJob(
    * One or more artifacts that represent the AWS Glue Data Catalog output from running the job.
    */
   public open fun dataCatalogOutputs(`value`: List<Any>) {
-    unwrap(this).setDataCatalogOutputs(`value`)
+    unwrap(this).setDataCatalogOutputs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnJob(
    * DataBrew recipe job to write into.
    */
   public open fun databaseOutputs(`value`: List<Any>) {
-    unwrap(this).setDatabaseOutputs(`value`)
+    unwrap(this).setDatabaseOutputs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -408,7 +408,7 @@ public open class CfnJob(
    * One or more artifacts that represent output from running the job.
    */
   public open fun outputs(`value`: List<Any>) {
-    unwrap(this).setOutputs(`value`)
+    unwrap(this).setOutputs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -557,7 +557,7 @@ public open class CfnJob(
    * List of validation configurations that are applied to the profile job.
    */
   public open fun validationConfigurations(`value`: List<Any>) {
-    unwrap(this).setValidationConfigurations(`value`)
+    unwrap(this).setValidationConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -956,7 +956,7 @@ public open class CfnJob(
      * output from running the job. 
      */
     override fun dataCatalogOutputs(dataCatalogOutputs: List<Any>) {
-      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs)
+      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -990,7 +990,7 @@ public open class CfnJob(
      * output destination for a DataBrew recipe job to write into. 
      */
     override fun databaseOutputs(databaseOutputs: List<Any>) {
-      cdkBuilder.databaseOutputs(databaseOutputs)
+      cdkBuilder.databaseOutputs(databaseOutputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1176,7 +1176,7 @@ public open class CfnJob(
      * @param outputs One or more artifacts that represent output from running the job. 
      */
     override fun outputs(outputs: List<Any>) {
-      cdkBuilder.outputs(outputs)
+      cdkBuilder.outputs(outputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1345,7 +1345,7 @@ public open class CfnJob(
      * profile job. 
      */
     override fun validationConfigurations(validationConfigurations: List<Any>) {
-      cdkBuilder.validationConfigurations(validationConfigurations)
+      cdkBuilder.validationConfigurations(validationConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1707,7 +1707,7 @@ public open class CfnJob(
        * configuration will be applied to all supported columns.
        */
       override fun selectors(selectors: List<Any>) {
-        cdkBuilder.selectors(selectors)
+        cdkBuilder.selectors(selectors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3819,7 +3819,7 @@ public open class CfnJob(
        * profile job will profile all supported columns and run all supported evaluations.
        */
       override fun columnStatisticsConfigurations(columnStatisticsConfigurations: List<Any>) {
-        cdkBuilder.columnStatisticsConfigurations(columnStatisticsConfigurations)
+        cdkBuilder.columnStatisticsConfigurations(columnStatisticsConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3908,7 +3908,7 @@ public open class CfnJob(
        * undefined, the profile job will profile all supported columns.
        */
       override fun profileColumns(profileColumns: List<Any>) {
-        cdkBuilder.profileColumns(profileColumns)
+        cdkBuilder.profileColumns(profileColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4580,7 +4580,7 @@ public open class CfnJob(
        * @param overrides List of overrides for evaluations.
        */
       override fun overrides(overrides: List<Any>) {
-        cdkBuilder.overrides(overrides)
+        cdkBuilder.overrides(overrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -91,7 +92,8 @@ public open class StateMachine(
    * @param actions 
    */
   public override fun grant(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions on all executions of the state machine.
@@ -100,7 +102,8 @@ public open class StateMachine(
    * @param actions 
    */
   public override fun grantExecution(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grantExecution(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grantExecution(identity.let(IGrantable::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * The principal this state machine is running as.

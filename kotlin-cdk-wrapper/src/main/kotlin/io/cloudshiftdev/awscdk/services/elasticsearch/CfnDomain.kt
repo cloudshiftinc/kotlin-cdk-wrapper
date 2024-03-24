@@ -454,7 +454,7 @@ public open class CfnDomain(
    * `INDEX_SLOW_LOGS` , `AUDIT_LOGS` , depending on the types of logs you want to publish.
    */
   public open fun logPublishingOptions(`value`: Map<String, Any>) {
-    unwrap(this).setLogPublishingOptions(`value`)
+    unwrap(this).setLogPublishingOptions(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -1417,7 +1417,7 @@ public open class CfnDomain(
      * types of logs you want to publish. 
      */
     override fun logPublishingOptions(logPublishingOptions: Map<String, Any>) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions)
+      cdkBuilder.logPublishingOptions(logPublishingOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

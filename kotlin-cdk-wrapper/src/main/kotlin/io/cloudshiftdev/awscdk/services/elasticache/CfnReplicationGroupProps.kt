@@ -1618,7 +1618,7 @@ public interface CfnReplicationGroupProps {
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs.
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1686,7 +1686,7 @@ public interface CfnReplicationGroupProps {
      * .
      */
     override fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>) {
-      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration)
+      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -128,7 +128,7 @@ public open class CfnRecipe(
    * A list of steps that are defined by the recipe.
    */
   public open fun steps(`value`: List<Any>) {
-    unwrap(this).setSteps(`value`)
+    unwrap(this).setSteps(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -265,7 +265,7 @@ public open class CfnRecipe(
      * @param steps A list of steps that are defined by the recipe. 
      */
     override fun steps(steps: List<Any>) {
-      cdkBuilder.steps(steps)
+      cdkBuilder.steps(steps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2956,7 +2956,7 @@ public open class CfnRecipe(
        * @param secondaryInputs A list of secondary inputs in a UNION transform.
        */
       override fun secondaryInputs(secondaryInputs: List<Any>) {
-        cdkBuilder.secondaryInputs(secondaryInputs)
+        cdkBuilder.secondaryInputs(secondaryInputs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4128,7 +4128,7 @@ public open class CfnRecipe(
        * be combined using a logical AND operation.
        */
       override fun conditionExpressions(conditionExpressions: List<Any>) {
-        cdkBuilder.conditionExpressions(conditionExpressions)
+        cdkBuilder.conditionExpressions(conditionExpressions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

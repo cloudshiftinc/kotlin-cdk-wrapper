@@ -553,7 +553,7 @@ public open class CfnBackupSelection(
        * `StringLike` , `StringNotEquals` , and `StringNotLike` .
        */
       override fun listOfTags(listOfTags: List<Any>) {
-        cdkBuilder.listOfTags(listOfTags)
+        cdkBuilder.listOfTags(listOfTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1172,7 +1172,7 @@ public open class CfnBackupSelection(
        * Also called "exact matching."
        */
       override fun stringEquals(stringEquals: List<Any>) {
-        cdkBuilder.stringEquals(stringEquals)
+        cdkBuilder.stringEquals(stringEquals.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1198,7 +1198,7 @@ public open class CfnBackupSelection(
        * For example, "prod*" or "*rod*" matches the tag value "production".
        */
       override fun stringLike(stringLike: List<Any>) {
-        cdkBuilder.stringLike(stringLike)
+        cdkBuilder.stringLike(stringLike.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1223,7 +1223,7 @@ public open class CfnBackupSelection(
        * Also called "negated matching."
        */
       override fun stringNotEquals(stringNotEquals: List<Any>) {
-        cdkBuilder.stringNotEquals(stringNotEquals)
+        cdkBuilder.stringNotEquals(stringNotEquals.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1247,7 +1247,7 @@ public open class CfnBackupSelection(
        * values with the use of a wildcard character (*) anywhere in the string.
        */
       override fun stringNotLike(stringNotLike: List<Any>) {
-        cdkBuilder.stringNotLike(stringNotLike)
+        cdkBuilder.stringNotLike(stringNotLike.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

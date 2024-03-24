@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -82,7 +83,7 @@ public open class PolicyStatement(
    * @param actions actions that will be allowed. 
    */
   public open fun addActions(vararg actions: String) {
-    unwrap(this).addActions(*actions)
+    unwrap(this).addActions(*actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
 
   /**
@@ -167,7 +168,7 @@ public open class PolicyStatement(
    * @param conditions 
    */
   public open fun addConditions(conditions: Map<String, Any>) {
-    unwrap(this).addConditions(conditions)
+    unwrap(this).addConditions(conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -177,7 +178,8 @@ public open class PolicyStatement(
    * @param conditions The conditions under which the policy is in effect. 
    */
   public open fun addFederatedPrincipal(federated: Any, conditions: Map<String, Any>) {
-    unwrap(this).addFederatedPrincipal(federated, conditions)
+    unwrap(this).addFederatedPrincipal(federated,
+        conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -188,7 +190,8 @@ public open class PolicyStatement(
    * @param notActions actions that will be denied. 
    */
   public open fun addNotActions(vararg notActions: String) {
-    unwrap(this).addNotActions(*notActions)
+    unwrap(this).addNotActions(*notActions.map{CdkObjectWrappers.unwrap(it) as
+        String}.toTypedArray())
   }
 
   /**
@@ -199,7 +202,8 @@ public open class PolicyStatement(
    * @param notPrincipals IAM principals that will be denied access. 
    */
   public open fun addNotPrincipals(vararg notPrincipals: IPrincipal) {
-    unwrap(this).addNotPrincipals(*notPrincipals.map(IPrincipal::unwrap).toTypedArray())
+    unwrap(this).addNotPrincipals(*notPrincipals.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.iam.IPrincipal}.toTypedArray())
   }
 
   /**
@@ -213,7 +217,7 @@ public open class PolicyStatement(
    * apply to. 
    */
   public open fun addNotResources(vararg arns: String) {
-    unwrap(this).addNotResources(*arns)
+    unwrap(this).addNotResources(*arns.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
 
   /**
@@ -223,7 +227,8 @@ public open class PolicyStatement(
    * @param principals IAM principals that will be added. 
    */
   public open fun addPrincipals(vararg principals: IPrincipal) {
-    unwrap(this).addPrincipals(*principals.map(IPrincipal::unwrap).toTypedArray())
+    unwrap(this).addPrincipals(*principals.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.iam.IPrincipal}.toTypedArray())
   }
 
   /**
@@ -235,7 +240,7 @@ public open class PolicyStatement(
    * to. 
    */
   public open fun addResources(vararg arns: String) {
-    unwrap(this).addResources(*arns)
+    unwrap(this).addResources(*arns.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
 
   /**
@@ -628,7 +633,7 @@ public open class PolicyStatement(
      * @param conditions Conditions to add to the statement. 
      */
     override fun conditions(conditions: Map<String, Any>) {
-      cdkBuilder.conditions(conditions)
+      cdkBuilder.conditions(conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

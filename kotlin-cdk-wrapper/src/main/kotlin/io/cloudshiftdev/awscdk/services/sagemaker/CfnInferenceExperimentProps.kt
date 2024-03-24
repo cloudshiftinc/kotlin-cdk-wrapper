@@ -431,7 +431,7 @@ public interface CfnInferenceExperimentProps {
      * variant.
      */
     override fun modelVariants(modelVariants: List<Any>) {
-      cdkBuilder.modelVariants(modelVariants)
+      cdkBuilder.modelVariants(modelVariants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -82,7 +82,7 @@ public interface GetContextKeyOptions {
      * @param props Provider-specific properties.
      */
     override fun props(props: Map<String, Any>) {
-      cdkBuilder.props(props)
+      cdkBuilder.props(props.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

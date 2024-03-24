@@ -2840,7 +2840,7 @@ public open class CfnCanary(
        * comparisons during visual monitoring.
        */
       override fun baseScreenshots(baseScreenshots: List<Any>) {
-        cdkBuilder.baseScreenshots(baseScreenshots)
+        cdkBuilder.baseScreenshots(baseScreenshots.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

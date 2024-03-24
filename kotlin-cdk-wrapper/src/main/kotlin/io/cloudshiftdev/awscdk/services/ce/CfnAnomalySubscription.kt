@@ -147,7 +147,7 @@ public open class CfnAnomalySubscription(
    * Tags to assign to subscription.
    */
   public open fun resourceTags(`value`: List<Any>) {
-    unwrap(this).setResourceTags(`value`)
+    unwrap(this).setResourceTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -171,7 +171,7 @@ public open class CfnAnomalySubscription(
    * A list of subscribers to notify.
    */
   public open fun subscribers(`value`: List<Any>) {
-    unwrap(this).setSubscribers(`value`)
+    unwrap(this).setSubscribers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -431,7 +431,7 @@ public open class CfnAnomalySubscription(
      * @param resourceTags Tags to assign to subscription. 
      */
     override fun resourceTags(resourceTags: List<Any>) {
-      cdkBuilder.resourceTags(resourceTags)
+      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -459,7 +459,7 @@ public open class CfnAnomalySubscription(
      * @param subscribers A list of subscribers to notify. 
      */
     override fun subscribers(subscribers: List<Any>) {
-      cdkBuilder.subscribers(subscribers)
+      cdkBuilder.subscribers(subscribers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -295,7 +295,7 @@ public open class CfnTopic(
    * The data sets that the topic is associated with.
    */
   public open fun dataSets(`value`: List<Any>) {
-    unwrap(this).setDataSets(`value`)
+    unwrap(this).setDataSets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -466,7 +466,7 @@ public open class CfnTopic(
      * @param dataSets The data sets that the topic is associated with. 
      */
     override fun dataSets(dataSets: List<Any>) {
-      cdkBuilder.dataSets(dataSets)
+      cdkBuilder.dataSets(dataSets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1408,7 +1408,7 @@ public open class CfnTopic(
        * @param calculatedFields The list of calculated field definitions.
        */
       override fun calculatedFields(calculatedFields: List<Any>) {
-        cdkBuilder.calculatedFields(calculatedFields)
+        cdkBuilder.calculatedFields(calculatedFields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1428,7 +1428,7 @@ public open class CfnTopic(
        * @param columns The list of column definitions.
        */
       override fun columns(columns: List<Any>) {
-        cdkBuilder.columns(columns)
+        cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1490,7 +1490,7 @@ public open class CfnTopic(
        * @param filters The list of filter definitions.
        */
       override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
+        cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1509,7 +1509,7 @@ public open class CfnTopic(
        * @param namedEntities The list of named entities definitions.
        */
       override fun namedEntities(namedEntities: List<Any>) {
-        cdkBuilder.namedEntities(namedEntities)
+        cdkBuilder.namedEntities(namedEntities.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3695,7 +3695,7 @@ public open class CfnTopic(
        * @param cellValueSynonyms The other names or aliases for the calculated field cell value.
        */
       override fun cellValueSynonyms(cellValueSynonyms: List<Any>) {
-        cdkBuilder.cellValueSynonyms(cellValueSynonyms)
+        cdkBuilder.cellValueSynonyms(cellValueSynonyms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4865,7 +4865,7 @@ public open class CfnTopic(
        * @param cellValueSynonyms The other names or aliases for the column cell value.
        */
       override fun cellValueSynonyms(cellValueSynonyms: List<Any>) {
-        cdkBuilder.cellValueSynonyms(cellValueSynonyms)
+        cdkBuilder.cellValueSynonyms(cellValueSynonyms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6108,7 +6108,7 @@ public open class CfnTopic(
        * @param definition The definition of a named entity.
        */
       override fun definition(definition: List<Any>) {
-        cdkBuilder.definition(definition)
+        cdkBuilder.definition(definition.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

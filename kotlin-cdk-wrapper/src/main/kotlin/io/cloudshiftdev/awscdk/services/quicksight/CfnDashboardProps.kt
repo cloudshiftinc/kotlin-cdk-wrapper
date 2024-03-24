@@ -615,7 +615,7 @@ public interface CfnDashboardProps {
      * To specify no permissions, omit the permissions list.
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

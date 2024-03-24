@@ -306,7 +306,7 @@ public interface CfnFeatureProps {
      * that they are to be served.
      */
     override fun entityOverrides(entityOverrides: List<Any>) {
-      cdkBuilder.entityOverrides(entityOverrides)
+      cdkBuilder.entityOverrides(entityOverrides.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -394,7 +394,7 @@ public interface CfnFeatureProps {
      * value ( `BooleanValue` , `DoubleValue` , `LongValue` or `StringValue` ).
      */
     override fun variations(variations: List<Any>) {
-      cdkBuilder.variations(variations)
+      cdkBuilder.variations(variations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

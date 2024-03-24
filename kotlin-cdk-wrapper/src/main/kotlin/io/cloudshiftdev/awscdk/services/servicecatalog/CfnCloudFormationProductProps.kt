@@ -378,7 +378,7 @@ public interface CfnCloudFormationProductProps {
      * known as a version).
      */
     override fun provisioningArtifactParameters(provisioningArtifactParameters: List<Any>) {
-      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters)
+      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

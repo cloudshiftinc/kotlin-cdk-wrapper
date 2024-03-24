@@ -177,7 +177,7 @@ public open class CfnEnvironmentBlueprintConfiguration(
    * The regional parameters of the environment blueprint.
    */
   public open fun regionalParameters(`value`: List<Any>) {
-    unwrap(this).setRegionalParameters(`value`)
+    unwrap(this).setRegionalParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -358,7 +358,7 @@ public open class CfnEnvironmentBlueprintConfiguration(
      * @param regionalParameters The regional parameters of the environment blueprint. 
      */
     override fun regionalParameters(regionalParameters: List<Any>) {
-      cdkBuilder.regionalParameters(regionalParameters)
+      cdkBuilder.regionalParameters(regionalParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

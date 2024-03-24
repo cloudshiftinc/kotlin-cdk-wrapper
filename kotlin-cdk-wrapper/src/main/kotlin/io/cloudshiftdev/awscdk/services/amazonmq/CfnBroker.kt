@@ -592,7 +592,7 @@ public open class CfnBroker(
    * The list of broker users (persons or applications) who can access queues and topics.
    */
   public open fun users(`value`: List<Any>) {
-    unwrap(this).setUsers(`value`)
+    unwrap(this).setUsers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1515,7 +1515,7 @@ public open class CfnBroker(
      * topics. 
      */
     override fun users(users: List<Any>) {
-      cdkBuilder.users(users)
+      cdkBuilder.users(users.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

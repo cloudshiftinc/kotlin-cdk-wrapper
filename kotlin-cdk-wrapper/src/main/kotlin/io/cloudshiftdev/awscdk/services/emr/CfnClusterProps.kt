@@ -1104,7 +1104,7 @@ public interface CfnClusterProps {
      * Oozie, Zeppelin, and so on.
      */
     override fun applications(applications: List<Any>) {
-      cdkBuilder.applications(applications)
+      cdkBuilder.applications(applications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1170,7 +1170,7 @@ public interface CfnClusterProps {
      * cluster nodes.
      */
     override fun bootstrapActions(bootstrapActions: List<Any>) {
-      cdkBuilder.bootstrapActions(bootstrapActions)
+      cdkBuilder.bootstrapActions(bootstrapActions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1193,7 +1193,7 @@ public interface CfnClusterProps {
      * configurations that are supplied to the Amazon EMR cluster.
      */
     override fun configurations(configurations: List<Any>) {
-      cdkBuilder.configurations(configurations)
+      cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1386,7 +1386,7 @@ public interface CfnClusterProps {
      * @param placementGroupConfigs the value to be set.
      */
     override fun placementGroupConfigs(placementGroupConfigs: List<Any>) {
-      cdkBuilder.placementGroupConfigs(placementGroupConfigs)
+      cdkBuilder.placementGroupConfigs(placementGroupConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1459,7 +1459,7 @@ public interface CfnClusterProps {
      * @param steps A list of steps to run.
      */
     override fun steps(steps: List<Any>) {
-      cdkBuilder.steps(steps)
+      cdkBuilder.steps(steps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

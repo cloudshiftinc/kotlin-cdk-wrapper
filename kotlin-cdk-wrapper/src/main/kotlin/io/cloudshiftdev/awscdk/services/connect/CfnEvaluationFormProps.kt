@@ -302,7 +302,7 @@ public interface CfnEvaluationFormProps {
      * *Maximum size* : 100
      */
     override fun items(items: List<Any>) {
-      cdkBuilder.items(items)
+      cdkBuilder.items(items.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

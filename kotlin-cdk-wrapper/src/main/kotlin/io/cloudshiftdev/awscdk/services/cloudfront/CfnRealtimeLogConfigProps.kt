@@ -153,7 +153,7 @@ public interface CfnRealtimeLogConfigProps {
      * sending real-time log data for this real-time log configuration. 
      */
     override fun endPoints(endPoints: List<Any>) {
-      cdkBuilder.endPoints(endPoints)
+      cdkBuilder.endPoints(endPoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

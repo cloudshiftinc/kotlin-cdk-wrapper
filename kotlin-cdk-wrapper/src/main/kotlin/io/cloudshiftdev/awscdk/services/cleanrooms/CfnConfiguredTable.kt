@@ -151,7 +151,7 @@ public open class CfnConfiguredTable(
    * The entire created analysis rule.
    */
   public open fun analysisRules(`value`: List<Any>) {
-    unwrap(this).setAnalysisRules(`value`)
+    unwrap(this).setAnalysisRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -439,7 +439,7 @@ public open class CfnConfiguredTable(
      * @param analysisRules The entire created analysis rule. 
      */
     override fun analysisRules(analysisRules: List<Any>) {
-      cdkBuilder.analysisRules(analysisRules)
+      cdkBuilder.analysisRules(analysisRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1041,7 +1041,7 @@ public open class CfnConfiguredTable(
        * queries. 
        */
       override fun aggregateColumns(aggregateColumns: List<Any>) {
-        cdkBuilder.aggregateColumns(aggregateColumns)
+        cdkBuilder.aggregateColumns(aggregateColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1120,7 +1120,7 @@ public open class CfnConfiguredTable(
        * aggregation function is applied to it) for each output row to be returned. 
        */
       override fun outputConstraints(outputConstraints: List<Any>) {
-        cdkBuilder.outputConstraints(outputConstraints)
+        cdkBuilder.outputConstraints(outputConstraints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

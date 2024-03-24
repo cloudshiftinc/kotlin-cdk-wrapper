@@ -197,7 +197,7 @@ public interface CfnMultiRegionAccessPointProps {
      * Access Point. 
      */
     override fun regions(regions: List<Any>) {
-      cdkBuilder.regions(regions)
+      cdkBuilder.regions(regions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -67,7 +67,7 @@ public interface GetContextKeyResult {
      * @param props the value to be set. 
      */
     override fun props(props: Map<String, Any>) {
-      cdkBuilder.props(props)
+      cdkBuilder.props(props.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.GetContextKeyResult = cdkBuilder.build()

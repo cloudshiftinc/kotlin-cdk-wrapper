@@ -2746,7 +2746,7 @@ public open class CfnCrawler(
        * @param catalogTargets Specifies AWS Glue Data Catalog targets.
        */
       override fun catalogTargets(catalogTargets: List<Any>) {
-        cdkBuilder.catalogTargets(catalogTargets)
+        cdkBuilder.catalogTargets(catalogTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2766,7 +2766,7 @@ public open class CfnCrawler(
        * @param deltaTargets Specifies an array of Delta data store targets.
        */
       override fun deltaTargets(deltaTargets: List<Any>) {
-        cdkBuilder.deltaTargets(deltaTargets)
+        cdkBuilder.deltaTargets(deltaTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2786,7 +2786,7 @@ public open class CfnCrawler(
        * @param dynamoDbTargets Specifies Amazon DynamoDB targets.
        */
       override fun dynamoDbTargets(dynamoDbTargets: List<Any>) {
-        cdkBuilder.dynamoDbTargets(dynamoDbTargets)
+        cdkBuilder.dynamoDbTargets(dynamoDbTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2806,7 +2806,7 @@ public open class CfnCrawler(
        * @param icebergTargets Specifies Apache Iceberg data store targets.
        */
       override fun icebergTargets(icebergTargets: List<Any>) {
-        cdkBuilder.icebergTargets(icebergTargets)
+        cdkBuilder.icebergTargets(icebergTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2826,7 +2826,7 @@ public open class CfnCrawler(
        * @param jdbcTargets Specifies JDBC targets.
        */
       override fun jdbcTargets(jdbcTargets: List<Any>) {
-        cdkBuilder.jdbcTargets(jdbcTargets)
+        cdkBuilder.jdbcTargets(jdbcTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2845,7 +2845,7 @@ public open class CfnCrawler(
        * @param mongoDbTargets A list of Mongo DB targets.
        */
       override fun mongoDbTargets(mongoDbTargets: List<Any>) {
-        cdkBuilder.mongoDbTargets(mongoDbTargets)
+        cdkBuilder.mongoDbTargets(mongoDbTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2865,7 +2865,7 @@ public open class CfnCrawler(
        * @param s3Targets Specifies Amazon Simple Storage Service (Amazon S3) targets.
        */
       override fun s3Targets(s3Targets: List<Any>) {
-        cdkBuilder.s3Targets(s3Targets)
+        cdkBuilder.s3Targets(s3Targets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

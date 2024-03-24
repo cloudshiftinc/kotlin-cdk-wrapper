@@ -37,7 +37,8 @@ public abstract class TableBase(
    * @param actions The set of actions to allow (i.e. "dynamodb:PutItem", "dynamodb:GetItem", ...). 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
@@ -87,7 +88,8 @@ public abstract class TableBase(
    * "dynamodb:GetRecords", ...). 
    */
   public override fun grantStream(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grantStream(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grantStream(grantee.let(IGrantable::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Permits an IAM principal all stream data read operations for this table's stream:

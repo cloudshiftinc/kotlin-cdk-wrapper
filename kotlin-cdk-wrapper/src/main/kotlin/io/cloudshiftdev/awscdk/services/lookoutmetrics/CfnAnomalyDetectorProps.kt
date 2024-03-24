@@ -267,7 +267,7 @@ public interface CfnAnomalyDetectorProps {
      * @param metricSetList The detector's dataset. 
      */
     override fun metricSetList(metricSetList: List<Any>) {
-      cdkBuilder.metricSetList(metricSetList)
+      cdkBuilder.metricSetList(metricSetList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

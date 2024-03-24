@@ -558,7 +558,7 @@ public open class CfnRuleGroup(
    * The labels that one or more rules in this rule group add to matching web requests.
    */
   public open fun availableLabels(`value`: List<Any>) {
-    unwrap(this).setAvailableLabels(`value`)
+    unwrap(this).setAvailableLabels(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -594,7 +594,7 @@ public open class CfnRuleGroup(
    * The labels that one or more rules in this rule group match against in label match statements.
    */
   public open fun consumedLabels(`value`: List<Any>) {
-    unwrap(this).setConsumedLabels(`value`)
+    unwrap(this).setConsumedLabels(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -618,7 +618,7 @@ public open class CfnRuleGroup(
    * A map of custom response keys and content bodies.
    */
   public open fun customResponseBodies(`value`: Map<String, Any>) {
-    unwrap(this).setCustomResponseBodies(`value`)
+    unwrap(this).setCustomResponseBodies(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -670,7 +670,7 @@ public open class CfnRuleGroup(
    * The rule statements used to identify the web requests that you want to allow, block, or count.
    */
   public open fun rules(`value`: List<Any>) {
-    unwrap(this).setRules(`value`)
+    unwrap(this).setRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1044,7 +1044,7 @@ public open class CfnRuleGroup(
      * web requests. 
      */
     override fun availableLabels(availableLabels: List<Any>) {
-      cdkBuilder.availableLabels(availableLabels)
+      cdkBuilder.availableLabels(availableLabels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1104,7 +1104,7 @@ public open class CfnRuleGroup(
      * label match statements. 
      */
     override fun consumedLabels(consumedLabels: List<Any>) {
-      cdkBuilder.consumedLabels(consumedLabels)
+      cdkBuilder.consumedLabels(consumedLabels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1163,7 +1163,7 @@ public open class CfnRuleGroup(
      * @param customResponseBodies A map of custom response keys and content bodies. 
      */
     override fun customResponseBodies(customResponseBodies: Map<String, Any>) {
-      cdkBuilder.customResponseBodies(customResponseBodies)
+      cdkBuilder.customResponseBodies(customResponseBodies.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1215,7 +1215,7 @@ public open class CfnRuleGroup(
      * block, or count. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1915,7 +1915,7 @@ public open class CfnRuleGroup(
        * You can use any statements that can be nested.
        */
       override fun statements(statements: List<Any>) {
-        cdkBuilder.statements(statements)
+        cdkBuilder.statements(statements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2641,7 +2641,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4049,7 +4049,7 @@ public open class CfnRuleGroup(
        * Developer Guide* .
        */
       override fun insertHeaders(insertHeaders: List<Any>) {
-        cdkBuilder.insertHeaders(insertHeaders)
+        cdkBuilder.insertHeaders(insertHeaders.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4430,7 +4430,7 @@ public open class CfnRuleGroup(
        * Developer Guide* .
        */
       override fun responseHeaders(responseHeaders: List<Any>) {
-        cdkBuilder.responseHeaders(responseHeaders)
+        cdkBuilder.responseHeaders(responseHeaders.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9094,7 +9094,7 @@ public open class CfnRuleGroup(
        * You can use any statements that can be nested.
        */
       override fun statements(statements: List<Any>) {
-        cdkBuilder.statements(statements)
+        cdkBuilder.statements(statements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10670,7 +10670,7 @@ public open class CfnRuleGroup(
        * @param customKeys Specifies the aggregate keys to use in a rate-base rule.
        */
       override fun customKeys(customKeys: List<Any>) {
-        cdkBuilder.customKeys(customKeys)
+        cdkBuilder.customKeys(customKeys.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11045,7 +11045,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11238,7 +11238,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11528,7 +11528,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11703,7 +11703,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11870,7 +11870,7 @@ public open class CfnRuleGroup(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12133,7 +12133,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12415,7 +12415,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13648,7 +13648,7 @@ public open class CfnRuleGroup(
        * For example, `myLabelName` or `nameSpace1:nameSpace2:myLabelName` .
        */
       override fun ruleLabels(ruleLabels: List<Any>) {
-        cdkBuilder.ruleLabels(ruleLabels)
+        cdkBuilder.ruleLabels(ruleLabels.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -14271,7 +14271,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -14585,7 +14585,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -17661,7 +17661,7 @@ public open class CfnRuleGroup(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

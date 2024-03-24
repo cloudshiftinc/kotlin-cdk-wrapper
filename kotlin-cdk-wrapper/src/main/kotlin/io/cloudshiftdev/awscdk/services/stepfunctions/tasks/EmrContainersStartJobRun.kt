@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -627,7 +628,7 @@ public open class EmrContainersStartJobRun(
      * effective result before ResultPath is applied. 
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

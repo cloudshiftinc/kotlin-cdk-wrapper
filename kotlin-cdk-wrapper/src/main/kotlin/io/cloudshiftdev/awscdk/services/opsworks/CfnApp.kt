@@ -154,7 +154,7 @@ public open class CfnApp(
    * The app's data source.
    */
   public open fun dataSources(`value`: List<Any>) {
-    unwrap(this).setDataSources(`value`)
+    unwrap(this).setDataSources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -229,7 +229,7 @@ public open class CfnApp(
    * with the app.
    */
   public open fun environment(`value`: List<Any>) {
-    unwrap(this).setEnvironment(`value`)
+    unwrap(this).setEnvironment(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -655,7 +655,7 @@ public open class CfnApp(
      * @param dataSources The app's data source. 
      */
     override fun dataSources(dataSources: List<Any>) {
-      cdkBuilder.dataSources(dataSources)
+      cdkBuilder.dataSources(dataSources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -769,7 +769,7 @@ public open class CfnApp(
      * variables to be associated with the app. 
      */
     override fun environment(environment: List<Any>) {
-      cdkBuilder.environment(environment)
+      cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

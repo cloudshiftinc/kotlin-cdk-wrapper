@@ -128,7 +128,7 @@ public open class CfnGameSessionQueue(
    * requests in the queue.
    */
   public open fun destinations(`value`: List<Any>) {
-    unwrap(this).setDestinations(`value`)
+    unwrap(this).setDestinations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnGameSessionQueue(
    * A set of policies that act as a sliding cap on player latency.
    */
   public open fun playerLatencyPolicies(`value`: List<Any>) {
-    unwrap(this).setPlayerLatencyPolicies(`value`)
+    unwrap(this).setPlayerLatencyPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -571,7 +571,7 @@ public open class CfnGameSessionQueue(
      * session placement requests in the queue. 
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -684,7 +684,7 @@ public open class CfnGameSessionQueue(
      * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
      */
     override fun playerLatencyPolicies(playerLatencyPolicies: List<Any>) {
-      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies)
+      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -103,7 +103,7 @@ public interface CfnInputSecurityGroupProps {
      * as "allowed" addresses.
      */
     override fun whitelistRules(whitelistRules: List<Any>) {
-      cdkBuilder.whitelistRules(whitelistRules)
+      cdkBuilder.whitelistRules(whitelistRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

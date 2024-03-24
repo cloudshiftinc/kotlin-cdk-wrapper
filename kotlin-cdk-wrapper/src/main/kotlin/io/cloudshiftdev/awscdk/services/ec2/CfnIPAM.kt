@@ -159,7 +159,7 @@ public open class CfnIPAM(
    * The operating Regions for an IPAM.
    */
   public open fun operatingRegions(`value`: List<Any>) {
-    unwrap(this).setOperatingRegions(`value`)
+    unwrap(this).setOperatingRegions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -344,7 +344,7 @@ public open class CfnIPAM(
      * @param operatingRegions The operating Regions for an IPAM. 
      */
     override fun operatingRegions(operatingRegions: List<Any>) {
-      cdkBuilder.operatingRegions(operatingRegions)
+      cdkBuilder.operatingRegions(operatingRegions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

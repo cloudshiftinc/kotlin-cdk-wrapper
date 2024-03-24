@@ -415,7 +415,7 @@ public interface CfnLocationHDFSProps {
      * can use only one NameNode.
      */
     override fun nameNodes(nameNodes: List<Any>) {
-      cdkBuilder.nameNodes(nameNodes)
+      cdkBuilder.nameNodes(nameNodes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

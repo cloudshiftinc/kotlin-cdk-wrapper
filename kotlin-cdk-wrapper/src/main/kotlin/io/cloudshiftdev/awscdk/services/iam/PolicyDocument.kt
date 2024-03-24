@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.IResolveContext
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -57,7 +58,8 @@ public open class PolicyDocument(
    * @param statement the statement to add. 
    */
   public open fun addStatements(vararg statement: PolicyStatement) {
-    unwrap(this).addStatements(*statement.map(PolicyStatement::unwrap).toTypedArray())
+    unwrap(this).addStatements(*statement.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.iam.PolicyStatement}.toTypedArray())
   }
 
   /**

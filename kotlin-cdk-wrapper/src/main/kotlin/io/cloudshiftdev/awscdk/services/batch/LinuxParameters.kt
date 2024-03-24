@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.batch
 
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -61,7 +62,8 @@ public open class LinuxParameters(
    * @param device 
    */
   public open fun addDevices(vararg device: Device) {
-    unwrap(this).addDevices(*device.map(Device::unwrap).toTypedArray())
+    unwrap(this).addDevices(*device.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.batch.Device}.toTypedArray())
   }
 
   /**
@@ -82,7 +84,8 @@ public open class LinuxParameters(
    * @param tmpfs 
    */
   public open fun addTmpfs(vararg tmpfs: Tmpfs) {
-    unwrap(this).addTmpfs(*tmpfs.map(Tmpfs::unwrap).toTypedArray())
+    unwrap(this).addTmpfs(*tmpfs.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.batch.Tmpfs}.toTypedArray())
   }
 
   /**

@@ -148,7 +148,7 @@ public interface CfnRecipeProps {
      * @param steps A list of steps that are defined by the recipe. 
      */
     override fun steps(steps: List<Any>) {
-      cdkBuilder.steps(steps)
+      cdkBuilder.steps(steps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -164,7 +164,7 @@ public open class CfnLoadBalancer(
    * Information about a policy for application-controlled session stickiness.
    */
   public open fun appCookieStickinessPolicy(`value`: List<Any>) {
-    unwrap(this).setAppCookieStickinessPolicy(`value`)
+    unwrap(this).setAppCookieStickinessPolicy(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -383,7 +383,7 @@ public open class CfnLoadBalancer(
    * Information about a policy for duration-based session stickiness.
    */
   public open fun lbCookieStickinessPolicy(`value`: List<Any>) {
-    unwrap(this).setLbCookieStickinessPolicy(`value`)
+    unwrap(this).setLbCookieStickinessPolicy(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -414,7 +414,7 @@ public open class CfnLoadBalancer(
    * You can specify at most one listener per port.
    */
   public open fun listeners(`value`: List<Any>) {
-    unwrap(this).setListeners(`value`)
+    unwrap(this).setListeners(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -452,7 +452,7 @@ public open class CfnLoadBalancer(
    * The policies defined for your Classic Load Balancer.
    */
   public open fun policies(`value`: List<Any>) {
-    unwrap(this).setPolicies(`value`)
+    unwrap(this).setPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1063,7 +1063,7 @@ public open class CfnLoadBalancer(
      * session stickiness. 
      */
     override fun appCookieStickinessPolicy(appCookieStickinessPolicy: List<Any>) {
-      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy)
+      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1327,7 +1327,7 @@ public open class CfnLoadBalancer(
      * stickiness. 
      */
     override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: List<Any>) {
-      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy)
+      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1367,7 +1367,7 @@ public open class CfnLoadBalancer(
      * per port. 
      */
     override fun listeners(listeners: List<Any>) {
-      cdkBuilder.listeners(listeners)
+      cdkBuilder.listeners(listeners.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1422,7 +1422,7 @@ public open class CfnLoadBalancer(
      * @param policies The policies defined for your Classic Load Balancer. 
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2893,7 +2893,7 @@ public open class CfnLoadBalancer(
        * @param attributes The policy attributes. 
        */
       override fun attributes(attributes: List<Any>) {
-        cdkBuilder.attributes(attributes)
+        cdkBuilder.attributes(attributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

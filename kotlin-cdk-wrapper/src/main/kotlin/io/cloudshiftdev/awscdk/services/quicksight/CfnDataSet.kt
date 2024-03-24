@@ -345,7 +345,7 @@ public open class CfnDataSet(
    * Groupings of columns that work together in certain Amazon QuickSight features.
    */
   public open fun columnGroups(`value`: List<Any>) {
-    unwrap(this).setColumnGroups(`value`)
+    unwrap(this).setColumnGroups(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -369,7 +369,7 @@ public open class CfnDataSet(
    * A set of one or more definitions of a `ColumnLevelPermissionRule` .
    */
   public open fun columnLevelPermissionRules(`value`: List<Any>) {
-    unwrap(this).setColumnLevelPermissionRules(`value`)
+    unwrap(this).setColumnLevelPermissionRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnDataSet(
    * The parameters that are declared in a dataset.
    */
   public open fun datasetParameters(`value`: List<Any>) {
-    unwrap(this).setDatasetParameters(`value`)
+    unwrap(this).setDatasetParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -486,7 +486,7 @@ public open class CfnDataSet(
    * The folder that contains fields and nested subfolders for your dataset.
    */
   public open fun fieldFolders(`value`: Map<String, Any>) {
-    unwrap(this).setFieldFolders(`value`)
+    unwrap(this).setFieldFolders(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -553,7 +553,7 @@ public open class CfnDataSet(
    * Configures the combination and transformation of the data from the physical tables.
    */
   public open fun logicalTableMap(`value`: Map<String, Any>) {
-    unwrap(this).setLogicalTableMap(`value`)
+    unwrap(this).setLogicalTableMap(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -584,7 +584,7 @@ public open class CfnDataSet(
    * A list of resource permissions on the dataset.
    */
   public open fun permissions(`value`: List<Any>) {
-    unwrap(this).setPermissions(`value`)
+    unwrap(this).setPermissions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -608,7 +608,7 @@ public open class CfnDataSet(
    * Declares the physical tables that are available in the underlying data sources.
    */
   public open fun physicalTableMap(`value`: Map<String, Any>) {
-    unwrap(this).setPhysicalTableMap(`value`)
+    unwrap(this).setPhysicalTableMap(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -1103,7 +1103,7 @@ public open class CfnDataSet(
      * features. 
      */
     override fun columnGroups(columnGroups: List<Any>) {
-      cdkBuilder.columnGroups(columnGroups)
+      cdkBuilder.columnGroups(columnGroups.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1136,7 +1136,7 @@ public open class CfnDataSet(
      * `ColumnLevelPermissionRule` . 
      */
     override fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>) {
-      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules)
+      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1248,7 +1248,7 @@ public open class CfnDataSet(
      * @param datasetParameters The parameters that are declared in a dataset. 
      */
     override fun datasetParameters(datasetParameters: List<Any>) {
-      cdkBuilder.datasetParameters(datasetParameters)
+      cdkBuilder.datasetParameters(datasetParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1277,7 +1277,7 @@ public open class CfnDataSet(
      * @param fieldFolders The folder that contains fields and nested subfolders for your dataset. 
      */
     override fun fieldFolders(fieldFolders: Map<String, Any>) {
-      cdkBuilder.fieldFolders(fieldFolders)
+      cdkBuilder.fieldFolders(fieldFolders.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1347,7 +1347,7 @@ public open class CfnDataSet(
      * physical tables. 
      */
     override fun logicalTableMap(logicalTableMap: Map<String, Any>) {
-      cdkBuilder.logicalTableMap(logicalTableMap)
+      cdkBuilder.logicalTableMap(logicalTableMap.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1377,7 +1377,7 @@ public open class CfnDataSet(
      * @param permissions A list of resource permissions on the dataset. 
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1407,7 +1407,7 @@ public open class CfnDataSet(
      * data sources. 
      */
     override fun physicalTableMap(physicalTableMap: Map<String, Any>) {
-      cdkBuilder.physicalTableMap(physicalTableMap)
+      cdkBuilder.physicalTableMap(physicalTableMap.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -2394,7 +2394,7 @@ public open class CfnDataSet(
        * @param columns Calculated columns to create. 
        */
       override fun columns(columns: List<Any>) {
-        cdkBuilder.columns(columns)
+        cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2541,7 +2541,7 @@ public open class CfnDataSet(
        * @param columns The column schema from the SQL query result set. 
        */
       override fun columns(columns: List<Any>) {
-        cdkBuilder.columns(columns)
+        cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5528,7 +5528,7 @@ public open class CfnDataSet(
        * For this structure to be valid, only one of the attributes can be non-null.
        */
       override fun dataTransforms(dataTransforms: List<Any>) {
-        cdkBuilder.dataTransforms(dataTransforms)
+        cdkBuilder.dataTransforms(dataTransforms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7112,7 +7112,7 @@ public open class CfnDataSet(
        * @param inputColumns The column schema of the table. 
        */
       override fun inputColumns(inputColumns: List<Any>) {
-        cdkBuilder.inputColumns(inputColumns)
+        cdkBuilder.inputColumns(inputColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7817,7 +7817,7 @@ public open class CfnDataSet(
        * and columns that they are assigned to. 
        */
       override fun tagRules(tagRules: List<Any>) {
-        cdkBuilder.tagRules(tagRules)
+        cdkBuilder.tagRules(tagRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8194,7 +8194,7 @@ public open class CfnDataSet(
        * For files that aren't JSON, only `STRING` data types are supported in input columns.
        */
       override fun inputColumns(inputColumns: List<Any>) {
-        cdkBuilder.inputColumns(inputColumns)
+        cdkBuilder.inputColumns(inputColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

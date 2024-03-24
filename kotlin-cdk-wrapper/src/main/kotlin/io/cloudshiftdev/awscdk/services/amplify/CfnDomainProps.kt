@@ -421,7 +421,7 @@ public interface CfnDomainProps {
      * @param subDomainSettings The setting for the subdomain. 
      */
     override fun subDomainSettings(subDomainSettings: List<Any>) {
-      cdkBuilder.subDomainSettings(subDomainSettings)
+      cdkBuilder.subDomainSettings(subDomainSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -411,7 +411,8 @@ public interface ICluster : IResource, IConnectable {
      * @param manifest a list of Kubernetes resource specifications. 
      */
     override fun addManifest(id: String, vararg manifest: Map<String, Any>): KubernetesManifest =
-        unwrap(this).addManifest(id, *manifest).let(KubernetesManifest::wrap)
+        unwrap(this).addManifest(id,
+        *manifest.map{it.mapValues{CdkObjectWrappers.unwrap(it.value)}}.toTypedArray()).let(KubernetesManifest::wrap)
 
     /**
      * Creates a new service account with corresponding IAM Role (IRSA).

@@ -6,8 +6,8 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
-import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.InstanceType
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
@@ -23,7 +23,9 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
+import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup as CloudshiftdevAwscdkServicesEc2ISecurityGroup
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.amazon.awscdk.services.ec2.ISecurityGroup as AmazonAwscdkServicesEc2ISecurityGroup
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
@@ -110,8 +112,10 @@ public open class DatabaseCluster(
    *
    * @param securityGroups The security groups to add. 
    */
-  public open fun addSecurityGroups(vararg securityGroups: ISecurityGroup) {
-    unwrap(this).addSecurityGroups(*securityGroups.map(ISecurityGroup::unwrap).toTypedArray())
+  public open fun addSecurityGroups(vararg
+      securityGroups: CloudshiftdevAwscdkServicesEc2ISecurityGroup) {
+    unwrap(this).addSecurityGroups(*securityGroups.map{CdkObjectWrappers.unwrap(it) as
+        AmazonAwscdkServicesEc2ISecurityGroup}.toTypedArray())
   }
 
   /**
@@ -424,7 +428,7 @@ public open class DatabaseCluster(
      *
      * @param securityGroup Security group. 
      */
-    public fun securityGroup(securityGroup: ISecurityGroup)
+    public fun securityGroup(securityGroup: CloudshiftdevAwscdkServicesEc2ISecurityGroup)
 
     /**
      * The removal policy to apply to the cluster's security group.
@@ -772,8 +776,8 @@ public open class DatabaseCluster(
      *
      * @param securityGroup Security group. 
      */
-    override fun securityGroup(securityGroup: ISecurityGroup) {
-      cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    override fun securityGroup(securityGroup: CloudshiftdevAwscdkServicesEc2ISecurityGroup) {
+      cdkBuilder.securityGroup(securityGroup.let(CloudshiftdevAwscdkServicesEc2ISecurityGroup::unwrap))
     }
 
     /**

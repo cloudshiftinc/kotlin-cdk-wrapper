@@ -400,7 +400,7 @@ public interface CfnAppProps {
      * @param dataSources The app's data source.
      */
     override fun dataSources(dataSources: List<Any>) {
-      cdkBuilder.dataSources(dataSources)
+      cdkBuilder.dataSources(dataSources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -482,7 +482,7 @@ public interface CfnAppProps {
      * version.
      */
     override fun environment(environment: List<Any>) {
-      cdkBuilder.environment(environment)
+      cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

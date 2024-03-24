@@ -150,7 +150,7 @@ public open class CfnContainer(
    * container can service cross-origin requests.
    */
   public open fun corsPolicy(`value`: List<Any>) {
-    unwrap(this).setCorsPolicy(`value`)
+    unwrap(this).setCorsPolicy(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -544,7 +544,7 @@ public open class CfnContainer(
      * so that the container can service cross-origin requests. 
      */
     override fun corsPolicy(corsPolicy: List<Any>) {
-      cdkBuilder.corsPolicy(corsPolicy)
+      cdkBuilder.corsPolicy(corsPolicy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1154,7 +1154,7 @@ public open class CfnContainer(
        * to allow up to 300 rules per policy.
        */
       override fun metricPolicyRules(metricPolicyRules: List<Any>) {
-        cdkBuilder.metricPolicyRules(metricPolicyRules)
+        cdkBuilder.metricPolicyRules(metricPolicyRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

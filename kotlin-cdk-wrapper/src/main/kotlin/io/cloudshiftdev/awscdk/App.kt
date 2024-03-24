@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -249,7 +250,7 @@ public open class App(
      * @param context Additional context values for the application. 
      */
     override fun context(context: Map<String, Any>) {
-      cdkBuilder.context(context)
+      cdkBuilder.context(context.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -340,7 +341,7 @@ public open class App(
      * @param postCliContext Additional context values for the application. 
      */
     override fun postCliContext(postCliContext: Map<String, Any>) {
-      cdkBuilder.postCliContext(postCliContext)
+      cdkBuilder.postCliContext(postCliContext.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

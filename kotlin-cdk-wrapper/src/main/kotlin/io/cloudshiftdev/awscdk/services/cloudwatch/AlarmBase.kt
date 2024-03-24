@@ -21,7 +21,8 @@ public abstract class AlarmBase(
    * @param actions 
    */
   public open fun addAlarmAction(vararg actions: IAlarmAction) {
-    unwrap(this).addAlarmAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
+    unwrap(this).addAlarmAction(*actions.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.cloudwatch.IAlarmAction}.toTypedArray())
   }
 
   /**
@@ -32,7 +33,8 @@ public abstract class AlarmBase(
    * @param actions 
    */
   public open fun addInsufficientDataAction(vararg actions: IAlarmAction) {
-    unwrap(this).addInsufficientDataAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
+    unwrap(this).addInsufficientDataAction(*actions.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.cloudwatch.IAlarmAction}.toTypedArray())
   }
 
   /**
@@ -43,7 +45,8 @@ public abstract class AlarmBase(
    * @param actions 
    */
   public open fun addOkAction(vararg actions: IAlarmAction) {
-    unwrap(this).addOkAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
+    unwrap(this).addOkAction(*actions.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.cloudwatch.IAlarmAction}.toTypedArray())
   }
 
   /**

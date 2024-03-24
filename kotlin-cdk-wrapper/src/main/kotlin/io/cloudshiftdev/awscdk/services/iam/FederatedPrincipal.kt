@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Map
@@ -35,15 +36,16 @@ public open class FederatedPrincipal(
   )
 
   public constructor(federated: String, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated, conditions)
+      this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated,
+      conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 
   public constructor(
     federated: String,
     conditions: Map<String, Any>,
     assumeRoleAction: String,
-  ) : this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated, conditions,
-      assumeRoleAction)
+  ) : this(software.amazon.awscdk.services.iam.FederatedPrincipal(federated,
+      conditions.mapValues{CdkObjectWrappers.unwrap(it.value)}, assumeRoleAction)
   )
 
   /**

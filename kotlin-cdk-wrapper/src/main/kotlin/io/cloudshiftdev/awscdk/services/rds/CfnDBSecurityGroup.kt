@@ -99,7 +99,7 @@ public open class CfnDBSecurityGroup(
    * Ingress rules to be applied to the DB security group.
    */
   public open fun dbSecurityGroupIngress(`value`: List<Any>) {
-    unwrap(this).setDbSecurityGroupIngress(`value`)
+    unwrap(this).setDbSecurityGroupIngress(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnDBSecurityGroup(
      * @param dbSecurityGroupIngress Ingress rules to be applied to the DB security group. 
      */
     override fun dbSecurityGroupIngress(dbSecurityGroupIngress: List<Any>) {
-      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress)
+      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

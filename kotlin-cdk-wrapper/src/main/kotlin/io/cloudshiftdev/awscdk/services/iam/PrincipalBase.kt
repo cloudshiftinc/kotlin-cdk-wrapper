@@ -142,7 +142,7 @@ public abstract class PrincipalBase(
    * @param conditions 
    */
   public open fun withConditions(conditions: Map<String, Any>): PrincipalBase =
-      unwrap(this).withConditions(conditions).let(PrincipalBase::wrap)
+      unwrap(this).withConditions(conditions.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(PrincipalBase::wrap)
 
   /**
    * Returns a new principal using this principal as the base, with session tags enabled.

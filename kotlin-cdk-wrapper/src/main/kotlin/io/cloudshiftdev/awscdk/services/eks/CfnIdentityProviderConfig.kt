@@ -596,7 +596,7 @@ public open class CfnIdentityProviderConfig(
        * If set, each claim is verified to be present in the token with a matching value.
        */
       override fun requiredClaims(requiredClaims: List<Any>) {
-        cdkBuilder.requiredClaims(requiredClaims)
+        cdkBuilder.requiredClaims(requiredClaims.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

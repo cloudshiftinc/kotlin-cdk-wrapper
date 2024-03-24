@@ -112,7 +112,7 @@ public interface CfnByteMatchSetProps {
      * you want AWS WAF to search, and other settings.
      */
     override fun byteMatchTuples(byteMatchTuples: List<Any>) {
-      cdkBuilder.byteMatchTuples(byteMatchTuples)
+      cdkBuilder.byteMatchTuples(byteMatchTuples.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

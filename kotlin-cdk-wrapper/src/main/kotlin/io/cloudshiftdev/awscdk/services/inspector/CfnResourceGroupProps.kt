@@ -97,7 +97,7 @@ public interface CfnResourceGroupProps {
      * .
      */
     override fun resourceGroupTags(resourceGroupTags: List<Any>) {
-      cdkBuilder.resourceGroupTags(resourceGroupTags)
+      cdkBuilder.resourceGroupTags(resourceGroupTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

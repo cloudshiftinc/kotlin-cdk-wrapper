@@ -353,7 +353,7 @@ public open class CfnFunction(
    * Connection settings for an Amazon EFS file system.
    */
   public open fun fileSystemConfigs(`value`: List<Any>) {
-    unwrap(this).setFileSystemConfigs(`value`)
+    unwrap(this).setFileSystemConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1585,7 +1585,7 @@ public open class CfnFunction(
      * @param fileSystemConfigs Connection settings for an Amazon EFS file system. 
      */
     override fun fileSystemConfigs(fileSystemConfigs: List<Any>) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs)
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

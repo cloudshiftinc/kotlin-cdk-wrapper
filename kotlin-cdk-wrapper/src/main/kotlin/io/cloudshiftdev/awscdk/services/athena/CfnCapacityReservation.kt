@@ -478,7 +478,7 @@ public open class CfnCapacityReservation(
        * configuration. 
        */
       override fun capacityAssignments(capacityAssignments: List<Any>) {
-        cdkBuilder.capacityAssignments(capacityAssignments)
+        cdkBuilder.capacityAssignments(capacityAssignments.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

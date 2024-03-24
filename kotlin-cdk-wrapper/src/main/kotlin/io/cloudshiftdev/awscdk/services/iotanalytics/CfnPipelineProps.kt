@@ -238,7 +238,7 @@ public interface CfnPipelineProps {
      * `pipelineActivities = [ { "channel": { ... } }, { "lambda": { ... } }, ... ]`
      */
     override fun pipelineActivities(pipelineActivities: List<Any>) {
-      cdkBuilder.pipelineActivities(pipelineActivities)
+      cdkBuilder.pipelineActivities(pipelineActivities.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

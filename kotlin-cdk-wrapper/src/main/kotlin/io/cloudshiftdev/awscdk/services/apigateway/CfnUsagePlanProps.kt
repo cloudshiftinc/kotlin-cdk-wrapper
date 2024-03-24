@@ -192,7 +192,7 @@ public interface CfnUsagePlanProps {
      * @param apiStages The associated API stages of a usage plan.
      */
     override fun apiStages(apiStages: List<Any>) {
-      cdkBuilder.apiStages(apiStages)
+      cdkBuilder.apiStages(apiStages.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

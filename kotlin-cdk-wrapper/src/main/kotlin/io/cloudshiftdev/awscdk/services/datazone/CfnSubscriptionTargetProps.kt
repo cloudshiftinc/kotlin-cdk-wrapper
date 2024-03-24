@@ -257,7 +257,7 @@ public interface CfnSubscriptionTargetProps {
      * @param subscriptionTargetConfig The configuration of the subscription target. 
      */
     override fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>) {
-      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig)
+      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

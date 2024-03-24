@@ -246,7 +246,7 @@ public open class CfnContainer(
    * The public domain name of the container service, such as `example.com` and `www.example.com` .
    */
   public open fun publicDomainNames(`value`: List<Any>) {
-    unwrap(this).setPublicDomainNames(`value`)
+    unwrap(this).setPublicDomainNames(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -731,7 +731,7 @@ public open class CfnContainer(
      * `example.com` and `www.example.com` . 
      */
     override fun publicDomainNames(publicDomainNames: List<Any>) {
-      cdkBuilder.publicDomainNames(publicDomainNames)
+      cdkBuilder.publicDomainNames(publicDomainNames.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1021,7 +1021,7 @@ public open class CfnContainer(
        * @param environment The environment variables of the container.
        */
       override fun environment(environment: List<Any>) {
-        cdkBuilder.environment(environment)
+        cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1060,7 +1060,7 @@ public open class CfnContainer(
        * container.
        */
       override fun ports(ports: List<Any>) {
-        cdkBuilder.ports(ports)
+        cdkBuilder.ports(ports.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1263,7 +1263,7 @@ public open class CfnContainer(
        * deployment.
        */
       override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
+        cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

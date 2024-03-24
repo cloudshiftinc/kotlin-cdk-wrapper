@@ -563,7 +563,7 @@ public interface CfnMatchmakingConfigurationProps {
      * . This parameter is not used if `FlexMatchMode` is set to `STANDALONE` .
      */
     override fun gameProperties(gameProperties: List<Any>) {
-      cdkBuilder.gameProperties(gameProperties)
+      cdkBuilder.gameProperties(gameProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

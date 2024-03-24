@@ -135,7 +135,7 @@ public interface CfnDBSecurityGroupProps {
      * @param dbSecurityGroupIngress Ingress rules to be applied to the DB security group. 
      */
     override fun dbSecurityGroupIngress(dbSecurityGroupIngress: List<Any>) {
-      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress)
+      cdkBuilder.dbSecurityGroupIngress(dbSecurityGroupIngress.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

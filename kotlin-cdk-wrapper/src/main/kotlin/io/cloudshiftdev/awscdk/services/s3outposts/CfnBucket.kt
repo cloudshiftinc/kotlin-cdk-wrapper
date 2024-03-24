@@ -1085,7 +1085,7 @@ public open class CfnBucket(
        * the S3 on Outposts bucket. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

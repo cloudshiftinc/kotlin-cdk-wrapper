@@ -1452,7 +1452,7 @@ public open class CfnMLTransform(
        * input or output data.
        */
       override fun glueTables(glueTables: List<Any>) {
-        cdkBuilder.glueTables(glueTables)
+        cdkBuilder.glueTables(glueTables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

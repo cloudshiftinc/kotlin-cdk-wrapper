@@ -448,7 +448,7 @@ public interface CfnFormProps {
      * @param fields The configuration information for the form's fields.
      */
     override fun fields(fields: Map<String, Any>) {
-      cdkBuilder.fields(fields)
+      cdkBuilder.fields(fields.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -494,7 +494,7 @@ public interface CfnFormProps {
      * These elements are not associated with any data.
      */
     override fun sectionalElements(sectionalElements: Map<String, Any>) {
-      cdkBuilder.sectionalElements(sectionalElements)
+      cdkBuilder.sectionalElements(sectionalElements.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

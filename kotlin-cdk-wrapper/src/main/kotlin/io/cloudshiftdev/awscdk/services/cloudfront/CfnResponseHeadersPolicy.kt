@@ -1849,7 +1849,7 @@ public open class CfnResponseHeadersPolicy(
        * @param items The list of HTTP response headers and their values. 
        */
       override fun items(items: List<Any>) {
-        cdkBuilder.items(items)
+        cdkBuilder.items(items.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2381,7 +2381,7 @@ public open class CfnResponseHeadersPolicy(
        * @param items The list of HTTP header names. 
        */
       override fun items(items: List<Any>) {
-        cdkBuilder.items(items)
+        cdkBuilder.items(items.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

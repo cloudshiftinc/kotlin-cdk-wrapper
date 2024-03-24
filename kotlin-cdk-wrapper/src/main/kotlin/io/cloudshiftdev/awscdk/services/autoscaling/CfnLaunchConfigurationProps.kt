@@ -701,7 +701,7 @@ public interface CfnLaunchConfigurationProps {
      * in the *Amazon EC2 User Guide for Linux Instances* .
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

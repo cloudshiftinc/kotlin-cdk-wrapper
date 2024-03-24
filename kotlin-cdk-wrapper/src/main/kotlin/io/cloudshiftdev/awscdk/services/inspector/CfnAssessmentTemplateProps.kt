@@ -196,7 +196,7 @@ public interface CfnAssessmentTemplateProps {
      * Within an assessment template, each key must be unique.
      */
     override fun userAttributesForFindings(userAttributesForFindings: List<Any>) {
-      cdkBuilder.userAttributesForFindings(userAttributesForFindings)
+      cdkBuilder.userAttributesForFindings(userAttributesForFindings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

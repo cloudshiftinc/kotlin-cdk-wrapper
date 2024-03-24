@@ -267,7 +267,7 @@ public interface CfnBotAliasProps {
      * For example, you can use different Lambda function depending on the bot's locale.
      */
     override fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>) {
-      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings)
+      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -305,7 +305,7 @@ public interface CfnBotAliasProps {
      * .
      */
     override fun botAliasTags(botAliasTags: List<Any>) {
-      cdkBuilder.botAliasTags(botAliasTags)
+      cdkBuilder.botAliasTags(botAliasTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -102,7 +102,7 @@ public open class CfnTrustStoreRevocation(
    * The revocation file to add.
    */
   public open fun revocationContents(`value`: List<Any>) {
-    unwrap(this).setRevocationContents(`value`)
+    unwrap(this).setRevocationContents(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnTrustStoreRevocation(
      * @param revocationContents The revocation file to add. 
      */
     override fun revocationContents(revocationContents: List<Any>) {
-      cdkBuilder.revocationContents(revocationContents)
+      cdkBuilder.revocationContents(revocationContents.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

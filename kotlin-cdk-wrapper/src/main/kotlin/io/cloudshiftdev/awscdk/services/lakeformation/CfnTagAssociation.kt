@@ -159,7 +159,7 @@ public open class CfnTagAssociation(
    * A structure containing an LF-tag key-value pair.
    */
   public open fun lfTags(`value`: List<Any>) {
-    unwrap(this).setLfTags(`value`)
+    unwrap(this).setLfTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -280,7 +280,7 @@ public open class CfnTagAssociation(
      * @param lfTags A structure containing an LF-tag key-value pair. 
      */
     override fun lfTags(lfTags: List<Any>) {
-      cdkBuilder.lfTags(lfTags)
+      cdkBuilder.lfTags(lfTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

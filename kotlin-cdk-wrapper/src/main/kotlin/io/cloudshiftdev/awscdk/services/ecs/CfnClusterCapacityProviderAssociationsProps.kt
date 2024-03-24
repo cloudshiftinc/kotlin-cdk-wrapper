@@ -134,7 +134,7 @@ public interface CfnClusterCapacityProviderAssociationsProps {
      * with the cluster. 
      */
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
-      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy)
+      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

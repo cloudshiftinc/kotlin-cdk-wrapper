@@ -200,7 +200,7 @@ public open class CfnInstanceGroupConfig(
    * Amazon EMR releases 4.x or later.
    */
   public open fun configurations(`value`: List<Any>) {
-    unwrap(this).setConfigurations(`value`)
+    unwrap(this).setConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -602,7 +602,7 @@ public open class CfnInstanceGroupConfig(
      * @param configurations Amazon EMR releases 4.x or later. 
      */
     override fun configurations(configurations: List<Any>) {
-      cdkBuilder.configurations(configurations)
+      cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -918,7 +918,7 @@ public open class CfnInstanceGroupConfig(
        * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1176,7 +1176,7 @@ public open class CfnInstanceGroupConfig(
        * @param dimensions A CloudWatch metric dimension.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1490,7 +1490,7 @@ public open class CfnInstanceGroupConfig(
        * object.
        */
       override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
+        cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1811,7 +1811,7 @@ public open class CfnInstanceGroupConfig(
        * cluster instance.
        */
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

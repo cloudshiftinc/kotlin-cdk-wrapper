@@ -161,7 +161,7 @@ public open class CfnApplication(
    * Use this parameter to configure the application input.
    */
   public open fun inputs(`value`: List<Any>) {
-    unwrap(this).setInputs(`value`)
+    unwrap(this).setInputs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -383,7 +383,7 @@ public open class CfnApplication(
      * @param inputs Use this parameter to configure the application input. 
      */
     override fun inputs(inputs: List<Any>) {
-      cdkBuilder.inputs(inputs)
+      cdkBuilder.inputs(inputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1636,7 +1636,7 @@ public open class CfnApplication(
        * @param recordColumns A list of `RecordColumn` objects. 
        */
       override fun recordColumns(recordColumns: List<Any>) {
-        cdkBuilder.recordColumns(recordColumns)
+        cdkBuilder.recordColumns(recordColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

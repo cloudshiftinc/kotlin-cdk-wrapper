@@ -425,7 +425,7 @@ public interface CfnJobTemplateProps {
      * job document to all devices in a target group for a job.
      */
     override fun maintenanceWindows(maintenanceWindows: List<Any>) {
-      cdkBuilder.maintenanceWindows(maintenanceWindows)
+      cdkBuilder.maintenanceWindows(maintenanceWindows.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

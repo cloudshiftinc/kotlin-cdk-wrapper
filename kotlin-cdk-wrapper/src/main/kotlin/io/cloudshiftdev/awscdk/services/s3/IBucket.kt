@@ -830,7 +830,8 @@ public interface IBucket : IResource {
     ) {
       unwrap(this).addEventNotification(event.let(EventType::unwrap),
           dest.let(IBucketNotificationDestination::unwrap),
-          *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
+          *filters.map{CdkObjectWrappers.unwrap(it) as
+          software.amazon.awscdk.services.s3.NotificationKeyFilter}.toTypedArray())
     }
 
     /**
@@ -870,7 +871,8 @@ public interface IBucket : IResource {
     override fun addObjectCreatedNotification(dest: IBucketNotificationDestination, vararg
         filters: NotificationKeyFilter) {
       unwrap(this).addObjectCreatedNotification(dest.let(IBucketNotificationDestination::unwrap),
-          *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
+          *filters.map{CdkObjectWrappers.unwrap(it) as
+          software.amazon.awscdk.services.s3.NotificationKeyFilter}.toTypedArray())
     }
 
     /**
@@ -900,7 +902,8 @@ public interface IBucket : IResource {
     override fun addObjectRemovedNotification(dest: IBucketNotificationDestination, vararg
         filters: NotificationKeyFilter) {
       unwrap(this).addObjectRemovedNotification(dest.let(IBucketNotificationDestination::unwrap),
-          *filters.map(NotificationKeyFilter::unwrap).toTypedArray())
+          *filters.map{CdkObjectWrappers.unwrap(it) as
+          software.amazon.awscdk.services.s3.NotificationKeyFilter}.toTypedArray())
     }
 
     /**
@@ -1103,7 +1106,8 @@ public interface IBucket : IResource {
      * @param allowedActions the set of S3 actions to allow. 
      */
     override fun grantPublicAccess(keyPrefix: String, vararg allowedActions: String): Grant =
-        unwrap(this).grantPublicAccess(keyPrefix, *allowedActions).let(Grant::wrap)
+        unwrap(this).grantPublicAccess(keyPrefix, *allowedActions.map{CdkObjectWrappers.unwrap(it)
+        as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Grants s3:PutObject* and s3:Abort* permissions for this bucket to an IAM principal.

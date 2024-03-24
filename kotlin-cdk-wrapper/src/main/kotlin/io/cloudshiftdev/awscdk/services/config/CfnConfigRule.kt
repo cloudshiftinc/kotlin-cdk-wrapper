@@ -218,7 +218,7 @@ public open class CfnConfigRule(
    * The modes the AWS Config rule can be evaluated in.
    */
   public open fun evaluationModes(`value`: List<Any>) {
-    unwrap(this).setEvaluationModes(`value`)
+    unwrap(this).setEvaluationModes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -625,7 +625,7 @@ public open class CfnConfigRule(
      * @param evaluationModes The modes the AWS Config rule can be evaluated in. 
      */
     override fun evaluationModes(evaluationModes: List<Any>) {
-      cdkBuilder.evaluationModes(evaluationModes)
+      cdkBuilder.evaluationModes(evaluationModes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1943,7 +1943,7 @@ public open class CfnConfigRule(
        * `OversizedConfigurationItemChangeNotification` .
        */
       override fun sourceDetails(sourceDetails: List<Any>) {
-        cdkBuilder.sourceDetails(sourceDetails)
+        cdkBuilder.sourceDetails(sourceDetails.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

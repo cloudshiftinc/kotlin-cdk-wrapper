@@ -224,7 +224,7 @@ public open class CfnRepository(
    * The JSON block of configuration information for each trigger.
    */
   public open fun triggers(`value`: List<Any>) {
-    unwrap(this).setTriggers(`value`)
+    unwrap(this).setTriggers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -542,7 +542,7 @@ public open class CfnRepository(
      * @param triggers The JSON block of configuration information for each trigger. 
      */
     override fun triggers(triggers: List<Any>) {
-      cdkBuilder.triggers(triggers)
+      cdkBuilder.triggers(triggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

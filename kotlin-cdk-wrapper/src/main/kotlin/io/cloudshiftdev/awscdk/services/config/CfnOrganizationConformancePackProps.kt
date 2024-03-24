@@ -185,7 +185,7 @@ public interface CfnOrganizationConformancePackProps {
      * @param conformancePackInputParameters A list of `ConformancePackInputParameter` objects.
      */
     override fun conformancePackInputParameters(conformancePackInputParameters: List<Any>) {
-      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters)
+      cdkBuilder.conformancePackInputParameters(conformancePackInputParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

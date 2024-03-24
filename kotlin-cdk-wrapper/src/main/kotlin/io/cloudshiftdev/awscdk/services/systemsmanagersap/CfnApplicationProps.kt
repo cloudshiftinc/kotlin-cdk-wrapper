@@ -183,7 +183,7 @@ public interface CfnApplicationProps {
      * @param credentials The credentials of the SAP application.
      */
     override fun credentials(credentials: List<Any>) {
-      cdkBuilder.credentials(credentials)
+      cdkBuilder.credentials(credentials.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

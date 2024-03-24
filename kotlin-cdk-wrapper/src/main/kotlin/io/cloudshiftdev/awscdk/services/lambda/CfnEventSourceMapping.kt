@@ -542,7 +542,7 @@ public open class CfnEventSourceMapping(
    * your event source.
    */
   public open fun sourceAccessConfigurations(`value`: List<Any>) {
-    unwrap(this).setSourceAccessConfigurations(`value`)
+    unwrap(this).setSourceAccessConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1675,7 +1675,7 @@ public open class CfnEventSourceMapping(
      * virtual host to secure and define your event source. 
      */
     override fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>) {
-      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations)
+      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2318,7 +2318,7 @@ public open class CfnEventSourceMapping(
        * @param filters A list of filters.
        */
       override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
+        cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

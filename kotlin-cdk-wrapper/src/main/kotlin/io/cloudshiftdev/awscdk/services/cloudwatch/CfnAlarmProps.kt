@@ -702,7 +702,7 @@ public interface CfnAlarmProps {
      * `Metrics` .
      */
     override fun dimensions(dimensions: List<Any>) {
-      cdkBuilder.dimensions(dimensions)
+      cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -797,7 +797,7 @@ public interface CfnAlarmProps {
      * `Period` , `Namespace` , `Statistic` , `ExtendedStatistic` , or `Unit` .
      */
     override fun metrics(metrics: List<Any>) {
-      cdkBuilder.metrics(metrics)
+      cdkBuilder.metrics(metrics.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

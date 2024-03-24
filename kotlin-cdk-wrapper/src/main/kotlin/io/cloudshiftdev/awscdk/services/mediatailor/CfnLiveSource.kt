@@ -92,7 +92,7 @@ public open class CfnLiveSource(
    * The HTTP package configurations for the live source.
    */
   public open fun httpPackageConfigurations(`value`: List<Any>) {
-    unwrap(this).setHttpPackageConfigurations(`value`)
+    unwrap(this).setHttpPackageConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -247,7 +247,7 @@ public open class CfnLiveSource(
      * @param httpPackageConfigurations The HTTP package configurations for the live source. 
      */
     override fun httpPackageConfigurations(httpPackageConfigurations: List<Any>) {
-      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
+      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

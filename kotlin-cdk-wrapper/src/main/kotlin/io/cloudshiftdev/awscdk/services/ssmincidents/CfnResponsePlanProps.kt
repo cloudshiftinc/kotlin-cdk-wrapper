@@ -268,7 +268,7 @@ public interface CfnResponsePlanProps {
      * @param actions The actions that the response plan starts at the beginning of an incident.
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CfnResponsePlanProps {
      * @param integrations Information about third-party services integrated into the response plan.
      */
     override fun integrations(integrations: List<Any>) {
-      cdkBuilder.integrations(integrations)
+      cdkBuilder.integrations(integrations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

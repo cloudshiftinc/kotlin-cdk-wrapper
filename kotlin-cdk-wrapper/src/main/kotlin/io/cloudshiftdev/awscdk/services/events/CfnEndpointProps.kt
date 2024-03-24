@@ -199,7 +199,7 @@ public interface CfnEndpointProps {
      * *Exactly* : `2`
      */
     override fun eventBuses(eventBuses: List<Any>) {
-      cdkBuilder.eventBuses(eventBuses)
+      cdkBuilder.eventBuses(eventBuses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

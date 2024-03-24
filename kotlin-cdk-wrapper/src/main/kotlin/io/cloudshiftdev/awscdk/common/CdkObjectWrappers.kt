@@ -22,6 +22,8 @@ internal object CdkObjectWrappers {
       resolveKTwin(cdkObject::class)?.let{resolveWrapperFunction(it)?.call(it.companionObjectInstance,
       cdkObject)}
 
+  internal fun unwrap(anyObject: Any): Any = (anyObject as? CdkObject)?.cdkObject ?: anyObject
+
   private fun resolveWrapperFunction(klass: KClass<*>): KFunction<*>? =
       klass.companionObject?.memberFunctions?.firstOrNull {
   it.name == "wrap" && it.parameters.size == 2 }

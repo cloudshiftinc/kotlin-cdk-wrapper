@@ -224,7 +224,7 @@ public open class CfnMatchmakingConfiguration(
    * A set of custom properties for a game session, formatted as key-value pairs.
    */
   public open fun gameProperties(`value`: List<Any>) {
-    unwrap(this).setGameProperties(`value`)
+    unwrap(this).setGameProperties(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -853,7 +853,7 @@ public open class CfnMatchmakingConfiguration(
      * pairs. 
      */
     override fun gameProperties(gameProperties: List<Any>) {
-      cdkBuilder.gameProperties(gameProperties)
+      cdkBuilder.gameProperties(gameProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

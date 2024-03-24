@@ -230,7 +230,7 @@ public interface CfnSecurityGroupProps {
      * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupEgress(securityGroupEgress: List<Any>) {
-      cdkBuilder.securityGroupEgress(securityGroupEgress)
+      cdkBuilder.securityGroupEgress(securityGroupEgress.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -253,7 +253,7 @@ public interface CfnSecurityGroupProps {
      * There is a short interruption during which you cannot connect to the security group.
      */
     override fun securityGroupIngress(securityGroupIngress: List<Any>) {
-      cdkBuilder.securityGroupIngress(securityGroupIngress)
+      cdkBuilder.securityGroupIngress(securityGroupIngress.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -407,7 +407,7 @@ public interface CfnClusterProps {
      * @param encryptionConfig The encryption configuration for the cluster.
      */
     override fun encryptionConfig(encryptionConfig: List<Any>) {
-      cdkBuilder.encryptionConfig(encryptionConfig)
+      cdkBuilder.encryptionConfig(encryptionConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

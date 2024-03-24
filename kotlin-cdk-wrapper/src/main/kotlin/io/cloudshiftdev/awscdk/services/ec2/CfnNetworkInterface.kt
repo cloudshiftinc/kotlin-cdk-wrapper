@@ -250,7 +250,7 @@ public open class CfnNetworkInterface(
    * The IPv4 delegated prefixes that are assigned to the network interface.
    */
   public open fun ipv4Prefixes(`value`: List<Any>) {
-    unwrap(this).setIpv4Prefixes(`value`)
+    unwrap(this).setIpv4Prefixes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -289,7 +289,7 @@ public open class CfnNetworkInterface(
    * with the network interface.
    */
   public open fun ipv6Addresses(`value`: List<Any>) {
-    unwrap(this).setIpv6Addresses(`value`)
+    unwrap(this).setIpv6Addresses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -326,7 +326,7 @@ public open class CfnNetworkInterface(
    * The IPv6 delegated prefixes that are assigned to the network interface.
    */
   public open fun ipv6Prefixes(`value`: List<Any>) {
-    unwrap(this).setIpv6Prefixes(`value`)
+    unwrap(this).setIpv6Prefixes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -364,7 +364,7 @@ public open class CfnNetworkInterface(
    * Assigns private IP addresses to the network interface.
    */
   public open fun privateIpAddresses(`value`: List<Any>) {
-    unwrap(this).setPrivateIpAddresses(`value`)
+    unwrap(this).setPrivateIpAddresses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1015,7 +1015,7 @@ public open class CfnNetworkInterface(
      * @param ipv4Prefixes The IPv4 delegated prefixes that are assigned to the network interface. 
      */
     override fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
-      cdkBuilder.ipv4Prefixes(ipv4Prefixes)
+      cdkBuilder.ipv4Prefixes(ipv4Prefixes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1082,7 +1082,7 @@ public open class CfnNetworkInterface(
      * your subnet to associate with the network interface. 
      */
     override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses)
+      cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1141,7 +1141,7 @@ public open class CfnNetworkInterface(
      * @param ipv6Prefixes The IPv6 delegated prefixes that are assigned to the network interface. 
      */
     override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
-      cdkBuilder.ipv6Prefixes(ipv6Prefixes)
+      cdkBuilder.ipv6Prefixes(ipv6Prefixes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1204,7 +1204,7 @@ public open class CfnNetworkInterface(
      * @param privateIpAddresses Assigns private IP addresses to the network interface. 
      */
     override fun privateIpAddresses(privateIpAddresses: List<Any>) {
-      cdkBuilder.privateIpAddresses(privateIpAddresses)
+      cdkBuilder.privateIpAddresses(privateIpAddresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

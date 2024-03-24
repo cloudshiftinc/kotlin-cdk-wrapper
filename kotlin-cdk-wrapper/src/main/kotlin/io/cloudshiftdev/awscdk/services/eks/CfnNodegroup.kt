@@ -426,7 +426,7 @@ public open class CfnNodegroup(
    * The Kubernetes taints to be applied to the nodes in the node group when they are created.
    */
   public open fun taints(`value`: List<Any>) {
-    unwrap(this).setTaints(`value`)
+    unwrap(this).setTaints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1348,7 +1348,7 @@ public open class CfnNodegroup(
      * are created. 
      */
     override fun taints(taints: List<Any>) {
-      cdkBuilder.taints(taints)
+      cdkBuilder.taints(taints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

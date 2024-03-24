@@ -1385,7 +1385,7 @@ public open class CfnTable(
        * However, the enforcement level of each partition key can be changed.
        */
       override fun compositePartitionKey(compositePartitionKey: List<Any>) {
-        cdkBuilder.compositePartitionKey(compositePartitionKey)
+        cdkBuilder.compositePartitionKey(compositePartitionKey.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

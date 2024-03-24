@@ -121,7 +121,7 @@ public open class CfnSizeConstraintSet(
    * The size constraint and the part of the web request to check.
    */
   public open fun sizeConstraints(`value`: List<Any>) {
-    unwrap(this).setSizeConstraints(`value`)
+    unwrap(this).setSizeConstraints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnSizeConstraintSet(
      * @param sizeConstraints The size constraint and the part of the web request to check. 
      */
     override fun sizeConstraints(sizeConstraints: List<Any>) {
-      cdkBuilder.sizeConstraints(sizeConstraints)
+      cdkBuilder.sizeConstraints(sizeConstraints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

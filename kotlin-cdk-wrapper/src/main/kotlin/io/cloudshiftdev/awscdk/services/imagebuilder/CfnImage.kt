@@ -308,7 +308,7 @@ public open class CfnImage(
    * Contains an array of workflow configuration objects.
    */
   public open fun workflows(`value`: List<Any>) {
-    unwrap(this).setWorkflows(`value`)
+    unwrap(this).setWorkflows(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -675,7 +675,7 @@ public open class CfnImage(
      * @param workflows Contains an array of workflow configuration objects. 
      */
     override fun workflows(workflows: List<Any>) {
-      cdkBuilder.workflows(workflows)
+      cdkBuilder.workflows(workflows.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1319,7 +1319,7 @@ public open class CfnImage(
        * document defined for the workflow resource.
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

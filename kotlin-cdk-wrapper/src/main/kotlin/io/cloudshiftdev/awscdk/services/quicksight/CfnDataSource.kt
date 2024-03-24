@@ -418,7 +418,7 @@ public open class CfnDataSource(
    * with this data source.
    */
   public open fun alternateDataSourceParameters(`value`: List<Any>) {
-    unwrap(this).setAlternateDataSourceParameters(`value`)
+    unwrap(this).setAlternateDataSourceParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -590,7 +590,7 @@ public open class CfnDataSource(
    * A list of resource permissions on the data source.
    */
   public open fun permissions(`value`: List<Any>) {
-    unwrap(this).setPermissions(`value`)
+    unwrap(this).setPermissions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1041,7 +1041,7 @@ public open class CfnDataSource(
      * to share for the credentials stored with this data source. 
      */
     override fun alternateDataSourceParameters(alternateDataSourceParameters: List<Any>) {
-      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters)
+      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1218,7 +1218,7 @@ public open class CfnDataSource(
      * @param permissions A list of resource permissions on the data source. 
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2175,7 +2175,7 @@ public open class CfnDataSource(
        * these `Credentials` is automatically allowed.
        */
       override fun alternateDataSourceParameters(alternateDataSourceParameters: List<Any>) {
-        cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters)
+        cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

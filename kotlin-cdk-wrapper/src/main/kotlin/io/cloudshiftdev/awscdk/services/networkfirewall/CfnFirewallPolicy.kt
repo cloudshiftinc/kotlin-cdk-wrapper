@@ -1340,7 +1340,7 @@ public open class CfnFirewallPolicy(
        * These define the inspection criteria in stateful rules.
        */
       override fun statefulRuleGroupReferences(statefulRuleGroupReferences: List<Any>) {
-        cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences)
+        cdkBuilder.statefulRuleGroupReferences(statefulRuleGroupReferences.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1368,7 +1368,7 @@ public open class CfnFirewallPolicy(
        * default actions specifications.
        */
       override fun statelessCustomActions(statelessCustomActions: List<Any>) {
-        cdkBuilder.statelessCustomActions(statelessCustomActions)
+        cdkBuilder.statelessCustomActions(statelessCustomActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1465,7 +1465,7 @@ public open class CfnFirewallPolicy(
        * These define the matching criteria in stateless rules.
        */
       override fun statelessRuleGroupReferences(statelessRuleGroupReferences: List<Any>) {
-        cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences)
+        cdkBuilder.statelessRuleGroupReferences(statelessRuleGroupReferences.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1801,7 +1801,7 @@ public open class CfnFirewallPolicy(
        * Network Firewall by default uses the CIDR of your inspection VPC.
        */
       override fun ruleVariables(ruleVariables: Map<String, Any>) {
-        cdkBuilder.ruleVariables(ruleVariables)
+        cdkBuilder.ruleVariables(ruleVariables.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build():
@@ -1907,7 +1907,7 @@ public open class CfnFirewallPolicy(
        * @param dimensions the value to be set. 
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

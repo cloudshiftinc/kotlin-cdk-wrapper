@@ -246,7 +246,7 @@ public open class CfnCluster(
    * The encryption configuration for the cluster.
    */
   public open fun encryptionConfig(`value`: List<Any>) {
-    unwrap(this).setEncryptionConfig(`value`)
+    unwrap(this).setEncryptionConfig(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -761,7 +761,7 @@ public open class CfnCluster(
      * @param encryptionConfig The encryption configuration for the cluster. 
      */
     override fun encryptionConfig(encryptionConfig: List<Any>) {
-      cdkBuilder.encryptionConfig(encryptionConfig)
+      cdkBuilder.encryptionConfig(encryptionConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1289,7 +1289,7 @@ public open class CfnCluster(
        * CloudFormation template of the resource had it.
        */
       override fun enabledTypes(enabledTypes: List<Any>) {
-        cdkBuilder.enabledTypes(enabledTypes)
+        cdkBuilder.enabledTypes(enabledTypes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

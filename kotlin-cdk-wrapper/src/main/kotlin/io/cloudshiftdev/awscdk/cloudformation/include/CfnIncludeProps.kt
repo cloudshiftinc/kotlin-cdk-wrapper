@@ -196,7 +196,7 @@ public interface CfnIncludeProps {
      * value will be used.
      */
     override fun parameters(parameters: Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

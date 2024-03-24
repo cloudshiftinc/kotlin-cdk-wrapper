@@ -348,7 +348,7 @@ public interface CfnBotProps {
      * @param botLocales A list of locales for the bot.
      */
     override fun botLocales(botLocales: List<Any>) {
-      cdkBuilder.botLocales(botLocales)
+      cdkBuilder.botLocales(botLocales.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -371,7 +371,7 @@ public interface CfnBotProps {
      * update tags. To update tags, use the `TagResource` operation.
      */
     override fun botTags(botTags: List<Any>) {
-      cdkBuilder.botTags(botTags)
+      cdkBuilder.botTags(botTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -471,7 +471,7 @@ public interface CfnBotProps {
      * update tags. To update tags on the test alias, use the `TagResource` operation.
      */
     override fun testBotAliasTags(testBotAliasTags: List<Any>) {
-      cdkBuilder.testBotAliasTags(testBotAliasTags)
+      cdkBuilder.testBotAliasTags(testBotAliasTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

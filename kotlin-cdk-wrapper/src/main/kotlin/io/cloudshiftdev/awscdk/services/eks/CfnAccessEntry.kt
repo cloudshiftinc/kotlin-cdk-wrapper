@@ -101,7 +101,7 @@ public open class CfnAccessEntry(
    * The access policies to associate to the access entry.
    */
   public open fun accessPolicies(`value`: List<Any>) {
-    unwrap(this).setAccessPolicies(`value`)
+    unwrap(this).setAccessPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -415,7 +415,7 @@ public open class CfnAccessEntry(
      * @param accessPolicies The access policies to associate to the access entry. 
      */
     override fun accessPolicies(accessPolicies: List<Any>) {
-      cdkBuilder.accessPolicies(accessPolicies)
+      cdkBuilder.accessPolicies(accessPolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

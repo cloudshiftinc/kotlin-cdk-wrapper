@@ -98,7 +98,7 @@ public open class CfnEndpointGroup(
    * The list of endpoint objects.
    */
   public open fun endpointConfigurations(`value`: List<Any>) {
-    unwrap(this).setEndpointConfigurations(`value`)
+    unwrap(this).setEndpointConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -211,7 +211,7 @@ public open class CfnEndpointGroup(
    * Allows you to override the destination ports used to route traffic to an endpoint.
    */
   public open fun portOverrides(`value`: List<Any>) {
-    unwrap(this).setPortOverrides(`value`)
+    unwrap(this).setPortOverrides(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -444,7 +444,7 @@ public open class CfnEndpointGroup(
      * @param endpointConfigurations The list of endpoint objects. 
      */
     override fun endpointConfigurations(endpointConfigurations: List<Any>) {
-      cdkBuilder.endpointConfigurations(endpointConfigurations)
+      cdkBuilder.endpointConfigurations(endpointConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -568,7 +568,7 @@ public open class CfnEndpointGroup(
      * endpoint. 
      */
     override fun portOverrides(portOverrides: List<Any>) {
-      cdkBuilder.portOverrides(portOverrides)
+      cdkBuilder.portOverrides(portOverrides.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

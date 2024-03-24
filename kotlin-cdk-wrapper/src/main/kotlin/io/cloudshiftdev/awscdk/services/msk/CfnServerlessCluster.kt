@@ -158,7 +158,7 @@ public open class CfnServerlessCluster(
    *
    */
   public open fun vpcConfigs(`value`: List<Any>) {
-    unwrap(this).setVpcConfigs(`value`)
+    unwrap(this).setVpcConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -301,7 +301,7 @@ public open class CfnServerlessCluster(
      * @param vpcConfigs 
      */
     override fun vpcConfigs(vpcConfigs: List<Any>) {
-      cdkBuilder.vpcConfigs(vpcConfigs)
+      cdkBuilder.vpcConfigs(vpcConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

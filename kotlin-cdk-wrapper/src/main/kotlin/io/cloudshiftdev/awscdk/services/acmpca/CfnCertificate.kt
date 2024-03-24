@@ -1807,7 +1807,7 @@ public open class CfnCertificate(
        * the set of policies for certification paths that include this certificate.
        */
       override fun certificatePolicies(certificatePolicies: List<Any>) {
-        cdkBuilder.certificatePolicies(certificatePolicies)
+        cdkBuilder.certificatePolicies(certificatePolicies.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1840,7 +1840,7 @@ public open class CfnCertificate(
        * database.](https://docs.aws.amazon.com/https://oidref.com/2.5.29).
        */
       override fun customExtensions(customExtensions: List<Any>) {
-        cdkBuilder.customExtensions(customExtensions)
+        cdkBuilder.customExtensions(customExtensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1865,7 +1865,7 @@ public open class CfnCertificate(
        * may be used other than basic purposes indicated in the `KeyUsage` extension.
        */
       override fun extendedKeyUsage(extendedKeyUsage: List<Any>) {
-        cdkBuilder.extendedKeyUsage(extendedKeyUsage)
+        cdkBuilder.extendedKeyUsage(extendedKeyUsage.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1920,7 +1920,7 @@ public open class CfnCertificate(
        * field of the certificate.
        */
       override fun subjectAlternativeNames(subjectAlternativeNames: List<Any>) {
-        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames)
+        cdkBuilder.subjectAlternativeNames(subjectAlternativeNames.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3107,7 +3107,7 @@ public open class CfnCertificate(
        * AWS Private CA supports the certification practice statement (CPS) qualifier.
        */
       override fun policyQualifiers(policyQualifiers: List<Any>) {
-        cdkBuilder.policyQualifiers(policyQualifiers)
+        cdkBuilder.policyQualifiers(policyQualifiers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3731,7 +3731,7 @@ public open class CfnCertificate(
        * Custom attributes cannot be used in combination with standard attributes.
        */
       override fun customAttributes(customAttributes: List<Any>) {
-        cdkBuilder.customAttributes(customAttributes)
+        cdkBuilder.customAttributes(customAttributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

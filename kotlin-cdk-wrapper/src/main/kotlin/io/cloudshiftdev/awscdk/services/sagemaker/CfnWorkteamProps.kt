@@ -206,7 +206,7 @@ public interface CfnWorkteamProps {
      * created using your own OIDC identity provider (IdP) use `OidcMemberDefinition` .
      */
     override fun memberDefinitions(memberDefinitions: List<Any>) {
-      cdkBuilder.memberDefinitions(memberDefinitions)
+      cdkBuilder.memberDefinitions(memberDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

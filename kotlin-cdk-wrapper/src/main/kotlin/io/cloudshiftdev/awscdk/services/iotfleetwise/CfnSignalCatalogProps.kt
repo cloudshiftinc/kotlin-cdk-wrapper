@@ -238,7 +238,7 @@ public interface CfnSignalCatalogProps {
      * signals.
      */
     override fun nodes(nodes: List<Any>) {
-      cdkBuilder.nodes(nodes)
+      cdkBuilder.nodes(nodes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

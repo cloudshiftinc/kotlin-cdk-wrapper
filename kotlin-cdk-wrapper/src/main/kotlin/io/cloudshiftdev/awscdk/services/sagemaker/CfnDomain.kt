@@ -2788,7 +2788,7 @@ public open class CfnDomain(
        * users for cloning in the JupyterLab application.
        */
       override fun codeRepositories(codeRepositories: List<Any>) {
-        cdkBuilder.codeRepositories(codeRepositories)
+        cdkBuilder.codeRepositories(codeRepositories.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2811,7 +2811,7 @@ public open class CfnDomain(
        * JupyterLab app.
        */
       override fun customImages(customImages: List<Any>) {
-        cdkBuilder.customImages(customImages)
+        cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3174,7 +3174,7 @@ public open class CfnDomain(
        * KernelGateway app.
        */
       override fun customImages(customImages: List<Any>) {
-        cdkBuilder.customImages(customImages)
+        cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3375,7 +3375,7 @@ public open class CfnDomain(
        * RSession app.
        */
       override fun customImages(customImages: List<Any>) {
-        cdkBuilder.customImages(customImages)
+        cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4665,7 +4665,7 @@ public open class CfnDomain(
        * Permitted users can access this file system in Amazon SageMaker Studio.
        */
       override fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
-        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs)
+        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -160,7 +160,7 @@ public interface CfnHoursOfOperationProps {
      * @param config Configuration information for the hours of operation. 
      */
     override fun config(config: List<Any>) {
-      cdkBuilder.config(config)
+      cdkBuilder.config(config.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

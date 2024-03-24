@@ -169,7 +169,7 @@ public open class CfnBudget(
    * A notification that you want to associate with a budget.
    */
   public open fun notificationsWithSubscribers(`value`: List<Any>) {
-    unwrap(this).setNotificationsWithSubscribers(`value`)
+    unwrap(this).setNotificationsWithSubscribers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -309,7 +309,7 @@ public open class CfnBudget(
      * @param notificationsWithSubscribers A notification that you want to associate with a budget. 
      */
     override fun notificationsWithSubscribers(notificationsWithSubscribers: List<Any>) {
-      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers)
+      cdkBuilder.notificationsWithSubscribers(notificationsWithSubscribers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2303,7 +2303,7 @@ public open class CfnBudget(
        * @param subscribers A list of subscribers who are subscribed to this notification. 
        */
       override fun subscribers(subscribers: List<Any>) {
-        cdkBuilder.subscribers(subscribers)
+        cdkBuilder.subscribers(subscribers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

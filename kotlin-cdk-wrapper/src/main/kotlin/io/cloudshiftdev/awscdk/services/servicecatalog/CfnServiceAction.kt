@@ -94,7 +94,7 @@ public open class CfnServiceAction(
    * A map that defines the self-service action.
    */
   public open fun definition(`value`: List<Any>) {
-    unwrap(this).setDefinition(`value`)
+    unwrap(this).setDefinition(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnServiceAction(
      * @param definition A map that defines the self-service action. 
      */
     override fun definition(definition: List<Any>) {
-      cdkBuilder.definition(definition)
+      cdkBuilder.definition(definition.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

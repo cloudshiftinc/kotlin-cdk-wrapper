@@ -396,7 +396,7 @@ public interface CfnIndexProps {
      * field. Custom fields can't be removed from an index after they are added.
      */
     override fun documentMetadataConfigurations(documentMetadataConfigurations: List<Any>) {
-      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations)
+      cdkBuilder.documentMetadataConfigurations(documentMetadataConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -513,7 +513,7 @@ public interface CfnIndexProps {
      * @param userTokenConfigurations Defines the type of user token used for the index.
      */
     override fun userTokenConfigurations(userTokenConfigurations: List<Any>) {
-      cdkBuilder.userTokenConfigurations(userTokenConfigurations)
+      cdkBuilder.userTokenConfigurations(userTokenConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

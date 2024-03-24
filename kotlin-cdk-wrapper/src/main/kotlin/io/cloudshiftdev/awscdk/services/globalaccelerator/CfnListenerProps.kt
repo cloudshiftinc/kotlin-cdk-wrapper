@@ -194,7 +194,7 @@ public interface CfnListenerProps {
      * accelerator. 
      */
     override fun portRanges(portRanges: List<Any>) {
-      cdkBuilder.portRanges(portRanges)
+      cdkBuilder.portRanges(portRanges.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

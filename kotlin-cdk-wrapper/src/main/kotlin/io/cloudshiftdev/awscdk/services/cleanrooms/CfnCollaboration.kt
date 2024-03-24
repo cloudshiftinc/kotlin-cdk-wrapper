@@ -237,7 +237,7 @@ public open class CfnCollaboration(
    * A list of initial members, not including the creator.
    */
   public open fun members(`value`: List<Any>) {
-    unwrap(this).setMembers(`value`)
+    unwrap(this).setMembers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -611,7 +611,7 @@ public open class CfnCollaboration(
      * @param members A list of initial members, not including the creator. 
      */
     override fun members(members: List<Any>) {
-      cdkBuilder.members(members)
+      cdkBuilder.members(members.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

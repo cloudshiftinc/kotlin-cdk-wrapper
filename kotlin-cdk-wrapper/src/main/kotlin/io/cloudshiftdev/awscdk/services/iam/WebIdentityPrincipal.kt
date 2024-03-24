@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Map
@@ -28,7 +29,8 @@ public open class WebIdentityPrincipal(
   )
 
   public constructor(identityProvider: String, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider, conditions)
+      this(software.amazon.awscdk.services.iam.WebIdentityPrincipal(identityProvider,
+      conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 
   /**

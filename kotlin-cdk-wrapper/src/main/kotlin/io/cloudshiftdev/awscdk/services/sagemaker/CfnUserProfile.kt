@@ -1662,7 +1662,7 @@ public open class CfnUserProfile(
        * users for cloning in the JupyterLab application.
        */
       override fun codeRepositories(codeRepositories: List<Any>) {
-        cdkBuilder.codeRepositories(codeRepositories)
+        cdkBuilder.codeRepositories(codeRepositories.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1685,7 +1685,7 @@ public open class CfnUserProfile(
        * JupyterLab app.
        */
       override fun customImages(customImages: List<Any>) {
-        cdkBuilder.customImages(customImages)
+        cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2046,7 +2046,7 @@ public open class CfnUserProfile(
        * KernelGateway app.
        */
       override fun customImages(customImages: List<Any>) {
-        cdkBuilder.customImages(customImages)
+        cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3070,7 +3070,7 @@ public open class CfnUserProfile(
        * Permitted users can access this file system in Amazon SageMaker Studio.
        */
       override fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
-        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs)
+        cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

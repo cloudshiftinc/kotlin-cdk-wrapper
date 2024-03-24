@@ -275,7 +275,7 @@ public interface CfnWorkgroupProps {
      * `search_path` , `max_query_execution_time` , and `require_ssl` .
      */
     override fun configParameters(configParameters: List<Any>) {
-      cdkBuilder.configParameters(configParameters)
+      cdkBuilder.configParameters(configParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

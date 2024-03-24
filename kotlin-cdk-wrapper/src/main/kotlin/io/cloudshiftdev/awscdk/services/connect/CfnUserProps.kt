@@ -369,7 +369,7 @@ public interface CfnUserProps {
      * value that indicates how their level of skill in a specified area.
      */
     override fun userProficiencies(userProficiencies: List<Any>) {
-      cdkBuilder.userProficiencies(userProficiencies)
+      cdkBuilder.userProficiencies(userProficiencies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

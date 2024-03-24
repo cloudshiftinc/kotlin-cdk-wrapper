@@ -209,7 +209,7 @@ public open class CfnLocationHDFS(
    * The NameNode that manages the HDFS namespace.
    */
   public open fun nameNodes(`value`: List<Any>) {
-    unwrap(this).setNameNodes(`value`)
+    unwrap(this).setNameNodes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -669,7 +669,7 @@ public open class CfnLocationHDFS(
      * @param nameNodes The NameNode that manages the HDFS namespace. 
      */
     override fun nameNodes(nameNodes: List<Any>) {
-      cdkBuilder.nameNodes(nameNodes)
+      cdkBuilder.nameNodes(nameNodes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

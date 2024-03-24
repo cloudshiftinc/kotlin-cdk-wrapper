@@ -92,7 +92,7 @@ public interface BucketMetrics {
      * The metrics configuration includes only objects that meet the filter's criteria.
      */
     override fun tagFilters(tagFilters: Map<String, Any>) {
-      cdkBuilder.tagFilters(tagFilters)
+      cdkBuilder.tagFilters(tagFilters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.s3.BucketMetrics = cdkBuilder.build()

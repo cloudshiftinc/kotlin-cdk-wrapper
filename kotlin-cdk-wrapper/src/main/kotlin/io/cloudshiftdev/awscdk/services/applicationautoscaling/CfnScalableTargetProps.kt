@@ -600,7 +600,7 @@ public interface CfnScalableTargetProps {
      * Duplicates aren't allowed.
      */
     override fun scheduledActions(scheduledActions: List<Any>) {
-      cdkBuilder.scheduledActions(scheduledActions)
+      cdkBuilder.scheduledActions(scheduledActions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

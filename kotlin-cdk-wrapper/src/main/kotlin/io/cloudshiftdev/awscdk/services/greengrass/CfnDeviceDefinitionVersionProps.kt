@@ -103,7 +103,7 @@ public interface CfnDeviceDefinitionVersionProps {
      * @param devices The devices in this version. 
      */
     override fun devices(devices: List<Any>) {
-      cdkBuilder.devices(devices)
+      cdkBuilder.devices(devices.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

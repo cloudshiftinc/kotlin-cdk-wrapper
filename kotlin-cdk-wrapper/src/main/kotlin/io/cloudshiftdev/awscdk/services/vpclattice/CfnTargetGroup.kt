@@ -212,7 +212,7 @@ public open class CfnTargetGroup(
    * Describes a target.
    */
   public open fun targets(`value`: List<Any>) {
-    unwrap(this).setTargets(`value`)
+    unwrap(this).setTargets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -415,7 +415,7 @@ public open class CfnTargetGroup(
      * @param targets Describes a target. 
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

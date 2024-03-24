@@ -1219,7 +1219,7 @@ public open class CfnStateMachine(
        * Limited to size 1. Required, if your log level is not set to `OFF` .
        */
       override fun destinations(destinations: List<Any>) {
-        cdkBuilder.destinations(destinations)
+        cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

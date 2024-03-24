@@ -572,7 +572,7 @@ public open class CfnAlias(
        * routed to it. 
        */
       override fun additionalVersionWeights(additionalVersionWeights: List<Any>) {
-        cdkBuilder.additionalVersionWeights(additionalVersionWeights)
+        cdkBuilder.additionalVersionWeights(additionalVersionWeights.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -157,7 +157,7 @@ public open class CfnIPAMResourceDiscovery(
    * The operating Regions for the resource discovery.
    */
   public open fun operatingRegions(`value`: List<Any>) {
-    unwrap(this).setOperatingRegions(`value`)
+    unwrap(this).setOperatingRegions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -297,7 +297,7 @@ public open class CfnIPAMResourceDiscovery(
      * @param operatingRegions The operating Regions for the resource discovery. 
      */
     override fun operatingRegions(operatingRegions: List<Any>) {
-      cdkBuilder.operatingRegions(operatingRegions)
+      cdkBuilder.operatingRegions(operatingRegions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

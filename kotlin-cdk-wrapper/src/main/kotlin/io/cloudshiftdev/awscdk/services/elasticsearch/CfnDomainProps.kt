@@ -871,7 +871,7 @@ public interface CfnDomainProps {
      * Each key needs a valid `LogPublishingOption` value.
      */
     override fun logPublishingOptions(logPublishingOptions: Map<String, Any>) {
-      cdkBuilder.logPublishingOptions(logPublishingOptions)
+      cdkBuilder.logPublishingOptions(logPublishingOptions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

@@ -591,7 +591,7 @@ public interface CfnPlaybackConfigurationProps {
      * Variables](https://docs.aws.amazon.com/mediatailor/latest/ug/variables-domain.html) .
      */
     override fun configurationAliases(configurationAliases: Map<String, Any>) {
-      cdkBuilder.configurationAliases(configurationAliases)
+      cdkBuilder.configurationAliases(configurationAliases.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

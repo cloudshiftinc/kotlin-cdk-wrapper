@@ -355,7 +355,7 @@ public interface CfnCollaborationProps {
      * This list is immutable.
      */
     override fun members(members: List<Any>) {
-      cdkBuilder.members(members)
+      cdkBuilder.members(members.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

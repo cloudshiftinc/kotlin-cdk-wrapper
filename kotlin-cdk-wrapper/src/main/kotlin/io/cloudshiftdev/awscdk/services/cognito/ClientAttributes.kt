@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -44,7 +45,8 @@ public open class ClientAttributes(
    * @param attributes a list of custom attributes to add to the set. 
    */
   public open fun withCustomAttributes(vararg attributes: String): ClientAttributes =
-      unwrap(this).withCustomAttributes(*attributes).let(ClientAttributes::wrap)
+      unwrap(this).withCustomAttributes(*attributes.map{CdkObjectWrappers.unwrap(it) as
+      String}.toTypedArray()).let(ClientAttributes::wrap)
 
   /**
    * Creates a custom ClientAttributes with the specified attributes.

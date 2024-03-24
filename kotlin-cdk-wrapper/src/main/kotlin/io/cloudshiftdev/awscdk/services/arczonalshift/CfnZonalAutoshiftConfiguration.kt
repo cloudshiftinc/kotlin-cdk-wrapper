@@ -785,7 +785,7 @@ public open class CfnZonalAutoshiftConfiguration(
        * started, and ends practice runs that are in progress.
        */
       override fun blockingAlarms(blockingAlarms: List<Any>) {
-        cdkBuilder.blockingAlarms(blockingAlarms)
+        cdkBuilder.blockingAlarms(blockingAlarms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -814,7 +814,7 @@ public open class CfnZonalAutoshiftConfiguration(
        * outcome is set to `FAILED` .
        */
       override fun outcomeAlarms(outcomeAlarms: List<Any>) {
-        cdkBuilder.outcomeAlarms(outcomeAlarms)
+        cdkBuilder.outcomeAlarms(outcomeAlarms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

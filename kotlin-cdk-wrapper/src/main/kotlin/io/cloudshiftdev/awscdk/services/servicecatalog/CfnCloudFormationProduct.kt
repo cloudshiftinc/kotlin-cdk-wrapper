@@ -211,7 +211,7 @@ public open class CfnCloudFormationProduct(
    * The configuration of the provisioning artifact (also known as a version).
    */
   public open fun provisioningArtifactParameters(`value`: List<Any>) {
-    unwrap(this).setProvisioningArtifactParameters(`value`)
+    unwrap(this).setProvisioningArtifactParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -621,7 +621,7 @@ public open class CfnCloudFormationProduct(
      * known as a version). 
      */
     override fun provisioningArtifactParameters(provisioningArtifactParameters: List<Any>) {
-      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters)
+      cdkBuilder.provisioningArtifactParameters(provisioningArtifactParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

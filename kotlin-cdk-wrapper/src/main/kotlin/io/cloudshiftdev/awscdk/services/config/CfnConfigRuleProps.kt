@@ -354,7 +354,7 @@ public interface CfnConfigRuleProps {
      * only.
      */
     override fun evaluationModes(evaluationModes: List<Any>) {
-      cdkBuilder.evaluationModes(evaluationModes)
+      cdkBuilder.evaluationModes(evaluationModes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

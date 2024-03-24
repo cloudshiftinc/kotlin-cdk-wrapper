@@ -382,7 +382,7 @@ public interface CfnInstanceGroupConfigProps {
      * a separate configuration for each instance group (master, core, and task).
      */
     override fun configurations(configurations: List<Any>) {
-      cdkBuilder.configurations(configurations)
+      cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

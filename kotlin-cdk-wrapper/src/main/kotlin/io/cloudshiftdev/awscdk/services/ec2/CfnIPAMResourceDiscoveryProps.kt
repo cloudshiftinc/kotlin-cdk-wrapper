@@ -137,7 +137,7 @@ public interface CfnIPAMResourceDiscoveryProps {
      * only discovers and monitors resources in the AWS Regions you select as operating Regions.
      */
     override fun operatingRegions(operatingRegions: List<Any>) {
-      cdkBuilder.operatingRegions(operatingRegions)
+      cdkBuilder.operatingRegions(operatingRegions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

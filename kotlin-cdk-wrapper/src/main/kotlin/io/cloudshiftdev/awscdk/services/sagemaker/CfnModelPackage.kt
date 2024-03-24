@@ -345,7 +345,7 @@ public open class CfnModelPackage(
    * An array of additional Inference Specification objects.
    */
   public open fun additionalInferenceSpecifications(`value`: List<Any>) {
-    unwrap(this).setAdditionalInferenceSpecifications(`value`)
+    unwrap(this).setAdditionalInferenceSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -371,7 +371,7 @@ public open class CfnModelPackage(
    * An array of additional Inference Specification objects to be added to the existing array.
    */
   public open fun additionalInferenceSpecificationsToAdd(`value`: List<Any>) {
-    unwrap(this).setAdditionalInferenceSpecificationsToAdd(`value`)
+    unwrap(this).setAdditionalInferenceSpecificationsToAdd(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1305,7 +1305,7 @@ public open class CfnModelPackage(
      * objects. 
      */
     override fun additionalInferenceSpecifications(additionalInferenceSpecifications: List<Any>) {
-      cdkBuilder.additionalInferenceSpecifications(additionalInferenceSpecifications)
+      cdkBuilder.additionalInferenceSpecifications(additionalInferenceSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1349,7 +1349,7 @@ public open class CfnModelPackage(
      */
     override
         fun additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd: List<Any>) {
-      cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd)
+      cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2049,7 +2049,7 @@ public open class CfnModelPackage(
        * inference code. 
        */
       override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
+        cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4104,7 +4104,7 @@ public open class CfnModelPackage(
        * inference code. 
        */
       override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
+        cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5577,7 +5577,7 @@ public open class CfnModelPackage(
        * @param validationStatuses The validation status of the model package.
        */
       override fun validationStatuses(validationStatuses: List<Any>) {
-        cdkBuilder.validationStatuses(validationStatuses)
+        cdkBuilder.validationStatuses(validationStatuses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6456,7 +6456,7 @@ public open class CfnModelPackage(
        * @param sourceAlgorithms A list of the algorithms that were used to create a model package. 
        */
       override fun sourceAlgorithms(sourceAlgorithms: List<Any>) {
-        cdkBuilder.sourceAlgorithms(sourceAlgorithms)
+        cdkBuilder.sourceAlgorithms(sourceAlgorithms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8118,7 +8118,7 @@ public open class CfnModelPackage(
        * which specifies a batch transform job that SageMaker runs to validate your model package. 
        */
       override fun validationProfiles(validationProfiles: List<Any>) {
-        cdkBuilder.validationProfiles(validationProfiles)
+        cdkBuilder.validationProfiles(validationProfiles.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -192,7 +192,7 @@ public interface CfnSecurityProfileProps {
      * access to resources in Amazon Connect.
      */
     override fun allowedAccessControlTags(allowedAccessControlTags: List<Any>) {
-      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags)
+      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -296,7 +296,7 @@ public interface CfnThemeProps {
      * @param permissions A valid grouping of resource permissions to apply to the new theme.
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

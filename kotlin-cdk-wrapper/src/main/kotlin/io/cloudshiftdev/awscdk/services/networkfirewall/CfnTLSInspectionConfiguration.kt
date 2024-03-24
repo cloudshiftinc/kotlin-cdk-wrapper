@@ -1229,7 +1229,7 @@ public open class CfnTLSInspectionConfiguration(
        * @param scopes A list of scopes.
        */
       override fun scopes(scopes: List<Any>) {
-        cdkBuilder.scopes(scopes)
+        cdkBuilder.scopes(scopes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1250,7 +1250,7 @@ public open class CfnTLSInspectionConfiguration(
        * inspection.
        */
       override fun serverCertificates(serverCertificates: List<Any>) {
-        cdkBuilder.serverCertificates(serverCertificates)
+        cdkBuilder.serverCertificates(serverCertificates.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1688,7 +1688,7 @@ public open class CfnTLSInspectionConfiguration(
        * such as `1990:1994` .
        */
       override fun destinationPorts(destinationPorts: List<Any>) {
-        cdkBuilder.destinationPorts(destinationPorts)
+        cdkBuilder.destinationPorts(destinationPorts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1719,7 +1719,7 @@ public open class CfnTLSInspectionConfiguration(
        * matches with any destination address.
        */
       override fun destinations(destinations: List<Any>) {
-        cdkBuilder.destinations(destinations)
+        cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1777,7 +1777,7 @@ public open class CfnTLSInspectionConfiguration(
        * such as `1990:1994` .
        */
       override fun sourcePorts(sourcePorts: List<Any>) {
-        cdkBuilder.sourcePorts(sourcePorts)
+        cdkBuilder.sourcePorts(sourcePorts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1807,7 +1807,7 @@ public open class CfnTLSInspectionConfiguration(
        * matches with any source address.
        */
       override fun sources(sources: List<Any>) {
-        cdkBuilder.sources(sources)
+        cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2009,7 +2009,7 @@ public open class CfnTLSInspectionConfiguration(
        * associated with the TLS configuration.
        */
       override fun serverCertificateConfigurations(serverCertificateConfigurations: List<Any>) {
-        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations)
+        cdkBuilder.serverCertificateConfigurations(serverCertificateConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

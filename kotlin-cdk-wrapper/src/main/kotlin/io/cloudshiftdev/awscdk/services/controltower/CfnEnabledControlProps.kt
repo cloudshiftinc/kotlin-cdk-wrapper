@@ -147,7 +147,7 @@ public interface CfnEnabledControlProps {
      * @param parameters Array of `EnabledControlParameter` objects.
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

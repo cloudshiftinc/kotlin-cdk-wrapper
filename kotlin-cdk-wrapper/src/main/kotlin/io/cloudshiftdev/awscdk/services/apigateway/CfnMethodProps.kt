@@ -468,7 +468,7 @@ public interface CfnMethodProps {
      * @param methodResponses Gets a method response associated with a given HTTP status code.
      */
     override fun methodResponses(methodResponses: List<Any>) {
-      cdkBuilder.methodResponses(methodResponses)
+      cdkBuilder.methodResponses(methodResponses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -527,7 +527,7 @@ public interface CfnMethodProps {
      * request parameters or templates.
      */
     override fun requestParameters(requestParameters: Map<String, Any>) {
-      cdkBuilder.requestParameters(requestParameters)
+      cdkBuilder.requestParameters(requestParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

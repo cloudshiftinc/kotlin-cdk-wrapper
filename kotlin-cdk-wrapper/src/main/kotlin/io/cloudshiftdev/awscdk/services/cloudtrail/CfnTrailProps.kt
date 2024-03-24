@@ -624,7 +624,7 @@ public interface CfnTrailProps {
      * in the *AWS CloudTrail User Guide* .
      */
     override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors)
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -723,7 +723,7 @@ public interface CfnTrailProps {
      * You cannot apply both event selectors and advanced event selectors to a trail.
      */
     override fun eventSelectors(eventSelectors: List<Any>) {
-      cdkBuilder.eventSelectors(eventSelectors)
+      cdkBuilder.eventSelectors(eventSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -785,7 +785,7 @@ public interface CfnTrailProps {
      * codes. The error is shown if the API call is unsuccessful.
      */
     override fun insightSelectors(insightSelectors: List<Any>) {
-      cdkBuilder.insightSelectors(insightSelectors)
+      cdkBuilder.insightSelectors(insightSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

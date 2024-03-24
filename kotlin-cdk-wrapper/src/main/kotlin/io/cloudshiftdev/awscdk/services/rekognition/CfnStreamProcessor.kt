@@ -156,7 +156,7 @@ public open class CfnStreamProcessor(
    * List of BoundingBox objects, each of which denotes a region of interest on screen.
    */
   public open fun boundingBoxRegionsOfInterest(`value`: List<Any>) {
-    unwrap(this).setBoundingBoxRegionsOfInterest(`value`)
+    unwrap(this).setBoundingBoxRegionsOfInterest(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -968,7 +968,7 @@ public open class CfnStreamProcessor(
      * region of interest on screen. 
      */
     override fun boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest: List<Any>) {
-      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest)
+      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

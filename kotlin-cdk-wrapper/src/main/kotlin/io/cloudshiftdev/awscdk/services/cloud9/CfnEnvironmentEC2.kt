@@ -204,7 +204,7 @@ public open class CfnEnvironmentEC2(
    * Any AWS CodeCommit source code repositories to be cloned into the development environment.
    */
   public open fun repositories(`value`: List<Any>) {
-    unwrap(this).setRepositories(`value`)
+    unwrap(this).setRepositories(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -539,7 +539,7 @@ public open class CfnEnvironmentEC2(
      * development environment. 
      */
     override fun repositories(repositories: List<Any>) {
-      cdkBuilder.repositories(repositories)
+      cdkBuilder.repositories(repositories.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -342,7 +342,7 @@ public interface CfnGroupProps {
      * *IAM User Guide* .
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

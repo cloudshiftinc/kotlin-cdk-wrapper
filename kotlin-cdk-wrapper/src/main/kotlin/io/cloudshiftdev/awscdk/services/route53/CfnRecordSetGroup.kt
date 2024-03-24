@@ -169,7 +169,7 @@ public open class CfnRecordSetGroup(
    * A complex type that contains one `RecordSet` element for each record that you want to create.
    */
   public open fun recordSets(`value`: List<Any>) {
-    unwrap(this).setRecordSets(`value`)
+    unwrap(this).setRecordSets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -320,7 +320,7 @@ public open class CfnRecordSetGroup(
      * you want to create. 
      */
     override fun recordSets(recordSets: List<Any>) {
-      cdkBuilder.recordSets(recordSets)
+      cdkBuilder.recordSets(recordSets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

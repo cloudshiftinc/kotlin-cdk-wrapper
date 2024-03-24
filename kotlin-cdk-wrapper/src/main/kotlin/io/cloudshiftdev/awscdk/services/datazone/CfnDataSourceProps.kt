@@ -324,7 +324,7 @@ public interface CfnDataSourceProps {
      * with.
      */
     override fun assetFormsInput(assetFormsInput: List<Any>) {
-      cdkBuilder.assetFormsInput(assetFormsInput)
+      cdkBuilder.assetFormsInput(assetFormsInput.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

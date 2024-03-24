@@ -142,7 +142,7 @@ public interface ICfnResourceOptions {
    * automatically.
    */
   public fun metadata(`value`: Map<String, Any>) {
-    unwrap(this).setMetadata(`value`)
+    unwrap(this).setMetadata(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -347,7 +347,7 @@ public interface ICfnResourceOptions {
      * automatically.
      */
     override fun metadata(`value`: Map<String, Any>) {
-      unwrap(this).setMetadata(`value`)
+      unwrap(this).setMetadata(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

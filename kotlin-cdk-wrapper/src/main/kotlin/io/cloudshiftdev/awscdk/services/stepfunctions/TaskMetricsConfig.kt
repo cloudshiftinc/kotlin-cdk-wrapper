@@ -79,7 +79,7 @@ public interface TaskMetricsConfig {
      * @param metricDimensions The dimensions to attach to metrics.
      */
     override fun metricDimensions(metricDimensions: Map<String, Any>) {
-      cdkBuilder.metricDimensions(metricDimensions)
+      cdkBuilder.metricDimensions(metricDimensions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

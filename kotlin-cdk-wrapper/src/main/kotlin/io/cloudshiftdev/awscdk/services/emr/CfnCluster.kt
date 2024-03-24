@@ -538,7 +538,7 @@ public open class CfnCluster(
    * on.
    */
   public open fun applications(`value`: List<Any>) {
-    unwrap(this).setApplications(`value`)
+    unwrap(this).setApplications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -617,7 +617,7 @@ public open class CfnCluster(
    * A list of bootstrap actions to run before Hadoop starts on the cluster nodes.
    */
   public open fun bootstrapActions(`value`: List<Any>) {
-    unwrap(this).setBootstrapActions(`value`)
+    unwrap(this).setBootstrapActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -644,7 +644,7 @@ public open class CfnCluster(
    * to the Amazon EMR cluster.
    */
   public open fun configurations(`value`: List<Any>) {
-    unwrap(this).setConfigurations(`value`)
+    unwrap(this).setConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -879,7 +879,7 @@ public open class CfnCluster(
    *
    */
   public open fun placementGroupConfigs(`value`: List<Any>) {
-    unwrap(this).setPlacementGroupConfigs(`value`)
+    unwrap(this).setPlacementGroupConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -968,7 +968,7 @@ public open class CfnCluster(
    * A list of steps to run.
    */
   public open fun steps(`value`: List<Any>) {
-    unwrap(this).setSteps(`value`)
+    unwrap(this).setSteps(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1588,7 +1588,7 @@ public open class CfnCluster(
      * Oozie, Zeppelin, and so on. 
      */
     override fun applications(applications: List<Any>) {
-      cdkBuilder.applications(applications)
+      cdkBuilder.applications(applications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1681,7 +1681,7 @@ public open class CfnCluster(
      * cluster nodes. 
      */
     override fun bootstrapActions(bootstrapActions: List<Any>) {
-      cdkBuilder.bootstrapActions(bootstrapActions)
+      cdkBuilder.bootstrapActions(bootstrapActions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1715,7 +1715,7 @@ public open class CfnCluster(
      * configurations that are supplied to the Amazon EMR cluster. 
      */
     override fun configurations(configurations: List<Any>) {
-      cdkBuilder.configurations(configurations)
+      cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1987,7 +1987,7 @@ public open class CfnCluster(
      * @param placementGroupConfigs 
      */
     override fun placementGroupConfigs(placementGroupConfigs: List<Any>) {
-      cdkBuilder.placementGroupConfigs(placementGroupConfigs)
+      cdkBuilder.placementGroupConfigs(placementGroupConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2087,7 +2087,7 @@ public open class CfnCluster(
      * @param steps A list of steps to run. 
      */
     override fun steps(steps: List<Any>) {
-      cdkBuilder.steps(steps)
+      cdkBuilder.steps(steps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2564,7 +2564,7 @@ public open class CfnCluster(
        * @param rules The scale-in and scale-out rules that comprise the automatic scaling policy. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3066,7 +3066,7 @@ public open class CfnCluster(
        * @param dimensions A CloudWatch metric dimension.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3631,7 +3631,7 @@ public open class CfnCluster(
        * object.
        */
       override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
+        cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3950,7 +3950,7 @@ public open class CfnCluster(
        * cluster instance.
        */
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4168,7 +4168,7 @@ public open class CfnCluster(
        * You can use these properties to pass key-value pairs to your main function.
        */
       override fun stepProperties(stepProperties: List<Any>) {
-        cdkBuilder.stepProperties(stepProperties)
+        cdkBuilder.stepProperties(stepProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4479,7 +4479,7 @@ public open class CfnCluster(
        * instances in the instance fleet.
        */
       override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
-        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
+        cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5253,7 +5253,7 @@ public open class CfnCluster(
        * specify a separate configuration for each instance group (master, core, and task).
        */
       override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
+        cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5662,7 +5662,7 @@ public open class CfnCluster(
        * cluster.
        */
       override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
+        cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7032,7 +7032,7 @@ public open class CfnCluster(
        * maximum of five Amazon EC2 instance types.
        */
       override fun taskInstanceFleets(taskInstanceFleets: List<Any>) {
-        cdkBuilder.taskInstanceFleets(taskInstanceFleets)
+        cdkBuilder.taskInstanceFleets(taskInstanceFleets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7083,7 +7083,7 @@ public open class CfnCluster(
        * other property results in cluster replacement.
        */
       override fun taskInstanceGroups(taskInstanceGroups: List<Any>) {
-        cdkBuilder.taskInstanceGroups(taskInstanceGroups)
+        cdkBuilder.taskInstanceGroups(taskInstanceGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

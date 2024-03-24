@@ -135,7 +135,7 @@ public open class CfnClusterParameterGroup(
    * A maximum of 20 parameters can be modified in a single request.
    */
   public open fun parameters(`value`: List<Any>) {
-    unwrap(this).setParameters(`value`)
+    unwrap(this).setParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnClusterParameterGroup(
      * modified in a single request. 
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

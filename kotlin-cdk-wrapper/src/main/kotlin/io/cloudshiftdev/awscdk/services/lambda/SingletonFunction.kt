@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codeguruprofiler.IProfilingGroup
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
@@ -19,7 +20,6 @@ import io.cloudshiftdev.awscdk.services.logs.RetentionDays
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import io.cloudshiftdev.constructs.IConstruct
-import io.cloudshiftdev.constructs.IDependable
 import io.cloudshiftdev.constructs.Node
 import kotlin.Boolean
 import kotlin.Number
@@ -29,7 +29,9 @@ import kotlin.collections.List
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import io.cloudshiftdev.constructs.IDependable as CloudshiftdevConstructsIDependable
 import software.constructs.Construct as SoftwareConstructsConstruct
+import software.constructs.IDependable as SoftwareConstructsIDependable
 
 /**
  * A Lambda that will only ever be added to a stack once.
@@ -76,8 +78,9 @@ public open class SingletonFunction(
    *
    * @param up 
    */
-  public open fun addDependency(vararg up: IDependable) {
-    unwrap(this).addDependency(*up.map(IDependable::unwrap).toTypedArray())
+  public open fun addDependency(vararg up: CloudshiftdevConstructsIDependable) {
+    unwrap(this).addDependency(*up.map{CdkObjectWrappers.unwrap(it) as
+        SoftwareConstructsIDependable}.toTypedArray())
   }
 
   /**
@@ -131,7 +134,8 @@ public open class SingletonFunction(
    * @param layers the layers to be added. 
    */
   public open fun addLayers(vararg layers: ILayerVersion) {
-    unwrap(this).addLayers(*layers.map(ILayerVersion::unwrap).toTypedArray())
+    unwrap(this).addLayers(*layers.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.lambda.ILayerVersion}.toTypedArray())
   }
 
   /**

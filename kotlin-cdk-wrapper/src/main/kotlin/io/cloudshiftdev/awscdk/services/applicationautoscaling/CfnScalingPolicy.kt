@@ -998,7 +998,7 @@ public open class CfnScalingPolicy(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1035,7 +1035,7 @@ public open class CfnScalingPolicy(
        * This can include both raw metric and metric math expressions.
        */
       override fun metrics(metrics: List<Any>) {
-        cdkBuilder.metrics(metrics)
+        cdkBuilder.metrics(metrics.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1912,7 +1912,7 @@ public open class CfnScalingPolicy(
        * configuration.
        */
       override fun stepAdjustments(stepAdjustments: List<Any>) {
-        cdkBuilder.stepAdjustments(stepAdjustments)
+        cdkBuilder.stepAdjustments(stepAdjustments.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2637,7 +2637,7 @@ public open class CfnScalingPolicy(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

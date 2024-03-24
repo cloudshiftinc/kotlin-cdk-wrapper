@@ -650,7 +650,7 @@ public interface CfnDataSetProps {
      * Currently, only geospatial hierarchy is supported.
      */
     override fun columnGroups(columnGroups: List<Any>) {
-      cdkBuilder.columnGroups(columnGroups)
+      cdkBuilder.columnGroups(columnGroups.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -673,7 +673,7 @@ public interface CfnDataSetProps {
      * `ColumnLevelPermissionRule` .
      */
     override fun columnLevelPermissionRules(columnLevelPermissionRules: List<Any>) {
-      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules)
+      cdkBuilder.columnLevelPermissionRules(columnLevelPermissionRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -755,7 +755,7 @@ public interface CfnDataSetProps {
      * @param datasetParameters The parameters that are declared in a dataset.
      */
     override fun datasetParameters(datasetParameters: List<Any>) {
-      cdkBuilder.datasetParameters(datasetParameters)
+      cdkBuilder.datasetParameters(datasetParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -775,7 +775,7 @@ public interface CfnDataSetProps {
      * @param fieldFolders The folder that contains fields and nested subfolders for your dataset.
      */
     override fun fieldFolders(fieldFolders: Map<String, Any>) {
-      cdkBuilder.fieldFolders(fieldFolders)
+      cdkBuilder.fieldFolders(fieldFolders.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -824,7 +824,7 @@ public interface CfnDataSetProps {
      * physical tables.
      */
     override fun logicalTableMap(logicalTableMap: Map<String, Any>) {
-      cdkBuilder.logicalTableMap(logicalTableMap)
+      cdkBuilder.logicalTableMap(logicalTableMap.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -845,7 +845,7 @@ public interface CfnDataSetProps {
      * @param permissions A list of resource permissions on the dataset.
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -866,7 +866,7 @@ public interface CfnDataSetProps {
      * data sources.
      */
     override fun physicalTableMap(physicalTableMap: Map<String, Any>) {
-      cdkBuilder.physicalTableMap(physicalTableMap)
+      cdkBuilder.physicalTableMap(physicalTableMap.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

@@ -188,7 +188,7 @@ public open class CfnTask(
    * Specifies a list of filter rules that exclude specific data during your transfer.
    */
   public open fun excludes(`value`: List<Any>) {
-    unwrap(this).setExcludes(`value`)
+    unwrap(this).setExcludes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -212,7 +212,7 @@ public open class CfnTask(
    * Specifies a list of filter rules that include specific data during your transfer.
    */
   public open fun includes(`value`: List<Any>) {
-    unwrap(this).setIncludes(`value`)
+    unwrap(this).setIncludes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -732,7 +732,7 @@ public open class CfnTask(
      * transfer. 
      */
     override fun excludes(excludes: List<Any>) {
-      cdkBuilder.excludes(excludes)
+      cdkBuilder.excludes(excludes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -772,7 +772,7 @@ public open class CfnTask(
      * transfer. 
      */
     override fun includes(includes: List<Any>) {
-      cdkBuilder.includes(includes)
+      cdkBuilder.includes(includes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

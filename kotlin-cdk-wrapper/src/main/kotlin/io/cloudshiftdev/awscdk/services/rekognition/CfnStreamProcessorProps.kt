@@ -586,7 +586,7 @@ public interface CfnStreamProcessorProps {
      * .
      */
     override fun boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest: List<Any>) {
-      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest)
+      cdkBuilder.boundingBoxRegionsOfInterest(boundingBoxRegionsOfInterest.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

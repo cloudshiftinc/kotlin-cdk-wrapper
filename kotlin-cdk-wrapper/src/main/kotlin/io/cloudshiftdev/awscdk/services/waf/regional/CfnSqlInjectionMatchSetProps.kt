@@ -107,7 +107,7 @@ public interface CfnSqlInjectionMatchSetProps {
      * for snippets of malicious SQL code.
      */
     override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>) {
-      cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples)
+      cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

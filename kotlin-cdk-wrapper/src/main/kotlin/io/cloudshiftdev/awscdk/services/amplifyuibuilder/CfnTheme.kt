@@ -158,7 +158,7 @@ public open class CfnTheme(
    * Describes the properties that can be overriden to customize a theme.
    */
   public open fun overrides(`value`: List<Any>) {
-    unwrap(this).setOverrides(`value`)
+    unwrap(this).setOverrides(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -199,7 +199,7 @@ public open class CfnTheme(
    * A list of key-value pairs that defines the properties of the theme.
    */
   public open fun values(`value`: List<Any>) {
-    unwrap(this).setValues(`value`)
+    unwrap(this).setValues(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -349,7 +349,7 @@ public open class CfnTheme(
      * @param overrides Describes the properties that can be overriden to customize a theme. 
      */
     override fun overrides(overrides: List<Any>) {
-      cdkBuilder.overrides(overrides)
+      cdkBuilder.overrides(overrides.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -387,7 +387,7 @@ public open class CfnTheme(
      * @param values A list of key-value pairs that defines the properties of the theme. 
      */
     override fun values(values: List<Any>) {
-      cdkBuilder.values(values)
+      cdkBuilder.values(values.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -501,7 +501,7 @@ public open class CfnTheme(
        * @param children A list of key-value pairs that define the theme's properties.
        */
       override fun children(children: List<Any>) {
-        cdkBuilder.children(children)
+        cdkBuilder.children(children.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

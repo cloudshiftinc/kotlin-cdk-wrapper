@@ -744,7 +744,7 @@ public open class CfnDataset(
        * dataset.
        */
       override fun attributes(attributes: List<Any>) {
-        cdkBuilder.attributes(attributes)
+        cdkBuilder.attributes(attributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -480,7 +480,7 @@ public interface SageMakerCreateTransformJobProps : TaskStateBaseProps {
      * or selected from the state's raw result.
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

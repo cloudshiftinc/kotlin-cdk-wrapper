@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.Grant
@@ -68,7 +69,8 @@ public open class Activity(
    * @param actions The list of desired actions. 
    */
   public open fun grant(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Return the given named metric for this Activity.

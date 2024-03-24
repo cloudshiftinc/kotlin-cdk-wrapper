@@ -584,7 +584,7 @@ public interface CfnRoleProps {
      * deleting its role's policy.
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

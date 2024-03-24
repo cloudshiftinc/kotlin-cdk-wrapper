@@ -129,7 +129,7 @@ public open class CfnClientVpnEndpoint(
    * Information about the authentication method to be used to authenticate clients.
    */
   public open fun authenticationOptions(`value`: List<Any>) {
-    unwrap(this).setAuthenticationOptions(`value`)
+    unwrap(this).setAuthenticationOptions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -364,7 +364,7 @@ public open class CfnClientVpnEndpoint(
    * The tags to apply to the Client VPN endpoint during creation.
    */
   public open fun tagSpecifications(`value`: List<Any>) {
-    unwrap(this).setTagSpecifications(`value`)
+    unwrap(this).setTagSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -766,7 +766,7 @@ public open class CfnClientVpnEndpoint(
      * authenticate clients. 
      */
     override fun authenticationOptions(authenticationOptions: List<Any>) {
-      cdkBuilder.authenticationOptions(authenticationOptions)
+      cdkBuilder.authenticationOptions(authenticationOptions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1073,7 +1073,7 @@ public open class CfnClientVpnEndpoint(
      * @param tagSpecifications The tags to apply to the Client VPN endpoint during creation. 
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

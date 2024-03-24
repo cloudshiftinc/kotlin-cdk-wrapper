@@ -470,7 +470,7 @@ public interface CfnStageProps {
      * all methods in the stage.
      */
     override fun methodSettings(methodSettings: List<Any>) {
-      cdkBuilder.methodSettings(methodSettings)
+      cdkBuilder.methodSettings(methodSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

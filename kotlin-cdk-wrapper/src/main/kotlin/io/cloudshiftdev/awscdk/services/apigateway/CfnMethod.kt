@@ -231,7 +231,7 @@ public open class CfnMethod(
    * Gets a method response associated with a given HTTP status code.
    */
   public open fun methodResponses(`value`: List<Any>) {
-    unwrap(this).setMethodResponses(`value`)
+    unwrap(this).setMethodResponses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnMethod(
    * API Gateway.
    */
   public open fun requestParameters(`value`: Map<String, Any>) {
-    unwrap(this).setRequestParameters(`value`)
+    unwrap(this).setRequestParameters(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -716,7 +716,7 @@ public open class CfnMethod(
      * @param methodResponses Gets a method response associated with a given HTTP status code. 
      */
     override fun methodResponses(methodResponses: List<Any>) {
-      cdkBuilder.methodResponses(methodResponses)
+      cdkBuilder.methodResponses(methodResponses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -800,7 +800,7 @@ public open class CfnMethod(
      * parameters that can be accepted by API Gateway. 
      */
     override fun requestParameters(requestParameters: Map<String, Any>) {
-      cdkBuilder.requestParameters(requestParameters)
+      cdkBuilder.requestParameters(requestParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1348,7 +1348,7 @@ public open class CfnMethod(
        * @param integrationResponses Specifies the integration's responses.
        */
       override fun integrationResponses(integrationResponses: List<Any>) {
-        cdkBuilder.integrationResponses(integrationResponses)
+        cdkBuilder.integrationResponses(integrationResponses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2180,7 +2180,7 @@ public open class CfnMethod(
        * JSON expression without the `$` prefix.)
        */
       override fun responseParameters(responseParameters: Map<String, Any>) {
-        cdkBuilder.responseParameters(responseParameters)
+        cdkBuilder.responseParameters(responseParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**

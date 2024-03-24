@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.config
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Any
 import kotlin.Boolean
@@ -171,7 +172,7 @@ public open class CloudFormationStackDriftDetectionCheck(
      * @param inputParameters Input parameter values that are passed to the AWS Config rule. 
      */
     override fun inputParameters(inputParameters: Map<String, Any>) {
-      cdkBuilder.inputParameters(inputParameters)
+      cdkBuilder.inputParameters(inputParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

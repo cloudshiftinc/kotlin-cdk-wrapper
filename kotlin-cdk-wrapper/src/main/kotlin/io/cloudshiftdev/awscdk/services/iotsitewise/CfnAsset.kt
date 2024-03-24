@@ -121,7 +121,7 @@ public open class CfnAsset(
    * A list of asset hierarchies that each contain a `hierarchyId` .
    */
   public open fun assetHierarchies(`value`: List<Any>) {
-    unwrap(this).setAssetHierarchies(`value`)
+    unwrap(this).setAssetHierarchies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -169,7 +169,7 @@ public open class CfnAsset(
    * The list of asset properties for the asset.
    */
   public open fun assetProperties(`value`: List<Any>) {
-    unwrap(this).setAssetProperties(`value`)
+    unwrap(this).setAssetProperties(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -397,7 +397,7 @@ public open class CfnAsset(
      * @param assetHierarchies A list of asset hierarchies that each contain a `hierarchyId` . 
      */
     override fun assetHierarchies(assetHierarchies: List<Any>) {
-      cdkBuilder.assetHierarchies(assetHierarchies)
+      cdkBuilder.assetHierarchies(assetHierarchies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -459,7 +459,7 @@ public open class CfnAsset(
      * @param assetProperties The list of asset properties for the asset. 
      */
     override fun assetProperties(assetProperties: List<Any>) {
-      cdkBuilder.assetProperties(assetProperties)
+      cdkBuilder.assetProperties(assetProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

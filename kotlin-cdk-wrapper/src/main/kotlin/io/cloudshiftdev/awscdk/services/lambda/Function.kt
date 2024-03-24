@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.codeguruprofiler.IProfilingGroup
@@ -200,7 +201,8 @@ public open class Function(
    * @param layers the layers to be added. 
    */
   public open fun addLayers(vararg layers: ILayerVersion) {
-    unwrap(this).addLayers(*layers.map(ILayerVersion::unwrap).toTypedArray())
+    unwrap(this).addLayers(*layers.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.lambda.ILayerVersion}.toTypedArray())
   }
 
   /**

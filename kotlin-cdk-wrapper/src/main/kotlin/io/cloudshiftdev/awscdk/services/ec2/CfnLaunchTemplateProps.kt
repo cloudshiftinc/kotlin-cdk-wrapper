@@ -200,7 +200,7 @@ public interface CfnLaunchTemplateProps {
      * .
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

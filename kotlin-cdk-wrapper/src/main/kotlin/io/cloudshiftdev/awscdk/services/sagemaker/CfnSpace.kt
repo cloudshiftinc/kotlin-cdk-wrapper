@@ -1360,7 +1360,7 @@ public open class CfnSpace(
        * KernelGateway app.
        */
       override fun customImages(customImages: List<Any>) {
-        cdkBuilder.customImages(customImages)
+        cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1924,7 +1924,7 @@ public open class CfnSpace(
        * users for cloning in the JupyterLab application.
        */
       override fun codeRepositories(codeRepositories: List<Any>) {
-        cdkBuilder.codeRepositories(codeRepositories)
+        cdkBuilder.codeRepositories(codeRepositories.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2294,7 +2294,7 @@ public open class CfnSpace(
        * Permitted users can access this file system in Amazon SageMaker Studio.
        */
       override fun customFileSystems(customFileSystems: List<Any>) {
-        cdkBuilder.customFileSystems(customFileSystems)
+        cdkBuilder.customFileSystems(customFileSystems.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

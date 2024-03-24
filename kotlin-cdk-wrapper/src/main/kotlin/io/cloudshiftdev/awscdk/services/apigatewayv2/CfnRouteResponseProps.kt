@@ -162,7 +162,7 @@ public interface CfnRouteResponseProps {
      * @param responseParameters The route response parameters.
      */
     override fun responseParameters(responseParameters: Map<String, Any>) {
-      cdkBuilder.responseParameters(responseParameters)
+      cdkBuilder.responseParameters(responseParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

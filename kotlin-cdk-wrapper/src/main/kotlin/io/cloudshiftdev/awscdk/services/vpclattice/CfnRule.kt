@@ -907,7 +907,7 @@ public open class CfnRule(
        * need to set the weight; 100% of the traffic goes to that target group.
        */
       override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
+        cdkBuilder.targetGroups(targetGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1417,7 +1417,7 @@ public open class CfnRule(
        * action.
        */
       override fun headerMatches(headerMatches: List<Any>) {
-        cdkBuilder.headerMatches(headerMatches)
+        cdkBuilder.headerMatches(headerMatches.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

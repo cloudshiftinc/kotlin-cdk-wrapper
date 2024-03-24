@@ -143,7 +143,7 @@ public open class CfnMetricStream(
    * the namespaces that you specify here.
    */
   public open fun excludeFilters(`value`: List<Any>) {
-    unwrap(this).setExcludeFilters(`value`)
+    unwrap(this).setExcludeFilters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -183,7 +183,7 @@ public open class CfnMetricStream(
    * that you specify here.
    */
   public open fun includeFilters(`value`: List<Any>) {
-    unwrap(this).setIncludeFilters(`value`)
+    unwrap(this).setIncludeFilters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnMetricStream(
    * metric that is streamed.
    */
   public open fun statisticsConfigurations(`value`: List<Any>) {
-    unwrap(this).setStatisticsConfigurations(`value`)
+    unwrap(this).setStatisticsConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -624,7 +624,7 @@ public open class CfnMetricStream(
      * namespaces except for the namespaces that you specify here. 
      */
     override fun excludeFilters(excludeFilters: List<Any>) {
-      cdkBuilder.excludeFilters(excludeFilters)
+      cdkBuilder.excludeFilters(excludeFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -691,7 +691,7 @@ public open class CfnMetricStream(
      * the metric namespaces that you specify here. 
      */
     override fun includeFilters(includeFilters: List<Any>) {
-      cdkBuilder.includeFilters(includeFilters)
+      cdkBuilder.includeFilters(includeFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -834,7 +834,7 @@ public open class CfnMetricStream(
      * and SAMPLECOUNT statistics for each metric that is streamed. 
      */
     override fun statisticsConfigurations(statisticsConfigurations: List<Any>) {
-      cdkBuilder.statisticsConfigurations(statisticsConfigurations)
+      cdkBuilder.statisticsConfigurations(statisticsConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1191,7 +1191,7 @@ public open class CfnMetricStream(
        * statistics streamed. 
        */
       override fun includeMetrics(includeMetrics: List<Any>) {
-        cdkBuilder.includeMetrics(includeMetrics)
+        cdkBuilder.includeMetrics(includeMetrics.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

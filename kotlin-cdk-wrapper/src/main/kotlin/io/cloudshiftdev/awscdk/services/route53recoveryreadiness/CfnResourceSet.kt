@@ -152,7 +152,7 @@ public open class CfnResourceSet(
    * A list of resource objects in the resource set.
    */
   public open fun resources(`value`: List<Any>) {
-    unwrap(this).setResources(`value`)
+    unwrap(this).setResources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -316,7 +316,7 @@ public open class CfnResourceSet(
      * @param resources A list of resource objects in the resource set. 
      */
     override fun resources(resources: List<Any>) {
-      cdkBuilder.resources(resources)
+      cdkBuilder.resources(resources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

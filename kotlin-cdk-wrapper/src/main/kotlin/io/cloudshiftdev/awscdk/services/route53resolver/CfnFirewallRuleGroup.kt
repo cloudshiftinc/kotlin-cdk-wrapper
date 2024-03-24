@@ -158,7 +158,7 @@ public open class CfnFirewallRuleGroup(
    * A list of the rules that you have defined.
    */
   public open fun firewallRules(`value`: List<Any>) {
-    unwrap(this).setFirewallRules(`value`)
+    unwrap(this).setFirewallRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnFirewallRuleGroup(
      * @param firewallRules A list of the rules that you have defined. 
      */
     override fun firewallRules(firewallRules: List<Any>) {
-      cdkBuilder.firewallRules(firewallRules)
+      cdkBuilder.firewallRules(firewallRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

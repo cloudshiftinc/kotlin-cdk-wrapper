@@ -242,7 +242,7 @@ public interface CfnExperimentTemplateProps {
      * @param actions The actions for the experiment.
      */
     override fun actions(actions: Map<String, Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -320,7 +320,7 @@ public interface CfnExperimentTemplateProps {
      * @param stopConditions The stop conditions for the experiment. 
      */
     override fun stopConditions(stopConditions: List<Any>) {
-      cdkBuilder.stopConditions(stopConditions)
+      cdkBuilder.stopConditions(stopConditions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -347,7 +347,7 @@ public interface CfnExperimentTemplateProps {
      * @param targets The targets for the experiment. 
      */
     override fun targets(targets: Map<String, Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.fis.CfnExperimentTemplateProps =

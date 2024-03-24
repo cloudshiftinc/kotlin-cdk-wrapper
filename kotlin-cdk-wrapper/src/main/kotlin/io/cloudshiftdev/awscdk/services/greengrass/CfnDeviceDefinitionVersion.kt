@@ -108,7 +108,7 @@ public open class CfnDeviceDefinitionVersion(
    * The devices in this version.
    */
   public open fun devices(`value`: List<Any>) {
-    unwrap(this).setDevices(`value`)
+    unwrap(this).setDevices(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnDeviceDefinitionVersion(
      * @param devices The devices in this version. 
      */
     override fun devices(devices: List<Any>) {
-      cdkBuilder.devices(devices)
+      cdkBuilder.devices(devices.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

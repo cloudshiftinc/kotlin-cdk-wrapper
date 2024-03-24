@@ -249,7 +249,7 @@ public open class CfnConfigurationProfile(
    * A list of methods for validating the configuration.
    */
   public open fun validators(`value`: List<Any>) {
-    unwrap(this).setValidators(`value`)
+    unwrap(this).setValidators(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -546,7 +546,7 @@ public open class CfnConfigurationProfile(
      * @param validators A list of methods for validating the configuration. 
      */
     override fun validators(validators: List<Any>) {
-      cdkBuilder.validators(validators)
+      cdkBuilder.validators(validators.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

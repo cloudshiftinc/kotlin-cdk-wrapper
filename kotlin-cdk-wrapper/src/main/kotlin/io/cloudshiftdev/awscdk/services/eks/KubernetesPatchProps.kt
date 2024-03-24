@@ -112,7 +112,7 @@ public interface KubernetesPatchProps {
      * created/updated. 
      */
     override fun applyPatch(applyPatch: Map<String, Any>) {
-      cdkBuilder.applyPatch(applyPatch)
+      cdkBuilder.applyPatch(applyPatch.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -149,7 +149,7 @@ public interface KubernetesPatchProps {
      * @param restorePatch The JSON object to pass to `kubectl patch` when the resource is removed. 
      */
     override fun restorePatch(restorePatch: Map<String, Any>) {
-      cdkBuilder.restorePatch(restorePatch)
+      cdkBuilder.restorePatch(restorePatch.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.eks.KubernetesPatchProps =

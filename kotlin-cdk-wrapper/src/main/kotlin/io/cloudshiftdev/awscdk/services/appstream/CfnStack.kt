@@ -115,7 +115,7 @@ public open class CfnStack(
    * The list of virtual private cloud (VPC) interface endpoint objects.
    */
   public open fun accessEndpoints(`value`: List<Any>) {
-    unwrap(this).setAccessEndpoints(`value`)
+    unwrap(this).setAccessEndpoints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnStack(
    * The storage connectors to enable.
    */
   public open fun storageConnectors(`value`: List<Any>) {
-    unwrap(this).setStorageConnectors(`value`)
+    unwrap(this).setStorageConnectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -376,7 +376,7 @@ public open class CfnStack(
    * The actions that are enabled or disabled for users during their streaming sessions.
    */
   public open fun userSettings(`value`: List<Any>) {
-    unwrap(this).setUserSettings(`value`)
+    unwrap(this).setUserSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -695,7 +695,7 @@ public open class CfnStack(
      * @param accessEndpoints The list of virtual private cloud (VPC) interface endpoint objects. 
      */
     override fun accessEndpoints(accessEndpoints: List<Any>) {
-      cdkBuilder.accessEndpoints(accessEndpoints)
+      cdkBuilder.accessEndpoints(accessEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -888,7 +888,7 @@ public open class CfnStack(
      * @param storageConnectors The storage connectors to enable. 
      */
     override fun storageConnectors(storageConnectors: List<Any>) {
-      cdkBuilder.storageConnectors(storageConnectors)
+      cdkBuilder.storageConnectors(storageConnectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -984,7 +984,7 @@ public open class CfnStack(
      * sessions. 
      */
     override fun userSettings(userSettings: List<Any>) {
-      cdkBuilder.userSettings(userSettings)
+      cdkBuilder.userSettings(userSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -158,7 +158,7 @@ public interface CfnContactListProps {
      * A contact list can have multiple topics.
      */
     override fun topics(topics: List<Any>) {
-      cdkBuilder.topics(topics)
+      cdkBuilder.topics(topics.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

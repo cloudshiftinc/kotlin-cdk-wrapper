@@ -3633,7 +3633,7 @@ public interface CfnDBInstanceProps {
      * Not applicable. The associated roles are managed by the DB cluster.
      */
     override fun associatedRoles(associatedRoles: List<Any>) {
-      cdkBuilder.associatedRoles(associatedRoles)
+      cdkBuilder.associatedRoles(associatedRoles.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -5098,7 +5098,7 @@ public interface CfnDBInstanceProps {
      * This setting doesn't apply to Amazon Aurora or RDS Custom DB instances.
      */
     override fun processorFeatures(processorFeatures: List<Any>) {
-      cdkBuilder.processorFeatures(processorFeatures)
+      cdkBuilder.processorFeatures(processorFeatures.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

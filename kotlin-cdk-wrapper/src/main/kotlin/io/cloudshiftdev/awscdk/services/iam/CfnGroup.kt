@@ -154,7 +154,7 @@ public open class CfnGroup(
    * Adds or updates an inline policy document that is embedded in the specified IAM group.
    */
   public open fun policies(`value`: List<Any>) {
-    unwrap(this).setPolicies(`value`)
+    unwrap(this).setPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -454,7 +454,7 @@ public open class CfnGroup(
      * IAM group. 
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

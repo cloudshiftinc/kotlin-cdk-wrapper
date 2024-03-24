@@ -1615,7 +1615,7 @@ public open class CfnSegment(
        * segment.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1649,7 +1649,7 @@ public open class CfnSegment(
        * console indicates the size of the imported segment without any filters applied to it.
        */
       override fun sourceSegments(sourceSegments: List<Any>) {
-        cdkBuilder.sourceSegments(sourceSegments)
+        cdkBuilder.sourceSegments(sourceSegments.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2573,7 +2573,7 @@ public open class CfnSegment(
        * groups for the segment.
        */
       override fun groups(groups: List<Any>) {
-        cdkBuilder.groups(groups)
+        cdkBuilder.groups(groups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

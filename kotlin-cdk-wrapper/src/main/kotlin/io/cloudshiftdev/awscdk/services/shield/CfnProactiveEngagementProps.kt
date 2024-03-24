@@ -185,7 +185,7 @@ public interface CfnProactiveEngagementProps {
      * * Please contact the secondary phone number if the hotline doesn't respond within 5 minutes.
      */
     override fun emergencyContactList(emergencyContactList: List<Any>) {
-      cdkBuilder.emergencyContactList(emergencyContactList)
+      cdkBuilder.emergencyContactList(emergencyContactList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

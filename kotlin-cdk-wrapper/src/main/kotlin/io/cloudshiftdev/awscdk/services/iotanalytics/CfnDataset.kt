@@ -164,7 +164,7 @@ public open class CfnDataset(
    * The `DatasetAction` objects that automatically create the dataset contents.
    */
   public open fun actions(`value`: List<Any>) {
-    unwrap(this).setActions(`value`)
+    unwrap(this).setActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -193,7 +193,7 @@ public open class CfnDataset(
    * When dataset contents are created they are delivered to destinations specified here.
    */
   public open fun contentDeliveryRules(`value`: List<Any>) {
-    unwrap(this).setContentDeliveryRules(`value`)
+    unwrap(this).setContentDeliveryRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnDataset(
    * A list of data rules that send notifications to CloudWatch, when data arrives late.
    */
   public open fun lateDataRules(`value`: List<Any>) {
-    unwrap(this).setLateDataRules(`value`)
+    unwrap(this).setLateDataRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnDataset(
    * The `DatasetTrigger` objects that specify when the dataset is automatically updated.
    */
   public open fun triggers(`value`: List<Any>) {
-    unwrap(this).setTriggers(`value`)
+    unwrap(this).setTriggers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -608,7 +608,7 @@ public open class CfnDataset(
      * @param actions The `DatasetAction` objects that automatically create the dataset contents. 
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -638,7 +638,7 @@ public open class CfnDataset(
      * destinations specified here. 
      */
     override fun contentDeliveryRules(contentDeliveryRules: List<Any>) {
-      cdkBuilder.contentDeliveryRules(contentDeliveryRules)
+      cdkBuilder.contentDeliveryRules(contentDeliveryRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -688,7 +688,7 @@ public open class CfnDataset(
      * arrives late. 
      */
     override fun lateDataRules(lateDataRules: List<Any>) {
-      cdkBuilder.lateDataRules(lateDataRules)
+      cdkBuilder.lateDataRules(lateDataRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -787,7 +787,7 @@ public open class CfnDataset(
      * updated. 
      */
     override fun triggers(triggers: List<Any>) {
-      cdkBuilder.triggers(triggers)
+      cdkBuilder.triggers(triggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1329,7 +1329,7 @@ public open class CfnDataset(
        * "datasetContentVersionValue", or "outputFileUriValue".
        */
       override fun variables(variables: List<Any>) {
-        cdkBuilder.variables(variables)
+        cdkBuilder.variables(variables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2929,7 +2929,7 @@ public open class CfnDataset(
        * @param filters Pre-filters applied to message data.
        */
       override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
+        cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

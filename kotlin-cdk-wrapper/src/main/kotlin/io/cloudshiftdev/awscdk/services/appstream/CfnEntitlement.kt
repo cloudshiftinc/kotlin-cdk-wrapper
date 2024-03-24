@@ -103,7 +103,7 @@ public open class CfnEntitlement(
    * The attributes of the entitlement.
    */
   public open fun attributes(`value`: List<Any>) {
-    unwrap(this).setAttributes(`value`)
+    unwrap(this).setAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -252,7 +252,7 @@ public open class CfnEntitlement(
      * @param attributes The attributes of the entitlement. 
      */
     override fun attributes(attributes: List<Any>) {
-      cdkBuilder.attributes(attributes)
+      cdkBuilder.attributes(attributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

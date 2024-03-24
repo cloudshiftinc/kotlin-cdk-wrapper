@@ -160,7 +160,7 @@ public open class CfnCertificate(
    * Domain information that domain name registrars use to verify your identity.
    */
   public open fun domainValidationOptions(`value`: List<Any>) {
-    unwrap(this).setDomainValidationOptions(`value`)
+    unwrap(this).setDomainValidationOptions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -551,7 +551,7 @@ public open class CfnCertificate(
      * your identity. 
      */
     override fun domainValidationOptions(domainValidationOptions: List<Any>) {
-      cdkBuilder.domainValidationOptions(domainValidationOptions)
+      cdkBuilder.domainValidationOptions(domainValidationOptions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

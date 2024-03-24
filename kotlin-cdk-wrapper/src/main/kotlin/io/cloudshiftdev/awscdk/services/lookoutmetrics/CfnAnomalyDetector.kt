@@ -231,7 +231,7 @@ public open class CfnAnomalyDetector(
    * The detector's dataset.
    */
   public open fun metricSetList(`value`: List<Any>) {
-    unwrap(this).setMetricSetList(`value`)
+    unwrap(this).setMetricSetList(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnAnomalyDetector(
      * @param metricSetList The detector's dataset. 
      */
     override fun metricSetList(metricSetList: List<Any>) {
-      cdkBuilder.metricSetList(metricSetList)
+      cdkBuilder.metricSetList(metricSetList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1686,7 +1686,7 @@ public open class CfnAnomalyDetector(
        * @param metricList A list of metrics that the dataset will contain. 
        */
       override fun metricList(metricList: List<Any>) {
-        cdkBuilder.metricList(metricList)
+        cdkBuilder.metricList(metricList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

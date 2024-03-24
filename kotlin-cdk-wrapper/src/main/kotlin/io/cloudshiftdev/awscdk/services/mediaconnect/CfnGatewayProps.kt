@@ -145,7 +145,7 @@ public interface CfnGatewayProps {
      * @param networks The list of networks that you want to add. 
      */
     override fun networks(networks: List<Any>) {
-      cdkBuilder.networks(networks)
+      cdkBuilder.networks(networks.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

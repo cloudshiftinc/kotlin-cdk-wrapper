@@ -93,7 +93,7 @@ public open class CfnAppBlockBuilder(
    * The access endpoints of the app block builder.
    */
   public open fun accessEndpoints(`value`: List<Any>) {
-    unwrap(this).setAccessEndpoints(`value`)
+    unwrap(this).setAccessEndpoints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -463,7 +463,7 @@ public open class CfnAppBlockBuilder(
      * @param accessEndpoints The access endpoints of the app block builder. 
      */
     override fun accessEndpoints(accessEndpoints: List<Any>) {
-      cdkBuilder.accessEndpoints(accessEndpoints)
+      cdkBuilder.accessEndpoints(accessEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

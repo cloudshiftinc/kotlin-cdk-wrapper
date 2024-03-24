@@ -1324,7 +1324,7 @@ public open class CfnDatastore(
        * @param partitions A list of partition dimensions in a data store.
        */
       override fun partitions(partitions: List<Any>) {
-        cdkBuilder.partitions(partitions)
+        cdkBuilder.partitions(partitions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2298,7 +2298,7 @@ public open class CfnDatastore(
        * Each schema can have up to 100 columns. Each column can have up to 100 nested types.
        */
       override fun columns(columns: List<Any>) {
-        cdkBuilder.columns(columns)
+        cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

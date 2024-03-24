@@ -322,7 +322,7 @@ public interface CfnOriginEndpointProps {
      * @param hlsManifests The HLS manfiests associated with the origin endpoint configuration.
      */
     override fun hlsManifests(hlsManifests: List<Any>) {
-      cdkBuilder.hlsManifests(hlsManifests)
+      cdkBuilder.hlsManifests(hlsManifests.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -343,7 +343,7 @@ public interface CfnOriginEndpointProps {
      * origin endpoint.
      */
     override fun lowLatencyHlsManifests(lowLatencyHlsManifests: List<Any>) {
-      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests)
+      cdkBuilder.lowLatencyHlsManifests(lowLatencyHlsManifests.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

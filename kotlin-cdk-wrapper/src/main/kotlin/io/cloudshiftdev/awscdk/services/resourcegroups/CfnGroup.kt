@@ -117,7 +117,7 @@ public open class CfnGroup(
    * members of the resource group.
    */
   public open fun configuration(`value`: List<Any>) {
-    unwrap(this).setConfiguration(`value`)
+    unwrap(this).setConfiguration(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -480,7 +480,7 @@ public open class CfnGroup(
      * and in effect for the members of the resource group. 
      */
     override fun configuration(configuration: List<Any>) {
-      cdkBuilder.configuration(configuration)
+      cdkBuilder.configuration(configuration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -790,7 +790,7 @@ public open class CfnGroup(
        * in the *AWS Resource Groups User Guide* .
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1216,7 +1216,7 @@ public open class CfnGroup(
        * list.
        */
       override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
+        cdkBuilder.tagFilters(tagFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

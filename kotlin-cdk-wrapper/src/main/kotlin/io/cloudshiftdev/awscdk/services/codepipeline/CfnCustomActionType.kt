@@ -129,7 +129,7 @@ public open class CfnCustomActionType(
    * The configuration properties for the custom action.
    */
   public open fun configurationProperties(`value`: List<Any>) {
-    unwrap(this).setConfigurationProperties(`value`)
+    unwrap(this).setConfigurationProperties(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -505,7 +505,7 @@ public open class CfnCustomActionType(
      * @param configurationProperties The configuration properties for the custom action. 
      */
     override fun configurationProperties(configurationProperties: List<Any>) {
-      cdkBuilder.configurationProperties(configurationProperties)
+      cdkBuilder.configurationProperties(configurationProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

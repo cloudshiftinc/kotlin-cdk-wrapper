@@ -141,7 +141,7 @@ public open class CfnTaskTemplate(
    * The default values for fields when a task is created by referencing this template.
    */
   public open fun defaults(`value`: List<Any>) {
-    unwrap(this).setDefaults(`value`)
+    unwrap(this).setDefaults(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -177,7 +177,7 @@ public open class CfnTaskTemplate(
    * Fields that are part of the template.
    */
   public open fun fields(`value`: List<Any>) {
-    unwrap(this).setFields(`value`)
+    unwrap(this).setFields(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -462,7 +462,7 @@ public open class CfnTaskTemplate(
      * template. 
      */
     override fun defaults(defaults: List<Any>) {
-      cdkBuilder.defaults(defaults)
+      cdkBuilder.defaults(defaults.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -505,7 +505,7 @@ public open class CfnTaskTemplate(
      * @param fields Fields that are part of the template. 
      */
     override fun fields(fields: List<Any>) {
-      cdkBuilder.fields(fields)
+      cdkBuilder.fields(fields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -709,7 +709,7 @@ public open class CfnTaskTemplate(
        * @param invisibleFields Lists the fields that are invisible to agents.
        */
       override fun invisibleFields(invisibleFields: List<Any>) {
-        cdkBuilder.invisibleFields(invisibleFields)
+        cdkBuilder.invisibleFields(invisibleFields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -729,7 +729,7 @@ public open class CfnTaskTemplate(
        * @param readOnlyFields Lists the fields that are read-only to agents, and cannot be edited.
        */
       override fun readOnlyFields(readOnlyFields: List<Any>) {
-        cdkBuilder.readOnlyFields(readOnlyFields)
+        cdkBuilder.readOnlyFields(readOnlyFields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -749,7 +749,7 @@ public open class CfnTaskTemplate(
        * @param requiredFields Lists the fields that are required to be filled by agents.
        */
       override fun requiredFields(requiredFields: List<Any>) {
-        cdkBuilder.requiredFields(requiredFields)
+        cdkBuilder.requiredFields(requiredFields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -611,7 +611,7 @@ public interface CfnLoadBalancerProps {
      * session stickiness.
      */
     override fun appCookieStickinessPolicy(appCookieStickinessPolicy: List<Any>) {
-      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy)
+      cdkBuilder.appCookieStickinessPolicy(appCookieStickinessPolicy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -799,7 +799,7 @@ public interface CfnLoadBalancerProps {
      * stickiness.
      */
     override fun lbCookieStickinessPolicy(lbCookieStickinessPolicy: List<Any>) {
-      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy)
+      cdkBuilder.lbCookieStickinessPolicy(lbCookieStickinessPolicy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -828,7 +828,7 @@ public interface CfnLoadBalancerProps {
      * clients cannot connect to the load balancer.
      */
     override fun listeners(listeners: List<Any>) {
-      cdkBuilder.listeners(listeners)
+      cdkBuilder.listeners(listeners.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -867,7 +867,7 @@ public interface CfnLoadBalancerProps {
      * Specify only back-end server policies.
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

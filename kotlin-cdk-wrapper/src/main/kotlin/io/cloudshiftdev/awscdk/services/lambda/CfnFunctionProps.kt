@@ -924,7 +924,7 @@ public interface CfnFunctionProps {
      * .
      */
     override fun fileSystemConfigs(fileSystemConfigs: List<Any>) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs)
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

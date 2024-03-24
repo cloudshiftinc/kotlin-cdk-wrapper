@@ -347,7 +347,7 @@ public interface CfnDistributionProps {
      * distribution.
      */
     override fun cacheBehaviors(cacheBehaviors: List<Any>) {
-      cdkBuilder.cacheBehaviors(cacheBehaviors)
+      cdkBuilder.cacheBehaviors(cacheBehaviors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

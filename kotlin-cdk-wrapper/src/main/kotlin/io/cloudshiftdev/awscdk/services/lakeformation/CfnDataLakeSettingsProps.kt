@@ -491,7 +491,7 @@ public interface CfnDataLakeSettingsProps {
      * @param admins A list of AWS Lake Formation principals.
      */
     override fun admins(admins: List<Any>) {
-      cdkBuilder.admins(admins)
+      cdkBuilder.admins(admins.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -617,7 +617,7 @@ public interface CfnDataLakeSettingsProps {
      * lake](https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html) .
      */
     override fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: List<Any>) {
-      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions)
+      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -673,7 +673,7 @@ public interface CfnDataLakeSettingsProps {
      * lake](https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html) .
      */
     override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
-      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions)
+      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -707,7 +707,7 @@ public interface CfnDataLakeSettingsProps {
      * EMR clusters or third-party engines that are allwed to perform data filtering.
      */
     override fun externalDataFilteringAllowList(externalDataFilteringAllowList: List<Any>) {
-      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList)
+      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

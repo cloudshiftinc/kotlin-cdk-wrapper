@@ -463,7 +463,7 @@ public interface CfnUserProps {
      * `[ { "Entry": "/", "Target": "/bucket_name/home/mydirectory" } ]`
      */
     override fun homeDirectoryMappings(homeDirectoryMappings: List<Any>) {
-      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings)
+      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

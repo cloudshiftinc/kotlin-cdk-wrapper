@@ -303,7 +303,7 @@ public interface CfnWebhookProps {
      * All defined rules must pass for the request to be accepted and the pipeline started.
      */
     override fun filters(filters: List<Any>) {
-      cdkBuilder.filters(filters)
+      cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

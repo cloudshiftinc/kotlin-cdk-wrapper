@@ -385,7 +385,7 @@ public interface CfnMigrationProjectProps {
      * the name or ARN, and AWS Secrets Manager parameters.
      */
     override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: List<Any>) {
-      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors)
+      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -420,7 +420,7 @@ public interface CfnMigrationProjectProps {
      * the name or ARN, and AWS Secrets Manager parameters.
      */
     override fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>) {
-      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors)
+      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

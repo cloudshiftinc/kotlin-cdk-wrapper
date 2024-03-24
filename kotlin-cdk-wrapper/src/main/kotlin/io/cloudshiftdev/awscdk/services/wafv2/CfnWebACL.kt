@@ -238,7 +238,7 @@ public open class CfnWebACL(
    * A map of custom response keys and content bodies.
    */
   public open fun customResponseBodies(`value`: Map<String, Any>) {
-    unwrap(this).setCustomResponseBodies(`value`)
+    unwrap(this).setCustomResponseBodies(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -317,7 +317,7 @@ public open class CfnWebACL(
    * The rule statements used to identify the web requests that you want to manage.
    */
   public open fun rules(`value`: List<Any>) {
-    unwrap(this).setRules(`value`)
+    unwrap(this).setRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -980,7 +980,7 @@ public open class CfnWebACL(
      * @param customResponseBodies A map of custom response keys and content bodies. 
      */
     override fun customResponseBodies(customResponseBodies: Map<String, Any>) {
-      cdkBuilder.customResponseBodies(customResponseBodies)
+      cdkBuilder.customResponseBodies(customResponseBodies.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1062,7 +1062,7 @@ public open class CfnWebACL(
      * @param rules The rule statements used to identify the web requests that you want to manage. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2546,7 +2546,7 @@ public open class CfnWebACL(
        * You can use any statements that can be nested.
        */
       override fun statements(statements: List<Any>) {
-        cdkBuilder.statements(statements)
+        cdkBuilder.statements(statements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2696,7 +2696,7 @@ public open class CfnWebACL(
        * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
        */
       override fun requestBody(requestBody: Map<String, Any>) {
-        cdkBuilder.requestBody(requestBody)
+        cdkBuilder.requestBody(requestBody.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build(): software.amazon.awscdk.services.wafv2.CfnWebACL.AssociationConfigProperty
@@ -3462,7 +3462,7 @@ public open class CfnWebACL(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5045,7 +5045,7 @@ public open class CfnWebACL(
        * Developer Guide* .
        */
       override fun insertHeaders(insertHeaders: List<Any>) {
-        cdkBuilder.insertHeaders(insertHeaders)
+        cdkBuilder.insertHeaders(insertHeaders.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5425,7 +5425,7 @@ public open class CfnWebACL(
        * Developer Guide* .
        */
       override fun responseHeaders(responseHeaders: List<Any>) {
-        cdkBuilder.responseHeaders(responseHeaders)
+        cdkBuilder.responseHeaders(responseHeaders.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10502,7 +10502,7 @@ public open class CfnWebACL(
        * including `Count` .
        */
       override fun excludedRules(excludedRules: List<Any>) {
-        cdkBuilder.excludedRules(excludedRules)
+        cdkBuilder.excludedRules(excludedRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10551,7 +10551,7 @@ public open class CfnWebACL(
        * protection level that you want the Bot Control rule group to use.
        */
       override fun managedRuleGroupConfigs(managedRuleGroupConfigs: List<Any>) {
-        cdkBuilder.managedRuleGroupConfigs(managedRuleGroupConfigs)
+        cdkBuilder.managedRuleGroupConfigs(managedRuleGroupConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10606,7 +10606,7 @@ public open class CfnWebACL(
        * the rule group manages your web traffic.
        */
       override fun ruleActionOverrides(ruleActionOverrides: List<Any>) {
-        cdkBuilder.ruleActionOverrides(ruleActionOverrides)
+        cdkBuilder.ruleActionOverrides(ruleActionOverrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10968,7 +10968,7 @@ public open class CfnWebACL(
        * You can use any statements that can be nested.
        */
       override fun statements(statements: List<Any>) {
-        cdkBuilder.statements(statements)
+        cdkBuilder.statements(statements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12302,7 +12302,7 @@ public open class CfnWebACL(
        * @param customKeys Specifies the aggregate keys to use in a rate-base rule.
        */
       override fun customKeys(customKeys: List<Any>) {
-        cdkBuilder.customKeys(customKeys)
+        cdkBuilder.customKeys(customKeys.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12676,7 +12676,7 @@ public open class CfnWebACL(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12869,7 +12869,7 @@ public open class CfnWebACL(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13157,7 +13157,7 @@ public open class CfnWebACL(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13332,7 +13332,7 @@ public open class CfnWebACL(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13499,7 +13499,7 @@ public open class CfnWebACL(
        * contents.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13761,7 +13761,7 @@ public open class CfnWebACL(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -14043,7 +14043,7 @@ public open class CfnWebACL(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -14802,7 +14802,7 @@ public open class CfnWebACL(
        * `primaryaddressline1` , `primaryaddressline2` , and `primaryaddressline3` .
        */
       override fun addressFields(addressFields: List<Any>) {
-        cdkBuilder.addressFields(addressFields)
+        cdkBuilder.addressFields(addressFields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -15026,7 +15026,7 @@ public open class CfnWebACL(
        * `primaryphoneline1` , `primaryphoneline2` , and `primaryphoneline3` .
        */
       override fun phoneNumberFields(phoneNumberFields: List<Any>) {
-        cdkBuilder.phoneNumberFields(phoneNumberFields)
+        cdkBuilder.phoneNumberFields(phoneNumberFields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -17918,7 +17918,7 @@ public open class CfnWebACL(
        * including `Count` .
        */
       override fun excludedRules(excludedRules: List<Any>) {
-        cdkBuilder.excludedRules(excludedRules)
+        cdkBuilder.excludedRules(excludedRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -17955,7 +17955,7 @@ public open class CfnWebACL(
        * the rule group manages your web traffic.
        */
       override fun ruleActionOverrides(ruleActionOverrides: List<Any>) {
-        cdkBuilder.ruleActionOverrides(ruleActionOverrides)
+        cdkBuilder.ruleActionOverrides(ruleActionOverrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -18730,7 +18730,7 @@ public open class CfnWebACL(
        * For example, `myLabelName` or `nameSpace1:nameSpace2:myLabelName` .
        */
       override fun ruleLabels(ruleLabels: List<Any>) {
-        cdkBuilder.ruleLabels(ruleLabels)
+        cdkBuilder.ruleLabels(ruleLabels.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -19386,7 +19386,7 @@ public open class CfnWebACL(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -19700,7 +19700,7 @@ public open class CfnWebACL(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -22666,7 +22666,7 @@ public open class CfnWebACL(
        * starting from the lowest priority setting, before inspecting the content for a match.
        */
       override fun textTransformations(textTransformations: List<Any>) {
-        cdkBuilder.textTransformations(textTransformations)
+        cdkBuilder.textTransformations(textTransformations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

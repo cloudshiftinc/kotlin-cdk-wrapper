@@ -104,7 +104,7 @@ public interface CfnLoggerDefinitionVersionProps {
      * @param loggers The loggers in this version. 
      */
     override fun loggers(loggers: List<Any>) {
-      cdkBuilder.loggers(loggers)
+      cdkBuilder.loggers(loggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -108,7 +108,7 @@ public interface ServicePrincipalOpts {
      * @param conditions Additional conditions to add to the Service Principal.
      */
     override fun conditions(conditions: Map<String, Any>) {
-      cdkBuilder.conditions(conditions)
+      cdkBuilder.conditions(conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

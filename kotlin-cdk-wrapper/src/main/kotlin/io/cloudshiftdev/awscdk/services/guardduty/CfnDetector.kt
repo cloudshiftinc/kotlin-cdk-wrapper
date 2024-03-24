@@ -157,7 +157,7 @@ public open class CfnDetector(
    * A list of features that will be configured for the detector.
    */
   public open fun features(`value`: List<Any>) {
-    unwrap(this).setFeatures(`value`)
+    unwrap(this).setFeatures(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -399,7 +399,7 @@ public open class CfnDetector(
      * @param features A list of features that will be configured for the detector. 
      */
     override fun features(features: List<Any>) {
-      cdkBuilder.features(features)
+      cdkBuilder.features(features.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -926,7 +926,7 @@ public open class CfnDetector(
        * in your account.
        */
       override fun additionalConfiguration(additionalConfiguration: List<Any>) {
-        cdkBuilder.additionalConfiguration(additionalConfiguration)
+        cdkBuilder.additionalConfiguration(additionalConfiguration.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

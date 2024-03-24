@@ -195,7 +195,7 @@ public open class CfnWorkflow(
    * The workflow's parameter template.
    */
   public open fun parameterTemplate(`value`: Map<String, Any>) {
-    unwrap(this).setParameterTemplate(`value`)
+    unwrap(this).setParameterTemplate(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -393,7 +393,7 @@ public open class CfnWorkflow(
      * @param parameterTemplate The workflow's parameter template. 
      */
     override fun parameterTemplate(parameterTemplate: Map<String, Any>) {
-      cdkBuilder.parameterTemplate(parameterTemplate)
+      cdkBuilder.parameterTemplate(parameterTemplate.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

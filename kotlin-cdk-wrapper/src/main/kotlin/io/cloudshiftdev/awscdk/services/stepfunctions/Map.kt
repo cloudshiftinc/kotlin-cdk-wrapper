@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Deprecated
 import kotlin.Number
@@ -380,7 +381,7 @@ public open class Map(
      * exclusive  with `parameters`). 
      */
     override fun itemSelector(itemSelector: kotlin.collections.Map<String, Any>) {
-      cdkBuilder.itemSelector(itemSelector)
+      cdkBuilder.itemSelector(itemSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -451,7 +452,7 @@ public open class Map(
      */
     @Deprecated(message = "deprecated in CDK")
     override fun parameters(parameters: kotlin.collections.Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -482,7 +483,7 @@ public open class Map(
      * effective result before ResultPath is applied. 
      */
     override fun resultSelector(resultSelector: kotlin.collections.Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

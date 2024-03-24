@@ -310,7 +310,7 @@ public interface CfnInstanceFleetConfigProps {
      * excluding 5.0.x versions.
      */
     override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
-      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
+      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

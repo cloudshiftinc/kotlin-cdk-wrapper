@@ -212,7 +212,7 @@ public interface CfnAnalyzerProps {
      * Archive rules automatically archive findings that meet the criteria you define for the rule.
      */
     override fun archiveRules(archiveRules: List<Any>) {
-      cdkBuilder.archiveRules(archiveRules)
+      cdkBuilder.archiveRules(archiveRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

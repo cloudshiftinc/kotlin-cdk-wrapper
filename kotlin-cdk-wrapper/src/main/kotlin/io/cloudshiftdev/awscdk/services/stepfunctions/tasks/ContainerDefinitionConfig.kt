@@ -54,7 +54,7 @@ public interface ContainerDefinitionConfig {
      * @param parameters Additional parameters to pass to the base task.
      */
     override fun parameters(parameters: Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build():

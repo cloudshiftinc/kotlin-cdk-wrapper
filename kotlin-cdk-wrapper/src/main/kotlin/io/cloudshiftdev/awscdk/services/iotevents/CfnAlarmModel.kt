@@ -2677,7 +2677,7 @@ public open class CfnAlarmModel(
        * the alarm state changes.
        */
       override fun alarmActions(alarmActions: List<Any>) {
-        cdkBuilder.alarmActions(alarmActions)
+        cdkBuilder.alarmActions(alarmActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

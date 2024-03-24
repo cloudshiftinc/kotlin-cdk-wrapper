@@ -166,7 +166,7 @@ public open class CfnApp(
    * The list of events you would like to subscribe and get notification for.
    */
   public open fun eventSubscriptions(`value`: List<Any>) {
-    unwrap(this).setEventSubscriptions(`value`)
+    unwrap(this).setEventSubscriptions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -255,7 +255,7 @@ public open class CfnApp(
    * An array of `ResourceMapping` objects.
    */
   public open fun resourceMappings(`value`: List<Any>) {
-    unwrap(this).setResourceMappings(`value`)
+    unwrap(this).setResourceMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -938,7 +938,7 @@ public open class CfnApp(
      * for. 
      */
     override fun eventSubscriptions(eventSubscriptions: List<Any>) {
-      cdkBuilder.eventSubscriptions(eventSubscriptions)
+      cdkBuilder.eventSubscriptions(eventSubscriptions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1028,7 +1028,7 @@ public open class CfnApp(
      * @param resourceMappings An array of `ResourceMapping` objects. 
      */
     override fun resourceMappings(resourceMappings: List<Any>) {
-      cdkBuilder.resourceMappings(resourceMappings)
+      cdkBuilder.resourceMappings(resourceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

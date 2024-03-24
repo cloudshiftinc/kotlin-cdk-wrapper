@@ -559,7 +559,7 @@ public interface CfnApplicationProps {
      * @param initialCapacity The initial capacity of the application.
      */
     override fun initialCapacity(initialCapacity: List<Any>) {
-      cdkBuilder.initialCapacity(initialCapacity)
+      cdkBuilder.initialCapacity(initialCapacity.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -702,7 +702,7 @@ public interface CfnApplicationProps {
      * API operation.
      */
     override fun runtimeConfiguration(runtimeConfiguration: List<Any>) {
-      cdkBuilder.runtimeConfiguration(runtimeConfiguration)
+      cdkBuilder.runtimeConfiguration(runtimeConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -747,7 +747,7 @@ public interface CfnApplicationProps {
      * @param workerTypeSpecifications The specification applied to each worker type.
      */
     override fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>) {
-      cdkBuilder.workerTypeSpecifications(workerTypeSpecifications)
+      cdkBuilder.workerTypeSpecifications(workerTypeSpecifications.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.emrserverless.CfnApplicationProps =

@@ -125,7 +125,7 @@ public open class CfnResponsePlan(
    * The actions that the response plan starts at the beginning of an incident.
    */
   public open fun actions(`value`: List<Any>) {
-    unwrap(this).setActions(`value`)
+    unwrap(this).setActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -249,7 +249,7 @@ public open class CfnResponsePlan(
    * Information about third-party services integrated into the response plan.
    */
   public open fun integrations(`value`: List<Any>) {
-    unwrap(this).setIntegrations(`value`)
+    unwrap(this).setIntegrations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -485,7 +485,7 @@ public open class CfnResponsePlan(
      * @param actions The actions that the response plan starts at the beginning of an incident. 
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -609,7 +609,7 @@ public open class CfnResponsePlan(
      * 
      */
     override fun integrations(integrations: List<Any>) {
-      cdkBuilder.integrations(integrations)
+      cdkBuilder.integrations(integrations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1390,7 +1390,7 @@ public open class CfnResponsePlan(
        * in the template to the incident.
        */
       override fun incidentTags(incidentTags: List<Any>) {
-        cdkBuilder.incidentTags(incidentTags)
+        cdkBuilder.incidentTags(incidentTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1418,7 +1418,7 @@ public open class CfnResponsePlan(
        * topics.
        */
       override fun notificationTargets(notificationTargets: List<Any>) {
-        cdkBuilder.notificationTargets(notificationTargets)
+        cdkBuilder.notificationTargets(notificationTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2177,7 +2177,7 @@ public open class CfnResponsePlan(
        * processing a Systems Manager Automation runbook.
        */
       override fun dynamicParameters(dynamicParameters: List<Any>) {
-        cdkBuilder.dynamicParameters(dynamicParameters)
+        cdkBuilder.dynamicParameters(dynamicParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2198,7 +2198,7 @@ public open class CfnResponsePlan(
        * @param parameters The key-value pair parameters to use when running the runbook.
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -2058,7 +2058,7 @@ public open class CfnDataset(
        * expression. 
        */
       override fun valuesMap(valuesMap: List<Any>) {
-        cdkBuilder.valuesMap(valuesMap)
+        cdkBuilder.valuesMap(valuesMap.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3145,7 +3145,7 @@ public open class CfnDataset(
        * dataset to their definitions.
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

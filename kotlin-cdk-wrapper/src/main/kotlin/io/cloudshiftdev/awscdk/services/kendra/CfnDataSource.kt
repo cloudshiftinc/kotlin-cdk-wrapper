@@ -1433,7 +1433,7 @@ public open class CfnDataSource(
        * [UpdateIndex](https://docs.aws.amazon.com/kendra/latest/dg/API_UpdateIndex.html) operation.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1647,7 +1647,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun attachmentFieldMappings(attachmentFieldMappings: List<Any>) {
-        cdkBuilder.attachmentFieldMappings(attachmentFieldMappings)
+        cdkBuilder.attachmentFieldMappings(attachmentFieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2016,7 +2016,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun blogFieldMappings(blogFieldMappings: List<Any>) {
-        cdkBuilder.blogFieldMappings(blogFieldMappings)
+        cdkBuilder.blogFieldMappings(blogFieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3010,7 +3010,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun pageFieldMappings(pageFieldMappings: List<Any>) {
-        cdkBuilder.pageFieldMappings(pageFieldMappings)
+        cdkBuilder.pageFieldMappings(pageFieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3527,7 +3527,7 @@ public open class CfnDataSource(
        * mapping.
        */
       override fun spaceFieldMappings(spaceFieldMappings: List<Any>) {
-        cdkBuilder.spaceFieldMappings(spaceFieldMappings)
+        cdkBuilder.spaceFieldMappings(spaceFieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4261,7 +4261,7 @@ public open class CfnDataSource(
        * metadata fields and content when ingesting documents into Amazon Kendra.
        */
       override fun inlineConfigurations(inlineConfigurations: List<Any>) {
-        cdkBuilder.inlineConfigurations(inlineConfigurations)
+        cdkBuilder.inlineConfigurations(inlineConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7444,7 +7444,7 @@ public open class CfnDataSource(
        * data source field names must exist in your Google Drive custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8393,7 +8393,7 @@ public open class CfnDataSource(
        * source field names must exist in your OneDrive custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9829,7 +9829,7 @@ public open class CfnDataSource(
        * fields.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10470,7 +10470,7 @@ public open class CfnDataSource(
        * Amazon Kendra indexes.
        */
       override fun standardObjectConfigurations(standardObjectConfigurations: List<Any>) {
-        cdkBuilder.standardObjectConfigurations(standardObjectConfigurations)
+        cdkBuilder.standardObjectConfigurations(standardObjectConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10761,7 +10761,7 @@ public open class CfnDataSource(
        * source field names must exist in your Salesforce custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11003,7 +11003,7 @@ public open class CfnDataSource(
        */
       override
           fun customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations: List<Any>) {
-        cdkBuilder.customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations)
+        cdkBuilder.customKnowledgeArticleTypeConfigurations(customKnowledgeArticleTypeConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11256,7 +11256,7 @@ public open class CfnDataSource(
        * source field names must exist in your Salesforce custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11420,7 +11420,7 @@ public open class CfnDataSource(
        * index fields.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11629,7 +11629,7 @@ public open class CfnDataSource(
        * source field names must exist in your Salesforce custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12390,7 +12390,7 @@ public open class CfnDataSource(
        * source field names must exist in your ServiceNow custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12817,7 +12817,7 @@ public open class CfnDataSource(
        * source field names must exist in your ServiceNow custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13368,7 +13368,7 @@ public open class CfnDataSource(
        * Fields](https://docs.aws.amazon.com/kendra/latest/dg/field-mapping.html) .
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13936,7 +13936,7 @@ public open class CfnDataSource(
        * The list includes the name and port number of the website host.
        */
       override fun basicAuthentication(basicAuthentication: List<Any>) {
-        cdkBuilder.basicAuthentication(basicAuthentication)
+        cdkBuilder.basicAuthentication(basicAuthentication.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -15775,7 +15775,7 @@ public open class CfnDataSource(
        * data source field names must exist in your Amazon WorkDocs custom metadata.
        */
       override fun fieldMappings(fieldMappings: List<Any>) {
-        cdkBuilder.fieldMappings(fieldMappings)
+        cdkBuilder.fieldMappings(fieldMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

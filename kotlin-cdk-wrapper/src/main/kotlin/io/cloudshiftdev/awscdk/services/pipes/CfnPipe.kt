@@ -1506,7 +1506,7 @@ public open class CfnPipe(
        * for variables that AWS Batch sets.
        */
       override fun environment(environment: List<Any>) {
-        cdkBuilder.environment(environment)
+        cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1545,7 +1545,7 @@ public open class CfnPipe(
        * `MEMORY` , and `VCPU` .
        */
       override fun resourceRequirements(resourceRequirements: List<Any>) {
-        cdkBuilder.resourceRequirements(resourceRequirements)
+        cdkBuilder.resourceRequirements(resourceRequirements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3056,7 +3056,7 @@ public open class CfnPipe(
        * You must also specify a container name.
        */
       override fun environment(environment: List<Any>) {
-        cdkBuilder.environment(environment)
+        cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3080,7 +3080,7 @@ public open class CfnPipe(
        * container, instead of the value from the container definition.
        */
       override fun environmentFiles(environmentFiles: List<Any>) {
-        cdkBuilder.environmentFiles(environmentFiles)
+        cdkBuilder.environmentFiles(environmentFiles.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3132,7 +3132,7 @@ public open class CfnPipe(
        * The only supported resource is a GPU.
        */
       override fun resourceRequirements(resourceRequirements: List<Any>) {
-        cdkBuilder.resourceRequirements(resourceRequirements)
+        cdkBuilder.resourceRequirements(resourceRequirements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4116,7 +4116,7 @@ public open class CfnPipe(
        * @param containerOverrides One or more container overrides that are sent to a task.
        */
       override fun containerOverrides(containerOverrides: List<Any>) {
-        cdkBuilder.containerOverrides(containerOverrides)
+        cdkBuilder.containerOverrides(containerOverrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4197,7 +4197,7 @@ public open class CfnPipe(
        * task.
        */
       override fun inferenceAcceleratorOverrides(inferenceAcceleratorOverrides: List<Any>) {
-        cdkBuilder.inferenceAcceleratorOverrides(inferenceAcceleratorOverrides)
+        cdkBuilder.inferenceAcceleratorOverrides(inferenceAcceleratorOverrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4388,7 +4388,7 @@ public open class CfnPipe(
        * @param filters The event patterns.
        */
       override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
+        cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8604,7 +8604,7 @@ public open class CfnPipe(
        * index child of each dependency to complete before it can begin.
        */
       override fun dependsOn(dependsOn: List<Any>) {
-        cdkBuilder.dependsOn(dependsOn)
+        cdkBuilder.dependsOn(dependsOn.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9394,7 +9394,7 @@ public open class CfnPipe(
        * `defaultCapacityProviderStrategy` for the cluster is used.
        */
       override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
-        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
+        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9547,7 +9547,7 @@ public open class CfnPipe(
        * and those specified at runtime).
        */
       override fun placementConstraints(placementConstraints: List<Any>) {
-        cdkBuilder.placementConstraints(placementConstraints)
+        cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9571,7 +9571,7 @@ public open class CfnPipe(
        * You can specify a maximum of five strategy rules per task.
        */
       override fun placementStrategy(placementStrategy: List<Any>) {
-        cdkBuilder.placementStrategy(placementStrategy)
+        cdkBuilder.placementStrategy(placementStrategy.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11648,7 +11648,7 @@ public open class CfnPipe(
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList)
+        cdkBuilder.pipelineParameterList(pipelineParameterList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -118,7 +118,7 @@ public interface CfnConnectorDefinitionVersionProps {
      * time.
      */
     override fun connectors(connectors: List<Any>) {
-      cdkBuilder.connectors(connectors)
+      cdkBuilder.connectors(connectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

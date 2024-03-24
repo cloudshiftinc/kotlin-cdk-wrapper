@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.eks
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.autoscaling.AutoScalingGroup
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
@@ -223,7 +224,8 @@ public open class Cluster(
    * @param manifest a list of Kubernetes resource specifications. 
    */
   public override fun addManifest(id: String, vararg manifest: Map<String, Any>): KubernetesManifest
-      = unwrap(this).addManifest(id, *manifest).let(KubernetesManifest::wrap)
+      = unwrap(this).addManifest(id,
+      *manifest.map{it.mapValues{CdkObjectWrappers.unwrap(it.value)}}.toTypedArray()).let(KubernetesManifest::wrap)
 
   /**
    * Add managed nodegroup to this Amazon EKS cluster.

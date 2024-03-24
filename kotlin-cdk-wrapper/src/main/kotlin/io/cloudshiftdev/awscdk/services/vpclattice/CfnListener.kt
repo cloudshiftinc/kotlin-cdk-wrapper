@@ -819,7 +819,7 @@ public open class CfnListener(
        * need to set the weight; 100% of the traffic goes to that target group.
        */
       override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
+        cdkBuilder.targetGroups(targetGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

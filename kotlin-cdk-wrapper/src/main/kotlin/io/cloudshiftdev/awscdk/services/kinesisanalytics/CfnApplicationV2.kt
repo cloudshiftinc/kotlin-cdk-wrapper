@@ -1423,7 +1423,7 @@ public open class CfnApplicationV2(
        * application.
        */
       override fun vpcConfigurations(vpcConfigurations: List<Any>) {
-        cdkBuilder.vpcConfigurations(vpcConfigurations)
+        cdkBuilder.vpcConfigurations(vpcConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3072,7 +3072,7 @@ public open class CfnApplicationV2(
        * @param propertyGroups Describes the execution property groups.
        */
       override fun propertyGroups(propertyGroups: List<Any>) {
-        cdkBuilder.propertyGroups(propertyGroups)
+        cdkBuilder.propertyGroups(propertyGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4648,7 +4648,7 @@ public open class CfnApplicationV2(
        * @param recordColumns A list of `RecordColumn` objects. 
        */
       override fun recordColumns(recordColumns: List<Any>) {
-        cdkBuilder.recordColumns(recordColumns)
+        cdkBuilder.recordColumns(recordColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6711,7 +6711,7 @@ public open class CfnApplicationV2(
        * describing the input streams used by the application.
        */
       override fun inputs(inputs: List<Any>) {
-        cdkBuilder.inputs(inputs)
+        cdkBuilder.inputs(inputs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7117,7 +7117,7 @@ public open class CfnApplicationV2(
        * @param customArtifactsConfiguration A list of `CustomArtifactConfiguration` objects.
        */
       override fun customArtifactsConfiguration(customArtifactsConfiguration: List<Any>) {
-        cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration)
+        cdkBuilder.customArtifactsConfiguration(customArtifactsConfiguration.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

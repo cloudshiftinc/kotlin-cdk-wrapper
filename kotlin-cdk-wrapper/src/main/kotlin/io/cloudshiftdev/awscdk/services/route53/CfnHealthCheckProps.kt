@@ -173,7 +173,7 @@ public interface CfnHealthCheckProps {
      * associated with an `AWS::Route53::HealthCheck` resource.
      */
     override fun healthCheckTags(healthCheckTags: List<Any>) {
-      cdkBuilder.healthCheckTags(healthCheckTags)
+      cdkBuilder.healthCheckTags(healthCheckTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

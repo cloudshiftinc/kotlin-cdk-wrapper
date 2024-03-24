@@ -229,7 +229,7 @@ public open class CfnEnvironment(
    * The user parameters of this Amazon DataZone environment.
    */
   public open fun userParameters(`value`: List<Any>) {
-    unwrap(this).setUserParameters(`value`)
+    unwrap(this).setUserParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -428,7 +428,7 @@ public open class CfnEnvironment(
      * @param userParameters The user parameters of this Amazon DataZone environment. 
      */
     override fun userParameters(userParameters: List<Any>) {
-      cdkBuilder.userParameters(userParameters)
+      cdkBuilder.userParameters(userParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

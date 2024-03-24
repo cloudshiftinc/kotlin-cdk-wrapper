@@ -731,7 +731,7 @@ public open class CfnVirtualGateway(
        * @param json The logging format for JSON.
        */
       override fun json(json: List<Any>) {
-        cdkBuilder.json(json)
+        cdkBuilder.json(json.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4937,7 +4937,7 @@ public open class CfnVirtualGateway(
        * You can specify one listener.
        */
       override fun listeners(listeners: List<Any>) {
-        cdkBuilder.listeners(listeners)
+        cdkBuilder.listeners(listeners.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

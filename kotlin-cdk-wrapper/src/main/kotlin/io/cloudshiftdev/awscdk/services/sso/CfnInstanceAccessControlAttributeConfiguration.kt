@@ -101,7 +101,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
    * instance.
    */
   public open fun accessControlAttributes(`value`: List<Any>) {
-    unwrap(this).setAccessControlAttributes(`value`)
+    unwrap(this).setAccessControlAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
      * specified IAM Identity Center instance. 
      */
     override fun accessControlAttributes(accessControlAttributes: List<Any>) {
-      cdkBuilder.accessControlAttributes(accessControlAttributes)
+      cdkBuilder.accessControlAttributes(accessControlAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -740,7 +740,7 @@ public open class CfnInstanceAccessControlAttributeConfiguration(
        * @param accessControlAttributes the value to be set. 
        */
       override fun accessControlAttributes(accessControlAttributes: List<Any>) {
-        cdkBuilder.accessControlAttributes(accessControlAttributes)
+        cdkBuilder.accessControlAttributes(accessControlAttributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

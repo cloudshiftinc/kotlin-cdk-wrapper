@@ -313,7 +313,7 @@ public interface CfnMultiplexprogramProps {
      * active at one time.
      */
     override fun pipelineDetails(pipelineDetails: List<Any>) {
-      cdkBuilder.pipelineDetails(pipelineDetails)
+      cdkBuilder.pipelineDetails(pipelineDetails.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

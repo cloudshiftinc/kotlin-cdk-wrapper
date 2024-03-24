@@ -87,7 +87,7 @@ public interface CustomStateProps {
      * @param stateJson Amazon States Language (JSON-based) definition of the state. 
      */
     override fun stateJson(stateJson: Map<String, Any>) {
-      cdkBuilder.stateJson(stateJson)
+      cdkBuilder.stateJson(stateJson.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.CustomStateProps =

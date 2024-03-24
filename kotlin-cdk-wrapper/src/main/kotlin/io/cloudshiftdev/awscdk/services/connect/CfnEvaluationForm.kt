@@ -187,7 +187,7 @@ public open class CfnEvaluationForm(
    * Items that are part of the evaluation form.
    */
   public open fun items(`value`: List<Any>) {
-    unwrap(this).setItems(`value`)
+    unwrap(this).setItems(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -464,7 +464,7 @@ public open class CfnEvaluationForm(
      * @param items Items that are part of the evaluation form. 
      */
     override fun items(items: List<Any>) {
-      cdkBuilder.items(items)
+      cdkBuilder.items(items.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1457,7 +1457,7 @@ public open class CfnEvaluationForm(
        * @param options The scoring options of the numeric question.
        */
       override fun options(options: List<Any>) {
-        cdkBuilder.options(options)
+        cdkBuilder.options(options.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2310,7 +2310,7 @@ public open class CfnEvaluationForm(
        * *Minimum* : 1
        */
       override fun items(items: List<Any>) {
-        cdkBuilder.items(items)
+        cdkBuilder.items(items.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2663,7 +2663,7 @@ public open class CfnEvaluationForm(
        * *Maximum* : 20
        */
       override fun options(options: List<Any>) {
-        cdkBuilder.options(options)
+        cdkBuilder.options(options.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3111,7 +3111,7 @@ public open class CfnEvaluationForm(
        * *Maximum* : 256
        */
       override fun options(options: List<Any>) {
-        cdkBuilder.options(options)
+        cdkBuilder.options(options.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

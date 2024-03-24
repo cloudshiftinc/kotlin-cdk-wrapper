@@ -129,7 +129,7 @@ public open class CfnContact(
    * A list of stages.
    */
   public open fun plan(`value`: List<Any>) {
-    unwrap(this).setPlan(`value`)
+    unwrap(this).setPlan(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnContact(
      * @param plan A list of stages. 
      */
     override fun plan(plan: List<Any>) {
-      cdkBuilder.plan(plan)
+      cdkBuilder.plan(plan.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -689,7 +689,7 @@ public open class CfnContact(
        * is engaging.
        */
       override fun targets(targets: List<Any>) {
-        cdkBuilder.targets(targets)
+        cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

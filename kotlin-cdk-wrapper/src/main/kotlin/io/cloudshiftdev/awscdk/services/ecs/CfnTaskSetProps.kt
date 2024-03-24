@@ -394,7 +394,7 @@ public interface CfnTaskSetProps {
      * Balancer.
      */
     override fun loadBalancers(loadBalancers: List<Any>) {
-      cdkBuilder.loadBalancers(loadBalancers)
+      cdkBuilder.loadBalancers(loadBalancers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -489,7 +489,7 @@ public interface CfnTaskSetProps {
      * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
      */
     override fun serviceRegistries(serviceRegistries: List<Any>) {
-      cdkBuilder.serviceRegistries(serviceRegistries)
+      cdkBuilder.serviceRegistries(serviceRegistries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

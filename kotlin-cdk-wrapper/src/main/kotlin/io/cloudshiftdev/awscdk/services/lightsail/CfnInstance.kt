@@ -131,7 +131,7 @@ public open class CfnInstance(
    * An array of add-ons for the instance.
    */
   public open fun addOns(`value`: List<Any>) {
-    unwrap(this).setAddOns(`value`)
+    unwrap(this).setAddOns(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -765,7 +765,7 @@ public open class CfnInstance(
      * @param addOns An array of add-ons for the instance. 
      */
     override fun addOns(addOns: List<Any>) {
-      cdkBuilder.addOns(addOns)
+      cdkBuilder.addOns(addOns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1807,7 +1807,7 @@ public open class CfnInstance(
        * the public IP address of your instance if a static IP isn't attached to it.
        */
       override fun disks(disks: List<Any>) {
-        cdkBuilder.disks(disks)
+        cdkBuilder.disks(disks.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2212,7 +2212,7 @@ public open class CfnInstance(
        * @param ports An array of ports to open on the instance. 
        */
       override fun ports(ports: List<Any>) {
-        cdkBuilder.ports(ports)
+        cdkBuilder.ports(ports.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

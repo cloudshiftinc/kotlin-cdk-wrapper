@@ -1656,7 +1656,7 @@ public open class CfnReceiptRule(
        * the recipient email addresses or domains specified in the receipt rule.
        */
       override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
+        cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

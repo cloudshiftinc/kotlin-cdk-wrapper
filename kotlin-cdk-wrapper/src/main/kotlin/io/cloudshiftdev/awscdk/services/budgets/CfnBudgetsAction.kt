@@ -233,7 +233,7 @@ public open class CfnBudgetsAction(
    * A list of subscribers.
    */
   public open fun subscribers(`value`: List<Any>) {
-    unwrap(this).setSubscribers(`value`)
+    unwrap(this).setSubscribers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -513,7 +513,7 @@ public open class CfnBudgetsAction(
      * @param subscribers A list of subscribers. 
      */
     override fun subscribers(subscribers: List<Any>) {
-      cdkBuilder.subscribers(subscribers)
+      cdkBuilder.subscribers(subscribers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

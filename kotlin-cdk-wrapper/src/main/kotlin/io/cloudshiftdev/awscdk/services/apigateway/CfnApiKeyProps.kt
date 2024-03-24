@@ -282,7 +282,7 @@ public interface CfnApiKeyProps {
      * @param stageKeys DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
      */
     override fun stageKeys(stageKeys: List<Any>) {
-      cdkBuilder.stageKeys(stageKeys)
+      cdkBuilder.stageKeys(stageKeys.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

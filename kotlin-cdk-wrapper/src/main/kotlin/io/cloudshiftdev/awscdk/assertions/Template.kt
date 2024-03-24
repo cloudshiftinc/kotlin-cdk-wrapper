@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.assertions
 
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -278,10 +279,11 @@ public open class Template(
 
   public companion object {
     public fun fromJson(template: Map<String, Any>): Template =
-        software.amazon.awscdk.assertions.Template.fromJSON(template).let(Template::wrap)
+        software.amazon.awscdk.assertions.Template.fromJSON(template.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(Template::wrap)
 
     public fun fromJson(template: Map<String, Any>, templateParsingOptions: TemplateParsingOptions):
-        Template = software.amazon.awscdk.assertions.Template.fromJSON(template,
+        Template =
+        software.amazon.awscdk.assertions.Template.fromJSON(template.mapValues{CdkObjectWrappers.unwrap(it.value)},
         templateParsingOptions.let(TemplateParsingOptions::unwrap)).let(Template::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")

@@ -297,7 +297,7 @@ public open class CfnReplicationConfiguration(
        * filters for a replication configuration. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -571,7 +571,7 @@ public open class CfnReplicationConfiguration(
        * rule. 
        */
       override fun destinations(destinations: List<Any>) {
-        cdkBuilder.destinations(destinations)
+        cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -598,7 +598,7 @@ public open class CfnReplicationConfiguration(
        * which repositories in a private registry are replicated.
        */
       override fun repositoryFilters(repositoryFilters: List<Any>) {
-        cdkBuilder.repositoryFilters(repositoryFilters)
+        cdkBuilder.repositoryFilters(repositoryFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

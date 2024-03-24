@@ -175,7 +175,7 @@ public interface CfnMultiplexProps {
      * @param destinations A list of the multiplex output destinations.
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

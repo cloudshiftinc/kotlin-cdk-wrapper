@@ -137,7 +137,7 @@ public interface CfnNotebookInstanceLifecycleConfigProps {
      * The shell script must be a base64-encoded string.
      */
     override fun onCreate(onCreate: List<Any>) {
-      cdkBuilder.onCreate(onCreate)
+      cdkBuilder.onCreate(onCreate.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -161,7 +161,7 @@ public interface CfnNotebookInstanceLifecycleConfigProps {
      * The shell script must be a base64-encoded string.
      */
     override fun onStart(onStart: List<Any>) {
-      cdkBuilder.onStart(onStart)
+      cdkBuilder.onStart(onStart.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

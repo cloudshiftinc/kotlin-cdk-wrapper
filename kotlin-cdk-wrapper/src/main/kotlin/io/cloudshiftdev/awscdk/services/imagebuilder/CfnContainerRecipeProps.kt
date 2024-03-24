@@ -375,7 +375,7 @@ public interface CfnContainerRecipeProps {
      * components in any combination.
      */
     override fun components(components: List<Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

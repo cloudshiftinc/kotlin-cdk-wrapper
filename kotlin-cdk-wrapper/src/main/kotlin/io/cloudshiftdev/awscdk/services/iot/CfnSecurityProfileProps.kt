@@ -285,7 +285,7 @@ public interface CfnSecurityProfileProps {
      * dimensions.
      */
     override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: List<Any>) {
-      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2)
+      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -312,7 +312,7 @@ public interface CfnSecurityProfileProps {
      * a behavior.
      */
     override fun alertTargets(alertTargets: Map<String, Any>) {
-      cdkBuilder.alertTargets(alertTargets)
+      cdkBuilder.alertTargets(alertTargets.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -328,7 +328,7 @@ public interface CfnSecurityProfileProps {
      * alert.
      */
     override fun behaviors(behaviors: List<Any>) {
-      cdkBuilder.behaviors(behaviors)
+      cdkBuilder.behaviors(behaviors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

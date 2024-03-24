@@ -230,7 +230,7 @@ public interface CfnInAppTemplateProps {
      * behaviors.
      */
     override fun content(content: List<Any>) {
-      cdkBuilder.content(content)
+      cdkBuilder.content(content.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

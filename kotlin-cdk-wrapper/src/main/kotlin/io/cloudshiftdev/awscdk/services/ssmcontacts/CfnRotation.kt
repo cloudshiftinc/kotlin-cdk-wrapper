@@ -864,7 +864,7 @@ public open class CfnRotation(
        * @param monthlySettings Information about on-call rotations that recur monthly.
        */
       override fun monthlySettings(monthlySettings: List<Any>) {
-        cdkBuilder.monthlySettings(monthlySettings)
+        cdkBuilder.monthlySettings(monthlySettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -903,7 +903,7 @@ public open class CfnRotation(
        * coverage.
        */
       override fun shiftCoverages(shiftCoverages: List<Any>) {
-        cdkBuilder.shiftCoverages(shiftCoverages)
+        cdkBuilder.shiftCoverages(shiftCoverages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -924,7 +924,7 @@ public open class CfnRotation(
        * @param weeklySettings Information about on-call rotations that recur weekly.
        */
       override fun weeklySettings(weeklySettings: List<Any>) {
-        cdkBuilder.weeklySettings(weeklySettings)
+        cdkBuilder.weeklySettings(weeklySettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1083,7 +1083,7 @@ public open class CfnRotation(
        * @param coverageTimes The start and end times of the shift. 
        */
       override fun coverageTimes(coverageTimes: List<Any>) {
-        cdkBuilder.coverageTimes(coverageTimes)
+        cdkBuilder.coverageTimes(coverageTimes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

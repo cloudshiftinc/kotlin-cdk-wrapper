@@ -506,7 +506,7 @@ public interface CfnUserPoolUserProps {
      * values.
      */
     override fun userAttributes(userAttributes: List<Any>) {
-      cdkBuilder.userAttributes(userAttributes)
+      cdkBuilder.userAttributes(userAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -574,7 +574,7 @@ public interface CfnUserPoolUserProps {
      * .
      */
     override fun validationData(validationData: List<Any>) {
-      cdkBuilder.validationData(validationData)
+      cdkBuilder.validationData(validationData.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -159,7 +159,7 @@ public open class CfnStateMachineAlias(
    * The routing configuration of an alias.
    */
   public open fun routingConfiguration(`value`: List<Any>) {
-    unwrap(this).setRoutingConfiguration(`value`)
+    unwrap(this).setRoutingConfiguration(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -639,7 +639,7 @@ public open class CfnStateMachineAlias(
      * @param routingConfiguration The routing configuration of an alias. 
      */
     override fun routingConfiguration(routingConfiguration: List<Any>) {
-      cdkBuilder.routingConfiguration(routingConfiguration)
+      cdkBuilder.routingConfiguration(routingConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

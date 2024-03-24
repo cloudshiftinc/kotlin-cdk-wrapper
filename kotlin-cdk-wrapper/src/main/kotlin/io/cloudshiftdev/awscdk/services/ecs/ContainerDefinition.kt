@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import kotlin.Boolean
 import kotlin.Number
@@ -73,7 +74,8 @@ public open class ContainerDefinition(
    * @param containerDependencies 
    */
   public open fun addContainerDependencies(vararg containerDependencies: ContainerDependency) {
-    unwrap(this).addContainerDependencies(*containerDependencies.map(ContainerDependency::unwrap).toTypedArray())
+    unwrap(this).addContainerDependencies(*containerDependencies.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.ContainerDependency}.toTypedArray())
   }
 
   /**
@@ -103,7 +105,8 @@ public open class ContainerDefinition(
    * @param inferenceAcceleratorResources 
    */
   public open fun addInferenceAcceleratorResource(vararg inferenceAcceleratorResources: String) {
-    unwrap(this).addInferenceAcceleratorResource(*inferenceAcceleratorResources)
+    unwrap(this).addInferenceAcceleratorResource(*inferenceAcceleratorResources.map{CdkObjectWrappers.unwrap(it)
+        as String}.toTypedArray())
   }
 
   /**
@@ -140,7 +143,8 @@ public open class ContainerDefinition(
    * @param mountPoints 
    */
   public open fun addMountPoints(vararg mountPoints: MountPoint) {
-    unwrap(this).addMountPoints(*mountPoints.map(MountPoint::unwrap).toTypedArray())
+    unwrap(this).addMountPoints(*mountPoints.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.MountPoint}.toTypedArray())
   }
 
   /**
@@ -159,7 +163,8 @@ public open class ContainerDefinition(
    * @param portMappings 
    */
   public open fun addPortMappings(vararg portMappings: PortMapping) {
-    unwrap(this).addPortMappings(*portMappings.map(PortMapping::unwrap).toTypedArray())
+    unwrap(this).addPortMappings(*portMappings.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.PortMapping}.toTypedArray())
   }
 
   /**
@@ -232,7 +237,8 @@ public open class ContainerDefinition(
    * @param ulimits 
    */
   public open fun addUlimits(vararg ulimits: Ulimit) {
-    unwrap(this).addUlimits(*ulimits.map(Ulimit::unwrap).toTypedArray())
+    unwrap(this).addUlimits(*ulimits.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.Ulimit}.toTypedArray())
   }
 
   /**
@@ -250,7 +256,8 @@ public open class ContainerDefinition(
    * @param volumesFrom 
    */
   public open fun addVolumesFrom(vararg volumesFrom: VolumeFrom) {
-    unwrap(this).addVolumesFrom(*volumesFrom.map(VolumeFrom::unwrap).toTypedArray())
+    unwrap(this).addVolumesFrom(*volumesFrom.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.VolumeFrom}.toTypedArray())
   }
 
   /**

@@ -434,7 +434,7 @@ public open class CfnProject(
    * An array of `ProjectFileSystemLocation` objects for a CodeBuild build project.
    */
   public open fun fileSystemLocations(`value`: List<Any>) {
-    unwrap(this).setFileSystemLocations(`value`)
+    unwrap(this).setFileSystemLocations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -533,7 +533,7 @@ public open class CfnProject(
    * A list of `Artifacts` objects.
    */
   public open fun secondaryArtifacts(`value`: List<Any>) {
-    unwrap(this).setSecondaryArtifacts(`value`)
+    unwrap(this).setSecondaryArtifacts(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -558,7 +558,7 @@ public open class CfnProject(
    * An array of `ProjectSourceVersion` objects.
    */
   public open fun secondarySourceVersions(`value`: List<Any>) {
-    unwrap(this).setSecondarySourceVersions(`value`)
+    unwrap(this).setSecondarySourceVersions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -583,7 +583,7 @@ public open class CfnProject(
    * An array of `ProjectSource` objects.
    */
   public open fun secondarySources(`value`: List<Any>) {
-    unwrap(this).setSecondarySources(`value`)
+    unwrap(this).setSecondarySources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1622,7 +1622,7 @@ public open class CfnProject(
      * build project. 
      */
     override fun fileSystemLocations(fileSystemLocations: List<Any>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations)
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1731,7 +1731,7 @@ public open class CfnProject(
      * @param secondaryArtifacts A list of `Artifacts` objects. 
      */
     override fun secondaryArtifacts(secondaryArtifacts: List<Any>) {
-      cdkBuilder.secondaryArtifacts(secondaryArtifacts)
+      cdkBuilder.secondaryArtifacts(secondaryArtifacts.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1768,7 +1768,7 @@ public open class CfnProject(
      * @param secondarySourceVersions An array of `ProjectSourceVersion` objects. 
      */
     override fun secondarySourceVersions(secondarySourceVersions: List<Any>) {
-      cdkBuilder.secondarySourceVersions(secondarySourceVersions)
+      cdkBuilder.secondarySourceVersions(secondarySourceVersions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1800,7 +1800,7 @@ public open class CfnProject(
      * @param secondarySources An array of `ProjectSource` objects. 
      */
     override fun secondarySources(secondarySources: List<Any>) {
-      cdkBuilder.secondarySources(secondarySources)
+      cdkBuilder.secondarySources(secondarySources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -3683,7 +3683,7 @@ public open class CfnProject(
        * this build project.
        */
       override fun environmentVariables(environmentVariables: List<Any>) {
-        cdkBuilder.environmentVariables(environmentVariables)
+        cdkBuilder.environmentVariables(environmentVariables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5898,7 +5898,7 @@ public open class CfnProject(
        * At least one `WebhookFilter` in the array must specify `EVENT` as its type.
        */
       override fun filterGroups(filterGroups: List<Any>) {
-        cdkBuilder.filterGroups(filterGroups)
+        cdkBuilder.filterGroups(filterGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

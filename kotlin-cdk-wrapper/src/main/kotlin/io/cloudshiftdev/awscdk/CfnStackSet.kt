@@ -271,7 +271,7 @@ public open class CfnStackSet(
    * The input parameters for the stack set template.
    */
   public open fun parameters(`value`: List<Any>) {
-    unwrap(this).setParameters(`value`)
+    unwrap(this).setParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -307,7 +307,7 @@ public open class CfnStackSet(
    * A group of stack instances with parameters in some specific accounts and Regions.
    */
   public open fun stackInstancesGroup(`value`: List<Any>) {
-    unwrap(this).setStackInstancesGroup(`value`)
+    unwrap(this).setStackInstancesGroup(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -961,7 +961,7 @@ public open class CfnStackSet(
      * @param parameters The input parameters for the stack set template. 
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1009,7 +1009,7 @@ public open class CfnStackSet(
      * accounts and Regions. 
      */
     override fun stackInstancesGroup(stackInstancesGroup: List<Any>) {
-      cdkBuilder.stackInstancesGroup(stackInstancesGroup)
+      cdkBuilder.stackInstancesGroup(stackInstancesGroup.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2389,7 +2389,7 @@ public open class CfnStackSet(
        * in the selected stack instances.
        */
       override fun parameterOverrides(parameterOverrides: List<Any>) {
-        cdkBuilder.parameterOverrides(parameterOverrides)
+        cdkBuilder.parameterOverrides(parameterOverrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

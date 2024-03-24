@@ -403,7 +403,7 @@ public interface CfnExperimentProps {
      * You can use up to three metrics in an experiment.
      */
     override fun metricGoals(metricGoals: List<Any>) {
-      cdkBuilder.metricGoals(metricGoals)
+      cdkBuilder.metricGoals(metricGoals.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -583,7 +583,7 @@ public interface CfnExperimentProps {
      * variation used in the experiment. 
      */
     override fun treatments(treatments: List<Any>) {
-      cdkBuilder.treatments(treatments)
+      cdkBuilder.treatments(treatments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -324,7 +324,7 @@ public interface CfnDocumentProps {
      * document.
      */
     override fun attachments(attachments: List<Any>) {
-      cdkBuilder.attachments(attachments)
+      cdkBuilder.attachments(attachments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -401,7 +401,7 @@ public interface CfnDocumentProps {
      * AppConfig User Guide* .
      */
     override fun requires(requires: List<Any>) {
-      cdkBuilder.requires(requires)
+      cdkBuilder.requires(requires.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

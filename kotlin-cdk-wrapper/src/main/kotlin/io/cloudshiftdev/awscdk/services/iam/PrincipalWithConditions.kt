@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -33,7 +34,7 @@ public open class PrincipalWithConditions(
 ) : PrincipalBase(cdkObject) {
   public constructor(principal: IPrincipal, conditions: Map<String, Any>) :
       this(software.amazon.awscdk.services.iam.PrincipalWithConditions(principal.let(IPrincipal::unwrap),
-      conditions)
+      conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 
   /**
@@ -55,7 +56,7 @@ public open class PrincipalWithConditions(
    * @param conditions 
    */
   public open fun addConditions(conditions: Map<String, Any>) {
-    unwrap(this).addConditions(conditions)
+    unwrap(this).addConditions(conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**

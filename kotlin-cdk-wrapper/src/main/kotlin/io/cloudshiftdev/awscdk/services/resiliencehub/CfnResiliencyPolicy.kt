@@ -118,7 +118,7 @@ public open class CfnResiliencyPolicy(
    * The resiliency policy.
    */
   public open fun policy(`value`: Map<String, Any>) {
-    unwrap(this).setPolicy(`value`)
+    unwrap(this).setPolicy(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -281,7 +281,7 @@ public open class CfnResiliencyPolicy(
      * @param policy The resiliency policy. 
      */
     override fun policy(policy: Map<String, Any>) {
-      cdkBuilder.policy(policy)
+      cdkBuilder.policy(policy.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

@@ -114,7 +114,7 @@ public open class CfnTrail(
    * Specifies the settings for advanced event selectors.
    */
   public open fun advancedEventSelectors(`value`: List<Any>) {
-    unwrap(this).setAdvancedEventSelectors(`value`)
+    unwrap(this).setAdvancedEventSelectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -202,7 +202,7 @@ public open class CfnTrail(
    * Use event selectors to further specify the management and data event settings for your trail.
    */
   public open fun eventSelectors(`value`: List<Any>) {
-    unwrap(this).setEventSelectors(`value`)
+    unwrap(this).setEventSelectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnTrail(
    * A JSON string that contains the Insights types you want to log on a trail.
    */
   public open fun insightSelectors(`value`: List<Any>) {
-    unwrap(this).setInsightSelectors(`value`)
+    unwrap(this).setInsightSelectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -885,7 +885,7 @@ public open class CfnTrail(
      * @param advancedEventSelectors Specifies the settings for advanced event selectors. 
      */
     override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors)
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1016,7 +1016,7 @@ public open class CfnTrail(
      * settings for your trail. 
      */
     override fun eventSelectors(eventSelectors: List<Any>) {
-      cdkBuilder.eventSelectors(eventSelectors)
+      cdkBuilder.eventSelectors(eventSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1098,7 +1098,7 @@ public open class CfnTrail(
      * trail. 
      */
     override fun insightSelectors(insightSelectors: List<Any>) {
-      cdkBuilder.insightSelectors(insightSelectors)
+      cdkBuilder.insightSelectors(insightSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1468,7 +1468,7 @@ public open class CfnTrail(
        * @param fieldSelectors Contains all selector statements in an advanced event selector. 
        */
       override fun fieldSelectors(fieldSelectors: List<Any>) {
-        cdkBuilder.fieldSelectors(fieldSelectors)
+        cdkBuilder.fieldSelectors(fieldSelectors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4321,7 +4321,7 @@ public open class CfnTrail(
        * in the *AWS CloudTrail User Guide* .
        */
       override fun dataResources(dataResources: List<Any>) {
-        cdkBuilder.dataResources(dataResources)
+        cdkBuilder.dataResources(dataResources.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

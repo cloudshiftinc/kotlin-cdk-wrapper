@@ -194,7 +194,7 @@ public open class CfnChannel(
    * The channel's output properties.
    */
   public open fun outputs(`value`: List<Any>) {
-    unwrap(this).setOutputs(`value`)
+    unwrap(this).setOutputs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -553,7 +553,7 @@ public open class CfnChannel(
      * @param outputs The channel's output properties. 
      */
     override fun outputs(outputs: List<Any>) {
-      cdkBuilder.outputs(outputs)
+      cdkBuilder.outputs(outputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

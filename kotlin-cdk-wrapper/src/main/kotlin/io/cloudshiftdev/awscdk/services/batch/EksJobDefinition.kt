@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.batch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -313,7 +314,7 @@ public open class EksJobDefinition(
      * referenced in the `command` that you give to the container. 
      */
     override fun parameters(parameters: Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

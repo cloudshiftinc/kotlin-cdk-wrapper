@@ -300,7 +300,7 @@ public interface CfnGroupProps {
      * You can include either a `Configuration` or a `ResourceQuery` , but not both.
      */
     override fun configuration(configuration: List<Any>) {
-      cdkBuilder.configuration(configuration)
+      cdkBuilder.configuration(configuration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

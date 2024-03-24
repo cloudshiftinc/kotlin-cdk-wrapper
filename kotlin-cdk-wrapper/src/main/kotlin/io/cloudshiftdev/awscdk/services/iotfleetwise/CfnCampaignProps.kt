@@ -575,7 +575,7 @@ public interface CfnCampaignProps {
      * vehicle data so that you can identify trends and patterns.
      */
     override fun dataDestinationConfigs(dataDestinationConfigs: List<Any>) {
-      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs)
+      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -697,7 +697,7 @@ public interface CfnCampaignProps {
      * @param signalsToCollect (Optional) A list of information about signals to collect.
      */
     override fun signalsToCollect(signalsToCollect: List<Any>) {
-      cdkBuilder.signalsToCollect(signalsToCollect)
+      cdkBuilder.signalsToCollect(signalsToCollect.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

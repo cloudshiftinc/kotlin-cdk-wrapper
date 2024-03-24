@@ -48,7 +48,8 @@ public abstract class RepositoryBase(
    * @param actions 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant the given identity permissions to use the images in this repository.

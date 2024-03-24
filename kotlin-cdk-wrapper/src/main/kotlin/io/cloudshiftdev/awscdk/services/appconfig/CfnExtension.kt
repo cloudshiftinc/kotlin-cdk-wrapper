@@ -180,7 +180,7 @@ public open class CfnExtension(
    * The parameters accepted by the extension.
    */
   public open fun parameters(`value`: Map<String, Any>) {
-    unwrap(this).setParameters(`value`)
+    unwrap(this).setParameters(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -374,7 +374,7 @@ public open class CfnExtension(
      * @param parameters The parameters accepted by the extension. 
      */
     override fun parameters(parameters: Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

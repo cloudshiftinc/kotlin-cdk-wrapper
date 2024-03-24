@@ -301,7 +301,7 @@ public interface CfnComponentProps {
      * You can't specify `tags` as a valid property for `bindingProperties` .
      */
     override fun bindingProperties(bindingProperties: Map<String, Any>) {
-      cdkBuilder.bindingProperties(bindingProperties)
+      cdkBuilder.bindingProperties(bindingProperties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -315,7 +315,7 @@ public interface CfnComponentProps {
      * @param children A list of the component's `ComponentChild` instances.
      */
     override fun children(children: List<Any>) {
-      cdkBuilder.children(children)
+      cdkBuilder.children(children.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -338,7 +338,7 @@ public interface CfnComponentProps {
      * `collectionProperties` .
      */
     override fun collectionProperties(collectionProperties: Map<String, Any>) {
-      cdkBuilder.collectionProperties(collectionProperties)
+      cdkBuilder.collectionProperties(collectionProperties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -371,7 +371,7 @@ public interface CfnComponentProps {
      * components.
      */
     override fun events(events: Map<String, Any>) {
-      cdkBuilder.events(events)
+      cdkBuilder.events(events.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -403,7 +403,7 @@ public interface CfnComponentProps {
      * You can't specify `tags` as a valid property for `properties` .
      */
     override fun properties(properties: Map<String, Any>) {
-      cdkBuilder.properties(properties)
+      cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -440,7 +440,7 @@ public interface CfnComponentProps {
      * A variant is a unique style configuration of a main component.
      */
     override fun variants(variants: List<Any>) {
-      cdkBuilder.variants(variants)
+      cdkBuilder.variants(variants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

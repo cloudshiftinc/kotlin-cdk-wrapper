@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.applicationautoscaling.EnableScalingProps
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IApplicationTargetGroup
@@ -146,7 +147,8 @@ public open class ExternalService(
    * @param _targets 
    */
   public override fun registerLoadBalancerTargets(vararg targets: EcsTarget) {
-    unwrap(this).registerLoadBalancerTargets(*targets.map(EcsTarget::unwrap).toTypedArray())
+    unwrap(this).registerLoadBalancerTargets(*targets.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.EcsTarget}.toTypedArray())
   }
 
   /**

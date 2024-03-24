@@ -99,7 +99,7 @@ public open class CfnGateway(
    * A list of gateway capability summaries that each contain a namespace and status.
    */
   public open fun gatewayCapabilitySummaries(`value`: List<Any>) {
-    unwrap(this).setGatewayCapabilitySummaries(`value`)
+    unwrap(this).setGatewayCapabilitySummaries(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -327,7 +327,7 @@ public open class CfnGateway(
      * namespace and status. 
      */
     override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>) {
-      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries)
+      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

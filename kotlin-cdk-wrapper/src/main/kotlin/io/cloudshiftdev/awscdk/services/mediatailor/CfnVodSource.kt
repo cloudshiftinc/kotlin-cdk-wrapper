@@ -92,7 +92,7 @@ public open class CfnVodSource(
    * The HTTP package configurations for the VOD source.
    */
   public open fun httpPackageConfigurations(`value`: List<Any>) {
-    unwrap(this).setHttpPackageConfigurations(`value`)
+    unwrap(this).setHttpPackageConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -248,7 +248,7 @@ public open class CfnVodSource(
      * @param httpPackageConfigurations The HTTP package configurations for the VOD source. 
      */
     override fun httpPackageConfigurations(httpPackageConfigurations: List<Any>) {
-      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
+      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

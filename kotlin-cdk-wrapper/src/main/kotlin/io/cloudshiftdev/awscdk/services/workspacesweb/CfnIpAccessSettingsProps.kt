@@ -201,7 +201,7 @@ public interface CfnIpAccessSettingsProps {
      * @param ipRules The IP rules of the IP access settings. 
      */
     override fun ipRules(ipRules: List<Any>) {
-      cdkBuilder.ipRules(ipRules)
+      cdkBuilder.ipRules(ipRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -1986,7 +1986,7 @@ public open class CfnRuleGroup(
        * example `1990:1994` .
        */
       override fun destinationPorts(destinationPorts: List<Any>) {
-        cdkBuilder.destinationPorts(destinationPorts)
+        cdkBuilder.destinationPorts(destinationPorts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2015,7 +2015,7 @@ public open class CfnRuleGroup(
        * If not specified, this matches with any destination address.
        */
       override fun destinations(destinations: List<Any>) {
-        cdkBuilder.destinations(destinations)
+        cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2072,7 +2072,7 @@ public open class CfnRuleGroup(
        * example `1990:1994` .
        */
       override fun sourcePorts(sourcePorts: List<Any>) {
-        cdkBuilder.sourcePorts(sourcePorts)
+        cdkBuilder.sourcePorts(sourcePorts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2098,7 +2098,7 @@ public open class CfnRuleGroup(
        * If not specified, this matches with any source address.
        */
       override fun sources(sources: List<Any>) {
-        cdkBuilder.sources(sources)
+        cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2122,7 +2122,7 @@ public open class CfnRuleGroup(
        * (TCP).
        */
       override fun tcpFlags(tcpFlags: List<Any>) {
-        cdkBuilder.tcpFlags(tcpFlags)
+        cdkBuilder.tcpFlags(tcpFlags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2502,7 +2502,7 @@ public open class CfnRuleGroup(
        * @param dimensions the value to be set. 
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2605,7 +2605,7 @@ public open class CfnRuleGroup(
        * @param ipSetReferences The IP set references to use in the stateful rule group.
        */
       override fun ipSetReferences(ipSetReferences: Map<String, Any>) {
-        cdkBuilder.ipSetReferences(ipSetReferences)
+        cdkBuilder.ipSetReferences(ipSetReferences.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build():
@@ -3666,7 +3666,7 @@ public open class CfnRuleGroup(
        * @param ipSets A list of IP addresses and address ranges, in CIDR notation.
        */
       override fun ipSets(ipSets: Map<String, Any>) {
-        cdkBuilder.ipSets(ipSets)
+        cdkBuilder.ipSets(ipSets.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -3680,7 +3680,7 @@ public open class CfnRuleGroup(
        * @param portSets A list of port ranges.
        */
       override fun portSets(portSets: Map<String, Any>) {
-        cdkBuilder.portSets(portSets)
+        cdkBuilder.portSets(portSets.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build():
@@ -4225,7 +4225,7 @@ public open class CfnRuleGroup(
        * .
        */
       override fun statefulRules(statefulRules: List<Any>) {
-        cdkBuilder.statefulRules(statefulRules)
+        cdkBuilder.statefulRules(statefulRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4682,7 +4682,7 @@ public open class CfnRuleGroup(
        * settings. 
        */
       override fun ruleOptions(ruleOptions: List<Any>) {
-        cdkBuilder.ruleOptions(ruleOptions)
+        cdkBuilder.ruleOptions(ruleOptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5137,7 +5137,7 @@ public open class CfnRuleGroup(
        * stateless rule `RuleGroup.RuleDefinition` `Actions` specification.
        */
       override fun customActions(customActions: List<Any>) {
-        cdkBuilder.customActions(customActions)
+        cdkBuilder.customActions(customActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5163,7 +5163,7 @@ public open class CfnRuleGroup(
        * 
        */
       override fun statelessRules(statelessRules: List<Any>) {
-        cdkBuilder.statelessRules(statelessRules)
+        cdkBuilder.statelessRules(statelessRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

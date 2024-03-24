@@ -2890,7 +2890,7 @@ public open class CfnModelExplainabilityJobDefinition(
        * This is where the output of the periodic monitoring jobs is uploaded.
        */
       override fun monitoringOutputs(monitoringOutputs: List<Any>) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs)
+        cdkBuilder.monitoringOutputs(monitoringOutputs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

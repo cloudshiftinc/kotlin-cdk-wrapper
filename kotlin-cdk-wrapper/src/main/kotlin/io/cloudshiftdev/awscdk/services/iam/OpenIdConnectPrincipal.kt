@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Map
@@ -28,7 +29,7 @@ public open class OpenIdConnectPrincipal(
 
   public constructor(openIdConnectProvider: IOpenIdConnectProvider, conditions: Map<String, Any>) :
       this(software.amazon.awscdk.services.iam.OpenIdConnectPrincipal(openIdConnectProvider.let(IOpenIdConnectProvider::unwrap),
-      conditions)
+      conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 
   /**

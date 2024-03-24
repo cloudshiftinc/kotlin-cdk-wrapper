@@ -1505,7 +1505,7 @@ public open class CfnResourceDefinition(
        * @param resources The resources in this version. 
        */
       override fun resources(resources: List<Any>) {
-        cdkBuilder.resources(resources)
+        cdkBuilder.resources(resources.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

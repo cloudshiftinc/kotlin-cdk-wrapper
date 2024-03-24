@@ -166,7 +166,7 @@ public open class CfnPipeline(
    * A list of "PipelineActivity" objects.
    */
   public open fun pipelineActivities(`value`: List<Any>) {
-    unwrap(this).setPipelineActivities(`value`)
+    unwrap(this).setPipelineActivities(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -346,7 +346,7 @@ public open class CfnPipeline(
      * @param pipelineActivities A list of "PipelineActivity" objects. 
      */
     override fun pipelineActivities(pipelineActivities: List<Any>) {
-      cdkBuilder.pipelineActivities(pipelineActivities)
+      cdkBuilder.pipelineActivities(pipelineActivities.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

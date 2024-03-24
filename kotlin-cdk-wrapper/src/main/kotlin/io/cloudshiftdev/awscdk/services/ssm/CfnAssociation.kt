@@ -343,7 +343,7 @@ public open class CfnAssociation(
    * The targets for the association.
    */
   public open fun targets(`value`: List<Any>) {
-    unwrap(this).setTargets(`value`)
+    unwrap(this).setTargets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1054,7 +1054,7 @@ public open class CfnAssociation(
      * @param targets The targets for the association. 
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

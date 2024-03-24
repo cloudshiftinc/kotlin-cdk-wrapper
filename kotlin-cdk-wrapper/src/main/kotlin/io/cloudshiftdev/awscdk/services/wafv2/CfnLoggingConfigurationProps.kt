@@ -238,7 +238,7 @@ public interface CfnLoggingConfigurationProps {
      * `SingleHeader` , and `Method` .
      */
     override fun redactedFields(redactedFields: List<Any>) {
-      cdkBuilder.redactedFields(redactedFields)
+      cdkBuilder.redactedFields(redactedFields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

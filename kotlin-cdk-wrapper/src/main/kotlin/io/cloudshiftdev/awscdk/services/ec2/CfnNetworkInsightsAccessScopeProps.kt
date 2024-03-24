@@ -191,7 +191,7 @@ public interface CfnNetworkInsightsAccessScopeProps {
      * @param excludePaths The paths to exclude.
      */
     override fun excludePaths(excludePaths: List<Any>) {
-      cdkBuilder.excludePaths(excludePaths)
+      cdkBuilder.excludePaths(excludePaths.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -210,7 +210,7 @@ public interface CfnNetworkInsightsAccessScopeProps {
      * @param matchPaths The paths to match.
      */
     override fun matchPaths(matchPaths: List<Any>) {
-      cdkBuilder.matchPaths(matchPaths)
+      cdkBuilder.matchPaths(matchPaths.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

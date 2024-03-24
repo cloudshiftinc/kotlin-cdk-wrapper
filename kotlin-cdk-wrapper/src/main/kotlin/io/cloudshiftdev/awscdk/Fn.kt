@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Number
 import kotlin.String
@@ -141,7 +142,8 @@ public open class Fn(
         software.amazon.awscdk.Fn.toJsonString(`object`)
 
     public fun transform(macroName: String, parameters: Map<String, Any>): IResolvable =
-        software.amazon.awscdk.Fn.transform(macroName, parameters).let(IResolvable::wrap)
+        software.amazon.awscdk.Fn.transform(macroName,
+        parameters.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(IResolvable::wrap)
 
     public fun valueOf(parameterOrLogicalId: String, attribute: String): String =
         software.amazon.awscdk.Fn.valueOf(parameterOrLogicalId, attribute)

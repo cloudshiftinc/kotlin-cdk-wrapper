@@ -458,7 +458,7 @@ public interface CfnApplicationProps {
      * @param componentMonitoringSettings The monitoring settings of the components.
      */
     override fun componentMonitoringSettings(componentMonitoringSettings: List<Any>) {
-      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings)
+      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -480,7 +480,7 @@ public interface CfnApplicationProps {
      * to monitor.
      */
     override fun customComponents(customComponents: List<Any>) {
-      cdkBuilder.customComponents(customComponents)
+      cdkBuilder.customComponents(customComponents.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -529,7 +529,7 @@ public interface CfnApplicationProps {
      * @param logPatternSets The log pattern sets.
      */
     override fun logPatternSets(logPatternSets: List<Any>) {
-      cdkBuilder.logPatternSets(logPatternSets)
+      cdkBuilder.logPatternSets(logPatternSets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

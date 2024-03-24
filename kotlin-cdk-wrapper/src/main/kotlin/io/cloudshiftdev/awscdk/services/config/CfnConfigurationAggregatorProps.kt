@@ -154,7 +154,7 @@ public interface CfnConfigurationAggregatorProps {
      * aggregated.
      */
     override fun accountAggregationSources(accountAggregationSources: List<Any>) {
-      cdkBuilder.accountAggregationSources(accountAggregationSources)
+      cdkBuilder.accountAggregationSources(accountAggregationSources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

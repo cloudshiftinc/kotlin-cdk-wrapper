@@ -462,7 +462,7 @@ public open class CfnReplicationGroup(
    * Specifies the destination, format and type of the logs.
    */
   public open fun logDeliveryConfigurations(`value`: List<Any>) {
-    unwrap(this).setLogDeliveryConfigurations(`value`)
+    unwrap(this).setLogDeliveryConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -521,7 +521,7 @@ public open class CfnReplicationGroup(
    * that configures an Amazon ElastiCache (ElastiCache) Redis cluster node group.
    */
   public open fun nodeGroupConfiguration(`value`: List<Any>) {
-    unwrap(this).setNodeGroupConfiguration(`value`)
+    unwrap(this).setNodeGroupConfiguration(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -2104,7 +2104,7 @@ public open class CfnReplicationGroup(
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs. 
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2197,7 +2197,7 @@ public open class CfnReplicationGroup(
      * (ElastiCache) Redis cluster node group. 
      */
     override fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>) {
-      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration)
+      cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

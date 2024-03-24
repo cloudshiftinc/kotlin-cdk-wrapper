@@ -231,7 +231,7 @@ public interface CfnAssetProps {
      * A hierarchy specifies allowed parent/child asset relationships.
      */
     override fun assetHierarchies(assetHierarchies: List<Any>) {
-      cdkBuilder.assetHierarchies(assetHierarchies)
+      cdkBuilder.assetHierarchies(assetHierarchies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -274,7 +274,7 @@ public interface CfnAssetProps {
      * composite model properties in the `assetCompositeModels` object.
      */
     override fun assetProperties(assetProperties: List<Any>) {
-      cdkBuilder.assetProperties(assetProperties)
+      cdkBuilder.assetProperties(assetProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -603,7 +603,7 @@ public open class CfnEndpointAccess(
        * Also known as an interface endpoint.
        */
       override fun networkInterfaces(networkInterfaces: List<Any>) {
-        cdkBuilder.networkInterfaces(networkInterfaces)
+        cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -254,7 +254,7 @@ public open class CfnStage(
    * A map that defines the method settings for a Stage resource.
    */
   public open fun methodSettings(`value`: List<Any>) {
-    unwrap(this).setMethodSettings(`value`)
+    unwrap(this).setMethodSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -771,7 +771,7 @@ public open class CfnStage(
      * @param methodSettings A map that defines the method settings for a Stage resource. 
      */
     override fun methodSettings(methodSettings: List<Any>) {
-      cdkBuilder.methodSettings(methodSettings)
+      cdkBuilder.methodSettings(methodSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

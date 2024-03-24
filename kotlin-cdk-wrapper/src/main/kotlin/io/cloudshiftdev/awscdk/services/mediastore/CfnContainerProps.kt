@@ -371,7 +371,7 @@ public interface CfnContainerProps {
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      */
     override fun corsPolicy(corsPolicy: List<Any>) {
-      cdkBuilder.corsPolicy(corsPolicy)
+      cdkBuilder.corsPolicy(corsPolicy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

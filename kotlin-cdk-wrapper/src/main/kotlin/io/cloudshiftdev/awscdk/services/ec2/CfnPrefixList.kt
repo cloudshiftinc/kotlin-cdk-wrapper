@@ -126,7 +126,7 @@ public open class CfnPrefixList(
    * One or more entries for the prefix list.
    */
   public open fun entries(`value`: List<Any>) {
-    unwrap(this).setEntries(`value`)
+    unwrap(this).setEntries(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnPrefixList(
      * @param entries One or more entries for the prefix list. 
      */
     override fun entries(entries: List<Any>) {
-      cdkBuilder.entries(entries)
+      cdkBuilder.entries(entries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

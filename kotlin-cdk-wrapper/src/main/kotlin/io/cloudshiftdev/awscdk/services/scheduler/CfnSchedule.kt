@@ -1557,7 +1557,7 @@ public open class CfnSchedule(
        * @param capacityProviderStrategy The capacity provider strategy to use for the task.
        */
       override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
-        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
+        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1667,7 +1667,7 @@ public open class CfnSchedule(
        * and those specified at runtime).
        */
       override fun placementConstraints(placementConstraints: List<Any>) {
-        cdkBuilder.placementConstraints(placementConstraints)
+        cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1689,7 +1689,7 @@ public open class CfnSchedule(
        * @param placementStrategy The task placement strategy for a task or service.
        */
       override fun placementStrategy(placementStrategy: List<Any>) {
-        cdkBuilder.placementStrategy(placementStrategy)
+        cdkBuilder.placementStrategy(placementStrategy.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3002,7 +3002,7 @@ public open class CfnSchedule(
        * SageMaker Model Building Pipeline.
        */
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList)
+        cdkBuilder.pipelineParameterList(pipelineParameterList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

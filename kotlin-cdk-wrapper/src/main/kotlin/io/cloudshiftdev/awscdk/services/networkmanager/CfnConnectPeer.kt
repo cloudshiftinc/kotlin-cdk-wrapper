@@ -867,7 +867,7 @@ public open class CfnConnectPeer(
        * @param bgpConfigurations The Connect peer BGP configurations.
        */
       override fun bgpConfigurations(bgpConfigurations: List<Any>) {
-        cdkBuilder.bgpConfigurations(bgpConfigurations)
+        cdkBuilder.bgpConfigurations(bgpConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

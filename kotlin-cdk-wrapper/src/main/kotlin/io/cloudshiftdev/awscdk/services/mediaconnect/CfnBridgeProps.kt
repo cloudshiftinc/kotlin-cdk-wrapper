@@ -325,7 +325,7 @@ public interface CfnBridgeProps {
      * @param outputs The outputs that you want to add to this bridge.
      */
     override fun outputs(outputs: List<Any>) {
-      cdkBuilder.outputs(outputs)
+      cdkBuilder.outputs(outputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -374,7 +374,7 @@ public interface CfnBridgeProps {
      * @param sources The sources that you want to add to this bridge. 
      */
     override fun sources(sources: List<Any>) {
-      cdkBuilder.sources(sources)
+      cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

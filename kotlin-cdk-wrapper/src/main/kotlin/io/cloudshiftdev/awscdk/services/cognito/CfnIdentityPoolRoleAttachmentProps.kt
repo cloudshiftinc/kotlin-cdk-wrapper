@@ -173,7 +173,7 @@ public interface CfnIdentityPoolRoleAttachmentProps {
      * .
      */
     override fun roleMappings(roleMappings: Map<String, Any>) {
-      cdkBuilder.roleMappings(roleMappings)
+      cdkBuilder.roleMappings(roleMappings.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

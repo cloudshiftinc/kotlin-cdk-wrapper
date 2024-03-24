@@ -165,7 +165,7 @@ public open class CfnWorkflow(
    * workflow.
    */
   public open fun onExceptionSteps(`value`: List<Any>) {
-    unwrap(this).setOnExceptionSteps(`value`)
+    unwrap(this).setOnExceptionSteps(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnWorkflow(
    * Specifies the details for the steps that are in the specified workflow.
    */
   public open fun steps(`value`: List<Any>) {
-    unwrap(this).setSteps(`value`)
+    unwrap(this).setSteps(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -347,7 +347,7 @@ public open class CfnWorkflow(
      * during execution of the workflow. 
      */
     override fun onExceptionSteps(onExceptionSteps: List<Any>) {
-      cdkBuilder.onExceptionSteps(onExceptionSteps)
+      cdkBuilder.onExceptionSteps(onExceptionSteps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -378,7 +378,7 @@ public open class CfnWorkflow(
      * @param steps Specifies the details for the steps that are in the specified workflow. 
      */
     override fun steps(steps: List<Any>) {
-      cdkBuilder.steps(steps)
+      cdkBuilder.steps(steps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

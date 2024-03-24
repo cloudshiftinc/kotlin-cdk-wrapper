@@ -211,7 +211,7 @@ public interface CfnDiskProps {
      * automatically disabled before the disk is deleted.
      */
     override fun addOns(addOns: List<Any>) {
-      cdkBuilder.addOns(addOns)
+      cdkBuilder.addOns(addOns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

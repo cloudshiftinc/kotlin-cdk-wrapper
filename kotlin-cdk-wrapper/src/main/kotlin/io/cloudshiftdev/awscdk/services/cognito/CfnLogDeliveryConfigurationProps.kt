@@ -93,7 +93,7 @@ public interface CfnLogDeliveryConfigurationProps {
      * @param logConfigurations The detailed activity logging destination of a user pool.
      */
     override fun logConfigurations(logConfigurations: List<Any>) {
-      cdkBuilder.logConfigurations(logConfigurations)
+      cdkBuilder.logConfigurations(logConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

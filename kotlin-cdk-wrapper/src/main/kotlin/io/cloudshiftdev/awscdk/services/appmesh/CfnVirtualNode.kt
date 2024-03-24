@@ -1049,7 +1049,7 @@ public open class CfnVirtualNode(
        * Only instances that match all of the specified key/value pairs will be returned.
        */
       override fun attributes(attributes: List<Any>) {
-        cdkBuilder.attributes(attributes)
+        cdkBuilder.attributes(attributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5384,7 +5384,7 @@ public open class CfnVirtualNode(
        * @param json The logging format for JSON.
        */
       override fun json(json: List<Any>) {
-        cdkBuilder.json(json)
+        cdkBuilder.json(json.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8224,7 +8224,7 @@ public open class CfnVirtualNode(
        * if it doesn't already exist.
        */
       override fun backends(backends: List<Any>) {
-        cdkBuilder.backends(backends)
+        cdkBuilder.backends(backends.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8252,7 +8252,7 @@ public open class CfnVirtualNode(
        * You can specify one listener.
        */
       override fun listeners(listeners: List<Any>) {
-        cdkBuilder.listeners(listeners)
+        cdkBuilder.listeners(listeners.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

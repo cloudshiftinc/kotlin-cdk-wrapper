@@ -316,7 +316,7 @@ public interface CfnTemplateProps {
      * @param permissions A list of resource permissions to be set on the template.
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

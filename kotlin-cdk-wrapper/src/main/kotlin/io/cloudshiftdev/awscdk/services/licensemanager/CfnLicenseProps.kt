@@ -313,7 +313,7 @@ public interface CfnLicenseProps {
      * @param entitlements License entitlements. 
      */
     override fun entitlements(entitlements: List<Any>) {
-      cdkBuilder.entitlements(entitlements)
+      cdkBuilder.entitlements(entitlements.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -361,7 +361,7 @@ public interface CfnLicenseProps {
      * @param licenseMetadata License metadata.
      */
     override fun licenseMetadata(licenseMetadata: List<Any>) {
-      cdkBuilder.licenseMetadata(licenseMetadata)
+      cdkBuilder.licenseMetadata(licenseMetadata.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

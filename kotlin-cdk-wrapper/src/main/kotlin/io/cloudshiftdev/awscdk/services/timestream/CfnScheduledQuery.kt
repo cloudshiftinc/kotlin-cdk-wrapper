@@ -1248,7 +1248,7 @@ public open class CfnScheduledQuery(
        * Attribute mappings for MULTI value measures.
        */
       override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1600,7 +1600,7 @@ public open class CfnScheduledQuery(
        * attributes.
        */
       override fun multiMeasureAttributeMappings(multiMeasureAttributeMappings: List<Any>) {
-        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings)
+        cdkBuilder.multiMeasureAttributeMappings(multiMeasureAttributeMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2477,7 +2477,7 @@ public open class CfnScheduledQuery(
        * dimension in the destination table. 
        */
       override fun dimensionMappings(dimensionMappings: List<Any>) {
-        cdkBuilder.dimensionMappings(dimensionMappings)
+        cdkBuilder.dimensionMappings(dimensionMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2507,7 +2507,7 @@ public open class CfnScheduledQuery(
        * @param mixedMeasureMappings Specifies how to map measures to multi-measure records.
        */
       override fun mixedMeasureMappings(mixedMeasureMappings: List<Any>) {
-        cdkBuilder.mixedMeasureMappings(mixedMeasureMappings)
+        cdkBuilder.mixedMeasureMappings(mixedMeasureMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

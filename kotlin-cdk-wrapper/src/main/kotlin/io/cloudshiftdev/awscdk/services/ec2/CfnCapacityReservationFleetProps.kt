@@ -353,7 +353,7 @@ public interface CfnCapacityReservationFleetProps {
      * the capacity.
      */
     override fun instanceTypeSpecifications(instanceTypeSpecifications: List<Any>) {
-      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications)
+      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -416,7 +416,7 @@ public interface CfnCapacityReservationFleetProps {
      * The tags are automatically assigned to the Capacity Reservations in the Fleet.
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

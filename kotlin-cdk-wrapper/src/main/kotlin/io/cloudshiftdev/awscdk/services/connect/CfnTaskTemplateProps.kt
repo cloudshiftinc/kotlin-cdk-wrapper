@@ -269,7 +269,7 @@ public interface CfnTaskTemplateProps {
      * template.
      */
     override fun defaults(defaults: List<Any>) {
-      cdkBuilder.defaults(defaults)
+      cdkBuilder.defaults(defaults.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -298,7 +298,7 @@ public interface CfnTaskTemplateProps {
      * A template requires at least one field that has type `Name` .
      */
     override fun fields(fields: List<Any>) {
-      cdkBuilder.fields(fields)
+      cdkBuilder.fields(fields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

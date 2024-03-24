@@ -133,7 +133,7 @@ public open class CfnBucket(
    * Specifies the configuration and any analyses for the analytics filter of an Amazon S3 bucket.
    */
   public open fun analyticsConfigurations(`value`: List<Any>) {
-    unwrap(this).setAnalyticsConfigurations(`value`)
+    unwrap(this).setAnalyticsConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -282,7 +282,7 @@ public open class CfnBucket(
    * Defines how Amazon S3 handles Intelligent-Tiering storage.
    */
   public open fun intelligentTieringConfigurations(`value`: List<Any>) {
-    unwrap(this).setIntelligentTieringConfigurations(`value`)
+    unwrap(this).setIntelligentTieringConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -307,7 +307,7 @@ public open class CfnBucket(
    * Specifies the inventory configuration for an Amazon S3 bucket.
    */
   public open fun inventoryConfigurations(`value`: List<Any>) {
-    unwrap(this).setInventoryConfigurations(`value`)
+    unwrap(this).setInventoryConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -390,7 +390,7 @@ public open class CfnBucket(
    * configuration ID) from an Amazon S3 bucket.
    */
   public open fun metricsConfigurations(`value`: List<Any>) {
-    unwrap(this).setMetricsConfigurations(`value`)
+    unwrap(this).setMetricsConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1467,7 +1467,7 @@ public open class CfnBucket(
      * filter of an Amazon S3 bucket. 
      */
     override fun analyticsConfigurations(analyticsConfigurations: List<Any>) {
-      cdkBuilder.analyticsConfigurations(analyticsConfigurations)
+      cdkBuilder.analyticsConfigurations(analyticsConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1627,7 +1627,7 @@ public open class CfnBucket(
      * storage. 
      */
     override fun intelligentTieringConfigurations(intelligentTieringConfigurations: List<Any>) {
-      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations)
+      cdkBuilder.intelligentTieringConfigurations(intelligentTieringConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1667,7 +1667,7 @@ public open class CfnBucket(
      * 
      */
     override fun inventoryConfigurations(inventoryConfigurations: List<Any>) {
-      cdkBuilder.inventoryConfigurations(inventoryConfigurations)
+      cdkBuilder.inventoryConfigurations(inventoryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1796,7 +1796,7 @@ public open class CfnBucket(
      * metrics (specified by the metrics configuration ID) from an Amazon S3 bucket. 
      */
     override fun metricsConfigurations(metricsConfigurations: List<Any>) {
-      cdkBuilder.metricsConfigurations(metricsConfigurations)
+      cdkBuilder.metricsConfigurations(metricsConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2662,7 +2662,7 @@ public open class CfnBucket(
        * specified, all of the contents of the bucket are included in the analysis.
        */
       override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
+        cdkBuilder.tagFilters(tagFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2811,7 +2811,7 @@ public open class CfnBucket(
        * configuration. 
        */
       override fun serverSideEncryptionConfiguration(serverSideEncryptionConfiguration: List<Any>) {
-        cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration)
+        cdkBuilder.serverSideEncryptionConfiguration(serverSideEncryptionConfiguration.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2940,7 +2940,7 @@ public open class CfnBucket(
        * You can add up to 100 rules to the configuration.
        */
       override fun corsRules(corsRules: List<Any>) {
-        cdkBuilder.corsRules(corsRules)
+        cdkBuilder.corsRules(corsRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4438,7 +4438,7 @@ public open class CfnBucket(
        * @param tagFilters A container for a key-value pair.
        */
       override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
+        cdkBuilder.tagFilters(tagFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4473,7 +4473,7 @@ public open class CfnBucket(
        * or Deep Archive Access tiers.
        */
       override fun tierings(tierings: List<Any>) {
-        cdkBuilder.tierings(tierings)
+        cdkBuilder.tierings(tierings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5222,7 +5222,7 @@ public open class CfnBucket(
        * @param rules A lifecycle rule for individual objects in an Amazon S3 bucket. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5628,7 +5628,7 @@ public open class CfnBucket(
        * The metrics configuration includes only objects that meet the filter's criteria.
        */
       override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
+        cdkBuilder.tagFilters(tagFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6419,7 +6419,7 @@ public open class CfnBucket(
        * which to invoke them.
        */
       override fun lambdaConfigurations(lambdaConfigurations: List<Any>) {
-        cdkBuilder.lambdaConfigurations(lambdaConfigurations)
+        cdkBuilder.lambdaConfigurations(lambdaConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6442,7 +6442,7 @@ public open class CfnBucket(
        * and the events for which to publish messages.
        */
       override fun queueConfigurations(queueConfigurations: List<Any>) {
-        cdkBuilder.queueConfigurations(queueConfigurations)
+        cdkBuilder.queueConfigurations(queueConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6465,7 +6465,7 @@ public open class CfnBucket(
        * which notifications are generated.
        */
       override fun topicConfigurations(topicConfigurations: List<Any>) {
-        cdkBuilder.topicConfigurations(topicConfigurations)
+        cdkBuilder.topicConfigurations(topicConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7095,7 +7095,7 @@ public open class CfnBucket(
        * @param rules Specifies the container element for Object Ownership rules. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8586,7 +8586,7 @@ public open class CfnBucket(
        * rules.
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9248,7 +9248,7 @@ public open class CfnBucket(
        * @param tagFilters An array of tags containing key and value pairs.
        */
       override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
+        cdkBuilder.tagFilters(tagFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11685,7 +11685,7 @@ public open class CfnBucket(
        * property.
        */
       override fun noncurrentVersionTransitions(noncurrentVersionTransitions: List<Any>) {
-        cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions)
+        cdkBuilder.noncurrentVersionTransitions(noncurrentVersionTransitions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11757,7 +11757,7 @@ public open class CfnBucket(
        * applies.
        */
       override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
+        cdkBuilder.tagFilters(tagFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11816,7 +11816,7 @@ public open class CfnBucket(
        * transition time. If you specify this property, don't specify the `Transition` property.
        */
       override fun transitions(transitions: List<Any>) {
-        cdkBuilder.transitions(transitions)
+        cdkBuilder.transitions(transitions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12105,7 +12105,7 @@ public open class CfnBucket(
        * filter rule. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -14033,7 +14033,7 @@ public open class CfnBucket(
        * @param routingRules Rules that define when a redirect is applied and the redirect behavior.
        */
       override fun routingRules(routingRules: List<Any>) {
-        cdkBuilder.routingRules(routingRules)
+        cdkBuilder.routingRules(routingRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

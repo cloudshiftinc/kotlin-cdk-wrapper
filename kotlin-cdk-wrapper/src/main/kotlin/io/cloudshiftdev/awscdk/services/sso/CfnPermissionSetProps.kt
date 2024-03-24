@@ -313,7 +313,7 @@ public interface CfnPermissionSetProps {
      * policies that you have attached to your permission set.
      */
     override fun customerManagedPolicyReferences(customerManagedPolicyReferences: List<Any>) {
-      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences)
+      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

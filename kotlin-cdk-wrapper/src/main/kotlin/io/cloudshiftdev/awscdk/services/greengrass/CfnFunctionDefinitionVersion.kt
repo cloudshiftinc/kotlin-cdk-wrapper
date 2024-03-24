@@ -169,7 +169,7 @@ public open class CfnFunctionDefinitionVersion(
    * The functions in this version.
    */
   public open fun functions(`value`: List<Any>) {
-    unwrap(this).setFunctions(`value`)
+    unwrap(this).setFunctions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnFunctionDefinitionVersion(
      * @param functions The functions in this version. 
      */
     override fun functions(functions: List<Any>) {
-      cdkBuilder.functions(functions)
+      cdkBuilder.functions(functions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -723,7 +723,7 @@ public open class CfnFunctionDefinitionVersion(
        * This property applies only to Lambda functions that run in a Greengrass container.
        */
       override fun resourceAccessPolicies(resourceAccessPolicies: List<Any>) {
-        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies)
+        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

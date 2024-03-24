@@ -1573,7 +1573,7 @@ public open class CfnService(
        * not supported.
        */
       override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1607,7 +1607,7 @@ public open class CfnService(
        * An array of key-value pairs.
        */
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2704,7 +2704,7 @@ public open class CfnService(
        * not supported.
        */
       override fun runtimeEnvironmentSecrets(runtimeEnvironmentSecrets: List<Any>) {
-        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets)
+        cdkBuilder.runtimeEnvironmentSecrets(runtimeEnvironmentSecrets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2738,7 +2738,7 @@ public open class CfnService(
        * An array of key-value pairs.
        */
       override fun runtimeEnvironmentVariables(runtimeEnvironmentVariables: List<Any>) {
-        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables)
+        cdkBuilder.runtimeEnvironmentVariables(runtimeEnvironmentVariables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

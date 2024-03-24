@@ -92,7 +92,7 @@ public interface CfnTrustStoreRevocationProps {
      * @param revocationContents The revocation file to add.
      */
     override fun revocationContents(revocationContents: List<Any>) {
-      cdkBuilder.revocationContents(revocationContents)
+      cdkBuilder.revocationContents(revocationContents.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

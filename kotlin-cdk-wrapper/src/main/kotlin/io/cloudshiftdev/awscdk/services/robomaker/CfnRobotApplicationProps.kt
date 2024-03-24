@@ -210,7 +210,7 @@ public interface CfnRobotApplicationProps {
      * @param sources The sources of the robot application.
      */
     override fun sources(sources: List<Any>) {
-      cdkBuilder.sources(sources)
+      cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

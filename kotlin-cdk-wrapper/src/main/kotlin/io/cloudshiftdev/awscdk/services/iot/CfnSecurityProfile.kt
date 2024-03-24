@@ -143,7 +143,7 @@ public open class CfnSecurityProfile(
    * A list of metrics whose data is retained (stored).
    */
   public open fun additionalMetricsToRetainV2(`value`: List<Any>) {
-    unwrap(this).setAdditionalMetricsToRetainV2(`value`)
+    unwrap(this).setAdditionalMetricsToRetainV2(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -168,7 +168,7 @@ public open class CfnSecurityProfile(
    * Specifies the destinations to which alerts are sent.
    */
   public open fun alertTargets(`value`: Map<String, Any>) {
-    unwrap(this).setAlertTargets(`value`)
+    unwrap(this).setAlertTargets(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -192,7 +192,7 @@ public open class CfnSecurityProfile(
    * Specifies the behaviors that, when violated by a device (thing), cause an alert.
    */
   public open fun behaviors(`value`: List<Any>) {
-    unwrap(this).setBehaviors(`value`)
+    unwrap(this).setBehaviors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -501,7 +501,7 @@ public open class CfnSecurityProfile(
      * @param additionalMetricsToRetainV2 A list of metrics whose data is retained (stored). 
      */
     override fun additionalMetricsToRetainV2(additionalMetricsToRetainV2: List<Any>) {
-      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2)
+      cdkBuilder.additionalMetricsToRetainV2(additionalMetricsToRetainV2.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -540,7 +540,7 @@ public open class CfnSecurityProfile(
      * @param alertTargets Specifies the destinations to which alerts are sent. 
      */
     override fun alertTargets(alertTargets: Map<String, Any>) {
-      cdkBuilder.alertTargets(alertTargets)
+      cdkBuilder.alertTargets(alertTargets.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -562,7 +562,7 @@ public open class CfnSecurityProfile(
      * alert. 
      */
     override fun behaviors(behaviors: List<Any>) {
-      cdkBuilder.behaviors(behaviors)
+      cdkBuilder.behaviors(behaviors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

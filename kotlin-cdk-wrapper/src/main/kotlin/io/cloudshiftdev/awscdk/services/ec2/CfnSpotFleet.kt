@@ -1246,7 +1246,7 @@ public open class CfnSpotFleet(
        * @param classicLoadBalancers One or more Classic Load Balancers. 
        */
       override fun classicLoadBalancers(classicLoadBalancers: List<Any>) {
-        cdkBuilder.classicLoadBalancers(classicLoadBalancers)
+        cdkBuilder.classicLoadBalancers(classicLoadBalancers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2644,7 +2644,7 @@ public open class CfnSpotFleet(
        * to launch.
        */
       override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses)
+        cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2684,7 +2684,7 @@ public open class CfnSpotFleet(
        * request.
        */
       override fun privateIpAddresses(privateIpAddresses: List<Any>) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses)
+        cdkBuilder.privateIpAddresses(privateIpAddresses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5351,7 +5351,7 @@ public open class CfnSpotFleet(
        * template.
        */
       override fun overrides(overrides: List<Any>) {
-        cdkBuilder.overrides(overrides)
+        cdkBuilder.overrides(overrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7488,7 +7488,7 @@ public open class CfnSpotFleet(
        * and its encryption status is used for the volume encryption status.
        */
       override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-        cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7662,7 +7662,7 @@ public open class CfnSpotFleet(
        * .
        */
       override fun networkInterfaces(networkInterfaces: List<Any>) {
-        cdkBuilder.networkInterfaces(networkInterfaces)
+        cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7722,7 +7722,7 @@ public open class CfnSpotFleet(
        * @param securityGroups The security groups.
        */
       override fun securityGroups(securityGroups: List<Any>) {
-        cdkBuilder.securityGroups(securityGroups)
+        cdkBuilder.securityGroups(securityGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7765,7 +7765,7 @@ public open class CfnSpotFleet(
        * @param tagSpecifications The tags to apply during creation.
        */
       override fun tagSpecifications(tagSpecifications: List<Any>) {
-        cdkBuilder.tagSpecifications(tagSpecifications)
+        cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9161,7 +9161,7 @@ public open class CfnSpotFleet(
        * If you specify `LaunchSpecifications` , you can't specify `LaunchTemplateConfigs` .
        */
       override fun launchSpecifications(launchSpecifications: List<Any>) {
-        cdkBuilder.launchSpecifications(launchSpecifications)
+        cdkBuilder.launchSpecifications(launchSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9184,7 +9184,7 @@ public open class CfnSpotFleet(
        * If you specify `LaunchTemplateConfigs` , you can't specify `LaunchSpecifications` .
        */
       override fun launchTemplateConfigs(launchTemplateConfigs: List<Any>) {
-        cdkBuilder.launchTemplateConfigs(launchTemplateConfigs)
+        cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9391,7 +9391,7 @@ public open class CfnSpotFleet(
        * .
        */
       override fun tagSpecifications(tagSpecifications: List<Any>) {
-        cdkBuilder.tagSpecifications(tagSpecifications)
+        cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10418,7 +10418,7 @@ public open class CfnSpotFleet(
        * @param targetGroups One or more target groups. 
        */
       override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
+        cdkBuilder.targetGroups(targetGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

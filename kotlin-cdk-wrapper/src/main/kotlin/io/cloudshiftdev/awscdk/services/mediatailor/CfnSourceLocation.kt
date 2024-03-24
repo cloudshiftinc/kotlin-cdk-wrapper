@@ -205,7 +205,7 @@ public open class CfnSourceLocation(
    * The segment delivery configurations for the source location.
    */
   public open fun segmentDeliveryConfigurations(`value`: List<Any>) {
-    unwrap(this).setSegmentDeliveryConfigurations(`value`)
+    unwrap(this).setSegmentDeliveryConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -515,7 +515,7 @@ public open class CfnSourceLocation(
      * location. 
      */
     override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: List<Any>) {
-      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations)
+      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

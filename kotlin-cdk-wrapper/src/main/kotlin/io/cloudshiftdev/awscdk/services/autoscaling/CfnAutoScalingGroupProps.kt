@@ -1481,7 +1481,7 @@ public interface CfnAutoScalingGroupProps {
      * group before instances are launched.
      */
     override fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: List<Any>) {
-      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList)
+      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1548,7 +1548,7 @@ public interface CfnAutoScalingGroupProps {
      * By default, these metrics are disabled.
      */
     override fun metricsCollection(metricsCollection: List<Any>) {
-      cdkBuilder.metricsCollection(metricsCollection)
+      cdkBuilder.metricsCollection(metricsCollection.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1688,7 +1688,7 @@ public interface CfnAutoScalingGroupProps {
      * specified events take place.
      */
     override fun notificationConfigurations(notificationConfigurations: List<Any>) {
-      cdkBuilder.notificationConfigurations(notificationConfigurations)
+      cdkBuilder.notificationConfigurations(notificationConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

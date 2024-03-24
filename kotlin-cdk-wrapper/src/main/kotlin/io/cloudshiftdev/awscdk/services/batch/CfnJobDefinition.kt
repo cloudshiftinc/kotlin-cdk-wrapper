@@ -2381,7 +2381,7 @@ public open class CfnJobDefinition(
        * convention is reserved for variables that AWS Batch sets.
        */
       override fun environment(environment: List<Any>) {
-        cdkBuilder.environment(environment)
+        cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2715,7 +2715,7 @@ public open class CfnJobDefinition(
        * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
        */
       override fun mountPoints(mountPoints: List<Any>) {
-        cdkBuilder.mountPoints(mountPoints)
+        cdkBuilder.mountPoints(mountPoints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2858,7 +2858,7 @@ public open class CfnJobDefinition(
        * The supported resources include `GPU` , `MEMORY` , and `VCPU` .
        */
       override fun resourceRequirements(resourceRequirements: List<Any>) {
-        cdkBuilder.resourceRequirements(resourceRequirements)
+        cdkBuilder.resourceRequirements(resourceRequirements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2910,7 +2910,7 @@ public open class CfnJobDefinition(
        * the *AWS Batch User Guide* .
        */
       override fun secrets(secrets: List<Any>) {
-        cdkBuilder.secrets(secrets)
+        cdkBuilder.secrets(secrets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2952,7 +2952,7 @@ public open class CfnJobDefinition(
        * be provided.
        */
       override fun ulimits(ulimits: List<Any>) {
-        cdkBuilder.ulimits(ulimits)
+        cdkBuilder.ulimits(ulimits.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3014,7 +3014,7 @@ public open class CfnJobDefinition(
        * @param volumes A list of data volumes used in a job.
        */
       override fun volumes(volumes: List<Any>) {
-        cdkBuilder.volumes(volumes)
+        cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3724,7 +3724,7 @@ public open class CfnJobDefinition(
        * @param taskProperties the value to be set. 
        */
       override fun taskProperties(taskProperties: List<Any>) {
-        cdkBuilder.taskProperties(taskProperties)
+        cdkBuilder.taskProperties(taskProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4056,7 +4056,7 @@ public open class CfnJobDefinition(
        * @param containers the value to be set.
        */
       override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
+        cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4177,7 +4177,7 @@ public open class CfnJobDefinition(
        * @param volumes the value to be set.
        */
       override fun volumes(volumes: List<Any>) {
-        cdkBuilder.volumes(volumes)
+        cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5195,7 +5195,7 @@ public open class CfnJobDefinition(
        * for variables that AWS Batch sets.
        */
       override fun env(env: List<Any>) {
-        cdkBuilder.env(env)
+        cdkBuilder.env(env.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5318,7 +5318,7 @@ public open class CfnJobDefinition(
        * the *Kubernetes documentation* .
        */
       override fun volumeMounts(volumeMounts: List<Any>) {
-        cdkBuilder.volumeMounts(volumeMounts)
+        cdkBuilder.volumeMounts(volumeMounts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7402,7 +7402,7 @@ public open class CfnJobDefinition(
        * provide it for these jobs.
        */
       override fun devices(devices: List<Any>) {
-        cdkBuilder.devices(devices)
+        cdkBuilder.devices(devices.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7544,7 +7544,7 @@ public open class CfnJobDefinition(
        * provide this parameter for this resource type.
        */
       override fun tmpfs(tmpfs: List<Any>) {
-        cdkBuilder.tmpfs(tmpfs)
+        cdkBuilder.tmpfs(tmpfs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8016,7 +8016,7 @@ public open class CfnJobDefinition(
        * the *AWS Batch User Guide* .
        */
       override fun secretOptions(secretOptions: List<Any>) {
-        cdkBuilder.secretOptions(secretOptions)
+        cdkBuilder.secretOptions(secretOptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8819,7 +8819,7 @@ public open class CfnJobDefinition(
        * with a multi-node parallel job. 
        */
       override fun nodeRangeProperties(nodeRangeProperties: List<Any>) {
-        cdkBuilder.nodeRangeProperties(nodeRangeProperties)
+        cdkBuilder.nodeRangeProperties(nodeRangeProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9661,7 +9661,7 @@ public open class CfnJobDefinition(
        * @param containers The properties of the container that's used on the Amazon EKS pod.
        */
       override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
+        cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9723,7 +9723,7 @@ public open class CfnJobDefinition(
        * @param initContainers the value to be set.
        */
       override fun initContainers(initContainers: List<Any>) {
-        cdkBuilder.initContainers(initContainers)
+        cdkBuilder.initContainers(initContainers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9802,7 +9802,7 @@ public open class CfnJobDefinition(
        * @param volumes Specifies the volumes for a job definition that uses Amazon EKS resources.
        */
       override fun volumes(volumes: List<Any>) {
-        cdkBuilder.volumes(volumes)
+        cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10677,7 +10677,7 @@ public open class CfnJobDefinition(
        * none of the listed conditions match, then the job is retried.
        */
       override fun evaluateOnExit(evaluateOnExit: List<Any>) {
-        cdkBuilder.evaluateOnExit(evaluateOnExit)
+        cdkBuilder.evaluateOnExit(evaluateOnExit.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11783,7 +11783,7 @@ public open class CfnJobDefinition(
        * @param dependsOn the value to be set.
        */
       override fun dependsOn(dependsOn: List<Any>) {
-        cdkBuilder.dependsOn(dependsOn)
+        cdkBuilder.dependsOn(dependsOn.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11802,7 +11802,7 @@ public open class CfnJobDefinition(
        * @param environment the value to be set.
        */
       override fun environment(environment: List<Any>) {
-        cdkBuilder.environment(environment)
+        cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11886,7 +11886,7 @@ public open class CfnJobDefinition(
        * @param mountPoints the value to be set.
        */
       override fun mountPoints(mountPoints: List<Any>) {
-        cdkBuilder.mountPoints(mountPoints)
+        cdkBuilder.mountPoints(mountPoints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11963,7 +11963,7 @@ public open class CfnJobDefinition(
        * @param resourceRequirements the value to be set.
        */
       override fun resourceRequirements(resourceRequirements: List<Any>) {
-        cdkBuilder.resourceRequirements(resourceRequirements)
+        cdkBuilder.resourceRequirements(resourceRequirements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11983,7 +11983,7 @@ public open class CfnJobDefinition(
        * @param secrets the value to be set.
        */
       override fun secrets(secrets: List<Any>) {
-        cdkBuilder.secrets(secrets)
+        cdkBuilder.secrets(secrets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12002,7 +12002,7 @@ public open class CfnJobDefinition(
        * @param ulimits the value to be set.
        */
       override fun ulimits(ulimits: List<Any>) {
-        cdkBuilder.ulimits(ulimits)
+        cdkBuilder.ulimits(ulimits.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

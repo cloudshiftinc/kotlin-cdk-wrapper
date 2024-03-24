@@ -302,7 +302,7 @@ public open class CfnTheme(
    * A valid grouping of resource permissions to apply to the new theme.
    */
   public open fun permissions(`value`: List<Any>) {
-    unwrap(this).setPermissions(`value`)
+    unwrap(this).setPermissions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -570,7 +570,7 @@ public open class CfnTheme(
      * @param permissions A valid grouping of resource permissions to apply to the new theme. 
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2214,7 +2214,7 @@ public open class CfnTheme(
        * @param errors Errors associated with the theme.
        */
       override fun errors(errors: List<Any>) {
-        cdkBuilder.errors(errors)
+        cdkBuilder.errors(errors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2658,7 +2658,7 @@ public open class CfnTheme(
        * @param fontFamilies Determines the list of font families.
        */
       override fun fontFamilies(fontFamilies: List<Any>) {
-        cdkBuilder.fontFamilies(fontFamilies)
+        cdkBuilder.fontFamilies(fontFamilies.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

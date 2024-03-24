@@ -1519,7 +1519,7 @@ public open class CfnDocumentClassifier(
        * This parameter is required if you set `DataFormat` to `AUGMENTED_MANIFEST` .
        */
       override fun augmentedManifests(augmentedManifests: List<Any>) {
-        cdkBuilder.augmentedManifests(augmentedManifests)
+        cdkBuilder.augmentedManifests(augmentedManifests.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

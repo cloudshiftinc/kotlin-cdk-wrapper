@@ -76,7 +76,7 @@ public open class CfnListenerCertificate(
    * The certificate.
    */
   public open fun certificates(`value`: List<Any>) {
-    unwrap(this).setCertificates(`value`)
+    unwrap(this).setCertificates(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -180,7 +180,7 @@ public open class CfnListenerCertificate(
      * @param certificates The certificate. 
      */
     override fun certificates(certificates: List<Any>) {
-      cdkBuilder.certificates(certificates)
+      cdkBuilder.certificates(certificates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

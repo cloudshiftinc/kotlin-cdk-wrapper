@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ecs
 
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -63,7 +64,8 @@ public open class LinuxParameters(
    * @param cap 
    */
   public open fun addCapabilities(vararg cap: Capability) {
-    unwrap(this).addCapabilities(*cap.map(Capability::unwrap).toTypedArray())
+    unwrap(this).addCapabilities(*cap.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.Capability}.toTypedArray())
   }
 
   /**
@@ -72,7 +74,8 @@ public open class LinuxParameters(
    * @param device 
    */
   public open fun addDevices(vararg device: Device) {
-    unwrap(this).addDevices(*device.map(Device::unwrap).toTypedArray())
+    unwrap(this).addDevices(*device.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.Device}.toTypedArray())
   }
 
   /**
@@ -93,7 +96,8 @@ public open class LinuxParameters(
    * @param tmpfs 
    */
   public open fun addTmpfs(vararg tmpfs: Tmpfs) {
-    unwrap(this).addTmpfs(*tmpfs.map(Tmpfs::unwrap).toTypedArray())
+    unwrap(this).addTmpfs(*tmpfs.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.Tmpfs}.toTypedArray())
   }
 
   /**
@@ -114,7 +118,8 @@ public open class LinuxParameters(
    * @param cap 
    */
   public open fun dropCapabilities(vararg cap: Capability) {
-    unwrap(this).dropCapabilities(*cap.map(Capability::unwrap).toTypedArray())
+    unwrap(this).dropCapabilities(*cap.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.Capability}.toTypedArray())
   }
 
   /**

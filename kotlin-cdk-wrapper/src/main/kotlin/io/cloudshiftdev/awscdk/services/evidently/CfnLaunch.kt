@@ -173,7 +173,7 @@ public open class CfnLaunch(
    * launch.
    */
   public open fun groups(`value`: List<Any>) {
-    unwrap(this).setGroups(`value`)
+    unwrap(this).setGroups(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -210,7 +210,7 @@ public open class CfnLaunch(
    * performance.
    */
   public open fun metricMonitors(`value`: List<Any>) {
-    unwrap(this).setMetricMonitors(`value`)
+    unwrap(this).setMetricMonitors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnLaunch(
    * variations during each step of the launch.
    */
   public open fun scheduledSplitsConfig(`value`: List<Any>) {
-    unwrap(this).setScheduledSplitsConfig(`value`)
+    unwrap(this).setScheduledSplitsConfig(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -595,7 +595,7 @@ public open class CfnLaunch(
      * used for the launch. 
      */
     override fun groups(groups: List<Any>) {
-      cdkBuilder.groups(groups)
+      cdkBuilder.groups(groups.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -635,7 +635,7 @@ public open class CfnLaunch(
      * monitor the launch performance. 
      */
     override fun metricMonitors(metricMonitors: List<Any>) {
-      cdkBuilder.metricMonitors(metricMonitors)
+      cdkBuilder.metricMonitors(metricMonitors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -709,7 +709,7 @@ public open class CfnLaunch(
      * percentages among the feature variations during each step of the launch. 
      */
     override fun scheduledSplitsConfig(scheduledSplitsConfig: List<Any>) {
-      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig)
+      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1605,7 +1605,7 @@ public open class CfnLaunch(
        * thousandths of a percent, so a weight of 50000 represents 50% of traffic.
        */
       override fun weights(weights: List<Any>) {
-        cdkBuilder.weights(weights)
+        cdkBuilder.weights(weights.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1823,7 +1823,7 @@ public open class CfnLaunch(
        * to each launch group during this step of the launch. 
        */
       override fun groupWeights(groupWeights: List<Any>) {
-        cdkBuilder.groupWeights(groupWeights)
+        cdkBuilder.groupWeights(groupWeights.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1860,7 +1860,7 @@ public open class CfnLaunch(
        * .
        */
       override fun segmentOverrides(segmentOverrides: List<Any>) {
-        cdkBuilder.segmentOverrides(segmentOverrides)
+        cdkBuilder.segmentOverrides(segmentOverrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

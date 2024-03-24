@@ -275,7 +275,7 @@ public interface CfnIntegrationProps {
      * @param objectTypeNames The object type mapping.
      */
     override fun objectTypeNames(objectTypeNames: List<Any>) {
-      cdkBuilder.objectTypeNames(objectTypeNames)
+      cdkBuilder.objectTypeNames(objectTypeNames.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -330,7 +330,7 @@ public open class CfnConfigurationSetEventDestination(
        * when you publish email sending events to Amazon CloudWatch.
        */
       override fun dimensionConfigurations(dimensionConfigurations: List<Any>) {
-        cdkBuilder.dimensionConfigurations(dimensionConfigurations)
+        cdkBuilder.dimensionConfigurations(dimensionConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

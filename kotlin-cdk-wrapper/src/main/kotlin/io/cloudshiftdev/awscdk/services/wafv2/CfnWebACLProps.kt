@@ -576,7 +576,7 @@ public interface CfnWebACLProps {
      * *AWS WAF Developer Guide* .
      */
     override fun customResponseBodies(customResponseBodies: Map<String, Any>) {
-      cdkBuilder.customResponseBodies(customResponseBodies)
+      cdkBuilder.customResponseBodies(customResponseBodies.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -634,7 +634,7 @@ public interface CfnWebACLProps {
      * requests, and parameters that govern how AWS WAF handles them.
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

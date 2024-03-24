@@ -251,7 +251,7 @@ public interface CfnAppBlockBuilderProps {
      * @param accessEndpoints The access endpoints of the app block builder.
      */
     override fun accessEndpoints(accessEndpoints: List<Any>) {
-      cdkBuilder.accessEndpoints(accessEndpoints)
+      cdkBuilder.accessEndpoints(accessEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

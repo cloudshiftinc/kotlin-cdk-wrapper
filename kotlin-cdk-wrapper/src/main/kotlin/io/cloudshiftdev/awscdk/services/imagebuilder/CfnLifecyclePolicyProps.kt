@@ -247,7 +247,7 @@ public interface CfnLifecyclePolicyProps {
      * @param policyDetails Configuration details for the lifecycle policy rules. 
      */
     override fun policyDetails(policyDetails: List<Any>) {
-      cdkBuilder.policyDetails(policyDetails)
+      cdkBuilder.policyDetails(policyDetails.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

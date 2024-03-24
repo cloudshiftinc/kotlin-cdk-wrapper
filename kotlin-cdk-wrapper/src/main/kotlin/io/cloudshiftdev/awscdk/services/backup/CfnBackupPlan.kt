@@ -618,7 +618,7 @@ public open class CfnBackupPlan(
        * @param advancedBackupSettings A list of backup options for each resource type.
        */
       override fun advancedBackupSettings(advancedBackupSettings: List<Any>) {
-        cdkBuilder.advancedBackupSettings(advancedBackupSettings)
+        cdkBuilder.advancedBackupSettings(advancedBackupSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -647,7 +647,7 @@ public open class CfnBackupPlan(
        * task that is used to back up a selection of resources. 
        */
       override fun backupPlanRule(backupPlanRule: List<Any>) {
-        cdkBuilder.backupPlanRule(backupPlanRule)
+        cdkBuilder.backupPlanRule(backupPlanRule.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -973,7 +973,7 @@ public open class CfnBackupPlan(
        * operation.
        */
       override fun copyActions(copyActions: List<Any>) {
-        cdkBuilder.copyActions(copyActions)
+        cdkBuilder.copyActions(copyActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -1082,7 +1082,7 @@ public interface CfnCacheClusterProps {
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs.
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

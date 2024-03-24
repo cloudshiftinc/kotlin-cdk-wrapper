@@ -707,7 +707,7 @@ public interface CfnStackSetProps {
      * @param parameters The input parameters for the stack set template.
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -742,7 +742,7 @@ public interface CfnStackSetProps {
      * accounts and Regions.
      */
     override fun stackInstancesGroup(stackInstancesGroup: List<Any>) {
-      cdkBuilder.stackInstancesGroup(stackInstancesGroup)
+      cdkBuilder.stackInstancesGroup(stackInstancesGroup.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

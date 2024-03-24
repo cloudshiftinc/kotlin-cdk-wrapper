@@ -1014,7 +1014,7 @@ public interface CfnTaskDefinitionProps {
      * in the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun containerDefinitions(containerDefinitions: List<Any>) {
-      cdkBuilder.containerDefinitions(containerDefinitions)
+      cdkBuilder.containerDefinitions(containerDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1124,7 +1124,7 @@ public interface CfnTaskDefinitionProps {
      * the task.
      */
     override fun inferenceAccelerators(inferenceAccelerators: List<Any>) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators)
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1286,7 +1286,7 @@ public interface CfnTaskDefinitionProps {
      * This parameter isn't supported for tasks run on AWS Fargate .
      */
     override fun placementConstraints(placementConstraints: List<Any>) {
-      cdkBuilder.placementConstraints(placementConstraints)
+      cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1475,7 +1475,7 @@ public interface CfnTaskDefinitionProps {
      * The `host` and `sourcePath` parameters aren't supported for tasks run on AWS Fargate .
      */
     override fun volumes(volumes: List<Any>) {
-      cdkBuilder.volumes(volumes)
+      cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

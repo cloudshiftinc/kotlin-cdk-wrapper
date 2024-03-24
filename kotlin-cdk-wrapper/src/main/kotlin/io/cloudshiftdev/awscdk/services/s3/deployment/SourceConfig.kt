@@ -86,7 +86,7 @@ public interface SourceConfig {
      * @param markers A set of markers to substitute in the source content.
      */
     override fun markers(markers: Map<String, Any>) {
-      cdkBuilder.markers(markers)
+      cdkBuilder.markers(markers.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

@@ -151,7 +151,7 @@ public interface CfnSchemaMappingProps {
      * name plus additional information that AWS Entity Resolution uses for matching.
      */
     override fun mappedInputFields(mappedInputFields: List<Any>) {
-      cdkBuilder.mappedInputFields(mappedInputFields)
+      cdkBuilder.mappedInputFields(mappedInputFields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

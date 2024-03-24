@@ -786,7 +786,7 @@ public open class CfnFunctionDefinition(
        * This property applies only for Lambda functions that run in a Greengrass container.
        */
       override fun resourceAccessPolicies(resourceAccessPolicies: List<Any>) {
-        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies)
+        cdkBuilder.resourceAccessPolicies(resourceAccessPolicies.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1777,7 +1777,7 @@ public open class CfnFunctionDefinition(
        * @param functions The functions in this version. 
        */
       override fun functions(functions: List<Any>) {
-        cdkBuilder.functions(functions)
+        cdkBuilder.functions(functions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

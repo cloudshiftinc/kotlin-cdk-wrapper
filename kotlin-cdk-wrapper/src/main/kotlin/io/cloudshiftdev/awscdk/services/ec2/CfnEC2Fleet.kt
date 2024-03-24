@@ -246,7 +246,7 @@ public open class CfnEC2Fleet(
    * The configuration for the EC2 Fleet.
    */
   public open fun launchTemplateConfigs(`value`: List<Any>) {
-    unwrap(this).setLaunchTemplateConfigs(`value`)
+    unwrap(this).setLaunchTemplateConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -353,7 +353,7 @@ public open class CfnEC2Fleet(
    * resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources) .
    */
   public open fun tagSpecifications(`value`: List<Any>) {
-    unwrap(this).setTagSpecifications(`value`)
+    unwrap(this).setTagSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -788,7 +788,7 @@ public open class CfnEC2Fleet(
      * @param launchTemplateConfigs The configuration for the EC2 Fleet. 
      */
     override fun launchTemplateConfigs(launchTemplateConfigs: List<Any>) {
-      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs)
+      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -936,7 +936,7 @@ public open class CfnEC2Fleet(
      * resources](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#tag-resources) . 
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2003,7 +2003,7 @@ public open class CfnEC2Fleet(
        * launch templates.
        */
       override fun overrides(overrides: List<Any>) {
-        cdkBuilder.overrides(overrides)
+        cdkBuilder.overrides(overrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

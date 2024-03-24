@@ -165,7 +165,7 @@ public open class CfnLoggingConfiguration(
    * The parts of the request that you want to keep out of the logs.
    */
   public open fun redactedFields(`value`: List<Any>) {
-    unwrap(this).setRedactedFields(`value`)
+    unwrap(this).setRedactedFields(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -392,7 +392,7 @@ public open class CfnLoggingConfiguration(
      * @param redactedFields The parts of the request that you want to keep out of the logs. 
      */
     override fun redactedFields(redactedFields: List<Any>) {
-      cdkBuilder.redactedFields(redactedFields)
+      cdkBuilder.redactedFields(redactedFields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1113,7 +1113,7 @@ public open class CfnLoggingConfiguration(
        * @param conditions Match conditions for the filter. 
        */
       override fun conditions(conditions: List<Any>) {
-        cdkBuilder.conditions(conditions)
+        cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1531,7 +1531,7 @@ public open class CfnLoggingConfiguration(
        * @param filters The filters that you want to apply to the logs. 
        */
       override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
+        cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

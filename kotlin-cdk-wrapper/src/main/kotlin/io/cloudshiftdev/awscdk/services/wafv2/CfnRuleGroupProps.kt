@@ -813,7 +813,7 @@ public interface CfnRuleGroupProps {
      * These labels are defined in the `RuleLabels` for a `Rule` .
      */
     override fun availableLabels(availableLabels: List<Any>) {
-      cdkBuilder.availableLabels(availableLabels)
+      cdkBuilder.availableLabels(availableLabels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -857,7 +857,7 @@ public interface CfnRuleGroupProps {
      * definition of a rule.
      */
     override fun consumedLabels(consumedLabels: List<Any>) {
-      cdkBuilder.consumedLabels(consumedLabels)
+      cdkBuilder.consumedLabels(consumedLabels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -904,7 +904,7 @@ public interface CfnRuleGroupProps {
      * *AWS WAF Developer Guide* .
      */
     override fun customResponseBodies(customResponseBodies: Map<String, Any>) {
-      cdkBuilder.customResponseBodies(customResponseBodies)
+      cdkBuilder.customResponseBodies(customResponseBodies.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -939,7 +939,7 @@ public interface CfnRuleGroupProps {
      * requests, and parameters that govern how AWS WAF handles them.
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

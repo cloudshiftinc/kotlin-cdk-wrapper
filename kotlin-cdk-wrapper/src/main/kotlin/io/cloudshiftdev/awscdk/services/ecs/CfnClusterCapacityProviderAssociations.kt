@@ -109,7 +109,7 @@ public open class CfnClusterCapacityProviderAssociations(
    * The default capacity provider strategy to associate with the cluster.
    */
   public open fun defaultCapacityProviderStrategy(`value`: List<Any>) {
-    unwrap(this).setDefaultCapacityProviderStrategy(`value`)
+    unwrap(this).setDefaultCapacityProviderStrategy(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnClusterCapacityProviderAssociations(
      * with the cluster. 
      */
     override fun defaultCapacityProviderStrategy(defaultCapacityProviderStrategy: List<Any>) {
-      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy)
+      cdkBuilder.defaultCapacityProviderStrategy(defaultCapacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

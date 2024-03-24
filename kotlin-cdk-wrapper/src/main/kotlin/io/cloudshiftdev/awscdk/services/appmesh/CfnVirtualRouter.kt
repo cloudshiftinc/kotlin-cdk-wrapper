@@ -736,7 +736,7 @@ public open class CfnVirtualRouter(
        * traffic from. 
        */
       override fun listeners(listeners: List<Any>) {
-        cdkBuilder.listeners(listeners)
+        cdkBuilder.listeners(listeners.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

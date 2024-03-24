@@ -165,7 +165,7 @@ public open class CfnLaunchTemplate(
    * The tags to apply to the launch template on creation.
    */
   public open fun tagSpecifications(`value`: List<Any>) {
-    unwrap(this).setTagSpecifications(`value`)
+    unwrap(this).setTagSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -358,7 +358,7 @@ public open class CfnLaunchTemplate(
      * @param tagSpecifications The tags to apply to the launch template on creation. 
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -6961,7 +6961,7 @@ public open class CfnLaunchTemplate(
        * @param blockDeviceMappings The block device mapping.
        */
       override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-        cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7144,7 +7144,7 @@ public open class CfnLaunchTemplate(
        * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
        */
       override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
-        cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
+        cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7193,7 +7193,7 @@ public open class CfnLaunchTemplate(
        * current customers and will be able to continue using the service.
        */
       override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
-        cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
+        cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7555,7 +7555,7 @@ public open class CfnLaunchTemplate(
        * @param licenseSpecifications The license configurations.
        */
       override fun licenseSpecifications(licenseSpecifications: List<Any>) {
-        cdkBuilder.licenseSpecifications(licenseSpecifications)
+        cdkBuilder.licenseSpecifications(licenseSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7655,7 +7655,7 @@ public open class CfnLaunchTemplate(
        * part of the network interface.
        */
       override fun networkInterfaces(networkInterfaces: List<Any>) {
-        cdkBuilder.networkInterfaces(networkInterfaces)
+        cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7792,7 +7792,7 @@ public open class CfnLaunchTemplate(
        * .
        */
       override fun tagSpecifications(tagSpecifications: List<Any>) {
-        cdkBuilder.tagSpecifications(tagSpecifications)
+        cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10335,7 +10335,7 @@ public open class CfnLaunchTemplate(
        * You cannot use this option if you use the `Ipv4PrefixCount` option.
        */
       override fun ipv4Prefixes(ipv4Prefixes: List<Any>) {
-        cdkBuilder.ipv4Prefixes(ipv4Prefixes)
+        cdkBuilder.ipv4Prefixes(ipv4Prefixes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10369,7 +10369,7 @@ public open class CfnLaunchTemplate(
        * You can't use this option if you're specifying a number of IPv6 addresses.
        */
       override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses)
+        cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10402,7 +10402,7 @@ public open class CfnLaunchTemplate(
        * You cannot use this option if you use the `Ipv6PrefixCount` option.
        */
       override fun ipv6Prefixes(ipv6Prefixes: List<Any>) {
-        cdkBuilder.ipv6Prefixes(ipv6Prefixes)
+        cdkBuilder.ipv6Prefixes(ipv6Prefixes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10468,7 +10468,7 @@ public open class CfnLaunchTemplate(
        * @param privateIpAddresses One or more private IPv4 addresses.
        */
       override fun privateIpAddresses(privateIpAddresses: List<Any>) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses)
+        cdkBuilder.privateIpAddresses(privateIpAddresses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

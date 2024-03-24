@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -84,7 +85,7 @@ public open class CfnHook(
      * @param properties The properties of the hook. 
      */
     override fun properties(properties: Map<String, Any>) {
-      cdkBuilder.properties(properties)
+      cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

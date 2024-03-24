@@ -132,7 +132,7 @@ public open class CfnRouteResponse(
    * The route response parameters.
    */
   public open fun responseParameters(`value`: Map<String, Any>) {
-    unwrap(this).setResponseParameters(`value`)
+    unwrap(this).setResponseParameters(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -279,7 +279,7 @@ public open class CfnRouteResponse(
      * @param responseParameters The route response parameters. 
      */
     override fun responseParameters(responseParameters: Map<String, Any>) {
-      cdkBuilder.responseParameters(responseParameters)
+      cdkBuilder.responseParameters(responseParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

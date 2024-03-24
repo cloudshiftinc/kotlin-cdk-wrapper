@@ -288,7 +288,7 @@ public open class CfnApplication(
    * The monitoring settings of the components.
    */
   public open fun componentMonitoringSettings(`value`: List<Any>) {
-    unwrap(this).setComponentMonitoringSettings(`value`)
+    unwrap(this).setComponentMonitoringSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnApplication(
    * Describes a custom component by grouping similar standalone instances to monitor.
    */
   public open fun customComponents(`value`: List<Any>) {
-    unwrap(this).setCustomComponents(`value`)
+    unwrap(this).setCustomComponents(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -380,7 +380,7 @@ public open class CfnApplication(
    * The log pattern sets.
    */
   public open fun logPatternSets(`value`: List<Any>) {
-    unwrap(this).setLogPatternSets(`value`)
+    unwrap(this).setLogPatternSets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -741,7 +741,7 @@ public open class CfnApplication(
      * @param componentMonitoringSettings The monitoring settings of the components. 
      */
     override fun componentMonitoringSettings(componentMonitoringSettings: List<Any>) {
-      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings)
+      cdkBuilder.componentMonitoringSettings(componentMonitoringSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -772,7 +772,7 @@ public open class CfnApplication(
      * to monitor. 
      */
     override fun customComponents(customComponents: List<Any>) {
-      cdkBuilder.customComponents(customComponents)
+      cdkBuilder.customComponents(customComponents.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -842,7 +842,7 @@ public open class CfnApplication(
      * @param logPatternSets The log pattern sets. 
      */
     override fun logPatternSets(logPatternSets: List<Any>) {
-      cdkBuilder.logPatternSets(logPatternSets)
+      cdkBuilder.logPatternSets(logPatternSets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1330,7 +1330,7 @@ public open class CfnApplication(
        * @param subComponentTypeConfigurations Sub-component configurations of the component.
        */
       override fun subComponentTypeConfigurations(subComponentTypeConfigurations: List<Any>) {
-        cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations)
+        cdkBuilder.subComponentTypeConfigurations(subComponentTypeConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2146,7 +2146,7 @@ public open class CfnApplication(
        * All component types can use `AlarmMetrics` .
        */
       override fun alarmMetrics(alarmMetrics: List<Any>) {
-        cdkBuilder.alarmMetrics(alarmMetrics)
+        cdkBuilder.alarmMetrics(alarmMetrics.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2169,7 +2169,7 @@ public open class CfnApplication(
        * All component types can use `Alarm` .
        */
       override fun alarms(alarms: List<Any>) {
-        cdkBuilder.alarms(alarms)
+        cdkBuilder.alarms(alarms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2262,7 +2262,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances can use `Logs` .
        */
       override fun logs(logs: List<Any>) {
-        cdkBuilder.logs(logs)
+        cdkBuilder.logs(logs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2284,7 +2284,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
        */
       override fun windowsEvents(windowsEvents: List<Any>) {
-        cdkBuilder.windowsEvents(windowsEvents)
+        cdkBuilder.windowsEvents(windowsEvents.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3223,7 +3223,7 @@ public open class CfnApplication(
        * `LogPatternSet` . 
        */
       override fun logPatterns(logPatterns: List<Any>) {
-        cdkBuilder.logPatterns(logPatterns)
+        cdkBuilder.logPatterns(logPatterns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3697,7 +3697,7 @@ public open class CfnApplication(
        * All component types can use `AlarmMetrics` .
        */
       override fun alarmMetrics(alarmMetrics: List<Any>) {
-        cdkBuilder.alarmMetrics(alarmMetrics)
+        cdkBuilder.alarmMetrics(alarmMetrics.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3720,7 +3720,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances can use `Logs` .
        */
       override fun logs(logs: List<Any>) {
-        cdkBuilder.logs(logs)
+        cdkBuilder.logs(logs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3742,7 +3742,7 @@ public open class CfnApplication(
        * Only Amazon EC2 instances running on Windows can use `WindowsEvents` .
        */
       override fun windowsEvents(windowsEvents: List<Any>) {
-        cdkBuilder.windowsEvents(windowsEvents)
+        cdkBuilder.windowsEvents(windowsEvents.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

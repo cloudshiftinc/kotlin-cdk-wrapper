@@ -268,7 +268,7 @@ public open class CfnEnvironment(
    * Defines the storage configuration for a runtime environment.
    */
   public open fun storageConfigurations(`value`: List<Any>) {
-    unwrap(this).setStorageConfigurations(`value`)
+    unwrap(this).setStorageConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -667,7 +667,7 @@ public open class CfnEnvironment(
      * @param storageConfigurations Defines the storage configuration for a runtime environment. 
      */
     override fun storageConfigurations(storageConfigurations: List<Any>) {
-      cdkBuilder.storageConfigurations(storageConfigurations)
+      cdkBuilder.storageConfigurations(storageConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -497,7 +497,7 @@ public open class CfnLayer(
    * A `VolumeConfigurations` object that describes the layer's Amazon EBS volumes.
    */
   public open fun volumeConfigurations(`value`: List<Any>) {
-    unwrap(this).setVolumeConfigurations(`value`)
+    unwrap(this).setVolumeConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1352,7 +1352,7 @@ public open class CfnLayer(
      * EBS volumes. 
      */
     override fun volumeConfigurations(volumeConfigurations: List<Any>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations)
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

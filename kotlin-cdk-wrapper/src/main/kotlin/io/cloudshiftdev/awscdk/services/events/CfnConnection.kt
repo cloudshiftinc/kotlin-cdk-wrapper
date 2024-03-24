@@ -1167,7 +1167,7 @@ public open class CfnConnection(
        * @param bodyParameters Contains additional body string parameters for the connection.
        */
       override fun bodyParameters(bodyParameters: List<Any>) {
-        cdkBuilder.bodyParameters(bodyParameters)
+        cdkBuilder.bodyParameters(bodyParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1187,7 +1187,7 @@ public open class CfnConnection(
        * @param headerParameters Contains additional header parameters for the connection.
        */
       override fun headerParameters(headerParameters: List<Any>) {
-        cdkBuilder.headerParameters(headerParameters)
+        cdkBuilder.headerParameters(headerParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1209,7 +1209,7 @@ public open class CfnConnection(
        * connection.
        */
       override fun queryStringParameters(queryStringParameters: List<Any>) {
-        cdkBuilder.queryStringParameters(queryStringParameters)
+        cdkBuilder.queryStringParameters(queryStringParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

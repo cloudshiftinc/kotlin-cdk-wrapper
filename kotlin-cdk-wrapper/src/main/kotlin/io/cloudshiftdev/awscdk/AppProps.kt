@@ -251,7 +251,7 @@ public interface AppProps {
      * Context can be read from any construct using `node.getContext(key)`.
      */
     override fun context(context: Map<String, Any>) {
-      cdkBuilder.context(context)
+      cdkBuilder.context(context.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -304,7 +304,7 @@ public interface AppProps {
      * Context can be read from any construct using `node.getContext(key)`.
      */
     override fun postCliContext(postCliContext: Map<String, Any>) {
-      cdkBuilder.postCliContext(postCliContext)
+      cdkBuilder.postCliContext(postCliContext.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

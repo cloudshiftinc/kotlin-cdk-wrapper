@@ -150,7 +150,7 @@ public open class CfnEventType(
    * The event type entity types.
    */
   public open fun entityTypes(`value`: List<Any>) {
-    unwrap(this).setEntityTypes(`value`)
+    unwrap(this).setEntityTypes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnEventType(
    * The event type event variables.
    */
   public open fun eventVariables(`value`: List<Any>) {
-    unwrap(this).setEventVariables(`value`)
+    unwrap(this).setEventVariables(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -207,7 +207,7 @@ public open class CfnEventType(
    * The event type labels.
    */
   public open fun labels(`value`: List<Any>) {
-    unwrap(this).setLabels(`value`)
+    unwrap(this).setLabels(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -404,7 +404,7 @@ public open class CfnEventType(
      * @param entityTypes The event type entity types. 
      */
     override fun entityTypes(entityTypes: List<Any>) {
-      cdkBuilder.entityTypes(entityTypes)
+      cdkBuilder.entityTypes(entityTypes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -432,7 +432,7 @@ public open class CfnEventType(
      * @param eventVariables The event type event variables. 
      */
     override fun eventVariables(eventVariables: List<Any>) {
-      cdkBuilder.eventVariables(eventVariables)
+      cdkBuilder.eventVariables(eventVariables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -461,7 +461,7 @@ public open class CfnEventType(
      * @param labels The event type labels. 
      */
     override fun labels(labels: List<Any>) {
-      cdkBuilder.labels(labels)
+      cdkBuilder.labels(labels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

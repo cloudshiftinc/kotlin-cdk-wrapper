@@ -394,7 +394,7 @@ public interface CfnAnalysisProps {
      * @param errors Errors associated with the analysis.
      */
     override fun errors(errors: List<Any>) {
-      cdkBuilder.errors(errors)
+      cdkBuilder.errors(errors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -458,7 +458,7 @@ public interface CfnAnalysisProps {
      * To specify no permissions, omit `Permissions` .
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -485,7 +485,7 @@ public interface CfnAnalysisProps {
      * sheet.
      */
     override fun sheets(sheets: List<Any>) {
-      cdkBuilder.sheets(sheets)
+      cdkBuilder.sheets(sheets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.stepfunctions.Credentials
 import io.cloudshiftdev.awscdk.services.stepfunctions.IActivity
 import io.cloudshiftdev.awscdk.services.stepfunctions.IntegrationPattern
@@ -390,7 +391,7 @@ public open class StepFunctionsInvokeActivity(
      * JSONPath expressions that select from the input. 
      */
     override fun parameters(parameters: Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -421,7 +422,7 @@ public open class StepFunctionsInvokeActivity(
      * effective result before ResultPath is applied. 
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

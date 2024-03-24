@@ -170,7 +170,7 @@ public open class CfnHealthCheck(
    * `AWS::Route53::HealthCheck` resource.
    */
   public open fun healthCheckTags(`value`: List<Any>) {
-    unwrap(this).setHealthCheckTags(`value`)
+    unwrap(this).setHealthCheckTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -333,7 +333,7 @@ public open class CfnHealthCheck(
      * associated with an `AWS::Route53::HealthCheck` resource. 
      */
     override fun healthCheckTags(healthCheckTags: List<Any>) {
-      cdkBuilder.healthCheckTags(healthCheckTags)
+      cdkBuilder.healthCheckTags(healthCheckTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -137,7 +137,7 @@ public interface CfnVodSourceProps {
      * @param httpPackageConfigurations The HTTP package configurations for the VOD source. 
      */
     override fun httpPackageConfigurations(httpPackageConfigurations: List<Any>) {
-      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations)
+      cdkBuilder.httpPackageConfigurations(httpPackageConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -1509,7 +1509,7 @@ public interface CfnInstanceProps {
      * .
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1683,7 +1683,7 @@ public interface CfnInstanceProps {
      * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
      */
     override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
-      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
+      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1732,7 +1732,7 @@ public interface CfnInstanceProps {
      * and will be able to continue using the service.
      */
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
-      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
+      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1921,7 +1921,7 @@ public interface CfnInstanceProps {
      * You cannot specify this option and the network interfaces option in the same request.
      */
     override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses)
+      cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2003,7 +2003,7 @@ public interface CfnInstanceProps {
      * @param licenseSpecifications The license configurations.
      */
     override fun licenseSpecifications(licenseSpecifications: List<Any>) {
-      cdkBuilder.licenseSpecifications(licenseSpecifications)
+      cdkBuilder.licenseSpecifications(licenseSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2061,7 +2061,7 @@ public interface CfnInstanceProps {
      * to declare a dependency on the VPC-gateway attachment.
      */
     override fun networkInterfaces(networkInterfaces: List<Any>) {
-      cdkBuilder.networkInterfaces(networkInterfaces)
+      cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2265,7 +2265,7 @@ public interface CfnInstanceProps {
      * You can associate only one document with an instance.
      */
     override fun ssmAssociations(ssmAssociations: List<Any>) {
-      cdkBuilder.ssmAssociations(ssmAssociations)
+      cdkBuilder.ssmAssociations(ssmAssociations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2343,7 +2343,7 @@ public interface CfnInstanceProps {
      * @param volumes The volumes to attach to the instance.
      */
     override fun volumes(volumes: List<Any>) {
-      cdkBuilder.volumes(volumes)
+      cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

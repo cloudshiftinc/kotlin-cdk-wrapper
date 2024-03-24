@@ -536,7 +536,7 @@ public interface CfnBranchProps {
      * @param environmentVariables The environment variables for the branch.
      */
     override fun environmentVariables(environmentVariables: List<Any>) {
-      cdkBuilder.environmentVariables(environmentVariables)
+      cdkBuilder.environmentVariables(environmentVariables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

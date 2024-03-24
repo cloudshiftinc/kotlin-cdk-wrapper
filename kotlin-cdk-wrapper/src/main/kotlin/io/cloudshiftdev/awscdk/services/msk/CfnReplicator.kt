@@ -154,7 +154,7 @@ public open class CfnReplicator(
    * Specifies a list of Kafka clusters which are targets of the replicator.
    */
   public open fun kafkaClusters(`value`: List<Any>) {
-    unwrap(this).setKafkaClusters(`value`)
+    unwrap(this).setKafkaClusters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -181,7 +181,7 @@ public open class CfnReplicator(
    * to target cluster replication flow.
    */
   public open fun replicationInfoList(`value`: List<Any>) {
-    unwrap(this).setReplicationInfoList(`value`)
+    unwrap(this).setReplicationInfoList(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -388,7 +388,7 @@ public open class CfnReplicator(
      * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
      */
     override fun kafkaClusters(kafkaClusters: List<Any>) {
-      cdkBuilder.kafkaClusters(kafkaClusters)
+      cdkBuilder.kafkaClusters(kafkaClusters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -421,7 +421,7 @@ public open class CfnReplicator(
      * targets a given source cluster to target cluster replication flow. 
      */
     override fun replicationInfoList(replicationInfoList: List<Any>) {
-      cdkBuilder.replicationInfoList(replicationInfoList)
+      cdkBuilder.replicationInfoList(replicationInfoList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

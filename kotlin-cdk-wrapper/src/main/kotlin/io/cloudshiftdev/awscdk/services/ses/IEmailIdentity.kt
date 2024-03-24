@@ -94,7 +94,8 @@ public interface IEmailIdentity : IResource {
      * @param actions the set of actions to allow. 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Permits an IAM principal the send email action.

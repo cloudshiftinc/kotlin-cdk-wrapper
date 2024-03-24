@@ -1841,7 +1841,7 @@ public open class CfnPartition(
        * @param columns A list of the `Columns` in the table.
        */
       override fun columns(columns: List<Any>) {
-        cdkBuilder.columns(columns)
+        cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1986,7 +1986,7 @@ public open class CfnPartition(
        * @param sortColumns A list specifying the sort order of each bucket in the table.
        */
       override fun sortColumns(sortColumns: List<Any>) {
-        cdkBuilder.sortColumns(sortColumns)
+        cdkBuilder.sortColumns(sortColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

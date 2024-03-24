@@ -99,7 +99,7 @@ public open class CfnAsset(
    * List of playback endpoints that are available for this asset.
    */
   public open fun egressEndpoints(`value`: List<Any>) {
-    unwrap(this).setEgressEndpoints(`value`)
+    unwrap(this).setEgressEndpoints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -316,7 +316,7 @@ public open class CfnAsset(
      * @param egressEndpoints List of playback endpoints that are available for this asset. 
      */
     override fun egressEndpoints(egressEndpoints: List<Any>) {
-      cdkBuilder.egressEndpoints(egressEndpoints)
+      cdkBuilder.egressEndpoints(egressEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

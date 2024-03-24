@@ -113,7 +113,7 @@ public open class CfnEnabledControl(
    * Array of `EnabledControlParameter` objects.
    */
   public open fun parameters(`value`: List<Any>) {
-    unwrap(this).setParameters(`value`)
+    unwrap(this).setParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -257,7 +257,7 @@ public open class CfnEnabledControl(
      * @param parameters Array of `EnabledControlParameter` objects. 
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

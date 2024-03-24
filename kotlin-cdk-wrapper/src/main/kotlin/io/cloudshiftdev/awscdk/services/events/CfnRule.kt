@@ -342,7 +342,7 @@ public open class CfnRule(
    * associated with the rule.
    */
   public open fun targets(`value`: List<Any>) {
-    unwrap(this).setTargets(`value`)
+    unwrap(this).setTargets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1081,7 +1081,7 @@ public open class CfnRule(
      * they are already associated with the rule. 
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2662,7 +2662,7 @@ public open class CfnRule(
        * `defaultCapacityProviderStrategy` for the cluster is used.
        */
       override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
-        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
+        cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2793,7 +2793,7 @@ public open class CfnRule(
        * and those specified at runtime).
        */
       override fun placementConstraints(placementConstraints: List<Any>) {
-        cdkBuilder.placementConstraints(placementConstraints)
+        cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2817,7 +2817,7 @@ public open class CfnRule(
        * You can specify a maximum of five strategy rules per task.
        */
       override fun placementStrategies(placementStrategies: List<Any>) {
-        cdkBuilder.placementStrategies(placementStrategies)
+        cdkBuilder.placementStrategies(placementStrategies.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2879,7 +2879,7 @@ public open class CfnRule(
        * in the Amazon ECS API Reference.
        */
       override fun tagList(tagList: List<Any>) {
-        cdkBuilder.tagList(tagList)
+        cdkBuilder.tagList(tagList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4672,7 +4672,7 @@ public open class CfnRule(
        * which specifies either an array of InstanceIds or a tag. 
        */
       override fun runCommandTargets(runCommandTargets: List<Any>) {
-        cdkBuilder.runCommandTargets(runCommandTargets)
+        cdkBuilder.runCommandTargets(runCommandTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5029,7 +5029,7 @@ public open class CfnRule(
        * Building Pipeline execution.
        */
       override fun pipelineParameterList(pipelineParameterList: List<Any>) {
-        cdkBuilder.pipelineParameterList(pipelineParameterList)
+        cdkBuilder.pipelineParameterList(pipelineParameterList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

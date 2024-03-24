@@ -629,7 +629,7 @@ public open class CfnSolution(
        * hyperparameter.
        */
       override fun categoricalHyperParameterRanges(categoricalHyperParameterRanges: List<Any>) {
-        cdkBuilder.categoricalHyperParameterRanges(categoricalHyperParameterRanges)
+        cdkBuilder.categoricalHyperParameterRanges(categoricalHyperParameterRanges.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -652,7 +652,7 @@ public open class CfnSolution(
        * hyperparameter.
        */
       override fun continuousHyperParameterRanges(continuousHyperParameterRanges: List<Any>) {
-        cdkBuilder.continuousHyperParameterRanges(continuousHyperParameterRanges)
+        cdkBuilder.continuousHyperParameterRanges(continuousHyperParameterRanges.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -675,7 +675,7 @@ public open class CfnSolution(
        * hyperparameter.
        */
       override fun integerHyperParameterRanges(integerHyperParameterRanges: List<Any>) {
-        cdkBuilder.integerHyperParameterRanges(integerHyperParameterRanges)
+        cdkBuilder.integerHyperParameterRanges(integerHyperParameterRanges.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -289,7 +289,7 @@ public open class CfnAutomationRule(
    * `Criteria` .
    */
   public open fun actions(`value`: List<Any>) {
-    unwrap(this).setActions(`value`)
+    unwrap(this).setActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -665,7 +665,7 @@ public open class CfnAutomationRule(
      * conditions specified in `Criteria` . 
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1314,7 +1314,7 @@ public open class CfnAutomationRule(
        * finding.
        */
       override fun relatedFindings(relatedFindings: List<Any>) {
-        cdkBuilder.relatedFindings(relatedFindings)
+        cdkBuilder.relatedFindings(relatedFindings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2916,7 +2916,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun awsAccountId(awsAccountId: List<Any>) {
-        cdkBuilder.awsAccountId(awsAccountId)
+        cdkBuilder.awsAccountId(awsAccountId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2943,7 +2943,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun companyName(companyName: List<Any>) {
-        cdkBuilder.companyName(companyName)
+        cdkBuilder.companyName(companyName.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2979,7 +2979,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun complianceAssociatedStandardsId(complianceAssociatedStandardsId: List<Any>) {
-        cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId)
+        cdkBuilder.complianceAssociatedStandardsId(complianceAssociatedStandardsId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3010,7 +3010,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun complianceSecurityControlId(complianceSecurityControlId: List<Any>) {
-        cdkBuilder.complianceSecurityControlId(complianceSecurityControlId)
+        cdkBuilder.complianceSecurityControlId(complianceSecurityControlId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3036,7 +3036,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun complianceStatus(complianceStatus: List<Any>) {
-        cdkBuilder.complianceStatus(complianceStatus)
+        cdkBuilder.complianceStatus(complianceStatus.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3076,7 +3076,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun confidence(confidence: List<Any>) {
-        cdkBuilder.confidence(confidence)
+        cdkBuilder.confidence(confidence.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3114,7 +3114,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun createdAt(createdAt: List<Any>) {
-        cdkBuilder.createdAt(createdAt)
+        cdkBuilder.createdAt(createdAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3154,7 +3154,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun criticality(criticality: List<Any>) {
-        cdkBuilder.criticality(criticality)
+        cdkBuilder.criticality(criticality.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3183,7 +3183,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun description(description: List<Any>) {
-        cdkBuilder.description(description)
+        cdkBuilder.description(description.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3215,7 +3215,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun firstObservedAt(firstObservedAt: List<Any>) {
-        cdkBuilder.firstObservedAt(firstObservedAt)
+        cdkBuilder.firstObservedAt(firstObservedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3245,7 +3245,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun generatorId(generatorId: List<Any>) {
-        cdkBuilder.generatorId(generatorId)
+        cdkBuilder.generatorId(generatorId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3268,7 +3268,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun id(id: List<Any>) {
-        cdkBuilder.id(id)
+        cdkBuilder.id(id.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3300,7 +3300,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun lastObservedAt(lastObservedAt: List<Any>) {
-        cdkBuilder.lastObservedAt(lastObservedAt)
+        cdkBuilder.lastObservedAt(lastObservedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3328,7 +3328,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun noteText(noteText: List<Any>) {
-        cdkBuilder.noteText(noteText)
+        cdkBuilder.noteText(noteText.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3358,7 +3358,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun noteUpdatedAt(noteUpdatedAt: List<Any>) {
-        cdkBuilder.noteUpdatedAt(noteUpdatedAt)
+        cdkBuilder.noteUpdatedAt(noteUpdatedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3385,7 +3385,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun noteUpdatedBy(noteUpdatedBy: List<Any>) {
-        cdkBuilder.noteUpdatedBy(noteUpdatedBy)
+        cdkBuilder.noteUpdatedBy(noteUpdatedBy.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3410,7 +3410,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun productArn(productArn: List<Any>) {
-        cdkBuilder.productArn(productArn)
+        cdkBuilder.productArn(productArn.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3435,7 +3435,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun productName(productName: List<Any>) {
-        cdkBuilder.productName(productName)
+        cdkBuilder.productName(productName.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3458,7 +3458,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun recordState(recordState: List<Any>) {
-        cdkBuilder.recordState(recordState)
+        cdkBuilder.recordState(recordState.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3480,7 +3480,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun relatedFindingsId(relatedFindingsId: List<Any>) {
-        cdkBuilder.relatedFindingsId(relatedFindingsId)
+        cdkBuilder.relatedFindingsId(relatedFindingsId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3503,7 +3503,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun relatedFindingsProductArn(relatedFindingsProductArn: List<Any>) {
-        cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn)
+        cdkBuilder.relatedFindingsProductArn(relatedFindingsProductArn.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3528,7 +3528,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourceDetailsOther(resourceDetailsOther: List<Any>) {
-        cdkBuilder.resourceDetailsOther(resourceDetailsOther)
+        cdkBuilder.resourceDetailsOther(resourceDetailsOther.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3562,7 +3562,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun resourceId(resourceId: List<Any>) {
-        cdkBuilder.resourceId(resourceId)
+        cdkBuilder.resourceId(resourceId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3595,7 +3595,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourcePartition(resourcePartition: List<Any>) {
-        cdkBuilder.resourcePartition(resourcePartition)
+        cdkBuilder.resourcePartition(resourcePartition.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3623,7 +3623,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourceRegion(resourceRegion: List<Any>) {
-        cdkBuilder.resourceRegion(resourceRegion)
+        cdkBuilder.resourceRegion(resourceRegion.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3649,7 +3649,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun resourceTags(resourceTags: List<Any>) {
-        cdkBuilder.resourceTags(resourceTags)
+        cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3673,7 +3673,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun resourceType(resourceType: List<Any>) {
-        cdkBuilder.resourceType(resourceType)
+        cdkBuilder.resourceType(resourceType.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3696,7 +3696,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun severityLabel(severityLabel: List<Any>) {
-        cdkBuilder.severityLabel(severityLabel)
+        cdkBuilder.severityLabel(severityLabel.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3721,7 +3721,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun sourceUrl(sourceUrl: List<Any>) {
-        cdkBuilder.sourceUrl(sourceUrl)
+        cdkBuilder.sourceUrl(sourceUrl.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3744,7 +3744,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 100 items.
        */
       override fun title(title: List<Any>) {
-        cdkBuilder.title(title)
+        cdkBuilder.title(title.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3776,7 +3776,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun type(type: List<Any>) {
-        cdkBuilder.type(type)
+        cdkBuilder.type(type.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3813,7 +3813,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun updatedAt(updatedAt: List<Any>) {
-        cdkBuilder.updatedAt(updatedAt)
+        cdkBuilder.updatedAt(updatedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3842,7 +3842,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun userDefinedFields(userDefinedFields: List<Any>) {
-        cdkBuilder.userDefinedFields(userDefinedFields)
+        cdkBuilder.userDefinedFields(userDefinedFields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3866,7 +3866,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun verificationState(verificationState: List<Any>) {
-        cdkBuilder.verificationState(verificationState)
+        cdkBuilder.verificationState(verificationState.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3891,7 +3891,7 @@ public open class CfnAutomationRule(
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
       override fun workflowStatus(workflowStatus: List<Any>) {
-        cdkBuilder.workflowStatus(workflowStatus)
+        cdkBuilder.workflowStatus(workflowStatus.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

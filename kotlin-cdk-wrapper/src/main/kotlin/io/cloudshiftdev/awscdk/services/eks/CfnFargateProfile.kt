@@ -171,7 +171,7 @@ public open class CfnFargateProfile(
    * The selectors to match for a `Pod` to use this Fargate profile.
    */
   public open fun selectors(`value`: List<Any>) {
-    unwrap(this).setSelectors(`value`)
+    unwrap(this).setSelectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -400,7 +400,7 @@ public open class CfnFargateProfile(
      * @param selectors The selectors to match for a `Pod` to use this Fargate profile. 
      */
     override fun selectors(selectors: List<Any>) {
-      cdkBuilder.selectors(selectors)
+      cdkBuilder.selectors(selectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -683,7 +683,7 @@ public open class CfnFargateProfile(
        * considered a match.
        */
       override fun labels(labels: List<Any>) {
-        cdkBuilder.labels(labels)
+        cdkBuilder.labels(labels.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

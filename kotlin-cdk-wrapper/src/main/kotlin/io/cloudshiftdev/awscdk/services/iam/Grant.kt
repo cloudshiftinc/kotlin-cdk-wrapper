@@ -3,7 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkObject
-import io.cloudshiftdev.constructs.IConstruct
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.constructs.IDependable
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -11,6 +11,8 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
+import io.cloudshiftdev.constructs.IConstruct as CloudshiftdevConstructsIConstruct
+import software.constructs.IConstruct as SoftwareConstructsIConstruct
 
 /**
  * Result of a grant() operation.
@@ -39,8 +41,9 @@ public open class Grant(
    *
    * @param constructs 
    */
-  public open fun applyBefore(vararg constructs: IConstruct) {
-    unwrap(this).applyBefore(*constructs.map(IConstruct::unwrap).toTypedArray())
+  public open fun applyBefore(vararg constructs: CloudshiftdevConstructsIConstruct) {
+    unwrap(this).applyBefore(*constructs.map{CdkObjectWrappers.unwrap(it) as
+        SoftwareConstructsIConstruct}.toTypedArray())
   }
 
   /**

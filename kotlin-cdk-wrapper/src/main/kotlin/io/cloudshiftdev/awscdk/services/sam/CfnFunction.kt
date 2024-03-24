@@ -415,7 +415,7 @@ public open class CfnFunction(
    *
    */
   public open fun events(`value`: Map<String, Any>) {
-    unwrap(this).setEvents(`value`)
+    unwrap(this).setEvents(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -434,7 +434,7 @@ public open class CfnFunction(
    *
    */
   public open fun fileSystemConfigs(`value`: List<Any>) {
-    unwrap(this).setFileSystemConfigs(`value`)
+    unwrap(this).setFileSystemConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -656,7 +656,7 @@ public open class CfnFunction(
    *
    */
   public open fun policies(`value`: List<Any>) {
-    unwrap(this).setPolicies(`value`)
+    unwrap(this).setPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1471,7 +1471,7 @@ public open class CfnFunction(
      * @param events 
      */
     override fun events(events: Map<String, Any>) {
-      cdkBuilder.events(events)
+      cdkBuilder.events(events.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1487,7 +1487,7 @@ public open class CfnFunction(
      * @param fileSystemConfigs 
      */
     override fun fileSystemConfigs(fileSystemConfigs: List<Any>) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs)
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1663,7 +1663,7 @@ public open class CfnFunction(
      * @param policies 
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2099,7 +2099,7 @@ public open class CfnFunction(
        * @param requestParameters the value to be set.
        */
       override fun requestParameters(requestParameters: List<Any>) {
-        cdkBuilder.requestParameters(requestParameters)
+        cdkBuilder.requestParameters(requestParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2619,7 +2619,7 @@ public open class CfnFunction(
        * @param customStatements the value to be set.
        */
       override fun customStatements(customStatements: List<Any>) {
-        cdkBuilder.customStatements(customStatements)
+        cdkBuilder.customStatements(customStatements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8060,7 +8060,7 @@ public open class CfnFunction(
        * @param rules the value to be set. 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

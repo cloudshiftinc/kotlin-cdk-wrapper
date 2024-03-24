@@ -164,7 +164,7 @@ public interface MetricConfig {
      * added to dashboard graphs.
      */
     override fun renderingProperties(renderingProperties: Map<String, Any>) {
-      cdkBuilder.renderingProperties(renderingProperties)
+      cdkBuilder.renderingProperties(renderingProperties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.MetricConfig = cdkBuilder.build()

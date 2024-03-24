@@ -166,7 +166,7 @@ public open class CfnJobTemplate(
    * Optional.
    */
   public open fun hopDestinations(`value`: List<Any>) {
-    unwrap(this).setHopDestinations(`value`)
+    unwrap(this).setHopDestinations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -592,7 +592,7 @@ public open class CfnJobTemplate(
      * @param hopDestinations Optional. 
      */
     override fun hopDestinations(hopDestinations: List<Any>) {
-      cdkBuilder.hopDestinations(hopDestinations)
+      cdkBuilder.hopDestinations(hopDestinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

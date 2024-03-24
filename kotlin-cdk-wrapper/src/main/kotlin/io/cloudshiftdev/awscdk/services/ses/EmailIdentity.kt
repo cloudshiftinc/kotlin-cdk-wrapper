@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ses
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import kotlin.Boolean
@@ -104,7 +105,8 @@ public open class EmailIdentity(
    * @param actions the set of actions to allow. 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Permits an IAM principal the send email action.

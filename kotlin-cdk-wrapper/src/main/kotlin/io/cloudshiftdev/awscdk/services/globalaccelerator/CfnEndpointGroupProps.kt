@@ -281,7 +281,7 @@ public interface CfnEndpointGroupProps {
      * @param endpointConfigurations The list of endpoint objects.
      */
     override fun endpointConfigurations(endpointConfigurations: List<Any>) {
-      cdkBuilder.endpointConfigurations(endpointConfigurations)
+      cdkBuilder.endpointConfigurations(endpointConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -361,7 +361,7 @@ public interface CfnEndpointGroupProps {
      * receive traffic on.
      */
     override fun portOverrides(portOverrides: List<Any>) {
-      cdkBuilder.portOverrides(portOverrides)
+      cdkBuilder.portOverrides(portOverrides.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

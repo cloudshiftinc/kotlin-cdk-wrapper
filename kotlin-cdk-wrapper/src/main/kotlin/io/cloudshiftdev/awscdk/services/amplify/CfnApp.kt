@@ -235,7 +235,7 @@ public open class CfnApp(
    * The custom rewrite and redirect rules for an Amplify app.
    */
   public open fun customRules(`value`: List<Any>) {
-    unwrap(this).setCustomRules(`value`)
+    unwrap(this).setCustomRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnApp(
    * The environment variables for the Amplify app.
    */
   public open fun environmentVariables(`value`: List<Any>) {
-    unwrap(this).setEnvironmentVariables(`value`)
+    unwrap(this).setEnvironmentVariables(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -811,7 +811,7 @@ public open class CfnApp(
      * @param customRules The custom rewrite and redirect rules for an Amplify app. 
      */
     override fun customRules(customRules: List<Any>) {
-      cdkBuilder.customRules(customRules)
+      cdkBuilder.customRules(customRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -883,7 +883,7 @@ public open class CfnApp(
      * @param environmentVariables The environment variables for the Amplify app. 
      */
     override fun environmentVariables(environmentVariables: List<Any>) {
-      cdkBuilder.environmentVariables(environmentVariables)
+      cdkBuilder.environmentVariables(environmentVariables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1462,7 +1462,7 @@ public open class CfnApp(
        * @param environmentVariables The environment variables for the autocreated branch.
        */
       override fun environmentVariables(environmentVariables: List<Any>) {
-        cdkBuilder.environmentVariables(environmentVariables)
+        cdkBuilder.environmentVariables(environmentVariables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

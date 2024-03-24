@@ -205,7 +205,7 @@ public open class CfnUser(
    * Adds or updates an inline policy document that is embedded in the specified IAM user.
    */
   public open fun policies(`value`: List<Any>) {
-    unwrap(this).setPolicies(`value`)
+    unwrap(this).setPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -754,7 +754,7 @@ public open class CfnUser(
      * IAM user. 
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
