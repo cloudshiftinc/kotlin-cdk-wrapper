@@ -176,7 +176,7 @@ public open class CfnStateMachine(
    *
    */
   public open fun events(`value`: Map<String, Any>) {
-    unwrap(this).setEvents(`value`)
+    unwrap(this).setEvents(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -277,7 +277,7 @@ public open class CfnStateMachine(
    *
    */
   public open fun policies(`value`: List<Any>) {
-    unwrap(this).setPolicies(`value`)
+    unwrap(this).setPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -600,7 +600,7 @@ public open class CfnStateMachine(
      * @param events 
      */
     override fun events(events: Map<String, Any>) {
-      cdkBuilder.events(events)
+      cdkBuilder.events(events.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -682,7 +682,7 @@ public open class CfnStateMachine(
      * @param policies 
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1835,7 +1835,7 @@ public open class CfnStateMachine(
        * @param destinations the value to be set. 
        */
       override fun destinations(destinations: List<Any>) {
-        cdkBuilder.destinations(destinations)
+        cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

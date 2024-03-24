@@ -498,7 +498,8 @@ public abstract class BaseService(
    * @param targets 
    */
   public open fun registerLoadBalancerTargets(vararg targets: EcsTarget) {
-    unwrap(this).registerLoadBalancerTargets(*targets.map(EcsTarget::unwrap).toTypedArray())
+    unwrap(this).registerLoadBalancerTargets(*targets.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ecs.EcsTarget}.toTypedArray())
   }
 
   /**

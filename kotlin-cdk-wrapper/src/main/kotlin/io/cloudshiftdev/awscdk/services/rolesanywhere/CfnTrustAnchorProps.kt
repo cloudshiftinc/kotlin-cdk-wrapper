@@ -191,7 +191,7 @@ public interface CfnTrustAnchorProps {
      * anchor.
      */
     override fun notificationSettings(notificationSettings: List<Any>) {
-      cdkBuilder.notificationSettings(notificationSettings)
+      cdkBuilder.notificationSettings(notificationSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

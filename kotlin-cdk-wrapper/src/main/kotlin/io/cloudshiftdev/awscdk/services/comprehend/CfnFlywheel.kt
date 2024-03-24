@@ -985,7 +985,7 @@ public open class CfnFlywheel(
        * @param entityTypes Up to 25 entity types that the model is trained to recognize.
        */
       override fun entityTypes(entityTypes: List<Any>) {
-        cdkBuilder.entityTypes(entityTypes)
+        cdkBuilder.entityTypes(entityTypes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

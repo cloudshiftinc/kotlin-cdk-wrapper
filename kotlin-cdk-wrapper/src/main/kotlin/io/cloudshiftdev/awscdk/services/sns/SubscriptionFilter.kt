@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.sns
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Unit
 import kotlin.collections.List
@@ -47,7 +48,7 @@ public open class SubscriptionFilter(
   )
 
   public constructor(conditions: List<Any>) :
-      this(software.amazon.awscdk.services.sns.SubscriptionFilter(conditions)
+      this(software.amazon.awscdk.services.sns.SubscriptionFilter(conditions.map{CdkObjectWrappers.unwrap(it)})
   )
 
   public constructor(vararg conditions: Any) : this(conditions.toList()

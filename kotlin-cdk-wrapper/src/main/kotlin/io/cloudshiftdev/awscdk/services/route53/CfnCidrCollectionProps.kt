@@ -88,7 +88,7 @@ public interface CfnCidrCollectionProps {
      * @param locations A complex type that contains information about the list of CIDR locations.
      */
     override fun locations(locations: List<Any>) {
-      cdkBuilder.locations(locations)
+      cdkBuilder.locations(locations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

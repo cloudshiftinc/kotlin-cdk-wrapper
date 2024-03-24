@@ -3093,7 +3093,7 @@ public open class CfnMonitoringSchedule(
        * Currently we support monitoring an Amazon SageMaker Endpoint.
        */
       override fun monitoringInputs(monitoringInputs: List<Any>) {
-        cdkBuilder.monitoringInputs(monitoringInputs)
+        cdkBuilder.monitoringInputs(monitoringInputs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3412,7 +3412,7 @@ public open class CfnMonitoringSchedule(
        * This is where the output of the periodic monitoring jobs is uploaded.
        */
       override fun monitoringOutputs(monitoringOutputs: List<Any>) {
-        cdkBuilder.monitoringOutputs(monitoringOutputs)
+        cdkBuilder.monitoringOutputs(monitoringOutputs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -381,7 +381,7 @@ public interface CfnImageProps {
      * @param workflows Contains an array of workflow configuration objects.
      */
     override fun workflows(workflows: List<Any>) {
-      cdkBuilder.workflows(workflows)
+      cdkBuilder.workflows(workflows.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

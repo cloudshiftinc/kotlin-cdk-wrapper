@@ -108,7 +108,7 @@ public open class CfnConnectorDefinitionVersion(
    * The connectors in this version.
    */
   public open fun connectors(`value`: List<Any>) {
-    unwrap(this).setConnectors(`value`)
+    unwrap(this).setConnectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnConnectorDefinitionVersion(
      * @param connectors The connectors in this version. 
      */
     override fun connectors(connectors: List<Any>) {
-      cdkBuilder.connectors(connectors)
+      cdkBuilder.connectors(connectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

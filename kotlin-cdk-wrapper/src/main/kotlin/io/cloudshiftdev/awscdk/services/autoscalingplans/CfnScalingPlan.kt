@@ -195,7 +195,7 @@ public open class CfnScalingPlan(
    * The scaling instructions.
    */
   public open fun scalingInstructions(`value`: List<Any>) {
-    unwrap(this).setScalingInstructions(`value`)
+    unwrap(this).setScalingInstructions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -333,7 +333,7 @@ public open class CfnScalingPlan(
      * @param scalingInstructions The scaling instructions. 
      */
     override fun scalingInstructions(scalingInstructions: List<Any>) {
-      cdkBuilder.scalingInstructions(scalingInstructions)
+      cdkBuilder.scalingInstructions(scalingInstructions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -530,7 +530,7 @@ public open class CfnScalingPlan(
        * You must specify either a `CloudFormationStackARN` or `TagFilters` .
        */
       override fun tagFilters(tagFilters: List<Any>) {
-        cdkBuilder.tagFilters(tagFilters)
+        cdkBuilder.tagFilters(tagFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -768,7 +768,7 @@ public open class CfnScalingPlan(
        * dimensions in your customized load metric specification.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1044,7 +1044,7 @@ public open class CfnScalingPlan(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2462,7 +2462,7 @@ public open class CfnScalingPlan(
        * metric.
        */
       override fun targetTrackingConfigurations(targetTrackingConfigurations: List<Any>) {
-        cdkBuilder.targetTrackingConfigurations(targetTrackingConfigurations)
+        cdkBuilder.targetTrackingConfigurations(targetTrackingConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -144,7 +144,7 @@ public interface CfnUserPoolResourceServerProps {
      * Each scope is a map with keys `ScopeName` and `ScopeDescription` .
      */
     override fun scopes(scopes: List<Any>) {
-      cdkBuilder.scopes(scopes)
+      cdkBuilder.scopes(scopes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

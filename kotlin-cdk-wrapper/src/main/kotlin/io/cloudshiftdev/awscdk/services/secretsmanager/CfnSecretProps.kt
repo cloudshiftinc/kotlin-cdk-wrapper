@@ -467,7 +467,7 @@ public interface CfnSecretProps {
      * replica secret.
      */
     override fun replicaRegions(replicaRegions: List<Any>) {
-      cdkBuilder.replicaRegions(replicaRegions)
+      cdkBuilder.replicaRegions(replicaRegions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

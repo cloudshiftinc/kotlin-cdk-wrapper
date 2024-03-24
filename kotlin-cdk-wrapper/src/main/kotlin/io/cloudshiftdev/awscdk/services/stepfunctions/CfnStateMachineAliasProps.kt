@@ -535,7 +535,7 @@ public interface CfnStateMachineAliasProps {
      * define only one of these properties.
      */
     override fun routingConfiguration(routingConfiguration: List<Any>) {
-      cdkBuilder.routingConfiguration(routingConfiguration)
+      cdkBuilder.routingConfiguration(routingConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

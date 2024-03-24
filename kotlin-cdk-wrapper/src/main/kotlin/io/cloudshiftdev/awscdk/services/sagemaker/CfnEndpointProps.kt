@@ -362,7 +362,7 @@ public interface CfnEndpointProps {
      * when creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` .
      */
     override fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: List<Any>) {
-      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties)
+      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

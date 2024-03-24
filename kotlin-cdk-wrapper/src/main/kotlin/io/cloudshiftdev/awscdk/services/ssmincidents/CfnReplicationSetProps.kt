@@ -142,7 +142,7 @@ public interface CfnReplicationSetProps {
      * @param regions Specifies the Regions of the replication set. 
      */
     override fun regions(regions: List<Any>) {
-      cdkBuilder.regions(regions)
+      cdkBuilder.regions(regions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -97,7 +97,7 @@ public open class CfnHoursOfOperation(
    * Configuration information for the hours of operation.
    */
   public open fun config(`value`: List<Any>) {
-    unwrap(this).setConfig(`value`)
+    unwrap(this).setConfig(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -291,7 +291,7 @@ public open class CfnHoursOfOperation(
      * @param config Configuration information for the hours of operation. 
      */
     override fun config(config: List<Any>) {
-      cdkBuilder.config(config)
+      cdkBuilder.config(config.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

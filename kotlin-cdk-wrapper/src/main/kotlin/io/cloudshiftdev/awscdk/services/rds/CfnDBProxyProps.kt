@@ -289,7 +289,7 @@ public interface CfnDBProxyProps {
      * @param auth The authorization mechanism that the proxy uses. 
      */
     override fun auth(auth: List<Any>) {
-      cdkBuilder.auth(auth)
+      cdkBuilder.auth(auth.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
@@ -93,7 +94,7 @@ public open class Instance(
    * @param commands 
    */
   public open fun addUserData(vararg commands: String) {
-    unwrap(this).addUserData(*commands)
+    unwrap(this).addUserData(*commands.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
 
   /**

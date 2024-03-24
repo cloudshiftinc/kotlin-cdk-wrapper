@@ -198,7 +198,7 @@ public interface CfnFunctionDefinitionVersionProps {
      * @param functions The functions in this version. 
      */
     override fun functions(functions: List<Any>) {
-      cdkBuilder.functions(functions)
+      cdkBuilder.functions(functions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

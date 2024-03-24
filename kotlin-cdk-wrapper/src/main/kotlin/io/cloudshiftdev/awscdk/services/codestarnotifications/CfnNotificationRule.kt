@@ -224,7 +224,7 @@ public open class CfnNotificationRule(
    * associate with the notification rule.
    */
   public open fun targets(`value`: List<Any>) {
-    unwrap(this).setTargets(`value`)
+    unwrap(this).setTargets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -535,7 +535,7 @@ public open class CfnNotificationRule(
      * clients to associate with the notification rule. 
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

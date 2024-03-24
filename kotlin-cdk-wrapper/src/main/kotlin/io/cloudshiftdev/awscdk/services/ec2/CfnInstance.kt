@@ -279,7 +279,7 @@ public open class CfnInstance(
    * launch.
    */
   public open fun blockDeviceMappings(`value`: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(`value`)
+    unwrap(this).setBlockDeviceMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -400,7 +400,7 @@ public open class CfnInstance(
    * Deprecated.
    */
   public open fun elasticGpuSpecifications(`value`: List<Any>) {
-    unwrap(this).setElasticGpuSpecifications(`value`)
+    unwrap(this).setElasticGpuSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -426,7 +426,7 @@ public open class CfnInstance(
    * An elastic inference accelerator to associate with the instance.
    */
   public open fun elasticInferenceAccelerators(`value`: List<Any>) {
-    unwrap(this).setElasticInferenceAccelerators(`value`)
+    unwrap(this).setElasticInferenceAccelerators(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -614,7 +614,7 @@ public open class CfnInstance(
    * interface.
    */
   public open fun ipv6Addresses(`value`: List<Any>) {
-    unwrap(this).setIpv6Addresses(`value`)
+    unwrap(this).setIpv6Addresses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -698,7 +698,7 @@ public open class CfnInstance(
    * The license configurations.
    */
   public open fun licenseSpecifications(`value`: List<Any>) {
-    unwrap(this).setLicenseSpecifications(`value`)
+    unwrap(this).setLicenseSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -742,7 +742,7 @@ public open class CfnInstance(
    * The network interfaces to associate with the instance.
    */
   public open fun networkInterfaces(`value`: List<Any>) {
-    unwrap(this).setNetworkInterfaces(`value`)
+    unwrap(this).setNetworkInterfaces(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -940,7 +940,7 @@ public open class CfnInstance(
    * in the *AWS Systems Manager User Guide* .
    */
   public open fun ssmAssociations(`value`: List<Any>) {
-    unwrap(this).setSsmAssociations(`value`)
+    unwrap(this).setSsmAssociations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1029,7 +1029,7 @@ public open class CfnInstance(
    * The volumes to attach to the instance.
    */
   public open fun volumes(`value`: List<Any>) {
-    unwrap(this).setVolumes(`value`)
+    unwrap(this).setVolumes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -2265,7 +2265,7 @@ public open class CfnInstance(
      * attach to the instance at launch. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2497,7 +2497,7 @@ public open class CfnInstance(
      * @param elasticGpuSpecifications Deprecated. 
      */
     override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
-      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications)
+      cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2561,7 +2561,7 @@ public open class CfnInstance(
      * instance. 
      */
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
-      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators)
+      cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2817,7 +2817,7 @@ public open class CfnInstance(
      * primary network interface. 
      */
     override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-      cdkBuilder.ipv6Addresses(ipv6Addresses)
+      cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2936,7 +2936,7 @@ public open class CfnInstance(
      * @param licenseSpecifications The license configurations. 
      */
     override fun licenseSpecifications(licenseSpecifications: List<Any>) {
-      cdkBuilder.licenseSpecifications(licenseSpecifications)
+      cdkBuilder.licenseSpecifications(licenseSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -3015,7 +3015,7 @@ public open class CfnInstance(
      * @param networkInterfaces The network interfaces to associate with the instance. 
      */
     override fun networkInterfaces(networkInterfaces: List<Any>) {
-      cdkBuilder.networkInterfaces(networkInterfaces)
+      cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -3304,7 +3304,7 @@ public open class CfnInstance(
      * in the *AWS Systems Manager User Guide* . 
      */
     override fun ssmAssociations(ssmAssociations: List<Any>) {
-      cdkBuilder.ssmAssociations(ssmAssociations)
+      cdkBuilder.ssmAssociations(ssmAssociations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -3419,7 +3419,7 @@ public open class CfnInstance(
      * @param volumes The volumes to attach to the instance. 
      */
     override fun volumes(volumes: List<Any>) {
-      cdkBuilder.volumes(volumes)
+      cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -6247,7 +6247,7 @@ public open class CfnInstance(
        * to launch.
        */
       override fun ipv6Addresses(ipv6Addresses: List<Any>) {
-        cdkBuilder.ipv6Addresses(ipv6Addresses)
+        cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6290,7 +6290,7 @@ public open class CfnInstance(
        * Only one private IPv4 address can be designated as primary.
        */
       override fun privateIpAddresses(privateIpAddresses: List<Any>) {
-        cdkBuilder.privateIpAddresses(privateIpAddresses)
+        cdkBuilder.privateIpAddresses(privateIpAddresses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6993,7 +6993,7 @@ public open class CfnInstance(
        * document.
        */
       override fun associationParameters(associationParameters: List<Any>) {
-        cdkBuilder.associationParameters(associationParameters)
+        cdkBuilder.associationParameters(associationParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

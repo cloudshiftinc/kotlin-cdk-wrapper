@@ -221,7 +221,7 @@ public open class CfnFirewall(
    * The public subnets that Network Firewall is using for the firewall.
    */
   public open fun subnetMappings(`value`: List<Any>) {
-    unwrap(this).setSubnetMappings(`value`)
+    unwrap(this).setSubnetMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -594,7 +594,7 @@ public open class CfnFirewall(
      * @param subnetMappings The public subnets that Network Firewall is using for the firewall. 
      */
     override fun subnetMappings(subnetMappings: List<Any>) {
-      cdkBuilder.subnetMappings(subnetMappings)
+      cdkBuilder.subnetMappings(subnetMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

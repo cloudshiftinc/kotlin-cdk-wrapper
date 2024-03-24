@@ -1041,7 +1041,7 @@ public interface CfnFleetProps {
      * and UDP ranges.
      */
     override fun ec2InboundPermissions(ec2InboundPermissions: List<Any>) {
-      cdkBuilder.ec2InboundPermissions(ec2InboundPermissions)
+      cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1130,7 +1130,7 @@ public interface CfnFleetProps {
      * To use this parameter, Amazon GameLift requires you to use your home location in the request.
      */
     override fun locations(locations: List<Any>) {
-      cdkBuilder.locations(locations)
+      cdkBuilder.locations(locations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1336,7 +1336,7 @@ public interface CfnFleetProps {
      * Scaling policies are uniquely identified by the combination of name and fleet ID.
      */
     override fun scalingPolicies(scalingPolicies: List<Any>) {
-      cdkBuilder.scalingPolicies(scalingPolicies)
+      cdkBuilder.scalingPolicies(scalingPolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

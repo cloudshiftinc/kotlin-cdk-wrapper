@@ -170,7 +170,7 @@ public open class CfnCapability(
    * with this capability.
    */
   public open fun instructionsDocuments(`value`: List<Any>) {
-    unwrap(this).setInstructionsDocuments(`value`)
+    unwrap(this).setInstructionsDocuments(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -399,7 +399,7 @@ public open class CfnCapability(
      * EDI document that can be used with this capability. 
      */
     override fun instructionsDocuments(instructionsDocuments: List<Any>) {
-      cdkBuilder.instructionsDocuments(instructionsDocuments)
+      cdkBuilder.instructionsDocuments(instructionsDocuments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

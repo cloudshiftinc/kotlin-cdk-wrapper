@@ -177,7 +177,7 @@ public open class CfnInstanceFleetConfig(
    * fulfill On-Demand and Spot target capacities.
    */
   public open fun instanceTypeConfigs(`value`: List<Any>) {
-    unwrap(this).setInstanceTypeConfigs(`value`)
+    unwrap(this).setInstanceTypeConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -471,7 +471,7 @@ public open class CfnInstanceFleetConfig(
      * attempts to provision to fulfill On-Demand and Spot target capacities. 
      */
     override fun instanceTypeConfigs(instanceTypeConfigs: List<Any>) {
-      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs)
+      cdkBuilder.instanceTypeConfigs(instanceTypeConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -753,7 +753,7 @@ public open class CfnInstanceFleetConfig(
        * object.
        */
       override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
+        cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1076,7 +1076,7 @@ public open class CfnInstanceFleetConfig(
        * cluster instance.
        */
       override fun ebsBlockDeviceConfigs(ebsBlockDeviceConfigs: List<Any>) {
-        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs)
+        cdkBuilder.ebsBlockDeviceConfigs(ebsBlockDeviceConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1645,7 +1645,7 @@ public open class CfnInstanceFleetConfig(
        * Applications](https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-configure-apps.html) .
        */
       override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
+        cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

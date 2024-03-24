@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.triggers
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.lambda.Function
 import kotlin.Boolean
 import kotlin.String
@@ -59,7 +60,8 @@ public open class Trigger(
    * @param scopes 
    */
   public override fun executeAfter(vararg scopes: CloudshiftdevConstructsConstruct) {
-    unwrap(this).executeAfter(*scopes.map(CloudshiftdevConstructsConstruct::unwrap).toTypedArray())
+    unwrap(this).executeAfter(*scopes.map{CdkObjectWrappers.unwrap(it) as
+        SoftwareConstructsConstruct}.toTypedArray())
   }
 
   /**
@@ -71,7 +73,8 @@ public open class Trigger(
    * @param scopes 
    */
   public override fun executeBefore(vararg scopes: CloudshiftdevConstructsConstruct) {
-    unwrap(this).executeBefore(*scopes.map(CloudshiftdevConstructsConstruct::unwrap).toTypedArray())
+    unwrap(this).executeBefore(*scopes.map{CdkObjectWrappers.unwrap(it) as
+        SoftwareConstructsConstruct}.toTypedArray())
   }
 
   /**

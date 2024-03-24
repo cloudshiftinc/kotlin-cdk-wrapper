@@ -1432,7 +1432,7 @@ public open class CfnFilter(
        * @param awsAccountId Details of the AWS account IDs used to filter findings.
        */
       override fun awsAccountId(awsAccountId: List<Any>) {
-        cdkBuilder.awsAccountId(awsAccountId)
+        cdkBuilder.awsAccountId(awsAccountId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1452,7 +1452,7 @@ public open class CfnFilter(
        * @param componentId Details of the component IDs used to filter findings.
        */
       override fun componentId(componentId: List<Any>) {
-        cdkBuilder.componentId(componentId)
+        cdkBuilder.componentId(componentId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1471,7 +1471,7 @@ public open class CfnFilter(
        * @param componentType Details of the component types used to filter findings.
        */
       override fun componentType(componentType: List<Any>) {
-        cdkBuilder.componentType(componentType)
+        cdkBuilder.componentType(componentType.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1493,7 +1493,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun ec2InstanceImageId(ec2InstanceImageId: List<Any>) {
-        cdkBuilder.ec2InstanceImageId(ec2InstanceImageId)
+        cdkBuilder.ec2InstanceImageId(ec2InstanceImageId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1516,7 +1516,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun ec2InstanceSubnetId(ec2InstanceSubnetId: List<Any>) {
-        cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId)
+        cdkBuilder.ec2InstanceSubnetId(ec2InstanceSubnetId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1537,7 +1537,7 @@ public open class CfnFilter(
        * @param ec2InstanceVpcId Details of the Amazon EC2 instance VPC IDs used to filter findings.
        */
       override fun ec2InstanceVpcId(ec2InstanceVpcId: List<Any>) {
-        cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId)
+        cdkBuilder.ec2InstanceVpcId(ec2InstanceVpcId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1559,7 +1559,7 @@ public open class CfnFilter(
        * filter findings.
        */
       override fun ecrImageArchitecture(ecrImageArchitecture: List<Any>) {
-        cdkBuilder.ecrImageArchitecture(ecrImageArchitecture)
+        cdkBuilder.ecrImageArchitecture(ecrImageArchitecture.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1580,7 +1580,7 @@ public open class CfnFilter(
        * @param ecrImageHash Details of the Amazon ECR image hashes used to filter findings.
        */
       override fun ecrImageHash(ecrImageHash: List<Any>) {
-        cdkBuilder.ecrImageHash(ecrImageHash)
+        cdkBuilder.ecrImageHash(ecrImageHash.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1602,7 +1602,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun ecrImagePushedAt(ecrImagePushedAt: List<Any>) {
-        cdkBuilder.ecrImagePushedAt(ecrImagePushedAt)
+        cdkBuilder.ecrImagePushedAt(ecrImagePushedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1623,7 +1623,7 @@ public open class CfnFilter(
        * @param ecrImageRegistry Details on the Amazon ECR registry used to filter findings.
        */
       override fun ecrImageRegistry(ecrImageRegistry: List<Any>) {
-        cdkBuilder.ecrImageRegistry(ecrImageRegistry)
+        cdkBuilder.ecrImageRegistry(ecrImageRegistry.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1645,7 +1645,7 @@ public open class CfnFilter(
        * filter findings.
        */
       override fun ecrImageRepositoryName(ecrImageRepositoryName: List<Any>) {
-        cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName)
+        cdkBuilder.ecrImageRepositoryName(ecrImageRepositoryName.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1666,7 +1666,7 @@ public open class CfnFilter(
        * @param ecrImageTags The tags attached to the Amazon ECR container image.
        */
       override fun ecrImageTags(ecrImageTags: List<Any>) {
-        cdkBuilder.ecrImageTags(ecrImageTags)
+        cdkBuilder.ecrImageTags(ecrImageTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1686,7 +1686,7 @@ public open class CfnFilter(
        * @param findingArn Details on the finding ARNs used to filter findings.
        */
       override fun findingArn(findingArn: List<Any>) {
-        cdkBuilder.findingArn(findingArn)
+        cdkBuilder.findingArn(findingArn.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1705,7 +1705,7 @@ public open class CfnFilter(
        * @param findingStatus Details on the finding status types used to filter findings.
        */
       override fun findingStatus(findingStatus: List<Any>) {
-        cdkBuilder.findingStatus(findingStatus)
+        cdkBuilder.findingStatus(findingStatus.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1725,7 +1725,7 @@ public open class CfnFilter(
        * @param findingType Details on the finding types used to filter findings.
        */
       override fun findingType(findingType: List<Any>) {
-        cdkBuilder.findingType(findingType)
+        cdkBuilder.findingType(findingType.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1746,7 +1746,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun firstObservedAt(firstObservedAt: List<Any>) {
-        cdkBuilder.firstObservedAt(firstObservedAt)
+        cdkBuilder.firstObservedAt(firstObservedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1767,7 +1767,7 @@ public open class CfnFilter(
        * @param inspectorScore The Amazon Inspector score to filter on.
        */
       override fun inspectorScore(inspectorScore: List<Any>) {
-        cdkBuilder.inspectorScore(inspectorScore)
+        cdkBuilder.inspectorScore(inspectorScore.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1789,7 +1789,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun lastObservedAt(lastObservedAt: List<Any>) {
-        cdkBuilder.lastObservedAt(lastObservedAt)
+        cdkBuilder.lastObservedAt(lastObservedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1810,7 +1810,7 @@ public open class CfnFilter(
        * @param networkProtocol Details on network protocol used to filter findings.
        */
       override fun networkProtocol(networkProtocol: List<Any>) {
-        cdkBuilder.networkProtocol(networkProtocol)
+        cdkBuilder.networkProtocol(networkProtocol.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1830,7 +1830,7 @@ public open class CfnFilter(
        * @param portRange Details on the port ranges used to filter findings.
        */
       override fun portRange(portRange: List<Any>) {
-        cdkBuilder.portRange(portRange)
+        cdkBuilder.portRange(portRange.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1851,7 +1851,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun relatedVulnerabilities(relatedVulnerabilities: List<Any>) {
-        cdkBuilder.relatedVulnerabilities(relatedVulnerabilities)
+        cdkBuilder.relatedVulnerabilities(relatedVulnerabilities.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1872,7 +1872,7 @@ public open class CfnFilter(
        * @param resourceId Details on the resource IDs used to filter findings.
        */
       override fun resourceId(resourceId: List<Any>) {
-        cdkBuilder.resourceId(resourceId)
+        cdkBuilder.resourceId(resourceId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1891,7 +1891,7 @@ public open class CfnFilter(
        * @param resourceTags Details on the resource tags used to filter findings.
        */
       override fun resourceTags(resourceTags: List<Any>) {
-        cdkBuilder.resourceTags(resourceTags)
+        cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1911,7 +1911,7 @@ public open class CfnFilter(
        * @param resourceType Details on the resource types used to filter findings.
        */
       override fun resourceType(resourceType: List<Any>) {
-        cdkBuilder.resourceType(resourceType)
+        cdkBuilder.resourceType(resourceType.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1931,7 +1931,7 @@ public open class CfnFilter(
        * @param severity Details on the severity used to filter findings.
        */
       override fun severity(severity: List<Any>) {
-        cdkBuilder.severity(severity)
+        cdkBuilder.severity(severity.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1950,7 +1950,7 @@ public open class CfnFilter(
        * @param title Details on the finding title used to filter findings.
        */
       override fun title(title: List<Any>) {
-        cdkBuilder.title(title)
+        cdkBuilder.title(title.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1971,7 +1971,7 @@ public open class CfnFilter(
        * findings.
        */
       override fun updatedAt(updatedAt: List<Any>) {
-        cdkBuilder.updatedAt(updatedAt)
+        cdkBuilder.updatedAt(updatedAt.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1991,7 +1991,7 @@ public open class CfnFilter(
        * @param vendorSeverity Details on the vendor severity used to filter findings.
        */
       override fun vendorSeverity(vendorSeverity: List<Any>) {
-        cdkBuilder.vendorSeverity(vendorSeverity)
+        cdkBuilder.vendorSeverity(vendorSeverity.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2011,7 +2011,7 @@ public open class CfnFilter(
        * @param vulnerabilityId Details on the vulnerability ID used to filter findings.
        */
       override fun vulnerabilityId(vulnerabilityId: List<Any>) {
-        cdkBuilder.vulnerabilityId(vulnerabilityId)
+        cdkBuilder.vulnerabilityId(vulnerabilityId.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2031,7 +2031,7 @@ public open class CfnFilter(
        * @param vulnerabilitySource Details on the vulnerability score to filter findings by.
        */
       override fun vulnerabilitySource(vulnerabilitySource: List<Any>) {
-        cdkBuilder.vulnerabilitySource(vulnerabilitySource)
+        cdkBuilder.vulnerabilitySource(vulnerabilitySource.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2051,7 +2051,7 @@ public open class CfnFilter(
        * @param vulnerablePackages Details on the vulnerable packages used to filter findings.
        */
       override fun vulnerablePackages(vulnerablePackages: List<Any>) {
-        cdkBuilder.vulnerablePackages(vulnerablePackages)
+        cdkBuilder.vulnerablePackages(vulnerablePackages.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

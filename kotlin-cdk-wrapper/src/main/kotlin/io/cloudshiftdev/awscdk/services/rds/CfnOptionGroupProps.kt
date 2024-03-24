@@ -243,7 +243,7 @@ public interface CfnOptionGroupProps {
      * @param optionConfigurations A list of options and the settings for each option.
      */
     override fun optionConfigurations(optionConfigurations: List<Any>) {
-      cdkBuilder.optionConfigurations(optionConfigurations)
+      cdkBuilder.optionConfigurations(optionConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

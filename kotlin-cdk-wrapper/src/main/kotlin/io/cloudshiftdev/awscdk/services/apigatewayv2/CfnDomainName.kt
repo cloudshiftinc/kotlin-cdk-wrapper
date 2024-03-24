@@ -116,7 +116,7 @@ public open class CfnDomainName(
    * The domain name configurations.
    */
   public open fun domainNameConfigurations(`value`: List<Any>) {
-    unwrap(this).setDomainNameConfigurations(`value`)
+    unwrap(this).setDomainNameConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -293,7 +293,7 @@ public open class CfnDomainName(
      * @param domainNameConfigurations The domain name configurations. 
      */
     override fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
-      cdkBuilder.domainNameConfigurations(domainNameConfigurations)
+      cdkBuilder.domainNameConfigurations(domainNameConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

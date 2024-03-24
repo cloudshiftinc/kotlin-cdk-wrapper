@@ -375,7 +375,7 @@ public interface CfnStackProps {
      * Users of the stack can connect to AppStream 2.0 only through the specified endpoints.
      */
     override fun accessEndpoints(accessEndpoints: List<Any>) {
-      cdkBuilder.accessEndpoints(accessEndpoints)
+      cdkBuilder.accessEndpoints(accessEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -508,7 +508,7 @@ public interface CfnStackProps {
      * @param storageConnectors The storage connectors to enable.
      */
     override fun storageConnectors(storageConnectors: List<Any>) {
-      cdkBuilder.storageConnectors(storageConnectors)
+      cdkBuilder.storageConnectors(storageConnectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -572,7 +572,7 @@ public interface CfnStackProps {
      * By default, these actions are enabled.
      */
     override fun userSettings(userSettings: List<Any>) {
-      cdkBuilder.userSettings(userSettings)
+      cdkBuilder.userSettings(userSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

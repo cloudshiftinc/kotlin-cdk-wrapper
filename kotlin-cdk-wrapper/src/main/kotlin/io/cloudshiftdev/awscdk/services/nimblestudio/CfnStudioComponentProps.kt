@@ -342,7 +342,7 @@ public interface CfnStudioComponentProps {
      * @param initializationScripts Initialization scripts for studio components.
      */
     override fun initializationScripts(initializationScripts: List<Any>) {
-      cdkBuilder.initializationScripts(initializationScripts)
+      cdkBuilder.initializationScripts(initializationScripts.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -377,7 +377,7 @@ public interface CfnStudioComponentProps {
      * @param scriptParameters Parameters for the studio component scripts.
      */
     override fun scriptParameters(scriptParameters: List<Any>) {
-      cdkBuilder.scriptParameters(scriptParameters)
+      cdkBuilder.scriptParameters(scriptParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

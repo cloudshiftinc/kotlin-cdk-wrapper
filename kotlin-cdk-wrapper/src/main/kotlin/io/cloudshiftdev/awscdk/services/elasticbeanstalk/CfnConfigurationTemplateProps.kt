@@ -326,7 +326,7 @@ public interface CfnConfigurationTemplateProps {
      * the *AWS Elastic Beanstalk Developer Guide* .
      */
     override fun optionSettings(optionSettings: List<Any>) {
-      cdkBuilder.optionSettings(optionSettings)
+      cdkBuilder.optionSettings(optionSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

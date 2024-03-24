@@ -97,7 +97,7 @@ public open class CfnProfilingGroup(
    * Adds anomaly notifications for a profiling group.
    */
   public open fun anomalyDetectionNotificationConfiguration(`value`: List<Any>) {
-    unwrap(this).setAnomalyDetectionNotificationConfiguration(`value`)
+    unwrap(this).setAnomalyDetectionNotificationConfiguration(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -317,7 +317,7 @@ public open class CfnProfilingGroup(
      */
     override
         fun anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration: List<Any>) {
-      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration)
+      cdkBuilder.anomalyDetectionNotificationConfiguration(anomalyDetectionNotificationConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

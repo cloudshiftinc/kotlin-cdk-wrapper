@@ -104,7 +104,7 @@ public interface CfnXssMatchSetProps {
      * cross-site scripting attacks.
      */
     override fun xssMatchTuples(xssMatchTuples: List<Any>) {
-      cdkBuilder.xssMatchTuples(xssMatchTuples)
+      cdkBuilder.xssMatchTuples(xssMatchTuples.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

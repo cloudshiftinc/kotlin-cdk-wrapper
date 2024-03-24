@@ -17,11 +17,12 @@ import kotlin.reflect.KClass
 import kotlin.reflect.KFunction
 
 internal object CdkWrappersGenerator {
+    private val CdkObject = ClassName("io.cloudshiftdev.awscdk.common", "CdkObject")
     internal fun generateCdkWrappersObject(model: CdkModel): FileSpec {
         val builder = TypeSpec.objectBuilder(ClassName)
             .addModifiers(KModifier.INTERNAL)
 
-        PropertySpec.builder("instanceMap", IdentityHashMap::class.asTypeName().parameterizedBy(ANY, ClassName("io.cloudshiftdev.awscdk.common", "CdkObject"))
+        PropertySpec.builder("instanceMap", IdentityHashMap::class.asTypeName().parameterizedBy(ANY, CdkObject)
         )
             .initializer("%T()", IdentityHashMap::class)
             .addModifiers(KModifier.PRIVATE)
@@ -30,24 +31,29 @@ internal object CdkWrappersGenerator {
 
         FunSpec.builder("register")
             .addModifiers(KModifier.INTERNAL)
-            .addParameter("cdkObject", ClassName("io.cloudshiftdev.awscdk.common", "CdkObject"))
+            .addParameter("cdkObject", CdkObject)
             .addStatement("requireNotNull(cdkObject.cdkObject) { %S }", "cdkObject cannot be null")
             .addStatement("instanceMap[cdkObject.cdkObject] = cdkObject")
             .build()
             .let { builder.addFunction(it) }
 
-        val wrapFunction = FunSpec.builder("wrap")
+        FunSpec.builder("wrap")
             .addModifiers(KModifier.INTERNAL)
             .addParameter("cdkObject", ANY)
             .returns(ANY.copy(nullable = true))
             .addStatement("return instanceMap[cdkObject] ?: resolveKTwin(cdkObject::class)?.let{resolveWrapperFunction(it)?.call(it.%M, cdkObject)}",
                 MemberName("kotlin.reflect.full", "companionObjectInstance"),
             )
-            .build()
+            .build().let { builder.addFunction(it) }
 
-        builder.addFunction(wrapFunction)
+        FunSpec.builder("unwrap")
+            .addModifiers(KModifier.INTERNAL)
+            .addParameter("anyObject", ANY)
+            .returns(ANY)
+            .addStatement("return (anyObject as? %T)?.cdkObject ?: anyObject", CdkObject)
+            .build().let { builder.addFunction(it) }
 
-        val resolveWrapperFunction = FunSpec.builder("resolveWrapperFunction")
+        FunSpec.builder("resolveWrapperFunction")
             .addModifiers(KModifier.PRIVATE)
             .addParameter("klass", KClass::class.asTypeName().parameterizedBy(STAR))
             .returns(KFunction::class.asTypeName().parameterizedBy(STAR).copy(nullable = true))
@@ -58,8 +64,8 @@ internal object CdkWrappersGenerator {
                 MemberName("kotlin.reflect.full", "memberFunctions"),
                 "wrap",
             )
-            .build()
-        builder.addFunction(resolveWrapperFunction)
+            .build().let { builder.addFunction(it) }
+
 
         val resolveKTwinFunction = FunSpec.builder("resolveKTwin")
             .addModifiers(KModifier.PRIVATE)

@@ -90,7 +90,7 @@ public open class CfnRealtimeLogConfig(
    * data for this real-time log configuration.
    */
   public open fun endPoints(`value`: List<Any>) {
-    unwrap(this).setEndPoints(`value`)
+    unwrap(this).setEndPoints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnRealtimeLogConfig(
      * sending real-time log data for this real-time log configuration. 
      */
     override fun endPoints(endPoints: List<Any>) {
-      cdkBuilder.endPoints(endPoints)
+      cdkBuilder.endPoints(endPoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

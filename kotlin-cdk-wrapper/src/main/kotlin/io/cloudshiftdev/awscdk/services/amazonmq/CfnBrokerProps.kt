@@ -919,7 +919,7 @@ public interface CfnBrokerProps {
      * RabbitMQ web console or by using the RabbitMQ management API.
      */
     override fun users(users: List<Any>) {
-      cdkBuilder.users(users)
+      cdkBuilder.users(users.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

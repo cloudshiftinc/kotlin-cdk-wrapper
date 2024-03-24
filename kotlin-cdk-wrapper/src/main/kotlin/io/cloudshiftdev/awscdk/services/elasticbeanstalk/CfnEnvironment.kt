@@ -185,7 +185,7 @@ public open class CfnEnvironment(
    * Key-value pairs defining configuration options for this environment, such as the instance type.
    */
   public open fun optionSettings(`value`: List<Any>) {
-    unwrap(this).setOptionSettings(`value`)
+    unwrap(this).setOptionSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -646,7 +646,7 @@ public open class CfnEnvironment(
      * such as the instance type. 
      */
     override fun optionSettings(optionSettings: List<Any>) {
-      cdkBuilder.optionSettings(optionSettings)
+      cdkBuilder.optionSettings(optionSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

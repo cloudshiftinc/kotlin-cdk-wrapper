@@ -477,7 +477,7 @@ public interface CfnIPAMPoolProps {
      * tagging requirements are changed on the pool, the resource may be marked as noncompliant.
      */
     override fun allocationResourceTags(allocationResourceTags: List<Any>) {
-      cdkBuilder.allocationResourceTags(allocationResourceTags)
+      cdkBuilder.allocationResourceTags(allocationResourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -568,7 +568,7 @@ public interface CfnIPAMPoolProps {
      * @param provisionedCidrs Information about the CIDRs provisioned to an IPAM pool.
      */
     override fun provisionedCidrs(provisionedCidrs: List<Any>) {
-      cdkBuilder.provisionedCidrs(provisionedCidrs)
+      cdkBuilder.provisionedCidrs(provisionedCidrs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

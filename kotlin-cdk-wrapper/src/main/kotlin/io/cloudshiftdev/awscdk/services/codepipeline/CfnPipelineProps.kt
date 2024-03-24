@@ -535,7 +535,7 @@ public interface CfnPipelineProps {
      * use both. If you create a cross-region action in your pipeline, you must use `artifactStores` .
      */
     override fun artifactStores(artifactStores: List<Any>) {
-      cdkBuilder.artifactStores(artifactStores)
+      cdkBuilder.artifactStores(artifactStores.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -564,7 +564,7 @@ public interface CfnPipelineProps {
      * action.
      */
     override fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>) {
-      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions)
+      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -651,7 +651,7 @@ public interface CfnPipelineProps {
      * @param stages Represents information about a stage and its definition. 
      */
     override fun stages(stages: List<Any>) {
-      cdkBuilder.stages(stages)
+      cdkBuilder.stages(stages.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -690,7 +690,7 @@ public interface CfnPipelineProps {
      * commits is disabled.
      */
     override fun triggers(triggers: List<Any>) {
-      cdkBuilder.triggers(triggers)
+      cdkBuilder.triggers(triggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -717,7 +717,7 @@ public interface CfnPipelineProps {
      * `[A-Za-z0-9&#64;\-_]+` .
      */
     override fun variables(variables: List<Any>) {
-      cdkBuilder.variables(variables)
+      cdkBuilder.variables(variables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

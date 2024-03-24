@@ -118,7 +118,7 @@ public open class CfnLoggerDefinitionVersion(
    * The loggers in this version.
    */
   public open fun loggers(`value`: List<Any>) {
-    unwrap(this).setLoggers(`value`)
+    unwrap(this).setLoggers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -204,7 +204,7 @@ public open class CfnLoggerDefinitionVersion(
      * @param loggers The loggers in this version. 
      */
     override fun loggers(loggers: List<Any>) {
-      cdkBuilder.loggers(loggers)
+      cdkBuilder.loggers(loggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

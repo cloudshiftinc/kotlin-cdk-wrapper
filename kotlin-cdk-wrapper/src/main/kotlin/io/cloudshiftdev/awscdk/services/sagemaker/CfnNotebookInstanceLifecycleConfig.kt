@@ -117,7 +117,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
    * A shell script that runs only once, when you create a notebook instance.
    */
   public open fun onCreate(`value`: List<Any>) {
-    unwrap(this).setOnCreate(`value`)
+    unwrap(this).setOnCreate(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -144,7 +144,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
    * the notebook instance.
    */
   public open fun onStart(`value`: List<Any>) {
-    unwrap(this).setOnStart(`value`)
+    unwrap(this).setOnStart(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -274,7 +274,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
      * @param onCreate A shell script that runs only once, when you create a notebook instance. 
      */
     override fun onCreate(onCreate: List<Any>) {
-      cdkBuilder.onCreate(onCreate)
+      cdkBuilder.onCreate(onCreate.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -312,7 +312,7 @@ public open class CfnNotebookInstanceLifecycleConfig(
      * when you create the notebook instance. 
      */
     override fun onStart(onStart: List<Any>) {
-      cdkBuilder.onStart(onStart)
+      cdkBuilder.onStart(onStart.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

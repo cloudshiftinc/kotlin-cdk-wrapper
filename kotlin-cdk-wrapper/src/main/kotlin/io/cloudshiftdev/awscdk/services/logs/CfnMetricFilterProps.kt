@@ -152,7 +152,7 @@ public interface CfnMetricFilterProps {
      * @param metricTransformations The metric transformations. 
      */
     override fun metricTransformations(metricTransformations: List<Any>) {
-      cdkBuilder.metricTransformations(metricTransformations)
+      cdkBuilder.metricTransformations(metricTransformations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

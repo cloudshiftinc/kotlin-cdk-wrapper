@@ -113,7 +113,7 @@ public open class CfnProactiveEngagement(
    * relevant notes.
    */
   public open fun emergencyContactList(`value`: List<Any>) {
-    unwrap(this).setEmergencyContactList(`value`)
+    unwrap(this).setEmergencyContactList(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -296,7 +296,7 @@ public open class CfnProactiveEngagement(
      * customer support, plus any relevant notes. 
      */
     override fun emergencyContactList(emergencyContactList: List<Any>) {
-      cdkBuilder.emergencyContactList(emergencyContactList)
+      cdkBuilder.emergencyContactList(emergencyContactList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -2301,7 +2301,7 @@ public interface CfnDBClusterProps {
      * Valid for: Aurora DB clusters and Multi-AZ DB clusters
      */
     override fun associatedRoles(associatedRoles: List<Any>) {
-      cdkBuilder.associatedRoles(associatedRoles)
+      cdkBuilder.associatedRoles(associatedRoles.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

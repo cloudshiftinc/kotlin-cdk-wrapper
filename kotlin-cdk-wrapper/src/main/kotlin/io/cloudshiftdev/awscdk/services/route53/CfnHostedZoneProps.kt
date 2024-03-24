@@ -997,7 +997,7 @@ public interface CfnHostedZoneProps {
      * For public hosted zones, omit `VPCs` , `VPCId` , and `VPCRegion` .
      */
     override fun vpcs(vpcs: List<Any>) {
-      cdkBuilder.vpcs(vpcs)
+      cdkBuilder.vpcs(vpcs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

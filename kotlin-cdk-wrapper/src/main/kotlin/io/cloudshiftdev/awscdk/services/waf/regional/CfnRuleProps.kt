@@ -143,7 +143,7 @@ public interface CfnRuleProps {
      * .
      */
     override fun predicates(predicates: List<Any>) {
-      cdkBuilder.predicates(predicates)
+      cdkBuilder.predicates(predicates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

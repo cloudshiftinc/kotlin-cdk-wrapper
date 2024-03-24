@@ -475,7 +475,7 @@ public open class CfnAutoScalingGroup(
    * One or more lifecycle hooks to add to the Auto Scaling group before instances are launched.
    */
   public open fun lifecycleHookSpecificationList(`value`: List<Any>) {
-    unwrap(this).setLifecycleHookSpecificationList(`value`)
+    unwrap(this).setLifecycleHookSpecificationList(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -543,7 +543,7 @@ public open class CfnAutoScalingGroup(
    * Enables the monitoring of group metrics of an Auto Scaling group.
    */
   public open fun metricsCollection(`value`: List<Any>) {
-    unwrap(this).setMetricsCollection(`value`)
+    unwrap(this).setMetricsCollection(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -661,7 +661,7 @@ public open class CfnAutoScalingGroup(
    * Configures an Auto Scaling group to send notifications when specified events take place.
    */
   public open fun notificationConfigurations(`value`: List<Any>) {
-    unwrap(this).setNotificationConfigurations(`value`)
+    unwrap(this).setNotificationConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1959,7 +1959,7 @@ public open class CfnAutoScalingGroup(
      * group before instances are launched. 
      */
     override fun lifecycleHookSpecificationList(lifecycleHookSpecificationList: List<Any>) {
-      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList)
+      cdkBuilder.lifecycleHookSpecificationList(lifecycleHookSpecificationList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2054,7 +2054,7 @@ public open class CfnAutoScalingGroup(
      * @param metricsCollection Enables the monitoring of group metrics of an Auto Scaling group. 
      */
     override fun metricsCollection(metricsCollection: List<Any>) {
-      cdkBuilder.metricsCollection(metricsCollection)
+      cdkBuilder.metricsCollection(metricsCollection.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2230,7 +2230,7 @@ public open class CfnAutoScalingGroup(
      * specified events take place. 
      */
     override fun notificationConfigurations(notificationConfigurations: List<Any>) {
-      cdkBuilder.notificationConfigurations(notificationConfigurations)
+      cdkBuilder.notificationConfigurations(notificationConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -6369,7 +6369,7 @@ public open class CfnAutoScalingGroup(
        * template.
        */
       override fun overrides(overrides: List<Any>) {
-        cdkBuilder.overrides(overrides)
+        cdkBuilder.overrides(overrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

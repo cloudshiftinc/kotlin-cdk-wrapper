@@ -258,7 +258,7 @@ public open class CfnMigrationProject(
    * parameters.
    */
   public open fun sourceDataProviderDescriptors(`value`: List<Any>) {
-    unwrap(this).setSourceDataProviderDescriptors(`value`)
+    unwrap(this).setSourceDataProviderDescriptors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -305,7 +305,7 @@ public open class CfnMigrationProject(
    * parameters.
    */
   public open fun targetDataProviderDescriptors(`value`: List<Any>) {
-    unwrap(this).setTargetDataProviderDescriptors(`value`)
+    unwrap(this).setTargetDataProviderDescriptors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -667,7 +667,7 @@ public open class CfnMigrationProject(
      * the name or ARN, and AWS Secrets Manager parameters. 
      */
     override fun sourceDataProviderDescriptors(sourceDataProviderDescriptors: List<Any>) {
-      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors)
+      cdkBuilder.sourceDataProviderDescriptors(sourceDataProviderDescriptors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -720,7 +720,7 @@ public open class CfnMigrationProject(
      * the name or ARN, and AWS Secrets Manager parameters. 
      */
     override fun targetDataProviderDescriptors(targetDataProviderDescriptors: List<Any>) {
-      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors)
+      cdkBuilder.targetDataProviderDescriptors(targetDataProviderDescriptors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -353,7 +353,7 @@ public interface CfnFirewallProps {
      * Each subnet must belong to a different Availability Zone.
      */
     override fun subnetMappings(subnetMappings: List<Any>) {
-      cdkBuilder.subnetMappings(subnetMappings)
+      cdkBuilder.subnetMappings(subnetMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

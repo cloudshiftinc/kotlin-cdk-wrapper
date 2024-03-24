@@ -422,7 +422,7 @@ public interface CfnLoadBalancerProps {
      * @param loadBalancerAttributes The load balancer attributes.
      */
     override fun loadBalancerAttributes(loadBalancerAttributes: List<Any>) {
-      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes)
+      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -528,7 +528,7 @@ public interface CfnLoadBalancerProps {
      * cannot specify Elastic IP addresses for your subnets.
      */
     override fun subnetMappings(subnetMappings: List<Any>) {
-      cdkBuilder.subnetMappings(subnetMappings)
+      cdkBuilder.subnetMappings(subnetMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

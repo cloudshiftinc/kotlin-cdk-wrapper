@@ -168,7 +168,7 @@ public interface CfnAssetProps {
      * @param egressEndpoints List of playback endpoints that are available for this asset.
      */
     override fun egressEndpoints(egressEndpoints: List<Any>) {
-      cdkBuilder.egressEndpoints(egressEndpoints)
+      cdkBuilder.egressEndpoints(egressEndpoints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

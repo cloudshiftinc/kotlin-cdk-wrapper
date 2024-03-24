@@ -264,7 +264,7 @@ public interface LambdaInvokeActionProps : CommonAwsActionProps {
      * Only one of `userParameters` or `userParametersString` can be specified.
      */
     override fun userParameters(userParameters: Map<String, Any>) {
-      cdkBuilder.userParameters(userParameters)
+      cdkBuilder.userParameters(userParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

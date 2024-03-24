@@ -159,7 +159,7 @@ public open class CfnDeployment(
    * The components to deploy.
    */
   public open fun components(`value`: Map<String, Any>) {
-    unwrap(this).setComponents(`value`)
+    unwrap(this).setComponents(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -459,7 +459,7 @@ public open class CfnDeployment(
      * @param components The components to deploy. 
      */
     override fun components(components: Map<String, Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -2319,7 +2319,7 @@ public open class CfnDeployment(
        * configuration deployment. 
        */
       override fun criteriaList(criteriaList: List<Any>) {
-        cdkBuilder.criteriaList(criteriaList)
+        cdkBuilder.criteriaList(criteriaList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

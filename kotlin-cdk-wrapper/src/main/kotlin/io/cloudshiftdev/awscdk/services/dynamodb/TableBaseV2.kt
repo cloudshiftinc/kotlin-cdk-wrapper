@@ -38,7 +38,8 @@ public abstract class TableBaseV2(
    * etc.). 
    */
   public override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Permits an IAM principal to all DynamoDB operations ('dynamodb:*') on this table.
@@ -93,7 +94,8 @@ public abstract class TableBaseV2(
    * 'dynamodb:GetRecords', etc.). 
    */
   public override fun grantStream(grantee: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grantStream(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grantStream(grantee.let(IGrantable::unwrap),
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement associated with this table to an IAM principal's policy.

@@ -295,7 +295,7 @@ public interface CfnSourceLocationProps {
      * location.
      */
     override fun segmentDeliveryConfigurations(segmentDeliveryConfigurations: List<Any>) {
-      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations)
+      cdkBuilder.segmentDeliveryConfigurations(segmentDeliveryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

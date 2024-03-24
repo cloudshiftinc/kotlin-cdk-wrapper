@@ -137,7 +137,7 @@ public open class CfnBotAlias(
    * Specifies settings that are unique to a locale.
    */
   public open fun botAliasLocaleSettings(`value`: List<Any>) {
-    unwrap(this).setBotAliasLocaleSettings(`value`)
+    unwrap(this).setBotAliasLocaleSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnBotAlias(
    * An array of key-value pairs to apply to this resource.
    */
   public open fun botAliasTags(`value`: List<Any>) {
-    unwrap(this).setBotAliasTags(`value`)
+    unwrap(this).setBotAliasTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -456,7 +456,7 @@ public open class CfnBotAlias(
      * @param botAliasLocaleSettings Specifies settings that are unique to a locale. 
      */
     override fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>) {
-      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings)
+      cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -509,7 +509,7 @@ public open class CfnBotAlias(
      * @param botAliasTags An array of key-value pairs to apply to this resource. 
      */
     override fun botAliasTags(botAliasTags: List<Any>) {
-      cdkBuilder.botAliasTags(botAliasTags)
+      cdkBuilder.botAliasTags(botAliasTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1573,7 +1573,7 @@ public open class CfnBotAlias(
        * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
        */
       override fun audioLogSettings(audioLogSettings: List<Any>) {
-        cdkBuilder.audioLogSettings(audioLogSettings)
+        cdkBuilder.audioLogSettings(audioLogSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1593,7 +1593,7 @@ public open class CfnBotAlias(
        * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
        */
       override fun textLogSettings(textLogSettings: List<Any>) {
-        cdkBuilder.textLogSettings(textLogSettings)
+        cdkBuilder.textLogSettings(textLogSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

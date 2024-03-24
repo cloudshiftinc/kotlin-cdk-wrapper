@@ -564,7 +564,7 @@ public open class CfnFunction(
        * @param keyValueStoreAssociations The configuration for the key value store associations.
        */
       override fun keyValueStoreAssociations(keyValueStoreAssociations: List<Any>) {
-        cdkBuilder.keyValueStoreAssociations(keyValueStoreAssociations)
+        cdkBuilder.keyValueStoreAssociations(keyValueStoreAssociations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

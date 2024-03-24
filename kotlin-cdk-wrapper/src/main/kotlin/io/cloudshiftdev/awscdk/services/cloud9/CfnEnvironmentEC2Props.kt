@@ -358,7 +358,7 @@ public interface CfnEnvironmentEC2Props {
      * development environment.
      */
     override fun repositories(repositories: List<Any>) {
-      cdkBuilder.repositories(repositories)
+      cdkBuilder.repositories(repositories.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

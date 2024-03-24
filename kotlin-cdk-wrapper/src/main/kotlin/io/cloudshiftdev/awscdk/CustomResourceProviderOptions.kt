@@ -187,7 +187,7 @@ public interface CustomResourceProviderOptions {
      * objects like you will see in the rest of the CDK.
      */
     override fun policyStatements(policyStatements: List<Any>) {
-      cdkBuilder.policyStatements(policyStatements)
+      cdkBuilder.policyStatements(policyStatements.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

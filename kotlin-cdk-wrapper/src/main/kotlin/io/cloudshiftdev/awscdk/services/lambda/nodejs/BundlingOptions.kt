@@ -859,7 +859,7 @@ public interface BundlingOptions : DockerRunOptions {
      * ```
      */
     override fun esbuildArgs(esbuildArgs: Map<String, Any>) {
-      cdkBuilder.esbuildArgs(esbuildArgs)
+      cdkBuilder.esbuildArgs(esbuildArgs.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

@@ -295,7 +295,7 @@ public interface DistributedMapProps : MapBaseProps {
      * exclusive  with `parameters`).
      */
     override fun itemSelector(itemSelector: Map<String, Any>) {
-      cdkBuilder.itemSelector(itemSelector)
+      cdkBuilder.itemSelector(itemSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -363,7 +363,7 @@ public interface DistributedMapProps : MapBaseProps {
      * or selected from the state's raw result.
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

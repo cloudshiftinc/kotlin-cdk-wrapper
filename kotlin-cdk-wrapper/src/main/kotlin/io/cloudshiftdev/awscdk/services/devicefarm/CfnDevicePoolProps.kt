@@ -208,7 +208,7 @@ public interface CfnDevicePoolProps {
      * @param rules The device pool's rules. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

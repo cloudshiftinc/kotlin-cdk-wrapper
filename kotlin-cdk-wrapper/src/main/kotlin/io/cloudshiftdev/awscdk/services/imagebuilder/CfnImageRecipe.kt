@@ -160,7 +160,7 @@ public open class CfnImageRecipe(
    * The block device mappings to apply when creating images from this recipe.
    */
   public open fun blockDeviceMappings(`value`: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(`value`)
+    unwrap(this).setBlockDeviceMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -185,7 +185,7 @@ public open class CfnImageRecipe(
    * The components of the image recipe.
    */
   public open fun components(`value`: List<Any>) {
-    unwrap(this).setComponents(`value`)
+    unwrap(this).setComponents(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -516,7 +516,7 @@ public open class CfnImageRecipe(
      * recipe. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -554,7 +554,7 @@ public open class CfnImageRecipe(
      * @param components The components of the image recipe. 
      */
     override fun components(components: List<Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -969,7 +969,7 @@ public open class CfnImageRecipe(
        * component for a specific recipe.
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

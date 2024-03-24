@@ -302,7 +302,7 @@ public interface CfnViewProps {
      * view.
      */
     override fun includedProperties(includedProperties: List<Any>) {
-      cdkBuilder.includedProperties(includedProperties)
+      cdkBuilder.includedProperties(includedProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

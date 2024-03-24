@@ -320,7 +320,7 @@ public interface CfnObjectTypeProps {
      * @param fields A list of field definitions for the object type mapping.
      */
     override fun fields(fields: List<Any>) {
-      cdkBuilder.fields(fields)
+      cdkBuilder.fields(fields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -341,7 +341,7 @@ public interface CfnObjectTypeProps {
      * profile.
      */
     override fun keys(keys: List<Any>) {
-      cdkBuilder.keys(keys)
+      cdkBuilder.keys(keys.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -112,7 +113,8 @@ public open class NetworkListener(
    * @param targetGroups 
    */
   public open fun addTargetGroups(id: String, vararg targetGroups: INetworkTargetGroup) {
-    unwrap(this).addTargetGroups(id, *targetGroups.map(INetworkTargetGroup::unwrap).toTypedArray())
+    unwrap(this).addTargetGroups(id, *targetGroups.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.elasticloadbalancingv2.INetworkTargetGroup}.toTypedArray())
   }
 
   /**

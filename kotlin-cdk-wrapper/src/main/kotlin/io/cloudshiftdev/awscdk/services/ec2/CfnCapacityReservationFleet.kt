@@ -155,7 +155,7 @@ public open class CfnCapacityReservationFleet(
    * Information about the instance types for which to reserve the capacity.
    */
   public open fun instanceTypeSpecifications(`value`: List<Any>) {
-    unwrap(this).setInstanceTypeSpecifications(`value`)
+    unwrap(this).setInstanceTypeSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -221,7 +221,7 @@ public open class CfnCapacityReservationFleet(
    * The tags to assign to the Capacity Reservation Fleet.
    */
   public open fun tagSpecifications(`value`: List<Any>) {
-    unwrap(this).setTagSpecifications(`value`)
+    unwrap(this).setTagSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -526,7 +526,7 @@ public open class CfnCapacityReservationFleet(
      * the capacity. 
      */
     override fun instanceTypeSpecifications(instanceTypeSpecifications: List<Any>) {
-      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications)
+      cdkBuilder.instanceTypeSpecifications(instanceTypeSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -618,7 +618,7 @@ public open class CfnCapacityReservationFleet(
      * @param tagSpecifications The tags to assign to the Capacity Reservation Fleet. 
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

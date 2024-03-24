@@ -352,7 +352,7 @@ public interface CfnLaunchProps {
      * You can up to five launch groups in a launch.
      */
     override fun groups(groups: List<Any>) {
-      cdkBuilder.groups(groups)
+      cdkBuilder.groups(groups.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -377,7 +377,7 @@ public interface CfnLaunchProps {
      * You can have up to three metric monitors in the array.
      */
     override fun metricMonitors(metricMonitors: List<Any>) {
-      cdkBuilder.metricMonitors(metricMonitors)
+      cdkBuilder.metricMonitors(metricMonitors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -426,7 +426,7 @@ public interface CfnLaunchProps {
      * percentages among the feature variations during each step of the launch. 
      */
     override fun scheduledSplitsConfig(scheduledSplitsConfig: List<Any>) {
-      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig)
+      cdkBuilder.scheduledSplitsConfig(scheduledSplitsConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

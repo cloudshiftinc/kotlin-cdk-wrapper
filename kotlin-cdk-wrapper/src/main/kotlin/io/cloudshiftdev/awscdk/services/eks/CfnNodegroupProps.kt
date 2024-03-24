@@ -910,7 +910,7 @@ public interface CfnNodegroupProps {
      * groups](https://docs.aws.amazon.com/eks/latest/userguide/node-taints-managed-node-groups.html) .
      */
     override fun taints(taints: List<Any>) {
-      cdkBuilder.taints(taints)
+      cdkBuilder.taints(taints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

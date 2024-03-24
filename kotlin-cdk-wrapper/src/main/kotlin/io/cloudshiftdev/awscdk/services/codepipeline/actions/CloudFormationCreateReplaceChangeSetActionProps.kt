@@ -584,7 +584,7 @@ public interface CloudFormationCreateReplaceChangeSetActionProps : CommonAwsActi
      * Note: the entire object cannot be more than 1kB.
      */
     override fun parameterOverrides(parameterOverrides: Map<String, Any>) {
-      cdkBuilder.parameterOverrides(parameterOverrides)
+      cdkBuilder.parameterOverrides(parameterOverrides.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

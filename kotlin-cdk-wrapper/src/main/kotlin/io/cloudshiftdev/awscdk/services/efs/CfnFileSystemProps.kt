@@ -717,7 +717,7 @@ public interface CfnFileSystemProps {
      * following section for more information.
      */
     override fun lifecyclePolicies(lifecyclePolicies: List<Any>) {
-      cdkBuilder.lifecyclePolicies(lifecyclePolicies)
+      cdkBuilder.lifecyclePolicies(lifecyclePolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

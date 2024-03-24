@@ -108,7 +108,7 @@ public open class CfnIPSet(
    * requests originate from.
    */
   public open fun ipSetDescriptors(`value`: List<Any>) {
-    unwrap(this).setIpSetDescriptors(`value`)
+    unwrap(this).setIpSetDescriptors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -203,7 +203,7 @@ public open class CfnIPSet(
      * CIDR notation) that web requests originate from. 
      */
     override fun ipSetDescriptors(ipSetDescriptors: List<Any>) {
-      cdkBuilder.ipSetDescriptors(ipSetDescriptors)
+      cdkBuilder.ipSetDescriptors(ipSetDescriptors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -314,7 +314,7 @@ public interface CfnResolverEndpointProps {
      * Even though the minimum is 1, Route 53 requires that you create at least two.
      */
     override fun ipAddresses(ipAddresses: List<Any>) {
-      cdkBuilder.ipAddresses(ipAddresses)
+      cdkBuilder.ipAddresses(ipAddresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -32,7 +32,7 @@ public abstract class UserData(
    * @param commands 
    */
   public open fun addCommands(vararg commands: String) {
-    unwrap(this).addCommands(*commands)
+    unwrap(this).addCommands(*commands.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
 
   /**
@@ -60,7 +60,8 @@ public abstract class UserData(
    * @param commands 
    */
   public open fun addOnExitCommands(vararg commands: String) {
-    unwrap(this).addOnExitCommands(*commands)
+    unwrap(this).addOnExitCommands(*commands.map{CdkObjectWrappers.unwrap(it) as
+        String}.toTypedArray())
   }
 
   /**

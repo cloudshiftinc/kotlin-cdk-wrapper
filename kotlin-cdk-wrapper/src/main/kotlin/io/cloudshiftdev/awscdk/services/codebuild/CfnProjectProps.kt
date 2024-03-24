@@ -1013,7 +1013,7 @@ public interface CfnProjectProps {
      * , `mountPoint` , and `type` of a file system created using Amazon Elastic File System.
      */
     override fun fileSystemLocations(fileSystemLocations: List<Any>) {
-      cdkBuilder.fileSystemLocations(fileSystemLocations)
+      cdkBuilder.fileSystemLocations(fileSystemLocations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1087,7 +1087,7 @@ public interface CfnProjectProps {
      * Each artifacts object specifies output settings that the project generates during a build.
      */
     override fun secondaryArtifacts(secondaryArtifacts: List<Any>) {
-      cdkBuilder.secondaryArtifacts(secondaryArtifacts)
+      cdkBuilder.secondaryArtifacts(secondaryArtifacts.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1112,7 +1112,7 @@ public interface CfnProjectProps {
      * `secondarySourceVersions` (at the project level).
      */
     override fun secondarySourceVersions(secondarySourceVersions: List<Any>) {
-      cdkBuilder.secondarySourceVersions(secondarySourceVersions)
+      cdkBuilder.secondarySourceVersions(secondarySourceVersions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1134,7 +1134,7 @@ public interface CfnProjectProps {
      * @param secondarySources An array of `ProjectSource` objects.
      */
     override fun secondarySources(secondarySources: List<Any>) {
-      cdkBuilder.secondarySources(secondarySources)
+      cdkBuilder.secondarySources(secondarySources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -122,7 +122,7 @@ public open class CfnView(
    * A list of fields that provide additional information about the view.
    */
   public open fun includedProperties(`value`: List<Any>) {
-    unwrap(this).setIncludedProperties(`value`)
+    unwrap(this).setIncludedProperties(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -450,7 +450,7 @@ public open class CfnView(
      * view. 
      */
     override fun includedProperties(includedProperties: List<Any>) {
-      cdkBuilder.includedProperties(includedProperties)
+      cdkBuilder.includedProperties(includedProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

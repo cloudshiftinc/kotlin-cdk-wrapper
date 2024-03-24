@@ -190,7 +190,7 @@ public open class CfnPipeline(
    * The parameter objects used with the pipeline.
    */
   public open fun parameterObjects(`value`: List<Any>) {
-    unwrap(this).setParameterObjects(`value`)
+    unwrap(this).setParameterObjects(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -214,7 +214,7 @@ public open class CfnPipeline(
    * The parameter values used with the pipeline.
    */
   public open fun parameterValues(`value`: List<Any>) {
-    unwrap(this).setParameterValues(`value`)
+    unwrap(this).setParameterValues(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -238,7 +238,7 @@ public open class CfnPipeline(
    * The objects that define the pipeline.
    */
   public open fun pipelineObjects(`value`: List<Any>) {
-    unwrap(this).setPipelineObjects(`value`)
+    unwrap(this).setPipelineObjects(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -497,7 +497,7 @@ public open class CfnPipeline(
      * @param parameterObjects The parameter objects used with the pipeline. 
      */
     override fun parameterObjects(parameterObjects: List<Any>) {
-      cdkBuilder.parameterObjects(parameterObjects)
+      cdkBuilder.parameterObjects(parameterObjects.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -526,7 +526,7 @@ public open class CfnPipeline(
      * @param parameterValues The parameter values used with the pipeline. 
      */
     override fun parameterValues(parameterValues: List<Any>) {
-      cdkBuilder.parameterValues(parameterValues)
+      cdkBuilder.parameterValues(parameterValues.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -565,7 +565,7 @@ public open class CfnPipeline(
      * @param pipelineObjects The objects that define the pipeline. 
      */
     override fun pipelineObjects(pipelineObjects: List<Any>) {
-      cdkBuilder.pipelineObjects(pipelineObjects)
+      cdkBuilder.pipelineObjects(pipelineObjects.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1051,7 +1051,7 @@ public open class CfnPipeline(
        * @param attributes The attributes of the parameter object. 
        */
       override fun attributes(attributes: List<Any>) {
-        cdkBuilder.attributes(attributes)
+        cdkBuilder.attributes(attributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1311,7 +1311,7 @@ public open class CfnPipeline(
        * @param fields Key-value pairs that define the properties of the object. 
        */
       override fun fields(fields: List<Any>) {
-        cdkBuilder.fields(fields)
+        cdkBuilder.fields(fields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

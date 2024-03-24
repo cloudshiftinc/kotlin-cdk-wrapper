@@ -130,7 +130,7 @@ public open class CfnEndpoint(
    * The event buses being used by the endpoint.
    */
   public open fun eventBuses(`value`: List<Any>) {
-    unwrap(this).setEventBuses(`value`)
+    unwrap(this).setEventBuses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -387,7 +387,7 @@ public open class CfnEndpoint(
      * @param eventBuses The event buses being used by the endpoint. 
      */
     override fun eventBuses(eventBuses: List<Any>) {
-      cdkBuilder.eventBuses(eventBuses)
+      cdkBuilder.eventBuses(eventBuses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -826,7 +826,7 @@ public open class CfnFindingsFilter(
        * values to use to filter the results.
        */
       override fun criterion(criterion: Map<String, Any>) {
-        cdkBuilder.criterion(criterion)
+        cdkBuilder.criterion(criterion.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build():

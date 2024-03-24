@@ -96,7 +96,7 @@ public interface CfnIPSetProps {
      * CIDR notation) that web requests originate from.
      */
     override fun ipSetDescriptors(ipSetDescriptors: List<Any>) {
-      cdkBuilder.ipSetDescriptors(ipSetDescriptors)
+      cdkBuilder.ipSetDescriptors(ipSetDescriptors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -613,7 +613,7 @@ public interface CfnMaintenanceWindowTaskProps {
      * *window-target-id-2*` .
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

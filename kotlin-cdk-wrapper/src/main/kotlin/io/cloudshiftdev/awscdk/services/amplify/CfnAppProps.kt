@@ -518,7 +518,7 @@ public interface CfnAppProps {
      * @param customRules The custom rewrite and redirect rules for an Amplify app.
      */
     override fun customRules(customRules: List<Any>) {
-      cdkBuilder.customRules(customRules)
+      cdkBuilder.customRules(customRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -568,7 +568,7 @@ public interface CfnAppProps {
      * in the *Amplify Hosting User Guide* .
      */
     override fun environmentVariables(environmentVariables: List<Any>) {
-      cdkBuilder.environmentVariables(environmentVariables)
+      cdkBuilder.environmentVariables(environmentVariables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

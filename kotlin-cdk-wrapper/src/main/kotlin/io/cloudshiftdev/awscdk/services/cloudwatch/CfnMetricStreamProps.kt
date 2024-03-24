@@ -387,7 +387,7 @@ public interface CfnMetricStreamProps {
      * datapoints that have a timestamp after the time of the update.
      */
     override fun excludeFilters(excludeFilters: List<Any>) {
-      cdkBuilder.excludeFilters(excludeFilters)
+      cdkBuilder.excludeFilters(excludeFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -435,7 +435,7 @@ public interface CfnMetricStreamProps {
      * datapoints that have a timestamp after the time of the update.
      */
     override fun includeFilters(includeFilters: List<Any>) {
-      cdkBuilder.includeFilters(includeFilters)
+      cdkBuilder.includeFilters(includeFilters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -538,7 +538,7 @@ public interface CfnMetricStreamProps {
      * . If the `OutputFormat` is OpenTelemetry, you can stream percentile statistics.
      */
     override fun statisticsConfigurations(statisticsConfigurations: List<Any>) {
-      cdkBuilder.statisticsConfigurations(statisticsConfigurations)
+      cdkBuilder.statisticsConfigurations(statisticsConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

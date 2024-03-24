@@ -131,7 +131,7 @@ public open class CfnContainerRecipe(
    * Build and test components that are included in the container recipe.
    */
   public open fun components(`value`: List<Any>) {
-    unwrap(this).setComponents(`value`)
+    unwrap(this).setComponents(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -612,7 +612,7 @@ public open class CfnContainerRecipe(
      * @param components Build and test components that are included in the container recipe. 
      */
     override fun components(components: List<Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -961,7 +961,7 @@ public open class CfnContainerRecipe(
        * component for a specific recipe.
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1730,7 +1730,7 @@ public open class CfnContainerRecipe(
        * from this Image Builder AMI.
        */
       override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-        cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+        cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

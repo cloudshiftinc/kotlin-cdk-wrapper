@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -85,7 +86,7 @@ public open class CfnResourceGroup(
    * The tags (key and value pairs) that will be associated with the resource group.
    */
   public open fun resourceGroupTags(`value`: List<Any>) {
-    unwrap(this).setResourceGroupTags(`value`)
+    unwrap(this).setResourceGroupTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -172,7 +173,7 @@ public open class CfnResourceGroup(
      * resource group. 
      */
     override fun resourceGroupTags(resourceGroupTags: List<Any>) {
-      cdkBuilder.resourceGroupTags(resourceGroupTags)
+      cdkBuilder.resourceGroupTags(resourceGroupTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

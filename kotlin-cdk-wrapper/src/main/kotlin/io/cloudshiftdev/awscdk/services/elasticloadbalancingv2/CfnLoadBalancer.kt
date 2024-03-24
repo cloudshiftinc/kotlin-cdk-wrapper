@@ -170,7 +170,7 @@ public open class CfnLoadBalancer(
    * The load balancer attributes.
    */
   public open fun loadBalancerAttributes(`value`: List<Any>) {
-    unwrap(this).setLoadBalancerAttributes(`value`)
+    unwrap(this).setLoadBalancerAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -239,7 +239,7 @@ public open class CfnLoadBalancer(
    * The IDs of the subnets.
    */
   public open fun subnetMappings(`value`: List<Any>) {
-    unwrap(this).setSubnetMappings(`value`)
+    unwrap(this).setSubnetMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -618,7 +618,7 @@ public open class CfnLoadBalancer(
      * @param loadBalancerAttributes The load balancer attributes. 
      */
     override fun loadBalancerAttributes(loadBalancerAttributes: List<Any>) {
-      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes)
+      cdkBuilder.loadBalancerAttributes(loadBalancerAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -751,7 +751,7 @@ public open class CfnLoadBalancer(
      * @param subnetMappings The IDs of the subnets. 
      */
     override fun subnetMappings(subnetMappings: List<Any>) {
-      cdkBuilder.subnetMappings(subnetMappings)
+      cdkBuilder.subnetMappings(subnetMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

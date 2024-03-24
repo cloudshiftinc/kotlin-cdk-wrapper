@@ -342,7 +342,7 @@ public interface CfnRepositoryProps {
      * @param triggers The JSON block of configuration information for each trigger.
      */
     override fun triggers(triggers: List<Any>) {
-      cdkBuilder.triggers(triggers)
+      cdkBuilder.triggers(triggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

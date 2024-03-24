@@ -326,7 +326,7 @@ public interface CfnSimulationApplicationProps {
      * @param sources The sources of the simulation application.
      */
     override fun sources(sources: List<Any>) {
-      cdkBuilder.sources(sources)
+      cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

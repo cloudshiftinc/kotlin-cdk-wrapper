@@ -251,7 +251,7 @@ public interface CfnResolverRuleProps {
      * Typically, these are the IP addresses of DNS resolvers on your network.
      */
     override fun targetIps(targetIps: List<Any>) {
-      cdkBuilder.targetIps(targetIps)
+      cdkBuilder.targetIps(targetIps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

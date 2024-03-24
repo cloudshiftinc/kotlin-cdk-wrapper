@@ -190,7 +190,7 @@ public interface CfnGatewayProps {
      * .
      */
     override fun gatewayCapabilitySummaries(gatewayCapabilitySummaries: List<Any>) {
-      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries)
+      cdkBuilder.gatewayCapabilitySummaries(gatewayCapabilitySummaries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

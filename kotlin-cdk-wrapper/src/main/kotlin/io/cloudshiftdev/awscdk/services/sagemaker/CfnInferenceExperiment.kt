@@ -274,7 +274,7 @@ public open class CfnInferenceExperiment(
    * An array of `ModelVariantConfigSummary` objects.
    */
   public open fun modelVariants(`value`: List<Any>) {
-    unwrap(this).setModelVariants(`value`)
+    unwrap(this).setModelVariants(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -776,7 +776,7 @@ public open class CfnInferenceExperiment(
      * @param modelVariants An array of `ModelVariantConfigSummary` objects. 
      */
     override fun modelVariants(modelVariants: List<Any>) {
-      cdkBuilder.modelVariants(modelVariants)
+      cdkBuilder.modelVariants(modelVariants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2110,7 +2110,7 @@ public open class CfnInferenceExperiment(
        * @param shadowModelVariants List of shadow variant configurations. 
        */
       override fun shadowModelVariants(shadowModelVariants: List<Any>) {
-        cdkBuilder.shadowModelVariants(shadowModelVariants)
+        cdkBuilder.shadowModelVariants(shadowModelVariants.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

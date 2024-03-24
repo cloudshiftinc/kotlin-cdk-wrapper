@@ -168,7 +168,7 @@ public interface CfnAnomalyMonitorProps {
      * @param resourceTags Tags to assign to monitor.
      */
     override fun resourceTags(resourceTags: List<Any>) {
-      cdkBuilder.resourceTags(resourceTags)
+      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

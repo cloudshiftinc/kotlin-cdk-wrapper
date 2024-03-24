@@ -128,7 +128,7 @@ public open class CfnEnabledBaseline(
    * Parameters that are applied when enabling this `Baseline` .
    */
   public open fun parameters(`value`: List<Any>) {
-    unwrap(this).setParameters(`value`)
+    unwrap(this).setParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -291,7 +291,7 @@ public open class CfnEnabledBaseline(
      * @param parameters Parameters that are applied when enabling this `Baseline` . 
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

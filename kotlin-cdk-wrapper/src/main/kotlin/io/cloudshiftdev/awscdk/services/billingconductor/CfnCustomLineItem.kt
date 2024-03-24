@@ -845,7 +845,7 @@ public open class CfnCustomLineItem(
        * @param lineItemFilters A representation of the line item filter.
        */
       override fun lineItemFilters(lineItemFilters: List<Any>) {
-        cdkBuilder.lineItemFilters(lineItemFilters)
+        cdkBuilder.lineItemFilters(lineItemFilters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

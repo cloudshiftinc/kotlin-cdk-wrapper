@@ -869,7 +869,7 @@ public open class CfnUserSettings(
        * the remote browser. 
        */
       override fun allowlist(allowlist: List<Any>) {
-        cdkBuilder.allowlist(allowlist)
+        cdkBuilder.allowlist(allowlist.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -891,7 +891,7 @@ public open class CfnUserSettings(
        * to the remote browser.
        */
       override fun blocklist(blocklist: List<Any>) {
-        cdkBuilder.blocklist(blocklist)
+        cdkBuilder.blocklist(blocklist.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -134,7 +134,7 @@ public interface CfnBotVersionProps {
      * version.
      */
     override fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>) {
-      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification)
+      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

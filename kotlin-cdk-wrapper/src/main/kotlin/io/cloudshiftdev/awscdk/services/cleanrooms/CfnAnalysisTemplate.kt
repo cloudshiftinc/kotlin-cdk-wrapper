@@ -89,7 +89,7 @@ public open class CfnAnalysisTemplate(
    * The parameters of the analysis template.
    */
   public open fun analysisParameters(`value`: List<Any>) {
-    unwrap(this).setAnalysisParameters(`value`)
+    unwrap(this).setAnalysisParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -392,7 +392,7 @@ public open class CfnAnalysisTemplate(
      * @param analysisParameters The parameters of the analysis template. 
      */
     override fun analysisParameters(analysisParameters: List<Any>) {
-      cdkBuilder.analysisParameters(analysisParameters)
+      cdkBuilder.analysisParameters(analysisParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

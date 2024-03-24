@@ -134,7 +134,7 @@ public open class CfnMetricFilter(
    * The metric transformations.
    */
   public open fun metricTransformations(`value`: List<Any>) {
-    unwrap(this).setMetricTransformations(`value`)
+    unwrap(this).setMetricTransformations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -259,7 +259,7 @@ public open class CfnMetricFilter(
      * @param metricTransformations The metric transformations. 
      */
     override fun metricTransformations(metricTransformations: List<Any>) {
-      cdkBuilder.metricTransformations(metricTransformations)
+      cdkBuilder.metricTransformations(metricTransformations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -703,7 +703,7 @@ public open class CfnMetricFilter(
        * .
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

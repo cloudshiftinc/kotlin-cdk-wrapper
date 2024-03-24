@@ -39,7 +39,7 @@ public interface ITemplateOptions {
    * Metadata associated with the CloudFormation template.
    */
   public fun metadata(`value`: Map<String, Any>) {
-    unwrap(this).setMetadata(`value`)
+    unwrap(this).setMetadata(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -102,7 +102,7 @@ public interface ITemplateOptions {
      * Metadata associated with the CloudFormation template.
      */
     override fun metadata(`value`: Map<String, Any>) {
-      unwrap(this).setMetadata(`value`)
+      unwrap(this).setMetadata(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

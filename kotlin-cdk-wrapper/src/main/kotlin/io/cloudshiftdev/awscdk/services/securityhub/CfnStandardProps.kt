@@ -103,7 +103,7 @@ public interface CfnStandardProps {
      * *Maximum* : `100`
      */
     override fun disabledStandardsControls(disabledStandardsControls: List<Any>) {
-      cdkBuilder.disabledStandardsControls(disabledStandardsControls)
+      cdkBuilder.disabledStandardsControls(disabledStandardsControls.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

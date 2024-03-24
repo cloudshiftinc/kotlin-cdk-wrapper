@@ -92,7 +92,7 @@ public open class CfnCidrCollection(
    * A complex type that contains information about the list of CIDR locations.
    */
   public open fun locations(`value`: List<Any>) {
-    unwrap(this).setLocations(`value`)
+    unwrap(this).setLocations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -174,7 +174,7 @@ public open class CfnCidrCollection(
      * @param locations A complex type that contains information about the list of CIDR locations. 
      */
     override fun locations(locations: List<Any>) {
-      cdkBuilder.locations(locations)
+      cdkBuilder.locations(locations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

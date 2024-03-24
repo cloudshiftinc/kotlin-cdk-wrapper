@@ -154,7 +154,7 @@ public open class CfnMatchingWorkflow(
    * A list of `InputSource` objects, which have the fields `InputSourceARN` and `SchemaName` .
    */
   public open fun inputSourceConfig(`value`: List<Any>) {
-    unwrap(this).setInputSourceConfig(`value`)
+    unwrap(this).setInputSourceConfig(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -190,7 +190,7 @@ public open class CfnMatchingWorkflow(
    * `ApplyNormalization` , and `Output` .
    */
   public open fun outputSourceConfig(`value`: List<Any>) {
-    unwrap(this).setOutputSourceConfig(`value`)
+    unwrap(this).setOutputSourceConfig(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -444,7 +444,7 @@ public open class CfnMatchingWorkflow(
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: List<Any>) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig)
+      cdkBuilder.inputSourceConfig(inputSourceConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -478,7 +478,7 @@ public open class CfnMatchingWorkflow(
      * `OutputS3Path` , `ApplyNormalization` , and `Output` . 
      */
     override fun outputSourceConfig(outputSourceConfig: List<Any>) {
-      cdkBuilder.outputSourceConfig(outputSourceConfig)
+      cdkBuilder.outputSourceConfig(outputSourceConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1172,7 +1172,7 @@ public open class CfnMatchingWorkflow(
        * values of the column should be hashed.
        */
       override fun output(output: List<Any>) {
-        cdkBuilder.output(output)
+        cdkBuilder.output(output.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1798,7 +1798,7 @@ public open class CfnMatchingWorkflow(
        * `MatchingKeys` . 
        */
       override fun rules(rules: List<Any>) {
-        cdkBuilder.rules(rules)
+        cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

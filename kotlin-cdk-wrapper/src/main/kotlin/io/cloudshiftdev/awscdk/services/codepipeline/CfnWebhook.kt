@@ -154,7 +154,7 @@ public open class CfnWebhook(
    * A list of rules applied to the body/payload sent in the POST request to a webhook URL.
    */
   public open fun filters(`value`: List<Any>) {
-    unwrap(this).setFilters(`value`)
+    unwrap(this).setFilters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -496,7 +496,7 @@ public open class CfnWebhook(
      * webhook URL. 
      */
     override fun filters(filters: List<Any>) {
-      cdkBuilder.filters(filters)
+      cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

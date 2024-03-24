@@ -832,7 +832,7 @@ public interface CfnCampaignProps {
      * campaign, in addition to the default treatment for the campaign.
      */
     override fun additionalTreatments(additionalTreatments: List<Any>) {
-      cdkBuilder.additionalTreatments(additionalTreatments)
+      cdkBuilder.additionalTreatments(additionalTreatments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

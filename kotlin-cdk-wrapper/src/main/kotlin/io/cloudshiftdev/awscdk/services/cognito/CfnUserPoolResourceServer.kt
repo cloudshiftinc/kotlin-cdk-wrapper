@@ -118,7 +118,7 @@ public open class CfnUserPoolResourceServer(
    * A list of scopes.
    */
   public open fun scopes(`value`: List<Any>) {
-    unwrap(this).setScopes(`value`)
+    unwrap(this).setScopes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -253,7 +253,7 @@ public open class CfnUserPoolResourceServer(
      * @param scopes A list of scopes. 
      */
     override fun scopes(scopes: List<Any>) {
-      cdkBuilder.scopes(scopes)
+      cdkBuilder.scopes(scopes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

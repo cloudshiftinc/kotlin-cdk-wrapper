@@ -257,7 +257,7 @@ public open class CfnCloudFormationProvisionedProduct(
    * Parameters specified by the administrator that are required for provisioning the product.
    */
   public open fun provisioningParameters(`value`: List<Any>) {
-    unwrap(this).setProvisioningParameters(`value`)
+    unwrap(this).setProvisioningParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -731,7 +731,7 @@ public open class CfnCloudFormationProvisionedProduct(
      * provisioning the product. 
      */
     override fun provisioningParameters(provisioningParameters: List<Any>) {
-      cdkBuilder.provisioningParameters(provisioningParameters)
+      cdkBuilder.provisioningParameters(provisioningParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

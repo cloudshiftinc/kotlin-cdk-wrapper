@@ -2503,7 +2503,7 @@ public open class CfnDomain(
        * You can have up to 15 `MatchingRule` in the `MatchingRules` .
        */
       override fun matchingRules(matchingRules: List<Any>) {
-        cdkBuilder.matchingRules(matchingRules)
+        cdkBuilder.matchingRules(matchingRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

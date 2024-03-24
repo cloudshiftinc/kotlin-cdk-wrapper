@@ -165,7 +165,7 @@ public open class CfnListenerRule(
    * The actions.
    */
   public open fun actions(`value`: List<Any>) {
-    unwrap(this).setActions(`value`)
+    unwrap(this).setActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -200,7 +200,7 @@ public open class CfnListenerRule(
    * The conditions.
    */
   public open fun conditions(`value`: List<Any>) {
-    unwrap(this).setConditions(`value`)
+    unwrap(this).setConditions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -382,7 +382,7 @@ public open class CfnListenerRule(
      * @param actions The actions. 
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -424,7 +424,7 @@ public open class CfnListenerRule(
      * @param conditions The conditions. 
      */
     override fun conditions(conditions: List<Any>) {
-      cdkBuilder.conditions(conditions)
+      cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2208,7 +2208,7 @@ public open class CfnListenerRule(
        * target groups in a forward rule.
        */
       override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
+        cdkBuilder.targetGroups(targetGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2974,7 +2974,7 @@ public open class CfnListenerRule(
        * them is found in the query string.
        */
       override fun values(values: List<Any>) {
-        cdkBuilder.values(values)
+        cdkBuilder.values(values.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -207,7 +207,7 @@ public open class CfnSecret(
    * A custom type that specifies a `Region` and the `KmsKeyId` for a replica secret.
    */
   public open fun replicaRegions(`value`: List<Any>) {
-    unwrap(this).setReplicaRegions(`value`)
+    unwrap(this).setReplicaRegions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -621,7 +621,7 @@ public open class CfnSecret(
      * replica secret. 
      */
     override fun replicaRegions(replicaRegions: List<Any>) {
-      cdkBuilder.replicaRegions(replicaRegions)
+      cdkBuilder.replicaRegions(replicaRegions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

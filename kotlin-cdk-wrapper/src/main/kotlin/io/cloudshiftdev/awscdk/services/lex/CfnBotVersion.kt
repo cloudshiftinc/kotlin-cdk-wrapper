@@ -101,7 +101,7 @@ public open class CfnBotVersion(
    * Specifies the locales that Amazon Lex adds to this version.
    */
   public open fun botVersionLocaleSpecification(`value`: List<Any>) {
-    unwrap(this).setBotVersionLocaleSpecification(`value`)
+    unwrap(this).setBotVersionLocaleSpecification(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -236,7 +236,7 @@ public open class CfnBotVersion(
      * version. 
      */
     override fun botVersionLocaleSpecification(botVersionLocaleSpecification: List<Any>) {
-      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification)
+      cdkBuilder.botVersionLocaleSpecification(botVersionLocaleSpecification.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

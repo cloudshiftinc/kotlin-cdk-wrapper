@@ -500,7 +500,7 @@ public open class CfnCampaign(
    * default treatment for the campaign.
    */
   public open fun additionalTreatments(`value`: List<Any>) {
-    unwrap(this).setAdditionalTreatments(`value`)
+    unwrap(this).setAdditionalTreatments(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1198,7 +1198,7 @@ public open class CfnCampaign(
      * campaign, in addition to the default treatment for the campaign. 
      */
     override fun additionalTreatments(additionalTreatments: List<Any>) {
-      cdkBuilder.additionalTreatments(additionalTreatments)
+      cdkBuilder.additionalTreatments(additionalTreatments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2455,7 +2455,7 @@ public open class CfnCampaign(
        * button configurations.
        */
       override fun content(content: List<Any>) {
-        cdkBuilder.content(content)
+        cdkBuilder.content(content.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

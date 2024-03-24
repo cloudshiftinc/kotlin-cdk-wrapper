@@ -501,7 +501,7 @@ public interface CfnTopicProps {
      * Once configured, log entries are sent to Amazon CloudWatch Logs.
      */
     override fun deliveryStatusLogging(deliveryStatusLogging: List<Any>) {
-      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging)
+      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -588,7 +588,7 @@ public interface CfnTopicProps {
      * `AWS::SNS::Topic` resource is deleted.
      */
     override fun subscription(subscription: List<Any>) {
-      cdkBuilder.subscription(subscription)
+      cdkBuilder.subscription(subscription.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

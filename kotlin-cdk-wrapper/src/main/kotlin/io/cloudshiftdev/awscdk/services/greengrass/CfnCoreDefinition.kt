@@ -489,7 +489,7 @@ public open class CfnCoreDefinition(
        * Currently, the `Cores` property for a core definition version can contain only one core.
        */
       override fun cores(cores: List<Any>) {
-        cdkBuilder.cores(cores)
+        cdkBuilder.cores(cores.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

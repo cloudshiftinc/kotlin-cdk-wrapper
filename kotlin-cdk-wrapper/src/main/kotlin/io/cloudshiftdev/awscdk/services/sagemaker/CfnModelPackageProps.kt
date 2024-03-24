@@ -824,7 +824,7 @@ public interface CfnModelPackageProps {
      * objects.
      */
     override fun additionalInferenceSpecifications(additionalInferenceSpecifications: List<Any>) {
-      cdkBuilder.additionalInferenceSpecifications(additionalInferenceSpecifications)
+      cdkBuilder.additionalInferenceSpecifications(additionalInferenceSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -857,7 +857,7 @@ public interface CfnModelPackageProps {
      */
     override
         fun additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd: List<Any>) {
-      cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd)
+      cdkBuilder.additionalInferenceSpecificationsToAdd(additionalInferenceSpecificationsToAdd.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

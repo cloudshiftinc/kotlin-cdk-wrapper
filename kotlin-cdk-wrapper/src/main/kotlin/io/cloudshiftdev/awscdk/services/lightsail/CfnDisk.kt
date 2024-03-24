@@ -92,7 +92,7 @@ public open class CfnDisk(
    * An array of add-ons for the disk.
    */
   public open fun addOns(`value`: List<Any>) {
-    unwrap(this).setAddOns(`value`)
+    unwrap(this).setAddOns(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -422,7 +422,7 @@ public open class CfnDisk(
      * @param addOns An array of add-ons for the disk. 
      */
     override fun addOns(addOns: List<Any>) {
-      cdkBuilder.addOns(addOns)
+      cdkBuilder.addOns(addOns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

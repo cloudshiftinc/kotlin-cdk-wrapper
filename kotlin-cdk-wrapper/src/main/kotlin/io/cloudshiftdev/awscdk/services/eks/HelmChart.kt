@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.assets.Asset
 import kotlin.Any
 import kotlin.Boolean
@@ -336,7 +337,7 @@ public open class HelmChart(
      * @param values The values to be used by the chart. 
      */
     override fun values(values: Map<String, Any>) {
-      cdkBuilder.values(values)
+      cdkBuilder.values(values.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

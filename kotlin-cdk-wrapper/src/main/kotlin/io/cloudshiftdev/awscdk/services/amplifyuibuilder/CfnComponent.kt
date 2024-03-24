@@ -102,7 +102,7 @@ public open class CfnComponent(
    * The information to connect a component's properties to data at runtime.
    */
   public open fun bindingProperties(`value`: Map<String, Any>) {
-    unwrap(this).setBindingProperties(`value`)
+    unwrap(this).setBindingProperties(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -121,7 +121,7 @@ public open class CfnComponent(
    * A list of the component's `ComponentChild` instances.
    */
   public open fun children(`value`: List<Any>) {
-    unwrap(this).setChildren(`value`)
+    unwrap(this).setChildren(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -145,7 +145,7 @@ public open class CfnComponent(
    * The data binding configuration for the component's properties.
    */
   public open fun collectionProperties(`value`: Map<String, Any>) {
-    unwrap(this).setCollectionProperties(`value`)
+    unwrap(this).setCollectionProperties(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -188,7 +188,7 @@ public open class CfnComponent(
    * Describes the events that can be raised on the component.
    */
   public open fun events(`value`: Map<String, Any>) {
-    unwrap(this).setEvents(`value`)
+    unwrap(this).setEvents(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -242,7 +242,7 @@ public open class CfnComponent(
    * Describes the component's properties.
    */
   public open fun properties(`value`: Map<String, Any>) {
-    unwrap(this).setProperties(`value`)
+    unwrap(this).setProperties(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnComponent(
    * A list of the component's variants.
    */
   public open fun variants(`value`: List<Any>) {
-    unwrap(this).setVariants(`value`)
+    unwrap(this).setVariants(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -567,7 +567,7 @@ public open class CfnComponent(
      * runtime. 
      */
     override fun bindingProperties(bindingProperties: Map<String, Any>) {
-      cdkBuilder.bindingProperties(bindingProperties)
+      cdkBuilder.bindingProperties(bindingProperties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -587,7 +587,7 @@ public open class CfnComponent(
      * @param children A list of the component's `ComponentChild` instances. 
      */
     override fun children(children: List<Any>) {
-      cdkBuilder.children(children)
+      cdkBuilder.children(children.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -621,7 +621,7 @@ public open class CfnComponent(
      * @param collectionProperties The data binding configuration for the component's properties. 
      */
     override fun collectionProperties(collectionProperties: Map<String, Any>) {
-      cdkBuilder.collectionProperties(collectionProperties)
+      cdkBuilder.collectionProperties(collectionProperties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -670,7 +670,7 @@ public open class CfnComponent(
      * @param events Describes the events that can be raised on the component. 
      */
     override fun events(events: Map<String, Any>) {
-      cdkBuilder.events(events)
+      cdkBuilder.events(events.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -718,7 +718,7 @@ public open class CfnComponent(
      * @param properties Describes the component's properties. 
      */
     override fun properties(properties: Map<String, Any>) {
-      cdkBuilder.properties(properties)
+      cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -772,7 +772,7 @@ public open class CfnComponent(
      * @param variants A list of the component's variants. 
      */
     override fun variants(variants: List<Any>) {
-      cdkBuilder.variants(variants)
+      cdkBuilder.variants(variants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1411,7 +1411,7 @@ public open class CfnComponent(
        * Use when the action performs an operation on an Amplify DataStore model.
        */
       override fun fields(fields: Map<String, Any>) {
-        cdkBuilder.fields(fields)
+        cdkBuilder.fields(fields.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -1868,7 +1868,7 @@ public open class CfnComponent(
        * @param predicates A list of predicates for binding a component's properties to data.
        */
       override fun predicates(predicates: List<Any>) {
-        cdkBuilder.predicates(predicates)
+        cdkBuilder.predicates(predicates.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2662,7 +2662,7 @@ public open class CfnComponent(
        * @param children The list of `ComponentChild` instances for this component.
        */
       override fun children(children: List<Any>) {
-        cdkBuilder.children(children)
+        cdkBuilder.children(children.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2692,7 +2692,7 @@ public open class CfnComponent(
        * to components.
        */
       override fun events(events: Map<String, Any>) {
-        cdkBuilder.events(events)
+        cdkBuilder.events(events.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -2715,7 +2715,7 @@ public open class CfnComponent(
        * You can't specify `tags` as a valid property for `properties` .
        */
       override fun properties(properties: Map<String, Any>) {
-        cdkBuilder.properties(properties)
+        cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -3361,7 +3361,7 @@ public open class CfnComponent(
        * @param sort Describes how to sort the component's properties.
        */
       override fun sort(sort: List<Any>) {
-        cdkBuilder.sort(sort)
+        cdkBuilder.sort(sort.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4385,7 +4385,7 @@ public open class CfnComponent(
        * @param bindings The information to bind the component property to form data.
        */
       override fun bindings(bindings: Map<String, Any>) {
-        cdkBuilder.bindings(bindings)
+        cdkBuilder.bindings(bindings.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -4439,7 +4439,7 @@ public open class CfnComponent(
        * to this component property.
        */
       override fun concat(concat: List<Any>) {
-        cdkBuilder.concat(concat)
+        cdkBuilder.concat(concat.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5271,7 +5271,7 @@ public open class CfnComponent(
        * @param and A list of predicates to combine logically.
        */
       override fun and(and: List<Any>) {
-        cdkBuilder.and(and)
+        cdkBuilder.and(and.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5318,7 +5318,7 @@ public open class CfnComponent(
        * @param or A list of predicates to combine logically.
        */
       override fun or(or: List<Any>) {
-        cdkBuilder.or(or)
+        cdkBuilder.or(or.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -77,7 +77,7 @@ public open class CfnDocument(
    * A list of key-value pairs that describe attachments to a version of a document.
    */
   public open fun attachments(`value`: List<Any>) {
-    unwrap(this).setAttachments(`value`)
+    unwrap(this).setAttachments(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -158,7 +158,7 @@ public open class CfnDocument(
    * A list of SSM documents required by a document.
    */
   public open fun requires(`value`: List<Any>) {
-    unwrap(this).setRequires(`value`)
+    unwrap(this).setRequires(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -455,7 +455,7 @@ public open class CfnDocument(
      * document. 
      */
     override fun attachments(attachments: List<Any>) {
-      cdkBuilder.attachments(attachments)
+      cdkBuilder.attachments(attachments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -562,7 +562,7 @@ public open class CfnDocument(
      * @param requires A list of SSM documents required by a document. 
      */
     override fun requires(requires: List<Any>) {
-      cdkBuilder.requires(requires)
+      cdkBuilder.requires(requires.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

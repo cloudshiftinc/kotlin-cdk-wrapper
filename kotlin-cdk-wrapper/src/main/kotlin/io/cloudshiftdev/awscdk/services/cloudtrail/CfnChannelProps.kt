@@ -144,7 +144,7 @@ public interface CfnChannelProps {
      * will be logged.
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

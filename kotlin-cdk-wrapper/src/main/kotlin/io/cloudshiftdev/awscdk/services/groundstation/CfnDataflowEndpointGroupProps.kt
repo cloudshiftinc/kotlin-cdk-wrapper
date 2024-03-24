@@ -199,7 +199,7 @@ public interface CfnDataflowEndpointGroupProps {
      * endpoint. 
      */
     override fun endpointDetails(endpointDetails: List<Any>) {
-      cdkBuilder.endpointDetails(endpointDetails)
+      cdkBuilder.endpointDetails(endpointDetails.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

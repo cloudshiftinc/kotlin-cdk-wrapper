@@ -391,7 +391,7 @@ public interface CallAwsServiceProps : TaskStateBaseProps {
      * Use PascalCase for the parameter names.
      */
     override fun parameters(parameters: Map<String, Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -410,7 +410,7 @@ public interface CallAwsServiceProps : TaskStateBaseProps {
      * or selected from the state's raw result.
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

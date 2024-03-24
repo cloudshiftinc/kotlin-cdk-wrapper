@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudwatch
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -78,7 +79,8 @@ public open class Dashboard(
    * @param widgets 
    */
   public open fun addWidgets(vararg widgets: IWidget) {
-    unwrap(this).addWidgets(*widgets.map(IWidget::unwrap).toTypedArray())
+    unwrap(this).addWidgets(*widgets.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.cloudwatch.IWidget}.toTypedArray())
   }
 
   /**

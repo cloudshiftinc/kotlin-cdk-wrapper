@@ -113,7 +113,7 @@ public open class CfnApplication(
    * The credentials of the SAP application.
    */
   public open fun credentials(`value`: List<Any>) {
-    unwrap(this).setCredentials(`value`)
+    unwrap(this).setCredentials(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -332,7 +332,7 @@ public open class CfnApplication(
      * @param credentials The credentials of the SAP application. 
      */
     override fun credentials(credentials: List<Any>) {
-      cdkBuilder.credentials(credentials)
+      cdkBuilder.credentials(credentials.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

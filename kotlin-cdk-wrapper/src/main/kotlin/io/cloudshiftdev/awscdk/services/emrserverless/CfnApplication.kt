@@ -261,7 +261,7 @@ public open class CfnApplication(
    * The initial capacity of the application.
    */
   public open fun initialCapacity(`value`: List<Any>) {
-    unwrap(this).setInitialCapacity(`value`)
+    unwrap(this).setInitialCapacity(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -418,7 +418,7 @@ public open class CfnApplication(
    * API operation.
    */
   public open fun runtimeConfiguration(`value`: List<Any>) {
-    unwrap(this).setRuntimeConfiguration(`value`)
+    unwrap(this).setRuntimeConfiguration(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -484,7 +484,7 @@ public open class CfnApplication(
    * The specification applied to each worker type.
    */
   public open fun workerTypeSpecifications(`value`: Map<String, Any>) {
-    unwrap(this).setWorkerTypeSpecifications(`value`)
+    unwrap(this).setWorkerTypeSpecifications(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -980,7 +980,7 @@ public open class CfnApplication(
      * @param initialCapacity The initial capacity of the application. 
      */
     override fun initialCapacity(initialCapacity: List<Any>) {
-      cdkBuilder.initialCapacity(initialCapacity)
+      cdkBuilder.initialCapacity(initialCapacity.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1179,7 +1179,7 @@ public open class CfnApplication(
      * API operation. 
      */
     override fun runtimeConfiguration(runtimeConfiguration: List<Any>) {
-      cdkBuilder.runtimeConfiguration(runtimeConfiguration)
+      cdkBuilder.runtimeConfiguration(runtimeConfiguration.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1248,7 +1248,7 @@ public open class CfnApplication(
      * @param workerTypeSpecifications The specification applied to each worker type. 
      */
     override fun workerTypeSpecifications(workerTypeSpecifications: Map<String, Any>) {
-      cdkBuilder.workerTypeSpecifications(workerTypeSpecifications)
+      cdkBuilder.workerTypeSpecifications(workerTypeSpecifications.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.emrserverless.CfnApplication =
@@ -1692,7 +1692,7 @@ public open class CfnApplication(
        * @param logTypeMap The specific log-streams which need to be uploaded to CloudWatch.
        */
       override fun logTypeMap(logTypeMap: List<Any>) {
-        cdkBuilder.logTypeMap(logTypeMap)
+        cdkBuilder.logTypeMap(logTypeMap.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1863,7 +1863,7 @@ public open class CfnApplication(
        * @param configurations the value to be set.
        */
       override fun configurations(configurations: List<Any>) {
-        cdkBuilder.configurations(configurations)
+        cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

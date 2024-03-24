@@ -207,7 +207,7 @@ public open class CfnWorkgroup(
    * A list of parameters to set for finer control over a database.
    */
   public open fun configParameters(`value`: List<Any>) {
-    unwrap(this).setConfigParameters(`value`)
+    unwrap(this).setConfigParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -592,7 +592,7 @@ public open class CfnWorkgroup(
      * @param configParameters A list of parameters to set for finer control over a database. 
      */
     override fun configParameters(configParameters: List<Any>) {
-      cdkBuilder.configParameters(configParameters)
+      cdkBuilder.configParameters(configParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1015,7 +1015,7 @@ public open class CfnWorkgroup(
        * @param vpcEndpoints An array of `VpcEndpoint` objects.
        */
       override fun vpcEndpoints(vpcEndpoints: List<Any>) {
-        cdkBuilder.vpcEndpoints(vpcEndpoints)
+        cdkBuilder.vpcEndpoints(vpcEndpoints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1337,7 +1337,7 @@ public open class CfnWorkgroup(
        * Also known as an interface endpoint.
        */
       override fun networkInterfaces(networkInterfaces: List<Any>) {
-        cdkBuilder.networkInterfaces(networkInterfaces)
+        cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1753,7 +1753,7 @@ public open class CfnWorkgroup(
        * .
        */
       override fun configParameters(configParameters: List<Any>) {
-        cdkBuilder.configParameters(configParameters)
+        cdkBuilder.configParameters(configParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

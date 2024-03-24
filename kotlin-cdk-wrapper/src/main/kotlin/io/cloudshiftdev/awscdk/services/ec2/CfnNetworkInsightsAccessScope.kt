@@ -186,7 +186,7 @@ public open class CfnNetworkInsightsAccessScope(
    * The paths to exclude.
    */
   public open fun excludePaths(`value`: List<Any>) {
-    unwrap(this).setExcludePaths(`value`)
+    unwrap(this).setExcludePaths(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -219,7 +219,7 @@ public open class CfnNetworkInsightsAccessScope(
    * The paths to match.
    */
   public open fun matchPaths(`value`: List<Any>) {
-    unwrap(this).setMatchPaths(`value`)
+    unwrap(this).setMatchPaths(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnNetworkInsightsAccessScope(
      * @param excludePaths The paths to exclude. 
      */
     override fun excludePaths(excludePaths: List<Any>) {
-      cdkBuilder.excludePaths(excludePaths)
+      cdkBuilder.excludePaths(excludePaths.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -373,7 +373,7 @@ public open class CfnNetworkInsightsAccessScope(
      * @param matchPaths The paths to match. 
      */
     override fun matchPaths(matchPaths: List<Any>) {
-      cdkBuilder.matchPaths(matchPaths)
+      cdkBuilder.matchPaths(matchPaths.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -617,7 +617,7 @@ public open class CfnNetworkInsightsAccessScope(
        * @param throughResources The through resources.
        */
       override fun throughResources(throughResources: List<Any>) {
-        cdkBuilder.throughResources(throughResources)
+        cdkBuilder.throughResources(throughResources.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

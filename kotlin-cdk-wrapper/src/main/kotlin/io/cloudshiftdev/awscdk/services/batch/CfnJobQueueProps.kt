@@ -244,7 +244,7 @@ public interface CfnJobQueueProps {
      * single job queue.
      */
     override fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
-      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder)
+      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

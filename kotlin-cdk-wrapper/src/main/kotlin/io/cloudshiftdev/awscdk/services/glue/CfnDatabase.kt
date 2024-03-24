@@ -668,7 +668,7 @@ public open class CfnDatabase(
        * Used by AWS Lake Formation . Not used in the normal course of AWS Glue operations.
        */
       override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
-        cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions)
+        cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

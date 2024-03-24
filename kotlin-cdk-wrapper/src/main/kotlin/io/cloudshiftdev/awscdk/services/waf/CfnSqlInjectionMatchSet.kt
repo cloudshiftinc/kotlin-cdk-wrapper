@@ -123,7 +123,7 @@ public open class CfnSqlInjectionMatchSet(
    * code.
    */
   public open fun sqlInjectionMatchTuples(`value`: List<Any>) {
-    unwrap(this).setSqlInjectionMatchTuples(`value`)
+    unwrap(this).setSqlInjectionMatchTuples(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -215,7 +215,7 @@ public open class CfnSqlInjectionMatchSet(
      * for snippets of malicious SQL code. 
      */
     override fun sqlInjectionMatchTuples(sqlInjectionMatchTuples: List<Any>) {
-      cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples)
+      cdkBuilder.sqlInjectionMatchTuples(sqlInjectionMatchTuples.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

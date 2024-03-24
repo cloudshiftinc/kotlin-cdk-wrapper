@@ -153,7 +153,7 @@ public interface CfnResiliencyPolicyProps {
      * @param policy The resiliency policy. 
      */
     override fun policy(policy: Map<String, Any>) {
-      cdkBuilder.policy(policy)
+      cdkBuilder.policy(policy.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

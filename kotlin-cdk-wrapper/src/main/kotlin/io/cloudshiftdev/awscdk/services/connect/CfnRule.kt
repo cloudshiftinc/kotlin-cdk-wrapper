@@ -793,7 +793,7 @@ public open class CfnRule(
        * The syntax can be empty, for example, `{}` .
        */
       override fun assignContactCategoryActions(assignContactCategoryActions: List<Any>) {
-        cdkBuilder.assignContactCategoryActions(assignContactCategoryActions)
+        cdkBuilder.assignContactCategoryActions(assignContactCategoryActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -822,7 +822,7 @@ public open class CfnRule(
        * @param createCaseActions This action will create a case when a rule is triggered.
        */
       override fun createCaseActions(createCaseActions: List<Any>) {
-        cdkBuilder.createCaseActions(createCaseActions)
+        cdkBuilder.createCaseActions(createCaseActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -836,7 +836,7 @@ public open class CfnRule(
        * triggered.
        */
       override fun endAssociatedTasksActions(endAssociatedTasksActions: List<Any>) {
-        cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions)
+        cdkBuilder.endAssociatedTasksActions(endAssociatedTasksActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -865,7 +865,7 @@ public open class CfnRule(
        * @param eventBridgeActions Information about the EventBridge action.
        */
       override fun eventBridgeActions(eventBridgeActions: List<Any>) {
-        cdkBuilder.eventBridgeActions(eventBridgeActions)
+        cdkBuilder.eventBridgeActions(eventBridgeActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -885,7 +885,7 @@ public open class CfnRule(
        * @param sendNotificationActions Information about the send notification action.
        */
       override fun sendNotificationActions(sendNotificationActions: List<Any>) {
-        cdkBuilder.sendNotificationActions(sendNotificationActions)
+        cdkBuilder.sendNotificationActions(sendNotificationActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -909,7 +909,7 @@ public open class CfnRule(
        * `OnZendeskTicketCreate` | `OnZendeskTicketStatusUpdate` | `OnSalesforceCaseCreate`
        */
       override fun taskActions(taskActions: List<Any>) {
-        cdkBuilder.taskActions(taskActions)
+        cdkBuilder.taskActions(taskActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -930,7 +930,7 @@ public open class CfnRule(
        * @param updateCaseActions This action will update a case when a rule is triggered.
        */
       override fun updateCaseActions(updateCaseActions: List<Any>) {
-        cdkBuilder.updateCaseActions(updateCaseActions)
+        cdkBuilder.updateCaseActions(updateCaseActions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1101,7 +1101,7 @@ public open class CfnRule(
        * @param fields An array of case fields. 
        */
       override fun fields(fields: List<Any>) {
-        cdkBuilder.fields(fields)
+        cdkBuilder.fields(fields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2341,7 +2341,7 @@ public open class CfnRule(
        * `Value` field.)
        */
       override fun references(references: Map<String, Any>) {
-        cdkBuilder.references(references)
+        cdkBuilder.references(references.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build(): software.amazon.awscdk.services.connect.CfnRule.TaskActionProperty =
@@ -2478,7 +2478,7 @@ public open class CfnRule(
        * @param fields An array of case fields. 
        */
       override fun fields(fields: List<Any>) {
-        cdkBuilder.fields(fields)
+        cdkBuilder.fields(fields.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

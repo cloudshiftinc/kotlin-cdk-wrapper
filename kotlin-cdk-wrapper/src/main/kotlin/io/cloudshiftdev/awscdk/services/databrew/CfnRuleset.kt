@@ -134,7 +134,7 @@ public open class CfnRuleset(
    * Contains metadata about the ruleset.
    */
   public open fun rules(`value`: List<Any>) {
-    unwrap(this).setRules(`value`)
+    unwrap(this).setRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -300,7 +300,7 @@ public open class CfnRuleset(
      * @param rules Contains metadata about the ruleset. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -725,7 +725,7 @@ public open class CfnRuleset(
        * dataset. Rule will be applied to selected columns.
        */
       override fun columnSelectors(columnSelectors: List<Any>) {
-        cdkBuilder.columnSelectors(columnSelectors)
+        cdkBuilder.columnSelectors(columnSelectors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -780,7 +780,7 @@ public open class CfnRuleset(
        * backticks, for example, `":col1": "`Column A`".`
        */
       override fun substitutionMap(substitutionMap: List<Any>) {
-        cdkBuilder.substitutionMap(substitutionMap)
+        cdkBuilder.substitutionMap(substitutionMap.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

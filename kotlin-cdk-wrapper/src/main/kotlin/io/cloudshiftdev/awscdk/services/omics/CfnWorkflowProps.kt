@@ -216,7 +216,7 @@ public interface CfnWorkflowProps {
      * @param parameterTemplate The workflow's parameter template.
      */
     override fun parameterTemplate(parameterTemplate: Map<String, Any>) {
-      cdkBuilder.parameterTemplate(parameterTemplate)
+      cdkBuilder.parameterTemplate(parameterTemplate.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

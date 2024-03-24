@@ -239,7 +239,7 @@ public open class CfnVerifiedAccessInstance(
    * The IDs of the AWS Verified Access trust providers.
    */
   public open fun verifiedAccessTrustProviders(`value`: List<Any>) {
-    unwrap(this).setVerifiedAccessTrustProviders(`value`)
+    unwrap(this).setVerifiedAccessTrustProviders(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -492,7 +492,7 @@ public open class CfnVerifiedAccessInstance(
      * @param verifiedAccessTrustProviders The IDs of the AWS Verified Access trust providers. 
      */
     override fun verifiedAccessTrustProviders(verifiedAccessTrustProviders: List<Any>) {
-      cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders)
+      cdkBuilder.verifiedAccessTrustProviders(verifiedAccessTrustProviders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

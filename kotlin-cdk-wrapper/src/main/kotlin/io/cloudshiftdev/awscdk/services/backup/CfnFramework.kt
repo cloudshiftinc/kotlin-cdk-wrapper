@@ -131,7 +131,7 @@ public open class CfnFramework(
    * Contains detailed information about all of the controls of a framework.
    */
   public open fun frameworkControls(`value`: List<Any>) {
-    unwrap(this).setFrameworkControls(`value`)
+    unwrap(this).setFrameworkControls(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -295,7 +295,7 @@ public open class CfnFramework(
      * framework. 
      */
     override fun frameworkControls(frameworkControls: List<Any>) {
-      cdkBuilder.frameworkControls(frameworkControls)
+      cdkBuilder.frameworkControls(frameworkControls.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -829,7 +829,7 @@ public open class CfnFramework(
        * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
        */
       override fun controlInputParameters(controlInputParameters: List<Any>) {
-        cdkBuilder.controlInputParameters(controlInputParameters)
+        cdkBuilder.controlInputParameters(controlInputParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

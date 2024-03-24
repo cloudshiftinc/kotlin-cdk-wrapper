@@ -697,7 +697,7 @@ public interface CfnDataSourceProps {
      * `DataSourceParameters` are automatically allowed.
      */
     override fun alternateDataSourceParameters(alternateDataSourceParameters: List<Any>) {
-      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters)
+      cdkBuilder.alternateDataSourceParameters(alternateDataSourceParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -826,7 +826,7 @@ public interface CfnDataSourceProps {
      * @param permissions A list of resource permissions on the data source.
      */
     override fun permissions(permissions: List<Any>) {
-      cdkBuilder.permissions(permissions)
+      cdkBuilder.permissions(permissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

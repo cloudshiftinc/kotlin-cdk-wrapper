@@ -260,7 +260,7 @@ public open class CfnServer(
    * Optional engine attributes on a specified server.
    */
   public open fun engineAttributes(`value`: List<Any>) {
-    unwrap(this).setEngineAttributes(`value`)
+    unwrap(this).setEngineAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1107,7 +1107,7 @@ public open class CfnServer(
      * @param engineAttributes Optional engine attributes on a specified server. 
      */
     override fun engineAttributes(engineAttributes: List<Any>) {
-      cdkBuilder.engineAttributes(engineAttributes)
+      cdkBuilder.engineAttributes(engineAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

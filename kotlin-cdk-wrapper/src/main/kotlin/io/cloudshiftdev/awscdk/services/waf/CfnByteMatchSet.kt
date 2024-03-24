@@ -105,7 +105,7 @@ public open class CfnByteMatchSet(
    * and other settings.
    */
   public open fun byteMatchTuples(`value`: List<Any>) {
-    unwrap(this).setByteMatchTuples(`value`)
+    unwrap(this).setByteMatchTuples(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -220,7 +220,7 @@ public open class CfnByteMatchSet(
      * you want AWS WAF to search, and other settings. 
      */
     override fun byteMatchTuples(byteMatchTuples: List<Any>) {
-      cdkBuilder.byteMatchTuples(byteMatchTuples)
+      cdkBuilder.byteMatchTuples(byteMatchTuples.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

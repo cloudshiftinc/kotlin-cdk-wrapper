@@ -195,7 +195,7 @@ public open class CfnEntity(
    * An object that maps strings to the components in the entity.
    */
   public open fun components(`value`: Map<String, Any>) {
-    unwrap(this).setComponents(`value`)
+    unwrap(this).setComponents(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -214,7 +214,7 @@ public open class CfnEntity(
    * Maps string to `compositeComponent` updates in the request.
    */
   public open fun compositeComponents(`value`: Map<String, Any>) {
-    unwrap(this).setCompositeComponents(`value`)
+    unwrap(this).setCompositeComponents(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -441,7 +441,7 @@ public open class CfnEntity(
      * @param components An object that maps strings to the components in the entity. 
      */
     override fun components(components: Map<String, Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -465,7 +465,7 @@ public open class CfnEntity(
      * @param compositeComponents Maps string to `compositeComponent` updates in the request. 
      */
     override fun compositeComponents(compositeComponents: Map<String, Any>) {
-      cdkBuilder.compositeComponents(compositeComponents)
+      cdkBuilder.compositeComponents(compositeComponents.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -772,7 +772,7 @@ public open class CfnEntity(
        * Each string in the mapping must be unique to this object.
        */
       override fun properties(properties: Map<String, Any>) {
-        cdkBuilder.properties(properties)
+        cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -790,7 +790,7 @@ public open class CfnEntity(
        * Each string in the mapping must be unique to this object.
        */
       override fun propertyGroups(propertyGroups: Map<String, Any>) {
-        cdkBuilder.propertyGroups(propertyGroups)
+        cdkBuilder.propertyGroups(propertyGroups.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -1108,7 +1108,7 @@ public open class CfnEntity(
        * Each string in the mapping must be unique to this component.
        */
       override fun properties(properties: Map<String, Any>) {
-        cdkBuilder.properties(properties)
+        cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -1122,7 +1122,7 @@ public open class CfnEntity(
        * @param propertyGroups The property groups.
        */
       override fun propertyGroups(propertyGroups: Map<String, Any>) {
-        cdkBuilder.propertyGroups(propertyGroups)
+        cdkBuilder.propertyGroups(propertyGroups.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -1379,7 +1379,7 @@ public open class CfnEntity(
        * @param allowedValues The allowed values.
        */
       override fun allowedValues(allowedValues: List<Any>) {
-        cdkBuilder.allowedValues(allowedValues)
+        cdkBuilder.allowedValues(allowedValues.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1720,7 +1720,7 @@ public open class CfnEntity(
        * @param listValue A list of multiple values.
        */
       override fun listValue(listValue: List<Any>) {
-        cdkBuilder.listValue(listValue)
+        cdkBuilder.listValue(listValue.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1746,7 +1746,7 @@ public open class CfnEntity(
        * @param mapValue An object that maps strings to multiple DataValue objects.
        */
       override fun mapValue(mapValue: Map<String, Any>) {
-        cdkBuilder.mapValue(mapValue)
+        cdkBuilder.mapValue(mapValue.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**

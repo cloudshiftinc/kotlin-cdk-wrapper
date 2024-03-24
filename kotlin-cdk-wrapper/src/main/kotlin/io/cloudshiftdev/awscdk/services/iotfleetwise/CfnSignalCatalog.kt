@@ -236,7 +236,7 @@ public open class CfnSignalCatalog(
    * (Optional) A list of information about nodes, which are a general abstraction of signals.
    */
   public open fun nodes(`value`: List<Any>) {
-    unwrap(this).setNodes(`value`)
+    unwrap(this).setNodes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -441,7 +441,7 @@ public open class CfnSignalCatalog(
      * signals. 
      */
     override fun nodes(nodes: List<Any>) {
-      cdkBuilder.nodes(nodes)
+      cdkBuilder.nodes(nodes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -195,7 +195,7 @@ public open class CfnAssessment(
    * The delegations that are associated with the assessment.
    */
   public open fun delegations(`value`: List<Any>) {
-    unwrap(this).setDelegations(`value`)
+    unwrap(this).setDelegations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -264,7 +264,7 @@ public open class CfnAssessment(
    * The roles that are associated with the assessment.
    */
   public open fun roles(`value`: List<Any>) {
-    unwrap(this).setRoles(`value`)
+    unwrap(this).setRoles(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -619,7 +619,7 @@ public open class CfnAssessment(
      * @param delegations The delegations that are associated with the assessment. 
      */
     override fun delegations(delegations: List<Any>) {
-      cdkBuilder.delegations(delegations)
+      cdkBuilder.delegations(delegations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -677,7 +677,7 @@ public open class CfnAssessment(
      * @param roles The roles that are associated with the assessment. 
      */
     override fun roles(roles: List<Any>) {
-      cdkBuilder.roles(roles)
+      cdkBuilder.roles(roles.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1741,7 +1741,7 @@ public open class CfnAssessment(
        * @param awsAccounts The AWS accounts that are included in the scope of the assessment.
        */
       override fun awsAccounts(awsAccounts: List<Any>) {
-        cdkBuilder.awsAccounts(awsAccounts)
+        cdkBuilder.awsAccounts(awsAccounts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1760,7 +1760,7 @@ public open class CfnAssessment(
        * @param awsServices The AWS services that are included in the scope of the assessment.
        */
       override fun awsServices(awsServices: List<Any>) {
-        cdkBuilder.awsServices(awsServices)
+        cdkBuilder.awsServices(awsServices.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

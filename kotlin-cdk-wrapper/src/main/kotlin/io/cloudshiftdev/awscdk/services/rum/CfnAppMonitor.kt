@@ -1086,7 +1086,7 @@ public open class CfnAppMonitor(
        * app monitor will send extended metrics to.
        */
       override fun metricDestinations(metricDestinations: List<Any>) {
-        cdkBuilder.metricDestinations(metricDestinations)
+        cdkBuilder.metricDestinations(metricDestinations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1862,7 +1862,7 @@ public open class CfnAppMonitor(
        * send.
        */
       override fun metricDefinitions(metricDefinitions: List<Any>) {
-        cdkBuilder.metricDefinitions(metricDefinitions)
+        cdkBuilder.metricDefinitions(metricDefinitions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

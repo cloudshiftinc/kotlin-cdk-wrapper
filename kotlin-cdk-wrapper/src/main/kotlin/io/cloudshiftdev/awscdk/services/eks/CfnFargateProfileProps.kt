@@ -222,7 +222,7 @@ public interface CfnFargateProfileProps {
      * specify `labels` for a `namespace` . You may specify up to five selectors in a Fargate profile.
      */
     override fun selectors(selectors: List<Any>) {
-      cdkBuilder.selectors(selectors)
+      cdkBuilder.selectors(selectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

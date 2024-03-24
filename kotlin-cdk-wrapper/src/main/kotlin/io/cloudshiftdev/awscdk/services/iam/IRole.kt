@@ -131,7 +131,8 @@ public interface IRole : IIdentity {
      * @param actions 
      */
     override fun grant(grantee: IPrincipal, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IPrincipal::unwrap), *actions).let(Grant::wrap)
+        unwrap(this).grant(grantee.let(IPrincipal::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Grant permissions to the given principal to assume this role.

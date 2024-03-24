@@ -245,7 +245,7 @@ public interface CfnRoutingProfileProps {
      * for this routing profile. 
      */
     override fun mediaConcurrencies(mediaConcurrencies: List<Any>) {
-      cdkBuilder.mediaConcurrencies(mediaConcurrencies)
+      cdkBuilder.mediaConcurrencies(mediaConcurrencies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -275,7 +275,7 @@ public interface CfnRoutingProfileProps {
      * If no queue is added, the agent can make only outbound calls.
      */
     override fun queueConfigs(queueConfigs: List<Any>) {
-      cdkBuilder.queueConfigs(queueConfigs)
+      cdkBuilder.queueConfigs(queueConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

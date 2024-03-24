@@ -291,7 +291,7 @@ public interface CfnAccessEntryProps {
      * @param accessPolicies The access policies to associate to the access entry.
      */
     override fun accessPolicies(accessPolicies: List<Any>) {
-      cdkBuilder.accessPolicies(accessPolicies)
+      cdkBuilder.accessPolicies(accessPolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

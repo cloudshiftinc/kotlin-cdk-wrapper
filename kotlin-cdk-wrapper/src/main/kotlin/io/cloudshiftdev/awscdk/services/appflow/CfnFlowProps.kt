@@ -583,7 +583,7 @@ public interface CfnFlowProps {
      * data in the destination connector. 
      */
     override fun destinationFlowConfigList(destinationFlowConfigList: List<Any>) {
-      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList)
+      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -710,7 +710,7 @@ public interface CfnFlowProps {
      * flow run. 
      */
     override fun tasks(tasks: List<Any>) {
-      cdkBuilder.tasks(tasks)
+      cdkBuilder.tasks(tasks.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

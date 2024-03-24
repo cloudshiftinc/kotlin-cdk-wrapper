@@ -134,7 +134,7 @@ public open class CfnWorkteam(
    * up the work team.
    */
   public open fun memberDefinitions(`value`: List<Any>) {
-    unwrap(this).setMemberDefinitions(`value`)
+    unwrap(this).setMemberDefinitions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -383,7 +383,7 @@ public open class CfnWorkteam(
      * identify the workers that make up the work team. 
      */
     override fun memberDefinitions(memberDefinitions: List<Any>) {
-      cdkBuilder.memberDefinitions(memberDefinitions)
+      cdkBuilder.memberDefinitions(memberDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

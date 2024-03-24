@@ -223,7 +223,7 @@ public interface CfnEventTypeProps {
      * @param entityTypes The event type entity types. 
      */
     override fun entityTypes(entityTypes: List<Any>) {
-      cdkBuilder.entityTypes(entityTypes)
+      cdkBuilder.entityTypes(entityTypes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -242,7 +242,7 @@ public interface CfnEventTypeProps {
      * @param eventVariables The event type event variables. 
      */
     override fun eventVariables(eventVariables: List<Any>) {
-      cdkBuilder.eventVariables(eventVariables)
+      cdkBuilder.eventVariables(eventVariables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -262,7 +262,7 @@ public interface CfnEventTypeProps {
      * @param labels The event type labels. 
      */
     override fun labels(labels: List<Any>) {
-      cdkBuilder.labels(labels)
+      cdkBuilder.labels(labels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

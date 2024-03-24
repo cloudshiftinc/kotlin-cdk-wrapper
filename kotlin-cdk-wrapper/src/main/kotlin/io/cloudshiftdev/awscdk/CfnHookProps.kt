@@ -65,7 +65,7 @@ public interface CfnHookProps {
      * @param properties The properties of the hook.
      */
     override fun properties(properties: Map<String, Any>) {
-      cdkBuilder.properties(properties)
+      cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

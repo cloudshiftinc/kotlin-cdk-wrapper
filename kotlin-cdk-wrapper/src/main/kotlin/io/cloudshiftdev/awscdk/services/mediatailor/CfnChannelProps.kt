@@ -324,7 +324,7 @@ public interface CfnChannelProps {
      * @param outputs The channel's output properties. 
      */
     override fun outputs(outputs: List<Any>) {
-      cdkBuilder.outputs(outputs)
+      cdkBuilder.outputs(outputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

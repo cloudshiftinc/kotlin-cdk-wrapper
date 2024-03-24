@@ -228,7 +228,7 @@ public interface CfnTargetGroupProps {
      * @param targets Describes a target.
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

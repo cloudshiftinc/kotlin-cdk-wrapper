@@ -173,7 +173,7 @@ public interface CfnServerlessClusterProps {
      * @param vpcConfigs the value to be set. 
      */
     override fun vpcConfigs(vpcConfigs: List<Any>) {
-      cdkBuilder.vpcConfigs(vpcConfigs)
+      cdkBuilder.vpcConfigs(vpcConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

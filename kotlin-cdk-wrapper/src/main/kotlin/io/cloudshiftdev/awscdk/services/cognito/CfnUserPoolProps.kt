@@ -1258,7 +1258,7 @@ public interface CfnUserPoolProps {
      * an existing schema attribute.
      */
     override fun schema(schema: List<Any>) {
-      cdkBuilder.schema(schema)
+      cdkBuilder.schema(schema.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -886,7 +886,7 @@ public open class CfnEnvironment(
        * 2.0 compliant identity provider (IdP) documentation for details.
        */
       override fun attributeMap(attributeMap: List<Any>) {
-        cdkBuilder.attributeMap(attributeMap)
+        cdkBuilder.attributeMap(attributeMap.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

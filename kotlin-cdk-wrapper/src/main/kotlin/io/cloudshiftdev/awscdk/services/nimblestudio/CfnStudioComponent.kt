@@ -191,7 +191,7 @@ public open class CfnStudioComponent(
    * Initialization scripts for studio components.
    */
   public open fun initializationScripts(`value`: List<Any>) {
-    unwrap(this).setInitializationScripts(`value`)
+    unwrap(this).setInitializationScripts(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnStudioComponent(
    * Parameters for the studio component scripts.
    */
   public open fun scriptParameters(`value`: List<Any>) {
-    unwrap(this).setScriptParameters(`value`)
+    unwrap(this).setScriptParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -587,7 +587,7 @@ public open class CfnStudioComponent(
      * @param initializationScripts Initialization scripts for studio components. 
      */
     override fun initializationScripts(initializationScripts: List<Any>) {
-      cdkBuilder.initializationScripts(initializationScripts)
+      cdkBuilder.initializationScripts(initializationScripts.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -638,7 +638,7 @@ public open class CfnStudioComponent(
      * @param scriptParameters Parameters for the studio component scripts. 
      */
     override fun scriptParameters(scriptParameters: List<Any>) {
-      cdkBuilder.scriptParameters(scriptParameters)
+      cdkBuilder.scriptParameters(scriptParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -946,7 +946,7 @@ public open class CfnStudioComponent(
        * computer.
        */
       override fun computerAttributes(computerAttributes: List<Any>) {
-        cdkBuilder.computerAttributes(computerAttributes)
+        cdkBuilder.computerAttributes(computerAttributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

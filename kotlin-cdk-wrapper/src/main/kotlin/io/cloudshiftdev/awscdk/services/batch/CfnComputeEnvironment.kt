@@ -2375,7 +2375,7 @@ public open class CfnComputeEnvironment(
        * specify it.
        */
       override fun ec2Configuration(ec2Configuration: List<Any>) {
-        cdkBuilder.ec2Configuration(ec2Configuration)
+        cdkBuilder.ec2Configuration(ec2Configuration.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

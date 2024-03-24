@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.eks
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 
 /**
@@ -28,7 +29,8 @@ public open class EndpointAccess(
    * @param cidr CIDR blocks. 
    */
   public open fun onlyFrom(vararg cidr: String): EndpointAccess =
-      unwrap(this).onlyFrom(*cidr).let(EndpointAccess::wrap)
+      unwrap(this).onlyFrom(*cidr.map{CdkObjectWrappers.unwrap(it) as
+      String}.toTypedArray()).let(EndpointAccess::wrap)
 
   public companion object {
     public val PRIVATE: EndpointAccess =

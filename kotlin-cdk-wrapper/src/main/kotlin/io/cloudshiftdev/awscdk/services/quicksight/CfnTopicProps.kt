@@ -343,7 +343,7 @@ public interface CfnTopicProps {
      * @param dataSets The data sets that the topic is associated with.
      */
     override fun dataSets(dataSets: List<Any>) {
-      cdkBuilder.dataSets(dataSets)
+      cdkBuilder.dataSets(dataSets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

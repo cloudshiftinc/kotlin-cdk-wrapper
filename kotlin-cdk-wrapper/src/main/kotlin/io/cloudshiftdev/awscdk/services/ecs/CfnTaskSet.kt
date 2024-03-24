@@ -172,7 +172,7 @@ public open class CfnTaskSet(
    * A load balancer object representing the load balancer to use with the task set.
    */
   public open fun loadBalancers(`value`: List<Any>) {
-    unwrap(this).setLoadBalancers(`value`)
+    unwrap(this).setLoadBalancers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -278,7 +278,7 @@ public open class CfnTaskSet(
    * The details of the service discovery registries to assign to this task set.
    */
   public open fun serviceRegistries(`value`: List<Any>) {
-    unwrap(this).setServiceRegistries(`value`)
+    unwrap(this).setServiceRegistries(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -634,7 +634,7 @@ public open class CfnTaskSet(
      * task set. 
      */
     override fun loadBalancers(loadBalancers: List<Any>) {
-      cdkBuilder.loadBalancers(loadBalancers)
+      cdkBuilder.loadBalancers(loadBalancers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -767,7 +767,7 @@ public open class CfnTaskSet(
      * task set. 
      */
     override fun serviceRegistries(serviceRegistries: List<Any>) {
-      cdkBuilder.serviceRegistries(serviceRegistries)
+      cdkBuilder.serviceRegistries(serviceRegistries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

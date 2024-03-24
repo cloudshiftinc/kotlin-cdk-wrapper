@@ -137,7 +137,7 @@ public open class CfnIdentityPool(
    * The Amazon Cognito user pools and their client IDs.
    */
   public open fun cognitoIdentityProviders(`value`: List<Any>) {
-    unwrap(this).setCognitoIdentityProviders(`value`)
+    unwrap(this).setCognitoIdentityProviders(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -557,7 +557,7 @@ public open class CfnIdentityPool(
      * @param cognitoIdentityProviders The Amazon Cognito user pools and their client IDs. 
      */
     override fun cognitoIdentityProviders(cognitoIdentityProviders: List<Any>) {
-      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders)
+      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -178,7 +179,8 @@ public open class Parallel(
    * @param branches 
    */
   public open fun branch(vararg branches: IChainable): Parallel =
-      unwrap(this).branch(*branches.map(IChainable::unwrap).toTypedArray()).let(Parallel::wrap)
+      unwrap(this).branch(*branches.map{CdkObjectWrappers.unwrap(it) as
+      software.amazon.awscdk.services.stepfunctions.IChainable}.toTypedArray()).let(Parallel::wrap)
 
   /**
    * Continuable states of this Chainable.
@@ -352,7 +354,7 @@ public open class Parallel(
      * effective result before ResultPath is applied. 
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

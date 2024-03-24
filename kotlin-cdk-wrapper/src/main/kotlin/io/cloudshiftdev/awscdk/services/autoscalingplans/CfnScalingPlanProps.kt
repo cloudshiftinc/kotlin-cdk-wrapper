@@ -196,7 +196,7 @@ public interface CfnScalingPlanProps {
      * @param scalingInstructions The scaling instructions. 
      */
     override fun scalingInstructions(scalingInstructions: List<Any>) {
-      cdkBuilder.scalingInstructions(scalingInstructions)
+      cdkBuilder.scalingInstructions(scalingInstructions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

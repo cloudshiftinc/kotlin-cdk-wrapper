@@ -751,7 +751,7 @@ public interface CfnApiProps {
      * @param methodSettings the value to be set.
      */
     override fun methodSettings(methodSettings: List<Any>) {
-      cdkBuilder.methodSettings(methodSettings)
+      cdkBuilder.methodSettings(methodSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

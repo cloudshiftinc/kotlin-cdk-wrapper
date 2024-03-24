@@ -152,7 +152,7 @@ public open class CfnExperiment(
    * or lower value for each metric is the goal.
    */
   public open fun metricGoals(`value`: List<Any>) {
-    unwrap(this).setMetricGoals(`value`)
+    unwrap(this).setMetricGoals(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -340,7 +340,7 @@ public open class CfnExperiment(
    * experiment.
    */
   public open fun treatments(`value`: List<Any>) {
-    unwrap(this).setTreatments(`value`)
+    unwrap(this).setTreatments(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -660,7 +660,7 @@ public open class CfnExperiment(
      * and whether a higher or lower value for each metric is the goal. 
      */
     override fun metricGoals(metricGoals: List<Any>) {
-      cdkBuilder.metricGoals(metricGoals)
+      cdkBuilder.metricGoals(metricGoals.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -911,7 +911,7 @@ public open class CfnExperiment(
      * variation used in the experiment. 
      */
     override fun treatments(treatments: List<Any>) {
-      cdkBuilder.treatments(treatments)
+      cdkBuilder.treatments(treatments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1312,7 +1312,7 @@ public open class CfnExperiment(
        * for a variation would allocate 20% of the experiment traffic to that variation.
        */
       override fun treatmentWeights(treatmentWeights: List<Any>) {
-        cdkBuilder.treatmentWeights(treatmentWeights)
+        cdkBuilder.treatmentWeights(treatmentWeights.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

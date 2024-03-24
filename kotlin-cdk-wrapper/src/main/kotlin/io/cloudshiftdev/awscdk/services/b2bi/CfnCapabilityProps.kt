@@ -217,7 +217,7 @@ public interface CfnCapabilityProps {
      * Each item contains the name of the bucket and the key, to identify the document's location.
      */
     override fun instructionsDocuments(instructionsDocuments: List<Any>) {
-      cdkBuilder.instructionsDocuments(instructionsDocuments)
+      cdkBuilder.instructionsDocuments(instructionsDocuments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -91,7 +91,7 @@ public open class CfnJobQueue(
    * The set of compute environments mapped to a job queue and their order relative to each other.
    */
   public open fun computeEnvironmentOrder(`value`: List<Any>) {
-    unwrap(this).setComputeEnvironmentOrder(`value`)
+    unwrap(this).setComputeEnvironmentOrder(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -353,7 +353,7 @@ public open class CfnJobQueue(
      * their order relative to each other. 
      */
     override fun computeEnvironmentOrder(computeEnvironmentOrder: List<Any>) {
-      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder)
+      cdkBuilder.computeEnvironmentOrder(computeEnvironmentOrder.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -2760,7 +2760,7 @@ public open class CfnConfigurationRecorder(
        * override.
        */
       override fun recordingModeOverrides(recordingModeOverrides: List<Any>) {
-        cdkBuilder.recordingModeOverrides(recordingModeOverrides)
+        cdkBuilder.recordingModeOverrides(recordingModeOverrides.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

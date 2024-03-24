@@ -552,7 +552,7 @@ public interface CfnConnectorProps {
      * specifying multiple plugins.
      */
     override fun plugins(plugins: List<Any>) {
-      cdkBuilder.plugins(plugins)
+      cdkBuilder.plugins(plugins.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

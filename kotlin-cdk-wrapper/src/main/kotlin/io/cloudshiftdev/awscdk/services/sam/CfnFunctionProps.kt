@@ -871,7 +871,7 @@ public interface CfnFunctionProps {
      * @param events the value to be set.
      */
     override fun events(events: Map<String, Any>) {
-      cdkBuilder.events(events)
+      cdkBuilder.events(events.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -885,7 +885,7 @@ public interface CfnFunctionProps {
      * @param fileSystemConfigs the value to be set.
      */
     override fun fileSystemConfigs(fileSystemConfigs: List<Any>) {
-      cdkBuilder.fileSystemConfigs(fileSystemConfigs)
+      cdkBuilder.fileSystemConfigs(fileSystemConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1040,7 +1040,7 @@ public interface CfnFunctionProps {
      * @param policies the value to be set.
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

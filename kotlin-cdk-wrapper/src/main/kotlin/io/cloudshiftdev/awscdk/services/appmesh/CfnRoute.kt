@@ -1154,7 +1154,7 @@ public open class CfnRoute(
        * a request matches the route. 
        */
       override fun weightedTargets(weightedTargets: List<Any>) {
-        cdkBuilder.weightedTargets(weightedTargets)
+        cdkBuilder.weightedTargets(weightedTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1316,7 +1316,7 @@ public open class CfnRoute(
        * @param metadata An object that represents the data to match from the request.
        */
       override fun metadata(metadata: List<Any>) {
-        cdkBuilder.metadata(metadata)
+        cdkBuilder.metadata(metadata.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3101,7 +3101,7 @@ public open class CfnRoute(
        * a request matches the route. 
        */
       override fun weightedTargets(weightedTargets: List<Any>) {
-        cdkBuilder.weightedTargets(weightedTargets)
+        cdkBuilder.weightedTargets(weightedTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3536,7 +3536,7 @@ public open class CfnRoute(
        * @param headers The client request headers to match on.
        */
       override fun headers(headers: List<Any>) {
-        cdkBuilder.headers(headers)
+        cdkBuilder.headers(headers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3603,7 +3603,7 @@ public open class CfnRoute(
        * @param queryParameters The client request query parameters to match on.
        */
       override fun queryParameters(queryParameters: List<Any>) {
-        cdkBuilder.queryParameters(queryParameters)
+        cdkBuilder.queryParameters(queryParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5064,7 +5064,7 @@ public open class CfnRoute(
        * a request matches the route. 
        */
       override fun weightedTargets(weightedTargets: List<Any>) {
-        cdkBuilder.weightedTargets(weightedTargets)
+        cdkBuilder.weightedTargets(weightedTargets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

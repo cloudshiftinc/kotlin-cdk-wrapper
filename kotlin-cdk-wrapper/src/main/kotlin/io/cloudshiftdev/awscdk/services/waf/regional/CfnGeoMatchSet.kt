@@ -92,7 +92,7 @@ public open class CfnGeoMatchSet(
    * search for.
    */
   public open fun geoMatchConstraints(`value`: List<Any>) {
-    unwrap(this).setGeoMatchConstraints(`value`)
+    unwrap(this).setGeoMatchConstraints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -197,7 +197,7 @@ public open class CfnGeoMatchSet(
      * country that you want AWS WAF to search for. 
      */
     override fun geoMatchConstraints(geoMatchConstraints: List<Any>) {
-      cdkBuilder.geoMatchConstraints(geoMatchConstraints)
+      cdkBuilder.geoMatchConstraints(geoMatchConstraints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

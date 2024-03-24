@@ -226,7 +226,7 @@ public open class CfnEndpoint(
    * creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` .
    */
   public open fun excludeRetainedVariantProperties(`value`: List<Any>) {
-    unwrap(this).setExcludeRetainedVariantProperties(`value`)
+    unwrap(this).setExcludeRetainedVariantProperties(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -641,7 +641,7 @@ public open class CfnEndpoint(
      * when creating new endpoint resources or when `RetainAllVariantProperties` is set to `false` . 
      */
     override fun excludeRetainedVariantProperties(excludeRetainedVariantProperties: List<Any>) {
-      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties)
+      cdkBuilder.excludeRetainedVariantProperties(excludeRetainedVariantProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -933,7 +933,7 @@ public open class CfnEndpoint(
        * If any alarms are tripped during a deployment, SageMaker rolls back the deployment.
        */
       override fun alarms(alarms: List<Any>) {
-        cdkBuilder.alarms(alarms)
+        cdkBuilder.alarms(alarms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

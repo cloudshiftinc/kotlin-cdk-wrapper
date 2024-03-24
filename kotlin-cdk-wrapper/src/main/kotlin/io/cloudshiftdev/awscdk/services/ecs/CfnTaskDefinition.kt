@@ -297,7 +297,7 @@ public open class CfnTaskDefinition(
    * up your task.
    */
   public open fun containerDefinitions(`value`: List<Any>) {
-    unwrap(this).setContainerDefinitions(`value`)
+    unwrap(this).setContainerDefinitions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -388,7 +388,7 @@ public open class CfnTaskDefinition(
    * The Elastic Inference accelerators to use for the containers in the task.
    */
   public open fun inferenceAccelerators(`value`: List<Any>) {
-    unwrap(this).setInferenceAccelerators(`value`)
+    unwrap(this).setInferenceAccelerators(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -470,7 +470,7 @@ public open class CfnTaskDefinition(
    * An array of placement constraint objects to use for tasks.
    */
   public open fun placementConstraints(`value`: List<Any>) {
-    unwrap(this).setPlacementConstraints(`value`)
+    unwrap(this).setPlacementConstraints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -605,7 +605,7 @@ public open class CfnTaskDefinition(
    * The list of data volume definitions for the task.
    */
   public open fun volumes(`value`: List<Any>) {
-    unwrap(this).setVolumes(`value`)
+    unwrap(this).setVolumes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1230,7 +1230,7 @@ public open class CfnTaskDefinition(
      * different containers that make up your task. 
      */
     override fun containerDefinitions(containerDefinitions: List<Any>) {
-      cdkBuilder.containerDefinitions(containerDefinitions)
+      cdkBuilder.containerDefinitions(containerDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1373,7 +1373,7 @@ public open class CfnTaskDefinition(
      * the task. 
      */
     override fun inferenceAccelerators(inferenceAccelerators: List<Any>) {
-      cdkBuilder.inferenceAccelerators(inferenceAccelerators)
+      cdkBuilder.inferenceAccelerators(inferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1566,7 +1566,7 @@ public open class CfnTaskDefinition(
      * @param placementConstraints An array of placement constraint objects to use for tasks. 
      */
     override fun placementConstraints(placementConstraints: List<Any>) {
-      cdkBuilder.placementConstraints(placementConstraints)
+      cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1813,7 +1813,7 @@ public open class CfnTaskDefinition(
      * @param volumes The list of data volume definitions for the task. 
      */
     override fun volumes(volumes: List<Any>) {
-      cdkBuilder.volumes(volumes)
+      cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -5014,7 +5014,7 @@ public open class CfnTaskDefinition(
        * on the on the GitHub website.
        */
       override fun dependsOn(dependsOn: List<Any>) {
-        cdkBuilder.dependsOn(dependsOn)
+        cdkBuilder.dependsOn(dependsOn.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5343,7 +5343,7 @@ public open class CfnTaskDefinition(
        * such as credential data.
        */
       override fun environment(environment: List<Any>) {
-        cdkBuilder.environment(environment)
+        cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5409,7 +5409,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun environmentFiles(environmentFiles: List<Any>) {
-        cdkBuilder.environmentFiles(environmentFiles)
+        cdkBuilder.environmentFiles(environmentFiles.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5509,7 +5509,7 @@ public open class CfnTaskDefinition(
        * network mode.
        */
       override fun extraHosts(extraHosts: List<Any>) {
-        cdkBuilder.extraHosts(extraHosts)
+        cdkBuilder.extraHosts(extraHosts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6004,7 +6004,7 @@ public open class CfnTaskDefinition(
        * across drives.
        */
       override fun mountPoints(mountPoints: List<Any>) {
-        cdkBuilder.mountPoints(mountPoints)
+        cdkBuilder.mountPoints(mountPoints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6107,7 +6107,7 @@ public open class CfnTaskDefinition(
        * responses.
        */
       override fun portMappings(portMappings: List<Any>) {
-        cdkBuilder.portMappings(portMappings)
+        cdkBuilder.portMappings(portMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6280,7 +6280,7 @@ public open class CfnTaskDefinition(
        * The only supported resource is a GPU.
        */
       override fun resourceRequirements(resourceRequirements: List<Any>) {
-        cdkBuilder.resourceRequirements(resourceRequirements)
+        cdkBuilder.resourceRequirements(resourceRequirements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6307,7 +6307,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun secrets(secrets: List<Any>) {
-        cdkBuilder.secrets(secrets)
+        cdkBuilder.secrets(secrets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6420,7 +6420,7 @@ public open class CfnTaskDefinition(
        * lived connections.
        */
       override fun systemControls(systemControls: List<Any>) {
-        cdkBuilder.systemControls(systemControls)
+        cdkBuilder.systemControls(systemControls.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6478,7 +6478,7 @@ public open class CfnTaskDefinition(
        * This parameter is not supported for Windows containers.
        */
       override fun ulimits(ulimits: List<Any>) {
-        cdkBuilder.ulimits(ulimits)
+        cdkBuilder.ulimits(ulimits.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6558,7 +6558,7 @@ public open class CfnTaskDefinition(
        * .
        */
       override fun volumesFrom(volumesFrom: List<Any>) {
-        cdkBuilder.volumesFrom(volumesFrom)
+        cdkBuilder.volumesFrom(volumesFrom.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10713,7 +10713,7 @@ public open class CfnTaskDefinition(
        * supported.
        */
       override fun devices(devices: List<Any>) {
-        cdkBuilder.devices(devices)
+        cdkBuilder.devices(devices.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10840,7 +10840,7 @@ public open class CfnTaskDefinition(
        * supported.
        */
       override fun tmpfs(tmpfs: List<Any>) {
-        cdkBuilder.tmpfs(tmpfs)
+        cdkBuilder.tmpfs(tmpfs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -11232,7 +11232,7 @@ public open class CfnTaskDefinition(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun secretOptions(secretOptions: List<Any>) {
-        cdkBuilder.secretOptions(secretOptions)
+        cdkBuilder.secretOptions(secretOptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -12357,7 +12357,7 @@ public open class CfnTaskDefinition(
        * ignored and not redirected to the `ProxyEgressPort` . It can be an empty list.
        */
       override fun proxyConfigurationProperties(proxyConfigurationProperties: List<Any>) {
-        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties)
+        cdkBuilder.proxyConfigurationProperties(proxyConfigurationProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

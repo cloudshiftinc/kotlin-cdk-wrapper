@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -68,7 +69,8 @@ public open class Policy(
    * @param statement 
    */
   public open fun addStatements(vararg statement: PolicyStatement) {
-    unwrap(this).addStatements(*statement.map(PolicyStatement::unwrap).toTypedArray())
+    unwrap(this).addStatements(*statement.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.iam.PolicyStatement}.toTypedArray())
   }
 
   /**

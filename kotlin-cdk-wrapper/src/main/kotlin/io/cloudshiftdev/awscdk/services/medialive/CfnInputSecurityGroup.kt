@@ -122,7 +122,7 @@ public open class CfnInputSecurityGroup(
    * The list of IPv4 CIDR addresses to include in the input security group as "allowed" addresses.
    */
   public open fun whitelistRules(`value`: List<Any>) {
-    unwrap(this).setWhitelistRules(`value`)
+    unwrap(this).setWhitelistRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -216,7 +216,7 @@ public open class CfnInputSecurityGroup(
      * as "allowed" addresses. 
      */
     override fun whitelistRules(whitelistRules: List<Any>) {
-      cdkBuilder.whitelistRules(whitelistRules)
+      cdkBuilder.whitelistRules(whitelistRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -166,7 +166,7 @@ public open class CfnTopic(
    * protocols:.
    */
   public open fun deliveryStatusLogging(`value`: List<Any>) {
-    unwrap(this).setDeliveryStatusLogging(`value`)
+    unwrap(this).setDeliveryStatusLogging(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -261,7 +261,7 @@ public open class CfnTopic(
    * The Amazon SNS subscriptions (endpoints) for this topic.
    */
   public open fun subscription(`value`: List<Any>) {
-    unwrap(this).setSubscription(`value`)
+    unwrap(this).setSubscription(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -723,7 +723,7 @@ public open class CfnTopic(
      * following supported delivery protocols:. 
      */
     override fun deliveryStatusLogging(deliveryStatusLogging: List<Any>) {
-      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging)
+      cdkBuilder.deliveryStatusLogging(deliveryStatusLogging.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -846,7 +846,7 @@ public open class CfnTopic(
      * @param subscription The Amazon SNS subscriptions (endpoints) for this topic. 
      */
     override fun subscription(subscription: List<Any>) {
-      cdkBuilder.subscription(subscription)
+      cdkBuilder.subscription(subscription.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

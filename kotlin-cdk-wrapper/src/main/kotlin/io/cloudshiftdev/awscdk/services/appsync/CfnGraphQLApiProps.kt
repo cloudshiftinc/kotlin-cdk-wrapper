@@ -565,7 +565,7 @@ public interface CfnGraphQLApiProps {
      * the `GraphqlApi` API.
      */
     override fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>) {
-      cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders)
+      cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

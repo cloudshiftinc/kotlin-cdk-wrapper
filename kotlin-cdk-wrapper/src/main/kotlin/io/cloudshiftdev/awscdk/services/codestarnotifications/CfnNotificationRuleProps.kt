@@ -337,7 +337,7 @@ public interface CfnNotificationRuleProps {
      * clients to associate with the notification rule. 
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

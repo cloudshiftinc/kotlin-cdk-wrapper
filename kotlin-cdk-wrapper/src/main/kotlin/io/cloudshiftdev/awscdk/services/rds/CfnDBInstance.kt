@@ -284,7 +284,7 @@ public open class CfnDBInstance(
    * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
    */
   public open fun associatedRoles(`value`: List<Any>) {
-    unwrap(this).setAssociatedRoles(`value`)
+    unwrap(this).setAssociatedRoles(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1203,7 +1203,7 @@ public open class CfnDBInstance(
    * instance.
    */
   public open fun processorFeatures(`value`: List<Any>) {
-    unwrap(this).setProcessorFeatures(`value`)
+    unwrap(this).setProcessorFeatures(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -3912,7 +3912,7 @@ public open class CfnDBInstance(
      * DB instance. 
      */
     override fun associatedRoles(associatedRoles: List<Any>) {
-      cdkBuilder.associatedRoles(associatedRoles)
+      cdkBuilder.associatedRoles(associatedRoles.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -5708,7 +5708,7 @@ public open class CfnDBInstance(
      * DB instance class of the DB instance. 
      */
     override fun processorFeatures(processorFeatures: List<Any>) {
-      cdkBuilder.processorFeatures(processorFeatures)
+      cdkBuilder.processorFeatures(processorFeatures.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

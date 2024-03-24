@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Map
@@ -25,7 +26,7 @@ public open class SamlPrincipal(
 ) : FederatedPrincipal(cdkObject) {
   public constructor(samlProvider: ISamlProvider, conditions: Map<String, Any>) :
       this(software.amazon.awscdk.services.iam.SamlPrincipal(samlProvider.let(ISamlProvider::unwrap),
-      conditions)
+      conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 
   public companion object {

@@ -271,7 +271,7 @@ public interface CfnPipelineProps {
      * @param parameterObjects The parameter objects used with the pipeline.
      */
     override fun parameterObjects(parameterObjects: List<Any>) {
-      cdkBuilder.parameterObjects(parameterObjects)
+      cdkBuilder.parameterObjects(parameterObjects.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -291,7 +291,7 @@ public interface CfnPipelineProps {
      * @param parameterValues The parameter values used with the pipeline.
      */
     override fun parameterValues(parameterValues: List<Any>) {
-      cdkBuilder.parameterValues(parameterValues)
+      cdkBuilder.parameterValues(parameterValues.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -319,7 +319,7 @@ public interface CfnPipelineProps {
      * in the *AWS Data Pipeline Developer Guide* .
      */
     override fun pipelineObjects(pipelineObjects: List<Any>) {
-      cdkBuilder.pipelineObjects(pipelineObjects)
+      cdkBuilder.pipelineObjects(pipelineObjects.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

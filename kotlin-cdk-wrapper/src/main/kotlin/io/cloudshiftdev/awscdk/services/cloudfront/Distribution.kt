@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cloudfront
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.certificatemanager.ICertificate
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
@@ -127,7 +128,8 @@ public open class Distribution(
    * @param actions The set of actions to allow (i.e. "cloudfront:ListInvalidations"). 
    */
   public override fun grant(identity: IGrantable, vararg actions: String): Grant =
-      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(identity.let(IGrantable::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant to create invalidations for this bucket to an IAM principal (Role/Group/User).

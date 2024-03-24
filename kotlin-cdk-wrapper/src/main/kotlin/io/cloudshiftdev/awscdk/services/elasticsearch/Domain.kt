@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.SecretValue
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.ec2.Connections
@@ -15,7 +16,6 @@ import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
-import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -25,7 +25,9 @@ import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
+import io.cloudshiftdev.awscdk.services.iam.PolicyStatement as CloudshiftdevAwscdkServicesIamPolicyStatement
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.amazon.awscdk.services.iam.PolicyStatement as AmazonAwscdkServicesIamPolicyStatement
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
@@ -77,8 +79,10 @@ public open class Domain(
    * @param accessPolicyStatements 
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun addAccessPolicies(vararg accessPolicyStatements: PolicyStatement) {
-    unwrap(this).addAccessPolicies(*accessPolicyStatements.map(PolicyStatement::unwrap).toTypedArray())
+  public open fun addAccessPolicies(vararg
+      accessPolicyStatements: CloudshiftdevAwscdkServicesIamPolicyStatement) {
+    unwrap(this).addAccessPolicies(*accessPolicyStatements.map{CdkObjectWrappers.unwrap(it) as
+        AmazonAwscdkServicesIamPolicyStatement}.toTypedArray())
   }
 
   /**
@@ -90,8 +94,10 @@ public open class Domain(
   @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("6e90405b47e9f3a2cae6574b6735d0a2154075d115d5b9b89af33d54588dd0dd")
-  public open fun addAccessPolicies(accessPolicyStatements: PolicyStatement.Builder.() -> Unit):
-      Unit = addAccessPolicies(PolicyStatement(accessPolicyStatements))
+  public open
+      fun addAccessPolicies(accessPolicyStatements: CloudshiftdevAwscdkServicesIamPolicyStatement.Builder.() -> Unit):
+      Unit =
+      addAccessPolicies(CloudshiftdevAwscdkServicesIamPolicyStatement(accessPolicyStatements))
 
   /**
    * (deprecated) Log group that application logs are logged to.
@@ -897,7 +903,7 @@ public open class Domain(
      * @param accessPolicies Domain Access policies. 
      */
     @Deprecated(message = "deprecated in CDK")
-    public fun accessPolicies(accessPolicies: List<PolicyStatement>)
+    public fun accessPolicies(accessPolicies: List<CloudshiftdevAwscdkServicesIamPolicyStatement>)
 
     /**
      * (deprecated) Domain Access policies.
@@ -908,7 +914,7 @@ public open class Domain(
      * @param accessPolicies Domain Access policies. 
      */
     @Deprecated(message = "deprecated in CDK")
-    public fun accessPolicies(vararg accessPolicies: PolicyStatement)
+    public fun accessPolicies(vararg accessPolicies: CloudshiftdevAwscdkServicesIamPolicyStatement)
 
     /**
      * (deprecated) Additional options to specify for the Amazon ES domain.
@@ -1361,8 +1367,9 @@ public open class Domain(
      * @param accessPolicies Domain Access policies. 
      */
     @Deprecated(message = "deprecated in CDK")
-    override fun accessPolicies(accessPolicies: List<PolicyStatement>) {
-      cdkBuilder.accessPolicies(accessPolicies.map(PolicyStatement::unwrap))
+    override
+        fun accessPolicies(accessPolicies: List<CloudshiftdevAwscdkServicesIamPolicyStatement>) {
+      cdkBuilder.accessPolicies(accessPolicies.map(CloudshiftdevAwscdkServicesIamPolicyStatement::unwrap))
     }
 
     /**
@@ -1374,7 +1381,8 @@ public open class Domain(
      * @param accessPolicies Domain Access policies. 
      */
     @Deprecated(message = "deprecated in CDK")
-    override fun accessPolicies(vararg accessPolicies: PolicyStatement): Unit =
+    override fun accessPolicies(vararg
+        accessPolicies: CloudshiftdevAwscdkServicesIamPolicyStatement): Unit =
         accessPolicies(accessPolicies.toList())
 
     /**

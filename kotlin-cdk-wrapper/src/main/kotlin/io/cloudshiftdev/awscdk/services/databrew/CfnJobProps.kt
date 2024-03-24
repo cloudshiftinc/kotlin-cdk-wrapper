@@ -576,7 +576,7 @@ public interface CfnJobProps {
      * output from running the job.
      */
     override fun dataCatalogOutputs(dataCatalogOutputs: List<Any>) {
-      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs)
+      cdkBuilder.dataCatalogOutputs(dataCatalogOutputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -599,7 +599,7 @@ public interface CfnJobProps {
      * output destination for a DataBrew recipe job to write into.
      */
     override fun databaseOutputs(databaseOutputs: List<Any>) {
-      cdkBuilder.databaseOutputs(databaseOutputs)
+      cdkBuilder.databaseOutputs(databaseOutputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -728,7 +728,7 @@ public interface CfnJobProps {
      * @param outputs One or more artifacts that represent output from running the job.
      */
     override fun outputs(outputs: List<Any>) {
-      cdkBuilder.outputs(outputs)
+      cdkBuilder.outputs(outputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -847,7 +847,7 @@ public interface CfnJobProps {
      * profile job.
      */
     override fun validationConfigurations(validationConfigurations: List<Any>) {
-      cdkBuilder.validationConfigurations(validationConfigurations)
+      cdkBuilder.validationConfigurations(validationConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

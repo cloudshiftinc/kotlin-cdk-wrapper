@@ -438,7 +438,7 @@ public interface CfnJobTemplateProps {
      * in the *AWS Elemental MediaConvert User Guide* .
      */
     override fun hopDestinations(hopDestinations: List<Any>) {
-      cdkBuilder.hopDestinations(hopDestinations)
+      cdkBuilder.hopDestinations(hopDestinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

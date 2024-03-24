@@ -237,7 +237,7 @@ public interface CfnDetectorProps {
      * @param features A list of features that will be configured for the detector.
      */
     override fun features(features: List<Any>) {
-      cdkBuilder.features(features)
+      cdkBuilder.features(features.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

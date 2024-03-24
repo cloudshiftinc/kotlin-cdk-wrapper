@@ -106,7 +106,7 @@ public open class CfnPermissionSet(
    * permission set.
    */
   public open fun customerManagedPolicyReferences(`value`: List<Any>) {
-    unwrap(this).setCustomerManagedPolicyReferences(`value`)
+    unwrap(this).setCustomerManagedPolicyReferences(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -502,7 +502,7 @@ public open class CfnPermissionSet(
      * policies that you have attached to your permission set. 
      */
     override fun customerManagedPolicyReferences(customerManagedPolicyReferences: List<Any>) {
-      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences)
+      cdkBuilder.customerManagedPolicyReferences(customerManagedPolicyReferences.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

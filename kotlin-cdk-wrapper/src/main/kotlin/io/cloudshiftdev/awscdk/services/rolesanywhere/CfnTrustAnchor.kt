@@ -143,7 +143,7 @@ public open class CfnTrustAnchor(
    * A list of notification settings to be associated to the trust anchor.
    */
   public open fun notificationSettings(`value`: List<Any>) {
-    unwrap(this).setNotificationSettings(`value`)
+    unwrap(this).setNotificationSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -357,7 +357,7 @@ public open class CfnTrustAnchor(
      * anchor. 
      */
     override fun notificationSettings(notificationSettings: List<Any>) {
-      cdkBuilder.notificationSettings(notificationSettings)
+      cdkBuilder.notificationSettings(notificationSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

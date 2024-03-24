@@ -212,7 +212,7 @@ public open class CfnPipeline(
    * A mapping of `artifactStore` objects and their corresponding AWS Regions.
    */
   public open fun artifactStores(`value`: List<Any>) {
-    unwrap(this).setArtifactStores(`value`)
+    unwrap(this).setArtifactStores(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -251,7 +251,7 @@ public open class CfnPipeline(
    * Represents the input of a `DisableStageTransition` action.
    */
   public open fun disableInboundStageTransitions(`value`: List<Any>) {
-    unwrap(this).setDisableInboundStageTransitions(`value`)
+    unwrap(this).setDisableInboundStageTransitions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -356,7 +356,7 @@ public open class CfnPipeline(
    * Represents information about a stage and its definition.
    */
   public open fun stages(`value`: List<Any>) {
-    unwrap(this).setStages(`value`)
+    unwrap(this).setStages(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -406,7 +406,7 @@ public open class CfnPipeline(
    * pipeline.
    */
   public open fun triggers(`value`: List<Any>) {
-    unwrap(this).setTriggers(`value`)
+    unwrap(this).setTriggers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -431,7 +431,7 @@ public open class CfnPipeline(
    * A list that defines the pipeline variables for a pipeline resource.
    */
   public open fun variables(`value`: List<Any>) {
-    unwrap(this).setVariables(`value`)
+    unwrap(this).setVariables(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -846,7 +846,7 @@ public open class CfnPipeline(
      * Regions. 
      */
     override fun artifactStores(artifactStores: List<Any>) {
-      cdkBuilder.artifactStores(artifactStores)
+      cdkBuilder.artifactStores(artifactStores.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -886,7 +886,7 @@ public open class CfnPipeline(
      * action. 
      */
     override fun disableInboundStageTransitions(disableInboundStageTransitions: List<Any>) {
-      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions)
+      cdkBuilder.disableInboundStageTransitions(disableInboundStageTransitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1004,7 +1004,7 @@ public open class CfnPipeline(
      * @param stages Represents information about a stage and its definition. 
      */
     override fun stages(stages: List<Any>) {
-      cdkBuilder.stages(stages)
+      cdkBuilder.stages(stages.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1064,7 +1064,7 @@ public open class CfnPipeline(
      * starts the pipeline. 
      */
     override fun triggers(triggers: List<Any>) {
-      cdkBuilder.triggers(triggers)
+      cdkBuilder.triggers(triggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1105,7 +1105,7 @@ public open class CfnPipeline(
      * @param variables A list that defines the pipeline variables for a pipeline resource. 
      */
     override fun variables(variables: List<Any>) {
-      cdkBuilder.variables(variables)
+      cdkBuilder.variables(variables.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1535,7 +1535,7 @@ public open class CfnPipeline(
        * in the *AWS CodePipeline User Guide* .
        */
       override fun inputArtifacts(inputArtifacts: List<Any>) {
-        cdkBuilder.inputArtifacts(inputArtifacts)
+        cdkBuilder.inputArtifacts(inputArtifacts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1594,7 +1594,7 @@ public open class CfnPipeline(
        * the *AWS CodePipeline User Guide* .
        */
       override fun outputArtifacts(outputArtifacts: List<Any>) {
-        cdkBuilder.outputArtifacts(outputArtifacts)
+        cdkBuilder.outputArtifacts(outputArtifacts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2977,7 +2977,7 @@ public open class CfnPipeline(
        * specified as pull requests.
        */
       override fun pullRequest(pullRequest: List<Any>) {
-        cdkBuilder.pullRequest(pullRequest)
+        cdkBuilder.pullRequest(pullRequest.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2999,7 +2999,7 @@ public open class CfnPipeline(
        * pushing Git tags, is specified with details.
        */
       override fun push(push: List<Any>) {
-        cdkBuilder.push(push)
+        cdkBuilder.push(push.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4353,7 +4353,7 @@ public open class CfnPipeline(
        * @param actions The actions included in a stage. 
        */
       override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
+        cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4372,7 +4372,7 @@ public open class CfnPipeline(
        * @param blockers Reserved for future use.
        */
       override fun blockers(blockers: List<Any>) {
-        cdkBuilder.blockers(blockers)
+        cdkBuilder.blockers(blockers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

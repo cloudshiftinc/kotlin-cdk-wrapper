@@ -363,7 +363,7 @@ public open class CfnScalingPolicy(
    * A set of adjustments that enable you to scale based on the size of the alarm breach.
    */
   public open fun stepAdjustments(`value`: List<Any>) {
-    unwrap(this).setStepAdjustments(`value`)
+    unwrap(this).setStepAdjustments(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -916,7 +916,7 @@ public open class CfnScalingPolicy(
      * alarm breach. 
      */
     override fun stepAdjustments(stepAdjustments: List<Any>) {
-      cdkBuilder.stepAdjustments(stepAdjustments)
+      cdkBuilder.stepAdjustments(stepAdjustments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1199,7 +1199,7 @@ public open class CfnScalingPolicy(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1959,7 +1959,7 @@ public open class CfnScalingPolicy(
        * dimensions in your scaling policy.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2885,7 +2885,7 @@ public open class CfnScalingPolicy(
        * and one load metric.
        */
       override fun metricSpecifications(metricSpecifications: List<Any>) {
-        cdkBuilder.metricSpecifications(metricSpecifications)
+        cdkBuilder.metricSpecifications(metricSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3128,7 +3128,7 @@ public open class CfnScalingPolicy(
        * data.
        */
       override fun metricDataQueries(metricDataQueries: List<Any>) {
-        cdkBuilder.metricDataQueries(metricDataQueries)
+        cdkBuilder.metricDataQueries(metricDataQueries.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3282,7 +3282,7 @@ public open class CfnScalingPolicy(
        * data.
        */
       override fun metricDataQueries(metricDataQueries: List<Any>) {
-        cdkBuilder.metricDataQueries(metricDataQueries)
+        cdkBuilder.metricDataQueries(metricDataQueries.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3437,7 +3437,7 @@ public open class CfnScalingPolicy(
        * data.
        */
       override fun metricDataQueries(metricDataQueries: List<Any>) {
-        cdkBuilder.metricDataQueries(metricDataQueries)
+        cdkBuilder.metricDataQueries(metricDataQueries.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

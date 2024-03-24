@@ -628,7 +628,7 @@ public interface CfnEndpointConfigProps {
      * want to host at this endpoint. 
      */
     override fun productionVariants(productionVariants: List<Any>) {
-      cdkBuilder.productionVariants(productionVariants)
+      cdkBuilder.productionVariants(productionVariants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -657,7 +657,7 @@ public interface CfnEndpointConfigProps {
      * `ShadowProductionVariants` .
      */
     override fun shadowProductionVariants(shadowProductionVariants: List<Any>) {
-      cdkBuilder.shadowProductionVariants(shadowProductionVariants)
+      cdkBuilder.shadowProductionVariants(shadowProductionVariants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

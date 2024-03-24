@@ -137,7 +137,7 @@ public open class CfnDistributionConfiguration(
    * objects.
    */
   public open fun distributions(`value`: List<Any>) {
-    unwrap(this).setDistributions(`value`)
+    unwrap(this).setDistributions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -285,7 +285,7 @@ public open class CfnDistributionConfiguration(
      * array of Distribution objects. 
      */
     override fun distributions(distributions: List<Any>) {
-      cdkBuilder.distributions(distributions)
+      cdkBuilder.distributions(distributions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1050,7 +1050,7 @@ public open class CfnDistributionConfiguration(
        * distribution.
        */
       override fun fastLaunchConfigurations(fastLaunchConfigurations: List<Any>) {
-        cdkBuilder.fastLaunchConfigurations(fastLaunchConfigurations)
+        cdkBuilder.fastLaunchConfigurations(fastLaunchConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1073,7 +1073,7 @@ public open class CfnDistributionConfiguration(
        * apply to image distribution for specified accounts.
        */
       override fun launchTemplateConfigurations(launchTemplateConfigurations: List<Any>) {
-        cdkBuilder.launchTemplateConfigurations(launchTemplateConfigurations)
+        cdkBuilder.launchTemplateConfigurations(launchTemplateConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -166,7 +166,7 @@ public open class CfnListener(
    * The default SSL server certificate for a secure listener.
    */
   public open fun certificates(`value`: List<Any>) {
-    unwrap(this).setCertificates(`value`)
+    unwrap(this).setCertificates(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -196,7 +196,7 @@ public open class CfnListener(
    * You cannot define a condition for a default rule.
    */
   public open fun defaultActions(`value`: List<Any>) {
-    unwrap(this).setDefaultActions(`value`)
+    unwrap(this).setDefaultActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -531,7 +531,7 @@ public open class CfnListener(
      * @param certificates The default SSL server certificate for a secure listener. 
      */
     override fun certificates(certificates: List<Any>) {
-      cdkBuilder.certificates(certificates)
+      cdkBuilder.certificates(certificates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -575,7 +575,7 @@ public open class CfnListener(
      * default rule. 
      */
     override fun defaultActions(defaultActions: List<Any>) {
-      cdkBuilder.defaultActions(defaultActions)
+      cdkBuilder.defaultActions(defaultActions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2506,7 +2506,7 @@ public open class CfnListener(
        * target groups in a forward rule.
        */
       override fun targetGroups(targetGroups: List<Any>) {
-        cdkBuilder.targetGroups(targetGroups)
+        cdkBuilder.targetGroups(targetGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

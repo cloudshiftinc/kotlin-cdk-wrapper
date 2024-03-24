@@ -90,7 +90,7 @@ public open class CfnChannel(
    * One or more event data stores to which events arriving through a channel will be logged.
    */
   public open fun destinations(`value`: List<Any>) {
-    unwrap(this).setDestinations(`value`)
+    unwrap(this).setDestinations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -254,7 +254,7 @@ public open class CfnChannel(
      * will be logged. 
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

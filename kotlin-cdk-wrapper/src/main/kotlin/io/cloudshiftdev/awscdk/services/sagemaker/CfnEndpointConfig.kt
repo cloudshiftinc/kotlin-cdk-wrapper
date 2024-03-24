@@ -369,7 +369,7 @@ public open class CfnEndpointConfig(
    * endpoint.
    */
   public open fun productionVariants(`value`: List<Any>) {
-    unwrap(this).setProductionVariants(`value`)
+    unwrap(this).setProductionVariants(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -395,7 +395,7 @@ public open class CfnEndpointConfig(
    * Array of `ProductionVariant` objects.
    */
   public open fun shadowProductionVariants(`value`: List<Any>) {
-    unwrap(this).setShadowProductionVariants(`value`)
+    unwrap(this).setShadowProductionVariants(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -934,7 +934,7 @@ public open class CfnEndpointConfig(
      * want to host at this endpoint. 
      */
     override fun productionVariants(productionVariants: List<Any>) {
-      cdkBuilder.productionVariants(productionVariants)
+      cdkBuilder.productionVariants(productionVariants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -975,7 +975,7 @@ public open class CfnEndpointConfig(
      * @param shadowProductionVariants Array of `ProductionVariant` objects. 
      */
     override fun shadowProductionVariants(shadowProductionVariants: List<Any>) {
-      cdkBuilder.shadowProductionVariants(shadowProductionVariants)
+      cdkBuilder.shadowProductionVariants(shadowProductionVariants.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -3840,7 +3840,7 @@ public open class CfnEndpointConfig(
        * output data from your model, or both. 
        */
       override fun captureOptions(captureOptions: List<Any>) {
-        cdkBuilder.captureOptions(captureOptions)
+        cdkBuilder.captureOptions(captureOptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

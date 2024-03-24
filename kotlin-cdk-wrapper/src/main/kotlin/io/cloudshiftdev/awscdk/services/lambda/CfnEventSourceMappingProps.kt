@@ -1069,7 +1069,7 @@ public interface CfnEventSourceMappingProps {
      * virtual host to secure and define your event source.
      */
     override fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>) {
-      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations)
+      cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

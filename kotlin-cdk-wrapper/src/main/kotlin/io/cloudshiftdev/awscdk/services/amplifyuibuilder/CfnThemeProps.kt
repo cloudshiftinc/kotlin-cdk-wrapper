@@ -182,7 +182,7 @@ public interface CfnThemeProps {
      * @param overrides Describes the properties that can be overriden to customize a theme.
      */
     override fun overrides(overrides: List<Any>) {
-      cdkBuilder.overrides(overrides)
+      cdkBuilder.overrides(overrides.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -208,7 +208,7 @@ public interface CfnThemeProps {
      * @param values A list of key-value pairs that defines the properties of the theme.
      */
     override fun values(values: List<Any>) {
-      cdkBuilder.values(values)
+      cdkBuilder.values(values.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

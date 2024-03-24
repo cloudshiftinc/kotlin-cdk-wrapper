@@ -248,7 +248,7 @@ public open class CfnHostedZone(
    * associated with the specified hosted zone.
    */
   public open fun vpcs(`value`: List<Any>) {
-    unwrap(this).setVpcs(`value`)
+    unwrap(this).setVpcs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1157,7 +1157,7 @@ public open class CfnHostedZone(
      * that are associated with the specified hosted zone. 
      */
     override fun vpcs(vpcs: List<Any>) {
-      cdkBuilder.vpcs(vpcs)
+      cdkBuilder.vpcs(vpcs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

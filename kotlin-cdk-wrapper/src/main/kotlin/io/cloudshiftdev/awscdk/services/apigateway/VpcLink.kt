@@ -4,11 +4,13 @@ package io.cloudshiftdev.awscdk.services.apigateway
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer as CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.amazon.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer as AmazonAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
@@ -63,8 +65,10 @@ public open class VpcLink(
   /**
    * @param targets 
    */
-  public open fun addTargets(vararg targets: INetworkLoadBalancer) {
-    unwrap(this).addTargets(*targets.map(INetworkLoadBalancer::unwrap).toTypedArray())
+  public open fun addTargets(vararg
+      targets: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer) {
+    unwrap(this).addTargets(*targets.map{CdkObjectWrappers.unwrap(it) as
+        AmazonAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer}.toTypedArray())
   }
 
   /**
@@ -95,7 +99,8 @@ public open class VpcLink(
      *
      * @param targets The network load balancers of the VPC targeted by the VPC link. 
      */
-    public fun targets(targets: List<INetworkLoadBalancer>)
+    public
+        fun targets(targets: List<CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer>)
 
     /**
      * The network load balancers of the VPC targeted by the VPC link.
@@ -106,7 +111,8 @@ public open class VpcLink(
      *
      * @param targets The network load balancers of the VPC targeted by the VPC link. 
      */
-    public fun targets(vararg targets: INetworkLoadBalancer)
+    public fun targets(vararg
+        targets: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer)
 
     /**
      * The name used to label and identify the VPC link.
@@ -145,8 +151,9 @@ public open class VpcLink(
      *
      * @param targets The network load balancers of the VPC targeted by the VPC link. 
      */
-    override fun targets(targets: List<INetworkLoadBalancer>) {
-      cdkBuilder.targets(targets.map(INetworkLoadBalancer::unwrap))
+    override
+        fun targets(targets: List<CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer>) {
+      cdkBuilder.targets(targets.map(CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer::unwrap))
     }
 
     /**
@@ -158,7 +165,9 @@ public open class VpcLink(
      *
      * @param targets The network load balancers of the VPC targeted by the VPC link. 
      */
-    override fun targets(vararg targets: INetworkLoadBalancer): Unit = targets(targets.toList())
+    override fun targets(vararg
+        targets: CloudshiftdevAwscdkServicesElasticloadbalancingv2INetworkLoadBalancer): Unit =
+        targets(targets.toList())
 
     /**
      * The name used to label and identify the VPC link.

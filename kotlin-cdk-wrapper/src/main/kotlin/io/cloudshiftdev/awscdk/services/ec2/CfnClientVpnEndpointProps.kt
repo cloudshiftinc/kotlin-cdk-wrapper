@@ -481,7 +481,7 @@ public interface CfnClientVpnEndpointProps {
      * authenticate clients. 
      */
     override fun authenticationOptions(authenticationOptions: List<Any>) {
-      cdkBuilder.authenticationOptions(authenticationOptions)
+      cdkBuilder.authenticationOptions(authenticationOptions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -708,7 +708,7 @@ public interface CfnClientVpnEndpointProps {
      * @param tagSpecifications The tags to apply to the Client VPN endpoint during creation.
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

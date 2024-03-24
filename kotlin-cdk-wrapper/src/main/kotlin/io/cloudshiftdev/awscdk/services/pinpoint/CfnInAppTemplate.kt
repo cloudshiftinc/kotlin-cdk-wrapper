@@ -148,7 +148,7 @@ public open class CfnInAppTemplate(
    * and body text, text colors, background colors, images, buttons, and behaviors.
    */
   public open fun content(`value`: List<Any>) {
-    unwrap(this).setContent(`value`)
+    unwrap(this).setContent(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -358,7 +358,7 @@ public open class CfnInAppTemplate(
      * behaviors. 
      */
     override fun content(content: List<Any>) {
-      cdkBuilder.content(content)
+      cdkBuilder.content(content.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -123,7 +123,7 @@ public open class CfnRateBasedRule(
    * `SqlInjectionMatchSet&gt;` object that you want to include in a `RateBasedRule` .
    */
   public open fun matchPredicates(`value`: List<Any>) {
-    unwrap(this).setMatchPredicates(`value`)
+    unwrap(this).setMatchPredicates(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnRateBasedRule(
      * `RateBasedRule` . 
      */
     override fun matchPredicates(matchPredicates: List<Any>) {
-      cdkBuilder.matchPredicates(matchPredicates)
+      cdkBuilder.matchPredicates(matchPredicates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

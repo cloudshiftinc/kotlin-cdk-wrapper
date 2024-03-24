@@ -198,7 +198,7 @@ public interface HelmChartProps : HelmChartOptions {
      * }
      */
     override fun values(values: Map<String, Any>) {
-      cdkBuilder.values(values)
+      cdkBuilder.values(values.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

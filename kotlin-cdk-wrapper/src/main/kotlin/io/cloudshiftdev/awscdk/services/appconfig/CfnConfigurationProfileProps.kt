@@ -341,7 +341,7 @@ public interface CfnConfigurationProfileProps {
      * @param validators A list of methods for validating the configuration.
      */
     override fun validators(validators: List<Any>) {
-      cdkBuilder.validators(validators)
+      cdkBuilder.validators(validators.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

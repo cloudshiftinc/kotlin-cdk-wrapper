@@ -206,7 +206,7 @@ public open class CfnCampaign(
    * (Optional) The destination where the campaign sends data.
    */
   public open fun dataDestinationConfigs(`value`: List<Any>) {
-    unwrap(this).setDataDestinationConfigs(`value`)
+    unwrap(this).setDataDestinationConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnCampaign(
    * (Optional) A list of information about signals to collect.
    */
   public open fun signalsToCollect(`value`: List<Any>) {
-    unwrap(this).setSignalsToCollect(`value`)
+    unwrap(this).setSignalsToCollect(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -857,7 +857,7 @@ public open class CfnCampaign(
      * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
      */
     override fun dataDestinationConfigs(dataDestinationConfigs: List<Any>) {
-      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs)
+      cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1033,7 +1033,7 @@ public open class CfnCampaign(
      * @param signalsToCollect (Optional) A list of information about signals to collect. 
      */
     override fun signalsToCollect(signalsToCollect: List<Any>) {
-      cdkBuilder.signalsToCollect(signalsToCollect)
+      cdkBuilder.signalsToCollect(signalsToCollect.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

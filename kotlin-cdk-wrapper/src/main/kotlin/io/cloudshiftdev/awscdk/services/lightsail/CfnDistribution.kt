@@ -175,7 +175,7 @@ public open class CfnDistribution(
    * An array of objects that describe the per-path cache behavior of the distribution.
    */
   public open fun cacheBehaviors(`value`: List<Any>) {
-    unwrap(this).setCacheBehaviors(`value`)
+    unwrap(this).setCacheBehaviors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -611,7 +611,7 @@ public open class CfnDistribution(
      * distribution. 
      */
     override fun cacheBehaviors(cacheBehaviors: List<Any>) {
-      cdkBuilder.cacheBehaviors(cacheBehaviors)
+      cdkBuilder.cacheBehaviors(cacheBehaviors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

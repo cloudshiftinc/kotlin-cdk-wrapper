@@ -154,7 +154,7 @@ public interface CfnDistributionConfigurationProps {
      * array of Distribution objects. 
      */
     override fun distributions(distributions: List<Any>) {
-      cdkBuilder.distributions(distributions)
+      cdkBuilder.distributions(distributions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

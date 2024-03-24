@@ -279,7 +279,7 @@ public open class CfnUser(
    * their level of skill in a specified area.
    */
   public open fun userProficiencies(`value`: List<Any>) {
-    unwrap(this).setUserProficiencies(`value`)
+    unwrap(this).setUserProficiencies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -647,7 +647,7 @@ public open class CfnUser(
      * value that indicates how their level of skill in a specified area. 
      */
     override fun userProficiencies(userProficiencies: List<Any>) {
-      cdkBuilder.userProficiencies(userProficiencies)
+      cdkBuilder.userProficiencies(userProficiencies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

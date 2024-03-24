@@ -398,7 +398,8 @@ public interface ITable : IResource {
      * ...). 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Permits all DynamoDB operations ("dynamodb:*") to an IAM principal.
@@ -449,7 +450,8 @@ public interface ITable : IResource {
      * "dynamodb:GetRecords", ...). 
      */
     override fun grantStream(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grantStream(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+        unwrap(this).grantStream(grantee.let(IGrantable::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Permits an IAM principal all stream data read operations for this table's stream:

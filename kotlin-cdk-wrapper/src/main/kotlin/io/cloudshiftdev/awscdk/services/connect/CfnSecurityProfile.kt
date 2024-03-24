@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -85,7 +86,7 @@ public open class CfnSecurityProfile(
    * Connect.
    */
   public open fun allowedAccessControlTags(`value`: List<Any>) {
-    unwrap(this).setAllowedAccessControlTags(`value`)
+    unwrap(this).setAllowedAccessControlTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -352,7 +353,7 @@ public open class CfnSecurityProfile(
      * access to resources in Amazon Connect. 
      */
     override fun allowedAccessControlTags(allowedAccessControlTags: List<Any>) {
-      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags)
+      cdkBuilder.allowedAccessControlTags(allowedAccessControlTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

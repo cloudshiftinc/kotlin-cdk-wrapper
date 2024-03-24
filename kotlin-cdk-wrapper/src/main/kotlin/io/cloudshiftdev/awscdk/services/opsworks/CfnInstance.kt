@@ -216,7 +216,7 @@ public open class CfnInstance(
    * An array of `BlockDeviceMapping` objects that specify the instance's block devices.
    */
   public open fun blockDeviceMappings(`value`: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(`value`)
+    unwrap(this).setBlockDeviceMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -957,7 +957,7 @@ public open class CfnInstance(
      * instance's block devices. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

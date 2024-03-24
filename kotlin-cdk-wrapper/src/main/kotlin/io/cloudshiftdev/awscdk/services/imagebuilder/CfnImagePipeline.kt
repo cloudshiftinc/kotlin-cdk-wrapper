@@ -368,7 +368,7 @@ public open class CfnImagePipeline(
    * Contains the workflows that run for the image pipeline.
    */
   public open fun workflows(`value`: List<Any>) {
-    unwrap(this).setWorkflows(`value`)
+    unwrap(this).setWorkflows(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -866,7 +866,7 @@ public open class CfnImagePipeline(
      * @param workflows Contains the workflows that run for the image pipeline. 
      */
     override fun workflows(workflows: List<Any>) {
-      cdkBuilder.workflows(workflows)
+      cdkBuilder.workflows(workflows.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1671,7 +1671,7 @@ public open class CfnImagePipeline(
        * document defined for the workflow resource.
        */
       override fun parameters(parameters: List<Any>) {
-        cdkBuilder.parameters(parameters)
+        cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

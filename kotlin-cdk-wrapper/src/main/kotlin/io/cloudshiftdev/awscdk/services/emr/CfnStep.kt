@@ -480,7 +480,7 @@ public open class CfnStep(
        * You can use these properties to pass key value pairs to your main function.
        */
       override fun stepProperties(stepProperties: List<Any>) {
-        cdkBuilder.stepProperties(stepProperties)
+        cdkBuilder.stepProperties(stepProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

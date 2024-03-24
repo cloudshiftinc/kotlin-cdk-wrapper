@@ -206,7 +206,7 @@ public open class CfnMultiplexprogram(
    * multiplex.
    */
   public open fun pipelineDetails(`value`: List<Any>) {
-    unwrap(this).setPipelineDetails(`value`)
+    unwrap(this).setPipelineDetails(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -504,7 +504,7 @@ public open class CfnMultiplexprogram(
      * program in the specified multiplex. 
      */
     override fun pipelineDetails(pipelineDetails: List<Any>) {
-      cdkBuilder.pipelineDetails(pipelineDetails)
+      cdkBuilder.pipelineDetails(pipelineDetails.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

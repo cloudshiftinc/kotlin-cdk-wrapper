@@ -443,7 +443,7 @@ public abstract class GraphqlApiBase(
     resources: IamResource,
     vararg actions: String,
   ): Grant = unwrap(this).grant(grantee.let(IGrantable::unwrap), resources.let(IamResource::unwrap),
-      *actions).let(Grant::wrap)
+      *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement for Mutation access to this GraphQLApi to an IAM principal's
@@ -453,7 +453,8 @@ public abstract class GraphqlApiBase(
    * @param fields The fields to grant access to that are Mutations (leave blank for all). 
    */
   public override fun grantMutation(grantee: IGrantable, vararg fields: String): Grant =
-      unwrap(this).grantMutation(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
+      unwrap(this).grantMutation(grantee.let(IGrantable::unwrap),
+      *fields.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement for Query access to this GraphQLApi to an IAM principal's policy.
@@ -462,7 +463,8 @@ public abstract class GraphqlApiBase(
    * @param fields The fields to grant access to that are Queries (leave blank for all). 
    */
   public override fun grantQuery(grantee: IGrantable, vararg fields: String): Grant =
-      unwrap(this).grantQuery(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
+      unwrap(this).grantQuery(grantee.let(IGrantable::unwrap),
+      *fields.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Adds an IAM policy statement for Subscription access to this GraphQLApi to an IAM principal's
@@ -472,7 +474,8 @@ public abstract class GraphqlApiBase(
    * @param fields The fields to grant access to that are Subscriptions (leave blank for all). 
    */
   public override fun grantSubscription(grantee: IGrantable, vararg fields: String): Grant =
-      unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap), *fields).let(Grant::wrap)
+      unwrap(this).grantSubscription(grantee.let(IGrantable::unwrap),
+      *fields.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appsync.GraphqlApiBase,

@@ -274,7 +274,7 @@ public interface CfnDeploymentProps {
      * version and configuration to deploy for that component.
      */
     override fun components(components: Map<String, Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

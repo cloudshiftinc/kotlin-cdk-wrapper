@@ -245,7 +245,7 @@ public interface CfnMatchingWorkflowProps {
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: List<Any>) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig)
+      cdkBuilder.inputSourceConfig(inputSourceConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -268,7 +268,7 @@ public interface CfnMatchingWorkflowProps {
      * `OutputS3Path` , `ApplyNormalization` , and `Output` . 
      */
     override fun outputSourceConfig(outputSourceConfig: List<Any>) {
-      cdkBuilder.outputSourceConfig(outputSourceConfig)
+      cdkBuilder.outputSourceConfig(outputSourceConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

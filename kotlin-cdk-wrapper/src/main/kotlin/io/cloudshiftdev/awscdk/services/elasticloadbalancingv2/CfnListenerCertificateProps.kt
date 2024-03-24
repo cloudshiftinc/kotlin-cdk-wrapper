@@ -94,7 +94,7 @@ public interface CfnListenerCertificateProps {
      * You can specify one certificate per resource.
      */
     override fun certificates(certificates: List<Any>) {
-      cdkBuilder.certificates(certificates)
+      cdkBuilder.certificates(certificates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -464,7 +464,7 @@ public interface CfnAssetModelProps {
      * in the *AWS IoT SiteWise User Guide* .
      */
     override fun assetModelCompositeModels(assetModelCompositeModels: List<Any>) {
-      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels)
+      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -525,7 +525,7 @@ public interface CfnAssetModelProps {
      * SiteWise User Guide* .
      */
     override fun assetModelHierarchies(assetModelHierarchies: List<Any>) {
-      cdkBuilder.assetModelHierarchies(assetModelHierarchies)
+      cdkBuilder.assetModelHierarchies(assetModelHierarchies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -574,7 +574,7 @@ public interface CfnAssetModelProps {
      * SiteWise User Guide* .
      */
     override fun assetModelProperties(assetModelProperties: List<Any>) {
-      cdkBuilder.assetModelProperties(assetModelProperties)
+      cdkBuilder.assetModelProperties(assetModelProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

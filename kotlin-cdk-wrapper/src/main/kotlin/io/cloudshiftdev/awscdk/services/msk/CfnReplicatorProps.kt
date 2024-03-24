@@ -217,7 +217,7 @@ public interface CfnReplicatorProps {
      * @param kafkaClusters Specifies a list of Kafka clusters which are targets of the replicator. 
      */
     override fun kafkaClusters(kafkaClusters: List<Any>) {
-      cdkBuilder.kafkaClusters(kafkaClusters)
+      cdkBuilder.kafkaClusters(kafkaClusters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -239,7 +239,7 @@ public interface CfnReplicatorProps {
      * targets a given source cluster to target cluster replication flow. 
      */
     override fun replicationInfoList(replicationInfoList: List<Any>) {
-      cdkBuilder.replicationInfoList(replicationInfoList)
+      cdkBuilder.replicationInfoList(replicationInfoList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

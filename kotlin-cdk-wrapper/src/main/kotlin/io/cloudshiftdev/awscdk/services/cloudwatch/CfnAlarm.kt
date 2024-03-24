@@ -217,7 +217,7 @@ public open class CfnAlarm(
    * The dimensions for the metric associated with the alarm.
    */
   public open fun dimensions(`value`: List<Any>) {
-    unwrap(this).setDimensions(`value`)
+    unwrap(this).setDimensions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -325,7 +325,7 @@ public open class CfnAlarm(
    * An array that enables you to create an alarm based on the result of a metric math expression.
    */
   public open fun metrics(`value`: List<Any>) {
-    unwrap(this).setMetrics(`value`)
+    unwrap(this).setMetrics(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -987,7 +987,7 @@ public open class CfnAlarm(
      * @param dimensions The dimensions for the metric associated with the alarm. 
      */
     override fun dimensions(dimensions: List<Any>) {
-      cdkBuilder.dimensions(dimensions)
+      cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1121,7 +1121,7 @@ public open class CfnAlarm(
      * math expression. 
      */
     override fun metrics(metrics: List<Any>) {
-      cdkBuilder.metrics(metrics)
+      cdkBuilder.metrics(metrics.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1989,7 +1989,7 @@ public open class CfnAlarm(
        * alarm will watch.
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

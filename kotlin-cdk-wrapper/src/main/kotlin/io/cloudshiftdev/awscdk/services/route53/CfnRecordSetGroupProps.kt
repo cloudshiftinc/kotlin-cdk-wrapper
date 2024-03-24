@@ -214,7 +214,7 @@ public interface CfnRecordSetGroupProps {
      * you want to create.
      */
     override fun recordSets(recordSets: List<Any>) {
-      cdkBuilder.recordSets(recordSets)
+      cdkBuilder.recordSets(recordSets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

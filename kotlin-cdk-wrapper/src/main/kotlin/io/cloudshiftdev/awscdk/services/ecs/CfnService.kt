@@ -229,7 +229,7 @@ public open class CfnService(
    * The capacity provider strategy to use for the service.
    */
   public open fun capacityProviderStrategy(`value`: List<Any>) {
-    unwrap(this).setCapacityProviderStrategy(`value`)
+    unwrap(this).setCapacityProviderStrategy(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnService(
    * A list of load balancer objects to associate with the service.
    */
   public open fun loadBalancers(`value`: List<Any>) {
-    unwrap(this).setLoadBalancers(`value`)
+    unwrap(this).setLoadBalancers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -464,7 +464,7 @@ public open class CfnService(
    * An array of placement constraint objects to use for tasks in your service.
    */
   public open fun placementConstraints(`value`: List<Any>) {
-    unwrap(this).setPlacementConstraints(`value`)
+    unwrap(this).setPlacementConstraints(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -489,7 +489,7 @@ public open class CfnService(
    * The placement strategy objects to use for tasks in your service.
    */
   public open fun placementStrategies(`value`: List<Any>) {
-    unwrap(this).setPlacementStrategies(`value`)
+    unwrap(this).setPlacementStrategies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -624,7 +624,7 @@ public open class CfnService(
    * discovery](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-discovery.html) .
    */
   public open fun serviceRegistries(`value`: List<Any>) {
-    unwrap(this).setServiceRegistries(`value`)
+    unwrap(this).setServiceRegistries(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -691,7 +691,7 @@ public open class CfnService(
    * at launch time.
    */
   public open fun volumeConfigurations(`value`: List<Any>) {
-    unwrap(this).setVolumeConfigurations(`value`)
+    unwrap(this).setVolumeConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1444,7 +1444,7 @@ public open class CfnService(
      * @param capacityProviderStrategy The capacity provider strategy to use for the service. 
      */
     override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
-      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1701,7 +1701,7 @@ public open class CfnService(
      * @param loadBalancers A list of load balancer objects to associate with the service. 
      */
     override fun loadBalancers(loadBalancers: List<Any>) {
-      cdkBuilder.loadBalancers(loadBalancers)
+      cdkBuilder.loadBalancers(loadBalancers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1794,7 +1794,7 @@ public open class CfnService(
      * service. 
      */
     override fun placementConstraints(placementConstraints: List<Any>) {
-      cdkBuilder.placementConstraints(placementConstraints)
+      cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1831,7 +1831,7 @@ public open class CfnService(
      * @param placementStrategies The placement strategy objects to use for tasks in your service. 
      */
     override fun placementStrategies(placementStrategies: List<Any>) {
-      cdkBuilder.placementStrategies(placementStrategies)
+      cdkBuilder.placementStrategies(placementStrategies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2068,7 +2068,7 @@ public open class CfnService(
      * 
      */
     override fun serviceRegistries(serviceRegistries: List<Any>) {
-      cdkBuilder.serviceRegistries(serviceRegistries)
+      cdkBuilder.serviceRegistries(serviceRegistries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2181,7 +2181,7 @@ public open class CfnService(
      * as a volume that is configured at launch time. 
      */
     override fun volumeConfigurations(volumeConfigurations: List<Any>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations)
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -4440,7 +4440,7 @@ public open class CfnService(
        * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun secretOptions(secretOptions: List<Any>) {
-        cdkBuilder.secretOptions(secretOptions)
+        cdkBuilder.secretOptions(secretOptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5932,7 +5932,7 @@ public open class CfnService(
        * service.
        */
       override fun services(services: List<Any>) {
-        cdkBuilder.services(services)
+        cdkBuilder.services(services.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6335,7 +6335,7 @@ public open class CfnService(
        * `port` .
        */
       override fun clientAliases(clientAliases: List<Any>) {
-        cdkBuilder.clientAliases(clientAliases)
+        cdkBuilder.clientAliases(clientAliases.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7325,7 +7325,7 @@ public open class CfnService(
        * *Amazon EC2 API Reference* .
        */
       override fun tagSpecifications(tagSpecifications: List<Any>) {
-        cdkBuilder.tagSpecifications(tagSpecifications)
+        cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -132,7 +132,7 @@ public open class CfnDataSource(
    * The metadata forms attached to the assets that the data source works with.
    */
   public open fun assetFormsInput(`value`: List<Any>) {
-    unwrap(this).setAssetFormsInput(`value`)
+    unwrap(this).setAssetFormsInput(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -610,7 +610,7 @@ public open class CfnDataSource(
      * with. 
      */
     override fun assetFormsInput(assetFormsInput: List<Any>) {
-      cdkBuilder.assetFormsInput(assetFormsInput)
+      cdkBuilder.assetFormsInput(assetFormsInput.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1420,7 +1420,7 @@ public open class CfnDataSource(
        * configuration details of the AWS Glue data source. 
        */
       override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
-        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
+        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1967,7 +1967,7 @@ public open class CfnDataSource(
        * configuration details of the AWS Glue data source. 
        */
       override fun relationalFilterConfigurations(relationalFilterConfigurations: List<Any>) {
-        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations)
+        cdkBuilder.relationalFilterConfigurations(relationalFilterConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2410,7 +2410,7 @@ public open class CfnDataSource(
        * configuration for the data source.
        */
       override fun filterExpressions(filterExpressions: List<Any>) {
-        cdkBuilder.filterExpressions(filterExpressions)
+        cdkBuilder.filterExpressions(filterExpressions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

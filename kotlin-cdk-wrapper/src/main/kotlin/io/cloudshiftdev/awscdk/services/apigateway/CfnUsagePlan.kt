@@ -112,7 +112,7 @@ public open class CfnUsagePlan(
    * The associated API stages of a usage plan.
    */
   public open fun apiStages(`value`: List<Any>) {
-    unwrap(this).setApiStages(`value`)
+    unwrap(this).setApiStages(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -382,7 +382,7 @@ public open class CfnUsagePlan(
      * @param apiStages The associated API stages of a usage plan. 
      */
     override fun apiStages(apiStages: List<Any>) {
-      cdkBuilder.apiStages(apiStages)
+      cdkBuilder.apiStages(apiStages.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -628,7 +628,7 @@ public open class CfnUsagePlan(
        * plan.
        */
       override fun throttle(throttle: Map<String, Any>) {
-        cdkBuilder.throttle(throttle)
+        cdkBuilder.throttle(throttle.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build(): software.amazon.awscdk.services.apigateway.CfnUsagePlan.ApiStageProperty =

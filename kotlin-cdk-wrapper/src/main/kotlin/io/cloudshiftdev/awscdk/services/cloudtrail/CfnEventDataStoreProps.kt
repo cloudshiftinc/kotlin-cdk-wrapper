@@ -599,7 +599,7 @@ public interface CfnEventDataStoreProps {
      * in the CloudTrail User Guide.
      */
     override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors)
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -725,7 +725,7 @@ public interface CfnEventDataStoreProps {
      * codes. The error is shown if the API call is unsuccessful.
      */
     override fun insightSelectors(insightSelectors: List<Any>) {
-      cdkBuilder.insightSelectors(insightSelectors)
+      cdkBuilder.insightSelectors(insightSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

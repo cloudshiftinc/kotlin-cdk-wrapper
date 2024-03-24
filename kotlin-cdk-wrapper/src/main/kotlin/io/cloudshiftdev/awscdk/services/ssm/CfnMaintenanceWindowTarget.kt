@@ -146,7 +146,7 @@ public open class CfnMaintenanceWindowTarget(
    * The targets to register with the maintenance window.
    */
   public open fun targets(`value`: List<Any>) {
-    unwrap(this).setTargets(`value`)
+    unwrap(this).setTargets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -324,7 +324,7 @@ public open class CfnMaintenanceWindowTarget(
      * @param targets The targets to register with the maintenance window. 
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

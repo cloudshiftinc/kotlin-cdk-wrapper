@@ -127,7 +127,7 @@ public open class CfnDBProxy(
    * The authorization mechanism that the proxy uses.
    */
   public open fun auth(`value`: List<Any>) {
-    unwrap(this).setAuth(`value`)
+    unwrap(this).setAuth(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -513,7 +513,7 @@ public open class CfnDBProxy(
      * @param auth The authorization mechanism that the proxy uses. 
      */
     override fun auth(auth: List<Any>) {
-      cdkBuilder.auth(auth)
+      cdkBuilder.auth(auth.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

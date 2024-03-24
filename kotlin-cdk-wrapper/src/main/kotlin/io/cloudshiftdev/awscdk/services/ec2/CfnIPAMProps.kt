@@ -180,7 +180,7 @@ public interface CfnIPAMProps {
      * User Guide* .
      */
     override fun operatingRegions(operatingRegions: List<Any>) {
-      cdkBuilder.operatingRegions(operatingRegions)
+      cdkBuilder.operatingRegions(operatingRegions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

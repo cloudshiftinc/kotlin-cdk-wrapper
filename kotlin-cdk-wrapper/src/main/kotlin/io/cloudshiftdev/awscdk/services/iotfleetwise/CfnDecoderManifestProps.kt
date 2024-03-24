@@ -249,7 +249,7 @@ public interface CfnDecoderManifestProps {
      * @param networkInterfaces (Optional) A list of information about available network interfaces.
      */
     override fun networkInterfaces(networkInterfaces: List<Any>) {
-      cdkBuilder.networkInterfaces(networkInterfaces)
+      cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -269,7 +269,7 @@ public interface CfnDecoderManifestProps {
      * @param signalDecoders (Optional) A list of information about signal decoders.
      */
     override fun signalDecoders(signalDecoders: List<Any>) {
-      cdkBuilder.signalDecoders(signalDecoders)
+      cdkBuilder.signalDecoders(signalDecoders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

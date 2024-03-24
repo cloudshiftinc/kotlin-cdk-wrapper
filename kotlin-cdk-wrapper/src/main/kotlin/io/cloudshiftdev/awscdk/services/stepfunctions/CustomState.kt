@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions
 
 import com.fasterxml.jackson.databind.node.ObjectNode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
@@ -202,7 +203,7 @@ public open class CustomState(
      * @param stateJson Amazon States Language (JSON-based) definition of the state. 
      */
     override fun stateJson(stateJson: Map<String, Any>) {
-      cdkBuilder.stateJson(stateJson)
+      cdkBuilder.stateJson(stateJson.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.stepfunctions.CustomState =

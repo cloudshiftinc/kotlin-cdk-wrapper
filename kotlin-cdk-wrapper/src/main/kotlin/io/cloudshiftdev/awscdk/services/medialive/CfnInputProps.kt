@@ -264,7 +264,7 @@ public interface CfnInputProps {
      * @param destinations Settings that apply only if the input is a push type of input.
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -283,7 +283,7 @@ public interface CfnInputProps {
      * @param inputDevices Settings that apply only if the input is an Elemental Link input.
      */
     override fun inputDevices(inputDevices: List<Any>) {
-      cdkBuilder.inputDevices(inputDevices)
+      cdkBuilder.inputDevices(inputDevices.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -317,7 +317,7 @@ public interface CfnInputProps {
      * @param mediaConnectFlows Settings that apply only if the input is a MediaConnect input.
      */
     override fun mediaConnectFlows(mediaConnectFlows: List<Any>) {
-      cdkBuilder.mediaConnectFlows(mediaConnectFlows)
+      cdkBuilder.mediaConnectFlows(mediaConnectFlows.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -353,7 +353,7 @@ public interface CfnInputProps {
      * @param sources Settings that apply only if the input is a pull type of input.
      */
     override fun sources(sources: List<Any>) {
-      cdkBuilder.sources(sources)
+      cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

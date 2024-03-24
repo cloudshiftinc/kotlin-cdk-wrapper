@@ -280,7 +280,7 @@ public open class CfnDatabase(
    * An array of parameters for the database.
    */
   public open fun relationalDatabaseParameters(`value`: List<Any>) {
-    unwrap(this).setRelationalDatabaseParameters(`value`)
+    unwrap(this).setRelationalDatabaseParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -892,7 +892,7 @@ public open class CfnDatabase(
      * @param relationalDatabaseParameters An array of parameters for the database. 
      */
     override fun relationalDatabaseParameters(relationalDatabaseParameters: List<Any>) {
-      cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters)
+      cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

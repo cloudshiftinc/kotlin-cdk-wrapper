@@ -242,7 +242,7 @@ public open class CfnGameServerGroup(
    * automatically scaling instances in the corresponding Auto Scaling group.
    */
   public open fun instanceDefinitions(`value`: List<Any>) {
-    unwrap(this).setInstanceDefinitions(`value`)
+    unwrap(this).setInstanceDefinitions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -838,7 +838,7 @@ public open class CfnGameServerGroup(
      * group. 
      */
     override fun instanceDefinitions(instanceDefinitions: List<Any>) {
-      cdkBuilder.instanceDefinitions(instanceDefinitions)
+      cdkBuilder.instanceDefinitions(instanceDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

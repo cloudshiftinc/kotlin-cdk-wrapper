@@ -158,7 +158,7 @@ public interface CfnTagAssociationProps {
      * @param lfTags A structure containing an LF-tag key-value pair. 
      */
     override fun lfTags(lfTags: List<Any>) {
-      cdkBuilder.lfTags(lfTags)
+      cdkBuilder.lfTags(lfTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

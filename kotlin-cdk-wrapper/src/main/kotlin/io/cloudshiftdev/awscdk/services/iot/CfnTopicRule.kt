@@ -4569,7 +4569,7 @@ public open class CfnTopicRule(
        * @param headers The HTTP headers to send with the message data.
        */
       override fun headers(headers: List<Any>) {
-        cdkBuilder.headers(headers)
+        cdkBuilder.headers(headers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5309,7 +5309,7 @@ public open class CfnTopicRule(
        * @param putAssetPropertyValueEntries A list of asset property value entries. 
        */
       override fun putAssetPropertyValueEntries(putAssetPropertyValueEntries: List<Any>) {
-        cdkBuilder.putAssetPropertyValueEntries(putAssetPropertyValueEntries)
+        cdkBuilder.putAssetPropertyValueEntries(putAssetPropertyValueEntries.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5641,7 +5641,7 @@ public open class CfnTopicRule(
        * @param headers The list of Kafka headers that you specify.
        */
       override fun headers(headers: List<Any>) {
-        cdkBuilder.headers(headers)
+        cdkBuilder.headers(headers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6603,7 +6603,7 @@ public open class CfnTopicRule(
        * quality, and value (TQV) information. 
        */
       override fun propertyValues(propertyValues: List<Any>) {
-        cdkBuilder.propertyValues(propertyValues)
+        cdkBuilder.propertyValues(propertyValues.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7092,7 +7092,7 @@ public open class CfnTopicRule(
        * @param userProperties An array of key-value pairs that you define in the MQTT5 header.
        */
       override fun userProperties(userProperties: List<Any>) {
-        cdkBuilder.userProperties(userProperties)
+        cdkBuilder.userProperties(userProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8485,7 +8485,7 @@ public open class CfnTopicRule(
        * record. 
        */
       override fun dimensions(dimensions: List<Any>) {
-        cdkBuilder.dimensions(dimensions)
+        cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9392,7 +9392,7 @@ public open class CfnTopicRule(
        * @param actions The actions associated with the rule. 
        */
       override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
+        cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

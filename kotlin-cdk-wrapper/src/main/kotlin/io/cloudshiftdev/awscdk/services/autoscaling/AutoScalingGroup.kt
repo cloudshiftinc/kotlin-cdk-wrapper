@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.autoscaling
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.CloudFormationInit
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
@@ -145,7 +146,7 @@ public open class AutoScalingGroup(
    * @param commands 
    */
   public override fun addUserData(vararg commands: String) {
-    unwrap(this).addUserData(*commands)
+    unwrap(this).addUserData(*commands.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
 
   /**

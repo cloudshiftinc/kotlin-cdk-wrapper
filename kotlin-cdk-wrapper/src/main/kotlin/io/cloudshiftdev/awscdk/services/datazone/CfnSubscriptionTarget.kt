@@ -232,7 +232,7 @@ public open class CfnSubscriptionTarget(
    * The configuration of the subscription target.
    */
   public open fun subscriptionTargetConfig(`value`: List<Any>) {
-    unwrap(this).setSubscriptionTargetConfig(`value`)
+    unwrap(this).setSubscriptionTargetConfig(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -481,7 +481,7 @@ public open class CfnSubscriptionTarget(
      * @param subscriptionTargetConfig The configuration of the subscription target. 
      */
     override fun subscriptionTargetConfig(subscriptionTargetConfig: List<Any>) {
-      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig)
+      cdkBuilder.subscriptionTargetConfig(subscriptionTargetConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

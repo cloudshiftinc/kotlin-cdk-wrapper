@@ -636,7 +636,7 @@ public interface JsonSchema {
      * @param dependencies the value to be set.
      */
     override fun dependencies(dependencies: Map<String, Any>) {
-      cdkBuilder.dependencies(dependencies)
+      cdkBuilder.dependencies(dependencies.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -650,7 +650,7 @@ public interface JsonSchema {
      * @param enumValue the value to be set.
      */
     override fun enumValue(enumValue: List<Any>) {
-      cdkBuilder.enumValue(enumValue)
+      cdkBuilder.enumValue(enumValue.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

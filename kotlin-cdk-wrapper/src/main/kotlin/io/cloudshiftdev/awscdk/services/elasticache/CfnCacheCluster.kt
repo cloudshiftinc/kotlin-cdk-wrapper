@@ -301,7 +301,7 @@ public open class CfnCacheCluster(
    * Specifies the destination, format and type of the logs.
    */
   public open fun logDeliveryConfigurations(`value`: List<Any>) {
-    unwrap(this).setLogDeliveryConfigurations(`value`)
+    unwrap(this).setLogDeliveryConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1348,7 +1348,7 @@ public open class CfnCacheCluster(
      * @param logDeliveryConfigurations Specifies the destination, format and type of the logs. 
      */
     override fun logDeliveryConfigurations(logDeliveryConfigurations: List<Any>) {
-      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations)
+      cdkBuilder.logDeliveryConfigurations(logDeliveryConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

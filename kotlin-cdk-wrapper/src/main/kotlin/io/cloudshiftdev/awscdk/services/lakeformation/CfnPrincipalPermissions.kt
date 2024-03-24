@@ -1343,7 +1343,7 @@ public open class CfnPrincipalPermissions(
        * @param expression A list of LF-tag conditions that apply to the resource's LF-tag policy. 
        */
       override fun expression(expression: List<Any>) {
-        cdkBuilder.expression(expression)
+        cdkBuilder.expression(expression.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

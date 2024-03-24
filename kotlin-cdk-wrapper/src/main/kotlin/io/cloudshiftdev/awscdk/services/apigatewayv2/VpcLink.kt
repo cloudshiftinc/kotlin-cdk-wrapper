@@ -4,15 +4,18 @@ package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
-import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
-import io.cloudshiftdev.awscdk.services.ec2.ISubnet
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.jvm.JvmName
+import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup as CloudshiftdevAwscdkServicesEc2ISecurityGroup
+import io.cloudshiftdev.awscdk.services.ec2.ISubnet as CloudshiftdevAwscdkServicesEc2ISubnet
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
+import software.amazon.awscdk.services.ec2.ISecurityGroup as AmazonAwscdkServicesEc2ISecurityGroup
+import software.amazon.awscdk.services.ec2.ISubnet as AmazonAwscdkServicesEc2ISubnet
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
@@ -58,8 +61,9 @@ public open class VpcLink(
    *
    * @param groups 
    */
-  public open fun addSecurityGroups(vararg groups: ISecurityGroup) {
-    unwrap(this).addSecurityGroups(*groups.map(ISecurityGroup::unwrap).toTypedArray())
+  public open fun addSecurityGroups(vararg groups: CloudshiftdevAwscdkServicesEc2ISecurityGroup) {
+    unwrap(this).addSecurityGroups(*groups.map{CdkObjectWrappers.unwrap(it) as
+        AmazonAwscdkServicesEc2ISecurityGroup}.toTypedArray())
   }
 
   /**
@@ -67,8 +71,9 @@ public open class VpcLink(
    *
    * @param subnets 
    */
-  public open fun addSubnets(vararg subnets: ISubnet) {
-    unwrap(this).addSubnets(*subnets.map(ISubnet::unwrap).toTypedArray())
+  public open fun addSubnets(vararg subnets: CloudshiftdevAwscdkServicesEc2ISubnet) {
+    unwrap(this).addSubnets(*subnets.map{CdkObjectWrappers.unwrap(it) as
+        AmazonAwscdkServicesEc2ISubnet}.toTypedArray())
   }
 
   /**
@@ -93,7 +98,7 @@ public open class VpcLink(
      *
      * @param securityGroups A list of security groups for the VPC link. 
      */
-    public fun securityGroups(securityGroups: List<ISecurityGroup>)
+    public fun securityGroups(securityGroups: List<CloudshiftdevAwscdkServicesEc2ISecurityGroup>)
 
     /**
      * A list of security groups for the VPC link.
@@ -102,7 +107,7 @@ public open class VpcLink(
      *
      * @param securityGroups A list of security groups for the VPC link. 
      */
-    public fun securityGroups(vararg securityGroups: ISecurityGroup)
+    public fun securityGroups(vararg securityGroups: CloudshiftdevAwscdkServicesEc2ISecurityGroup)
 
     /**
      * A list of subnets for the VPC link.
@@ -155,8 +160,9 @@ public open class VpcLink(
      *
      * @param securityGroups A list of security groups for the VPC link. 
      */
-    override fun securityGroups(securityGroups: List<ISecurityGroup>) {
-      cdkBuilder.securityGroups(securityGroups.map(ISecurityGroup::unwrap))
+    override
+        fun securityGroups(securityGroups: List<CloudshiftdevAwscdkServicesEc2ISecurityGroup>) {
+      cdkBuilder.securityGroups(securityGroups.map(CloudshiftdevAwscdkServicesEc2ISecurityGroup::unwrap))
     }
 
     /**
@@ -166,7 +172,8 @@ public open class VpcLink(
      *
      * @param securityGroups A list of security groups for the VPC link. 
      */
-    override fun securityGroups(vararg securityGroups: ISecurityGroup): Unit =
+    override fun securityGroups(vararg
+        securityGroups: CloudshiftdevAwscdkServicesEc2ISecurityGroup): Unit =
         securityGroups(securityGroups.toList())
 
     /**

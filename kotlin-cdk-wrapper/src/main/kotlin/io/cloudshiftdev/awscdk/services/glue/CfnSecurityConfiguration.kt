@@ -534,7 +534,7 @@ public open class CfnSecurityConfiguration(
        * S3) data.
        */
       override fun s3Encryptions(s3Encryptions: List<Any>) {
-        cdkBuilder.s3Encryptions(s3Encryptions)
+        cdkBuilder.s3Encryptions(s3Encryptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

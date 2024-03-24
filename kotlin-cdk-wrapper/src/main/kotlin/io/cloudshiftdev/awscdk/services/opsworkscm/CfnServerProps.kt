@@ -788,7 +788,7 @@ public interface CfnServerProps {
      * PUPPET_R10K_PRIVATE_KEY to specify a PEM-encoded private SSH key.
      */
     override fun engineAttributes(engineAttributes: List<Any>) {
-      cdkBuilder.engineAttributes(engineAttributes)
+      cdkBuilder.engineAttributes(engineAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

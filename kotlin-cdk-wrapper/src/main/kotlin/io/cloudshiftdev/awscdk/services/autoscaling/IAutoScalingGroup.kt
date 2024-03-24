@@ -241,7 +241,7 @@ public interface IAutoScalingGroup : IResource, IGrantable {
      * @param commands 
      */
     override fun addUserData(vararg commands: String) {
-      unwrap(this).addUserData(*commands)
+      unwrap(this).addUserData(*commands.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
     }
 
     /**

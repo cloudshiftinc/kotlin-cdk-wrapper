@@ -190,7 +190,7 @@ public interface CfnAnalysisTemplateProps {
      * @param analysisParameters The parameters of the analysis template.
      */
     override fun analysisParameters(analysisParameters: List<Any>) {
-      cdkBuilder.analysisParameters(analysisParameters)
+      cdkBuilder.analysisParameters(analysisParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

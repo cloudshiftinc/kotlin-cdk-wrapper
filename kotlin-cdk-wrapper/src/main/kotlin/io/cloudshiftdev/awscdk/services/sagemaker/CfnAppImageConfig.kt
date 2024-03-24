@@ -580,7 +580,7 @@ public open class CfnAppImageConfig(
        * @param containerEnvironmentVariables The environment variables to set in the container.
        */
       override fun containerEnvironmentVariables(containerEnvironmentVariables: List<Any>) {
-        cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables)
+        cdkBuilder.containerEnvironmentVariables(containerEnvironmentVariables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1151,7 +1151,7 @@ public open class CfnAppImageConfig(
        * @param kernelSpecs The specification of the Jupyter kernels in the image. 
        */
       override fun kernelSpecs(kernelSpecs: List<Any>) {
-        cdkBuilder.kernelSpecs(kernelSpecs)
+        cdkBuilder.kernelSpecs(kernelSpecs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

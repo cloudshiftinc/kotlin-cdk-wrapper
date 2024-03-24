@@ -200,7 +200,7 @@ public open class CfnDecoderManifest(
    * (Optional) A list of information about available network interfaces.
    */
   public open fun networkInterfaces(`value`: List<Any>) {
-    unwrap(this).setNetworkInterfaces(`value`)
+    unwrap(this).setNetworkInterfaces(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -224,7 +224,7 @@ public open class CfnDecoderManifest(
    * (Optional) A list of information about signal decoders.
    */
   public open fun signalDecoders(`value`: List<Any>) {
-    unwrap(this).setSignalDecoders(`value`)
+    unwrap(this).setSignalDecoders(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -437,7 +437,7 @@ public open class CfnDecoderManifest(
      * 
      */
     override fun networkInterfaces(networkInterfaces: List<Any>) {
-      cdkBuilder.networkInterfaces(networkInterfaces)
+      cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -467,7 +467,7 @@ public open class CfnDecoderManifest(
      * @param signalDecoders (Optional) A list of information about signal decoders. 
      */
     override fun signalDecoders(signalDecoders: List<Any>) {
-      cdkBuilder.signalDecoders(signalDecoders)
+      cdkBuilder.signalDecoders(signalDecoders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

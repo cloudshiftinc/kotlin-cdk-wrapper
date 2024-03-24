@@ -145,7 +145,7 @@ public interface CfnPlanProps {
      * contacts and contact methods.
      */
     override fun stages(stages: List<Any>) {
-      cdkBuilder.stages(stages)
+      cdkBuilder.stages(stages.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

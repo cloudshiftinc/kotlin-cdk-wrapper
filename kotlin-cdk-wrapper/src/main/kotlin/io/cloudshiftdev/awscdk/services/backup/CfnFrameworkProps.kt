@@ -148,7 +148,7 @@ public interface CfnFrameworkProps {
      * Each framework must contain at least one control.
      */
     override fun frameworkControls(frameworkControls: List<Any>) {
-      cdkBuilder.frameworkControls(frameworkControls)
+      cdkBuilder.frameworkControls(frameworkControls.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

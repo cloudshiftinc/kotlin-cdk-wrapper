@@ -256,7 +256,7 @@ public interface CfnConfiguredTableProps {
      * @param analysisRules The entire created analysis rule.
      */
     override fun analysisRules(analysisRules: List<Any>) {
-      cdkBuilder.analysisRules(analysisRules)
+      cdkBuilder.analysisRules(analysisRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

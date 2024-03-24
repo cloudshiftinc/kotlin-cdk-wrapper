@@ -95,7 +95,7 @@ public open class CfnConfigurationAggregator(
    * Provides a list of source accounts and regions to be aggregated.
    */
   public open fun accountAggregationSources(`value`: List<Any>) {
-    unwrap(this).setAccountAggregationSources(`value`)
+    unwrap(this).setAccountAggregationSources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -299,7 +299,7 @@ public open class CfnConfigurationAggregator(
      * aggregated. 
      */
     override fun accountAggregationSources(accountAggregationSources: List<Any>) {
-      cdkBuilder.accountAggregationSources(accountAggregationSources)
+      cdkBuilder.accountAggregationSources(accountAggregationSources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -824,7 +824,7 @@ public open class CfnAccessPoint(
        * Object Lambda Access Point. 
        */
       override fun transformationConfigurations(transformationConfigurations: List<Any>) {
-        cdkBuilder.transformationConfigurations(transformationConfigurations)
+        cdkBuilder.transformationConfigurations(transformationConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.collections.List
 
@@ -65,7 +66,8 @@ public open class InitConfig(
    * @param elements 
    */
   public open fun add(vararg elements: InitElement) {
-    unwrap(this).add(*elements.map(InitElement::unwrap).toTypedArray())
+    unwrap(this).add(*elements.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ec2.InitElement}.toTypedArray())
   }
 
   /**

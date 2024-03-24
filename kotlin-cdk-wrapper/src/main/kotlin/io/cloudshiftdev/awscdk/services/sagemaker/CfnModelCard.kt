@@ -1679,7 +1679,7 @@ public open class CfnModelCard(
        * @param evaluationDetails An overview about the model's evaluation.
        */
       override fun evaluationDetails(evaluationDetails: List<Any>) {
-        cdkBuilder.evaluationDetails(evaluationDetails)
+        cdkBuilder.evaluationDetails(evaluationDetails.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2042,7 +2042,7 @@ public open class CfnModelCard(
        * @param metricGroups An evaluation Metric Group object.
        */
       override fun metricGroups(metricGroups: List<Any>) {
-        cdkBuilder.metricGroups(metricGroups)
+        cdkBuilder.metricGroups(metricGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2478,7 +2478,7 @@ public open class CfnModelCard(
        * inference code. 
        */
       override fun containers(containers: List<Any>) {
-        cdkBuilder.containers(containers)
+        cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3099,7 +3099,7 @@ public open class CfnModelCard(
        * .
        */
       override fun metricData(metricData: List<Any>) {
-        cdkBuilder.metricData(metricData)
+        cdkBuilder.metricData(metricData.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3988,7 +3988,7 @@ public open class CfnModelCard(
        * @param sourceAlgorithms the value to be set.
        */
       override fun sourceAlgorithms(sourceAlgorithms: List<Any>) {
-        cdkBuilder.sourceAlgorithms(sourceAlgorithms)
+        cdkBuilder.sourceAlgorithms(sourceAlgorithms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5144,7 +5144,7 @@ public open class CfnModelCard(
        * @param hyperParameters The hyper parameters used in the training job.
        */
       override fun hyperParameters(hyperParameters: List<Any>) {
-        cdkBuilder.hyperParameters(hyperParameters)
+        cdkBuilder.hyperParameters(hyperParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5207,7 +5207,7 @@ public open class CfnModelCard(
        * @param trainingMetrics The SageMaker training job results.
        */
       override fun trainingMetrics(trainingMetrics: List<Any>) {
-        cdkBuilder.trainingMetrics(trainingMetrics)
+        cdkBuilder.trainingMetrics(trainingMetrics.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5229,7 +5229,7 @@ public open class CfnModelCard(
        * training the model.
        */
       override fun userProvidedHyperParameters(userProvidedHyperParameters: List<Any>) {
-        cdkBuilder.userProvidedHyperParameters(userProvidedHyperParameters)
+        cdkBuilder.userProvidedHyperParameters(userProvidedHyperParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5250,7 +5250,7 @@ public open class CfnModelCard(
        * @param userProvidedTrainingMetrics Custom training job results.
        */
       override fun userProvidedTrainingMetrics(userProvidedTrainingMetrics: List<Any>) {
-        cdkBuilder.userProvidedTrainingMetrics(userProvidedTrainingMetrics)
+        cdkBuilder.userProvidedTrainingMetrics(userProvidedTrainingMetrics.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

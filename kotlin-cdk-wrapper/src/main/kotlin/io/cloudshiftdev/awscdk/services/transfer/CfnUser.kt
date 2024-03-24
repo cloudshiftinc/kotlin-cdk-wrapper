@@ -143,7 +143,7 @@ public open class CfnUser(
    * visible to your user and how you want to make them visible.
    */
   public open fun homeDirectoryMappings(`value`: List<Any>) {
-    unwrap(this).setHomeDirectoryMappings(`value`)
+    unwrap(this).setHomeDirectoryMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -662,7 +662,7 @@ public open class CfnUser(
      * EFS paths and keys should be visible to your user and how you want to make them visible. 
      */
     override fun homeDirectoryMappings(homeDirectoryMappings: List<Any>) {
-      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings)
+      cdkBuilder.homeDirectoryMappings(homeDirectoryMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

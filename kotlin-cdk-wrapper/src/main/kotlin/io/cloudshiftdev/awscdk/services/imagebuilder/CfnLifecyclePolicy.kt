@@ -173,7 +173,7 @@ public open class CfnLifecyclePolicy(
    * Configuration details for the lifecycle policy rules.
    */
   public open fun policyDetails(`value`: List<Any>) {
-    unwrap(this).setPolicyDetails(`value`)
+    unwrap(this).setPolicyDetails(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -409,7 +409,7 @@ public open class CfnLifecyclePolicy(
      * @param policyDetails Configuration details for the lifecycle policy rules. 
      */
     override fun policyDetails(policyDetails: List<Any>) {
-      cdkBuilder.policyDetails(policyDetails)
+      cdkBuilder.policyDetails(policyDetails.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2084,7 +2084,7 @@ public open class CfnLifecyclePolicy(
        * that the lifecycle policy applies to.
        */
       override fun recipes(recipes: List<Any>) {
-        cdkBuilder.recipes(recipes)
+        cdkBuilder.recipes(recipes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

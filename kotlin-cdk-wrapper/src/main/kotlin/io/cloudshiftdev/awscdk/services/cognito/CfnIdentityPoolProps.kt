@@ -309,7 +309,7 @@ public interface CfnIdentityPoolProps {
      * @param cognitoIdentityProviders The Amazon Cognito user pools and their client IDs.
      */
     override fun cognitoIdentityProviders(cognitoIdentityProviders: List<Any>) {
-      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders)
+      cdkBuilder.cognitoIdentityProviders(cognitoIdentityProviders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

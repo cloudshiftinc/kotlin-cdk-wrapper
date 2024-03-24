@@ -132,7 +132,7 @@ public open class CfnDataLakeSettings(
    * A list of AWS Lake Formation principals.
    */
   public open fun admins(`value`: List<Any>) {
-    unwrap(this).setAdmins(`value`)
+    unwrap(this).setAdmins(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -232,7 +232,7 @@ public open class CfnDataLakeSettings(
    * permissions or exclusively by IAM permissions.
    */
   public open fun createDatabaseDefaultPermissions(`value`: List<Any>) {
-    unwrap(this).setCreateDatabaseDefaultPermissions(`value`)
+    unwrap(this).setCreateDatabaseDefaultPermissions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -262,7 +262,7 @@ public open class CfnDataLakeSettings(
    * permissions or exclusively by IAM permissions.
    */
   public open fun createTableDefaultPermissions(`value`: List<Any>) {
-    unwrap(this).setCreateTableDefaultPermissions(`value`)
+    unwrap(this).setCreateTableDefaultPermissions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -292,7 +292,7 @@ public open class CfnDataLakeSettings(
    * are allwed to perform data filtering.
    */
   public open fun externalDataFilteringAllowList(`value`: List<Any>) {
-    unwrap(this).setExternalDataFilteringAllowList(`value`)
+    unwrap(this).setExternalDataFilteringAllowList(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -729,7 +729,7 @@ public open class CfnDataLakeSettings(
      * @param admins A list of AWS Lake Formation principals. 
      */
     override fun admins(admins: List<Any>) {
-      cdkBuilder.admins(admins)
+      cdkBuilder.admins(admins.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -898,7 +898,7 @@ public open class CfnDataLakeSettings(
      * database is managed by Lake Formation permissions or exclusively by IAM permissions. 
      */
     override fun createDatabaseDefaultPermissions(createDatabaseDefaultPermissions: List<Any>) {
-      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions)
+      cdkBuilder.createDatabaseDefaultPermissions(createDatabaseDefaultPermissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -969,7 +969,7 @@ public open class CfnDataLakeSettings(
      * table is managed by Lake Formation permissions or exclusively by IAM permissions. 
      */
     override fun createTableDefaultPermissions(createTableDefaultPermissions: List<Any>) {
-      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions)
+      cdkBuilder.createTableDefaultPermissions(createTableDefaultPermissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1016,7 +1016,7 @@ public open class CfnDataLakeSettings(
      * EMR clusters or third-party engines that are allwed to perform data filtering. 
      */
     override fun externalDataFilteringAllowList(externalDataFilteringAllowList: List<Any>) {
-      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList)
+      cdkBuilder.externalDataFilteringAllowList(externalDataFilteringAllowList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

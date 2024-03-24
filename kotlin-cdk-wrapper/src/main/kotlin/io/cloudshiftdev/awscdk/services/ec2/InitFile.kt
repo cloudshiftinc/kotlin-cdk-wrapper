@@ -105,13 +105,15 @@ public abstract class InitFile(
     ): InitFile = fromFileInline(targetFileName, sourceFileName, InitFileOptions(options))
 
     public fun fromObject(fileName: String, obj: Map<String, Any>): InitFile =
-        software.amazon.awscdk.services.ec2.InitFile.fromObject(fileName, obj).let(InitFile::wrap)
+        software.amazon.awscdk.services.ec2.InitFile.fromObject(fileName,
+        obj.mapValues{CdkObjectWrappers.unwrap(it.value)}).let(InitFile::wrap)
 
     public fun fromObject(
       fileName: String,
       obj: Map<String, Any>,
       options: InitFileOptions,
-    ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromObject(fileName, obj,
+    ): InitFile = software.amazon.awscdk.services.ec2.InitFile.fromObject(fileName,
+        obj.mapValues{CdkObjectWrappers.unwrap(it.value)},
         options.let(InitFileOptions::unwrap)).let(InitFile::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")

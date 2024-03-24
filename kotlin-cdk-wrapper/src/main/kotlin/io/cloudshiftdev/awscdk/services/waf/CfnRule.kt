@@ -138,7 +138,7 @@ public open class CfnRule(
    * `SqlInjectionMatchSet` object that you want to include in a `Rule` .
    */
   public open fun predicates(`value`: List<Any>) {
-    unwrap(this).setPredicates(`value`)
+    unwrap(this).setPredicates(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -266,7 +266,7 @@ public open class CfnRule(
      * . 
      */
     override fun predicates(predicates: List<Any>) {
-      cdkBuilder.predicates(predicates)
+      cdkBuilder.predicates(predicates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

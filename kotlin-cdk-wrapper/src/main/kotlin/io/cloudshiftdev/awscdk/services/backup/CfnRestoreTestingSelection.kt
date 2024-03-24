@@ -845,7 +845,7 @@ public open class CfnRestoreTestingSelection(
        * Also called "exact matching."
        */
       override fun stringEquals(stringEquals: List<Any>) {
-        cdkBuilder.stringEquals(stringEquals)
+        cdkBuilder.stringEquals(stringEquals.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -871,7 +871,7 @@ public open class CfnRestoreTestingSelection(
        * Also called "negated matching."
        */
       override fun stringNotEquals(stringNotEquals: List<Any>) {
-        cdkBuilder.stringNotEquals(stringNotEquals)
+        cdkBuilder.stringNotEquals(stringNotEquals.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

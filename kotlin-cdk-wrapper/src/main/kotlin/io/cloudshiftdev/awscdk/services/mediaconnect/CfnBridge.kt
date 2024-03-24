@@ -204,7 +204,7 @@ public open class CfnBridge(
    * The outputs that you want to add to this bridge.
    */
   public open fun outputs(`value`: List<Any>) {
-    unwrap(this).setOutputs(`value`)
+    unwrap(this).setOutputs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -267,7 +267,7 @@ public open class CfnBridge(
    * The sources that you want to add to this bridge.
    */
   public open fun sources(`value`: List<Any>) {
-    unwrap(this).setSources(`value`)
+    unwrap(this).setSources(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -563,7 +563,7 @@ public open class CfnBridge(
      * @param outputs The outputs that you want to add to this bridge. 
      */
     override fun outputs(outputs: List<Any>) {
-      cdkBuilder.outputs(outputs)
+      cdkBuilder.outputs(outputs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -633,7 +633,7 @@ public open class CfnBridge(
      * @param sources The sources that you want to add to this bridge. 
      */
     override fun sources(sources: List<Any>) {
-      cdkBuilder.sources(sources)
+      cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

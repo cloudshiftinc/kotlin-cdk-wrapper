@@ -2220,7 +2220,7 @@ public open class CfnDetectorModel(
        * @param states Information about the states of the detector. 
        */
       override fun states(states: List<Any>) {
-        cdkBuilder.states(states)
+        cdkBuilder.states(states.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3226,7 +3226,7 @@ public open class CfnDetectorModel(
        * @param actions The actions to be performed.
        */
       override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
+        cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4397,7 +4397,7 @@ public open class CfnDetectorModel(
        * `condition` is `TRUE` .
        */
       override fun events(events: List<Any>) {
-        cdkBuilder.events(events)
+        cdkBuilder.events(events.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4625,7 +4625,7 @@ public open class CfnDetectorModel(
        * `condition` is `TRUE` .
        */
       override fun events(events: List<Any>) {
-        cdkBuilder.events(events)
+        cdkBuilder.events(events.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4993,7 +4993,7 @@ public open class CfnDetectorModel(
        * @param events Specifies the actions performed when the `condition` evaluates to TRUE.
        */
       override fun events(events: List<Any>) {
-        cdkBuilder.events(events)
+        cdkBuilder.events(events.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5014,7 +5014,7 @@ public open class CfnDetectorModel(
        * `condition` evaluates to TRUE.
        */
       override fun transitionEvents(transitionEvents: List<Any>) {
-        cdkBuilder.transitionEvents(transitionEvents)
+        cdkBuilder.transitionEvents(transitionEvents.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6367,7 +6367,7 @@ public open class CfnDetectorModel(
        * @param actions The actions to be performed.
        */
       override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
+        cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

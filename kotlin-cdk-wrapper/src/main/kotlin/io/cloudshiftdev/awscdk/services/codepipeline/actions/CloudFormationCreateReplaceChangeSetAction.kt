@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.codepipeline.actions
 
 import io.cloudshiftdev.awscdk.CfnCapabilities
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.codepipeline.Artifact
 import io.cloudshiftdev.awscdk.services.codepipeline.ArtifactPath
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -593,7 +594,7 @@ public open class CloudFormationCreateReplaceChangeSetAction(
      * @param parameterOverrides Additional template parameters. 
      */
     override fun parameterOverrides(parameterOverrides: Map<String, Any>) {
-      cdkBuilder.parameterOverrides(parameterOverrides)
+      cdkBuilder.parameterOverrides(parameterOverrides.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

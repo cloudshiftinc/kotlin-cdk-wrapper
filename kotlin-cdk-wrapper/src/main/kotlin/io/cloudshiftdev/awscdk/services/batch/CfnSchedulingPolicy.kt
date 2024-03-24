@@ -476,7 +476,7 @@ public open class CfnSchedulingPolicy(
        * Fair share identifiers that aren't included have a default weight of `1.0` .
        */
       override fun shareDistribution(shareDistribution: List<Any>) {
-        cdkBuilder.shareDistribution(shareDistribution)
+        cdkBuilder.shareDistribution(shareDistribution.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

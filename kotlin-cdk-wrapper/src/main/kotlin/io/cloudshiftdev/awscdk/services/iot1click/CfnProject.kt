@@ -480,7 +480,7 @@ public open class CfnProject(
        * ) template.
        */
       override fun deviceTemplates(deviceTemplates: Map<String, Any>) {
-        cdkBuilder.deviceTemplates(deviceTemplates)
+        cdkBuilder.deviceTemplates(deviceTemplates.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build():

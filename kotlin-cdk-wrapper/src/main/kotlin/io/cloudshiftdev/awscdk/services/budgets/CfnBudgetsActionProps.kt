@@ -307,7 +307,7 @@ public interface CfnBudgetsActionProps {
      * @param subscribers A list of subscribers. 
      */
     override fun subscribers(subscribers: List<Any>) {
-      cdkBuilder.subscribers(subscribers)
+      cdkBuilder.subscribers(subscribers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

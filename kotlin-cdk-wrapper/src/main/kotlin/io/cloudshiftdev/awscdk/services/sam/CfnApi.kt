@@ -471,7 +471,7 @@ public open class CfnApi(
    *
    */
   public open fun methodSettings(`value`: List<Any>) {
-    unwrap(this).setMethodSettings(`value`)
+    unwrap(this).setMethodSettings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1222,7 +1222,7 @@ public open class CfnApi(
      * @param methodSettings 
      */
     override fun methodSettings(methodSettings: List<Any>) {
-      cdkBuilder.methodSettings(methodSettings)
+      cdkBuilder.methodSettings(methodSettings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

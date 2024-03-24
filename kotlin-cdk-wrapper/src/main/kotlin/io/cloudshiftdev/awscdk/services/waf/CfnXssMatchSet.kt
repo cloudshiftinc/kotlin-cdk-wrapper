@@ -118,7 +118,7 @@ public open class CfnXssMatchSet(
    * Specifies the parts of web requests that you want to inspect for cross-site scripting attacks.
    */
   public open fun xssMatchTuples(`value`: List<Any>) {
-    unwrap(this).setXssMatchTuples(`value`)
+    unwrap(this).setXssMatchTuples(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -208,7 +208,7 @@ public open class CfnXssMatchSet(
      * cross-site scripting attacks. 
      */
     override fun xssMatchTuples(xssMatchTuples: List<Any>) {
-      cdkBuilder.xssMatchTuples(xssMatchTuples)
+      cdkBuilder.xssMatchTuples(xssMatchTuples.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

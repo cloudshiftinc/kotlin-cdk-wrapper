@@ -1377,7 +1377,7 @@ public open class CfnDistribution(
        * behavior.
        */
       override fun functionAssociations(functionAssociations: List<Any>) {
-        cdkBuilder.functionAssociations(functionAssociations)
+        cdkBuilder.functionAssociations(functionAssociations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1402,7 +1402,7 @@ public open class CfnDistribution(
        * function associations for a cache behavior.
        */
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<Any>) {
-        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations)
+        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4143,7 +4143,7 @@ public open class CfnDistribution(
        * behavior.
        */
       override fun functionAssociations(functionAssociations: List<Any>) {
-        cdkBuilder.functionAssociations(functionAssociations)
+        cdkBuilder.functionAssociations(functionAssociations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4168,7 +4168,7 @@ public open class CfnDistribution(
        * function associations for a cache behavior.
        */
       override fun lambdaFunctionAssociations(lambdaFunctionAssociations: List<Any>) {
-        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations)
+        cdkBuilder.lambdaFunctionAssociations(lambdaFunctionAssociations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5669,7 +5669,7 @@ public open class CfnDistribution(
        * @param cacheBehaviors A complex type that contains zero or more `CacheBehavior` elements.
        */
       override fun cacheBehaviors(cacheBehaviors: List<Any>) {
-        cdkBuilder.cacheBehaviors(cacheBehaviors)
+        cdkBuilder.cacheBehaviors(cacheBehaviors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5731,7 +5731,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun customErrorResponses(customErrorResponses: List<Any>) {
-        cdkBuilder.customErrorResponses(customErrorResponses)
+        cdkBuilder.customErrorResponses(customErrorResponses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6009,7 +6009,7 @@ public open class CfnDistribution(
        * distribution.
        */
       override fun origins(origins: List<Any>) {
-        cdkBuilder.origins(origins)
+        cdkBuilder.origins(origins.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -8719,7 +8719,7 @@ public open class CfnDistribution(
        * @param items Items (origins) in an origin group. 
        */
       override fun items(items: List<Any>) {
-        cdkBuilder.items(items)
+        cdkBuilder.items(items.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9083,7 +9083,7 @@ public open class CfnDistribution(
        * @param items The items (origin groups) in a distribution.
        */
       override fun items(items: List<Any>) {
-        cdkBuilder.items(items)
+        cdkBuilder.items(items.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9631,7 +9631,7 @@ public open class CfnDistribution(
        * in the *Amazon CloudFront Developer Guide* .
        */
       override fun originCustomHeaders(originCustomHeaders: List<Any>) {
-        cdkBuilder.originCustomHeaders(originCustomHeaders)
+        cdkBuilder.originCustomHeaders(originCustomHeaders.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

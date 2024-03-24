@@ -698,7 +698,7 @@ public interface CfnScalingPolicyProps {
      * Required if the policy type is `StepScaling` . (Not used with any other policy type.)
      */
     override fun stepAdjustments(stepAdjustments: List<Any>) {
-      cdkBuilder.stepAdjustments(stepAdjustments)
+      cdkBuilder.stepAdjustments(stepAdjustments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

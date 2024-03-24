@@ -975,7 +975,7 @@ public interface CfnRuleProps {
      * provides the ID of the failed target and the error code.
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

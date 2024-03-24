@@ -151,7 +151,7 @@ public interface CfnDomainNameProps {
      * @param domainNameConfigurations The domain name configurations.
      */
     override fun domainNameConfigurations(domainNameConfigurations: List<Any>) {
-      cdkBuilder.domainNameConfigurations(domainNameConfigurations)
+      cdkBuilder.domainNameConfigurations(domainNameConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

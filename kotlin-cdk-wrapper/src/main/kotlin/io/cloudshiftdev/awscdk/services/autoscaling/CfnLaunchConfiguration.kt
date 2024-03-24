@@ -156,7 +156,7 @@ public open class CfnLaunchConfiguration(
    * launch.
    */
   public open fun blockDeviceMappings(`value`: List<Any>) {
-    unwrap(this).setBlockDeviceMappings(`value`)
+    unwrap(this).setBlockDeviceMappings(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -950,7 +950,7 @@ public open class CfnLaunchConfiguration(
      * attach to the instances at launch. 
      */
     override fun blockDeviceMappings(blockDeviceMappings: List<Any>) {
-      cdkBuilder.blockDeviceMappings(blockDeviceMappings)
+      cdkBuilder.blockDeviceMappings(blockDeviceMappings.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -109,7 +109,7 @@ public open class CfnEventDataStore(
    * The advanced event selectors to use to select the events for the data store.
    */
   public open fun advancedEventSelectors(`value`: List<Any>) {
-    unwrap(this).setAdvancedEventSelectors(`value`)
+    unwrap(this).setAdvancedEventSelectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -231,7 +231,7 @@ public open class CfnEventDataStore(
    * A JSON string that contains the Insights types you want to log on an event data store.
    */
   public open fun insightSelectors(`value`: List<Any>) {
-    unwrap(this).setInsightSelectors(`value`)
+    unwrap(this).setInsightSelectors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -834,7 +834,7 @@ public open class CfnEventDataStore(
      * the data store. 
      */
     override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
-      cdkBuilder.advancedEventSelectors(advancedEventSelectors)
+      cdkBuilder.advancedEventSelectors(advancedEventSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1002,7 +1002,7 @@ public open class CfnEventDataStore(
      * event data store. 
      */
     override fun insightSelectors(insightSelectors: List<Any>) {
-      cdkBuilder.insightSelectors(insightSelectors)
+      cdkBuilder.insightSelectors(insightSelectors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1346,7 +1346,7 @@ public open class CfnEventDataStore(
        * @param fieldSelectors Contains all selector statements in an advanced event selector. 
        */
       override fun fieldSelectors(fieldSelectors: List<Any>) {
-        cdkBuilder.fieldSelectors(fieldSelectors)
+        cdkBuilder.fieldSelectors(fieldSelectors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

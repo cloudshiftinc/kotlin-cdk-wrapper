@@ -161,7 +161,7 @@ public interface CfnEnabledBaselineProps {
      * These parameters configure the behavior of the baseline.
      */
     override fun parameters(parameters: List<Any>) {
-      cdkBuilder.parameters(parameters)
+      cdkBuilder.parameters(parameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

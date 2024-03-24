@@ -314,7 +314,7 @@ public open class CfnGlobalTable(
    * A list of attributes that describe the key schema for the global table and indexes.
    */
   public open fun attributeDefinitions(`value`: List<Any>) {
-    unwrap(this).setAttributeDefinitions(`value`)
+    unwrap(this).setAttributeDefinitions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -355,7 +355,7 @@ public open class CfnGlobalTable(
    * Global secondary indexes to be created on the global table.
    */
   public open fun globalSecondaryIndexes(`value`: List<Any>) {
-    unwrap(this).setGlobalSecondaryIndexes(`value`)
+    unwrap(this).setGlobalSecondaryIndexes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -389,7 +389,7 @@ public open class CfnGlobalTable(
    * Specifies the attributes that make up the primary key for the table.
    */
   public open fun keySchema(`value`: List<Any>) {
-    unwrap(this).setKeySchema(`value`)
+    unwrap(this).setKeySchema(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -413,7 +413,7 @@ public open class CfnGlobalTable(
    * Local secondary indexes to be created on the table.
    */
   public open fun localSecondaryIndexes(`value`: List<Any>) {
-    unwrap(this).setLocalSecondaryIndexes(`value`)
+    unwrap(this).setLocalSecondaryIndexes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -438,7 +438,7 @@ public open class CfnGlobalTable(
    * Specifies the list of replicas for your global table.
    */
   public open fun replicas(`value`: List<Any>) {
-    unwrap(this).setReplicas(`value`)
+    unwrap(this).setReplicas(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1007,7 +1007,7 @@ public open class CfnGlobalTable(
      * table and indexes. 
      */
     override fun attributeDefinitions(attributeDefinitions: List<Any>) {
-      cdkBuilder.attributeDefinitions(attributeDefinitions)
+      cdkBuilder.attributeDefinitions(attributeDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1073,7 +1073,7 @@ public open class CfnGlobalTable(
      * @param globalSecondaryIndexes Global secondary indexes to be created on the global table. 
      */
     override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
-      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
+      cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1116,7 +1116,7 @@ public open class CfnGlobalTable(
      * @param keySchema Specifies the attributes that make up the primary key for the table. 
      */
     override fun keySchema(keySchema: List<Any>) {
-      cdkBuilder.keySchema(keySchema)
+      cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1155,7 +1155,7 @@ public open class CfnGlobalTable(
      * @param localSecondaryIndexes Local secondary indexes to be created on the table. 
      */
     override fun localSecondaryIndexes(localSecondaryIndexes: List<Any>) {
-      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes)
+      cdkBuilder.localSecondaryIndexes(localSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1224,7 +1224,7 @@ public open class CfnGlobalTable(
      * @param replicas Specifies the list of replicas for your global table. 
      */
     override fun replicas(replicas: List<Any>) {
-      cdkBuilder.replicas(replicas)
+      cdkBuilder.replicas(replicas.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2225,7 +2225,7 @@ public open class CfnGlobalTable(
        * together, in sorted order by the sort key value.
        */
       override fun keySchema(keySchema: List<Any>) {
-        cdkBuilder.keySchema(keySchema)
+        cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2856,7 +2856,7 @@ public open class CfnGlobalTable(
        * together, in sorted order by the sort key value.
        */
       override fun keySchema(keySchema: List<Any>) {
-        cdkBuilder.keySchema(keySchema)
+        cdkBuilder.keySchema(keySchema.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4225,7 +4225,7 @@ public open class CfnGlobalTable(
        * of this replica.
        */
       override fun globalSecondaryIndexes(globalSecondaryIndexes: List<Any>) {
-        cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes)
+        cdkBuilder.globalSecondaryIndexes(globalSecondaryIndexes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

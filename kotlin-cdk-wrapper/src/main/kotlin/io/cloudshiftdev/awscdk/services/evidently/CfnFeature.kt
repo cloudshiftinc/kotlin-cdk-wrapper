@@ -129,7 +129,7 @@ public open class CfnFeature(
    * Specify users that should always be served a specific variation of a feature.
    */
   public open fun entityOverrides(`value`: List<Any>) {
-    unwrap(this).setEntityOverrides(`value`)
+    unwrap(this).setEntityOverrides(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -223,7 +223,7 @@ public open class CfnFeature(
    * An array of structures that contain the configuration of the feature's different variations.
    */
   public open fun variations(`value`: List<Any>) {
-    unwrap(this).setVariations(`value`)
+    unwrap(this).setVariations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -468,7 +468,7 @@ public open class CfnFeature(
      * feature. 
      */
     override fun entityOverrides(entityOverrides: List<Any>) {
-      cdkBuilder.entityOverrides(entityOverrides)
+      cdkBuilder.entityOverrides(entityOverrides.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -588,7 +588,7 @@ public open class CfnFeature(
      * different variations. 
      */
     override fun variations(variations: List<Any>) {
-      cdkBuilder.variations(variations)
+      cdkBuilder.variations(variations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

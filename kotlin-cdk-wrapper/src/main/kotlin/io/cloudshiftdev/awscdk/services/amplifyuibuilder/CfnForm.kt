@@ -306,7 +306,7 @@ public open class CfnForm(
    * The configuration information for the form's fields.
    */
   public open fun fields(`value`: Map<String, Any>) {
-    unwrap(this).setFields(`value`)
+    unwrap(this).setFields(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -382,7 +382,7 @@ public open class CfnForm(
    * The configuration information for the visual helper elements for the form.
    */
   public open fun sectionalElements(`value`: Map<String, Any>) {
-    unwrap(this).setSectionalElements(`value`)
+    unwrap(this).setSectionalElements(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -714,7 +714,7 @@ public open class CfnForm(
      * @param fields The configuration information for the form's fields. 
      */
     override fun fields(fields: Map<String, Any>) {
-      cdkBuilder.fields(fields)
+      cdkBuilder.fields(fields.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -780,7 +780,7 @@ public open class CfnForm(
      * form. 
      */
     override fun sectionalElements(sectionalElements: Map<String, Any>) {
-      cdkBuilder.sectionalElements(sectionalElements)
+      cdkBuilder.sectionalElements(sectionalElements.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1128,7 +1128,7 @@ public open class CfnForm(
        * @param validations The validations to perform on the value in the field.
        */
       override fun validations(validations: List<Any>) {
-        cdkBuilder.validations(validations)
+        cdkBuilder.validations(validations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3569,7 +3569,7 @@ public open class CfnForm(
        * this field property.
        */
       override fun concat(concat: List<Any>) {
-        cdkBuilder.concat(concat)
+        cdkBuilder.concat(concat.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4554,7 +4554,7 @@ public open class CfnForm(
        * @param bindingProperties The information to bind fields to data at runtime.
        */
       override fun bindingProperties(bindingProperties: Map<String, Any>) {
-        cdkBuilder.bindingProperties(bindingProperties)
+        cdkBuilder.bindingProperties(bindingProperties.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -4568,7 +4568,7 @@ public open class CfnForm(
        * @param values The value and display value pairs. 
        */
       override fun values(values: List<Any>) {
-        cdkBuilder.values(values)
+        cdkBuilder.values(values.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

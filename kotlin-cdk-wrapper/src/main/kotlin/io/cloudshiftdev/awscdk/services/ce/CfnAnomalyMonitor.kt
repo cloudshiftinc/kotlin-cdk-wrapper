@@ -162,7 +162,7 @@ public open class CfnAnomalyMonitor(
    * Tags to assign to monitor.
    */
   public open fun resourceTags(`value`: List<Any>) {
-    unwrap(this).setResourceTags(`value`)
+    unwrap(this).setResourceTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnAnomalyMonitor(
      * @param resourceTags Tags to assign to monitor. 
      */
     override fun resourceTags(resourceTags: List<Any>) {
-      cdkBuilder.resourceTags(resourceTags)
+      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

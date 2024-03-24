@@ -158,7 +158,7 @@ public interface CfnContactProps {
      * escalation plan uses stages that contact specified contacts.
      */
     override fun plan(plan: List<Any>) {
-      cdkBuilder.plan(plan)
+      cdkBuilder.plan(plan.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

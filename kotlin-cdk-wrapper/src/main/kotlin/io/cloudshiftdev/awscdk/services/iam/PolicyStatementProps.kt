@@ -218,7 +218,7 @@ public interface PolicyStatementProps {
      * @param conditions Conditions to add to the statement.
      */
     override fun conditions(conditions: Map<String, Any>) {
-      cdkBuilder.conditions(conditions)
+      cdkBuilder.conditions(conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

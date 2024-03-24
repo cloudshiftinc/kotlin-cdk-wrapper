@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
@@ -67,7 +68,8 @@ public open class Alarm(
    * @param actions 
    */
   public override fun addAlarmAction(vararg actions: IAlarmAction) {
-    unwrap(this).addAlarmAction(*actions.map(IAlarmAction::unwrap).toTypedArray())
+    unwrap(this).addAlarmAction(*actions.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.cloudwatch.IAlarmAction}.toTypedArray())
   }
 
   /**

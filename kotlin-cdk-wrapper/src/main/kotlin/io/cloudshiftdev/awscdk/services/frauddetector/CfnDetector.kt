@@ -162,7 +162,7 @@ public open class CfnDetector(
    * The models to associate with this detector.
    */
   public open fun associatedModels(`value`: List<Any>) {
-    unwrap(this).setAssociatedModels(`value`)
+    unwrap(this).setAssociatedModels(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -306,7 +306,7 @@ public open class CfnDetector(
    * The rules to include in the detector version.
    */
   public open fun rules(`value`: List<Any>) {
-    unwrap(this).setRules(`value`)
+    unwrap(this).setRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -524,7 +524,7 @@ public open class CfnDetector(
      * @param associatedModels The models to associate with this detector. 
      */
     override fun associatedModels(associatedModels: List<Any>) {
-      cdkBuilder.associatedModels(associatedModels)
+      cdkBuilder.associatedModels(associatedModels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -643,7 +643,7 @@ public open class CfnDetector(
      * @param rules The rules to include in the detector version. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1372,7 +1372,7 @@ public open class CfnDetector(
        * @param entityTypes The event type entity types.
        */
       override fun entityTypes(entityTypes: List<Any>) {
-        cdkBuilder.entityTypes(entityTypes)
+        cdkBuilder.entityTypes(entityTypes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1391,7 +1391,7 @@ public open class CfnDetector(
        * @param eventVariables The event type event variables.
        */
       override fun eventVariables(eventVariables: List<Any>) {
-        cdkBuilder.eventVariables(eventVariables)
+        cdkBuilder.eventVariables(eventVariables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1447,7 +1447,7 @@ public open class CfnDetector(
        * @param labels The event type labels.
        */
       override fun labels(labels: List<Any>) {
-        cdkBuilder.labels(labels)
+        cdkBuilder.labels(labels.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3177,7 +3177,7 @@ public open class CfnDetector(
        * @param outcomes The rule outcome.
        */
       override fun outcomes(outcomes: List<Any>) {
-        cdkBuilder.outcomes(outcomes)
+        cdkBuilder.outcomes(outcomes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

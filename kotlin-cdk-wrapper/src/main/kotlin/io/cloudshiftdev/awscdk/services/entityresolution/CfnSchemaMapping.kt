@@ -136,7 +136,7 @@ public open class CfnSchemaMapping(
    * A list of `MappedInputFields` .
    */
   public open fun mappedInputFields(`value`: List<Any>) {
-    unwrap(this).setMappedInputFields(`value`)
+    unwrap(this).setMappedInputFields(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -287,7 +287,7 @@ public open class CfnSchemaMapping(
      * @param mappedInputFields A list of `MappedInputFields` . 
      */
     override fun mappedInputFields(mappedInputFields: List<Any>) {
-      cdkBuilder.mappedInputFields(mappedInputFields)
+      cdkBuilder.mappedInputFields(mappedInputFields.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

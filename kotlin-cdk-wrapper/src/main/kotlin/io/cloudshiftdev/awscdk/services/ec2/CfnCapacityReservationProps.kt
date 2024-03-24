@@ -478,7 +478,7 @@ public interface CfnCapacityReservationProps {
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch.
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -447,7 +447,7 @@ public interface CfnTaskProps {
      * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      */
     override fun excludes(excludes: List<Any>) {
-      cdkBuilder.excludes(excludes)
+      cdkBuilder.excludes(excludes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -475,7 +475,7 @@ public interface CfnTaskProps {
      * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      */
     override fun includes(includes: List<Any>) {
-      cdkBuilder.includes(includes)
+      cdkBuilder.includes(includes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

@@ -2165,7 +2165,7 @@ public open class CfnCertificateAuthority(
        * in RFC 5280.
        */
       override fun subjectInformationAccess(subjectInformationAccess: List<Any>) {
-        cdkBuilder.subjectInformationAccess(subjectInformationAccess)
+        cdkBuilder.subjectInformationAccess(subjectInformationAccess.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4141,7 +4141,7 @@ public open class CfnCertificateAuthority(
        * Custom attributes cannot be used in combination with standard attributes.
        */
       override fun customAttributes(customAttributes: List<Any>) {
-        cdkBuilder.customAttributes(customAttributes)
+        cdkBuilder.customAttributes(customAttributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

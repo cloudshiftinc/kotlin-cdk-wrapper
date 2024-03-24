@@ -952,7 +952,7 @@ public open class CfnService(
        * record that you want AWS Cloud Map to create when you register an instance. 
        */
       override fun dnsRecords(dnsRecords: List<Any>) {
-        cdkBuilder.dnsRecords(dnsRecords)
+        cdkBuilder.dnsRecords(dnsRecords.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

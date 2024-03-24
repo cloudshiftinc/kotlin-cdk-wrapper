@@ -149,7 +149,7 @@ public open class CfnFeatureGroup(
    * Each `Feature` must include a `FeatureName` and a `FeatureType` .
    */
   public open fun featureDefinitions(`value`: List<Any>) {
-    unwrap(this).setFeatureDefinitions(`value`)
+    unwrap(this).setFeatureDefinitions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -546,7 +546,7 @@ public open class CfnFeatureGroup(
      * and a `FeatureType` . 
      */
     override fun featureDefinitions(featureDefinitions: List<Any>) {
-      cdkBuilder.featureDefinitions(featureDefinitions)
+      cdkBuilder.featureDefinitions(featureDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

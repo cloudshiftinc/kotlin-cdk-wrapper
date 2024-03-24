@@ -252,7 +252,7 @@ public interface CfnListenerRuleProps {
      * is for an HTTPS listener, it can also optionally include an authentication action.
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -282,7 +282,7 @@ public interface CfnListenerRuleProps {
      * `query-string` .
      */
     override fun conditions(conditions: List<Any>) {
-      cdkBuilder.conditions(conditions)
+      cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

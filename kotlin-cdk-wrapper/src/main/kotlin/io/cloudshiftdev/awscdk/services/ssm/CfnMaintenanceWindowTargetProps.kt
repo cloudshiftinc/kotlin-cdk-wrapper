@@ -192,7 +192,7 @@ public interface CfnMaintenanceWindowTargetProps {
      * You must specify targets by using the `WindowTargetIds` parameter.
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

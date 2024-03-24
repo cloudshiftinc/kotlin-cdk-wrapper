@@ -3,6 +3,7 @@ package cloudshift.awscdkdsl.build.dsl
 import cloudshift.awscdkdsl.build.dsl.model.BuilderProperty
 import cloudshift.awscdkdsl.build.dsl.model.type.isList
 import com.google.common.hash.Hashing
+import com.squareup.kotlinpoet.ANY
 import com.squareup.kotlinpoet.AnnotationSpec
 import com.squareup.kotlinpoet.ClassName
 import com.squareup.kotlinpoet.FunSpec
@@ -115,6 +116,14 @@ internal fun TypeName.isListOfListsOfCdkObject(): Boolean {
 
 internal fun TypeName.isListOfCdkObject(): Boolean {
     return this is ParameterizedTypeName && rawType == LIST && typeArguments[0].isCdkClass
+}
+
+internal fun TypeName.isListOfAny(): Boolean {
+    return this is ParameterizedTypeName && rawType == LIST && typeArguments[0] == ANY
+}
+
+internal fun TypeName.isMapWithAnyValue(): Boolean {
+    return this is ParameterizedTypeName && rawType == MAP && !typeArguments[0].isCdkClass && typeArguments[1] == ANY
 }
 
 internal fun TypeName.isMapWithCdkValue(): Boolean {

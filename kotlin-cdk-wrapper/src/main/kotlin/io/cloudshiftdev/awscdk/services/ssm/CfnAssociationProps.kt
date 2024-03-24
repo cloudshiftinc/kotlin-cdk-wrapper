@@ -788,7 +788,7 @@ public interface CfnAssociationProps {
      * all managed instances in an AWS account " on the Examples page.
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

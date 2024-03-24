@@ -1182,7 +1182,7 @@ public interface CfnStackProps {
      * CloudFormation deregisters the existing association before registering the IP address.
      */
     override fun elasticIps(elasticIps: List<Any>) {
-      cdkBuilder.elasticIps(elasticIps)
+      cdkBuilder.elasticIps(elasticIps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1245,7 +1245,7 @@ public interface CfnStackProps {
      * CloudFormation deregisters the existing association before registering the database instance.
      */
     override fun rdsDbInstances(rdsDbInstances: List<Any>) {
-      cdkBuilder.rdsDbInstances(rdsDbInstances)
+      cdkBuilder.rdsDbInstances(rdsDbInstances.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

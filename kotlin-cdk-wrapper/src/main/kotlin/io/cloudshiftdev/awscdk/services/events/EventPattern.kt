@@ -318,7 +318,7 @@ public interface EventPattern {
      * the event.
      */
     override fun detail(detail: Map<String, Any>) {
-      cdkBuilder.detail(detail)
+      cdkBuilder.detail(detail.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

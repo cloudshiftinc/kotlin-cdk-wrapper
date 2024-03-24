@@ -212,7 +212,7 @@ public open class CfnComponentType(
    * Maps strings to `compositeComponentTypes` of the `componentType` .
    */
   public open fun compositeComponentTypes(`value`: Map<String, Any>) {
-    unwrap(this).setCompositeComponentTypes(`value`)
+    unwrap(this).setCompositeComponentTypes(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -260,7 +260,7 @@ public open class CfnComponentType(
    * An object that maps strings to the functions in the component type.
    */
   public open fun functions(`value`: Map<String, Any>) {
-    unwrap(this).setFunctions(`value`)
+    unwrap(this).setFunctions(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -307,7 +307,7 @@ public open class CfnComponentType(
    * An object that maps strings to the property definitions in the component type.
    */
   public open fun propertyDefinitions(`value`: Map<String, Any>) {
-    unwrap(this).setPropertyDefinitions(`value`)
+    unwrap(this).setPropertyDefinitions(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -326,7 +326,7 @@ public open class CfnComponentType(
    * An object that maps strings to the property groups in the component type.
    */
   public open fun propertyGroups(`value`: Map<String, Any>) {
-    unwrap(this).setPropertyGroups(`value`)
+    unwrap(this).setPropertyGroups(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -574,7 +574,7 @@ public open class CfnComponentType(
      * `componentType` . 
      */
     override fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>) {
-      cdkBuilder.compositeComponentTypes(compositeComponentTypes)
+      cdkBuilder.compositeComponentTypes(compositeComponentTypes.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -634,7 +634,7 @@ public open class CfnComponentType(
      * @param functions An object that maps strings to the functions in the component type. 
      */
     override fun functions(functions: Map<String, Any>) {
-      cdkBuilder.functions(functions)
+      cdkBuilder.functions(functions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -692,7 +692,7 @@ public open class CfnComponentType(
      * component type. 
      */
     override fun propertyDefinitions(propertyDefinitions: Map<String, Any>) {
-      cdkBuilder.propertyDefinitions(propertyDefinitions)
+      cdkBuilder.propertyDefinitions(propertyDefinitions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -718,7 +718,7 @@ public open class CfnComponentType(
      * type. 
      */
     override fun propertyGroups(propertyGroups: Map<String, Any>) {
-      cdkBuilder.propertyGroups(propertyGroups)
+      cdkBuilder.propertyGroups(propertyGroups.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -1161,7 +1161,7 @@ public open class CfnComponentType(
        * @param allowedValues The allowed values for this data type.
        */
       override fun allowedValues(allowedValues: List<Any>) {
-        cdkBuilder.allowedValues(allowedValues)
+        cdkBuilder.allowedValues(allowedValues.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1506,7 +1506,7 @@ public open class CfnComponentType(
        * @param listValue A list of multiple values.
        */
       override fun listValue(listValue: List<Any>) {
-        cdkBuilder.listValue(listValue)
+        cdkBuilder.listValue(listValue.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1532,7 +1532,7 @@ public open class CfnComponentType(
        * @param mapValue An object that maps strings to multiple `DataValue` objects.
        */
       override fun mapValue(mapValue: Map<String, Any>) {
-        cdkBuilder.mapValue(mapValue)
+        cdkBuilder.mapValue(mapValue.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**

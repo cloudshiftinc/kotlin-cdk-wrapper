@@ -345,7 +345,7 @@ public interface CfnAssessmentProps {
      * @param delegations The delegations that are associated with the assessment.
      */
     override fun delegations(delegations: List<Any>) {
-      cdkBuilder.delegations(delegations)
+      cdkBuilder.delegations(delegations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -385,7 +385,7 @@ public interface CfnAssessmentProps {
      * @param roles The roles that are associated with the assessment.
      */
     override fun roles(roles: List<Any>) {
-      cdkBuilder.roles(roles)
+      cdkBuilder.roles(roles.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

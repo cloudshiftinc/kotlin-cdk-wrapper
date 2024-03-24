@@ -258,7 +258,7 @@ public interface CfnIdMappingWorkflowProps {
      * `InputSourceARN` and `SchemaName` . 
      */
     override fun inputSourceConfig(inputSourceConfig: List<Any>) {
-      cdkBuilder.inputSourceConfig(inputSourceConfig)
+      cdkBuilder.inputSourceConfig(inputSourceConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -281,7 +281,7 @@ public interface CfnIdMappingWorkflowProps {
      * contains fields `OutputS3Path` and `Output` . 
      */
     override fun outputSourceConfig(outputSourceConfig: List<Any>) {
-      cdkBuilder.outputSourceConfig(outputSourceConfig)
+      cdkBuilder.outputSourceConfig(outputSourceConfig.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

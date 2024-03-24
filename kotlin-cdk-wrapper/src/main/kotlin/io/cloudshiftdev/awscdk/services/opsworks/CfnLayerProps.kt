@@ -840,7 +840,7 @@ public interface CfnLayerProps {
      * EBS volumes.
      */
     override fun volumeConfigurations(volumeConfigurations: List<Any>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations)
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

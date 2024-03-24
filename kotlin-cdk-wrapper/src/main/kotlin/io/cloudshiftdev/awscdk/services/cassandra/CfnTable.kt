@@ -240,7 +240,7 @@ public open class CfnTable(
    * One or more columns that determine how the table data is sorted.
    */
   public open fun clusteringKeyColumns(`value`: List<Any>) {
-    unwrap(this).setClusteringKeyColumns(`value`)
+    unwrap(this).setClusteringKeyColumns(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -326,7 +326,7 @@ public open class CfnTable(
    * One or more columns that uniquely identify every row in the table.
    */
   public open fun partitionKeyColumns(`value`: List<Any>) {
-    unwrap(this).setPartitionKeyColumns(`value`)
+    unwrap(this).setPartitionKeyColumns(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -373,7 +373,7 @@ public open class CfnTable(
    * defined as partition key columns or clustering key columns.
    */
   public open fun regularColumns(`value`: List<Any>) {
-    unwrap(this).setRegularColumns(`value`)
+    unwrap(this).setRegularColumns(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -398,7 +398,7 @@ public open class CfnTable(
    * The AWS Region specific settings of a multi-Region table.
    */
   public open fun replicaSpecifications(`value`: List<Any>) {
-    unwrap(this).setReplicaSpecifications(`value`)
+    unwrap(this).setReplicaSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1012,7 +1012,7 @@ public open class CfnTable(
      * @param clusteringKeyColumns One or more columns that determine how the table data is sorted. 
      */
     override fun clusteringKeyColumns(clusteringKeyColumns: List<Any>) {
-      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns)
+      cdkBuilder.clusteringKeyColumns(clusteringKeyColumns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1148,7 +1148,7 @@ public open class CfnTable(
      * 
      */
     override fun partitionKeyColumns(partitionKeyColumns: List<Any>) {
-      cdkBuilder.partitionKeyColumns(partitionKeyColumns)
+      cdkBuilder.partitionKeyColumns(partitionKeyColumns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1216,7 +1216,7 @@ public open class CfnTable(
      * columns that are *not* defined as partition key columns or clustering key columns. 
      */
     override fun regularColumns(regularColumns: List<Any>) {
-      cdkBuilder.regularColumns(regularColumns)
+      cdkBuilder.regularColumns(regularColumns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1265,7 +1265,7 @@ public open class CfnTable(
      * @param replicaSpecifications The AWS Region specific settings of a multi-Region table. 
      */
     override fun replicaSpecifications(replicaSpecifications: List<Any>) {
-      cdkBuilder.replicaSpecifications(replicaSpecifications)
+      cdkBuilder.replicaSpecifications(replicaSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

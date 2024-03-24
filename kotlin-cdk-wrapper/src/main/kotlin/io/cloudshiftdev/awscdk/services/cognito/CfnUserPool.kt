@@ -511,7 +511,7 @@ public open class CfnUserPool(
    * These attributes can be standard or custom attributes.
    */
   public open fun schema(`value`: List<Any>) {
-    unwrap(this).setSchema(`value`)
+    unwrap(this).setSchema(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1934,7 +1934,7 @@ public open class CfnUserPool(
      * or custom attributes. 
      */
     override fun schema(schema: List<Any>) {
-      cdkBuilder.schema(schema)
+      cdkBuilder.schema(schema.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2368,7 +2368,7 @@ public open class CfnUserPool(
        * @param recoveryMechanisms The list of `RecoveryOptionTypes` .
        */
       override fun recoveryMechanisms(recoveryMechanisms: List<Any>) {
-        cdkBuilder.recoveryMechanisms(recoveryMechanisms)
+        cdkBuilder.recoveryMechanisms(recoveryMechanisms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

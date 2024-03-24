@@ -125,7 +125,7 @@ public open class CfnOptionGroup(
    * A list of options and the settings for each option.
    */
   public open fun optionConfigurations(`value`: List<Any>) {
-    unwrap(this).setOptionConfigurations(`value`)
+    unwrap(this).setOptionConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -350,7 +350,7 @@ public open class CfnOptionGroup(
      * @param optionConfigurations A list of options and the settings for each option. 
      */
     override fun optionConfigurations(optionConfigurations: List<Any>) {
-      cdkBuilder.optionConfigurations(optionConfigurations)
+      cdkBuilder.optionConfigurations(optionConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -607,7 +607,7 @@ public open class CfnOptionGroup(
        * @param optionSettings The option settings to include in an option group.
        */
       override fun optionSettings(optionSettings: List<Any>) {
-        cdkBuilder.optionSettings(optionSettings)
+        cdkBuilder.optionSettings(optionSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

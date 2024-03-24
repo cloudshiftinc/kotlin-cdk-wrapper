@@ -241,7 +241,7 @@ public interface CfnMissionProfileProps {
      * Each list of config ARNs is an edge, with a "from" config and a "to" config.
      */
     override fun dataflowEdges(dataflowEdges: List<Any>) {
-      cdkBuilder.dataflowEdges(dataflowEdges)
+      cdkBuilder.dataflowEdges(dataflowEdges.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

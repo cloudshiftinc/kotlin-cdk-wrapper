@@ -677,7 +677,7 @@ public interface CfnDatabaseProps {
      * @param relationalDatabaseParameters An array of parameters for the database.
      */
     override fun relationalDatabaseParameters(relationalDatabaseParameters: List<Any>) {
-      cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters)
+      cdkBuilder.relationalDatabaseParameters(relationalDatabaseParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

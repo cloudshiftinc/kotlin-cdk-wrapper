@@ -223,7 +223,7 @@ public open class CfnIntegration(
    * The object type mapping.
    */
   public open fun objectTypeNames(`value`: List<Any>) {
-    unwrap(this).setObjectTypeNames(`value`)
+    unwrap(this).setObjectTypeNames(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -443,7 +443,7 @@ public open class CfnIntegration(
      * @param objectTypeNames The object type mapping. 
      */
     override fun objectTypeNames(objectTypeNames: List<Any>) {
-      cdkBuilder.objectTypeNames(objectTypeNames)
+      cdkBuilder.objectTypeNames(objectTypeNames.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -974,7 +974,7 @@ public open class CfnIntegration(
        * the flow run. 
        */
       override fun tasks(tasks: List<Any>) {
-        cdkBuilder.tasks(tasks)
+        cdkBuilder.tasks(tasks.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2941,7 +2941,7 @@ public open class CfnIntegration(
        * The service looks for particular information based on the TaskType.
        */
       override fun taskProperties(taskProperties: List<Any>) {
-        cdkBuilder.taskProperties(taskProperties)
+        cdkBuilder.taskProperties(taskProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

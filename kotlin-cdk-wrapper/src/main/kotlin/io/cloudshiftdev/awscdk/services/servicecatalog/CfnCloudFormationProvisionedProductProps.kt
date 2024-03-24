@@ -473,7 +473,7 @@ public interface CfnCloudFormationProvisionedProductProps {
      * provisioning the product.
      */
     override fun provisioningParameters(provisioningParameters: List<Any>) {
-      cdkBuilder.provisioningParameters(provisioningParameters)
+      cdkBuilder.provisioningParameters(provisioningParameters.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

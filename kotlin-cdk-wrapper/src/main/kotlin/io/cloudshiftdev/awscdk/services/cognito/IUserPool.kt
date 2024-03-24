@@ -242,7 +242,8 @@ public interface IUserPool : IResource {
      * @param actions 
      */
     override fun grant(grantee: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Get all identity providers registered with this user pool.

@@ -227,7 +227,7 @@ public open class CfnAssetModel(
    * The composite models that are part of this asset model.
    */
   public open fun assetModelCompositeModels(`value`: List<Any>) {
-    unwrap(this).setAssetModelCompositeModels(`value`)
+    unwrap(this).setAssetModelCompositeModels(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -276,7 +276,7 @@ public open class CfnAssetModel(
    * The hierarchy definitions of the asset model.
    */
   public open fun assetModelHierarchies(`value`: List<Any>) {
-    unwrap(this).setAssetModelHierarchies(`value`)
+    unwrap(this).setAssetModelHierarchies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -313,7 +313,7 @@ public open class CfnAssetModel(
    * The property definitions of the asset model.
    */
   public open fun assetModelProperties(`value`: List<Any>) {
-    unwrap(this).setAssetModelProperties(`value`)
+    unwrap(this).setAssetModelProperties(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -650,7 +650,7 @@ public open class CfnAssetModel(
      * @param assetModelCompositeModels The composite models that are part of this asset model. 
      */
     override fun assetModelCompositeModels(assetModelCompositeModels: List<Any>) {
-      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels)
+      cdkBuilder.assetModelCompositeModels(assetModelCompositeModels.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -730,7 +730,7 @@ public open class CfnAssetModel(
      * @param assetModelHierarchies The hierarchy definitions of the asset model. 
      */
     override fun assetModelHierarchies(assetModelHierarchies: List<Any>) {
-      cdkBuilder.assetModelHierarchies(assetModelHierarchies)
+      cdkBuilder.assetModelHierarchies(assetModelHierarchies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -794,7 +794,7 @@ public open class CfnAssetModel(
      * @param assetModelProperties The property definitions of the asset model. 
      */
     override fun assetModelProperties(assetModelProperties: List<Any>) {
-      cdkBuilder.assetModelProperties(assetModelProperties)
+      cdkBuilder.assetModelProperties(assetModelProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1125,7 +1125,7 @@ public open class CfnAssetModel(
        * @param compositeModelProperties The asset property definitions for this composite model.
        */
       override fun compositeModelProperties(compositeModelProperties: List<Any>) {
-        cdkBuilder.compositeModelProperties(compositeModelProperties)
+        cdkBuilder.compositeModelProperties(compositeModelProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2315,7 +2315,7 @@ public open class CfnAssetModel(
        * @param variables The list of variables used in the expression. 
        */
       override fun variables(variables: List<Any>) {
-        cdkBuilder.variables(variables)
+        cdkBuilder.variables(variables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3086,7 +3086,7 @@ public open class CfnAssetModel(
        * @param variables The list of variables used in the expression. 
        */
       override fun variables(variables: List<Any>) {
-        cdkBuilder.variables(variables)
+        cdkBuilder.variables(variables.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3638,7 +3638,7 @@ public open class CfnAssetModel(
        * @param propertyPath The path of the property that is trying to be referenced.
        */
       override fun propertyPath(propertyPath: List<Any>) {
-        cdkBuilder.propertyPath(propertyPath)
+        cdkBuilder.propertyPath(propertyPath.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -325,7 +325,7 @@ public open class CfnPolicy(
    * explicitly exclude them.
    */
   public open fun resourceTags(`value`: List<Any>) {
-    unwrap(this).setResourceTags(`value`)
+    unwrap(this).setResourceTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1794,7 +1794,7 @@ public open class CfnPolicy(
      * in the policy scope or explicitly exclude them. 
      */
     override fun resourceTags(resourceTags: List<Any>) {
-      cdkBuilder.resourceTags(resourceTags)
+      cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

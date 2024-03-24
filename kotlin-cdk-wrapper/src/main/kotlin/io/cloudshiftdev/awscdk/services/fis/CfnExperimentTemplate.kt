@@ -133,7 +133,7 @@ public open class CfnExperimentTemplate(
    * The actions for the experiment.
    */
   public open fun actions(`value`: Map<String, Any>) {
-    unwrap(this).setActions(`value`)
+    unwrap(this).setActions(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -246,7 +246,7 @@ public open class CfnExperimentTemplate(
    * The stop conditions for the experiment.
    */
   public open fun stopConditions(`value`: List<Any>) {
-    unwrap(this).setStopConditions(`value`)
+    unwrap(this).setStopConditions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -287,7 +287,7 @@ public open class CfnExperimentTemplate(
    * The targets for the experiment.
    */
   public open fun targets(`value`: Map<String, Any>) {
-    unwrap(this).setTargets(`value`)
+    unwrap(this).setTargets(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -454,7 +454,7 @@ public open class CfnExperimentTemplate(
      * @param actions The actions for the experiment. 
      */
     override fun actions(actions: Map<String, Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -558,7 +558,7 @@ public open class CfnExperimentTemplate(
      * @param stopConditions The stop conditions for the experiment. 
      */
     override fun stopConditions(stopConditions: List<Any>) {
-      cdkBuilder.stopConditions(stopConditions)
+      cdkBuilder.stopConditions(stopConditions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -597,7 +597,7 @@ public open class CfnExperimentTemplate(
      * @param targets The targets for the experiment. 
      */
     override fun targets(targets: Map<String, Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     public fun build(): software.amazon.awscdk.services.fis.CfnExperimentTemplate =
@@ -1606,7 +1606,7 @@ public open class CfnExperimentTemplate(
        * @param filters The filters to apply to identify target resources using specific attributes.
        */
       override fun filters(filters: List<Any>) {
-        cdkBuilder.filters(filters)
+        cdkBuilder.filters(filters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

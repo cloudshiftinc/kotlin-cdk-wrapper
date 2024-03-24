@@ -508,7 +508,8 @@ public interface IQueue : IResource {
      * @param queueActions The actions to grant. 
      */
     override fun grant(grantee: IGrantable, vararg queueActions: String): Grant =
-        unwrap(this).grant(grantee.let(IGrantable::unwrap), *queueActions).let(Grant::wrap)
+        unwrap(this).grant(grantee.let(IGrantable::unwrap),
+        *queueActions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Grant permissions to consume messages from a queue.

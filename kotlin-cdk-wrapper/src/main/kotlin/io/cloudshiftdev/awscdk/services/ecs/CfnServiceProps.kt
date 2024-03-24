@@ -1011,7 +1011,7 @@ public interface CfnServiceProps {
      * A capacity provider strategy may contain a maximum of 6 capacity providers.
      */
     override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
-      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy)
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1200,7 +1200,7 @@ public interface CfnServiceProps {
      * in the *Amazon Elastic Container Service Developer Guide* .
      */
     override fun loadBalancers(loadBalancers: List<Any>) {
-      cdkBuilder.loadBalancers(loadBalancers)
+      cdkBuilder.loadBalancers(loadBalancers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1270,7 +1270,7 @@ public interface CfnServiceProps {
      * the task definition and those specified at runtime.
      */
     override fun placementConstraints(placementConstraints: List<Any>) {
-      cdkBuilder.placementConstraints(placementConstraints)
+      cdkBuilder.placementConstraints(placementConstraints.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1295,7 +1295,7 @@ public interface CfnServiceProps {
      * You can specify a maximum of 5 strategy rules for each service.
      */
     override fun placementStrategies(placementStrategies: List<Any>) {
-      cdkBuilder.placementStrategies(placementStrategies)
+      cdkBuilder.placementStrategies(placementStrategies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1471,7 +1471,7 @@ public interface CfnServiceProps {
      * each service isn't supported.
      */
     override fun serviceRegistries(serviceRegistries: List<Any>) {
-      cdkBuilder.serviceRegistries(serviceRegistries)
+      cdkBuilder.serviceRegistries(serviceRegistries.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1553,7 +1553,7 @@ public interface CfnServiceProps {
      * Currently, the only supported volume type is an Amazon EBS volume.
      */
     override fun volumeConfigurations(volumeConfigurations: List<Any>) {
-      cdkBuilder.volumeConfigurations(volumeConfigurations)
+      cdkBuilder.volumeConfigurations(volumeConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

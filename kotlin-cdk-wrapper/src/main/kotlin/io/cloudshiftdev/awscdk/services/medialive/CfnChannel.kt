@@ -133,7 +133,7 @@ public open class CfnChannel(
    * The settings that identify the destination for the outputs in this MediaLive output package.
    */
   public open fun destinations(`value`: List<Any>) {
-    unwrap(this).setDestinations(`value`)
+    unwrap(this).setDestinations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -184,7 +184,7 @@ public open class CfnChannel(
    * The list of input attachments for the channel.
    */
   public open fun inputAttachments(`value`: List<Any>) {
-    unwrap(this).setInputAttachments(`value`)
+    unwrap(this).setInputAttachments(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -666,7 +666,7 @@ public open class CfnChannel(
      * MediaLive output package. 
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -726,7 +726,7 @@ public open class CfnChannel(
      * @param inputAttachments The list of input attachments for the channel. 
      */
     override fun inputAttachments(inputAttachments: List<Any>) {
-      cdkBuilder.inputAttachments(inputAttachments)
+      cdkBuilder.inputAttachments(inputAttachments.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2763,7 +2763,7 @@ public open class CfnChannel(
        * remixed into this output channel.
        */
       override fun inputChannelLevels(inputChannelLevels: List<Any>) {
-        cdkBuilder.inputChannelLevels(inputChannelLevels)
+        cdkBuilder.inputChannelLevels(inputChannelLevels.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5600,7 +5600,7 @@ public open class CfnChannel(
        * @param tracks Selects one or more unique audio tracks from within a source.
        */
       override fun tracks(tracks: List<Any>) {
-        cdkBuilder.tracks(tracks)
+        cdkBuilder.tracks(tracks.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5933,7 +5933,7 @@ public open class CfnChannel(
        * If any of these conditions occur, MediaLive will perform a failover to the other input.
        */
       override fun failoverConditions(failoverConditions: List<Any>) {
-        cdkBuilder.failoverConditions(failoverConditions)
+        cdkBuilder.failoverConditions(failoverConditions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10334,7 +10334,7 @@ public open class CfnChannel(
        * @param globalColorCorrections the value to be set.
        */
       override fun globalColorCorrections(globalColorCorrections: List<Any>) {
-        cdkBuilder.globalColorCorrections(globalColorCorrections)
+        cdkBuilder.globalColorCorrections(globalColorCorrections.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13707,7 +13707,7 @@ public open class CfnChannel(
        * @param audioDescriptions The encoding information for output audio.
        */
       override fun audioDescriptions(audioDescriptions: List<Any>) {
-        cdkBuilder.audioDescriptions(audioDescriptions)
+        cdkBuilder.audioDescriptions(audioDescriptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13794,7 +13794,7 @@ public open class CfnChannel(
        * @param captionDescriptions The encoding information for output captions.
        */
       override fun captionDescriptions(captionDescriptions: List<Any>) {
-        cdkBuilder.captionDescriptions(captionDescriptions)
+        cdkBuilder.captionDescriptions(captionDescriptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13935,7 +13935,7 @@ public open class CfnChannel(
        * @param outputGroups The settings for the output groups in the channel.
        */
       override fun outputGroups(outputGroups: List<Any>) {
-        cdkBuilder.outputGroups(outputGroups)
+        cdkBuilder.outputGroups(outputGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -14003,7 +14003,7 @@ public open class CfnChannel(
        * @param videoDescriptions The encoding information for output videos.
        */
       override fun videoDescriptions(videoDescriptions: List<Any>) {
-        cdkBuilder.videoDescriptions(videoDescriptions)
+        cdkBuilder.videoDescriptions(videoDescriptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -21895,7 +21895,7 @@ public open class CfnChannel(
        * This is meaningful only if captionLanguageSetting is set to "insert."
        */
       override fun captionLanguageMappings(captionLanguageMappings: List<Any>) {
-        cdkBuilder.captionLanguageMappings(captionLanguageMappings)
+        cdkBuilder.captionLanguageMappings(captionLanguageMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -25450,7 +25450,7 @@ public open class CfnChannel(
        * The parent of this entity is InputSettings.
        */
       override fun audioSelectors(audioSelectors: List<Any>) {
-        cdkBuilder.audioSelectors(audioSelectors)
+        cdkBuilder.audioSelectors(audioSelectors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -25471,7 +25471,7 @@ public open class CfnChannel(
        * @param captionSelectors Information about the specific captions to extract from the input.
        */
       override fun captionSelectors(captionSelectors: List<Any>) {
-        cdkBuilder.captionSelectors(captionSelectors)
+        cdkBuilder.captionSelectors(captionSelectors.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -32399,7 +32399,7 @@ public open class CfnChannel(
        * @param mediaPackageSettings The destination settings for a MediaPackage output.
        */
       override fun mediaPackageSettings(mediaPackageSettings: List<Any>) {
-        cdkBuilder.mediaPackageSettings(mediaPackageSettings)
+        cdkBuilder.mediaPackageSettings(mediaPackageSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -32447,7 +32447,7 @@ public open class CfnChannel(
        * @param settings The destination settings for an output.
        */
       override fun tings(settings: List<Any>) {
-        cdkBuilder.settings(settings)
+        cdkBuilder.settings(settings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -33214,7 +33214,7 @@ public open class CfnChannel(
        * @param outputs The settings for the outputs in the output group.
        */
       override fun outputs(outputs: List<Any>) {
-        cdkBuilder.outputs(outputs)
+        cdkBuilder.outputs(outputs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -35686,7 +35686,7 @@ public open class CfnChannel(
        * gain adjustments.
        */
       override fun channelMappings(channelMappings: List<Any>) {
-        cdkBuilder.channelMappings(channelMappings)
+        cdkBuilder.channelMappings(channelMappings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

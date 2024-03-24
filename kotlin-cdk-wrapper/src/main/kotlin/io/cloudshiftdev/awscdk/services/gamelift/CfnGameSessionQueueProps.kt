@@ -340,7 +340,7 @@ public interface CfnGameSessionQueueProps {
      * order of placement preference.
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -422,7 +422,7 @@ public interface CfnGameSessionQueueProps {
      * are applied based on their maximum allowed latency, starting with the lowest value.
      */
     override fun playerLatencyPolicies(playerLatencyPolicies: List<Any>) {
-      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies)
+      cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

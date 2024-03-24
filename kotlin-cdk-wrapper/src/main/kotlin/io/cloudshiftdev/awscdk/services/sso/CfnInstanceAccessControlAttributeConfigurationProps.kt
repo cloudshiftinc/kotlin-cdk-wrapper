@@ -159,7 +159,7 @@ public interface CfnInstanceAccessControlAttributeConfigurationProps {
      * specified IAM Identity Center instance.
      */
     override fun accessControlAttributes(accessControlAttributes: List<Any>) {
-      cdkBuilder.accessControlAttributes(accessControlAttributes)
+      cdkBuilder.accessControlAttributes(accessControlAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

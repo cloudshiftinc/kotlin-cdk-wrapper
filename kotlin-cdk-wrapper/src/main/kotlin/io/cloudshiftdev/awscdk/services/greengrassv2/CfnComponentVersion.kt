@@ -844,7 +844,7 @@ public open class CfnComponentVersion(
        * @param devices The list of system devices that the container can access.
        */
       override fun devices(devices: List<Any>) {
-        cdkBuilder.devices(devices)
+        cdkBuilder.devices(devices.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -889,7 +889,7 @@ public open class CfnComponentVersion(
        * @param volumes The list of volumes that the container can access.
        */
       override fun volumes(volumes: List<Any>) {
-        cdkBuilder.volumes(volumes)
+        cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1572,7 +1572,7 @@ public open class CfnComponentVersion(
        * this function to local publish/subscribe messages and AWS IoT Core MQTT messages.
        */
       override fun eventSources(eventSources: List<Any>) {
-        cdkBuilder.eventSources(eventSources)
+        cdkBuilder.eventSources(eventSources.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2032,7 +2032,7 @@ public open class CfnComponentVersion(
        * depends.
        */
       override fun componentDependencies(componentDependencies: Map<String, Any>) {
-        cdkBuilder.componentDependencies(componentDependencies)
+        cdkBuilder.componentDependencies(componentDependencies.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       /**
@@ -2082,7 +2082,7 @@ public open class CfnComponentVersion(
        * @param componentPlatforms The platforms that the component version supports.
        */
       override fun componentPlatforms(componentPlatforms: List<Any>) {
-        cdkBuilder.componentPlatforms(componentPlatforms)
+        cdkBuilder.componentPlatforms(componentPlatforms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

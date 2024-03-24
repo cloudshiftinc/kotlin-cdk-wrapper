@@ -655,7 +655,7 @@ public open class CfnLoggingConfiguration(
        * Network Firewall generates logs for stateful rule groups.
        */
       override fun logDestinationConfigs(logDestinationConfigs: List<Any>) {
-        cdkBuilder.logDestinationConfigs(logDestinationConfigs)
+        cdkBuilder.logDestinationConfigs(logDestinationConfigs.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

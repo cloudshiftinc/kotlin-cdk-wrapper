@@ -352,7 +352,7 @@ public interface CfnListenerProps {
      * .
      */
     override fun certificates(certificates: List<Any>) {
-      cdkBuilder.certificates(certificates)
+      cdkBuilder.certificates(certificates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -384,7 +384,7 @@ public interface CfnListenerProps {
      * .
      */
     override fun defaultActions(defaultActions: List<Any>) {
-      cdkBuilder.defaultActions(defaultActions)
+      cdkBuilder.defaultActions(defaultActions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

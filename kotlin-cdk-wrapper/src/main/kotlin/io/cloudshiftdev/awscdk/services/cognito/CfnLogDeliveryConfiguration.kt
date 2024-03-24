@@ -91,7 +91,7 @@ public open class CfnLogDeliveryConfiguration(
    * The detailed activity logging destination of a user pool.
    */
   public open fun logConfigurations(`value`: List<Any>) {
-    unwrap(this).setLogConfigurations(`value`)
+    unwrap(this).setLogConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -175,7 +175,7 @@ public open class CfnLogDeliveryConfiguration(
      * @param logConfigurations The detailed activity logging destination of a user pool. 
      */
     override fun logConfigurations(logConfigurations: List<Any>) {
-      cdkBuilder.logConfigurations(logConfigurations)
+      cdkBuilder.logConfigurations(logConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

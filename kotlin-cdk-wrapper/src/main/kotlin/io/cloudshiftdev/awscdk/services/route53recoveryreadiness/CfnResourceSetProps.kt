@@ -185,7 +185,7 @@ public interface CfnResourceSetProps {
      * @param resources A list of resource objects in the resource set. 
      */
     override fun resources(resources: List<Any>) {
-      cdkBuilder.resources(resources)
+      cdkBuilder.resources(resources.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

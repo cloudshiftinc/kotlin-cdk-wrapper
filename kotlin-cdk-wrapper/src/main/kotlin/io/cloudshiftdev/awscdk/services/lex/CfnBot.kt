@@ -129,7 +129,7 @@ public open class CfnBot(
    * A list of locales for the bot.
    */
   public open fun botLocales(`value`: List<Any>) {
-    unwrap(this).setBotLocales(`value`)
+    unwrap(this).setBotLocales(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -153,7 +153,7 @@ public open class CfnBot(
    * A list of tags to add to the bot.
    */
   public open fun botTags(`value`: List<Any>) {
-    unwrap(this).setBotTags(`value`)
+    unwrap(this).setBotTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -275,7 +275,7 @@ public open class CfnBot(
    * A list of tags to add to the test alias for a bot.
    */
   public open fun testBotAliasTags(`value`: List<Any>) {
-    unwrap(this).setTestBotAliasTags(`value`)
+    unwrap(this).setTestBotAliasTags(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -618,7 +618,7 @@ public open class CfnBot(
      * @param botLocales A list of locales for the bot. 
      */
     override fun botLocales(botLocales: List<Any>) {
-      cdkBuilder.botLocales(botLocales)
+      cdkBuilder.botLocales(botLocales.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -652,7 +652,7 @@ public open class CfnBot(
      * @param botTags A list of tags to add to the bot. 
      */
     override fun botTags(botTags: List<Any>) {
-      cdkBuilder.botTags(botTags)
+      cdkBuilder.botTags(botTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -794,7 +794,7 @@ public open class CfnBot(
      * @param testBotAliasTags A list of tags to add to the test alias for a bot. 
      */
     override fun testBotAliasTags(testBotAliasTags: List<Any>) {
-      cdkBuilder.testBotAliasTags(testBotAliasTags)
+      cdkBuilder.testBotAliasTags(testBotAliasTags.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -2175,7 +2175,7 @@ public open class CfnBot(
        * @param intents One or more intents defined for the locale.
        */
       override fun intents(intents: List<Any>) {
-        cdkBuilder.intents(intents)
+        cdkBuilder.intents(intents.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -2212,7 +2212,7 @@ public open class CfnBot(
        * @param slotTypes One or more slot types defined for the locale.
        */
       override fun slotTypes(slotTypes: List<Any>) {
-        cdkBuilder.slotTypes(slotTypes)
+        cdkBuilder.slotTypes(slotTypes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3383,7 +3383,7 @@ public open class CfnBot(
        * and next step are executed when the condition is true.
        */
       override fun conditionalBranches(conditionalBranches: List<Any>) {
-        cdkBuilder.conditionalBranches(conditionalBranches)
+        cdkBuilder.conditionalBranches(conditionalBranches.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3599,7 +3599,7 @@ public open class CfnBot(
        * @param audioLogSettings The Amazon S3 settings for logging audio to an S3 bucket.
        */
       override fun audioLogSettings(audioLogSettings: List<Any>) {
-        cdkBuilder.audioLogSettings(audioLogSettings)
+        cdkBuilder.audioLogSettings(audioLogSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3619,7 +3619,7 @@ public open class CfnBot(
        * @param textLogSettings The Amazon CloudWatch Logs settings for logging text and metadata.
        */
       override fun textLogSettings(textLogSettings: List<Any>) {
-        cdkBuilder.textLogSettings(textLogSettings)
+        cdkBuilder.textLogSettings(textLogSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3967,7 +3967,7 @@ public open class CfnBot(
        * conversation with your bot. 
        */
       override fun customVocabularyItems(customVocabularyItems: List<Any>) {
-        cdkBuilder.customVocabularyItems(customVocabularyItems)
+        cdkBuilder.customVocabularyItems(customVocabularyItems.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5292,7 +5292,7 @@ public open class CfnBot(
        * It contains application information passed between Amazon Lex and a client application.
        */
       override fun sessionAttributes(sessionAttributes: List<Any>) {
-        cdkBuilder.sessionAttributes(sessionAttributes)
+        cdkBuilder.sessionAttributes(sessionAttributes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6079,7 +6079,7 @@ public open class CfnBot(
        * Amazon Lex chooses one of the messages to play to the user.
        */
       override fun messageGroups(messageGroups: List<Any>) {
-        cdkBuilder.messageGroups(messageGroups)
+        cdkBuilder.messageGroups(messageGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6325,7 +6325,7 @@ public open class CfnBot(
        * Amazon Lex chooses one of the messages to play to the user.
        */
       override fun messageGroups(messageGroups: List<Any>) {
-        cdkBuilder.messageGroups(messageGroups)
+        cdkBuilder.messageGroups(messageGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -7139,7 +7139,7 @@ public open class CfnBot(
        * The arrangement of the buttons is determined by the platform that displays the button.
        */
       override fun buttons(buttons: List<Any>) {
-        cdkBuilder.buttons(buttons)
+        cdkBuilder.buttons(buttons.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9202,7 +9202,7 @@ public open class CfnBot(
        * aren't overridden.
        */
       override fun slots(slots: List<Any>) {
-        cdkBuilder.slots(slots)
+        cdkBuilder.slots(slots.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9741,7 +9741,7 @@ public open class CfnBot(
        * considered by Amazon Lex .
        */
       override fun inputContexts(inputContexts: List<Any>) {
-        cdkBuilder.inputContexts(inputContexts)
+        cdkBuilder.inputContexts(inputContexts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9863,7 +9863,7 @@ public open class CfnBot(
        * @param outputContexts A list of contexts that the intent activates when it is fulfilled.
        */
       override fun outputContexts(outputContexts: List<Any>) {
-        cdkBuilder.outputContexts(outputContexts)
+        cdkBuilder.outputContexts(outputContexts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9891,7 +9891,7 @@ public open class CfnBot(
        * @param sampleUtterances A list of utterances that a user might say to signal the intent.
        */
       override fun sampleUtterances(sampleUtterances: List<Any>) {
-        cdkBuilder.sampleUtterances(sampleUtterances)
+        cdkBuilder.sampleUtterances(sampleUtterances.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9913,7 +9913,7 @@ public open class CfnBot(
        * Amazon Lex prompts the user for slot values in priority order.
        */
       override fun slotPriorities(slotPriorities: List<Any>) {
-        cdkBuilder.slotPriorities(slotPriorities)
+        cdkBuilder.slotPriorities(slotPriorities.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -9934,7 +9934,7 @@ public open class CfnBot(
        * @param slots A list of slots that the intent requires for fulfillment.
        */
       override fun slots(slots: List<Any>) {
-        cdkBuilder.slots(slots)
+        cdkBuilder.slots(slots.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -10530,7 +10530,7 @@ public open class CfnBot(
        * variations to send to the user.
        */
       override fun variations(variations: List<Any>) {
-        cdkBuilder.variations(variations)
+        cdkBuilder.variations(variations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13066,7 +13066,7 @@ public open class CfnBot(
        * Amazon Lex chooses the actual message to send at runtime.
        */
       override fun messageGroupsList(messageGroupsList: List<Any>) {
-        cdkBuilder.messageGroupsList(messageGroupsList)
+        cdkBuilder.messageGroupsList(messageGroupsList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -13097,7 +13097,7 @@ public open class CfnBot(
        * prompt.
        */
       override fun promptAttemptsSpecification(promptAttemptsSpecification: Map<String, Any>) {
-        cdkBuilder.promptAttemptsSpecification(promptAttemptsSpecification)
+        cdkBuilder.promptAttemptsSpecification(promptAttemptsSpecification.mapValues{CdkObjectWrappers.unwrap(it.value)})
       }
 
       public fun build(): software.amazon.awscdk.services.lex.CfnBot.PromptSpecificationProperty =
@@ -13315,7 +13315,7 @@ public open class CfnBot(
        * Amazon Lex chooses the actual response to send at runtime.
        */
       override fun messageGroupsList(messageGroupsList: List<Any>) {
-        cdkBuilder.messageGroupsList(messageGroupsList)
+        cdkBuilder.messageGroupsList(messageGroupsList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -14767,7 +14767,7 @@ public open class CfnBot(
        * list.
        */
       override fun defaultValueList(defaultValueList: List<Any>) {
-        cdkBuilder.defaultValueList(defaultValueList)
+        cdkBuilder.defaultValueList(defaultValueList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -15618,7 +15618,7 @@ public open class CfnBot(
        * learning model about the values that it resolves for the slot.
        */
       override fun slotTypeValues(slotTypeValues: List<Any>) {
-        cdkBuilder.slotTypeValues(slotTypeValues)
+        cdkBuilder.slotTypeValues(slotTypeValues.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -15882,7 +15882,7 @@ public open class CfnBot(
        * @param synonyms Additional values related to the slot type entry.
        */
       override fun synonyms(synonyms: List<Any>) {
-        cdkBuilder.synonyms(synonyms)
+        cdkBuilder.synonyms(synonyms.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -16187,7 +16187,7 @@ public open class CfnBot(
        * This is optional. In most cases, Amazon Lex is capable of understanding user utterances.
        */
       override fun sampleUtterances(sampleUtterances: List<Any>) {
-        cdkBuilder.sampleUtterances(sampleUtterances)
+        cdkBuilder.sampleUtterances(sampleUtterances.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -16639,7 +16639,7 @@ public open class CfnBot(
        * "pineapple."
        */
       override fun values(values: List<Any>) {
-        cdkBuilder.values(values)
+        cdkBuilder.values(values.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -17380,7 +17380,7 @@ public open class CfnBot(
        * that define the prompts that Amazon Lex sends to the user. 
        */
       override fun messageGroupsList(messageGroupsList: List<Any>) {
-        cdkBuilder.messageGroupsList(messageGroupsList)
+        cdkBuilder.messageGroupsList(messageGroupsList.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -17623,7 +17623,7 @@ public open class CfnBot(
        * For example, you can use a different Lambda function depending on the bot's locale.
        */
       override fun botAliasLocaleSettings(botAliasLocaleSettings: List<Any>) {
-        cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings)
+        cdkBuilder.botAliasLocaleSettings(botAliasLocaleSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

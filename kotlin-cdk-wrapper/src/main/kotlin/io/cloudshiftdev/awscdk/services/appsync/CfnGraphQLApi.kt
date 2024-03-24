@@ -141,7 +141,7 @@ public open class CfnGraphQLApi(
    * A list of additional authentication providers for the `GraphqlApi` API.
    */
   public open fun additionalAuthenticationProviders(`value`: List<Any>) {
-    unwrap(this).setAdditionalAuthenticationProviders(`value`)
+    unwrap(this).setAdditionalAuthenticationProviders(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -918,7 +918,7 @@ public open class CfnGraphQLApi(
      * the `GraphqlApi` API. 
      */
     override fun additionalAuthenticationProviders(additionalAuthenticationProviders: List<Any>) {
-      cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders)
+      cdkBuilder.additionalAuthenticationProviders(additionalAuthenticationProviders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

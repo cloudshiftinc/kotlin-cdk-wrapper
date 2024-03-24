@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.List
@@ -45,7 +46,8 @@ public open class PrincipalPolicyFragment(
   )
 
   public constructor(principalJson: Map<String, List<String>>, conditions: Map<String, Any>) :
-      this(software.amazon.awscdk.services.iam.PrincipalPolicyFragment(principalJson, conditions)
+      this(software.amazon.awscdk.services.iam.PrincipalPolicyFragment(principalJson,
+      conditions.mapValues{CdkObjectWrappers.unwrap(it.value)})
   )
 
   /**

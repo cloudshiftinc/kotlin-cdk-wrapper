@@ -1003,7 +1003,7 @@ public open class CfnPackagingConfiguration(
        * endpoint. 
        */
       override fun hlsManifests(hlsManifests: List<Any>) {
-        cdkBuilder.hlsManifests(hlsManifests)
+        cdkBuilder.hlsManifests(hlsManifests.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1801,7 +1801,7 @@ public open class CfnPackagingConfiguration(
        * endpoint. 
        */
       override fun dashManifests(dashManifests: List<Any>) {
-        cdkBuilder.dashManifests(dashManifests)
+        cdkBuilder.dashManifests(dashManifests.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3056,7 +3056,7 @@ public open class CfnPackagingConfiguration(
        * endpoint. 
        */
       override fun hlsManifests(hlsManifests: List<Any>) {
-        cdkBuilder.hlsManifests(hlsManifests)
+        cdkBuilder.hlsManifests(hlsManifests.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3592,7 +3592,7 @@ public open class CfnPackagingConfiguration(
        * from this endpoint. 
        */
       override fun mssManifests(mssManifests: List<Any>) {
-        cdkBuilder.mssManifests(mssManifests)
+        cdkBuilder.mssManifests(mssManifests.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

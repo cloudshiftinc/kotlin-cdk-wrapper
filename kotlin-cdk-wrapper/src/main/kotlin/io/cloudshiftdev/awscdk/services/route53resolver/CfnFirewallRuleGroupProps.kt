@@ -117,7 +117,7 @@ public interface CfnFirewallRuleGroupProps {
      * @param firewallRules A list of the rules that you have defined.
      */
     override fun firewallRules(firewallRules: List<Any>) {
-      cdkBuilder.firewallRules(firewallRules)
+      cdkBuilder.firewallRules(firewallRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

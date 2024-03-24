@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -57,7 +58,7 @@ public open class MultipartUserData(
    * @param commands 
    */
   public override fun addCommands(vararg commands: String) {
-    unwrap(this).addCommands(*commands)
+    unwrap(this).addCommands(*commands.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray())
   }
 
   /**
@@ -85,7 +86,8 @@ public open class MultipartUserData(
    * @param commands 
    */
   public override fun addOnExitCommands(vararg commands: String) {
-    unwrap(this).addOnExitCommands(*commands)
+    unwrap(this).addOnExitCommands(*commands.map{CdkObjectWrappers.unwrap(it) as
+        String}.toTypedArray())
   }
 
   /**

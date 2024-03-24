@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.IConnectable
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
@@ -598,7 +599,7 @@ public open class SageMakerCreateTrainingJob(
      * 
      */
     override fun hyperparameters(hyperparameters: Map<String, Any>) {
-      cdkBuilder.hyperparameters(hyperparameters)
+      cdkBuilder.hyperparameters(hyperparameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -751,7 +752,7 @@ public open class SageMakerCreateTrainingJob(
      * effective result before ResultPath is applied. 
      */
     override fun resultSelector(resultSelector: Map<String, Any>) {
-      cdkBuilder.resultSelector(resultSelector)
+      cdkBuilder.resultSelector(resultSelector.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

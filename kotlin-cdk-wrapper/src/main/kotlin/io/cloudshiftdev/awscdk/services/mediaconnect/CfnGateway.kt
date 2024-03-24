@@ -131,7 +131,7 @@ public open class CfnGateway(
    * The list of networks that you want to add.
    */
   public open fun networks(`value`: List<Any>) {
-    unwrap(this).setNetworks(`value`)
+    unwrap(this).setNetworks(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -270,7 +270,7 @@ public open class CfnGateway(
      * @param networks The list of networks that you want to add. 
      */
     override fun networks(networks: List<Any>) {
-      cdkBuilder.networks(networks)
+      cdkBuilder.networks(networks.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

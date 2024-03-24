@@ -424,7 +424,7 @@ public interface CfnInstanceProps {
      * is automatically disabled before the instance is deleted.
      */
     override fun addOns(addOns: List<Any>) {
-      cdkBuilder.addOns(addOns)
+      cdkBuilder.addOns(addOns.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

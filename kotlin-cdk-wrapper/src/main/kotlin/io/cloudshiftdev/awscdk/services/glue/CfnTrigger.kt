@@ -111,7 +111,7 @@ public open class CfnTrigger(
    * The actions initiated by this trigger.
    */
   public open fun actions(`value`: List<Any>) {
-    unwrap(this).setActions(`value`)
+    unwrap(this).setActions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -476,7 +476,7 @@ public open class CfnTrigger(
      * @param actions The actions initiated by this trigger. 
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1475,7 +1475,7 @@ public open class CfnTrigger(
        * @param conditions A list of the conditions that determine when the trigger will fire.
        */
       override fun conditions(conditions: List<Any>) {
-        cdkBuilder.conditions(conditions)
+        cdkBuilder.conditions(conditions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

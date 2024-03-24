@@ -145,7 +145,7 @@ public open class CfnEnvironment(
    * Amazon CloudWatch alarms to monitor during the deployment process.
    */
   public open fun monitors(`value`: List<Any>) {
-    unwrap(this).setMonitors(`value`)
+    unwrap(this).setMonitors(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -302,7 +302,7 @@ public open class CfnEnvironment(
      * @param monitors Amazon CloudWatch alarms to monitor during the deployment process. 
      */
     override fun monitors(monitors: List<Any>) {
-      cdkBuilder.monitors(monitors)
+      cdkBuilder.monitors(monitors.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

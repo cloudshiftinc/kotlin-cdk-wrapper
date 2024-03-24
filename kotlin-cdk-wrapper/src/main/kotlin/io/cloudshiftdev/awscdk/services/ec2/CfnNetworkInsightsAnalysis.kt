@@ -529,7 +529,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param loadBalancers The load balancers.
        */
       override fun loadBalancers(loadBalancers: List<Any>) {
-        cdkBuilder.loadBalancers(loadBalancers)
+        cdkBuilder.loadBalancers(loadBalancers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1541,7 +1541,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param destinationPortRanges The destination port ranges.
        */
       override fun destinationPortRanges(destinationPortRanges: List<Any>) {
-        cdkBuilder.destinationPortRanges(destinationPortRanges)
+        cdkBuilder.destinationPortRanges(destinationPortRanges.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1581,7 +1581,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param sourcePortRanges The source port ranges.
        */
       override fun sourcePortRanges(sourcePortRanges: List<Any>) {
-        cdkBuilder.sourcePortRanges(sourcePortRanges)
+        cdkBuilder.sourcePortRanges(sourcePortRanges.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3972,7 +3972,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param loadBalancerTargetGroups The target groups.
        */
       override fun loadBalancerTargetGroups(loadBalancerTargetGroups: List<Any>) {
-        cdkBuilder.loadBalancerTargetGroups(loadBalancerTargetGroups)
+        cdkBuilder.loadBalancerTargetGroups(loadBalancerTargetGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4064,7 +4064,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param portRanges The port ranges.
        */
       override fun portRanges(portRanges: List<Any>) {
-        cdkBuilder.portRanges(portRanges)
+        cdkBuilder.portRanges(portRanges.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4207,7 +4207,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param securityGroups The security groups.
        */
       override fun securityGroups(securityGroups: List<Any>) {
-        cdkBuilder.securityGroups(securityGroups)
+        cdkBuilder.securityGroups(securityGroups.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5634,7 +5634,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param additionalDetails The additional details.
        */
       override fun additionalDetails(additionalDetails: List<Any>) {
-        cdkBuilder.additionalDetails(additionalDetails)
+        cdkBuilder.additionalDetails(additionalDetails.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5722,7 +5722,7 @@ public open class CfnNetworkInsightsAnalysis(
        * @param explanations The explanation codes.
        */
       override fun explanations(explanations: List<Any>) {
-        cdkBuilder.explanations(explanations)
+        cdkBuilder.explanations(explanations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

@@ -297,7 +297,7 @@ public open class CfnCapacityReservation(
    * The tags to apply to the Capacity Reservation during launch.
    */
   public open fun tagSpecifications(`value`: List<Any>) {
-    unwrap(this).setTagSpecifications(`value`)
+    unwrap(this).setTagSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -730,7 +730,7 @@ public open class CfnCapacityReservation(
      * @param tagSpecifications The tags to apply to the Capacity Reservation during launch. 
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

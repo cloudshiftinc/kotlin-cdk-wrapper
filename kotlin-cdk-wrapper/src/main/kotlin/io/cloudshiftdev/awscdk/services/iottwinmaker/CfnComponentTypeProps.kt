@@ -334,7 +334,7 @@ public interface CfnComponentTypeProps {
      * `CompositeComponentType` is referenced by `componentTypeId` .
      */
     override fun compositeComponentTypes(compositeComponentTypes: Map<String, Any>) {
-      cdkBuilder.compositeComponentTypes(compositeComponentTypes)
+      cdkBuilder.compositeComponentTypes(compositeComponentTypes.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -377,7 +377,7 @@ public interface CfnComponentTypeProps {
      * API reference.
      */
     override fun functions(functions: Map<String, Any>) {
-      cdkBuilder.functions(functions)
+      cdkBuilder.functions(functions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -419,7 +419,7 @@ public interface CfnComponentTypeProps {
      * API reference.
      */
     override fun propertyDefinitions(propertyDefinitions: Map<String, Any>) {
-      cdkBuilder.propertyDefinitions(propertyDefinitions)
+      cdkBuilder.propertyDefinitions(propertyDefinitions.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -437,7 +437,7 @@ public interface CfnComponentTypeProps {
      * Each string in the mapping must be unique to this object.
      */
     override fun propertyGroups(propertyGroups: Map<String, Any>) {
-      cdkBuilder.propertyGroups(propertyGroups)
+      cdkBuilder.propertyGroups(propertyGroups.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

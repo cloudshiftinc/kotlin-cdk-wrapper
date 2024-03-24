@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.pipelines
 
 import io.cloudshiftdev.awscdk.Stage
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -49,7 +50,8 @@ public open class StageDeployment(
    * @param steps 
    */
   public open fun addPost(vararg steps: Step) {
-    unwrap(this).addPost(*steps.map(Step::unwrap).toTypedArray())
+    unwrap(this).addPost(*steps.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.pipelines.Step}.toTypedArray())
   }
 
   /**
@@ -58,7 +60,8 @@ public open class StageDeployment(
    * @param steps 
    */
   public open fun addPre(vararg steps: Step) {
-    unwrap(this).addPre(*steps.map(Step::unwrap).toTypedArray())
+    unwrap(this).addPre(*steps.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.pipelines.Step}.toTypedArray())
   }
 
   /**

@@ -101,7 +101,7 @@ public interface ManagedRuleProps : RuleProps {
      * @param inputParameters Input parameter values that are passed to the AWS Config rule.
      */
     override fun inputParameters(inputParameters: Map<String, Any>) {
-      cdkBuilder.inputParameters(inputParameters)
+      cdkBuilder.inputParameters(inputParameters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

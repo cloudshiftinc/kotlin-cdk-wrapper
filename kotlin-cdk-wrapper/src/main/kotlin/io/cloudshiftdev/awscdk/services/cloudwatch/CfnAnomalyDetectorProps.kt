@@ -278,7 +278,7 @@ public interface CfnAnomalyDetectorProps {
      * @param dimensions The dimensions of the metric associated with the anomaly detection band.
      */
     override fun dimensions(dimensions: List<Any>) {
-      cdkBuilder.dimensions(dimensions)
+      cdkBuilder.dimensions(dimensions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

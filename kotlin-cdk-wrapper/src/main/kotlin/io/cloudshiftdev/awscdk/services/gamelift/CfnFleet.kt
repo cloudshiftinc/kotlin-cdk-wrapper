@@ -269,7 +269,7 @@ public open class CfnFleet(
    * sessions on this fleet.
    */
   public open fun ec2InboundPermissions(`value`: List<Any>) {
-    unwrap(this).setEc2InboundPermissions(`value`)
+    unwrap(this).setEc2InboundPermissions(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -355,7 +355,7 @@ public open class CfnFleet(
    * A set of remote locations to deploy additional instances to and manage as part of the fleet.
    */
   public open fun locations(`value`: List<Any>) {
-    unwrap(this).setLocations(`value`)
+    unwrap(this).setLocations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -557,7 +557,7 @@ public open class CfnFleet(
    * Rule that controls how a fleet is scaled.
    */
   public open fun scalingPolicies(`value`: List<Any>) {
-    unwrap(this).setScalingPolicies(`value`)
+    unwrap(this).setScalingPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1454,7 +1454,7 @@ public open class CfnFleet(
      * inbound traffic to access game sessions on this fleet. 
      */
     override fun ec2InboundPermissions(ec2InboundPermissions: List<Any>) {
-      cdkBuilder.ec2InboundPermissions(ec2InboundPermissions)
+      cdkBuilder.ec2InboundPermissions(ec2InboundPermissions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1573,7 +1573,7 @@ public open class CfnFleet(
      * part of the fleet. 
      */
     override fun locations(locations: List<Any>) {
-      cdkBuilder.locations(locations)
+      cdkBuilder.locations(locations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1859,7 +1859,7 @@ public open class CfnFleet(
      * @param scalingPolicies Rule that controls how a fleet is scaled. 
      */
     override fun scalingPolicies(scalingPolicies: List<Any>) {
-      cdkBuilder.scalingPolicies(scalingPolicies)
+      cdkBuilder.scalingPolicies(scalingPolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -3063,7 +3063,7 @@ public open class CfnFleet(
        * server processes to run on each instance in a fleet.
        */
       override fun serverProcesses(serverProcesses: List<Any>) {
-        cdkBuilder.serverProcesses(serverProcesses)
+        cdkBuilder.serverProcesses(serverProcesses.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

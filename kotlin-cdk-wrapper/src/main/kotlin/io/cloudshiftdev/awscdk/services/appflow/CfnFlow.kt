@@ -386,7 +386,7 @@ public open class CfnFlow(
    * The configuration that controls how Amazon AppFlow places data in the destination connector.
    */
   public open fun destinationFlowConfigList(`value`: List<Any>) {
-    unwrap(this).setDestinationFlowConfigList(`value`)
+    unwrap(this).setDestinationFlowConfigList(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -539,7 +539,7 @@ public open class CfnFlow(
    * A list of tasks that Amazon AppFlow performs while transferring the data in the flow run.
    */
   public open fun tasks(`value`: List<Any>) {
-    unwrap(this).setTasks(`value`)
+    unwrap(this).setTasks(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -831,7 +831,7 @@ public open class CfnFlow(
      * data in the destination connector. 
      */
     override fun destinationFlowConfigList(destinationFlowConfigList: List<Any>) {
-      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList)
+      cdkBuilder.destinationFlowConfigList(destinationFlowConfigList.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1005,7 +1005,7 @@ public open class CfnFlow(
      * flow run. 
      */
     override fun tasks(tasks: List<Any>) {
-      cdkBuilder.tasks(tasks)
+      cdkBuilder.tasks(tasks.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -10226,7 +10226,7 @@ public open class CfnFlow(
        * The execution service looks for particular information based on the `TaskType` .
        */
       override fun taskProperties(taskProperties: List<Any>) {
-        cdkBuilder.taskProperties(taskProperties)
+        cdkBuilder.taskProperties(taskProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

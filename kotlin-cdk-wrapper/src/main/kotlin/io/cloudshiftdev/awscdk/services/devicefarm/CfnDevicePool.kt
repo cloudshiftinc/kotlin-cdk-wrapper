@@ -150,7 +150,7 @@ public open class CfnDevicePool(
    * The device pool's rules.
    */
   public open fun rules(`value`: List<Any>) {
-    unwrap(this).setRules(`value`)
+    unwrap(this).setRules(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -345,7 +345,7 @@ public open class CfnDevicePool(
      * @param rules The device pool's rules. 
      */
     override fun rules(rules: List<Any>) {
-      cdkBuilder.rules(rules)
+      cdkBuilder.rules(rules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

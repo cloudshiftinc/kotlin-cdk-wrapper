@@ -168,7 +168,7 @@ public open class CfnRoutingProfile(
    * The channels agents can handle in the Contact Control Panel (CCP) for this routing profile.
    */
   public open fun mediaConcurrencies(`value`: List<Any>) {
-    unwrap(this).setMediaConcurrencies(`value`)
+    unwrap(this).setMediaConcurrencies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -205,7 +205,7 @@ public open class CfnRoutingProfile(
    * The inbound queues associated with the routing profile.
    */
   public open fun queueConfigs(`value`: List<Any>) {
-    unwrap(this).setQueueConfigs(`value`)
+    unwrap(this).setQueueConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -427,7 +427,7 @@ public open class CfnRoutingProfile(
      * for this routing profile. 
      */
     override fun mediaConcurrencies(mediaConcurrencies: List<Any>) {
-      cdkBuilder.mediaConcurrencies(mediaConcurrencies)
+      cdkBuilder.mediaConcurrencies(mediaConcurrencies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -471,7 +471,7 @@ public open class CfnRoutingProfile(
      * @param queueConfigs The inbound queues associated with the routing profile. 
      */
     override fun queueConfigs(queueConfigs: List<Any>) {
-      cdkBuilder.queueConfigs(queueConfigs)
+      cdkBuilder.queueConfigs(queueConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

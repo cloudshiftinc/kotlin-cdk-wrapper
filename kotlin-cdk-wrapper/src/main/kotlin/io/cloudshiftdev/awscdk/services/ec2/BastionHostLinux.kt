@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IPrincipal
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
@@ -68,7 +69,8 @@ public open class BastionHostLinux(
    * @param peer 
    */
   public open fun allowSshAccessFrom(vararg peer: IPeer) {
-    unwrap(this).allowSshAccessFrom(*peer.map(IPeer::unwrap).toTypedArray())
+    unwrap(this).allowSshAccessFrom(*peer.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ec2.IPeer}.toTypedArray())
   }
 
   /**

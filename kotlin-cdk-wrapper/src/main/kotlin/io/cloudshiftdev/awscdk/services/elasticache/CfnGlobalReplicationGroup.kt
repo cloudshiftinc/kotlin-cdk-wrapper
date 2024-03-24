@@ -217,7 +217,7 @@ public open class CfnGlobalReplicationGroup(
    * The replication groups that comprise the Global datastore.
    */
   public open fun members(`value`: List<Any>) {
-    unwrap(this).setMembers(`value`)
+    unwrap(this).setMembers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -241,7 +241,7 @@ public open class CfnGlobalReplicationGroup(
    * The Regions that comprise the Global Datastore.
    */
   public open fun regionalConfigurations(`value`: List<Any>) {
-    unwrap(this).setRegionalConfigurations(`value`)
+    unwrap(this).setRegionalConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -504,7 +504,7 @@ public open class CfnGlobalReplicationGroup(
      * @param members The replication groups that comprise the Global datastore. 
      */
     override fun members(members: List<Any>) {
-      cdkBuilder.members(members)
+      cdkBuilder.members(members.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -532,7 +532,7 @@ public open class CfnGlobalReplicationGroup(
      * @param regionalConfigurations The Regions that comprise the Global Datastore. 
      */
     override fun regionalConfigurations(regionalConfigurations: List<Any>) {
-      cdkBuilder.regionalConfigurations(regionalConfigurations)
+      cdkBuilder.regionalConfigurations(regionalConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -822,7 +822,7 @@ public open class CfnGlobalReplicationGroup(
        * the configuration of a node group in the resharded cluster.
        */
       override fun reshardingConfigurations(reshardingConfigurations: List<Any>) {
-        cdkBuilder.reshardingConfigurations(reshardingConfigurations)
+        cdkBuilder.reshardingConfigurations(reshardingConfigurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

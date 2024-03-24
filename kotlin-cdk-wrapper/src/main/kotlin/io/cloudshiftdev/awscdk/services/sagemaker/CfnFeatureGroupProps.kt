@@ -342,7 +342,7 @@ public interface CfnFeatureGroupProps {
      * You can create up to 2,500 `FeatureDefinition` s per `FeatureGroup` .
      */
     override fun featureDefinitions(featureDefinitions: List<Any>) {
-      cdkBuilder.featureDefinitions(featureDefinitions)
+      cdkBuilder.featureDefinitions(featureDefinitions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

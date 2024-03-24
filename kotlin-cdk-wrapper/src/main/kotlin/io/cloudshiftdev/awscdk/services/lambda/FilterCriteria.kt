@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.String
 import kotlin.collections.Map
@@ -37,7 +38,8 @@ public open class FilterCriteria(
 
   public companion object {
     public fun filter(filter: Map<String, Any>): Map<String, Any> =
-        software.amazon.awscdk.services.lambda.FilterCriteria.filter(filter) ?: emptyMap()
+        software.amazon.awscdk.services.lambda.FilterCriteria.filter(filter.mapValues{CdkObjectWrappers.unwrap(it.value)})
+        ?: emptyMap()
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.lambda.FilterCriteria):
         FilterCriteria = FilterCriteria(cdkObject)

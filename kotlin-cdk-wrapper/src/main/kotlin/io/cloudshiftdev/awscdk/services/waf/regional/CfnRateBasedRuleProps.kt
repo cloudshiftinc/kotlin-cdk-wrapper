@@ -167,7 +167,7 @@ public interface CfnRateBasedRuleProps {
      * `RateBasedRule` .
      */
     override fun matchPredicates(matchPredicates: List<Any>) {
-      cdkBuilder.matchPredicates(matchPredicates)
+      cdkBuilder.matchPredicates(matchPredicates.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

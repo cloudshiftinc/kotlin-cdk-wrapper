@@ -2042,7 +2042,7 @@ public open class CfnDeployment(
        * @param methodSettings Configures settings for all of the stage's methods.
        */
       override fun methodSettings(methodSettings: List<Any>) {
-        cdkBuilder.methodSettings(methodSettings)
+        cdkBuilder.methodSettings(methodSettings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

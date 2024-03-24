@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.iam
 
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -47,7 +48,8 @@ public open class CompositePrincipal(
    * @param principals IAM principals that will be added to the composite principal. 
    */
   public open fun addPrincipals(vararg principals: IPrincipal): CompositePrincipal =
-      unwrap(this).addPrincipals(*principals.map(IPrincipal::unwrap).toTypedArray()).let(CompositePrincipal::wrap)
+      unwrap(this).addPrincipals(*principals.map{CdkObjectWrappers.unwrap(it) as
+      software.amazon.awscdk.services.iam.IPrincipal}.toTypedArray()).let(CompositePrincipal::wrap)
 
   /**
    * Add the principal to the AssumeRolePolicyDocument.

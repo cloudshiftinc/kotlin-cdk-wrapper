@@ -333,7 +333,7 @@ public interface CfnStateMachineProps {
      * @param events the value to be set.
      */
     override fun events(events: Map<String, Any>) {
-      cdkBuilder.events(events)
+      cdkBuilder.events(events.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -405,7 +405,7 @@ public interface CfnStateMachineProps {
      * @param policies the value to be set.
      */
     override fun policies(policies: List<Any>) {
-      cdkBuilder.policies(policies)
+      cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

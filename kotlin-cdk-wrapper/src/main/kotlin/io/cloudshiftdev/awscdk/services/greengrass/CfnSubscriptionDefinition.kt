@@ -491,7 +491,7 @@ public open class CfnSubscriptionDefinition(
        * @param subscriptions The subscriptions in this version. 
        */
       override fun subscriptions(subscriptions: List<Any>) {
-        cdkBuilder.subscriptions(subscriptions)
+        cdkBuilder.subscriptions(subscriptions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

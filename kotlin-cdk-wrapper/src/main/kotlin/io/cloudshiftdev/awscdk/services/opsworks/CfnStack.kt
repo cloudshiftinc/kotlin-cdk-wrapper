@@ -398,7 +398,7 @@ public open class CfnStack(
    * A list of Elastic IP addresses to register with the AWS OpsWorks stack.
    */
   public open fun elasticIps(`value`: List<Any>) {
-    unwrap(this).setElasticIps(`value`)
+    unwrap(this).setElasticIps(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -458,7 +458,7 @@ public open class CfnStack(
    * AWS OpsWorks stack.
    */
   public open fun rdsDbInstances(`value`: List<Any>) {
-    unwrap(this).setRdsDbInstances(`value`)
+    unwrap(this).setRdsDbInstances(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1603,7 +1603,7 @@ public open class CfnStack(
      * @param elasticIps A list of Elastic IP addresses to register with the AWS OpsWorks stack. 
      */
     override fun elasticIps(elasticIps: List<Any>) {
-      cdkBuilder.elasticIps(elasticIps)
+      cdkBuilder.elasticIps(elasticIps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1691,7 +1691,7 @@ public open class CfnStack(
      * to register with the AWS OpsWorks stack. 
      */
     override fun rdsDbInstances(rdsDbInstances: List<Any>) {
-      cdkBuilder.rdsDbInstances(rdsDbInstances)
+      cdkBuilder.rdsDbInstances(rdsDbInstances.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

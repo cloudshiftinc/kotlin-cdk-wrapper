@@ -139,7 +139,7 @@ public open class CfnMissionProfile(
    * A list containing lists of config ARNs.
    */
   public open fun dataflowEdges(`value`: List<Any>) {
-    unwrap(this).setDataflowEdges(`value`)
+    unwrap(this).setDataflowEdges(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -439,7 +439,7 @@ public open class CfnMissionProfile(
      * @param dataflowEdges A list containing lists of config ARNs. 
      */
     override fun dataflowEdges(dataflowEdges: List<Any>) {
-      cdkBuilder.dataflowEdges(dataflowEdges)
+      cdkBuilder.dataflowEdges(dataflowEdges.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

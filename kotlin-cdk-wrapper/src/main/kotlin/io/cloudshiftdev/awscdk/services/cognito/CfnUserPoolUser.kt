@@ -170,7 +170,7 @@ public open class CfnUserPoolUser(
    * An array of name-value pairs that contain user attributes and attribute values.
    */
   public open fun userAttributes(`value`: List<Any>) {
-    unwrap(this).setUserAttributes(`value`)
+    unwrap(this).setUserAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -218,7 +218,7 @@ public open class CfnUserPoolUser(
    * Temporary user attributes that contribute to the outcomes of your pre sign-up Lambda trigger.
    */
   public open fun validationData(`value`: List<Any>) {
-    unwrap(this).setValidationData(`value`)
+    unwrap(this).setValidationData(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -675,7 +675,7 @@ public open class CfnUserPoolUser(
      * values. 
      */
     override fun userAttributes(userAttributes: List<Any>) {
-      cdkBuilder.userAttributes(userAttributes)
+      cdkBuilder.userAttributes(userAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -761,7 +761,7 @@ public open class CfnUserPoolUser(
      * sign-up Lambda trigger. 
      */
     override fun validationData(validationData: List<Any>) {
-      cdkBuilder.validationData(validationData)
+      cdkBuilder.validationData(validationData.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

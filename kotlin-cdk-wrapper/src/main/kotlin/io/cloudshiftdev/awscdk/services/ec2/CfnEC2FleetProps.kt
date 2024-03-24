@@ -505,7 +505,7 @@ public interface CfnEC2FleetProps {
      * @param launchTemplateConfigs The configuration for the EC2 Fleet. 
      */
     override fun launchTemplateConfigs(launchTemplateConfigs: List<Any>) {
-      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs)
+      cdkBuilder.launchTemplateConfigs(launchTemplateConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -613,7 +613,7 @@ public interface CfnEC2FleetProps {
      * .
      */
     override fun tagSpecifications(tagSpecifications: List<Any>) {
-      cdkBuilder.tagSpecifications(tagSpecifications)
+      cdkBuilder.tagSpecifications(tagSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

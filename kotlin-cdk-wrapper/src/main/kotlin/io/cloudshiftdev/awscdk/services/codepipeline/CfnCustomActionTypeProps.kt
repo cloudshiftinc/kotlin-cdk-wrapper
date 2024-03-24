@@ -285,7 +285,7 @@ public interface CfnCustomActionTypeProps {
      * .
      */
     override fun configurationProperties(configurationProperties: List<Any>) {
-      cdkBuilder.configurationProperties(configurationProperties)
+      cdkBuilder.configurationProperties(configurationProperties.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

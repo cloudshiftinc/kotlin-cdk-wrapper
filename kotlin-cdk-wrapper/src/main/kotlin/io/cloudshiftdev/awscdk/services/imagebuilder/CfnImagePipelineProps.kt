@@ -505,7 +505,7 @@ public interface CfnImagePipelineProps {
      * @param workflows Contains the workflows that run for the image pipeline.
      */
     override fun workflows(workflows: List<Any>) {
-      cdkBuilder.workflows(workflows)
+      cdkBuilder.workflows(workflows.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

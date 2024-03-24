@@ -250,7 +250,7 @@ public open class CfnPlaybackConfiguration(
    * The player parameters and aliases used as dynamic variables during session initialization.
    */
   public open fun configurationAliases(`value`: Map<String, Any>) {
-    unwrap(this).setConfigurationAliases(`value`)
+    unwrap(this).setConfigurationAliases(`value`.mapValues{CdkObjectWrappers.unwrap(it.value)})
   }
 
   /**
@@ -982,7 +982,7 @@ public open class CfnPlaybackConfiguration(
      * during session initialization. 
      */
     override fun configurationAliases(configurationAliases: Map<String, Any>) {
-      cdkBuilder.configurationAliases(configurationAliases)
+      cdkBuilder.configurationAliases(configurationAliases.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

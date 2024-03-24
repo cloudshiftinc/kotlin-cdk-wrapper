@@ -90,7 +90,8 @@ public interface IApplicationTargetGroup : ITargetGroup {
      * @param targets 
      */
     override fun addTarget(vararg targets: IApplicationLoadBalancerTarget) {
-      unwrap(this).addTarget(*targets.map(IApplicationLoadBalancerTarget::unwrap).toTypedArray())
+      unwrap(this).addTarget(*targets.map{CdkObjectWrappers.unwrap(it) as
+          software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerTarget}.toTypedArray())
     }
 
     /**

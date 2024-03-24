@@ -134,7 +134,7 @@ public interface CfnEntitlementProps {
      * @param attributes The attributes of the entitlement. 
      */
     override fun attributes(attributes: List<Any>) {
-      cdkBuilder.attributes(attributes)
+      cdkBuilder.attributes(attributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

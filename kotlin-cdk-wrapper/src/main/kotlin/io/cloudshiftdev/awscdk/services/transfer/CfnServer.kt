@@ -3168,7 +3168,7 @@ public open class CfnServer(
        * A *partial upload* occurs when a file is open when the session disconnects.
        */
       override fun onPartialUpload(onPartialUpload: List<Any>) {
-        cdkBuilder.onPartialUpload(onPartialUpload)
+        cdkBuilder.onPartialUpload(onPartialUpload.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3204,7 +3204,7 @@ public open class CfnServer(
        * '{"OnUpload":[]}'`
        */
       override fun onUpload(onUpload: List<Any>) {
-        cdkBuilder.onUpload(onUpload)
+        cdkBuilder.onUpload(onUpload.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

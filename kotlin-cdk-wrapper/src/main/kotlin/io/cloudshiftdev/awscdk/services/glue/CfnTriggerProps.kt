@@ -265,7 +265,7 @@ public interface CfnTriggerProps {
      * @param actions The actions initiated by this trigger. 
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

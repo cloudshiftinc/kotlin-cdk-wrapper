@@ -186,7 +186,7 @@ public open class CfnApiKey(
    * DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key.
    */
   public open fun stageKeys(`value`: List<Any>) {
-    unwrap(this).setStageKeys(`value`)
+    unwrap(this).setStageKeys(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -485,7 +485,7 @@ public open class CfnApiKey(
      * @param stageKeys DEPRECATED FOR USAGE PLANS - Specifies stages associated with the API key. 
      */
     override fun stageKeys(stageKeys: List<Any>) {
-      cdkBuilder.stageKeys(stageKeys)
+      cdkBuilder.stageKeys(stageKeys.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

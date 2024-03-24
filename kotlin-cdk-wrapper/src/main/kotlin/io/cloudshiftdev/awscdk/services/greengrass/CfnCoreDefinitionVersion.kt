@@ -108,7 +108,7 @@ public open class CfnCoreDefinitionVersion(
    * The Greengrass core in this version.
    */
   public open fun cores(`value`: List<Any>) {
-    unwrap(this).setCores(`value`)
+    unwrap(this).setCores(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -213,7 +213,7 @@ public open class CfnCoreDefinitionVersion(
      * @param cores The Greengrass core in this version. 
      */
     override fun cores(cores: List<Any>) {
-      cdkBuilder.cores(cores)
+      cdkBuilder.cores(cores.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

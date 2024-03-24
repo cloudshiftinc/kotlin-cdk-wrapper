@@ -742,7 +742,7 @@ public open class CfnTemplate(
        * @param policies Application policies describe what the certificate can be used for. 
        */
       override fun policies(policies: List<Any>) {
-        cdkBuilder.policies(policies)
+        cdkBuilder.policies(policies.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

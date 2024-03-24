@@ -513,7 +513,7 @@ public interface LifecycleRule {
      * objects for an Amazon S3 bucket.
      */
     override fun tagFilters(tagFilters: Map<String, Any>) {
-      cdkBuilder.tagFilters(tagFilters)
+      cdkBuilder.tagFilters(tagFilters.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

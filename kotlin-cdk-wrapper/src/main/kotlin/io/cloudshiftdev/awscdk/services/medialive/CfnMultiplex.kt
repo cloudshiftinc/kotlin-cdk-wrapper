@@ -139,7 +139,7 @@ public open class CfnMultiplex(
    * A list of the multiplex output destinations.
    */
   public open fun destinations(`value`: List<Any>) {
-    unwrap(this).setDestinations(`value`)
+    unwrap(this).setDestinations(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -351,7 +351,7 @@ public open class CfnMultiplex(
      * @param destinations A list of the multiplex output destinations. 
      */
     override fun destinations(destinations: List<Any>) {
-      cdkBuilder.destinations(destinations)
+      cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

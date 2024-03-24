@@ -260,7 +260,7 @@ public interface CfnEntityProps {
      * API reference.
      */
     override fun components(components: Map<String, Any>) {
-      cdkBuilder.components(components)
+      cdkBuilder.components(components.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -276,7 +276,7 @@ public interface CfnEntityProps {
      * Each key of the map represents the `componentPath` of the `compositeComponent` .
      */
     override fun compositeComponents(compositeComponents: Map<String, Any>) {
-      cdkBuilder.compositeComponents(compositeComponents)
+      cdkBuilder.compositeComponents(compositeComponents.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

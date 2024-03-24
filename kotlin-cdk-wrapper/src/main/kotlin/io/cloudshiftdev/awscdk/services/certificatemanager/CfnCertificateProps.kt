@@ -381,7 +381,7 @@ public interface CfnCertificateProps {
      * records in Route53.
      */
     override fun domainValidationOptions(domainValidationOptions: List<Any>) {
-      cdkBuilder.domainValidationOptions(domainValidationOptions)
+      cdkBuilder.domainValidationOptions(domainValidationOptions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

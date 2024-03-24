@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.iam
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
@@ -130,7 +131,8 @@ public open class Role(
    * @param actions 
    */
   public override fun grant(grantee: IPrincipal, vararg actions: String): Grant =
-      unwrap(this).grant(grantee.let(IPrincipal::unwrap), *actions).let(Grant::wrap)
+      unwrap(this).grant(grantee.let(IPrincipal::unwrap), *actions.map{CdkObjectWrappers.unwrap(it)
+      as String}.toTypedArray()).let(Grant::wrap)
 
   /**
    * Grant permissions to the given principal to assume this role.

@@ -356,7 +356,7 @@ public open class CfnTargetGroup(
    * The attributes.
    */
   public open fun targetGroupAttributes(`value`: List<Any>) {
-    unwrap(this).setTargetGroupAttributes(`value`)
+    unwrap(this).setTargetGroupAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -393,7 +393,7 @@ public open class CfnTargetGroup(
    * The targets.
    */
   public open fun targets(`value`: List<Any>) {
-    unwrap(this).setTargets(`value`)
+    unwrap(this).setTargets(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1030,7 +1030,7 @@ public open class CfnTargetGroup(
      * @param targetGroupAttributes The attributes. 
      */
     override fun targetGroupAttributes(targetGroupAttributes: List<Any>) {
-      cdkBuilder.targetGroupAttributes(targetGroupAttributes)
+      cdkBuilder.targetGroupAttributes(targetGroupAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1080,7 +1080,7 @@ public open class CfnTargetGroup(
      * @param targets The targets. 
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

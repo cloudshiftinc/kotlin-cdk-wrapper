@@ -65,7 +65,7 @@ public interface CfnResourceProps {
      * @param properties Resource properties.
      */
     override fun properties(properties: Map<String, Any>) {
-      cdkBuilder.properties(properties)
+      cdkBuilder.properties(properties.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**

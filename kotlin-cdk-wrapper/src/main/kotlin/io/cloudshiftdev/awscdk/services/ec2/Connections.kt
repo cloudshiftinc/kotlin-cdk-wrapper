@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -55,7 +56,8 @@ public open class Connections(
    * @param securityGroups 
    */
   public open fun addSecurityGroup(vararg securityGroups: ISecurityGroup) {
-    unwrap(this).addSecurityGroup(*securityGroups.map(ISecurityGroup::unwrap).toTypedArray())
+    unwrap(this).addSecurityGroup(*securityGroups.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.ec2.ISecurityGroup}.toTypedArray())
   }
 
   /**

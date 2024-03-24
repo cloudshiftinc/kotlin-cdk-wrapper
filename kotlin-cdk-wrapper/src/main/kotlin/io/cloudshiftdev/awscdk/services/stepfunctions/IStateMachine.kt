@@ -348,7 +348,8 @@ public interface IStateMachine : IResource, IGrantable {
      * @param actions The list of desired actions. 
      */
     override fun grant(identity: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grant(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+        unwrap(this).grant(identity.let(IGrantable::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * Grant the given identity permissions for all executions of a state machine.
@@ -357,7 +358,8 @@ public interface IStateMachine : IResource, IGrantable {
      * @param actions The list of desired actions. 
      */
     override fun grantExecution(identity: IGrantable, vararg actions: String): Grant =
-        unwrap(this).grantExecution(identity.let(IGrantable::unwrap), *actions).let(Grant::wrap)
+        unwrap(this).grantExecution(identity.let(IGrantable::unwrap),
+        *actions.map{CdkObjectWrappers.unwrap(it) as String}.toTypedArray()).let(Grant::wrap)
 
     /**
      * The principal to grant permissions to.

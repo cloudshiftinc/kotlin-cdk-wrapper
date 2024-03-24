@@ -366,7 +366,7 @@ public interface CfnDatasetProps {
      * @param actions The `DatasetAction` objects that automatically create the dataset contents. 
      */
     override fun actions(actions: List<Any>) {
-      cdkBuilder.actions(actions)
+      cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -387,7 +387,7 @@ public interface CfnDatasetProps {
      * destinations specified here.
      */
     override fun contentDeliveryRules(contentDeliveryRules: List<Any>) {
-      cdkBuilder.contentDeliveryRules(contentDeliveryRules)
+      cdkBuilder.contentDeliveryRules(contentDeliveryRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -423,7 +423,7 @@ public interface CfnDatasetProps {
      * filter.
      */
     override fun lateDataRules(lateDataRules: List<Any>) {
-      cdkBuilder.lateDataRules(lateDataRules)
+      cdkBuilder.lateDataRules(lateDataRules.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -493,7 +493,7 @@ public interface CfnDatasetProps {
      * updated.
      */
     override fun triggers(triggers: List<Any>) {
-      cdkBuilder.triggers(triggers)
+      cdkBuilder.triggers(triggers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

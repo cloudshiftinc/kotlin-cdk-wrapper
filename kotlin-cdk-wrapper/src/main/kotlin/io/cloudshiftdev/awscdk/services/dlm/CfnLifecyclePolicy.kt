@@ -1148,7 +1148,7 @@ public open class CfnLifecyclePolicy(
        * @param crossRegionCopy The rule for copying shared snapshots across Regions. 
        */
       override fun crossRegionCopy(crossRegionCopy: List<Any>) {
-        cdkBuilder.crossRegionCopy(crossRegionCopy)
+        cdkBuilder.crossRegionCopy(crossRegionCopy.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -1726,7 +1726,7 @@ public open class CfnLifecyclePolicy(
        * .
        */
       override fun scripts(scripts: List<Any>) {
-        cdkBuilder.scripts(scripts)
+        cdkBuilder.scripts(scripts.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -3972,7 +3972,7 @@ public open class CfnLifecyclePolicy(
        * instances will be excluded from the multi-volume snapshot sets created by the policy.
        */
       override fun excludeDataVolumeTags(excludeDataVolumeTags: List<Any>) {
-        cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags)
+        cdkBuilder.excludeDataVolumeTags(excludeDataVolumeTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -4742,7 +4742,7 @@ public open class CfnLifecyclePolicy(
        * You can specify only one action per policy.
        */
       override fun actions(actions: List<Any>) {
-        cdkBuilder.actions(actions)
+        cdkBuilder.actions(actions.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5051,7 +5051,7 @@ public open class CfnLifecyclePolicy(
        * schedules.
        */
       override fun schedules(schedules: List<Any>) {
-        cdkBuilder.schedules(schedules)
+        cdkBuilder.schedules(schedules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -5075,7 +5075,7 @@ public open class CfnLifecyclePolicy(
        * targeted resources for this policy.
        */
       override fun targetTags(targetTags: List<Any>) {
-        cdkBuilder.targetTags(targetTags)
+        cdkBuilder.targetTags(targetTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6235,7 +6235,7 @@ public open class CfnLifecyclePolicy(
        * Regions or Outposts.
        */
       override fun crossRegionCopyRules(crossRegionCopyRules: List<Any>) {
-        cdkBuilder.crossRegionCopyRules(crossRegionCopyRules)
+        cdkBuilder.crossRegionCopyRules(crossRegionCopyRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6340,7 +6340,7 @@ public open class CfnLifecyclePolicy(
        * other AWS accounts .
        */
       override fun shareRules(shareRules: List<Any>) {
-        cdkBuilder.shareRules(shareRules)
+        cdkBuilder.shareRules(shareRules.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6362,7 +6362,7 @@ public open class CfnLifecyclePolicy(
        * These user-defined tags are in addition to the AWS -added lifecycle tags.
        */
       override fun tagsToAdd(tagsToAdd: List<Any>) {
-        cdkBuilder.tagsToAdd(tagsToAdd)
+        cdkBuilder.tagsToAdd(tagsToAdd.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
@@ -6390,7 +6390,7 @@ public open class CfnLifecyclePolicy(
        * Management – Instance policies.
        */
       override fun variableTags(variableTags: List<Any>) {
-        cdkBuilder.variableTags(variableTags)
+        cdkBuilder.variableTags(variableTags.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

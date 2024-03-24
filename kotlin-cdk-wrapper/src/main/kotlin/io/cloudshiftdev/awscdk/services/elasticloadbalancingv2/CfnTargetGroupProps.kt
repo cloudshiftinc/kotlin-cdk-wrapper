@@ -682,7 +682,7 @@ public interface CfnTargetGroupProps {
      * @param targetGroupAttributes The attributes.
      */
     override fun targetGroupAttributes(targetGroupAttributes: List<Any>) {
-      cdkBuilder.targetGroupAttributes(targetGroupAttributes)
+      cdkBuilder.targetGroupAttributes(targetGroupAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -719,7 +719,7 @@ public interface CfnTargetGroupProps {
      * @param targets The targets.
      */
     override fun targets(targets: List<Any>) {
-      cdkBuilder.targets(targets)
+      cdkBuilder.targets(targets.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

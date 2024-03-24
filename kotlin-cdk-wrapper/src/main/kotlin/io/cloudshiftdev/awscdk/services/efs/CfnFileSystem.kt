@@ -293,7 +293,7 @@ public open class CfnFileSystem(
    * object.
    */
   public open fun lifecyclePolicies(`value`: List<Any>) {
-    unwrap(this).setLifecyclePolicies(`value`)
+    unwrap(this).setLifecyclePolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -1011,7 +1011,7 @@ public open class CfnFileSystem(
      * `LifecycleConfiguration` object. 
      */
     override fun lifecyclePolicies(lifecyclePolicies: List<Any>) {
-      cdkBuilder.lifecyclePolicies(lifecyclePolicies)
+      cdkBuilder.lifecyclePolicies(lifecyclePolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
@@ -1766,7 +1766,7 @@ public open class CfnFileSystem(
        * Only one destination object is supported.
        */
       override fun destinations(destinations: List<Any>) {
-        cdkBuilder.destinations(destinations)
+        cdkBuilder.destinations(destinations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**

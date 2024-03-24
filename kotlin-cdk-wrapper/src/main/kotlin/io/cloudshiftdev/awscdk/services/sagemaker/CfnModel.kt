@@ -165,7 +165,7 @@ public open class CfnModel(
    * Specifies the containers in the inference pipeline.
    */
   public open fun containers(`value`: List<Any>) {
-    unwrap(this).setContainers(`value`)
+    unwrap(this).setContainers(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -619,7 +619,7 @@ public open class CfnModel(
      * @param containers Specifies the containers in the inference pipeline. 
      */
     override fun containers(containers: List<Any>) {
-      cdkBuilder.containers(containers)
+      cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**

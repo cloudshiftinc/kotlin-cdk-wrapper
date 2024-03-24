@@ -217,7 +217,7 @@ public open class CfnResolverRule(
    * queries to.
    */
   public open fun targetIps(`value`: List<Any>) {
-    unwrap(this).setTargetIps(`value`)
+    unwrap(this).setTargetIps(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
@@ -448,7 +448,7 @@ public open class CfnResolverRule(
      * forwards DNS queries to. 
      */
     override fun targetIps(targetIps: List<Any>) {
-      cdkBuilder.targetIps(targetIps)
+      cdkBuilder.targetIps(targetIps.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
