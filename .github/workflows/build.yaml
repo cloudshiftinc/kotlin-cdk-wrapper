@@ -24,7 +24,7 @@ jobs:
     - uses: 'hmarr/debug-action@cd1afbd7852b7ad7b1b7a9a1b03efebd3b0a1820' # v3.0.0
 
     # https://github.com/zgosalvez/github-actions-ensure-sha-pinned-actions
-    - uses: 'zgosalvez/github-actions-ensure-sha-pinned-actions@ba37328d4ea95eaf8b3bd6c6cef308f709a5f2ec' # v3.0.3
+    - uses: 'zgosalvez/github-actions-ensure-sha-pinned-actions@19ebcb0babbd282ae1822a0b9c28f3f1f25cea45' # v3.0.4
 
     # https://github.com/actions/checkout
     - name: 'checkout'
@@ -40,11 +40,11 @@ jobs:
 
     # https://github.com/gradle/wrapper-validation-action
     - name: 'Validate Gradle Wrapper'
-      uses: 'gradle/wrapper-validation-action@b231772637bb498f11fdbc86052b6e8a8dc9fc92' # v2.1.2
+      uses: 'gradle/wrapper-validation-action@460a3ca55fc5d559238a0efc7fa9f7465df8585d' # v3.3.0
 
     # https://github.com/gradle/actions/tree/main/setup-gradle
     - name: 'Set up Gradle'
-      uses: 'gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5' # v3.1.0
+      uses: 'gradle/actions/setup-gradle@6cec5d49d4d6d4bb982fbed7047db31ea6d38f11' # v3.3.0
       with:
         gradle-version: 'wrapper'
         gradle-home-cache-includes: |-
