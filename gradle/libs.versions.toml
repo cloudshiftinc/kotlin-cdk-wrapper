@@ -7,7 +7,7 @@ kotlin = "1.9.23"
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 nexusPublish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0-rc-2" }
-ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.17.0" }
+ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.18.0" }
 
 [libraries]
 
@@ -44,7 +44,7 @@ caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.1.8
 aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.21.2" }
 
 guava = { module = "com.google.guava:guava", version = "32.1.3-jre" }
-awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.134.0" }
+awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.137.0" }
 awscdk-constructs = { module = "software.constructs:constructs", version = "10.3.0" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.16.0" }
 javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.25.9" }
