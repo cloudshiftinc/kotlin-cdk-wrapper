@@ -155,6 +155,23 @@ public interface CfnDataProviderProps {
     public fun exactSettings(exactSettings: IResolvable)
 
     /**
+     * @param settings The settings in JSON format for a data provider.
+     */
+    public fun settings(settings: IResolvable)
+
+    /**
+     * @param settings The settings in JSON format for a data provider.
+     */
+    public fun settings(settings: CfnDataProvider.SettingsProperty)
+
+    /**
+     * @param settings The settings in JSON format for a data provider.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e5d74db5466a3c55f01d8a55af7cecd169b9ba622ed58ad61dc597716b252aab")
+    public fun settings(settings: CfnDataProvider.SettingsProperty.Builder.() -> Unit)
+
+    /**
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(tags: List<CfnTag>)
@@ -163,23 +180,6 @@ public interface CfnDataProviderProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     public fun tags(vararg tags: CfnTag)
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    public fun tings(settings: IResolvable)
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    public fun tings(settings: CfnDataProvider.SettingsProperty)
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("09b475e46ec9dab9f70be7a140914ccb0cd1bf64c0975e2d522e33f8d3266511")
-    public fun tings(settings: CfnDataProvider.SettingsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -237,6 +237,28 @@ public interface CfnDataProviderProps {
     }
 
     /**
+     * @param settings The settings in JSON format for a data provider.
+     */
+    override fun settings(settings: IResolvable) {
+      cdkBuilder.settings(settings.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param settings The settings in JSON format for a data provider.
+     */
+    override fun settings(settings: CfnDataProvider.SettingsProperty) {
+      cdkBuilder.settings(settings.let(CfnDataProvider.SettingsProperty::unwrap))
+    }
+
+    /**
+     * @param settings The settings in JSON format for a data provider.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e5d74db5466a3c55f01d8a55af7cecd169b9ba622ed58ad61dc597716b252aab")
+    override fun settings(settings: CfnDataProvider.SettingsProperty.Builder.() -> Unit): Unit =
+        settings(CfnDataProvider.SettingsProperty(settings))
+
+    /**
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(tags: List<CfnTag>) {
@@ -247,28 +269,6 @@ public interface CfnDataProviderProps {
      * @param tags An array of key-value pairs to apply to this resource.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    override fun tings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
-    }
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    override fun tings(settings: CfnDataProvider.SettingsProperty) {
-      cdkBuilder.settings(settings.let(CfnDataProvider.SettingsProperty::unwrap))
-    }
-
-    /**
-     * @param settings The settings in JSON format for a data provider.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("09b475e46ec9dab9f70be7a140914ccb0cd1bf64c0975e2d522e33f8d3266511")
-    override fun tings(settings: CfnDataProvider.SettingsProperty.Builder.() -> Unit): Unit =
-        tings(CfnDataProvider.SettingsProperty(settings))
 
     public fun build(): software.amazon.awscdk.services.dms.CfnDataProviderProps =
         cdkBuilder.build()

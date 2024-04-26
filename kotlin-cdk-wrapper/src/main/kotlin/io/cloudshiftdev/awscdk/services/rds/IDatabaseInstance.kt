@@ -137,7 +137,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    *
    * @param props
    */
-  public fun metricCpuUtilization(): Metric
+  public fun metricCPUUtilization(): Metric
 
   /**
    * The percentage of CPU utilization.
@@ -146,7 +146,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    *
    * @param props
    */
-  public fun metricCpuUtilization(props: MetricOptions): Metric
+  public fun metricCPUUtilization(props: MetricOptions): Metric
 
   /**
    * The percentage of CPU utilization.
@@ -156,8 +156,8 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("06a38048efcdd43000e7f66d74001004b818625d95136f460bf350a2397a31d0")
-  public fun metricCpuUtilization(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("66a273587ca08857c76d1952aa0bb360d86bfe06cc24788a922415fa0fa097ef")
+  public fun metricCPUUtilization(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * The number of database connections in use.
@@ -253,7 +253,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    *
    * @param props
    */
-  public fun metricReadIops(): Metric
+  public fun metricReadIOPS(): Metric
 
   /**
    * The average number of disk write I/O operations per second.
@@ -262,7 +262,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    *
    * @param props
    */
-  public fun metricReadIops(props: MetricOptions): Metric
+  public fun metricReadIOPS(props: MetricOptions): Metric
 
   /**
    * The average number of disk write I/O operations per second.
@@ -272,8 +272,8 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("49526da03d196d2f975a43ba7ac595a380f6b4f4817805d76831acb9d384a0dc")
-  public fun metricReadIops(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("675d709aa97b4b2ffd49350ba825728b633d56482af787ad3be691dc8bd8db1a")
+  public fun metricReadIOPS(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * The average number of disk read I/O operations per second.
@@ -282,7 +282,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    *
    * @param props
    */
-  public fun metricWriteIops(): Metric
+  public fun metricWriteIOPS(): Metric
 
   /**
    * The average number of disk read I/O operations per second.
@@ -291,7 +291,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    *
    * @param props
    */
-  public fun metricWriteIops(props: MetricOptions): Metric
+  public fun metricWriteIOPS(props: MetricOptions): Metric
 
   /**
    * The average number of disk read I/O operations per second.
@@ -301,8 +301,8 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("8c0e40270e6e53bc6598d5ec2710a93c940874139b12355a5e5d9925c9ff439a")
-  public fun metricWriteIops(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("83e54c79d3dbc0c025ceae17bc1f212a92688e30a3f4fafdc9abae8356ba6325")
+  public fun metricWriteIOPS(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Defines a CloudWatch event rule which triggers for instance events.
@@ -501,7 +501,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      *
      * @param props
      */
-    override fun metricCpuUtilization(): Metric =
+    override fun metricCPUUtilization(): Metric =
         unwrap(this).metricCPUUtilization().let(Metric::wrap)
 
     /**
@@ -511,7 +511,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      *
      * @param props
      */
-    override fun metricCpuUtilization(props: MetricOptions): Metric =
+    override fun metricCPUUtilization(props: MetricOptions): Metric =
         unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -522,9 +522,9 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("06a38048efcdd43000e7f66d74001004b818625d95136f460bf350a2397a31d0")
-    override fun metricCpuUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricCpuUtilization(MetricOptions(props))
+    @JvmName("66a273587ca08857c76d1952aa0bb360d86bfe06cc24788a922415fa0fa097ef")
+    override fun metricCPUUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricCPUUtilization(MetricOptions(props))
 
     /**
      * The number of database connections in use.
@@ -629,7 +629,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      *
      * @param props
      */
-    override fun metricReadIops(): Metric = unwrap(this).metricReadIOPS().let(Metric::wrap)
+    override fun metricReadIOPS(): Metric = unwrap(this).metricReadIOPS().let(Metric::wrap)
 
     /**
      * The average number of disk write I/O operations per second.
@@ -638,7 +638,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      *
      * @param props
      */
-    override fun metricReadIops(props: MetricOptions): Metric =
+    override fun metricReadIOPS(props: MetricOptions): Metric =
         unwrap(this).metricReadIOPS(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -649,9 +649,9 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("49526da03d196d2f975a43ba7ac595a380f6b4f4817805d76831acb9d384a0dc")
-    override fun metricReadIops(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricReadIops(MetricOptions(props))
+    @JvmName("675d709aa97b4b2ffd49350ba825728b633d56482af787ad3be691dc8bd8db1a")
+    override fun metricReadIOPS(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricReadIOPS(MetricOptions(props))
 
     /**
      * The average number of disk read I/O operations per second.
@@ -660,7 +660,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      *
      * @param props
      */
-    override fun metricWriteIops(): Metric = unwrap(this).metricWriteIOPS().let(Metric::wrap)
+    override fun metricWriteIOPS(): Metric = unwrap(this).metricWriteIOPS().let(Metric::wrap)
 
     /**
      * The average number of disk read I/O operations per second.
@@ -669,7 +669,7 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      *
      * @param props
      */
-    override fun metricWriteIops(props: MetricOptions): Metric =
+    override fun metricWriteIOPS(props: MetricOptions): Metric =
         unwrap(this).metricWriteIOPS(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -680,9 +680,9 @@ public interface IDatabaseInstance : IResource, IConnectable, ISecretAttachmentT
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("8c0e40270e6e53bc6598d5ec2710a93c940874139b12355a5e5d9925c9ff439a")
-    override fun metricWriteIops(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricWriteIops(MetricOptions(props))
+    @JvmName("83e54c79d3dbc0c025ceae17bc1f212a92688e30a3f4fafdc9abae8356ba6325")
+    override fun metricWriteIOPS(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricWriteIOPS(MetricOptions(props))
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

@@ -29,7 +29,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * If you do not specify an egress rule, we add egress rules that allow IPv4 and IPv6 traffic on all
  * ports and protocols to any destination. We do not add these rules if you specify your own egress
- * rules. If you later remove your egress rules, we restore the default egress rules.
+ * rules.
  *
  * This type supports updates. For more information about updating stacks, see [AWS CloudFormation
  * Stacks
@@ -66,7 +66,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .destinationPrefixListId("destinationPrefixListId")
  * .destinationSecurityGroupId("destinationSecurityGroupId")
  * .fromPort(123)
- * .sourceSecurityGroupId("sourceSecurityGroupId")
  * .toPort(123)
  * .build()))
  * .securityGroupIngress(List.of(IngressProperty.builder()
@@ -533,9 +532,8 @@ public open class CfnSecurityGroup(
    * with a destination security group. For more information, see [Security group
    * rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html) .
    *
-   * You must specify exactly one of the following destinations: an IPv4 or IPv6 address range, a
-   * prefix list, or a security group. Otherwise, the stack launches successfully but the rule is not
-   * added to the security group.
+   * You must specify exactly one of the following destinations: an IPv4 address range, an IPv6
+   * address range, a prefix list, or a security group.
    *
    * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
    * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
@@ -559,7 +557,6 @@ public open class CfnSecurityGroup(
    * .destinationPrefixListId("destinationPrefixListId")
    * .destinationSecurityGroupId("destinationSecurityGroupId")
    * .fromPort(123)
-   * .sourceSecurityGroupId("sourceSecurityGroupId")
    * .toPort(123)
    * .build();
    * ```
@@ -570,8 +567,8 @@ public open class CfnSecurityGroup(
     /**
      * The IPv4 address range, in CIDR format.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -585,8 +582,8 @@ public open class CfnSecurityGroup(
     /**
      * The IPv6 address range, in CIDR format.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -613,8 +610,8 @@ public open class CfnSecurityGroup(
      * This is the AWS service that you want to access through a VPC endpoint from instances
      * associated with the security group.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationprefixlistid)
      */
@@ -623,8 +620,8 @@ public open class CfnSecurityGroup(
     /**
      * The ID of the destination VPC security group.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationsecuritygroupid)
      */
@@ -655,11 +652,6 @@ public open class CfnSecurityGroup(
     public fun ipProtocol(): String
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-sourcesecuritygroupid)
-     */
-    public fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
-
-    /**
      * If the protocol is TCP or UDP, this is the end of the port range.
      *
      * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the start
@@ -676,8 +668,8 @@ public open class CfnSecurityGroup(
     public interface Builder {
       /**
        * @param cidrIp The IPv4 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -688,8 +680,8 @@ public open class CfnSecurityGroup(
 
       /**
        * @param cidrIpv6 The IPv6 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -710,15 +702,15 @@ public open class CfnSecurityGroup(
        * This is the AWS service that you want to access through a VPC endpoint from instances
        * associated with the security group.
        *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        */
       public fun destinationPrefixListId(destinationPrefixListId: String)
 
       /**
        * @param destinationSecurityGroupId The ID of the destination VPC security group.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        */
       public fun destinationSecurityGroupId(destinationSecurityGroupId: String)
 
@@ -742,11 +734,6 @@ public open class CfnSecurityGroup(
       public fun ipProtocol(ipProtocol: String)
 
       /**
-       * @param sourceSecurityGroupId the value to be set.
-       */
-      public fun sourceSecurityGroupId(sourceSecurityGroupId: String)
-
-      /**
        * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
        * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
        * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
@@ -761,8 +748,8 @@ public open class CfnSecurityGroup(
 
       /**
        * @param cidrIp The IPv4 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -775,8 +762,8 @@ public open class CfnSecurityGroup(
 
       /**
        * @param cidrIpv6 The IPv6 address range, in CIDR format.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -801,8 +788,8 @@ public open class CfnSecurityGroup(
        * This is the AWS service that you want to access through a VPC endpoint from instances
        * associated with the security group.
        *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        */
       override fun destinationPrefixListId(destinationPrefixListId: String) {
         cdkBuilder.destinationPrefixListId(destinationPrefixListId)
@@ -810,8 +797,8 @@ public open class CfnSecurityGroup(
 
       /**
        * @param destinationSecurityGroupId The ID of the destination VPC security group.
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        */
       override fun destinationSecurityGroupId(destinationSecurityGroupId: String) {
         cdkBuilder.destinationSecurityGroupId(destinationSecurityGroupId)
@@ -841,13 +828,6 @@ public open class CfnSecurityGroup(
       }
 
       /**
-       * @param sourceSecurityGroupId the value to be set.
-       */
-      override fun sourceSecurityGroupId(sourceSecurityGroupId: String) {
-        cdkBuilder.sourceSecurityGroupId(sourceSecurityGroupId)
-      }
-
-      /**
        * @param toPort If the protocol is TCP or UDP, this is the end of the port range.
        * If the protocol is ICMP or ICMPv6, this is the ICMP code or -1 (all ICMP codes). If the
        * start port is -1 (all ICMP types), then the end port must be -1 (all ICMP codes).
@@ -866,8 +846,8 @@ public open class CfnSecurityGroup(
       /**
        * The IPv4 address range, in CIDR format.
        *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -881,8 +861,8 @@ public open class CfnSecurityGroup(
       /**
        * The IPv6 address range, in CIDR format.
        *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -909,8 +889,8 @@ public open class CfnSecurityGroup(
        * This is the AWS service that you want to access through a VPC endpoint from instances
        * associated with the security group.
        *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationprefixlistid)
        */
@@ -919,8 +899,8 @@ public open class CfnSecurityGroup(
       /**
        * The ID of the destination VPC security group.
        *
-       * You must specify a destination security group ( `DestinationPrefixListId` or
-       * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+       * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-destinationsecuritygroupid)
        */
@@ -950,11 +930,6 @@ public open class CfnSecurityGroup(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-ipprotocol)
        */
       override fun ipProtocol(): String = unwrap(this).getIpProtocol()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-securitygroup-egress.html#cfn-ec2-securitygroup-egress-sourcesecuritygroupid)
-       */
-      override fun sourceSecurityGroupId(): String? = unwrap(this).getSourceSecurityGroupId()
 
       /**
        * If the protocol is TCP or UDP, this is the end of the port range.
@@ -993,9 +968,8 @@ public open class CfnSecurityGroup(
    * associated with a source security group. For more information, see [Security group
    * rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html) .
    *
-   * You must specify exactly one of the following sources: an IPv4 or IPv6 address range, a prefix
-   * list, or a security group. Otherwise, the stack launches successfully, but the rule is not added
-   * to the security group.
+   * You must specify exactly one of the following sources: an IPv4 address range, an IPv6 address
+   * range, a prefix list, or a security group.
    *
    * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP,
    * you must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also
@@ -1031,8 +1005,8 @@ public open class CfnSecurityGroup(
     /**
      * The IPv4 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -1046,8 +1020,8 @@ public open class CfnSecurityGroup(
     /**
      * The IPv6 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -1154,8 +1128,8 @@ public open class CfnSecurityGroup(
     public interface Builder {
       /**
        * @param cidrIp The IPv4 address range, in CIDR format.
-       * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId`
-       * ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId`
+       * , or `SourceSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -1166,8 +1140,8 @@ public open class CfnSecurityGroup(
 
       /**
        * @param cidrIpv6 The IPv6 address range, in CIDR format.
-       * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId`
-       * ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId`
+       * , or `SourceSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -1252,8 +1226,8 @@ public open class CfnSecurityGroup(
 
       /**
        * @param cidrIp The IPv4 address range, in CIDR format.
-       * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId`
-       * ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId`
+       * , or `SourceSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -1266,8 +1240,8 @@ public open class CfnSecurityGroup(
 
       /**
        * @param cidrIpv6 The IPv6 address range, in CIDR format.
-       * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId`
-       * ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId`
+       * , or `SourceSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -1372,8 +1346,8 @@ public open class CfnSecurityGroup(
       /**
        * The IPv4 address range, in CIDR format.
        *
-       * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId`
-       * ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId`
+       * , or `SourceSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use
@@ -1387,8 +1361,8 @@ public open class CfnSecurityGroup(
       /**
        * The IPv6 address range, in CIDR format.
        *
-       * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId`
-       * ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+       * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId`
+       * , or `SourceSecurityGroupId` .
        *
        * For examples of rules that you can add to security groups for specific access scenarios,
        * see [Security group rules for different use

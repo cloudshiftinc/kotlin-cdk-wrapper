@@ -32,7 +32,7 @@ public interface CfnSourceCredentialProps {
   /**
    * The type of authentication used by the credentials.
    *
-   * Valid options are OAUTH, BASIC_AUTH, or PERSONAL_ACCESS_TOKEN.
+   * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-authtype)
    */
@@ -41,7 +41,7 @@ public interface CfnSourceCredentialProps {
   /**
    * The type of source provider.
    *
-   * The valid options are GITHUB, GITHUB_ENTERPRISE, or BITBUCKET.
+   * The valid options are GITHUB, GITHUB_ENTERPRISE, GITLAB, GITLAB_SELF_MANAGED, or BITBUCKET.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-servertype)
    */
@@ -50,7 +50,7 @@ public interface CfnSourceCredentialProps {
   /**
    * For GitHub or GitHub Enterprise, this is the personal access token.
    *
-   * For Bitbucket, this is the app password.
+   * For Bitbucket, this is either the access token or the app password.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-token)
    */
@@ -72,19 +72,19 @@ public interface CfnSourceCredentialProps {
   public interface Builder {
     /**
      * @param authType The type of authentication used by the credentials. 
-     * Valid options are OAUTH, BASIC_AUTH, or PERSONAL_ACCESS_TOKEN.
+     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
      */
     public fun authType(authType: String)
 
     /**
      * @param serverType The type of source provider. 
-     * The valid options are GITHUB, GITHUB_ENTERPRISE, or BITBUCKET.
+     * The valid options are GITHUB, GITHUB_ENTERPRISE, GITLAB, GITLAB_SELF_MANAGED, or BITBUCKET.
      */
     public fun serverType(serverType: String)
 
     /**
      * @param token For GitHub or GitHub Enterprise, this is the personal access token. 
-     * For Bitbucket, this is the app password.
+     * For Bitbucket, this is either the access token or the app password.
      */
     public fun token(token: String)
 
@@ -102,7 +102,7 @@ public interface CfnSourceCredentialProps {
 
     /**
      * @param authType The type of authentication used by the credentials. 
-     * Valid options are OAUTH, BASIC_AUTH, or PERSONAL_ACCESS_TOKEN.
+     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
      */
     override fun authType(authType: String) {
       cdkBuilder.authType(authType)
@@ -110,7 +110,7 @@ public interface CfnSourceCredentialProps {
 
     /**
      * @param serverType The type of source provider. 
-     * The valid options are GITHUB, GITHUB_ENTERPRISE, or BITBUCKET.
+     * The valid options are GITHUB, GITHUB_ENTERPRISE, GITLAB, GITLAB_SELF_MANAGED, or BITBUCKET.
      */
     override fun serverType(serverType: String) {
       cdkBuilder.serverType(serverType)
@@ -118,7 +118,7 @@ public interface CfnSourceCredentialProps {
 
     /**
      * @param token For GitHub or GitHub Enterprise, this is the personal access token. 
-     * For Bitbucket, this is the app password.
+     * For Bitbucket, this is either the access token or the app password.
      */
     override fun token(token: String) {
       cdkBuilder.token(token)
@@ -142,7 +142,7 @@ public interface CfnSourceCredentialProps {
     /**
      * The type of authentication used by the credentials.
      *
-     * Valid options are OAUTH, BASIC_AUTH, or PERSONAL_ACCESS_TOKEN.
+     * Valid options are OAUTH, BASIC_AUTH, PERSONAL_ACCESS_TOKEN, or CODECONNECTIONS.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-authtype)
      */
@@ -151,7 +151,7 @@ public interface CfnSourceCredentialProps {
     /**
      * The type of source provider.
      *
-     * The valid options are GITHUB, GITHUB_ENTERPRISE, or BITBUCKET.
+     * The valid options are GITHUB, GITHUB_ENTERPRISE, GITLAB, GITLAB_SELF_MANAGED, or BITBUCKET.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-servertype)
      */
@@ -160,7 +160,7 @@ public interface CfnSourceCredentialProps {
     /**
      * For GitHub or GitHub Enterprise, this is the personal access token.
      *
-     * For Bitbucket, this is the app password.
+     * For Bitbucket, this is either the access token or the app password.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-sourcecredential.html#cfn-codebuild-sourcecredential-token)
      */

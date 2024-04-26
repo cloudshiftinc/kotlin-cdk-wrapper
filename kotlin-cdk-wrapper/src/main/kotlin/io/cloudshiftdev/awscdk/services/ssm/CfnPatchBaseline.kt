@@ -600,10 +600,11 @@ public open class CfnPatchBaseline(
      * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it
      * is a dependency of another package. It is considered compliant with the patch baseline, and its
      * status is reported as `InstalledOther` . This is the default action if no option is specified.
-     * * *`BLOCK`* : Packages in the `RejectedPatches` list, and packages that include them as
-     * dependencies, aren't installed under any circumstances. If a package was installed before it was
-     * added to the Rejected patches list, it is considered non-compliant with the patch baseline, and
-     * its status is reported as `InstalledRejected` .
+     * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
+     * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
+     * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+     * Manager afterward, it's considered noncompliant with the patch baseline and its status is
+     * reported as *InstalledRejected* .
      *
      * Default: - "ALLOW_AS_DEPENDENCY"
      *
@@ -934,10 +935,11 @@ public open class CfnPatchBaseline(
      * * *`ALLOW_AS_DEPENDENCY`* : A package in the `Rejected` patches list is installed only if it
      * is a dependency of another package. It is considered compliant with the patch baseline, and its
      * status is reported as `InstalledOther` . This is the default action if no option is specified.
-     * * *`BLOCK`* : Packages in the `RejectedPatches` list, and packages that include them as
-     * dependencies, aren't installed under any circumstances. If a package was installed before it was
-     * added to the Rejected patches list, it is considered non-compliant with the patch baseline, and
-     * its status is reported as `InstalledRejected` .
+     * * *BLOCK* : Packages in the *Rejected patches* list, and packages that include them as
+     * dependencies, aren't installed by Patch Manager under any circumstances. If a package was
+     * installed before it was added to the *Rejected patches* list, or is installed outside of Patch
+     * Manager afterward, it's considered noncompliant with the patch baseline and its status is
+     * reported as *InstalledRejected* .
      *
      * Default: - "ALLOW_AS_DEPENDENCY"
      *

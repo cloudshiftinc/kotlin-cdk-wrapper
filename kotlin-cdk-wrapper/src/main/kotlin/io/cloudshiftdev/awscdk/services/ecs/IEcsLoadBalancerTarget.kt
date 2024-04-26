@@ -39,7 +39,7 @@ public interface IEcsLoadBalancerTarget : IApplicationLoadBalancerTarget,
      * @param loadBalancer [disable-awslint:ref-via-interface] The load balancer to attach the
      * target to. 
      */
-    override fun attachToClassicLb(loadBalancer: LoadBalancer) {
+    override fun attachToClassicLB(loadBalancer: LoadBalancer) {
       unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
     }
 

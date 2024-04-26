@@ -109,7 +109,7 @@ public open class CfnManagedPolicy(
       unwrap(this).getAttrPermissionsBoundaryUsageCount()
 
   /**
-   * Amazon Resource Name (ARN) of the managed policy.
+   *
    */
   public open fun attrPolicyArn(): String = unwrap(this).getAttrPolicyArn()
 
@@ -332,6 +332,8 @@ public open class CfnManagedPolicy(
      * You cannot use an asterisk (*) in the path name.
      *
      *
+     * Default: - "/"
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-path)
      * @param path The path for the policy. 
      */
@@ -541,6 +543,8 @@ public open class CfnManagedPolicy(
      *
      * You cannot use an asterisk (*) in the path name.
      *
+     *
+     * Default: - "/"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-path)
      * @param path The path for the policy. 

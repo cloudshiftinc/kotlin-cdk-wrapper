@@ -362,7 +362,7 @@ public abstract class TopicBase(
    *
    * @param props
    */
-  public override fun metricSmsMonthToDateSpentUsd(): Metric =
+  public override fun metricSMSMonthToDateSpentUSD(): Metric =
       unwrap(this).metricSMSMonthToDateSpentUSD().let(Metric::wrap)
 
   /**
@@ -373,7 +373,7 @@ public abstract class TopicBase(
    *
    * @param props
    */
-  public override fun metricSmsMonthToDateSpentUsd(props: MetricOptions): Metric =
+  public override fun metricSMSMonthToDateSpentUSD(props: MetricOptions): Metric =
       unwrap(this).metricSMSMonthToDateSpentUSD(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -385,9 +385,9 @@ public abstract class TopicBase(
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("1f5bf7d95644305938cdde06436a98bf86c5b1c175ce1e9a467fda47d6a49663")
-  public override fun metricSmsMonthToDateSpentUsd(props: MetricOptions.Builder.() -> Unit): Metric
-      = metricSmsMonthToDateSpentUsd(MetricOptions(props))
+  @JvmName("b75f6b19f7160591b65b78c2e814e4c4d9085fa09cbf36be93ab8ebcf59757ed")
+  public override fun metricSMSMonthToDateSpentUSD(props: MetricOptions.Builder.() -> Unit): Metric
+      = metricSMSMonthToDateSpentUSD(MetricOptions(props))
 
   /**
    * The rate of successful SMS message deliveries.
@@ -396,7 +396,7 @@ public abstract class TopicBase(
    *
    * @param props
    */
-  public override fun metricSmsSuccessRate(): Metric =
+  public override fun metricSMSSuccessRate(): Metric =
       unwrap(this).metricSMSSuccessRate().let(Metric::wrap)
 
   /**
@@ -406,7 +406,7 @@ public abstract class TopicBase(
    *
    * @param props
    */
-  public override fun metricSmsSuccessRate(props: MetricOptions): Metric =
+  public override fun metricSMSSuccessRate(props: MetricOptions): Metric =
       unwrap(this).metricSMSSuccessRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -417,9 +417,9 @@ public abstract class TopicBase(
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("b3a70fccfc4dc7a51391a3c0d2a1a31549ef7b7227b052d7ecbc0e728be4217e")
-  public override fun metricSmsSuccessRate(props: MetricOptions.Builder.() -> Unit): Metric =
-      metricSmsSuccessRate(MetricOptions(props))
+  @JvmName("111af2ad33e24ca1507cb1296fd551ccb6414bd7dc93a8ad2e286d65fa09c521")
+  public override fun metricSMSSuccessRate(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricSMSSuccessRate(MetricOptions(props))
 
   /**
    * The ARN of the topic.

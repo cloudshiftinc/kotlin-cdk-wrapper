@@ -53,6 +53,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .playbackMode("playbackMode")
  * // the properties below are optional
+ * .audiences(List.of("audiences"))
  * .fillerSlate(SlateSourceProperty.builder()
  * .sourceLocationName("sourceLocationName")
  * .vodSourceName("vodSourceName")
@@ -96,6 +97,23 @@ public open class CfnChannel(
    * The ARN of the channel.</p>.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * The list of audiences defined in channel.
+   */
+  public open fun audiences(): List<String> = unwrap(this).getAudiences() ?: emptyList()
+
+  /**
+   * The list of audiences defined in channel.
+   */
+  public open fun audiences(`value`: List<String>) {
+    unwrap(this).setAudiences(`value`)
+  }
+
+  /**
+   * The list of audiences defined in channel.
+   */
+  public open fun audiences(vararg `value`: String): Unit = audiences(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -277,6 +295,22 @@ public open class CfnChannel(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The list of audiences defined in channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-audiences)
+     * @param audiences The list of audiences defined in channel. 
+     */
+    public fun audiences(audiences: List<String>)
+
+    /**
+     * The list of audiences defined in channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-audiences)
+     * @param audiences The list of audiences defined in channel. 
+     */
+    public fun audiences(vararg audiences: String)
+
+    /**
      * The name of the channel.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-channelname)
@@ -453,6 +487,24 @@ public open class CfnChannel(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.mediatailor.CfnChannel.Builder =
         software.amazon.awscdk.services.mediatailor.CfnChannel.Builder.create(scope, id)
+
+    /**
+     * The list of audiences defined in channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-audiences)
+     * @param audiences The list of audiences defined in channel. 
+     */
+    override fun audiences(audiences: List<String>) {
+      cdkBuilder.audiences(audiences)
+    }
+
+    /**
+     * The list of audiences defined in channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-audiences)
+     * @param audiences The list of audiences defined in channel. 
+     */
+    override fun audiences(vararg audiences: String): Unit = audiences(audiences.toList())
 
     /**
      * The name of the channel.

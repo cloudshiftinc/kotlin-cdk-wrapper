@@ -186,18 +186,6 @@ public open class CfnPreset(
     public fun name(name: String)
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
-     */
-    public fun tags(tags: Any)
-
-    /**
      * Specify, in JSON format, the transcoding job settings for this output preset.
      *
      * This specification must conform to the AWS Elemental MediaConvert job validation. For
@@ -212,7 +200,19 @@ public open class CfnPreset(
      * @param settingsJson Specify, in JSON format, the transcoding job settings for this output
      * preset. 
      */
-    public fun tingsJson(settingsJson: Any)
+    public fun settingsJson(settingsJson: Any)
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl(
@@ -253,20 +253,6 @@ public open class CfnPreset(
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
-     *
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
-     */
-    override fun tags(tags: Any) {
-      cdkBuilder.tags(tags)
-    }
-
-    /**
      * Specify, in JSON format, the transcoding job settings for this output preset.
      *
      * This specification must conform to the AWS Elemental MediaConvert job validation. For
@@ -281,8 +267,22 @@ public open class CfnPreset(
      * @param settingsJson Specify, in JSON format, the transcoding job settings for this output
      * preset. 
      */
-    override fun tingsJson(settingsJson: Any) {
+    override fun settingsJson(settingsJson: Any) {
       cdkBuilder.settingsJson(settingsJson)
+    }
+
+    /**
+     * An array of key-value pairs to apply to this resource.
+     *
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-preset.html#cfn-mediaconvert-preset-tags)
+     * @param tags An array of key-value pairs to apply to this resource. 
+     */
+    override fun tags(tags: Any) {
+      cdkBuilder.tags(tags)
     }
 
     public fun build(): software.amazon.awscdk.services.mediaconvert.CfnPreset = cdkBuilder.build()

@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -40,6 +41,14 @@ import kotlin.jvm.JvmName
  * ```
  */
 public interface ProviderProps {
+  /**
+   * Whether logging for the waiter state machine is disabled.
+   *
+   * Default: - false
+   */
+  public fun disableWaiterStateMachineLogging(): Boolean? =
+      unwrap(this).getDisableWaiterStateMachineLogging()
+
   /**
    * The AWS Lambda function to invoke in order to determine if the operation is complete.
    *
@@ -169,10 +178,26 @@ public interface ProviderProps {
       unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
 
   /**
+   * Defines what execution history events of the waiter state machine are logged and where they are
+   * logged.
+   *
+   * Default: - A default log group will be created if logging for the waiter state machine is
+   * enabled.
+   */
+  public fun waiterStateMachineLogOptions(): LogOptions? =
+      unwrap(this).getWaiterStateMachineLogOptions()?.let(LogOptions::wrap)
+
+  /**
    * A builder for [ProviderProps]
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param disableWaiterStateMachineLogging Whether logging for the waiter state machine is
+     * disabled.
+     */
+    public fun disableWaiterStateMachineLogging(disableWaiterStateMachineLogging: Boolean)
+
     /**
      * @param isCompleteHandler The AWS Lambda function to invoke in order to determine if the
      * operation is complete.
@@ -279,11 +304,34 @@ public interface ProviderProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("59c9969f7250ffe8bee78b1148f2db9967d4a930cea26f58371093c920fe06b0")
     public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
+
+    /**
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged.
+     */
+    public fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions)
+
+    /**
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0c647cf0aa085a82e42fa8bc2a90d827e8bc491c7057bf86e5287a9634946e94")
+    public
+        fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.customresources.ProviderProps.Builder =
         software.amazon.awscdk.customresources.ProviderProps.builder()
+
+    /**
+     * @param disableWaiterStateMachineLogging Whether logging for the waiter state machine is
+     * disabled.
+     */
+    override fun disableWaiterStateMachineLogging(disableWaiterStateMachineLogging: Boolean) {
+      cdkBuilder.disableWaiterStateMachineLogging(disableWaiterStateMachineLogging)
+    }
 
     /**
      * @param isCompleteHandler The AWS Lambda function to invoke in order to determine if the
@@ -418,12 +466,38 @@ public interface ProviderProps {
     override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
+    /**
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged.
+     */
+    override fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions) {
+      cdkBuilder.waiterStateMachineLogOptions(waiterStateMachineLogOptions.let(LogOptions::unwrap))
+    }
+
+    /**
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0c647cf0aa085a82e42fa8bc2a90d827e8bc491c7057bf86e5287a9634946e94")
+    override
+        fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions.Builder.() -> Unit):
+        Unit = waiterStateMachineLogOptions(LogOptions(waiterStateMachineLogOptions))
+
     public fun build(): software.amazon.awscdk.customresources.ProviderProps = cdkBuilder.build()
   }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.customresources.ProviderProps,
   ) : CdkObject(cdkObject), ProviderProps {
+    /**
+     * Whether logging for the waiter state machine is disabled.
+     *
+     * Default: - false
+     */
+    override fun disableWaiterStateMachineLogging(): Boolean? =
+        unwrap(this).getDisableWaiterStateMachineLogging()
+
     /**
      * The AWS Lambda function to invoke in order to determine if the operation is complete.
      *
@@ -552,6 +626,16 @@ public interface ProviderProps {
      */
     override fun vpcSubnets(): SubnetSelection? =
         unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
+
+    /**
+     * Defines what execution history events of the waiter state machine are logged and where they
+     * are logged.
+     *
+     * Default: - A default log group will be created if logging for the waiter state machine is
+     * enabled.
+     */
+    override fun waiterStateMachineLogOptions(): LogOptions? =
+        unwrap(this).getWaiterStateMachineLogOptions()?.let(LogOptions::wrap)
   }
 
   public companion object {

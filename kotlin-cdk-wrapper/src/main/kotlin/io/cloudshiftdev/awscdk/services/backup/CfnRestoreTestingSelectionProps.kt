@@ -101,15 +101,18 @@ public interface CfnRestoreTestingSelectionProps {
   public fun restoreMetadataOverrides(): Any? = unwrap(this).getRestoreMetadataOverrides()
 
   /**
-   * The RestoreTestingPlanName is a unique string that is the name of the restore testing plan.
+   * Unique string that is the name of the restore testing plan.
+   *
+   * The name cannot be changed after creation. The name must consist of only alphanumeric
+   * characters and underscores. Maximum length is 50.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingplanname)
    */
   public fun restoreTestingPlanName(): String
 
   /**
-   * This is the unique name of the restore testing selection that belongs to the related restore
-   * testing plan.
+   * The unique name of the restore testing selection that belongs to the related restore testing
+   * plan.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingselectionname)
    */
@@ -203,14 +206,15 @@ public interface CfnRestoreTestingSelectionProps {
     public fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>)
 
     /**
-     * @param restoreTestingPlanName The RestoreTestingPlanName is a unique string that is the name
-     * of the restore testing plan. 
+     * @param restoreTestingPlanName Unique string that is the name of the restore testing plan. 
+     * The name cannot be changed after creation. The name must consist of only alphanumeric
+     * characters and underscores. Maximum length is 50.
      */
     public fun restoreTestingPlanName(restoreTestingPlanName: String)
 
     /**
-     * @param restoreTestingSelectionName This is the unique name of the restore testing selection
-     * that belongs to the related restore testing plan. 
+     * @param restoreTestingSelectionName The unique name of the restore testing selection that
+     * belongs to the related restore testing plan. 
      */
     public fun restoreTestingSelectionName(restoreTestingSelectionName: String)
 
@@ -318,16 +322,17 @@ public interface CfnRestoreTestingSelectionProps {
     }
 
     /**
-     * @param restoreTestingPlanName The RestoreTestingPlanName is a unique string that is the name
-     * of the restore testing plan. 
+     * @param restoreTestingPlanName Unique string that is the name of the restore testing plan. 
+     * The name cannot be changed after creation. The name must consist of only alphanumeric
+     * characters and underscores. Maximum length is 50.
      */
     override fun restoreTestingPlanName(restoreTestingPlanName: String) {
       cdkBuilder.restoreTestingPlanName(restoreTestingPlanName)
     }
 
     /**
-     * @param restoreTestingSelectionName This is the unique name of the restore testing selection
-     * that belongs to the related restore testing plan. 
+     * @param restoreTestingSelectionName The unique name of the restore testing selection that
+     * belongs to the related restore testing plan. 
      */
     override fun restoreTestingSelectionName(restoreTestingSelectionName: String) {
       cdkBuilder.restoreTestingSelectionName(restoreTestingSelectionName)
@@ -401,15 +406,18 @@ public interface CfnRestoreTestingSelectionProps {
     override fun restoreMetadataOverrides(): Any? = unwrap(this).getRestoreMetadataOverrides()
 
     /**
-     * The RestoreTestingPlanName is a unique string that is the name of the restore testing plan.
+     * Unique string that is the name of the restore testing plan.
+     *
+     * The name cannot be changed after creation. The name must consist of only alphanumeric
+     * characters and underscores. Maximum length is 50.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingplanname)
      */
     override fun restoreTestingPlanName(): String = unwrap(this).getRestoreTestingPlanName()
 
     /**
-     * This is the unique name of the restore testing selection that belongs to the related restore
-     * testing plan.
+     * The unique name of the restore testing selection that belongs to the related restore testing
+     * plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingselectionname)
      */

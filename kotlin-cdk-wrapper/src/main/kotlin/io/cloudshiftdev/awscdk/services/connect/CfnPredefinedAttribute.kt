@@ -58,6 +58,17 @@ public open class CfnPredefinedAttribute(
   )
 
   /**
+   * Last modified region.
+   */
+  public open fun attrLastModifiedRegion(): String = unwrap(this).getAttrLastModifiedRegion()
+
+  /**
+   * Last modified time.
+   */
+  public open fun attrLastModifiedTime(): IResolvable =
+      unwrap(this).getAttrLastModifiedTime().let(IResolvable::wrap)
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 

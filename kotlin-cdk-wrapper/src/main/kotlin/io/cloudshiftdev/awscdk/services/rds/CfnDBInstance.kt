@@ -876,12 +876,12 @@ public open class CfnDBInstance(
       endpoint(EndpointProperty(`value`))
 
   /**
-   * The name of the database engine that you want to use for this DB instance.
+   * The name of the database engine to use for this DB instance.
    */
   public open fun engine(): String? = unwrap(this).getEngine()
 
   /**
-   * The name of the database engine that you want to use for this DB instance.
+   * The name of the database engine to use for this DB instance.
    */
   public open fun engine(`value`: String) {
     unwrap(this).setEngine(`value`)
@@ -2657,12 +2657,17 @@ public open class CfnDBInstance(
     public fun endpoint(endpoint: EndpointProperty.Builder.() -> Unit)
 
     /**
-     * The name of the database engine that you want to use for this DB instance.
+     * The name of the database engine to use for this DB instance.
      *
      * Not every database engine is available in every AWS Region.
      *
+     * This property is required when creating a DB instance.
      *
-     * When you are creating a DB instance, the `Engine` property is required.
+     *
+     * You can convert an Oracle database from the non-CDB architecture to the container database
+     * (CDB) architecture by updating the `Engine` value in your templates from `oracle-ee` to
+     * `oracle-ee-cdb` or from `oracle-se2` to `oracle-se2-cdb` . Converting to the CDB architecture
+     * requires an interruption.
      *
      *
      * Valid Values:
@@ -2689,7 +2694,7 @@ public open class CfnDBInstance(
      * * `sqlserver-web`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-engine)
-     * @param engine The name of the database engine that you want to use for this DB instance. 
+     * @param engine The name of the database engine to use for this DB instance. 
      */
     public fun engine(engine: String)
 
@@ -2793,9 +2798,9 @@ public open class CfnDBInstance(
      * KMS key for the destination AWS Region. KMS encryption keys are specific to the region that
      * they're created in, and you can't use encryption keys from one region in another region.
      *
-     * If you specify the `SnapshotIdentifier` property, the `StorageEncrypted` property value is
-     * inherited from the snapshot, and if the DB instance is encrypted, the specified `KmsKeyId`
-     * property is used.
+     * If you specify the `DBSnapshotIdentifier` property, don't specify this property. The
+     * `StorageEncrypted` property value is inherited from the snapshot. If the DB instance is
+     * encrypted, the specified `KmsKeyId` property is also inherited from the snapshot.
      *
      * If you specify `DBSecurityGroups` , AWS CloudFormation ignores this property. To specify both
      * a security group and this property, you must use a VPC security group. For more information
@@ -3505,14 +3510,8 @@ public open class CfnDBInstance(
      * value is inherited from the source DB instance, and if the DB instance is encrypted, the
      * specified `KmsKeyId` property is used.
      *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot is encrypted, don't
-     * specify this property. The value is inherited from the snapshot, and the specified `KmsKeyId`
-     * property is used.
-     *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot isn't encrypted, you can
-     * use this property to specify that the restored DB instance is encrypted. Specify the `KmsKeyId`
-     * property for the KMS key to use for encryption. If you don't want the restored DB instance to be
-     * encrypted, then don't set this property or set it to `false` .
+     * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
+     * inherited from the snapshot.
      *
      * *Amazon Aurora*
      *
@@ -3533,14 +3532,8 @@ public open class CfnDBInstance(
      * value is inherited from the source DB instance, and if the DB instance is encrypted, the
      * specified `KmsKeyId` property is used.
      *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot is encrypted, don't
-     * specify this property. The value is inherited from the snapshot, and the specified `KmsKeyId`
-     * property is used.
-     *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot isn't encrypted, you can
-     * use this property to specify that the restored DB instance is encrypted. Specify the `KmsKeyId`
-     * property for the KMS key to use for encryption. If you don't want the restored DB instance to be
-     * encrypted, then don't set this property or set it to `false` .
+     * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
+     * inherited from the snapshot.
      *
      * *Amazon Aurora*
      *
@@ -5018,12 +5011,17 @@ public open class CfnDBInstance(
         endpoint(EndpointProperty(endpoint))
 
     /**
-     * The name of the database engine that you want to use for this DB instance.
+     * The name of the database engine to use for this DB instance.
      *
      * Not every database engine is available in every AWS Region.
      *
+     * This property is required when creating a DB instance.
      *
-     * When you are creating a DB instance, the `Engine` property is required.
+     *
+     * You can convert an Oracle database from the non-CDB architecture to the container database
+     * (CDB) architecture by updating the `Engine` value in your templates from `oracle-ee` to
+     * `oracle-ee-cdb` or from `oracle-se2` to `oracle-se2-cdb` . Converting to the CDB architecture
+     * requires an interruption.
      *
      *
      * Valid Values:
@@ -5050,7 +5048,7 @@ public open class CfnDBInstance(
      * * `sqlserver-web`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#cfn-rds-dbinstance-engine)
-     * @param engine The name of the database engine that you want to use for this DB instance. 
+     * @param engine The name of the database engine to use for this DB instance. 
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
@@ -5160,9 +5158,9 @@ public open class CfnDBInstance(
      * KMS key for the destination AWS Region. KMS encryption keys are specific to the region that
      * they're created in, and you can't use encryption keys from one region in another region.
      *
-     * If you specify the `SnapshotIdentifier` property, the `StorageEncrypted` property value is
-     * inherited from the snapshot, and if the DB instance is encrypted, the specified `KmsKeyId`
-     * property is used.
+     * If you specify the `DBSnapshotIdentifier` property, don't specify this property. The
+     * `StorageEncrypted` property value is inherited from the snapshot. If the DB instance is
+     * encrypted, the specified `KmsKeyId` property is also inherited from the snapshot.
      *
      * If you specify `DBSecurityGroups` , AWS CloudFormation ignores this property. To specify both
      * a security group and this property, you must use a VPC security group. For more information
@@ -5940,14 +5938,8 @@ public open class CfnDBInstance(
      * value is inherited from the source DB instance, and if the DB instance is encrypted, the
      * specified `KmsKeyId` property is used.
      *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot is encrypted, don't
-     * specify this property. The value is inherited from the snapshot, and the specified `KmsKeyId`
-     * property is used.
-     *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot isn't encrypted, you can
-     * use this property to specify that the restored DB instance is encrypted. Specify the `KmsKeyId`
-     * property for the KMS key to use for encryption. If you don't want the restored DB instance to be
-     * encrypted, then don't set this property or set it to `false` .
+     * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
+     * inherited from the snapshot.
      *
      * *Amazon Aurora*
      *
@@ -5970,14 +5962,8 @@ public open class CfnDBInstance(
      * value is inherited from the source DB instance, and if the DB instance is encrypted, the
      * specified `KmsKeyId` property is used.
      *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot is encrypted, don't
-     * specify this property. The value is inherited from the snapshot, and the specified `KmsKeyId`
-     * property is used.
-     *
-     * If you specify the `DBSnapshotIdentifier` and the specified snapshot isn't encrypted, you can
-     * use this property to specify that the restored DB instance is encrypted. Specify the `KmsKeyId`
-     * property for the KMS key to use for encryption. If you don't want the restored DB instance to be
-     * encrypted, then don't set this property or set it to `false` .
+     * If you specify `DBSnapshotIdentifier` property, don't specify this property. The value is
+     * inherited from the snapshot.
      *
      * *Amazon Aurora*
      *

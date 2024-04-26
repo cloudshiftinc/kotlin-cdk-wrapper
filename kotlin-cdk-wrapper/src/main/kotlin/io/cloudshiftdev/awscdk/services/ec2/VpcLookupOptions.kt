@@ -19,29 +19,24 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // create a cloud9 ec2 environment in a new VPC
- * Vpc vpc = Vpc.Builder.create(this, "VPC").maxAzs(3).build();
- * Ec2Environment.Builder.create(this,
- * "Cloud9Env").vpc(vpc).imageId(ImageId.AMAZON_LINUX_2).build();
- * // or create the cloud9 environment in the default VPC with specific instanceType
- * IVpc defaultVpc = Vpc.fromLookup(this, "DefaultVPC",
- * VpcLookupOptions.builder().isDefault(true).build());
- * Ec2Environment.Builder.create(this, "Cloud9Env2")
- * .vpc(defaultVpc)
- * .instanceType(new InstanceType("t3.large"))
- * .imageId(ImageId.AMAZON_LINUX_2)
+ * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
+ * .isDefault(true)
+ * .build());
+ * Cluster cluster = Cluster.Builder.create(this, "ECSCluster").vpc(vpc).build();
+ * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
+ * .compatibility(Compatibility.EC2)
  * .build();
- * // or specify in a different subnetSelection
- * Ec2Environment c9env = Ec2Environment.Builder.create(this, "Cloud9Env3")
- * .vpc(vpc)
- * .subnetSelection(SubnetSelection.builder()
- * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
- * .build())
- * .imageId(ImageId.AMAZON_LINUX_2)
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("foo/bar"))
+ * .memoryLimitMiB(256)
+ * .build());
+ * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
+ * .integrationPattern(IntegrationPattern.RUN_JOB)
+ * .cluster(cluster)
+ * .taskDefinition(taskDefinition)
+ * .launchTarget(new EcsEc2LaunchTarget())
+ * .enableExecuteCommand(true)
  * .build();
- * // print the Cloud9 IDE URL in the output
- * // print the Cloud9 IDE URL in the output
- * CfnOutput.Builder.create(this, "URL").value(c9env.getIdeUrl()).build();
  * ```
  */
 public interface VpcLookupOptions {

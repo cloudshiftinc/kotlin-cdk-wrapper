@@ -74,7 +74,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
    *
    * Default: - none
    */
-  public fun rootCaCertificate(): ISecret? = unwrap(this).getRootCACertificate()?.let(ISecret::wrap)
+  public fun rootCACertificate(): ISecret? = unwrap(this).getRootCACertificate()?.let(ISecret::wrap)
 
   /**
    * If your Kafka brokers are only reachable via VPC, provide the security group here.
@@ -492,7 +492,7 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      *
      * Default: - none
      */
-    override fun rootCaCertificate(): ISecret? =
+    override fun rootCACertificate(): ISecret? =
         unwrap(this).getRootCACertificate()?.let(ISecret::wrap)
 
     /**

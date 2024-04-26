@@ -27,7 +27,7 @@ public interface IUnmanagedComputeEnvironment : IComputeEnvironment {
    * **If this parameter is not provided on a fairshare queue, no capacity is reserved**;
    * that is, the `FairshareSchedulingPolicy` is ignored.
    */
-  public fun unmanagedvCpUs(): Number? = unwrap(this).getUnmanagedvCPUs()
+  public fun unmanagedvCPUs(): Number? = unwrap(this).getUnmanagedvCPUs()
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.batch.IUnmanagedComputeEnvironment,
@@ -110,7 +110,7 @@ public interface IUnmanagedComputeEnvironment : IComputeEnvironment {
      * **If this parameter is not provided on a fairshare queue, no capacity is reserved**;
      * that is, the `FairshareSchedulingPolicy` is ignored.
      */
-    override fun unmanagedvCpUs(): Number? = unwrap(this).getUnmanagedvCPUs()
+    override fun unmanagedvCPUs(): Number? = unwrap(this).getUnmanagedvCPUs()
   }
 
   public companion object {

@@ -43,7 +43,7 @@ public open class JsonNull(
   /**
    * Obtains the JSON representation of this object (`null`).
    */
-  public open fun toJson(): Any = unwrap(this).toJSON()
+  public open fun toJSON(): Any = unwrap(this).toJSON()
 
   public companion object {
     public val INSTANCE: JsonNull = JsonNull.wrap(software.amazon.awscdk.JsonNull.INSTANCE)

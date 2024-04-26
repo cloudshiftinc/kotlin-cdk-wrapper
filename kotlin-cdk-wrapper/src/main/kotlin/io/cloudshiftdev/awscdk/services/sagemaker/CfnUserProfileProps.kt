@@ -34,6 +34,12 @@ import kotlin.jvm.JvmName
  * .build()))
  * .userSettings(UserSettingsProperty.builder()
  * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
  * .sageMakerImageArn("sageMakerImageArn")

@@ -8,6 +8,7 @@ public enum class NodeType(
   STANDARD(software.amazon.awscdk.services.eks.NodeType.STANDARD),
   GPU(software.amazon.awscdk.services.eks.NodeType.GPU),
   INFERENTIA(software.amazon.awscdk.services.eks.NodeType.INFERENTIA),
+  TRAINIUM(software.amazon.awscdk.services.eks.NodeType.TRAINIUM),
   ;
 
   public companion object {
@@ -16,6 +17,7 @@ public enum class NodeType(
       software.amazon.awscdk.services.eks.NodeType.STANDARD -> NodeType.STANDARD
       software.amazon.awscdk.services.eks.NodeType.GPU -> NodeType.GPU
       software.amazon.awscdk.services.eks.NodeType.INFERENTIA -> NodeType.INFERENTIA
+      software.amazon.awscdk.services.eks.NodeType.TRAINIUM -> NodeType.TRAINIUM
     }
 
     internal fun unwrap(wrapped: NodeType): software.amazon.awscdk.services.eks.NodeType =

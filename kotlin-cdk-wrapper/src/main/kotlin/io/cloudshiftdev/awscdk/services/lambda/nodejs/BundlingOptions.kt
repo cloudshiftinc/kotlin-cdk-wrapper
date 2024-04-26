@@ -72,7 +72,7 @@ public interface BundlingOptions : DockerRunOptions {
    * if `true` the `aws-sdk` will be included in the asset bundle and not be
    * resolved to the Lambda provided sdk.
    */
-  public fun bundleAwsSdk(): Boolean? = unwrap(this).getBundleAwsSDK()
+  public fun bundleAwsSDK(): Boolean? = unwrap(this).getBundleAwsSDK()
 
   /**
    * Which option to use to copy the source files to the docker container and output files back.
@@ -1198,7 +1198,7 @@ public interface BundlingOptions : DockerRunOptions {
      * if `true` the `aws-sdk` will be included in the asset bundle and not be
      * resolved to the Lambda provided sdk.
      */
-    override fun bundleAwsSdk(): Boolean? = unwrap(this).getBundleAwsSDK()
+    override fun bundleAwsSDK(): Boolean? = unwrap(this).getBundleAwsSDK()
 
     /**
      * Which option to use to copy the source files to the docker container and output files back.

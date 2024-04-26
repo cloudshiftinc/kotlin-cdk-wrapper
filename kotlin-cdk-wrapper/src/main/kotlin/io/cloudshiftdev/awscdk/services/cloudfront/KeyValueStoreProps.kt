@@ -14,9 +14,18 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * KeyValueStore store = KeyValueStore.Builder.create(this, "KeyValueStore")
- * .keyValueStoreName("KeyValueStore")
+ * KeyValueStore storeAsset = KeyValueStore.Builder.create(this, "KeyValueStoreAsset")
+ * .keyValueStoreName("KeyValueStoreAsset")
  * .source(ImportSource.fromAsset("path-to-data.json"))
+ * .build();
+ * KeyValueStore storeInline = KeyValueStore.Builder.create(this, "KeyValueStoreInline")
+ * .keyValueStoreName("KeyValueStoreInline")
+ * .source(ImportSource.fromInline(JSON.stringify(Map.of(
+ * "data", List.of(Map.of(
+ * "key", "key1",
+ * "value", "value1"), Map.of(
+ * "key", "key2",
+ * "value", "value2"))))))
  * .build();
  * ```
  */

@@ -6292,8 +6292,8 @@ public open class CfnCluster(
     /**
      * Specifies whether the cluster should remain available after completing all steps.
      *
-     * Defaults to `true` . For more information about configuring cluster termination, see [Control
-     * Cluster
+     * Defaults to `false` . For more information about configuring cluster termination, see
+     * [Control Cluster
      * Termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
      * in the *EMR Management Guide* .
      *
@@ -6523,7 +6523,7 @@ public open class CfnCluster(
       /**
        * @param keepJobFlowAliveWhenNoSteps Specifies whether the cluster should remain available
        * after completing all steps.
-       * Defaults to `true` . For more information about configuring cluster termination, see
+       * Defaults to `false` . For more information about configuring cluster termination, see
        * [Control Cluster
        * Termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
        * in the *EMR Management Guide* .
@@ -6533,7 +6533,7 @@ public open class CfnCluster(
       /**
        * @param keepJobFlowAliveWhenNoSteps Specifies whether the cluster should remain available
        * after completing all steps.
-       * Defaults to `true` . For more information about configuring cluster termination, see
+       * Defaults to `false` . For more information about configuring cluster termination, see
        * [Control Cluster
        * Termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
        * in the *EMR Management Guide* .
@@ -6892,7 +6892,7 @@ public open class CfnCluster(
       /**
        * @param keepJobFlowAliveWhenNoSteps Specifies whether the cluster should remain available
        * after completing all steps.
-       * Defaults to `true` . For more information about configuring cluster termination, see
+       * Defaults to `false` . For more information about configuring cluster termination, see
        * [Control Cluster
        * Termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
        * in the *EMR Management Guide* .
@@ -6904,7 +6904,7 @@ public open class CfnCluster(
       /**
        * @param keepJobFlowAliveWhenNoSteps Specifies whether the cluster should remain available
        * after completing all steps.
-       * Defaults to `true` . For more information about configuring cluster termination, see
+       * Defaults to `false` . For more information about configuring cluster termination, see
        * [Control Cluster
        * Termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
        * in the *EMR Management Guide* .
@@ -7245,7 +7245,7 @@ public open class CfnCluster(
       /**
        * Specifies whether the cluster should remain available after completing all steps.
        *
-       * Defaults to `true` . For more information about configuring cluster termination, see
+       * Defaults to `false` . For more information about configuring cluster termination, see
        * [Control Cluster
        * Termination](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html)
        * in the *EMR Management Guide* .

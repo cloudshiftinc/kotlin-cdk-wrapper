@@ -18,20 +18,16 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // Create a Task Definition for the Windows container to start
- * FargateTaskDefinition taskDefinition = FargateTaskDefinition.Builder.create(this, "TaskDef")
+ * FargateTaskDefinition fargateTaskDefinition = FargateTaskDefinition.Builder.create(this,
+ * "TaskDef")
  * .runtimePlatform(RuntimePlatform.builder()
- * .operatingSystemFamily(OperatingSystemFamily.WINDOWS_SERVER_2019_CORE)
- * .cpuArchitecture(CpuArchitecture.X86_64)
+ * .operatingSystemFamily(OperatingSystemFamily.LINUX)
+ * .cpuArchitecture(CpuArchitecture.ARM64)
  * .build())
- * .cpu(1024)
- * .memoryLimitMiB(2048)
+ * .memoryLimitMiB(512)
+ * .cpu(256)
+ * .pidMode(PidMode.HOST)
  * .build();
- * taskDefinition.addContainer("windowsservercore", ContainerDefinitionOptions.builder()
- * .logging(LogDriver.awsLogs(AwsLogDriverProps.builder().streamPrefix("win-iis-on-fargate").build()))
- * .portMappings(List.of(PortMapping.builder().containerPort(80).build()))
- * .image(ContainerImage.fromRegistry("mcr.microsoft.com/windows/servercore/iis:windowsservercore-ltsc2019"))
- * .build());
  * ```
  */
 public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
@@ -106,6 +102,17 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
    * Default: 512
    */
   public fun memoryLimitMiB(): Number? = unwrap(this).getMemoryLimitMiB()
+
+  /**
+   * The process namespace to use for the containers in the task.
+   *
+   * Only supported for tasks that are hosted on AWS Fargate if the tasks
+   * are using platform version 1.4.0 or later (Linux).
+   * Not supported in Windows containers.
+   *
+   * Default: - PidMode used by the task is not specified
+   */
+  public fun pidMode(): PidMode? = unwrap(this).getPidMode()?.let(PidMode::wrap)
 
   /**
    * The operating system that your task definitions are running on.
@@ -198,6 +205,14 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      * values: 16384 (16 vCPU)
      */
     public fun memoryLimitMiB(memoryLimitMiB: Number)
+
+    /**
+     * @param pidMode The process namespace to use for the containers in the task.
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
+     */
+    public fun pidMode(pidMode: PidMode)
 
     /**
      * @param proxyConfiguration The configuration details for the App Mesh proxy.
@@ -330,6 +345,16 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      */
     override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
+    }
+
+    /**
+     * @param pidMode The process namespace to use for the containers in the task.
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
+     */
+    override fun pidMode(pidMode: PidMode) {
+      cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
     }
 
     /**
@@ -480,6 +505,17 @@ public interface FargateTaskDefinitionProps : CommonTaskDefinitionProps {
      * Default: 512
      */
     override fun memoryLimitMiB(): Number? = unwrap(this).getMemoryLimitMiB()
+
+    /**
+     * The process namespace to use for the containers in the task.
+     *
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
+     *
+     * Default: - PidMode used by the task is not specified
+     */
+    override fun pidMode(): PidMode? = unwrap(this).getPidMode()?.let(PidMode::wrap)
 
     /**
      * The configuration details for the App Mesh proxy.

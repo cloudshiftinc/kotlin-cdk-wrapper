@@ -64,6 +64,10 @@ public interface CfnRepositoryProps {
   /**
    * An array of external connections associated with the repository.
    *
+   * For more information, see [Supported external connection
+   * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+   * in the *CodeArtifact user guide* .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-externalconnections)
    */
   public fun externalConnections(): List<String> = unwrap(this).getExternalConnections() ?:
@@ -123,11 +127,17 @@ public interface CfnRepositoryProps {
 
     /**
      * @param externalConnections An array of external connections associated with the repository.
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
      */
     public fun externalConnections(externalConnections: List<String>)
 
     /**
      * @param externalConnections An array of external connections associated with the repository.
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
      */
     public fun externalConnections(vararg externalConnections: String)
 
@@ -196,6 +206,9 @@ public interface CfnRepositoryProps {
 
     /**
      * @param externalConnections An array of external connections associated with the repository.
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
      */
     override fun externalConnections(externalConnections: List<String>) {
       cdkBuilder.externalConnections(externalConnections)
@@ -203,6 +216,9 @@ public interface CfnRepositoryProps {
 
     /**
      * @param externalConnections An array of external connections associated with the repository.
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
      */
     override fun externalConnections(vararg externalConnections: String): Unit =
         externalConnections(externalConnections.toList())
@@ -282,6 +298,10 @@ public interface CfnRepositoryProps {
 
     /**
      * An array of external connections associated with the repository.
+     *
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-externalconnections)
      */

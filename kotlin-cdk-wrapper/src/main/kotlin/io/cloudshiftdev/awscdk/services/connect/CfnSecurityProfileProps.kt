@@ -25,11 +25,17 @@ import kotlin.collections.List
  * .instanceArn("instanceArn")
  * .securityProfileName("securityProfileName")
  * // the properties below are optional
+ * .allowedAccessControlHierarchyGroupId("allowedAccessControlHierarchyGroupId")
  * .allowedAccessControlTags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .applications(List.of(ApplicationProperty.builder()
+ * .applicationPermissions(List.of("applicationPermissions"))
+ * .namespace("namespace")
+ * .build()))
  * .description("description")
+ * .hierarchyRestrictedResources(List.of("hierarchyRestrictedResources"))
  * .permissions(List.of("permissions"))
  * .tagRestrictedResources(List.of("tagRestrictedResources"))
  * .tags(List.of(CfnTag.builder()
@@ -43,6 +49,15 @@ import kotlin.collections.List
  */
 public interface CfnSecurityProfileProps {
   /**
+   * The identifier of the hierarchy group that a security profile uses to restrict access to
+   * resources in Amazon Connect.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-allowedaccesscontrolhierarchygroupid)
+   */
+  public fun allowedAccessControlHierarchyGroupId(): String? =
+      unwrap(this).getAllowedAccessControlHierarchyGroupId()
+
+  /**
    * The list of tags that a security profile uses to restrict access to resources in Amazon
    * Connect.
    *
@@ -51,11 +66,29 @@ public interface CfnSecurityProfileProps {
   public fun allowedAccessControlTags(): Any? = unwrap(this).getAllowedAccessControlTags()
 
   /**
+   * A list of third-party applications that the security profile will give access to.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-applications)
+   */
+  public fun applications(): Any? = unwrap(this).getApplications()
+
+  /**
    * The description of the security profile.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * The list of resources that a security profile applies hierarchy restrictions to in Amazon
+   * Connect.
+   *
+   * Following are acceptable ResourceNames: `User` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-hierarchyrestrictedresources)
+   */
+  public fun hierarchyRestrictedResources(): List<String> =
+      unwrap(this).getHierarchyRestrictedResources() ?: emptyList()
 
   /**
    * The identifier of the Amazon Connect instance.
@@ -104,6 +137,12 @@ public interface CfnSecurityProfileProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param allowedAccessControlHierarchyGroupId The identifier of the hierarchy group that a
+     * security profile uses to restrict access to resources in Amazon Connect.
+     */
+    public fun allowedAccessControlHierarchyGroupId(allowedAccessControlHierarchyGroupId: String)
+
+    /**
      * @param allowedAccessControlTags The list of tags that a security profile uses to restrict
      * access to resources in Amazon Connect.
      */
@@ -122,9 +161,41 @@ public interface CfnSecurityProfileProps {
     public fun allowedAccessControlTags(vararg allowedAccessControlTags: Any)
 
     /**
+     * @param applications A list of third-party applications that the security profile will give
+     * access to.
+     */
+    public fun applications(applications: IResolvable)
+
+    /**
+     * @param applications A list of third-party applications that the security profile will give
+     * access to.
+     */
+    public fun applications(applications: List<Any>)
+
+    /**
+     * @param applications A list of third-party applications that the security profile will give
+     * access to.
+     */
+    public fun applications(vararg applications: Any)
+
+    /**
      * @param description The description of the security profile.
      */
     public fun description(description: String)
+
+    /**
+     * @param hierarchyRestrictedResources The list of resources that a security profile applies
+     * hierarchy restrictions to in Amazon Connect.
+     * Following are acceptable ResourceNames: `User` .
+     */
+    public fun hierarchyRestrictedResources(hierarchyRestrictedResources: List<String>)
+
+    /**
+     * @param hierarchyRestrictedResources The list of resources that a security profile applies
+     * hierarchy restrictions to in Amazon Connect.
+     * Following are acceptable ResourceNames: `User` .
+     */
+    public fun hierarchyRestrictedResources(vararg hierarchyRestrictedResources: String)
 
     /**
      * @param instanceArn The identifier of the Amazon Connect instance. 
@@ -180,6 +251,15 @@ public interface CfnSecurityProfileProps {
         = software.amazon.awscdk.services.connect.CfnSecurityProfileProps.builder()
 
     /**
+     * @param allowedAccessControlHierarchyGroupId The identifier of the hierarchy group that a
+     * security profile uses to restrict access to resources in Amazon Connect.
+     */
+    override
+        fun allowedAccessControlHierarchyGroupId(allowedAccessControlHierarchyGroupId: String) {
+      cdkBuilder.allowedAccessControlHierarchyGroupId(allowedAccessControlHierarchyGroupId)
+    }
+
+    /**
      * @param allowedAccessControlTags The list of tags that a security profile uses to restrict
      * access to resources in Amazon Connect.
      */
@@ -203,11 +283,50 @@ public interface CfnSecurityProfileProps {
         allowedAccessControlTags(allowedAccessControlTags.toList())
 
     /**
+     * @param applications A list of third-party applications that the security profile will give
+     * access to.
+     */
+    override fun applications(applications: IResolvable) {
+      cdkBuilder.applications(applications.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param applications A list of third-party applications that the security profile will give
+     * access to.
+     */
+    override fun applications(applications: List<Any>) {
+      cdkBuilder.applications(applications.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param applications A list of third-party applications that the security profile will give
+     * access to.
+     */
+    override fun applications(vararg applications: Any): Unit = applications(applications.toList())
+
+    /**
      * @param description The description of the security profile.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * @param hierarchyRestrictedResources The list of resources that a security profile applies
+     * hierarchy restrictions to in Amazon Connect.
+     * Following are acceptable ResourceNames: `User` .
+     */
+    override fun hierarchyRestrictedResources(hierarchyRestrictedResources: List<String>) {
+      cdkBuilder.hierarchyRestrictedResources(hierarchyRestrictedResources)
+    }
+
+    /**
+     * @param hierarchyRestrictedResources The list of resources that a security profile applies
+     * hierarchy restrictions to in Amazon Connect.
+     * Following are acceptable ResourceNames: `User` .
+     */
+    override fun hierarchyRestrictedResources(vararg hierarchyRestrictedResources: String): Unit =
+        hierarchyRestrictedResources(hierarchyRestrictedResources.toList())
 
     /**
      * @param instanceArn The identifier of the Amazon Connect instance. 
@@ -276,6 +395,15 @@ public interface CfnSecurityProfileProps {
     cdkObject: software.amazon.awscdk.services.connect.CfnSecurityProfileProps,
   ) : CdkObject(cdkObject), CfnSecurityProfileProps {
     /**
+     * The identifier of the hierarchy group that a security profile uses to restrict access to
+     * resources in Amazon Connect.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-allowedaccesscontrolhierarchygroupid)
+     */
+    override fun allowedAccessControlHierarchyGroupId(): String? =
+        unwrap(this).getAllowedAccessControlHierarchyGroupId()
+
+    /**
      * The list of tags that a security profile uses to restrict access to resources in Amazon
      * Connect.
      *
@@ -284,11 +412,29 @@ public interface CfnSecurityProfileProps {
     override fun allowedAccessControlTags(): Any? = unwrap(this).getAllowedAccessControlTags()
 
     /**
+     * A list of third-party applications that the security profile will give access to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-applications)
+     */
+    override fun applications(): Any? = unwrap(this).getApplications()
+
+    /**
      * The description of the security profile.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The list of resources that a security profile applies hierarchy restrictions to in Amazon
+     * Connect.
+     *
+     * Following are acceptable ResourceNames: `User` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-securityprofile.html#cfn-connect-securityprofile-hierarchyrestrictedresources)
+     */
+    override fun hierarchyRestrictedResources(): List<String> =
+        unwrap(this).getHierarchyRestrictedResources() ?: emptyList()
 
     /**
      * The identifier of the Amazon Connect instance.

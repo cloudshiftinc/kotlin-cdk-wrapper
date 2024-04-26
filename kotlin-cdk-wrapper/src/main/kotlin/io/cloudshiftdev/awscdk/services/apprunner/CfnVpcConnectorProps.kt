@@ -65,6 +65,11 @@ public interface CfnVpcConnectorProps {
    *
    * A tag is a key-value pair.
    *
+   *
+   * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+   * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -124,12 +129,20 @@ public interface CfnVpcConnectorProps {
     /**
      * @param tags A list of metadata items that you can associate with your VPC connector resource.
      * A tag is a key-value pair.
+     *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
      * @param tags A list of metadata items that you can associate with your VPC connector resource.
      * A tag is a key-value pair.
+     *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -190,6 +203,10 @@ public interface CfnVpcConnectorProps {
     /**
      * @param tags A list of metadata items that you can associate with your VPC connector resource.
      * A tag is a key-value pair.
+     *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
@@ -198,6 +215,10 @@ public interface CfnVpcConnectorProps {
     /**
      * @param tags A list of metadata items that you can associate with your VPC connector resource.
      * A tag is a key-value pair.
+     *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -246,6 +267,11 @@ public interface CfnVpcConnectorProps {
      * A list of metadata items that you can associate with your VPC connector resource.
      *
      * A tag is a key-value pair.
+     *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
      */

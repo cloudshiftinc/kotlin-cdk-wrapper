@@ -27,6 +27,7 @@ import kotlin.Unit
  * // the properties below are optional
  * .configurationSet("configurationSet")
  * .enabled(false)
+ * .orchestrationSendingRoleArn("orchestrationSendingRoleArn")
  * .roleArn("roleArn")
  * .build();
  * ```
@@ -75,6 +76,11 @@ public interface CfnEmailChannelProps {
   public fun identity(): String
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
+   */
+  public fun orchestrationSendingRoleArn(): String? = unwrap(this).getOrchestrationSendingRoleArn()
+
+  /**
    * The ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to
    * use when it submits email-related event data for the channel.
    *
@@ -121,6 +127,11 @@ public interface CfnEmailChannelProps {
      * Email Service (Amazon SES), that you want to use when you send email through the channel. 
      */
     public fun identity(identity: String)
+
+    /**
+     * @param orchestrationSendingRoleArn the value to be set.
+     */
+    public fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String)
 
     /**
      * @param roleArn The ARN of the AWS Identity and Access Management (IAM) role that you want
@@ -181,6 +192,13 @@ public interface CfnEmailChannelProps {
     }
 
     /**
+     * @param orchestrationSendingRoleArn the value to be set.
+     */
+    override fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String) {
+      cdkBuilder.orchestrationSendingRoleArn(orchestrationSendingRoleArn)
+    }
+
+    /**
      * @param roleArn The ARN of the AWS Identity and Access Management (IAM) role that you want
      * Amazon Pinpoint to use when it submits email-related event data for the channel.
      */
@@ -234,6 +252,12 @@ public interface CfnEmailChannelProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-identity)
      */
     override fun identity(): String = unwrap(this).getIdentity()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
+     */
+    override fun orchestrationSendingRoleArn(): String? =
+        unwrap(this).getOrchestrationSendingRoleArn()
 
     /**
      * The ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to

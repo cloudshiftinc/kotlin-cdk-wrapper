@@ -567,7 +567,7 @@ public open class EmrModifyInstanceGroupByName(
      *
      * Default: - None
      */
-    public fun ec2InstanceIdsToTerminate(): List<String> =
+    public fun eC2InstanceIdsToTerminate(): List<String> =
         unwrap(this).getEC2InstanceIdsToTerminate() ?: emptyList()
 
     /**
@@ -721,7 +721,7 @@ public open class EmrModifyInstanceGroupByName(
        *
        * Default: - None
        */
-      override fun ec2InstanceIdsToTerminate(): List<String> =
+      override fun eC2InstanceIdsToTerminate(): List<String> =
           unwrap(this).getEC2InstanceIdsToTerminate() ?: emptyList()
 
       /**

@@ -101,6 +101,9 @@ public interface CfnDocumentProps {
    * * `aws`
    * * `amazon`
    * * `amzn`
+   * * `AWSEC2`
+   * * `AWSConfigRemediation`
+   * * `AWSSupport`
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-name)
@@ -224,6 +227,9 @@ public interface CfnDocumentProps {
      * * `aws`
      * * `amazon`
      * * `amzn`
+     * * `AWSEC2`
+     * * `AWSConfigRemediation`
+     * * `AWSSupport`
      */
     public fun name(name: String)
 
@@ -371,6 +377,9 @@ public interface CfnDocumentProps {
      * * `aws`
      * * `amazon`
      * * `amzn`
+     * * `AWSEC2`
+     * * `AWSConfigRemediation`
+     * * `AWSSupport`
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -524,6 +533,9 @@ public interface CfnDocumentProps {
      * * `aws`
      * * `amazon`
      * * `amzn`
+     * * `AWSEC2`
+     * * `AWSConfigRemediation`
+     * * `AWSSupport`
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-name)

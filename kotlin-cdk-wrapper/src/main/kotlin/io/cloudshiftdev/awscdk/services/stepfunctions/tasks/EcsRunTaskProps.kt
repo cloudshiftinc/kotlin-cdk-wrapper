@@ -34,27 +34,27 @@ import kotlin.jvm.JvmName
  * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
  * .isDefault(true)
  * .build());
- * Cluster cluster = Cluster.Builder.create(this, "Ec2Cluster").vpc(vpc).build();
- * cluster.addCapacity("DefaultAutoScalingGroup", AddCapacityOptions.builder()
- * .instanceType(new InstanceType("t2.micro"))
- * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
- * .build());
+ * Cluster cluster = Cluster.Builder.create(this, "FargateCluster").vpc(vpc).build();
  * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
- * .compatibility(Compatibility.EC2)
+ * .memoryMiB("512")
+ * .cpu("256")
+ * .compatibility(Compatibility.FARGATE)
  * .build();
- * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * ContainerDefinition containerDefinition = taskDefinition.addContainer("TheContainer",
+ * ContainerDefinitionOptions.builder()
  * .image(ContainerImage.fromRegistry("foo/bar"))
  * .memoryLimitMiB(256)
  * .build());
- * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
+ * EcsRunTask runTask = EcsRunTask.Builder.create(this, "RunFargate")
  * .integrationPattern(IntegrationPattern.RUN_JOB)
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .launchTarget(EcsEc2LaunchTarget.Builder.create()
- * .placementStrategies(List.of(PlacementStrategy.spreadAcrossInstances(),
- * PlacementStrategy.packedByCpu(), PlacementStrategy.randomly()))
- * .placementConstraints(List.of(PlacementConstraint.memberOf("blieptuut")))
- * .build())
+ * .assignPublicIp(true)
+ * .containerOverrides(List.of(ContainerOverride.builder()
+ * .containerDefinition(containerDefinition)
+ * .environment(List.of(TaskEnvironmentVariable.builder().name("SOME_KEY").value(JsonPath.stringAt("$.SomeKey")).build()))
+ * .build()))
+ * .launchTarget(new EcsFargateLaunchTarget())
  * .propagatedTagSource(PropagatedTagSource.TASK_DEFINITION)
  * .build();
  * ```
@@ -83,6 +83,15 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
       unwrap(this).getContainerOverrides()?.map(ContainerOverride::wrap) ?: emptyList()
 
   /**
+   * Whether ECS Exec should be enabled.
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html#ECS-RunTask-request-enableExecuteCommand)
+   */
+  public fun enableExecuteCommand(): Boolean? = unwrap(this).getEnableExecuteCommand()
+
+  /**
    * An Amazon ECS launch type determines the type of infrastructure on which your tasks and
    * services are hosted.
    *
@@ -103,7 +112,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
       unwrap(this).getPropagatedTagSource()?.let(PropagatedTagSource::wrap)
 
   /**
-   * The revision number of ECS task definiton family.
+   * The revision number of ECS task definition family.
    *
    * Default: - '$latest'
    */
@@ -183,6 +192,11 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
     public fun credentials(credentials: Credentials.Builder.() -> Unit)
 
     /**
+     * @param enableExecuteCommand Whether ECS Exec should be enabled.
+     */
+    public fun enableExecuteCommand(enableExecuteCommand: Boolean)
+
+    /**
      * @param heartbeat Timeout for the heartbeat.
      * @deprecated use `heartbeatTimeout`
      */
@@ -250,7 +264,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
     public fun resultSelector(resultSelector: Map<String, Any>)
 
     /**
-     * @param revisionNumber The revision number of ECS task definiton family.
+     * @param revisionNumber The revision number of ECS task definition family.
      */
     public fun revisionNumber(revisionNumber: Number)
 
@@ -367,6 +381,13 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
         credentials(Credentials(credentials))
 
     /**
+     * @param enableExecuteCommand Whether ECS Exec should be enabled.
+     */
+    override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+      cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+    }
+
+    /**
      * @param heartbeat Timeout for the heartbeat.
      * @deprecated use `heartbeatTimeout`
      */
@@ -452,7 +473,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
     }
 
     /**
-     * @param revisionNumber The revision number of ECS task definiton family.
+     * @param revisionNumber The revision number of ECS task definition family.
      */
     override fun revisionNumber(revisionNumber: Number) {
       cdkBuilder.revisionNumber(revisionNumber)
@@ -571,6 +592,15 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
     override fun credentials(): Credentials? = unwrap(this).getCredentials()?.let(Credentials::wrap)
 
     /**
+     * Whether ECS Exec should be enabled.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html#ECS-RunTask-request-enableExecuteCommand)
+     */
+    override fun enableExecuteCommand(): Boolean? = unwrap(this).getEnableExecuteCommand()
+
+    /**
      * (deprecated) Timeout for the heartbeat.
      *
      * Default: - None
@@ -674,7 +704,7 @@ public interface EcsRunTaskProps : TaskStateBaseProps {
     override fun resultSelector(): Map<String, Any> = unwrap(this).getResultSelector() ?: emptyMap()
 
     /**
-     * The revision number of ECS task definiton family.
+     * The revision number of ECS task definition family.
      *
      * Default: - '$latest'
      */

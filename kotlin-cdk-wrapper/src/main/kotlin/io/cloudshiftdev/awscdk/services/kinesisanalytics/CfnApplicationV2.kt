@@ -1089,8 +1089,7 @@ public open class CfnApplicationV2(
         unwrap(this).getFlinkApplicationConfiguration()
 
     /**
-     * The creation and update parameters for a SQL-based Managed Service for Apache Flink
-     * application.
+     * The creation and update parameters for a SQL-based Kinesis Data Analytics application.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-sqlapplicationconfiguration)
      */
@@ -1205,20 +1204,20 @@ public open class CfnApplicationV2(
 
       /**
        * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based
-       * Managed Service for Apache Flink application.
+       * Kinesis Data Analytics application.
        */
       public fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable)
 
       /**
        * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based
-       * Managed Service for Apache Flink application.
+       * Kinesis Data Analytics application.
        */
       public
           fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty)
 
       /**
        * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based
-       * Managed Service for Apache Flink application.
+       * Kinesis Data Analytics application.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c5e8903b11230e80603cfcf6061ea65675f4ba6dca2394b69443e17adbf10f1")
@@ -1384,7 +1383,7 @@ public open class CfnApplicationV2(
 
       /**
        * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based
-       * Managed Service for Apache Flink application.
+       * Kinesis Data Analytics application.
        */
       override fun sqlApplicationConfiguration(sqlApplicationConfiguration: IResolvable) {
         cdkBuilder.sqlApplicationConfiguration(sqlApplicationConfiguration.let(IResolvable::unwrap))
@@ -1392,7 +1391,7 @@ public open class CfnApplicationV2(
 
       /**
        * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based
-       * Managed Service for Apache Flink application.
+       * Kinesis Data Analytics application.
        */
       override
           fun sqlApplicationConfiguration(sqlApplicationConfiguration: SqlApplicationConfigurationProperty) {
@@ -1401,7 +1400,7 @@ public open class CfnApplicationV2(
 
       /**
        * @param sqlApplicationConfiguration The creation and update parameters for a SQL-based
-       * Managed Service for Apache Flink application.
+       * Kinesis Data Analytics application.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("5c5e8903b11230e80603cfcf6061ea65675f4ba6dca2394b69443e17adbf10f1")
@@ -1501,8 +1500,7 @@ public open class CfnApplicationV2(
           unwrap(this).getFlinkApplicationConfiguration()
 
       /**
-       * The creation and update parameters for a SQL-based Managed Service for Apache Flink
-       * application.
+       * The creation and update parameters for a SQL-based Kinesis Data Analytics application.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-applicationconfiguration.html#cfn-kinesisanalyticsv2-application-applicationconfiguration-sqlapplicationconfiguration)
        */
@@ -1859,8 +1857,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
-   * information when the record format uses delimiters, such as CSV.
+   * For a SQL-based Kinesis Data Analytics application, provides additional mapping information
+   * when the record format uses delimiters, such as CSV.
    *
    * For example, the following sample records use CSV format, where the records use the *'\n'* as
    * the row delimiter and a comma (",") as the column delimiter:
@@ -3689,8 +3687,7 @@ public open class CfnApplicationV2(
 
   /**
    * An object that contains the Amazon Resource Name (ARN) of the Amazon Lambda function that is
-   * used to preprocess records in the stream in a SQL-based Managed Service for Apache Flink
-   * application.
+   * used to preprocess records in the stream in a SQL-based Kinesis Data Analytics application.
    *
    * Example:
    *
@@ -3799,8 +3796,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the number of
-   * in-application streams to create for a given streaming source.
+   * For a SQL-based Kinesis Data Analytics application, describes the number of in-application
+   * streams to create for a given streaming source.
    *
    * Example:
    *
@@ -4025,9 +4022,9 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * When you configure the application input for a SQL-based Managed Service for Apache Flink
-   * application, you specify the streaming source, the in-application stream name that is created, and
-   * the mapping between the two.
+   * When you configure the application input for a SQL-based Kinesis Data Analytics application,
+   * you specify the streaming source, the in-application stream name that is created, and the mapping
+   * between the two.
    *
    * Example:
    *
@@ -4130,10 +4127,9 @@ public open class CfnApplicationV2(
     /**
      * The name prefix to use when creating an in-application stream.
      *
-     * Suppose that you specify a prefix " `MyInApplicationStream` ." Managed Service for Apache
-     * Flink then creates one or more (as per the `InputParallelism` count you specified)
-     * in-application streams with the names " `MyInApplicationStream_001` ," "
-     * `MyInApplicationStream_002` ," and so on.
+     * Suppose that you specify a prefix " `MyInApplicationStream` ." Kinesis Data Analytics then
+     * creates one or more (as per the `InputParallelism` count you specified) in-application streams
+     * with the names " `MyInApplicationStream_001` ," " `MyInApplicationStream_002` ," and so on.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html#cfn-kinesisanalyticsv2-application-input-nameprefix)
      */
@@ -4268,10 +4264,9 @@ public open class CfnApplicationV2(
 
       /**
        * @param namePrefix The name prefix to use when creating an in-application stream. 
-       * Suppose that you specify a prefix " `MyInApplicationStream` ." Managed Service for Apache
-       * Flink then creates one or more (as per the `InputParallelism` count you specified)
-       * in-application streams with the names " `MyInApplicationStream_001` ," "
-       * `MyInApplicationStream_002` ," and so on.
+       * Suppose that you specify a prefix " `MyInApplicationStream` ." Kinesis Data Analytics then
+       * creates one or more (as per the `InputParallelism` count you specified) in-application streams
+       * with the names " `MyInApplicationStream_001` ," " `MyInApplicationStream_002` ," and so on.
        */
       public fun namePrefix(namePrefix: String)
     }
@@ -4431,10 +4426,9 @@ public open class CfnApplicationV2(
 
       /**
        * @param namePrefix The name prefix to use when creating an in-application stream. 
-       * Suppose that you specify a prefix " `MyInApplicationStream` ." Managed Service for Apache
-       * Flink then creates one or more (as per the `InputParallelism` count you specified)
-       * in-application streams with the names " `MyInApplicationStream_001` ," "
-       * `MyInApplicationStream_002` ," and so on.
+       * Suppose that you specify a prefix " `MyInApplicationStream` ." Kinesis Data Analytics then
+       * creates one or more (as per the `InputParallelism` count you specified) in-application streams
+       * with the names " `MyInApplicationStream_001` ," " `MyInApplicationStream_002` ," and so on.
        */
       override fun namePrefix(namePrefix: String) {
         cdkBuilder.namePrefix(namePrefix)
@@ -4498,10 +4492,9 @@ public open class CfnApplicationV2(
       /**
        * The name prefix to use when creating an in-application stream.
        *
-       * Suppose that you specify a prefix " `MyInApplicationStream` ." Managed Service for Apache
-       * Flink then creates one or more (as per the `InputParallelism` count you specified)
-       * in-application streams with the names " `MyInApplicationStream_001` ," "
-       * `MyInApplicationStream_002` ," and so on.
+       * Suppose that you specify a prefix " `MyInApplicationStream` ." Kinesis Data Analytics then
+       * creates one or more (as per the `InputParallelism` count you specified) in-application streams
+       * with the names " `MyInApplicationStream_001` ," " `MyInApplicationStream_002` ," and so on.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalyticsv2-application-input.html#cfn-kinesisanalyticsv2-application-input-nameprefix)
        */
@@ -4526,8 +4519,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the format of the data
-   * in the streaming source, and how each data element maps to corresponding columns created in the
+   * For a SQL-based Kinesis Data Analytics application, describes the format of the data in the
+   * streaming source, and how each data element maps to corresponding columns created in the
    * in-application stream.
    *
    * Example:
@@ -4738,8 +4731,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, provides additional mapping
-   * information when JSON is the record format on the streaming source.
+   * For a SQL-based Kinesis Data Analytics application, provides additional mapping information
+   * when JSON is the record format on the streaming source.
    *
    * Example:
    *
@@ -4822,8 +4815,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, identifies a Kinesis Data
-   * Firehose delivery stream as the streaming source.
+   * For a SQL-based Kinesis Data Analytics application, identifies a Kinesis Data Firehose delivery
+   * stream as the streaming source.
    *
    * You provide the delivery stream's Amazon Resource Name (ARN).
    *
@@ -4992,8 +4985,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * When you configure a SQL-based Managed Service for Apache Flink application's input at the time
-   * of creating or updating an application, provides additional mapping information specific to the
+   * When you configure a SQL-based Kinesis Data Analytics application's input at the time of
+   * creating or updating an application, provides additional mapping information specific to the
    * record format (such as JSON, CSV, or record fields delimited by some delimiter) on the streaming
    * source.
    *
@@ -5847,8 +5840,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the mapping of each
-   * data element in the streaming source to the corresponding column in the in-application stream.
+   * For a SQL-based Kinesis Data Analytics application, describes the mapping of each data element
+   * in the streaming source to the corresponding column in the in-application stream.
    *
    * Also used to describe the format of the reference data source.
    *
@@ -5994,8 +5987,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the record format and
-   * relevant mapping information that should be applied to schematize the records on the stream.
+   * For a SQL-based Kinesis Data Analytics application, describes the record format and relevant
+   * mapping information that should be applied to schematize the records on the stream.
    *
    * Example:
    *
@@ -6597,8 +6590,8 @@ public open class CfnApplicationV2(
   }
 
   /**
-   * Describes the inputs, outputs, and reference data sources for a SQL-based Managed Service for
-   * Apache Flink application.
+   * Describes the inputs, outputs, and reference data sources for a SQL-based Kinesis Data
+   * Analytics application.
    *
    * Example:
    *

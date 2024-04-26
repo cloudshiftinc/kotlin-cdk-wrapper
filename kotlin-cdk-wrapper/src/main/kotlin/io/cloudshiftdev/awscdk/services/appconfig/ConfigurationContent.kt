@@ -12,11 +12,14 @@ import kotlin.String
  * Example:
  *
  * ```
- * Application application;
- * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
- * .application(application)
+ * Application app = new Application(this, "MyApp");
+ * Environment env = Environment.Builder.create(this, "MyEnv")
+ * .application(app)
+ * .build();
+ * HostedConfiguration.Builder.create(this, "MyHostedConfig")
+ * .application(app)
+ * .deployTo(List.of(env))
  * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
- * .type(ConfigurationType.FEATURE_FLAGS)
  * .build();
  * ```
  */

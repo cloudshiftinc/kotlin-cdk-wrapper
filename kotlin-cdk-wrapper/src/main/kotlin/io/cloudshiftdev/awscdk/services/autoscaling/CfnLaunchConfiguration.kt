@@ -442,9 +442,9 @@ public open class CfnLaunchConfiguration(
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -464,9 +464,9 @@ public open class CfnLaunchConfiguration(
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -554,8 +554,8 @@ public open class CfnLaunchConfiguration(
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      *
@@ -573,8 +573,8 @@ public open class CfnLaunchConfiguration(
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      *
@@ -602,7 +602,7 @@ public open class CfnLaunchConfiguration(
     /**
      * The ID of the Amazon Machine Image (AMI) that was assigned during registration.
      *
-     * For more information, see [Finding a Linux
+     * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
      * User Guide for Linux Instances* .
      *
@@ -636,8 +636,8 @@ public open class CfnLaunchConfiguration(
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      *
@@ -656,8 +656,8 @@ public open class CfnLaunchConfiguration(
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      *
@@ -699,7 +699,7 @@ public open class CfnLaunchConfiguration(
     /**
      * The name of the key pair.
      *
-     * For more information, see [Amazon EC2 key pairs and Linux
+     * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
      * *Amazon EC2 User Guide for Linux Instances* .
      *
@@ -721,8 +721,8 @@ public open class CfnLaunchConfiguration(
     /**
      * The metadata options for the instances.
      *
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -733,8 +733,8 @@ public open class CfnLaunchConfiguration(
     /**
      * The metadata options for the instances.
      *
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -745,8 +745,8 @@ public open class CfnLaunchConfiguration(
     /**
      * The metadata options for the instances.
      *
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -762,9 +762,7 @@ public open class CfnLaunchConfiguration(
      * An instance with `dedicated` tenancy runs on isolated, single-tenant hardware and can only be
      * launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the
      * instance placement tenancy attribute set to `default` ), you must set the value of this property
-     * to `dedicated` . For more information, see [Configuring instance tenancy with Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
+     * to `dedicated` .
      *
      * If you specify `PlacementTenancy` , you must specify at least one subnet for
      * `VPCZoneIdentifier` when you create your group.
@@ -880,9 +878,9 @@ public open class CfnLaunchConfiguration(
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -904,9 +902,9 @@ public open class CfnLaunchConfiguration(
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -1006,8 +1004,8 @@ public open class CfnLaunchConfiguration(
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      *
@@ -1027,8 +1025,8 @@ public open class CfnLaunchConfiguration(
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      *
@@ -1060,7 +1058,7 @@ public open class CfnLaunchConfiguration(
     /**
      * The ID of the Amazon Machine Image (AMI) that was assigned during registration.
      *
-     * For more information, see [Finding a Linux
+     * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
      * User Guide for Linux Instances* .
      *
@@ -1098,8 +1096,8 @@ public open class CfnLaunchConfiguration(
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      *
@@ -1120,8 +1118,8 @@ public open class CfnLaunchConfiguration(
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      *
@@ -1169,7 +1167,7 @@ public open class CfnLaunchConfiguration(
     /**
      * The name of the key pair.
      *
-     * For more information, see [Amazon EC2 key pairs and Linux
+     * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
      * *Amazon EC2 User Guide for Linux Instances* .
      *
@@ -1195,8 +1193,8 @@ public open class CfnLaunchConfiguration(
     /**
      * The metadata options for the instances.
      *
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -1209,8 +1207,8 @@ public open class CfnLaunchConfiguration(
     /**
      * The metadata options for the instances.
      *
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -1223,8 +1221,8 @@ public open class CfnLaunchConfiguration(
     /**
      * The metadata options for the instances.
      *
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -1241,9 +1239,7 @@ public open class CfnLaunchConfiguration(
      * An instance with `dedicated` tenancy runs on isolated, single-tenant hardware and can only be
      * launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the
      * instance placement tenancy attribute set to `default` ), you must set the value of this property
-     * to `dedicated` . For more information, see [Configuring instance tenancy with Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
+     * to `dedicated` .
      *
      * If you specify `PlacementTenancy` , you must specify at least one subnet for
      * `VPCZoneIdentifier` when you create your group.
@@ -1704,9 +1700,10 @@ public open class CfnLaunchConfiguration(
      * Specifies whether the volume should be encrypted.
      *
      * Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption.
-     * For more information, see [Supported instance
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-     * . If your AMI uses encrypted volumes, you can also only launch it on supported instance types.
+     * For more information, see [Requirements for Amazon EBS
+     * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html)
+     * in the *Amazon EBS User Guide* . If your AMI uses encrypted volumes, you can also only launch it
+     * on supported instance types.
      *
      *
      * If you are creating a volume from a snapshot, you cannot create an unencrypted volume from an
@@ -1781,11 +1778,9 @@ public open class CfnLaunchConfiguration(
     public fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
     /**
-     * The volume type.
-     *
-     * For more information, see [Amazon EBS volume
-     * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * The volume type. For more information, see [Amazon EBS volume
+     * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+     * EBS User Guide* .
      *
      * Valid values: `standard` | `io1` | `gp2` | `st1` | `sc1` | `gp3`
      *
@@ -1813,9 +1808,10 @@ public open class CfnLaunchConfiguration(
       /**
        * @param encrypted Specifies whether the volume should be encrypted.
        * Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption.
-       * For more information, see [Supported instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * . If your AMI uses encrypted volumes, you can also only launch it on supported instance types.
+       * For more information, see [Requirements for Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html)
+       * in the *Amazon EBS User Guide* . If your AMI uses encrypted volumes, you can also only launch
+       * it on supported instance types.
        *
        *
        * If you are creating a volume from a snapshot, you cannot create an unencrypted volume from
@@ -1835,9 +1831,10 @@ public open class CfnLaunchConfiguration(
       /**
        * @param encrypted Specifies whether the volume should be encrypted.
        * Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption.
-       * For more information, see [Supported instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * . If your AMI uses encrypted volumes, you can also only launch it on supported instance types.
+       * For more information, see [Requirements for Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html)
+       * in the *Amazon EBS User Guide* . If your AMI uses encrypted volumes, you can also only launch
+       * it on supported instance types.
        *
        *
        * If you are creating a volume from a snapshot, you cannot create an unencrypted volume from
@@ -1900,11 +1897,9 @@ public open class CfnLaunchConfiguration(
       public fun volumeSize(volumeSize: Number)
 
       /**
-       * @param volumeType The volume type.
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       *
+       * @param volumeType The volume type. For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
        * Valid values: `standard` | `io1` | `gp2` | `st1` | `sc1` | `gp3`
        */
       public fun volumeType(volumeType: String)
@@ -1935,9 +1930,10 @@ public open class CfnLaunchConfiguration(
       /**
        * @param encrypted Specifies whether the volume should be encrypted.
        * Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption.
-       * For more information, see [Supported instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * . If your AMI uses encrypted volumes, you can also only launch it on supported instance types.
+       * For more information, see [Requirements for Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html)
+       * in the *Amazon EBS User Guide* . If your AMI uses encrypted volumes, you can also only launch
+       * it on supported instance types.
        *
        *
        * If you are creating a volume from a snapshot, you cannot create an unencrypted volume from
@@ -1959,9 +1955,10 @@ public open class CfnLaunchConfiguration(
       /**
        * @param encrypted Specifies whether the volume should be encrypted.
        * Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption.
-       * For more information, see [Supported instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * . If your AMI uses encrypted volumes, you can also only launch it on supported instance types.
+       * For more information, see [Requirements for Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html)
+       * in the *Amazon EBS User Guide* . If your AMI uses encrypted volumes, you can also only launch
+       * it on supported instance types.
        *
        *
        * If you are creating a volume from a snapshot, you cannot create an unencrypted volume from
@@ -2034,11 +2031,9 @@ public open class CfnLaunchConfiguration(
       }
 
       /**
-       * @param volumeType The volume type.
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
-       *
+       * @param volumeType The volume type. For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
        * Valid values: `standard` | `io1` | `gp2` | `st1` | `sc1` | `gp3`
        */
       override fun volumeType(volumeType: String) {
@@ -2066,9 +2061,10 @@ public open class CfnLaunchConfiguration(
        * Specifies whether the volume should be encrypted.
        *
        * Encrypted EBS volumes can only be attached to instances that support Amazon EBS encryption.
-       * For more information, see [Supported instance
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html#EBSEncryption_supported_instances)
-       * . If your AMI uses encrypted volumes, you can also only launch it on supported instance types.
+       * For more information, see [Requirements for Amazon EBS
+       * encryption](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-encryption-requirements.html)
+       * in the *Amazon EBS User Guide* . If your AMI uses encrypted volumes, you can also only launch
+       * it on supported instance types.
        *
        *
        * If you are creating a volume from a snapshot, you cannot create an unencrypted volume from
@@ -2144,11 +2140,9 @@ public open class CfnLaunchConfiguration(
       override fun volumeSize(): Number? = unwrap(this).getVolumeSize()
 
       /**
-       * The volume type.
-       *
-       * For more information, see [Amazon EBS volume
-       * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSVolumeTypes.html) in the *Amazon
-       * EC2 User Guide for Linux Instances* .
+       * The volume type. For more information, see [Amazon EBS volume
+       * types](https://docs.aws.amazon.com/ebs/latest/userguide/ebs-volume-types.html) in the *Amazon
+       * EBS User Guide* .
        *
        * Valid values: `standard` | `io1` | `gp2` | `st1` | `sc1` | `gp3`
        *

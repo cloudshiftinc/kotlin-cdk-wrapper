@@ -871,7 +871,7 @@ public open class CfnWirelessDevice(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-abpv10x)
      */
-    public fun abpV10x(): Any? = unwrap(this).getAbpV10X()
+    public fun abpV10X(): Any? = unwrap(this).getAbpV10X()
 
     /**
      * ABP device object for create APIs for v1.1.
@@ -899,7 +899,7 @@ public open class CfnWirelessDevice(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-otaav10x)
      */
-    public fun otaaV10x(): Any? = unwrap(this).getOtaaV10X()
+    public fun otaaV10X(): Any? = unwrap(this).getOtaaV10X()
 
     /**
      * OTAA device object for v1.1 for create APIs.
@@ -923,19 +923,19 @@ public open class CfnWirelessDevice(
       /**
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
-      public fun abpV10x(abpV10X: IResolvable)
+      public fun abpV10X(abpV10X: IResolvable)
 
       /**
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
-      public fun abpV10x(abpV10X: AbpV10xProperty)
+      public fun abpV10X(abpV10X: AbpV10xProperty)
 
       /**
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5178e3a9b15e101d25e20d372730d352b8850925bb7d52c981ab283bfd41e05e")
-      public fun abpV10x(abpV10X: AbpV10xProperty.Builder.() -> Unit)
+      @JvmName("31d1329837a555378d17b475b6f0606f5d664a3ef01d19be5802e27f31e13397")
+      public fun abpV10X(abpV10X: AbpV10xProperty.Builder.() -> Unit)
 
       /**
        * @param abpV11 ABP device object for create APIs for v1.1.
@@ -967,19 +967,19 @@ public open class CfnWirelessDevice(
       /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
-      public fun otaaV10x(otaaV10X: IResolvable)
+      public fun otaaV10X(otaaV10X: IResolvable)
 
       /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
-      public fun otaaV10x(otaaV10X: OtaaV10xProperty)
+      public fun otaaV10X(otaaV10X: OtaaV10xProperty)
 
       /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("42f54ce128eedb8686fb22d1877fea1d6a762394c25c672f14833e1d980f3285")
-      public fun otaaV10x(otaaV10X: OtaaV10xProperty.Builder.() -> Unit)
+      @JvmName("9d835de486fdf1d3d0d58e6b6132d02e3068d8b032a7d23364924d046784030d")
+      public fun otaaV10X(otaaV10X: OtaaV10xProperty.Builder.() -> Unit)
 
       /**
        * @param otaaV11 OTAA device object for v1.1 for create APIs.
@@ -1013,14 +1013,14 @@ public open class CfnWirelessDevice(
       /**
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
-      override fun abpV10x(abpV10X: IResolvable) {
+      override fun abpV10X(abpV10X: IResolvable) {
         cdkBuilder.abpV10X(abpV10X.let(IResolvable::unwrap))
       }
 
       /**
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
-      override fun abpV10x(abpV10X: AbpV10xProperty) {
+      override fun abpV10X(abpV10X: AbpV10xProperty) {
         cdkBuilder.abpV10X(abpV10X.let(AbpV10xProperty::unwrap))
       }
 
@@ -1028,9 +1028,9 @@ public open class CfnWirelessDevice(
        * @param abpV10X ABP device object for LoRaWAN specification v1.0.x.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("5178e3a9b15e101d25e20d372730d352b8850925bb7d52c981ab283bfd41e05e")
-      override fun abpV10x(abpV10X: AbpV10xProperty.Builder.() -> Unit): Unit =
-          abpV10x(AbpV10xProperty(abpV10X))
+      @JvmName("31d1329837a555378d17b475b6f0606f5d664a3ef01d19be5802e27f31e13397")
+      override fun abpV10X(abpV10X: AbpV10xProperty.Builder.() -> Unit): Unit =
+          abpV10X(AbpV10xProperty(abpV10X))
 
       /**
        * @param abpV11 ABP device object for create APIs for v1.1.
@@ -1071,14 +1071,14 @@ public open class CfnWirelessDevice(
       /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
-      override fun otaaV10x(otaaV10X: IResolvable) {
+      override fun otaaV10X(otaaV10X: IResolvable) {
         cdkBuilder.otaaV10X(otaaV10X.let(IResolvable::unwrap))
       }
 
       /**
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
-      override fun otaaV10x(otaaV10X: OtaaV10xProperty) {
+      override fun otaaV10X(otaaV10X: OtaaV10xProperty) {
         cdkBuilder.otaaV10X(otaaV10X.let(OtaaV10xProperty::unwrap))
       }
 
@@ -1086,9 +1086,9 @@ public open class CfnWirelessDevice(
        * @param otaaV10X OTAA device object for create APIs for v1.0.x.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("42f54ce128eedb8686fb22d1877fea1d6a762394c25c672f14833e1d980f3285")
-      override fun otaaV10x(otaaV10X: OtaaV10xProperty.Builder.() -> Unit): Unit =
-          otaaV10x(OtaaV10xProperty(otaaV10X))
+      @JvmName("9d835de486fdf1d3d0d58e6b6132d02e3068d8b032a7d23364924d046784030d")
+      override fun otaaV10X(otaaV10X: OtaaV10xProperty.Builder.() -> Unit): Unit =
+          otaaV10X(OtaaV10xProperty(otaaV10X))
 
       /**
        * @param otaaV11 OTAA device object for v1.1 for create APIs.
@@ -1132,7 +1132,7 @@ public open class CfnWirelessDevice(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-abpv10x)
        */
-      override fun abpV10x(): Any? = unwrap(this).getAbpV10X()
+      override fun abpV10X(): Any? = unwrap(this).getAbpV10X()
 
       /**
        * ABP device object for create APIs for v1.1.
@@ -1160,7 +1160,7 @@ public open class CfnWirelessDevice(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdevice-lorawandevice.html#cfn-iotwireless-wirelessdevice-lorawandevice-otaav10x)
        */
-      override fun otaaV10x(): Any? = unwrap(this).getOtaaV10X()
+      override fun otaaV10X(): Any? = unwrap(this).getOtaaV10X()
 
       /**
        * OTAA device object for v1.1 for create APIs.

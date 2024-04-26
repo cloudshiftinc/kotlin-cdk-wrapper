@@ -122,13 +122,13 @@ public open class CfnBackupVault(
   }
 
   /**
-   * Metadata that you can assign to help organize the resources that you create.
+   * The tags to assign to the backup vault.
    */
   public open fun backupVaultTags(): Map<String, String> = unwrap(this).getBackupVaultTags() ?:
       emptyMap()
 
   /**
-   * Metadata that you can assign to help organize the resources that you create.
+   * The tags to assign to the backup vault.
    */
   public open fun backupVaultTags(`value`: Map<String, String>) {
     unwrap(this).setBackupVaultTags(`value`)
@@ -247,13 +247,10 @@ public open class CfnBackupVault(
     public fun backupVaultName(backupVaultName: String)
 
     /**
-     * Metadata that you can assign to help organize the resources that you create.
-     *
-     * Each tag is a key-value pair.
+     * The tags to assign to the backup vault.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags)
-     * @param backupVaultTags Metadata that you can assign to help organize the resources that you
-     * create. 
+     * @param backupVaultTags The tags to assign to the backup vault. 
      */
     public fun backupVaultTags(backupVaultTags: Map<String, String>)
 
@@ -368,13 +365,10 @@ public open class CfnBackupVault(
     }
 
     /**
-     * Metadata that you can assign to help organize the resources that you create.
-     *
-     * Each tag is a key-value pair.
+     * The tags to assign to the backup vault.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags)
-     * @param backupVaultTags Metadata that you can assign to help organize the resources that you
-     * create. 
+     * @param backupVaultTags The tags to assign to the backup vault. 
      */
     override fun backupVaultTags(backupVaultTags: Map<String, String>) {
       cdkBuilder.backupVaultTags(backupVaultTags)

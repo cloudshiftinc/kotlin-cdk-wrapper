@@ -3481,7 +3481,7 @@ public open class CfnRuleGroup(
        * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
        * .
        */
-      public fun tings(settings: List<String>)
+      public fun settings(settings: List<String>)
 
       /**
        * @param settings The Suricata rule option settings.
@@ -3491,7 +3491,7 @@ public open class CfnRuleGroup(
        * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
        * .
        */
-      public fun tings(vararg settings: String)
+      public fun settings(vararg settings: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3519,7 +3519,7 @@ public open class CfnRuleGroup(
        * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
        * .
        */
-      override fun tings(settings: List<String>) {
+      override fun settings(settings: List<String>) {
         cdkBuilder.settings(settings)
       }
 
@@ -3531,7 +3531,7 @@ public open class CfnRuleGroup(
        * options](https://docs.aws.amazon.com/https://suricata.readthedocs.io/en/suricata-6.0.9/rules/intro.html#rule-options)
        * .
        */
-      override fun tings(vararg settings: String): Unit = tings(settings.toList())
+      override fun settings(vararg settings: String): Unit = settings(settings.toList())
 
       public fun build():
           software.amazon.awscdk.services.networkfirewall.CfnRuleGroup.RuleOptionProperty =

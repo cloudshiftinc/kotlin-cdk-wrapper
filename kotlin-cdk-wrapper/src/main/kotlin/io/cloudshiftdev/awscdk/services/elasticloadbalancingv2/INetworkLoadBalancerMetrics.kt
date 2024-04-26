@@ -62,7 +62,7 @@ public interface INetworkLoadBalancerMetrics {
    *
    * @param props
    */
-  public fun consumedLcUs(): Metric
+  public fun consumedLCUs(): Metric
 
   /**
    * The number of load balancer capacity units (LCU) used by your load balancer.
@@ -71,7 +71,7 @@ public interface INetworkLoadBalancerMetrics {
    *
    * @param props
    */
-  public fun consumedLcUs(props: MetricOptions): Metric
+  public fun consumedLCUs(props: MetricOptions): Metric
 
   /**
    * The number of load balancer capacity units (LCU) used by your load balancer.
@@ -81,8 +81,8 @@ public interface INetworkLoadBalancerMetrics {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("18e8e39bc441acca7c83d0b93ee82feb5719d75ccb2df798d695dbe35e061cf0")
-  public fun consumedLcUs(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("0a8818b706c379823814d623a4c84e8808252fc6cfff988c82b9c21805c7cc02")
+  public fun consumedLCUs(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Return the given named metric for this Network Load Balancer.
@@ -329,7 +329,7 @@ public interface INetworkLoadBalancerMetrics {
      *
      * @param props
      */
-    override fun consumedLcUs(): Metric = unwrap(this).consumedLCUs().let(Metric::wrap)
+    override fun consumedLCUs(): Metric = unwrap(this).consumedLCUs().let(Metric::wrap)
 
     /**
      * The number of load balancer capacity units (LCU) used by your load balancer.
@@ -338,7 +338,7 @@ public interface INetworkLoadBalancerMetrics {
      *
      * @param props
      */
-    override fun consumedLcUs(props: MetricOptions): Metric =
+    override fun consumedLCUs(props: MetricOptions): Metric =
         unwrap(this).consumedLCUs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -349,9 +349,9 @@ public interface INetworkLoadBalancerMetrics {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("18e8e39bc441acca7c83d0b93ee82feb5719d75ccb2df798d695dbe35e061cf0")
-    override fun consumedLcUs(props: MetricOptions.Builder.() -> Unit): Metric =
-        consumedLcUs(MetricOptions(props))
+    @JvmName("0a8818b706c379823814d623a4c84e8808252fc6cfff988c82b9c21805c7cc02")
+    override fun consumedLCUs(props: MetricOptions.Builder.() -> Unit): Metric =
+        consumedLCUs(MetricOptions(props))
 
     /**
      * Return the given named metric for this Network Load Balancer.

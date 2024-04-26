@@ -1109,6 +1109,11 @@ public open class CfnService(
      * [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html)
      * API action.
      *
+     * You must set this to a value other than `NONE` when you use Cost Explorer. For more
+     * information, see [Amazon ECS usage
+     * reports](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
+     *
      * The default is `NONE` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-propagatetags)
@@ -1870,6 +1875,11 @@ public open class CfnService(
      * during task creation. To add tags to a task after task creation, use the
      * [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html)
      * API action.
+     *
+     * You must set this to a value other than `NONE` when you use Cost Explorer. For more
+     * information, see [Amazon ECS usage
+     * reports](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
      *
      * The default is `NONE` .
      *
@@ -3170,6 +3180,13 @@ public open class CfnService(
      * check to return a healthy status before counting the task towards the minimum healthy percent
      * total.
      *
+     * The default value for a replica service for `minimumHealthyPercent` is 100%. The default
+     * `minimumHealthyPercent` value for a service using the `DAEMON` service schedule is 0% for the
+     * AWS CLI , the AWS SDKs, and the APIs and 50% for the AWS Management Console.
+     *
+     * The minimum number of healthy tasks during a deployment is the `desiredCount` multiplied by
+     * the `minimumHealthyPercent` /100, rounded up to the nearest integer value.
+     *
      * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment types
      * and is running tasks that use the EC2 launch type, the *minimum healthy percent* value is set to
      * the default value and is used to define the lower limit on the number of the tasks in the
@@ -3299,6 +3316,13 @@ public open class CfnService(
        * will wait for both the task to reach a healthy status and the load balancer target group
        * health check to return a healthy status before counting the task towards the minimum healthy
        * percent total.
+       *
+       * The default value for a replica service for `minimumHealthyPercent` is 100%. The default
+       * `minimumHealthyPercent` value for a service using the `DAEMON` service schedule is 0% for the
+       * AWS CLI , the AWS SDKs, and the APIs and 50% for the AWS Management Console.
+       *
+       * The minimum number of healthy tasks during a deployment is the `desiredCount` multiplied by
+       * the `minimumHealthyPercent` /100, rounded up to the nearest integer value.
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
@@ -3442,6 +3466,13 @@ public open class CfnService(
        * health check to return a healthy status before counting the task towards the minimum healthy
        * percent total.
        *
+       * The default value for a replica service for `minimumHealthyPercent` is 100%. The default
+       * `minimumHealthyPercent` value for a service using the `DAEMON` service schedule is 0% for the
+       * AWS CLI , the AWS SDKs, and the APIs and 50% for the AWS Management Console.
+       *
+       * The minimum number of healthy tasks during a deployment is the `desiredCount` multiplied by
+       * the `minimumHealthyPercent` /100, rounded up to the nearest integer value.
+       *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value
        * is set to the default value and is used to define the lower limit on the number of the tasks
@@ -3541,6 +3572,13 @@ public open class CfnService(
        * will wait for both the task to reach a healthy status and the load balancer target group
        * health check to return a healthy status before counting the task towards the minimum healthy
        * percent total.
+       *
+       * The default value for a replica service for `minimumHealthyPercent` is 100%. The default
+       * `minimumHealthyPercent` value for a service using the `DAEMON` service schedule is 0% for the
+       * AWS CLI , the AWS SDKs, and the APIs and 50% for the AWS Management Console.
+       *
+       * The minimum number of healthy tasks during a deployment is the `desiredCount` multiplied by
+       * the `minimumHealthyPercent` /100, rounded up to the nearest integer value.
        *
        * If a service is using either the blue/green ( `CODE_DEPLOY` ) or `EXTERNAL` deployment
        * types and is running tasks that use the EC2 launch type, the *minimum healthy percent* value

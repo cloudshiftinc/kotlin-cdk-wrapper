@@ -12,6 +12,7 @@ import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import io.cloudshiftdev.awscdk.services.logs.RetentionDays
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -82,6 +83,16 @@ public open class Provider(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Whether logging for the waiter state machine is disabled.
+     *
+     * Default: - false
+     *
+     * @param disableWaiterStateMachineLogging Whether logging for the waiter state machine is
+     * disabled. 
+     */
+    public fun disableWaiterStateMachineLogging(disableWaiterStateMachineLogging: Boolean)
+
     /**
      * The AWS Lambda function to invoke in order to determine if the operation is complete.
      *
@@ -261,6 +272,33 @@ public open class Provider(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("84e3de72b4de6337b5fc519d0175efa34e4a5db977bc917b683cf8312d37469b")
     public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
+
+    /**
+     * Defines what execution history events of the waiter state machine are logged and where they
+     * are logged.
+     *
+     * Default: - A default log group will be created if logging for the waiter state machine is
+     * enabled.
+     *
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged. 
+     */
+    public fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions)
+
+    /**
+     * Defines what execution history events of the waiter state machine are logged and where they
+     * are logged.
+     *
+     * Default: - A default log group will be created if logging for the waiter state machine is
+     * enabled.
+     *
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("953a43d36d80dd45db754ab839ff44c20c9ebd575cf1cfa79cacc578031332e4")
+    public
+        fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -269,6 +307,18 @@ public open class Provider(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.customresources.Provider.Builder =
         software.amazon.awscdk.customresources.Provider.Builder.create(scope, id)
+
+    /**
+     * Whether logging for the waiter state machine is disabled.
+     *
+     * Default: - false
+     *
+     * @param disableWaiterStateMachineLogging Whether logging for the waiter state machine is
+     * disabled. 
+     */
+    override fun disableWaiterStateMachineLogging(disableWaiterStateMachineLogging: Boolean) {
+      cdkBuilder.disableWaiterStateMachineLogging(disableWaiterStateMachineLogging)
+    }
 
     /**
      * The AWS Lambda function to invoke in order to determine if the operation is complete.
@@ -475,6 +525,36 @@ public open class Provider(
     @JvmName("84e3de72b4de6337b5fc519d0175efa34e4a5db977bc917b683cf8312d37469b")
     override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
+
+    /**
+     * Defines what execution history events of the waiter state machine are logged and where they
+     * are logged.
+     *
+     * Default: - A default log group will be created if logging for the waiter state machine is
+     * enabled.
+     *
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged. 
+     */
+    override fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions) {
+      cdkBuilder.waiterStateMachineLogOptions(waiterStateMachineLogOptions.let(LogOptions::unwrap))
+    }
+
+    /**
+     * Defines what execution history events of the waiter state machine are logged and where they
+     * are logged.
+     *
+     * Default: - A default log group will be created if logging for the waiter state machine is
+     * enabled.
+     *
+     * @param waiterStateMachineLogOptions Defines what execution history events of the waiter state
+     * machine are logged and where they are logged. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("953a43d36d80dd45db754ab839ff44c20c9ebd575cf1cfa79cacc578031332e4")
+    override
+        fun waiterStateMachineLogOptions(waiterStateMachineLogOptions: LogOptions.Builder.() -> Unit):
+        Unit = waiterStateMachineLogOptions(LogOptions(waiterStateMachineLogOptions))
 
     public fun build(): software.amazon.awscdk.customresources.Provider = cdkBuilder.build()
   }

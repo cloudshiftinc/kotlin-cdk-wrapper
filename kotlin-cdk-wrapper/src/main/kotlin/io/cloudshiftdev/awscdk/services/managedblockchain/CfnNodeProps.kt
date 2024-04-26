@@ -49,7 +49,6 @@ public interface CfnNodeProps {
    * Ethereum public networks have the following `NetworkId` s:
    *
    * * `n-ethereum-mainnet`
-   * * `n-ethereum-goerli`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-networkid)
    */
@@ -78,7 +77,6 @@ public interface CfnNodeProps {
      * Ethereum public networks have the following `NetworkId` s:
      *
      * * `n-ethereum-mainnet`
-     * * `n-ethereum-goerli`
      */
     public fun networkId(networkId: String)
 
@@ -118,7 +116,6 @@ public interface CfnNodeProps {
      * Ethereum public networks have the following `NetworkId` s:
      *
      * * `n-ethereum-mainnet`
-     * * `n-ethereum-goerli`
      */
     override fun networkId(networkId: String) {
       cdkBuilder.networkId(networkId)
@@ -169,7 +166,6 @@ public interface CfnNodeProps {
      * Ethereum public networks have the following `NetworkId` s:
      *
      * * `n-ethereum-mainnet`
-     * * `n-ethereum-goerli`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-networkid)
      */

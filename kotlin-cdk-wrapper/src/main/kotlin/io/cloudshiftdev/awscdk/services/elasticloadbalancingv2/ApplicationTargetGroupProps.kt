@@ -20,19 +20,15 @@ import kotlin.jvm.JvmName
  *
  * ```
  * Vpc vpc;
- * // Target group with duration-based stickiness with load-balancer generated cookie
- * ApplicationTargetGroup tg1 = ApplicationTargetGroup.Builder.create(this, "TG1")
- * .targetType(TargetType.INSTANCE)
- * .port(80)
- * .stickinessCookieDuration(Duration.minutes(5))
- * .vpc(vpc)
- * .build();
- * // Target group with application-based stickiness
- * ApplicationTargetGroup tg2 = ApplicationTargetGroup.Builder.create(this, "TG2")
- * .targetType(TargetType.INSTANCE)
- * .port(80)
- * .stickinessCookieDuration(Duration.minutes(5))
- * .stickinessCookieName("MyDeliciousCookie")
+ * ApplicationTargetGroup tg = ApplicationTargetGroup.Builder.create(this, "TG")
+ * .targetType(TargetType.IP)
+ * .port(50051)
+ * .protocol(ApplicationProtocol.HTTP)
+ * .protocolVersion(ApplicationProtocolVersion.GRPC)
+ * .healthCheck(HealthCheck.builder()
+ * .enabled(true)
+ * .healthyGrpcCodes("0-99")
+ * .build())
  * .vpc(vpc)
  * .build();
  * ```
@@ -91,7 +87,7 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
    * After this period, the cookie is considered stale. The minimum value is
    * 1 second and the maximum value is 7 days (604800 seconds).
    *
-   * Default: Duration.days(1)
+   * Default: - Stickiness is disabled
    */
   public fun stickinessCookieDuration(): Duration? =
       unwrap(this).getStickinessCookieDuration()?.let(Duration::wrap)
@@ -461,7 +457,7 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
      * After this period, the cookie is considered stale. The minimum value is
      * 1 second and the maximum value is 7 days (604800 seconds).
      *
-     * Default: Duration.days(1)
+     * Default: - Stickiness is disabled
      */
     override fun stickinessCookieDuration(): Duration? =
         unwrap(this).getStickinessCookieDuration()?.let(Duration::wrap)

@@ -29,14 +29,18 @@ import kotlin.jvm.JvmName
  * // The VPC to place the cluster in
  * Vpc vpc = new Vpc(this, "AuroraVpc");
  * // Create the serverless cluster, provide all values needed to customise the database.
- * ServerlessCluster cluster = ServerlessCluster.Builder.create(this, "AuroraCluster")
- * .engine(DatabaseClusterEngine.AURORA_MYSQL)
- * .vpc(vpc)
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "AuroraClusterV2")
+ * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_5).build()))
  * .credentials(Map.of("username", "clusteradmin"))
  * .clusterIdentifier("db-endpoint-test")
+ * .writer(ClusterInstance.serverlessV2("writer"))
+ * .serverlessV2MinCapacity(2)
+ * .serverlessV2MaxCapacity(10)
+ * .vpc(vpc)
  * .defaultDatabaseName("demos")
+ * .enableDataApi(true)
  * .build();
- * RdsDataSource rdsDS = api.addRdsDataSource("rds", cluster, secret, "demos");
+ * RdsDataSource rdsDS = api.addRdsDataSourceV2("rds", cluster, secret, "demos");
  * // Set up a resolver for an RDS query.
  * rdsDS.createResolver("QueryGetDemosRdsResolver", BaseResolverProps.builder()
  * .typeName("Query")

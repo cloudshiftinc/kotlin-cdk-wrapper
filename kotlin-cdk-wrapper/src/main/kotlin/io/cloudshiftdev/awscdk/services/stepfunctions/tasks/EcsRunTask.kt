@@ -37,27 +37,27 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
  * .isDefault(true)
  * .build());
- * Cluster cluster = Cluster.Builder.create(this, "Ec2Cluster").vpc(vpc).build();
- * cluster.addCapacity("DefaultAutoScalingGroup", AddCapacityOptions.builder()
- * .instanceType(new InstanceType("t2.micro"))
- * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
- * .build());
+ * Cluster cluster = Cluster.Builder.create(this, "FargateCluster").vpc(vpc).build();
  * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
- * .compatibility(Compatibility.EC2)
+ * .memoryMiB("512")
+ * .cpu("256")
+ * .compatibility(Compatibility.FARGATE)
  * .build();
- * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * ContainerDefinition containerDefinition = taskDefinition.addContainer("TheContainer",
+ * ContainerDefinitionOptions.builder()
  * .image(ContainerImage.fromRegistry("foo/bar"))
  * .memoryLimitMiB(256)
  * .build());
- * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
+ * EcsRunTask runTask = EcsRunTask.Builder.create(this, "RunFargate")
  * .integrationPattern(IntegrationPattern.RUN_JOB)
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .launchTarget(EcsEc2LaunchTarget.Builder.create()
- * .placementStrategies(List.of(PlacementStrategy.spreadAcrossInstances(),
- * PlacementStrategy.packedByCpu(), PlacementStrategy.randomly()))
- * .placementConstraints(List.of(PlacementConstraint.memberOf("blieptuut")))
- * .build())
+ * .assignPublicIp(true)
+ * .containerOverrides(List.of(ContainerOverride.builder()
+ * .containerDefinition(containerDefinition)
+ * .environment(List.of(TaskEnvironmentVariable.builder().name("SOME_KEY").value(JsonPath.stringAt("$.SomeKey")).build()))
+ * .build()))
+ * .launchTarget(new EcsFargateLaunchTarget())
  * .propagatedTagSource(PropagatedTagSource.TASK_DEFINITION)
  * .build();
  * ```
@@ -166,6 +166,16 @@ public open class EcsRunTask(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("70ebe03278a53b551b732afadb0fad9fa84cad26998f0d5390edfd9bf918bd2e")
     public fun credentials(credentials: Credentials.Builder.() -> Unit)
+
+    /**
+     * Whether ECS Exec should be enabled.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html#ECS-RunTask-request-enableExecuteCommand)
+     * @param enableExecuteCommand Whether ECS Exec should be enabled. 
+     */
+    public fun enableExecuteCommand(enableExecuteCommand: Boolean)
 
     /**
      * (deprecated) Timeout for the heartbeat.
@@ -286,11 +296,11 @@ public open class EcsRunTask(
     public fun resultSelector(resultSelector: Map<String, Any>)
 
     /**
-     * The revision number of ECS task definiton family.
+     * The revision number of ECS task definition family.
      *
      * Default: - '$latest'
      *
-     * @param revisionNumber The revision number of ECS task definiton family. 
+     * @param revisionNumber The revision number of ECS task definition family. 
      */
     public fun revisionNumber(revisionNumber: Number)
 
@@ -473,6 +483,18 @@ public open class EcsRunTask(
         credentials(Credentials(credentials))
 
     /**
+     * Whether ECS Exec should be enabled.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html#ECS-RunTask-request-enableExecuteCommand)
+     * @param enableExecuteCommand Whether ECS Exec should be enabled. 
+     */
+    override fun enableExecuteCommand(enableExecuteCommand: Boolean) {
+      cdkBuilder.enableExecuteCommand(enableExecuteCommand)
+    }
+
+    /**
      * (deprecated) Timeout for the heartbeat.
      *
      * Default: - None
@@ -609,11 +631,11 @@ public open class EcsRunTask(
     }
 
     /**
-     * The revision number of ECS task definiton family.
+     * The revision number of ECS task definition family.
      *
      * Default: - '$latest'
      *
-     * @param revisionNumber The revision number of ECS task definiton family. 
+     * @param revisionNumber The revision number of ECS task definition family. 
      */
     override fun revisionNumber(revisionNumber: Number) {
       cdkBuilder.revisionNumber(revisionNumber)

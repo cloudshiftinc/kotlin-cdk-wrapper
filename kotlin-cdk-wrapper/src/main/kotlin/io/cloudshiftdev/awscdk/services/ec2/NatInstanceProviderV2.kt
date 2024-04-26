@@ -17,15 +17,19 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * InstanceType instanceType;
- * NatInstanceProviderV2 provider = NatProvider.instanceV2(NatInstanceProps.builder()
- * .instanceType(instanceType)
- * .defaultAllowedTraffic(NatTrafficDirection.OUTBOUND_ONLY)
+ * NatInstanceProviderV2 natGatewayProvider = NatProvider.instanceV2(NatInstanceProps.builder()
+ * .instanceType(new InstanceType("t3.small"))
+ * .defaultAllowedTraffic(NatTrafficDirection.NONE)
  * .build());
- * Vpc.Builder.create(this, "TheVPC")
- * .natGatewayProvider(provider)
+ * Vpc vpc = Vpc.Builder.create(this, "Vpc").natGatewayProvider(natGatewayProvider).build();
+ * SecurityGroup securityGroup = SecurityGroup.Builder.create(this, "SecurityGroup")
+ * .vpc(vpc)
+ * .allowAllOutbound(false)
  * .build();
- * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * securityGroup.addEgressRule(Peer.anyIpv4(), Port.tcp(443));
+ * for (Object gatewayInstance : natGatewayProvider.getGatewayInstances()) {
+ * gatewayInstance.addSecurityGroup(securityGroup);
+ * }
  * ```
  */
 public open class NatInstanceProviderV2(
@@ -83,6 +87,12 @@ public open class NatInstanceProviderV2(
    */
   public override fun connections(): Connections =
       unwrap(this).getConnections().let(Connections::wrap)
+
+  /**
+   * Array of gateway instances spawned by the provider after internal configuration.
+   */
+  public open fun gatewayInstances(): List<Instance> =
+      unwrap(this).getGatewayInstances().map(Instance::wrap)
 
   /**
    * The Security Group associated with the NAT instances.
@@ -176,13 +186,49 @@ public open class NatInstanceProviderV2(
     public fun machineImage(machineImage: IMachineImage)
 
     /**
-     * Security Group for NAT instances.
+     * (deprecated) Security Group for NAT instances.
      *
      * Default: - A new security group will be created
      *
+     * Example:
+     *
+     * ```
+     * NatInstanceProviderV2 natGatewayProvider = NatProvider.instanceV2(NatInstanceProps.builder()
+     * .instanceType(new InstanceType("t3.small"))
+     * .defaultAllowedTraffic(NatTrafficDirection.NONE)
+     * .build());
+     * Vpc vpc = Vpc.Builder.create(this, "Vpc").natGatewayProvider(natGatewayProvider).build();
+     * SecurityGroup securityGroup = SecurityGroup.Builder.create(this, "SecurityGroup")
+     * .vpc(vpc)
+     * .allowAllOutbound(false)
+     * .build();
+     * securityGroup.addEgressRule(Peer.anyIpv4(), Port.tcp(443));
+     * for (Object gatewayInstance : natGatewayProvider.getGatewayInstances()) {
+     * gatewayInstance.addSecurityGroup(securityGroup);
+     * }
+     * ```
+     *
+     * @deprecated - Cannot create a new security group before the VPC is created,
+     * and cannot create the VPC without the NAT provider.
+     * Set [defaultAllowedTraffic ] to [NatTrafficDirection.NONE ]
+     * and use [NatInstanceProviderV2.gatewayInstances ] to retrieve
+     * the instances on the fly and add security groups
      * @param securityGroup Security Group for NAT instances. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun securityGroup(securityGroup: ISecurityGroup)
+
+    /**
+     * Custom user data to run on the NAT instances.
+     *
+     * Default:
+     * UserData.forLinux().addCommands(...NatInstanceProviderV2.DEFAULT_USER_DATA_COMMANDS);  -
+     * Appropriate user data commands to initialize and configure the NAT instances
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html#create-nat-ami)
+     * @param userData Custom user data to run on the NAT instances. 
+     */
+    public fun userData(userData: UserData)
   }
 
   private class BuilderImpl : Builder {
@@ -282,14 +328,52 @@ public open class NatInstanceProviderV2(
     }
 
     /**
-     * Security Group for NAT instances.
+     * (deprecated) Security Group for NAT instances.
      *
      * Default: - A new security group will be created
      *
+     * Example:
+     *
+     * ```
+     * NatInstanceProviderV2 natGatewayProvider = NatProvider.instanceV2(NatInstanceProps.builder()
+     * .instanceType(new InstanceType("t3.small"))
+     * .defaultAllowedTraffic(NatTrafficDirection.NONE)
+     * .build());
+     * Vpc vpc = Vpc.Builder.create(this, "Vpc").natGatewayProvider(natGatewayProvider).build();
+     * SecurityGroup securityGroup = SecurityGroup.Builder.create(this, "SecurityGroup")
+     * .vpc(vpc)
+     * .allowAllOutbound(false)
+     * .build();
+     * securityGroup.addEgressRule(Peer.anyIpv4(), Port.tcp(443));
+     * for (Object gatewayInstance : natGatewayProvider.getGatewayInstances()) {
+     * gatewayInstance.addSecurityGroup(securityGroup);
+     * }
+     * ```
+     *
+     * @deprecated - Cannot create a new security group before the VPC is created,
+     * and cannot create the VPC without the NAT provider.
+     * Set [defaultAllowedTraffic ] to [NatTrafficDirection.NONE ]
+     * and use [NatInstanceProviderV2.gatewayInstances ] to retrieve
+     * the instances on the fly and add security groups
      * @param securityGroup Security Group for NAT instances. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun securityGroup(securityGroup: ISecurityGroup) {
       cdkBuilder.securityGroup(securityGroup.let(ISecurityGroup::unwrap))
+    }
+
+    /**
+     * Custom user data to run on the NAT instances.
+     *
+     * Default:
+     * UserData.forLinux().addCommands(...NatInstanceProviderV2.DEFAULT_USER_DATA_COMMANDS);  -
+     * Appropriate user data commands to initialize and configure the NAT instances
+     *
+     * [Documentation](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_NAT_Instance.html#create-nat-ami)
+     * @param userData Custom user data to run on the NAT instances. 
+     */
+    override fun userData(userData: UserData) {
+      cdkBuilder.userData(userData.let(UserData::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.NatInstanceProviderV2 =
@@ -297,6 +381,9 @@ public open class NatInstanceProviderV2(
   }
 
   public companion object {
+    public val DEFAULT_USER_DATA_COMMANDS: List<String> =
+        software.amazon.awscdk.services.ec2.NatInstanceProviderV2.DEFAULT_USER_DATA_COMMANDS
+
     public operator fun invoke(block: Builder.() -> Unit = {}): NatInstanceProviderV2 {
       val builderImpl = BuilderImpl()
       return NatInstanceProviderV2(builderImpl.apply(block).build())

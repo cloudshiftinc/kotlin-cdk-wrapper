@@ -564,7 +564,7 @@ public interface DatabaseProxyProps : DatabaseProxyOptions {
      *
      * Default: true
      */
-    override fun requireTls(): Boolean? = unwrap(this).getRequireTLS()
+    override fun requireTLS(): Boolean? = unwrap(this).getRequireTLS()
 
     /**
      * IAM role that the proxy uses to access secrets in AWS Secrets Manager.

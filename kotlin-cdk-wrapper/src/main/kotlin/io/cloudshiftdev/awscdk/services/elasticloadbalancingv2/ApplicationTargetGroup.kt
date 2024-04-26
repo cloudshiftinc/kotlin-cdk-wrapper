@@ -467,7 +467,7 @@ public open class ApplicationTargetGroup(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricTargetTlsNegotiationErrorCount(): Metric =
+  public open fun metricTargetTLSNegotiationErrorCount(): Metric =
       unwrap(this).metricTargetTLSNegotiationErrorCount().let(Metric::wrap)
 
   /**
@@ -482,7 +482,7 @@ public open class ApplicationTargetGroup(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricTargetTlsNegotiationErrorCount(props: MetricOptions): Metric =
+  public open fun metricTargetTLSNegotiationErrorCount(props: MetricOptions): Metric =
       unwrap(this).metricTargetTLSNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -498,9 +498,9 @@ public open class ApplicationTargetGroup(
    */
   @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("6fb589e77244f79e7b207d6efccaa92a565bce39740975d0c083f19f8a1853d0")
-  public open fun metricTargetTlsNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit):
-      Metric = metricTargetTlsNegotiationErrorCount(MetricOptions(props))
+  @JvmName("70bf713a49db7cc1ea5cbee18d1539d5f4fc72d053cab9032f0270e4cb252ce2")
+  public open fun metricTargetTLSNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit):
+      Metric = metricTargetTLSNegotiationErrorCount(MetricOptions(props))
 
   /**
    * (deprecated) The number of unhealthy hosts in the target group.
@@ -715,7 +715,7 @@ public open class ApplicationTargetGroup(
      * After this period, the cookie is considered stale. The minimum value is
      * 1 second and the maximum value is 7 days (604800 seconds).
      *
-     * Default: Duration.days(1)
+     * Default: - Stickiness is disabled
      *
      * @param stickinessCookieDuration The stickiness cookie expiration period. 
      */
@@ -926,7 +926,7 @@ public open class ApplicationTargetGroup(
      * After this period, the cookie is considered stale. The minimum value is
      * 1 second and the maximum value is 7 days (604800 seconds).
      *
-     * Default: Duration.days(1)
+     * Default: - Stickiness is disabled
      *
      * @param stickinessCookieDuration The stickiness cookie expiration period. 
      */

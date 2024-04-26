@@ -98,9 +98,6 @@ public open class CfnNetworkInterface(
 
   /**
    * The primary IPv6 address of the network interface.
-   *
-   * When you enable an IPv6 GUA address to be a primary IPv6, the first IPv6 GUA will be made the
-   * primary IPv6 address until the instance is terminated or the network interface is detached.
    */
   public open fun attrPrimaryIpv6Address(): String = unwrap(this).getAttrPrimaryIpv6Address()
 
@@ -119,6 +116,11 @@ public open class CfnNetworkInterface(
    */
   public open fun attrSecondaryPrivateIpAddresses(): List<String> =
       unwrap(this).getAttrSecondaryPrivateIpAddresses()
+
+  /**
+   * The ID of the VPC.
+   */
+  public open fun attrVpcId(): String = unwrap(this).getAttrVpcId()
 
   /**
    * A connection tracking specification for the network interface.
@@ -185,19 +187,19 @@ public open class CfnNetworkInterface(
   }
 
   /**
-   * The security group IDs associated with this network interface.
+   * The IDs of the security groups associated with this network interface.
    */
   public open fun groupSet(): List<String> = unwrap(this).getGroupSet() ?: emptyList()
 
   /**
-   * The security group IDs associated with this network interface.
+   * The IDs of the security groups associated with this network interface.
    */
   public open fun groupSet(`value`: List<String>) {
     unwrap(this).setGroupSet(`value`)
   }
 
   /**
-   * The security group IDs associated with this network interface.
+   * The IDs of the security groups associated with this network interface.
    */
   public open fun groupSet(vararg `value`: String): Unit = groupSet(`value`.toList())
 
@@ -259,42 +261,42 @@ public open class CfnNetworkInterface(
   public open fun ipv4Prefixes(vararg `value`: Any): Unit = ipv4Prefixes(`value`.toList())
 
   /**
-   * The number of IPv6 addresses to assign to a network interface.
+   * The number of IPv6 addresses to assign to the network interface.
    */
   public open fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
 
   /**
-   * The number of IPv6 addresses to assign to a network interface.
+   * The number of IPv6 addresses to assign to the network interface.
    */
   public open fun ipv6AddressCount(`value`: Number) {
     unwrap(this).setIpv6AddressCount(`value`)
   }
 
   /**
-   * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate
-   * with the network interface.
+   * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+   * interface.
    */
   public open fun ipv6Addresses(): Any? = unwrap(this).getIpv6Addresses()
 
   /**
-   * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate
-   * with the network interface.
+   * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+   * interface.
    */
   public open fun ipv6Addresses(`value`: IResolvable) {
     unwrap(this).setIpv6Addresses(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate
-   * with the network interface.
+   * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+   * interface.
    */
   public open fun ipv6Addresses(`value`: List<Any>) {
     unwrap(this).setIpv6Addresses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate
-   * with the network interface.
+   * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+   * interface.
    */
   public open fun ipv6Addresses(vararg `value`: Any): Unit = ipv6Addresses(`value`.toList())
 
@@ -335,40 +337,38 @@ public open class CfnNetworkInterface(
   public open fun ipv6Prefixes(vararg `value`: Any): Unit = ipv6Prefixes(`value`.toList())
 
   /**
-   * Assigns a single private IP address to the network interface, which is used as the primary
-   * private IP address.
+   * The private IPv4 address to assign to the network interface as the primary private IP address.
    */
   public open fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
   /**
-   * Assigns a single private IP address to the network interface, which is used as the primary
-   * private IP address.
+   * The private IPv4 address to assign to the network interface as the primary private IP address.
    */
   public open fun privateIpAddress(`value`: String) {
     unwrap(this).setPrivateIpAddress(`value`)
   }
 
   /**
-   * Assigns private IP addresses to the network interface.
+   * The private IPv4 addresses to assign to the network interface.
    */
   public open fun privateIpAddresses(): Any? = unwrap(this).getPrivateIpAddresses()
 
   /**
-   * Assigns private IP addresses to the network interface.
+   * The private IPv4 addresses to assign to the network interface.
    */
   public open fun privateIpAddresses(`value`: IResolvable) {
     unwrap(this).setPrivateIpAddresses(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * Assigns private IP addresses to the network interface.
+   * The private IPv4 addresses to assign to the network interface.
    */
   public open fun privateIpAddresses(`value`: List<Any>) {
     unwrap(this).setPrivateIpAddresses(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Assigns private IP addresses to the network interface.
+   * The private IPv4 addresses to assign to the network interface.
    */
   public open fun privateIpAddresses(vararg `value`: Any): Unit =
       privateIpAddresses(`value`.toList())
@@ -426,20 +426,20 @@ public open class CfnNetworkInterface(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * An arbitrary set of tags (key-value pairs) for this network interface.
+   * The tags to apply to the network interface.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * An arbitrary set of tags (key-value pairs) for this network interface.
+   * The tags to apply to the network interface.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag::unwrap))
   }
 
   /**
-   * An arbitrary set of tags (key-value pairs) for this network interface.
+   * The tags to apply to the network interface.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -528,18 +528,18 @@ public open class CfnNetworkInterface(
     public fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable)
 
     /**
-     * The security group IDs associated with this network interface.
+     * The IDs of the security groups associated with this network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-groupset)
-     * @param groupSet The security group IDs associated with this network interface. 
+     * @param groupSet The IDs of the security groups associated with this network interface. 
      */
     public fun groupSet(groupSet: List<String>)
 
     /**
-     * The security group IDs associated with this network interface.
+     * The IDs of the security groups associated with this network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-groupset)
-     * @param groupSet The security group IDs associated with this network interface. 
+     * @param groupSet The IDs of the security groups associated with this network interface. 
      */
     public fun groupSet(vararg groupSet: String)
 
@@ -603,7 +603,7 @@ public open class CfnNetworkInterface(
     public fun ipv4Prefixes(vararg ipv4Prefixes: Any)
 
     /**
-     * The number of IPv6 addresses to assign to a network interface.
+     * The number of IPv6 addresses to assign to the network interface.
      *
      * Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify
      * specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property.
@@ -613,13 +613,13 @@ public open class CfnNetworkInterface(
      * IPv6 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresscount)
-     * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface. 
+     * @param ipv6AddressCount The number of IPv6 addresses to assign to the network interface. 
      */
     public fun ipv6AddressCount(ipv6AddressCount: Number)
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to
-     * associate with the network interface.
+     * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+     * interface.
      *
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
@@ -629,14 +629,14 @@ public open class CfnNetworkInterface(
      * prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresses)
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface. 
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface. 
      */
     public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to
-     * associate with the network interface.
+     * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+     * interface.
      *
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
@@ -646,14 +646,14 @@ public open class CfnNetworkInterface(
      * prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresses)
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface. 
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface. 
      */
     public fun ipv6Addresses(ipv6Addresses: List<Any>)
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to
-     * associate with the network interface.
+     * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+     * interface.
      *
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
@@ -663,8 +663,8 @@ public open class CfnNetworkInterface(
      * prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresses)
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface. 
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface. 
      */
     public fun ipv6Addresses(vararg ipv6Addresses: Any)
 
@@ -715,19 +715,19 @@ public open class CfnNetworkInterface(
     public fun ipv6Prefixes(vararg ipv6Prefixes: Any)
 
     /**
-     * Assigns a single private IP address to the network interface, which is used as the primary
-     * private IP address.
+     * The private IPv4 address to assign to the network interface as the primary private IP
+     * address.
      *
-     * If you want to specify multiple private IP address, use the `PrivateIpAddresses` property.
+     * If you want to specify multiple private IP addresses, use the `PrivateIpAddresses` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddress)
-     * @param privateIpAddress Assigns a single private IP address to the network interface, which
-     * is used as the primary private IP address. 
+     * @param privateIpAddress The private IPv4 address to assign to the network interface as the
+     * primary private IP address. 
      */
     public fun privateIpAddress(privateIpAddress: String)
 
     /**
-     * Assigns private IP addresses to the network interface.
+     * The private IPv4 addresses to assign to the network interface.
      *
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
@@ -739,12 +739,12 @@ public open class CfnNetworkInterface(
      * count of IPv4 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddresses)
-     * @param privateIpAddresses Assigns private IP addresses to the network interface. 
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface. 
      */
     public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
     /**
-     * Assigns private IP addresses to the network interface.
+     * The private IPv4 addresses to assign to the network interface.
      *
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
@@ -756,12 +756,12 @@ public open class CfnNetworkInterface(
      * count of IPv4 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddresses)
-     * @param privateIpAddresses Assigns private IP addresses to the network interface. 
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface. 
      */
     public fun privateIpAddresses(privateIpAddresses: List<Any>)
 
     /**
-     * Assigns private IP addresses to the network interface.
+     * The private IPv4 addresses to assign to the network interface.
      *
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
@@ -773,7 +773,7 @@ public open class CfnNetworkInterface(
      * count of IPv4 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddresses)
-     * @param privateIpAddresses Assigns private IP addresses to the network interface. 
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface. 
      */
     public fun privateIpAddresses(vararg privateIpAddresses: Any)
 
@@ -831,18 +831,18 @@ public open class CfnNetworkInterface(
     public fun subnetId(subnetId: String)
 
     /**
-     * An arbitrary set of tags (key-value pairs) for this network interface.
+     * The tags to apply to the network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-tags)
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface. 
+     * @param tags The tags to apply to the network interface. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An arbitrary set of tags (key-value pairs) for this network interface.
+     * The tags to apply to the network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-tags)
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface. 
+     * @param tags The tags to apply to the network interface. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -946,20 +946,20 @@ public open class CfnNetworkInterface(
     }
 
     /**
-     * The security group IDs associated with this network interface.
+     * The IDs of the security groups associated with this network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-groupset)
-     * @param groupSet The security group IDs associated with this network interface. 
+     * @param groupSet The IDs of the security groups associated with this network interface. 
      */
     override fun groupSet(groupSet: List<String>) {
       cdkBuilder.groupSet(groupSet)
     }
 
     /**
-     * The security group IDs associated with this network interface.
+     * The IDs of the security groups associated with this network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-groupset)
-     * @param groupSet The security group IDs associated with this network interface. 
+     * @param groupSet The IDs of the security groups associated with this network interface. 
      */
     override fun groupSet(vararg groupSet: String): Unit = groupSet(groupSet.toList())
 
@@ -1031,7 +1031,7 @@ public open class CfnNetworkInterface(
     override fun ipv4Prefixes(vararg ipv4Prefixes: Any): Unit = ipv4Prefixes(ipv4Prefixes.toList())
 
     /**
-     * The number of IPv6 addresses to assign to a network interface.
+     * The number of IPv6 addresses to assign to the network interface.
      *
      * Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify
      * specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property.
@@ -1041,15 +1041,15 @@ public open class CfnNetworkInterface(
      * IPv6 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresscount)
-     * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface. 
+     * @param ipv6AddressCount The number of IPv6 addresses to assign to the network interface. 
      */
     override fun ipv6AddressCount(ipv6AddressCount: Number) {
       cdkBuilder.ipv6AddressCount(ipv6AddressCount)
     }
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to
-     * associate with the network interface.
+     * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+     * interface.
      *
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
@@ -1059,16 +1059,16 @@ public open class CfnNetworkInterface(
      * prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresses)
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface. 
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface. 
      */
     override fun ipv6Addresses(ipv6Addresses: IResolvable) {
       cdkBuilder.ipv6Addresses(ipv6Addresses.let(IResolvable::unwrap))
     }
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to
-     * associate with the network interface.
+     * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+     * interface.
      *
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
@@ -1078,16 +1078,16 @@ public open class CfnNetworkInterface(
      * prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresses)
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface. 
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface. 
      */
     override fun ipv6Addresses(ipv6Addresses: List<Any>) {
       cdkBuilder.ipv6Addresses(ipv6Addresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to
-     * associate with the network interface.
+     * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+     * interface.
      *
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
@@ -1097,8 +1097,8 @@ public open class CfnNetworkInterface(
      * prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-ipv6addresses)
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface. 
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface. 
      */
     override fun ipv6Addresses(vararg ipv6Addresses: Any): Unit =
         ipv6Addresses(ipv6Addresses.toList())
@@ -1156,21 +1156,21 @@ public open class CfnNetworkInterface(
     override fun ipv6Prefixes(vararg ipv6Prefixes: Any): Unit = ipv6Prefixes(ipv6Prefixes.toList())
 
     /**
-     * Assigns a single private IP address to the network interface, which is used as the primary
-     * private IP address.
+     * The private IPv4 address to assign to the network interface as the primary private IP
+     * address.
      *
-     * If you want to specify multiple private IP address, use the `PrivateIpAddresses` property.
+     * If you want to specify multiple private IP addresses, use the `PrivateIpAddresses` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddress)
-     * @param privateIpAddress Assigns a single private IP address to the network interface, which
-     * is used as the primary private IP address. 
+     * @param privateIpAddress The private IPv4 address to assign to the network interface as the
+     * primary private IP address. 
      */
     override fun privateIpAddress(privateIpAddress: String) {
       cdkBuilder.privateIpAddress(privateIpAddress)
     }
 
     /**
-     * Assigns private IP addresses to the network interface.
+     * The private IPv4 addresses to assign to the network interface.
      *
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
@@ -1182,14 +1182,14 @@ public open class CfnNetworkInterface(
      * count of IPv4 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddresses)
-     * @param privateIpAddresses Assigns private IP addresses to the network interface. 
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface. 
      */
     override fun privateIpAddresses(privateIpAddresses: IResolvable) {
       cdkBuilder.privateIpAddresses(privateIpAddresses.let(IResolvable::unwrap))
     }
 
     /**
-     * Assigns private IP addresses to the network interface.
+     * The private IPv4 addresses to assign to the network interface.
      *
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
@@ -1201,14 +1201,14 @@ public open class CfnNetworkInterface(
      * count of IPv4 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddresses)
-     * @param privateIpAddresses Assigns private IP addresses to the network interface. 
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface. 
      */
     override fun privateIpAddresses(privateIpAddresses: List<Any>) {
       cdkBuilder.privateIpAddresses(privateIpAddresses.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Assigns private IP addresses to the network interface.
+     * The private IPv4 addresses to assign to the network interface.
      *
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
@@ -1220,7 +1220,7 @@ public open class CfnNetworkInterface(
      * count of IPv4 prefixes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddresses)
-     * @param privateIpAddresses Assigns private IP addresses to the network interface. 
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface. 
      */
     override fun privateIpAddresses(vararg privateIpAddresses: Any): Unit =
         privateIpAddresses(privateIpAddresses.toList())
@@ -1287,20 +1287,20 @@ public open class CfnNetworkInterface(
     }
 
     /**
-     * An arbitrary set of tags (key-value pairs) for this network interface.
+     * The tags to apply to the network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-tags)
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface. 
+     * @param tags The tags to apply to the network interface. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
     /**
-     * An arbitrary set of tags (key-value pairs) for this network interface.
+     * The tags to apply to the network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-tags)
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface. 
+     * @param tags The tags to apply to the network interface. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

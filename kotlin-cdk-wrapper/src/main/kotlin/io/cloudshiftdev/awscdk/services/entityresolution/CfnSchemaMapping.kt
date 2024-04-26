@@ -358,7 +358,7 @@ public open class CfnSchemaMapping(
   }
 
   /**
-   * An object containing `FieldName` , `Type` , `GroupName` , and `MatchKey` .
+   * An object containing `FieldName` , `Type` , `GroupName` , `MatchKey` , and `SubType` .
    *
    * Example:
    *
@@ -388,12 +388,12 @@ public open class CfnSchemaMapping(
     public fun fieldName(): String
 
     /**
-     * Instruct AWS Entity Resolution to combine several columns into a unified column with the
-     * identical attribute type.
+     * A string that instructs AWS Entity Resolution to combine several columns into a unified
+     * column with the identical attribute type.
      *
-     * For example, when working with columns such as first_name, middle_name, and last_name,
-     * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into a
-     * single value.
+     * For example, when working with columns such as `first_name` , `middle_name` , and `last_name`
+     * , assigning them a common `groupName` will prompt AWS Entity Resolution to concatenate them into
+     * a single value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-groupname)
      */
@@ -402,10 +402,10 @@ public open class CfnSchemaMapping(
     /**
      * A key that allows grouping of multiple input attributes into a unified matching group.
      *
-     * For example, let's consider a scenario where the source table contains various addresses,
-     * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-     * both attributes, AWS Entity Resolution will match records across these fields to create a
-     * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
+     * For example, consider a scenario where the source table contains various addresses, such as
+     * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
+     * attributes, AWS Entity Resolution will match records across these fields to create a
+     * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
      * for matching purposes but will still be included in the output table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)
@@ -437,21 +437,21 @@ public open class CfnSchemaMapping(
       public fun fieldName(fieldName: String)
 
       /**
-       * @param groupName Instruct AWS Entity Resolution to combine several columns into a unified
-       * column with the identical attribute type.
-       * For example, when working with columns such as first_name, middle_name, and last_name,
-       * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into
-       * a single value.
+       * @param groupName A string that instructs AWS Entity Resolution to combine several columns
+       * into a unified column with the identical attribute type.
+       * For example, when working with columns such as `first_name` , `middle_name` , and
+       * `last_name` , assigning them a common `groupName` will prompt AWS Entity Resolution to
+       * concatenate them into a single value.
        */
       public fun groupName(groupName: String)
 
       /**
        * @param matchKey A key that allows grouping of multiple input attributes into a unified
        * matching group.
-       * For example, let's consider a scenario where the source table contains various addresses,
-       * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-       * both attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
+       * For example, consider a scenario where the source table contains various addresses, such as
+       * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
+       * attributes, AWS Entity Resolution will match records across these fields to create a
+       * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
        * for matching purposes but will still be included in the output table.
        */
       public fun matchKey(matchKey: String)
@@ -481,11 +481,11 @@ public open class CfnSchemaMapping(
       }
 
       /**
-       * @param groupName Instruct AWS Entity Resolution to combine several columns into a unified
-       * column with the identical attribute type.
-       * For example, when working with columns such as first_name, middle_name, and last_name,
-       * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into
-       * a single value.
+       * @param groupName A string that instructs AWS Entity Resolution to combine several columns
+       * into a unified column with the identical attribute type.
+       * For example, when working with columns such as `first_name` , `middle_name` , and
+       * `last_name` , assigning them a common `groupName` will prompt AWS Entity Resolution to
+       * concatenate them into a single value.
        */
       override fun groupName(groupName: String) {
         cdkBuilder.groupName(groupName)
@@ -494,10 +494,10 @@ public open class CfnSchemaMapping(
       /**
        * @param matchKey A key that allows grouping of multiple input attributes into a unified
        * matching group.
-       * For example, let's consider a scenario where the source table contains various addresses,
-       * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-       * both attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
+       * For example, consider a scenario where the source table contains various addresses, such as
+       * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
+       * attributes, AWS Entity Resolution will match records across these fields to create a
+       * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
        * for matching purposes but will still be included in the output table.
        */
       override fun matchKey(matchKey: String) {
@@ -534,12 +534,12 @@ public open class CfnSchemaMapping(
       override fun fieldName(): String = unwrap(this).getFieldName()
 
       /**
-       * Instruct AWS Entity Resolution to combine several columns into a unified column with the
-       * identical attribute type.
+       * A string that instructs AWS Entity Resolution to combine several columns into a unified
+       * column with the identical attribute type.
        *
-       * For example, when working with columns such as first_name, middle_name, and last_name,
-       * assigning them a common `GroupName` will prompt AWS Entity Resolution to concatenate them into
-       * a single value.
+       * For example, when working with columns such as `first_name` , `middle_name` , and
+       * `last_name` , assigning them a common `groupName` will prompt AWS Entity Resolution to
+       * concatenate them into a single value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-groupname)
        */
@@ -548,10 +548,10 @@ public open class CfnSchemaMapping(
       /**
        * A key that allows grouping of multiple input attributes into a unified matching group.
        *
-       * For example, let's consider a scenario where the source table contains various addresses,
-       * such as `business_address` and `shipping_address` . By assigning the `MatchKey` *Address* to
-       * both attributes, AWS Entity Resolution will match records across these fields to create a
-       * consolidated matching group. If no `MatchKey` is specified for a column, it won't be utilized
+       * For example, consider a scenario where the source table contains various addresses, such as
+       * `business_address` and `shipping_address` . By assigning a `matchKey` called `address` to both
+       * attributes, AWS Entity Resolution will match records across these fields to create a
+       * consolidated matching group. If no `matchKey` is specified for a column, it won't be utilized
        * for matching purposes but will still be included in the output table.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-schemamapping-schemainputattribute.html#cfn-entityresolution-schemamapping-schemainputattribute-matchkey)

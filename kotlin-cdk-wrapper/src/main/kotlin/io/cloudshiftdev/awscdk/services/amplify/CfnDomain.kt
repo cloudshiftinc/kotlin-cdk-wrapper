@@ -38,17 +38,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .autoSubDomainCreationPatterns(List.of("autoSubDomainCreationPatterns"))
  * .autoSubDomainIamRole("autoSubDomainIamRole")
- * .certificate(CertificateProperty.builder()
- * .certificateArn("certificateArn")
- * .certificateType("certificateType")
- * .certificateVerificationDnsRecord("certificateVerificationDnsRecord")
- * .build())
  * .certificateSettings(CertificateSettingsProperty.builder()
  * .certificateType("certificateType")
  * .customCertificateArn("customCertificateArn")
  * .build())
  * .enableAutoSubDomain(false)
- * .updateStatus("updateStatus")
  * .build();
  * ```
  *
@@ -102,6 +96,12 @@ public open class CfnDomain(
   public open fun attrAutoSubDomainIamRole(): String = unwrap(this).getAttrAutoSubDomainIamRole()
 
   /**
+   *
+   */
+  public open fun attrCertificate(): IResolvable =
+      unwrap(this).getAttrCertificate().let(IResolvable::wrap)
+
+  /**
    * DNS Record for certificate verification.
    */
   public open fun attrCertificateRecord(): String = unwrap(this).getAttrCertificateRecord()
@@ -126,6 +126,31 @@ public open class CfnDomain(
    * Reason for the current status of the domain.
    */
   public open fun attrStatusReason(): String = unwrap(this).getAttrStatusReason()
+
+  /**
+   * The status of the domain update operation that is currently in progress.
+   *
+   * The following list describes the valid update states.
+   *
+   * * **REQUESTING_CERTIFICATE** - The certificate is in the process of being updated.
+   * * **PENDING_VERIFICATION** - Indicates that an Amplify managed certificate is in the process of
+   * being verified. This occurs during the creation of a custom domain or when a custom domain is
+   * updated to use a managed certificate.
+   * * **IMPORTING_CUSTOM_CERTIFICATE** - Indicates that an Amplify custom certificate is in the
+   * process of being imported. This occurs during the creation of a custom domain or when a custom
+   * domain is updated to use a custom certificate.
+   * * **PENDING_DEPLOYMENT** - Indicates that the subdomain or certificate changes are being
+   * propagated.
+   * * **AWAITING_APP_CNAME** - Amplify is waiting for CNAME records corresponding to subdomains to
+   * be propagated. If your custom domain is on Route 53, Amplify handles this for you automatically.
+   * For more information about custom domains, see [Setting up custom
+   * domains](https://docs.aws.amazon.com/amplify/latest/userguide/custom-domains.html) in the *Amplify
+   * Hosting User Guide* .
+   * * **UPDATE_COMPLETE** - The certificate has been associated with a domain.
+   * * **UPDATE_FAILED** - The certificate has failed to be provisioned or associated, and there is
+   * no existing active certificate to roll back to.
+   */
+  public open fun attrUpdateStatus(): String = unwrap(this).getAttrUpdateStatus()
 
   /**
    * Sets the branch patterns for automatic subdomain creation.
@@ -159,33 +184,6 @@ public open class CfnDomain(
   public open fun autoSubDomainIamRole(`value`: String) {
     unwrap(this).setAutoSubDomainIamRole(`value`)
   }
-
-  /**
-   * Describes the SSL/TLS certificate for the domain association.
-   */
-  public open fun certificate(): Any? = unwrap(this).getCertificate()
-
-  /**
-   * Describes the SSL/TLS certificate for the domain association.
-   */
-  public open fun certificate(`value`: IResolvable) {
-    unwrap(this).setCertificate(`value`.let(IResolvable::unwrap))
-  }
-
-  /**
-   * Describes the SSL/TLS certificate for the domain association.
-   */
-  public open fun certificate(`value`: CertificateProperty) {
-    unwrap(this).setCertificate(`value`.let(CertificateProperty::unwrap))
-  }
-
-  /**
-   * Describes the SSL/TLS certificate for the domain association.
-   */
-  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("a6e3585827032c066c49cb10aff2eecb6e23d7f11bb97c9340e9659d87230e8c")
-  public open fun certificate(`value`: CertificateProperty.Builder.() -> Unit): Unit =
-      certificate(CertificateProperty(`value`))
 
   /**
    * The type of SSL/TLS certificate to use for your custom domain.
@@ -279,18 +277,6 @@ public open class CfnDomain(
   public open fun subDomainSettings(vararg `value`: Any): Unit = subDomainSettings(`value`.toList())
 
   /**
-   * The status of the domain update operation that is currently in progress.
-   */
-  public open fun updateStatus(): String? = unwrap(this).getUpdateStatus()
-
-  /**
-   * The status of the domain update operation that is currently in progress.
-   */
-  public open fun updateStatus(`value`: String) {
-    unwrap(this).setUpdateStatus(`value`)
-  }
-
-  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.amplify.CfnDomain].
    */
   @CdkDslMarker
@@ -330,53 +316,6 @@ public open class CfnDomain(
      * role for the Amazon Resource Name (ARN) for automatically creating subdomains. 
      */
     public fun autoSubDomainIamRole(autoSubDomainIamRole: String)
-
-    /**
-     * Describes the SSL/TLS certificate for the domain association.
-     *
-     * This can be your own custom certificate or the default certificate that Amplify provisions
-     * for you.
-     *
-     * If you are updating your domain to use a different certificate, `Certificate` points to the
-     * new certificate that is being created instead of the current active certificate. Otherwise,
-     * `Certificate` points to the current active certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-certificate)
-     * @param certificate Describes the SSL/TLS certificate for the domain association. 
-     */
-    public fun certificate(certificate: IResolvable)
-
-    /**
-     * Describes the SSL/TLS certificate for the domain association.
-     *
-     * This can be your own custom certificate or the default certificate that Amplify provisions
-     * for you.
-     *
-     * If you are updating your domain to use a different certificate, `Certificate` points to the
-     * new certificate that is being created instead of the current active certificate. Otherwise,
-     * `Certificate` points to the current active certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-certificate)
-     * @param certificate Describes the SSL/TLS certificate for the domain association. 
-     */
-    public fun certificate(certificate: CertificateProperty)
-
-    /**
-     * Describes the SSL/TLS certificate for the domain association.
-     *
-     * This can be your own custom certificate or the default certificate that Amplify provisions
-     * for you.
-     *
-     * If you are updating your domain to use a different certificate, `Certificate` points to the
-     * new certificate that is being created instead of the current active certificate. Otherwise,
-     * `Certificate` points to the current active certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-certificate)
-     * @param certificate Describes the SSL/TLS certificate for the domain association. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("dba241ba2559bec2214c0d05d5c597cbd5bc0702b76b33a82125935135728c64")
-    public fun certificate(certificate: CertificateProperty.Builder.() -> Unit)
 
     /**
      * The type of SSL/TLS certificate to use for your custom domain.
@@ -461,34 +400,6 @@ public open class CfnDomain(
      * @param subDomainSettings The setting for the subdomain. 
      */
     public fun subDomainSettings(vararg subDomainSettings: Any)
-
-    /**
-     * The status of the domain update operation that is currently in progress.
-     *
-     * The following list describes the valid update states.
-     *
-     * * **REQUESTING_CERTIFICATE** - The certificate is in the process of being updated.
-     * * **PENDING_VERIFICATION** - Indicates that an Amplify managed certificate is in the process
-     * of being verified. This occurs during the creation of a custom domain or when a custom domain is
-     * updated to use a managed certificate.
-     * * **IMPORTING_CUSTOM_CERTIFICATE** - Indicates that an Amplify custom certificate is in the
-     * process of being imported. This occurs during the creation of a custom domain or when a custom
-     * domain is updated to use a custom certificate.
-     * * **PENDING_DEPLOYMENT** - Indicates that the subdomain or certificate changes are being
-     * propagated.
-     * * **AWAITING_APP_CNAME** - Amplify is waiting for CNAME records corresponding to subdomains
-     * to be propagated. If your custom domain is on Route 53, Amplify handles this for you
-     * automatically. For more information about custom domains, see [Setting up custom
-     * domains](https://docs.aws.amazon.com/amplify/latest/userguide/custom-domains.html) in the
-     * *Amplify Hosting User Guide* .
-     * * **UPDATE_COMPLETE** - The certificate has been associated with a domain.
-     * * **UPDATE_FAILED** - The certificate has failed to be provisioned or associated, and there
-     * is no existing active certificate to roll back to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-updatestatus)
-     * @param updateStatus The status of the domain update operation that is currently in progress. 
-     */
-    public fun updateStatus(updateStatus: String)
   }
 
   private class BuilderImpl(
@@ -540,58 +451,6 @@ public open class CfnDomain(
     override fun autoSubDomainIamRole(autoSubDomainIamRole: String) {
       cdkBuilder.autoSubDomainIamRole(autoSubDomainIamRole)
     }
-
-    /**
-     * Describes the SSL/TLS certificate for the domain association.
-     *
-     * This can be your own custom certificate or the default certificate that Amplify provisions
-     * for you.
-     *
-     * If you are updating your domain to use a different certificate, `Certificate` points to the
-     * new certificate that is being created instead of the current active certificate. Otherwise,
-     * `Certificate` points to the current active certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-certificate)
-     * @param certificate Describes the SSL/TLS certificate for the domain association. 
-     */
-    override fun certificate(certificate: IResolvable) {
-      cdkBuilder.certificate(certificate.let(IResolvable::unwrap))
-    }
-
-    /**
-     * Describes the SSL/TLS certificate for the domain association.
-     *
-     * This can be your own custom certificate or the default certificate that Amplify provisions
-     * for you.
-     *
-     * If you are updating your domain to use a different certificate, `Certificate` points to the
-     * new certificate that is being created instead of the current active certificate. Otherwise,
-     * `Certificate` points to the current active certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-certificate)
-     * @param certificate Describes the SSL/TLS certificate for the domain association. 
-     */
-    override fun certificate(certificate: CertificateProperty) {
-      cdkBuilder.certificate(certificate.let(CertificateProperty::unwrap))
-    }
-
-    /**
-     * Describes the SSL/TLS certificate for the domain association.
-     *
-     * This can be your own custom certificate or the default certificate that Amplify provisions
-     * for you.
-     *
-     * If you are updating your domain to use a different certificate, `Certificate` points to the
-     * new certificate that is being created instead of the current active certificate. Otherwise,
-     * `Certificate` points to the current active certificate.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-certificate)
-     * @param certificate Describes the SSL/TLS certificate for the domain association. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("dba241ba2559bec2214c0d05d5c597cbd5bc0702b76b33a82125935135728c64")
-    override fun certificate(certificate: CertificateProperty.Builder.() -> Unit): Unit =
-        certificate(CertificateProperty(certificate))
 
     /**
      * The type of SSL/TLS certificate to use for your custom domain.
@@ -692,36 +551,6 @@ public open class CfnDomain(
      */
     override fun subDomainSettings(vararg subDomainSettings: Any): Unit =
         subDomainSettings(subDomainSettings.toList())
-
-    /**
-     * The status of the domain update operation that is currently in progress.
-     *
-     * The following list describes the valid update states.
-     *
-     * * **REQUESTING_CERTIFICATE** - The certificate is in the process of being updated.
-     * * **PENDING_VERIFICATION** - Indicates that an Amplify managed certificate is in the process
-     * of being verified. This occurs during the creation of a custom domain or when a custom domain is
-     * updated to use a managed certificate.
-     * * **IMPORTING_CUSTOM_CERTIFICATE** - Indicates that an Amplify custom certificate is in the
-     * process of being imported. This occurs during the creation of a custom domain or when a custom
-     * domain is updated to use a custom certificate.
-     * * **PENDING_DEPLOYMENT** - Indicates that the subdomain or certificate changes are being
-     * propagated.
-     * * **AWAITING_APP_CNAME** - Amplify is waiting for CNAME records corresponding to subdomains
-     * to be propagated. If your custom domain is on Route 53, Amplify handles this for you
-     * automatically. For more information about custom domains, see [Setting up custom
-     * domains](https://docs.aws.amazon.com/amplify/latest/userguide/custom-domains.html) in the
-     * *Amplify Hosting User Guide* .
-     * * **UPDATE_COMPLETE** - The certificate has been associated with a domain.
-     * * **UPDATE_FAILED** - The certificate has failed to be provisioned or associated, and there
-     * is no existing active certificate to roll back to.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amplify-domain.html#cfn-amplify-domain-updatestatus)
-     * @param updateStatus The status of the domain update operation that is currently in progress. 
-     */
-    override fun updateStatus(updateStatus: String) {
-      cdkBuilder.updateStatus(updateStatus)
-    }
 
     public fun build(): software.amazon.awscdk.services.amplify.CfnDomain = cdkBuilder.build()
   }

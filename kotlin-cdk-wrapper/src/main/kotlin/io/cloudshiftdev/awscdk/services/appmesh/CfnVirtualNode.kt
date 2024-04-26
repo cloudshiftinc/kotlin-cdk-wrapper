@@ -47,7 +47,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * For more information about virtual nodes, see [Virtual
  * nodes](https://docs.aws.amazon.com/app-mesh/latest/userguide/virtual_nodes.html) . You must be using
- * `1.15.0` or later of the Envoy image when setting these variables. For more information about App
+ * `1.15.0` or later of the Envoy image when setting these variables. For more information aboutApp
  * Mesh Envoy variables, see [Envoy
  * image](https://docs.aws.amazon.com/app-mesh/latest/userguide/envoy.html) in the AWS App Mesh User
  * Guide.

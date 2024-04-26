@@ -51,6 +51,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * Object policyDocument;
  * CfnTable cfnTable = CfnTable.Builder.create(this, "MyCfnTable")
  * .keySchema(List.of(KeySchemaProperty.builder()
  * .attributeName("attributeName")
@@ -125,6 +126,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .readCapacityUnits(123)
  * .writeCapacityUnits(123)
  * .build())
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .build())
  * .sseSpecification(SSESpecificationProperty.builder()
  * .sseEnabled(false)
  * // the properties below are optional
@@ -133,6 +137,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .streamSpecification(StreamSpecificationProperty.builder()
  * .streamViewType("streamViewType")
+ * // the properties below are optional
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .build())
  * .build())
  * .tableClass("tableClass")
  * .tableName("tableName")
@@ -478,6 +486,33 @@ public open class CfnTable(
   @JvmName("f76359fdd2cc9391562c12c627346dd5b270f1716c442655ba4259cf6377dcd5")
   public open fun provisionedThroughput(`value`: ProvisionedThroughputProperty.Builder.() -> Unit):
       Unit = provisionedThroughput(ProvisionedThroughputProperty(`value`))
+
+  /**
+   * A resource-based policy document that contains permissions to add to the specified table.
+   */
+  public open fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
+
+  /**
+   * A resource-based policy document that contains permissions to add to the specified table.
+   */
+  public open fun resourcePolicy(`value`: IResolvable) {
+    unwrap(this).setResourcePolicy(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * A resource-based policy document that contains permissions to add to the specified table.
+   */
+  public open fun resourcePolicy(`value`: ResourcePolicyProperty) {
+    unwrap(this).setResourcePolicy(`value`.let(ResourcePolicyProperty::unwrap))
+  }
+
+  /**
+   * A resource-based policy document that contains permissions to add to the specified table.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("08606eacfa4d59bd31a6a176c75c87a142cf509f2e116f3e127589c67b99cada")
+  public open fun resourcePolicy(`value`: ResourcePolicyProperty.Builder.() -> Unit): Unit =
+      resourcePolicy(ResourcePolicyProperty(`value`))
 
   /**
    * Specifies the settings to enable server-side encryption.
@@ -1063,6 +1098,74 @@ public open class CfnTable(
     @JvmName("2af10868690ca846d0ef0b377adf5d30a2d1e276444f5ccc298395c8896292d8")
     public
         fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
+
+    /**
+     * A resource-based policy document that contains permissions to add to the specified table.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * When you attach a resource-based policy while creating a table, the policy creation is
+     * *strongly consistent* . For information about the considerations that you should keep in mind
+     * while attaching a resource-based policy, see [Resource-based policy
+     * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy A resource-based policy document that contains permissions to add to
+     * the specified table. 
+     */
+    public fun resourcePolicy(resourcePolicy: IResolvable)
+
+    /**
+     * A resource-based policy document that contains permissions to add to the specified table.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * When you attach a resource-based policy while creating a table, the policy creation is
+     * *strongly consistent* . For information about the considerations that you should keep in mind
+     * while attaching a resource-based policy, see [Resource-based policy
+     * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy A resource-based policy document that contains permissions to add to
+     * the specified table. 
+     */
+    public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty)
+
+    /**
+     * A resource-based policy document that contains permissions to add to the specified table.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * When you attach a resource-based policy while creating a table, the policy creation is
+     * *strongly consistent* . For information about the considerations that you should keep in mind
+     * while attaching a resource-based policy, see [Resource-based policy
+     * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy A resource-based policy document that contains permissions to add to
+     * the specified table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0a78d8d20b3bf8b2664ee8129dc273fe9e78e2cc8324253d2f108f34f7327bea")
+    public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit)
 
     /**
      * Specifies the settings to enable server-side encryption.
@@ -1732,6 +1835,79 @@ public open class CfnTable(
     override
         fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
         Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
+
+    /**
+     * A resource-based policy document that contains permissions to add to the specified table.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * When you attach a resource-based policy while creating a table, the policy creation is
+     * *strongly consistent* . For information about the considerations that you should keep in mind
+     * while attaching a resource-based policy, see [Resource-based policy
+     * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy A resource-based policy document that contains permissions to add to
+     * the specified table. 
+     */
+    override fun resourcePolicy(resourcePolicy: IResolvable) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable::unwrap))
+    }
+
+    /**
+     * A resource-based policy document that contains permissions to add to the specified table.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * When you attach a resource-based policy while creating a table, the policy creation is
+     * *strongly consistent* . For information about the considerations that you should keep in mind
+     * while attaching a resource-based policy, see [Resource-based policy
+     * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy A resource-based policy document that contains permissions to add to
+     * the specified table. 
+     */
+    override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
+      cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty::unwrap))
+    }
+
+    /**
+     * A resource-based policy document that contains permissions to add to the specified table.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * When you attach a resource-based policy while creating a table, the policy creation is
+     * *strongly consistent* . For information about the considerations that you should keep in mind
+     * while attaching a resource-based policy, see [Resource-based policy
+     * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-resourcepolicy)
+     * @param resourcePolicy A resource-based policy document that contains permissions to add to
+     * the specified table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0a78d8d20b3bf8b2664ee8129dc273fe9e78e2cc8324253d2f108f34f7327bea")
+    override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit): Unit =
+        resourcePolicy(ResourcePolicyProperty(resourcePolicy))
 
     /**
      * Specifies the settings to enable server-side encryption.
@@ -4152,6 +4328,157 @@ public open class CfnTable(
   }
 
   /**
+   * Creates or updates a resource-based policy document that contains the permissions for DynamoDB
+   * resources, such as a table, its indexes, and stream.
+   *
+   * Resource-based policies let you define access permissions by specifying who has access to each
+   * resource, and the actions they are allowed to perform on each resource.
+   *
+   * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+   * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information about
+   * resource-based policies, see [Using resource-based policies for
+   * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+   * and [Resource-based policy
+   * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+   *
+   * While defining resource-based policies in your CloudFormation templates, the following
+   * considerations apply:
+   *
+   * * The maximum size supported for a resource-based policy document in JSON format is 20 KB.
+   * DynamoDB counts whitespaces when calculating the size of a policy against this limit.
+   * * Resource-based policies don't support [drift
+   * detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html#)
+   * . If you update a policy outside of the CloudFormation stack template, you'll need to update the
+   * CloudFormation stack with the changes.
+   * * Resource-based policies don't support out-of-band changes. If you add, update, or delete a
+   * policy outside of the CloudFormation template, the change won't be overwritten if there are no
+   * changes to the policy within the template.
+   *
+   * For example, say that your template contains a resource-based policy, which you later update
+   * outside of the template. If you don't make any changes to the policy in the template, the updated
+   * policy in DynamoDB won’t be synced with the policy in the template.
+   *
+   * Conversely, say that your template doesn’t contain a resource-based policy, but you add a
+   * policy outside of the template. This policy won’t be removed from DynamoDB as long as you don’t
+   * add it to the template. When you add a policy to the template and update the stack, the existing
+   * policy in DynamoDB will be updated to match the one defined in the template.
+   *
+   * For a full list of all considerations, see [Resource-based policy
+   * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * Object policyDocument;
+   * ResourcePolicyProperty resourcePolicyProperty = ResourcePolicyProperty.builder()
+   * .policyDocument(policyDocument)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-resourcepolicy.html)
+   */
+  public interface ResourcePolicyProperty {
+    /**
+     * A resource-based policy document that contains permissions to add to the specified DynamoDB
+     * table, index, or both.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-resourcepolicy.html#cfn-dynamodb-table-resourcepolicy-policydocument)
+     */
+    public fun policyDocument(): Any
+
+    /**
+     * A builder for [ResourcePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param policyDocument A resource-based policy document that contains permissions to add to
+       * the specified DynamoDB table, index, or both. 
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      public fun policyDocument(policyDocument: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty.Builder =
+          software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty.builder()
+
+      /**
+       * @param policyDocument A resource-based policy document that contains permissions to add to
+       * the specified DynamoDB table, index, or both. 
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      override fun policyDocument(policyDocument: Any) {
+        cdkBuilder.policyDocument(policyDocument)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty,
+    ) : CdkObject(cdkObject), ResourcePolicyProperty {
+      /**
+       * A resource-based policy document that contains permissions to add to the specified DynamoDB
+       * table, index, or both.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-resourcepolicy.html#cfn-dynamodb-table-resourcepolicy-policydocument)
+       */
+      override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourcePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty):
+          ResourcePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourcePolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourcePolicyProperty):
+          software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnTable.ResourcePolicyProperty
+    }
+  }
+
+  /**
    * The S3 bucket that is being imported from.
    *
    * Example:
@@ -4498,14 +4825,37 @@ public open class CfnTable(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * Object policyDocument;
    * StreamSpecificationProperty streamSpecificationProperty = StreamSpecificationProperty.builder()
    * .streamViewType("streamViewType")
+   * // the properties below are optional
+   * .resourcePolicy(ResourcePolicyProperty.builder()
+   * .policyDocument(policyDocument)
+   * .build())
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-streamspecification.html)
    */
   public interface StreamSpecificationProperty {
+    /**
+     * Creates or updates a resource-based policy document that contains the permissions for
+     * DynamoDB resources, such as a table's streams.
+     *
+     * Resource-based policies let you define access permissions by specifying who has access to
+     * each resource, and the actions they are allowed to perform on each resource.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-streamspecification.html#cfn-dynamodb-table-streamspecification-resourcepolicy)
+     */
+    public fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
+
     /**
      * When an item in the table is modified, `StreamViewType` determines what information is
      * written to the stream for this table.
@@ -4530,6 +4880,56 @@ public open class CfnTable(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param resourcePolicy Creates or updates a resource-based policy document that contains the
+       * permissions for DynamoDB resources, such as a table's streams.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      public fun resourcePolicy(resourcePolicy: IResolvable)
+
+      /**
+       * @param resourcePolicy Creates or updates a resource-based policy document that contains the
+       * permissions for DynamoDB resources, such as a table's streams.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty)
+
+      /**
+       * @param resourcePolicy Creates or updates a resource-based policy document that contains the
+       * permissions for DynamoDB resources, such as a table's streams.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6e5af203e1692b7eb47a2141fc8ac4bcb4be49470e3bee260f10498c91d806c")
+      public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit)
+
+      /**
        * @param streamViewType When an item in the table is modified, `StreamViewType` determines
        * what information is written to the stream for this table. 
        * Valid values for `StreamViewType` are:
@@ -4549,6 +4949,61 @@ public open class CfnTable(
       private val cdkBuilder:
           software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty.Builder =
           software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty.builder()
+
+      /**
+       * @param resourcePolicy Creates or updates a resource-based policy document that contains the
+       * permissions for DynamoDB resources, such as a table's streams.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      override fun resourcePolicy(resourcePolicy: IResolvable) {
+        cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourcePolicy Creates or updates a resource-based policy document that contains the
+       * permissions for DynamoDB resources, such as a table's streams.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
+        cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty::unwrap))
+      }
+
+      /**
+       * @param resourcePolicy Creates or updates a resource-based policy document that contains the
+       * permissions for DynamoDB resources, such as a table's streams.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a6e5af203e1692b7eb47a2141fc8ac4bcb4be49470e3bee260f10498c91d806c")
+      override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit): Unit =
+          resourcePolicy(ResourcePolicyProperty(resourcePolicy))
 
       /**
        * @param streamViewType When an item in the table is modified, `StreamViewType` determines
@@ -4575,6 +5030,25 @@ public open class CfnTable(
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.StreamSpecificationProperty,
     ) : CdkObject(cdkObject), StreamSpecificationProperty {
+      /**
+       * Creates or updates a resource-based policy document that contains the permissions for
+       * DynamoDB resources, such as a table's streams.
+       *
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-streamspecification.html#cfn-dynamodb-table-streamspecification-resourcepolicy)
+       */
+      override fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
+
       /**
        * When an item in the table is modified, `StreamViewType` determines what information is
        * written to the stream for this table.

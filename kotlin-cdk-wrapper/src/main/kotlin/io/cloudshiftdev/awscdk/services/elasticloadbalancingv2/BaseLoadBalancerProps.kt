@@ -28,7 +28,9 @@ import kotlin.jvm.JvmName
  * BaseLoadBalancerProps baseLoadBalancerProps = BaseLoadBalancerProps.builder()
  * .vpc(vpc)
  * // the properties below are optional
+ * .crossZoneEnabled(false)
  * .deletionProtection(false)
+ * .denyAllIgwTraffic(false)
  * .internetFacing(false)
  * .loadBalancerName("loadBalancerName")
  * .vpcSubnets(SubnetSelection.builder()
@@ -44,11 +46,29 @@ import kotlin.jvm.JvmName
  */
 public interface BaseLoadBalancerProps {
   /**
+   * Indicates whether cross-zone load balancing is enabled.
+   *
+   * Default: - false for Network Load Balancers and true for Application Load Balancers.
+   * This can not be `false` for Application Load Balancers.
+   *
+   * [Documentation]( -
+   * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+   */
+  public fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+
+  /**
    * Indicates whether deletion protection is enabled.
    *
    * Default: false
    */
   public fun deletionProtection(): Boolean? = unwrap(this).getDeletionProtection()
+
+  /**
+   * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+   *
+   * Default: - false for internet-facing load balancers and true for internal load balancers
+   */
+  public fun denyAllIgwTraffic(): Boolean? = unwrap(this).getDenyAllIgwTraffic()
 
   /**
    * Whether the load balancer has an internet-routable address.
@@ -83,9 +103,20 @@ public interface BaseLoadBalancerProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
+     */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
+
+    /**
      * @param deletionProtection Indicates whether deletion protection is enabled.
      */
     public fun deletionProtection(deletionProtection: Boolean)
+
+    /**
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW).
+     */
+    public fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean)
 
     /**
      * @param internetFacing Whether the load balancer has an internet-routable address.
@@ -121,10 +152,25 @@ public interface BaseLoadBalancerProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps.builder()
 
     /**
+     * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
+     */
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+      cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
+
+    /**
      * @param deletionProtection Indicates whether deletion protection is enabled.
      */
     override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
+    }
+
+    /**
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW).
+     */
+    override fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean) {
+      cdkBuilder.denyAllIgwTraffic(denyAllIgwTraffic)
     }
 
     /**
@@ -171,11 +217,29 @@ public interface BaseLoadBalancerProps {
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseLoadBalancerProps,
   ) : CdkObject(cdkObject), BaseLoadBalancerProps {
     /**
+     * Indicates whether cross-zone load balancing is enabled.
+     *
+     * Default: - false for Network Load Balancers and true for Application Load Balancers.
+     * This can not be `false` for Application Load Balancers.
+     *
+     * [Documentation]( -
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     */
+    override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+
+    /**
      * Indicates whether deletion protection is enabled.
      *
      * Default: false
      */
     override fun deletionProtection(): Boolean? = unwrap(this).getDeletionProtection()
+
+    /**
+     * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+     *
+     * Default: - false for internet-facing load balancers and true for internal load balancers
+     */
+    override fun denyAllIgwTraffic(): Boolean? = unwrap(this).getDenyAllIgwTraffic()
 
     /**
      * Whether the load balancer has an internet-routable address.

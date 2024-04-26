@@ -159,7 +159,11 @@ public open class KinesisEventSource(
      * * Minimum value of 60 seconds
      * * Maximum value of 7 days
      *
-     * Default: - the retention period configured on the stream
+     * The default value is -1, which sets the maximum age to infinite.
+     * When the value is set to infinite, Lambda never discards old records.
+     * Record are valid until it expires in the event source.
+     *
+     * Default: -1
      *
      * @param maxRecordAge The maximum age of a record that Lambda sends to a function for
      * processing. 
@@ -203,7 +207,11 @@ public open class KinesisEventSource(
     /**
      * Maximum number of retry attempts Valid Range: * Minimum value of 0 * Maximum value of 10000.
      *
-     * Default: - retry until the record expires
+     * The default value is -1, which sets the maximum number of retries to infinite.
+     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
+     * the record expires in the event source.
+     *
+     * Default: -1
      *
      * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
      * Maximum value of 10000. 
@@ -337,7 +345,11 @@ public open class KinesisEventSource(
      * * Minimum value of 60 seconds
      * * Maximum value of 7 days
      *
-     * Default: - the retention period configured on the stream
+     * The default value is -1, which sets the maximum age to infinite.
+     * When the value is set to infinite, Lambda never discards old records.
+     * Record are valid until it expires in the event source.
+     *
+     * Default: -1
      *
      * @param maxRecordAge The maximum age of a record that Lambda sends to a function for
      * processing. 
@@ -389,7 +401,11 @@ public open class KinesisEventSource(
     /**
      * Maximum number of retry attempts Valid Range: * Minimum value of 0 * Maximum value of 10000.
      *
-     * Default: - retry until the record expires
+     * The default value is -1, which sets the maximum number of retries to infinite.
+     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
+     * the record expires in the event source.
+     *
+     * Default: -1
      *
      * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
      * Maximum value of 10000. 

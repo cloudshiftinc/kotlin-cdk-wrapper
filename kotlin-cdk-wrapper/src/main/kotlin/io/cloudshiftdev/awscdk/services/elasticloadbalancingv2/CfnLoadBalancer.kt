@@ -937,6 +937,8 @@ public open class CfnLoadBalancer(
      *
      * * `idle_timeout.timeout_seconds` - The idle timeout value, in seconds. The valid range is
      * 1-4000 seconds. The default is 60 seconds.
+     * * `client_keep_alive.seconds` - The client keep alive value, in seconds. The valid range is
+     * 60-604800 seconds. The default is 3600 seconds.
      * * `connection_logs.s3.enabled` - Indicates whether connection logs are enabled. The value is
      * `true` or `false` . The default is `false` .
      * * `connection_logs.s3.bucket` - The name of the S3 bucket for the connection logs. This
@@ -1035,6 +1037,8 @@ public open class CfnLoadBalancer(
        *
        * * `idle_timeout.timeout_seconds` - The idle timeout value, in seconds. The valid range is
        * 1-4000 seconds. The default is 60 seconds.
+       * * `client_keep_alive.seconds` - The client keep alive value, in seconds. The valid range is
+       * 60-604800 seconds. The default is 3600 seconds.
        * * `connection_logs.s3.enabled` - Indicates whether connection logs are enabled. The value
        * is `true` or `false` . The default is `false` .
        * * `connection_logs.s3.bucket` - The name of the S3 bucket for the connection logs. This
@@ -1133,6 +1137,8 @@ public open class CfnLoadBalancer(
        *
        * * `idle_timeout.timeout_seconds` - The idle timeout value, in seconds. The valid range is
        * 1-4000 seconds. The default is 60 seconds.
+       * * `client_keep_alive.seconds` - The client keep alive value, in seconds. The valid range is
+       * 60-604800 seconds. The default is 3600 seconds.
        * * `connection_logs.s3.enabled` - Indicates whether connection logs are enabled. The value
        * is `true` or `false` . The default is `false` .
        * * `connection_logs.s3.bucket` - The name of the S3 bucket for the connection logs. This
@@ -1237,6 +1243,8 @@ public open class CfnLoadBalancer(
        *
        * * `idle_timeout.timeout_seconds` - The idle timeout value, in seconds. The valid range is
        * 1-4000 seconds. The default is 60 seconds.
+       * * `client_keep_alive.seconds` - The client keep alive value, in seconds. The valid range is
+       * 60-604800 seconds. The default is 3600 seconds.
        * * `connection_logs.s3.enabled` - Indicates whether connection logs are enabled. The value
        * is `true` or `false` . The default is `false` .
        * * `connection_logs.s3.bucket` - The name of the S3 bucket for the connection logs. This

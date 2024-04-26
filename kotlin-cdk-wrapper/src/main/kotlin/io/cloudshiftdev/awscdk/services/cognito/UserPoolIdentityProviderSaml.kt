@@ -18,41 +18,24 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.cognito.*;
- * ProviderAttribute providerAttribute;
- * UserPool userPool;
- * UserPoolIdentityProviderSamlMetadata userPoolIdentityProviderSamlMetadata;
- * UserPoolIdentityProviderSaml userPoolIdentityProviderSaml =
- * UserPoolIdentityProviderSaml.Builder.create(this, "MyUserPoolIdentityProviderSaml")
- * .metadata(userPoolIdentityProviderSamlMetadata)
- * .userPool(userPool)
- * // the properties below are optional
- * .attributeMapping(AttributeMapping.builder()
- * .address(providerAttribute)
- * .birthdate(providerAttribute)
- * .custom(Map.of(
- * "customKey", providerAttribute))
- * .email(providerAttribute)
- * .familyName(providerAttribute)
- * .fullname(providerAttribute)
- * .gender(providerAttribute)
- * .givenName(providerAttribute)
- * .lastUpdateTime(providerAttribute)
- * .locale(providerAttribute)
- * .middleName(providerAttribute)
- * .nickname(providerAttribute)
- * .phoneNumber(providerAttribute)
- * .preferredUsername(providerAttribute)
- * .profilePage(providerAttribute)
- * .profilePicture(providerAttribute)
- * .timezone(providerAttribute)
- * .website(providerAttribute)
- * .build())
- * .identifiers(List.of("identifiers"))
- * .idpSignout(false)
- * .name("name")
+ * UserPool userpool = new UserPool(this, "Pool");
+ * // specify the metadata as a file content
+ * // specify the metadata as a file content
+ * UserPoolIdentityProviderSaml.Builder.create(this, "userpoolIdpFile")
+ * .userPool(userpool)
+ * .metadata(UserPoolIdentityProviderSamlMetadata.file("my-file-contents"))
+ * // Whether to require encrypted SAML assertions from IdP
+ * .encryptedResponses(true)
+ * // The signing algorithm for the SAML requests
+ * .requestSigningAlgorithm(SigningAlgorithm.RSA_SHA256)
+ * // Enable IdP initiated SAML auth flow
+ * .idpInitiated(true)
+ * .build();
+ * // specify the metadata as a URL
+ * // specify the metadata as a URL
+ * UserPoolIdentityProviderSaml.Builder.create(this, "userpoolidpUrl")
+ * .userPool(userpool)
+ * .metadata(UserPoolIdentityProviderSamlMetadata.url("https://my-metadata-url.com"))
  * .build();
  * ```
  */
@@ -110,6 +93,16 @@ public open class UserPoolIdentityProviderSaml(
     public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit)
 
     /**
+     * Whether to require encrypted SAML assertions from IdP.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-encryption)
+     * @param encryptedResponses Whether to require encrypted SAML assertions from IdP. 
+     */
+    public fun encryptedResponses(encryptedResponses: Boolean)
+
+    /**
      * Identifiers.
      *
      * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
@@ -130,6 +123,15 @@ public open class UserPoolIdentityProviderSaml(
      * @param identifiers Identifiers. 
      */
     public fun identifiers(vararg identifiers: String)
+
+    /**
+     * Whether to enable IdP-initiated SAML auth flows.
+     *
+     * Default: false
+     *
+     * @param idpInitiated Whether to enable IdP-initiated SAML auth flows. 
+     */
+    public fun idpInitiated(idpInitiated: Boolean)
 
     /**
      * Whether to enable the "Sign-out flow" feature.
@@ -157,6 +159,16 @@ public open class UserPoolIdentityProviderSaml(
      * @param name The name of the provider. 
      */
     public fun name(name: String)
+
+    /**
+     * The signing algorithm for SAML requests.
+     *
+     * Default: - don't sign requests
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-signing)
+     * @param requestSigningAlgorithm The signing algorithm for SAML requests. 
+     */
+    public fun requestSigningAlgorithm(requestSigningAlgorithm: SigningAlgorithm)
 
     /**
      * The user pool to which this construct provides identities.
@@ -203,6 +215,18 @@ public open class UserPoolIdentityProviderSaml(
         attributeMapping(AttributeMapping(attributeMapping))
 
     /**
+     * Whether to require encrypted SAML assertions from IdP.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-encryption)
+     * @param encryptedResponses Whether to require encrypted SAML assertions from IdP. 
+     */
+    override fun encryptedResponses(encryptedResponses: Boolean) {
+      cdkBuilder.encryptedResponses(encryptedResponses)
+    }
+
+    /**
      * Identifiers.
      *
      * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
@@ -225,6 +249,17 @@ public open class UserPoolIdentityProviderSaml(
      * @param identifiers Identifiers. 
      */
     override fun identifiers(vararg identifiers: String): Unit = identifiers(identifiers.toList())
+
+    /**
+     * Whether to enable IdP-initiated SAML auth flows.
+     *
+     * Default: false
+     *
+     * @param idpInitiated Whether to enable IdP-initiated SAML auth flows. 
+     */
+    override fun idpInitiated(idpInitiated: Boolean) {
+      cdkBuilder.idpInitiated(idpInitiated)
+    }
 
     /**
      * Whether to enable the "Sign-out flow" feature.
@@ -257,6 +292,18 @@ public open class UserPoolIdentityProviderSaml(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The signing algorithm for SAML requests.
+     *
+     * Default: - don't sign requests
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-signing)
+     * @param requestSigningAlgorithm The signing algorithm for SAML requests. 
+     */
+    override fun requestSigningAlgorithm(requestSigningAlgorithm: SigningAlgorithm) {
+      cdkBuilder.requestSigningAlgorithm(requestSigningAlgorithm.let(SigningAlgorithm::unwrap))
     }
 
     /**

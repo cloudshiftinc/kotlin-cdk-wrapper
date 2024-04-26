@@ -341,6 +341,9 @@ public open class Runtime(
     public val RUBY_3_2: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.RUBY_3_2)
 
+    public val RUBY_3_3: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.RUBY_3_3)
+
     public operator fun invoke(
       name: String,
       family: RuntimeFamily,

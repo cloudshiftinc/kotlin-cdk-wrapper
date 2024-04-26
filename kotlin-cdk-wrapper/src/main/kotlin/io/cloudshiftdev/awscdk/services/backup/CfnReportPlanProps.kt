@@ -64,7 +64,7 @@ public interface CfnReportPlanProps {
   public fun reportPlanName(): String? = unwrap(this).getReportPlanName()
 
   /**
-   * A list of tags to tag your report plan.
+   * The tags to assign to your report plan.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
    */
@@ -111,12 +111,12 @@ public interface CfnReportPlanProps {
     public fun reportPlanName(reportPlanName: String)
 
     /**
-     * @param reportPlanTags A list of tags to tag your report plan.
+     * @param reportPlanTags The tags to assign to your report plan.
      */
     public fun reportPlanTags(reportPlanTags: List<CfnTag>)
 
     /**
-     * @param reportPlanTags A list of tags to tag your report plan.
+     * @param reportPlanTags The tags to assign to your report plan.
      */
     public fun reportPlanTags(vararg reportPlanTags: CfnTag)
 
@@ -163,14 +163,14 @@ public interface CfnReportPlanProps {
     }
 
     /**
-     * @param reportPlanTags A list of tags to tag your report plan.
+     * @param reportPlanTags The tags to assign to your report plan.
      */
     override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
       cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag::unwrap))
     }
 
     /**
-     * @param reportPlanTags A list of tags to tag your report plan.
+     * @param reportPlanTags The tags to assign to your report plan.
      */
     override fun reportPlanTags(vararg reportPlanTags: CfnTag): Unit =
         reportPlanTags(reportPlanTags.toList())
@@ -221,7 +221,7 @@ public interface CfnReportPlanProps {
     override fun reportPlanName(): String? = unwrap(this).getReportPlanName()
 
     /**
-     * A list of tags to tag your report plan.
+     * The tags to assign to your report plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
      */

@@ -19,7 +19,6 @@ import kotlin.String
  * .instanceTypes(List.of(new InstanceType("m5.large")))
  * .minSize(4)
  * .diskSize(100)
- * .amiType(NodegroupAmiType.AL2_X86_64_GPU)
  * .build());
  * ```
  *

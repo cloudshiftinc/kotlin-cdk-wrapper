@@ -76,9 +76,9 @@ public interface CfnLaunchConfigurationProps {
    * unless you enabled the option to assign a public IPv4 address on the subnet.
    *
    * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-   * address. For more information, see [Launching Auto Scaling instances in a
-   * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-   * Auto Scaling User Guide* .
+   * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+   * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+   * *Amazon EC2 Auto Scaling User Guide* .
    *
    * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier` when
    * you create your group.
@@ -123,7 +123,7 @@ public interface CfnLaunchConfigurationProps {
    * stack to provide optimal I/O performance. This optimization is not available with all instance
    * types. Additional fees are incurred when you enable EBS optimization for an instance type that is
    * not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
+   * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the *Amazon
    * EC2 User Guide for Linux Instances* .
    *
    * The default value is `false` .
@@ -148,7 +148,7 @@ public interface CfnLaunchConfigurationProps {
   /**
    * The ID of the Amazon Machine Image (AMI) that was assigned during registration.
    *
-   * For more information, see [Finding a Linux
+   * For more information, see [Find a Linux
    * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
    * User Guide for Linux Instances* .
    *
@@ -178,8 +178,8 @@ public interface CfnLaunchConfigurationProps {
    *
    * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and your
    * account is charged a fee. When you disable detailed monitoring, CloudWatch generates metrics every
-   * 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-   * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+   * 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+   * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
    * in the *Amazon EC2 Auto Scaling User Guide* .
    *
    *
@@ -217,7 +217,7 @@ public interface CfnLaunchConfigurationProps {
   /**
    * The name of the key pair.
    *
-   * For more information, see [Amazon EC2 key pairs and Linux
+   * For more information, see [Amazon EC2 key pairs and Amazon EC2
    * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the *Amazon
    * EC2 User Guide for Linux Instances* .
    *
@@ -237,8 +237,8 @@ public interface CfnLaunchConfigurationProps {
   /**
    * The metadata options for the instances.
    *
-   * For more information, see [Configuring the Instance Metadata
-   * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+   * For more information, see [Configure the instance metadata
+   * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
    * in the *Amazon EC2 Auto Scaling User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -251,9 +251,7 @@ public interface CfnLaunchConfigurationProps {
    * An instance with `dedicated` tenancy runs on isolated, single-tenant hardware and can only be
    * launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the
    * instance placement tenancy attribute set to `default` ), you must set the value of this property
-   * to `dedicated` . For more information, see [Configuring instance tenancy with Amazon EC2 Auto
-   * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html)
-   * in the *Amazon EC2 Auto Scaling User Guide* .
+   * to `dedicated` .
    *
    * If you specify `PlacementTenancy` , you must specify at least one subnet for
    * `VPCZoneIdentifier` when you create your group.
@@ -338,9 +336,9 @@ public interface CfnLaunchConfigurationProps {
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -356,9 +354,9 @@ public interface CfnLaunchConfigurationProps {
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -417,8 +415,8 @@ public interface CfnLaunchConfigurationProps {
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      */
@@ -431,8 +429,8 @@ public interface CfnLaunchConfigurationProps {
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      */
@@ -451,7 +449,7 @@ public interface CfnLaunchConfigurationProps {
     /**
      * @param imageId The ID of the Amazon Machine Image (AMI) that was assigned during
      * registration. 
-     * For more information, see [Finding a Linux
+     * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
      * User Guide for Linux Instances* .
      *
@@ -476,8 +474,8 @@ public interface CfnLaunchConfigurationProps {
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     public fun instanceMonitoring(instanceMonitoring: Boolean)
@@ -490,8 +488,8 @@ public interface CfnLaunchConfigurationProps {
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     public fun instanceMonitoring(instanceMonitoring: IResolvable)
@@ -518,7 +516,7 @@ public interface CfnLaunchConfigurationProps {
 
     /**
      * @param keyName The name of the key pair.
-     * For more information, see [Amazon EC2 key pairs and Linux
+     * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
      * *Amazon EC2 User Guide for Linux Instances* .
      */
@@ -532,24 +530,24 @@ public interface CfnLaunchConfigurationProps {
 
     /**
      * @param metadataOptions The metadata options for the instances.
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     public fun metadataOptions(metadataOptions: IResolvable)
 
     /**
      * @param metadataOptions The metadata options for the instances.
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     public fun metadataOptions(metadataOptions: CfnLaunchConfiguration.MetadataOptionsProperty)
 
     /**
      * @param metadataOptions The metadata options for the instances.
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -562,9 +560,7 @@ public interface CfnLaunchConfigurationProps {
      * An instance with `dedicated` tenancy runs on isolated, single-tenant hardware and can only be
      * launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the
      * instance placement tenancy attribute set to `default` ), you must set the value of this property
-     * to `dedicated` . For more information, see [Configuring instance tenancy with Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
+     * to `dedicated` .
      *
      * If you specify `PlacementTenancy` , you must specify at least one subnet for
      * `VPCZoneIdentifier` when you create your group.
@@ -649,9 +645,9 @@ public interface CfnLaunchConfigurationProps {
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -669,9 +665,9 @@ public interface CfnLaunchConfigurationProps {
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -742,8 +738,8 @@ public interface CfnLaunchConfigurationProps {
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      */
@@ -758,8 +754,8 @@ public interface CfnLaunchConfigurationProps {
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      */
@@ -782,7 +778,7 @@ public interface CfnLaunchConfigurationProps {
     /**
      * @param imageId The ID of the Amazon Machine Image (AMI) that was assigned during
      * registration. 
-     * For more information, see [Finding a Linux
+     * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
      * User Guide for Linux Instances* .
      *
@@ -811,8 +807,8 @@ public interface CfnLaunchConfigurationProps {
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun instanceMonitoring(instanceMonitoring: Boolean) {
@@ -827,8 +823,8 @@ public interface CfnLaunchConfigurationProps {
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun instanceMonitoring(instanceMonitoring: IResolvable) {
@@ -861,7 +857,7 @@ public interface CfnLaunchConfigurationProps {
 
     /**
      * @param keyName The name of the key pair.
-     * For more information, see [Amazon EC2 key pairs and Linux
+     * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
      * *Amazon EC2 User Guide for Linux Instances* .
      */
@@ -879,8 +875,8 @@ public interface CfnLaunchConfigurationProps {
 
     /**
      * @param metadataOptions The metadata options for the instances.
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun metadataOptions(metadataOptions: IResolvable) {
@@ -889,8 +885,8 @@ public interface CfnLaunchConfigurationProps {
 
     /**
      * @param metadataOptions The metadata options for the instances.
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     override fun metadataOptions(metadataOptions: CfnLaunchConfiguration.MetadataOptionsProperty) {
@@ -899,8 +895,8 @@ public interface CfnLaunchConfigurationProps {
 
     /**
      * @param metadataOptions The metadata options for the instances.
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -914,9 +910,7 @@ public interface CfnLaunchConfigurationProps {
      * An instance with `dedicated` tenancy runs on isolated, single-tenant hardware and can only be
      * launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the
      * instance placement tenancy attribute set to `default` ), you must set the value of this property
-     * to `dedicated` . For more information, see [Configuring instance tenancy with Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
+     * to `dedicated` .
      *
      * If you specify `PlacementTenancy` , you must specify at least one subnet for
      * `VPCZoneIdentifier` when you create your group.
@@ -1013,9 +1007,9 @@ public interface CfnLaunchConfigurationProps {
      * address, unless you enabled the option to assign a public IPv4 address on the subnet.
      *
      * If you specify `true` , each instance in the Auto Scaling group receives a unique public IPv4
-     * address. For more information, see [Launching Auto Scaling instances in a
-     * VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * address. For more information, see [Provide network connectivity for your Auto Scaling instances
+     * using Amazon VPC](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-in-vpc.html) in the
+     * *Amazon EC2 Auto Scaling User Guide* .
      *
      * If you specify this property, you must specify at least one subnet for `VPCZoneIdentifier`
      * when you create your group.
@@ -1060,8 +1054,8 @@ public interface CfnLaunchConfigurationProps {
      * stack to provide optimal I/O performance. This optimization is not available with all instance
      * types. Additional fees are incurred when you enable EBS optimization for an instance type that
      * is not EBS-optimized by default. For more information, see [Amazon EBS-optimized
-     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) in the *Amazon
-     * EC2 User Guide for Linux Instances* .
+     * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-optimized.html) in the
+     * *Amazon EC2 User Guide for Linux Instances* .
      *
      * The default value is `false` .
      *
@@ -1085,7 +1079,7 @@ public interface CfnLaunchConfigurationProps {
     /**
      * The ID of the Amazon Machine Image (AMI) that was assigned during registration.
      *
-     * For more information, see [Finding a Linux
+     * For more information, see [Find a Linux
      * AMI](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2
      * User Guide for Linux Instances* .
      *
@@ -1115,8 +1109,8 @@ public interface CfnLaunchConfigurationProps {
      *
      * When detailed monitoring is enabled, Amazon CloudWatch generates metrics every minute and
      * your account is charged a fee. When you disable detailed monitoring, CloudWatch generates
-     * metrics every 5 minutes. For more information, see [Configure Monitoring for Auto Scaling
-     * Instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
+     * metrics every 5 minutes. For more information, see [Configure monitoring for Auto Scaling
+     * instances](https://docs.aws.amazon.com/autoscaling/latest/userguide/enable-as-instance-metrics.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      *
@@ -1154,7 +1148,7 @@ public interface CfnLaunchConfigurationProps {
     /**
      * The name of the key pair.
      *
-     * For more information, see [Amazon EC2 key pairs and Linux
+     * For more information, see [Amazon EC2 key pairs and Amazon EC2
      * instances](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html) in the
      * *Amazon EC2 User Guide for Linux Instances* .
      *
@@ -1174,8 +1168,8 @@ public interface CfnLaunchConfigurationProps {
     /**
      * The metadata options for the instances.
      *
-     * For more information, see [Configuring the Instance Metadata
-     * Options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
+     * For more information, see [Configure the instance metadata
+     * options](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-config.html#launch-configurations-imds)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-launchconfiguration.html#cfn-autoscaling-launchconfiguration-metadataoptions)
@@ -1188,9 +1182,7 @@ public interface CfnLaunchConfigurationProps {
      * An instance with `dedicated` tenancy runs on isolated, single-tenant hardware and can only be
      * launched into a VPC. To launch dedicated instances into a shared tenancy VPC (a VPC with the
      * instance placement tenancy attribute set to `default` ), you must set the value of this property
-     * to `dedicated` . For more information, see [Configuring instance tenancy with Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/auto-scaling-dedicated-instances.html)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
+     * to `dedicated` .
      *
      * If you specify `PlacementTenancy` , you must specify at least one subnet for
      * `VPCZoneIdentifier` when you create your group.

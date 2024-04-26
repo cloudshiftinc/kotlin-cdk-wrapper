@@ -15,12 +15,23 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * MultipartUserData multipartUserData = new MultipartUserData();
- * UserData commandsUserData = UserData.forLinux();
- * multipartUserData.addUserDataPart(commandsUserData, MultipartBody.SHELL_SCRIPT, true);
- * // Adding commands to the multipartUserData adds them to commandsUserData, and vice-versa.
- * multipartUserData.addCommands("touch /root/multi.txt");
- * commandsUserData.addCommands("touch /root/userdata.txt");
+ * Cluster cluster;
+ * UserData userData = UserData.forLinux();
+ * userData.addCommands("set -o xtrace", String.format("/etc/eks/bootstrap.sh %s",
+ * cluster.getClusterName()));
+ * CfnLaunchTemplate lt = CfnLaunchTemplate.Builder.create(this, "LaunchTemplate")
+ * .launchTemplateData(LaunchTemplateDataProperty.builder()
+ * .imageId("some-ami-id") // custom AMI
+ * .instanceType("t3.small")
+ * .userData(Fn.base64(userData.render()))
+ * .build())
+ * .build();
+ * cluster.addNodegroupCapacity("extra-ng", NodegroupOptions.builder()
+ * .launchTemplateSpec(LaunchTemplateSpec.builder()
+ * .id(lt.getRef())
+ * .version(lt.getAttrLatestVersionNumber())
+ * .build())
+ * .build());
  * ```
  */
 public abstract class UserData(

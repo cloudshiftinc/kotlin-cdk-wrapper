@@ -35,6 +35,7 @@ import kotlin.collections.List
  * .multiRegion(false)
  * .origin("origin")
  * .pendingWindowInDays(123)
+ * .rotationPeriodInDays(123)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -364,6 +365,17 @@ public interface CfnKeyProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-pendingwindowindays)
    */
   public fun pendingWindowInDays(): Number? = unwrap(this).getPendingWindowInDays()
+
+  /**
+   * The number of days between each automatic rotation.
+   *
+   * The default value is 365 days.
+   *
+   * Default: - 365
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-rotationperiodindays)
+   */
+  public fun rotationPeriodInDays(): Number? = unwrap(this).getRotationPeriodInDays()
 
   /**
    * Assigns one or more tags to the replica key.
@@ -774,6 +786,12 @@ public interface CfnKeyProps {
      * Management Service Developer Guide* .
      */
     public fun pendingWindowInDays(pendingWindowInDays: Number)
+
+    /**
+     * @param rotationPeriodInDays The number of days between each automatic rotation.
+     * The default value is 365 days.
+     */
+    public fun rotationPeriodInDays(rotationPeriodInDays: Number)
 
     /**
      * @param tags Assigns one or more tags to the replica key.
@@ -1227,6 +1245,14 @@ public interface CfnKeyProps {
     }
 
     /**
+     * @param rotationPeriodInDays The number of days between each automatic rotation.
+     * The default value is 365 days.
+     */
+    override fun rotationPeriodInDays(rotationPeriodInDays: Number) {
+      cdkBuilder.rotationPeriodInDays(rotationPeriodInDays)
+    }
+
+    /**
      * @param tags Assigns one or more tags to the replica key.
      *
      * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see
@@ -1590,6 +1616,17 @@ public interface CfnKeyProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-pendingwindowindays)
      */
     override fun pendingWindowInDays(): Number? = unwrap(this).getPendingWindowInDays()
+
+    /**
+     * The number of days between each automatic rotation.
+     *
+     * The default value is 365 days.
+     *
+     * Default: - 365
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-rotationperiodindays)
+     */
+    override fun rotationPeriodInDays(): Number? = unwrap(this).getRotationPeriodInDays()
 
     /**
      * Assigns one or more tags to the replica key.

@@ -99,14 +99,12 @@ public open class CfnFlowLog(
   }
 
   /**
-   * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log
-   * group in your account.
+   * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
    */
   public open fun deliverLogsPermissionArn(): String? = unwrap(this).getDeliverLogsPermissionArn()
 
   /**
-   * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log
-   * group in your account.
+   * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
    */
   public open fun deliverLogsPermissionArn(`value`: String) {
     unwrap(this).setDeliverLogsPermissionArn(`value`)
@@ -114,15 +112,11 @@ public open class CfnFlowLog(
 
   /**
    * The destination options.
-   *
-   * The following options are supported:.
    */
   public open fun destinationOptions(): Any? = unwrap(this).getDestinationOptions()
 
   /**
    * The destination options.
-   *
-   * The following options are supported:.
    */
   public open fun destinationOptions(`value`: Any) {
     unwrap(this).setDestinationOptions(`value`)
@@ -279,30 +273,23 @@ public open class CfnFlowLog(
     public fun deliverCrossAccountRole(deliverCrossAccountRole: String)
 
     /**
-     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log
-     * group in your account.
+     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
      *
-     * This parameter is required if the destination type is `cloud-watch-logs` and unsupported
-     * otherwise.
+     * This parameter is required if the destination type is `cloud-watch-logs` , or if the
+     * destination type is `kinesis-data-firehose` and the delivery stream and the resources to monitor
+     * are in different accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-deliverlogspermissionarn)
      * @param deliverLogsPermissionArn The ARN of the IAM role that allows Amazon EC2 to publish
-     * flow logs to a CloudWatch Logs log group in your account. 
+     * flow logs to the log destination. 
      */
     public fun deliverLogsPermissionArn(deliverLogsPermissionArn: String)
 
     /**
-     * The destination options. The following options are supported:.
-     *
-     * * `FileFormat` - The format for the flow log ( `plain-text` | `parquet` ). The default is
-     * `plain-text` .
-     * * `HiveCompatiblePartitions` - Indicates whether to use Hive-compatible prefixes for flow
-     * logs stored in Amazon S3 ( `true` | `false` ). The default is `false` .
-     * * `PerHourPartition` - Indicates whether to partition the flow log per hour ( `true` |
-     * `false` ). The default is `false` .
+     * The destination options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-destinationoptions)
-     * @param destinationOptions The destination options. The following options are supported:. 
+     * @param destinationOptions The destination options. 
      */
     public fun destinationOptions(destinationOptions: Any)
 
@@ -461,32 +448,25 @@ public open class CfnFlowLog(
     }
 
     /**
-     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log
-     * group in your account.
+     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
      *
-     * This parameter is required if the destination type is `cloud-watch-logs` and unsupported
-     * otherwise.
+     * This parameter is required if the destination type is `cloud-watch-logs` , or if the
+     * destination type is `kinesis-data-firehose` and the delivery stream and the resources to monitor
+     * are in different accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-deliverlogspermissionarn)
      * @param deliverLogsPermissionArn The ARN of the IAM role that allows Amazon EC2 to publish
-     * flow logs to a CloudWatch Logs log group in your account. 
+     * flow logs to the log destination. 
      */
     override fun deliverLogsPermissionArn(deliverLogsPermissionArn: String) {
       cdkBuilder.deliverLogsPermissionArn(deliverLogsPermissionArn)
     }
 
     /**
-     * The destination options. The following options are supported:.
-     *
-     * * `FileFormat` - The format for the flow log ( `plain-text` | `parquet` ). The default is
-     * `plain-text` .
-     * * `HiveCompatiblePartitions` - Indicates whether to use Hive-compatible prefixes for flow
-     * logs stored in Amazon S3 ( `true` | `false` ). The default is `false` .
-     * * `PerHourPartition` - Indicates whether to partition the flow log per hour ( `true` |
-     * `false` ). The default is `false` .
+     * The destination options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-destinationoptions)
-     * @param destinationOptions The destination options. The following options are supported:. 
+     * @param destinationOptions The destination options. 
      */
     override fun destinationOptions(destinationOptions: Any) {
       cdkBuilder.destinationOptions(destinationOptions)

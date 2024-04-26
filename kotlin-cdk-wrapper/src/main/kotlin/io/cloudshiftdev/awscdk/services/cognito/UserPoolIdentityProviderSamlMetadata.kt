@@ -11,11 +11,25 @@ import kotlin.String
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.cognito.*;
- * UserPoolIdentityProviderSamlMetadata userPoolIdentityProviderSamlMetadata =
- * UserPoolIdentityProviderSamlMetadata.file("fileContent");
+ * UserPool userpool = new UserPool(this, "Pool");
+ * // specify the metadata as a file content
+ * // specify the metadata as a file content
+ * UserPoolIdentityProviderSaml.Builder.create(this, "userpoolIdpFile")
+ * .userPool(userpool)
+ * .metadata(UserPoolIdentityProviderSamlMetadata.file("my-file-contents"))
+ * // Whether to require encrypted SAML assertions from IdP
+ * .encryptedResponses(true)
+ * // The signing algorithm for the SAML requests
+ * .requestSigningAlgorithm(SigningAlgorithm.RSA_SHA256)
+ * // Enable IdP initiated SAML auth flow
+ * .idpInitiated(true)
+ * .build();
+ * // specify the metadata as a URL
+ * // specify the metadata as a URL
+ * UserPoolIdentityProviderSaml.Builder.create(this, "userpoolidpUrl")
+ * .userPool(userpool)
+ * .metadata(UserPoolIdentityProviderSamlMetadata.url("https://my-metadata-url.com"))
+ * .build();
  * ```
  */
 public open class UserPoolIdentityProviderSamlMetadata(

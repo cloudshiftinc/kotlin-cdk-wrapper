@@ -5,10 +5,14 @@ package io.cloudshiftdev.awscdk.services.appconfig
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggableV2
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -32,7 +36,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * Create an application
  * * Create an environment
  * * Create a configuration profile
- * * Create a deployment strategy
+ * * Choose a pre-defined deployment strategy or create your own
  * * Deploy the configuration
  *
  * For more information, see [AWS
@@ -53,6 +57,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .environmentId("environmentId")
  * // the properties below are optional
  * .description("description")
+ * .dynamicExtensionParameters(List.of(DynamicExtensionParametersProperty.builder()
+ * .extensionReference("extensionReference")
+ * .parameterName("parameterName")
+ * .parameterValue("parameterValue")
+ * .build()))
  * .kmsKeyIdentifier("kmsKeyIdentifier")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -154,6 +163,35 @@ public open class CfnDeployment(
   }
 
   /**
+   * A map of dynamic extension parameter names to values to pass to associated extensions with
+   * `PRE_START_DEPLOYMENT` actions.
+   */
+  public open fun dynamicExtensionParameters(): Any? = unwrap(this).getDynamicExtensionParameters()
+
+  /**
+   * A map of dynamic extension parameter names to values to pass to associated extensions with
+   * `PRE_START_DEPLOYMENT` actions.
+   */
+  public open fun dynamicExtensionParameters(`value`: IResolvable) {
+    unwrap(this).setDynamicExtensionParameters(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * A map of dynamic extension parameter names to values to pass to associated extensions with
+   * `PRE_START_DEPLOYMENT` actions.
+   */
+  public open fun dynamicExtensionParameters(`value`: List<Any>) {
+    unwrap(this).setDynamicExtensionParameters(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * A map of dynamic extension parameter names to values to pass to associated extensions with
+   * `PRE_START_DEPLOYMENT` actions.
+   */
+  public open fun dynamicExtensionParameters(vararg `value`: Any): Unit =
+      dynamicExtensionParameters(`value`.toList())
+
+  /**
    * The environment ID.
    */
   public open fun environmentId(): String = unwrap(this).getEnvironmentId()
@@ -253,6 +291,36 @@ public open class CfnDeployment(
      * @param description A description of the deployment. 
      */
     public fun description(description: String)
+
+    /**
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * `PRE_START_DEPLOYMENT` actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-dynamicextensionparameters)
+     * @param dynamicExtensionParameters A map of dynamic extension parameter names to values to
+     * pass to associated extensions with `PRE_START_DEPLOYMENT` actions. 
+     */
+    public fun dynamicExtensionParameters(dynamicExtensionParameters: IResolvable)
+
+    /**
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * `PRE_START_DEPLOYMENT` actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-dynamicextensionparameters)
+     * @param dynamicExtensionParameters A map of dynamic extension parameter names to values to
+     * pass to associated extensions with `PRE_START_DEPLOYMENT` actions. 
+     */
+    public fun dynamicExtensionParameters(dynamicExtensionParameters: List<Any>)
+
+    /**
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * `PRE_START_DEPLOYMENT` actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-dynamicextensionparameters)
+     * @param dynamicExtensionParameters A map of dynamic extension parameter names to values to
+     * pass to associated extensions with `PRE_START_DEPLOYMENT` actions. 
+     */
+    public fun dynamicExtensionParameters(vararg dynamicExtensionParameters: Any)
 
     /**
      * The environment ID.
@@ -357,6 +425,41 @@ public open class CfnDeployment(
     }
 
     /**
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * `PRE_START_DEPLOYMENT` actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-dynamicextensionparameters)
+     * @param dynamicExtensionParameters A map of dynamic extension parameter names to values to
+     * pass to associated extensions with `PRE_START_DEPLOYMENT` actions. 
+     */
+    override fun dynamicExtensionParameters(dynamicExtensionParameters: IResolvable) {
+      cdkBuilder.dynamicExtensionParameters(dynamicExtensionParameters.let(IResolvable::unwrap))
+    }
+
+    /**
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * `PRE_START_DEPLOYMENT` actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-dynamicextensionparameters)
+     * @param dynamicExtensionParameters A map of dynamic extension parameter names to values to
+     * pass to associated extensions with `PRE_START_DEPLOYMENT` actions. 
+     */
+    override fun dynamicExtensionParameters(dynamicExtensionParameters: List<Any>) {
+      cdkBuilder.dynamicExtensionParameters(dynamicExtensionParameters.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * A map of dynamic extension parameter names to values to pass to associated extensions with
+     * `PRE_START_DEPLOYMENT` actions.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-dynamicextensionparameters)
+     * @param dynamicExtensionParameters A map of dynamic extension parameter names to values to
+     * pass to associated extensions with `PRE_START_DEPLOYMENT` actions. 
+     */
+    override fun dynamicExtensionParameters(vararg dynamicExtensionParameters: Any): Unit =
+        dynamicExtensionParameters(dynamicExtensionParameters.toList())
+
+    /**
      * The environment ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appconfig-deployment.html#cfn-appconfig-deployment-environmentid)
@@ -424,5 +527,146 @@ public open class CfnDeployment(
     internal fun unwrap(wrapped: CfnDeployment):
         software.amazon.awscdk.services.appconfig.CfnDeployment = wrapped.cdkObject as
         software.amazon.awscdk.services.appconfig.CfnDeployment
+  }
+
+  /**
+   * A map of dynamic extension parameter names to values to pass to associated extensions with
+   * `PRE_START_DEPLOYMENT` actions.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.appconfig.*;
+   * DynamicExtensionParametersProperty dynamicExtensionParametersProperty =
+   * DynamicExtensionParametersProperty.builder()
+   * .extensionReference("extensionReference")
+   * .parameterName("parameterName")
+   * .parameterValue("parameterValue")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-dynamicextensionparameters.html)
+   */
+  public interface DynamicExtensionParametersProperty {
+    /**
+     * The ARN or ID of the extension for which you are inserting a dynamic parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-dynamicextensionparameters.html#cfn-appconfig-deployment-dynamicextensionparameters-extensionreference)
+     */
+    public fun extensionReference(): String? = unwrap(this).getExtensionReference()
+
+    /**
+     * The parameter name.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-dynamicextensionparameters.html#cfn-appconfig-deployment-dynamicextensionparameters-parametername)
+     */
+    public fun parameterName(): String? = unwrap(this).getParameterName()
+
+    /**
+     * The parameter value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-dynamicextensionparameters.html#cfn-appconfig-deployment-dynamicextensionparameters-parametervalue)
+     */
+    public fun parameterValue(): String? = unwrap(this).getParameterValue()
+
+    /**
+     * A builder for [DynamicExtensionParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param extensionReference The ARN or ID of the extension for which you are inserting a
+       * dynamic parameter.
+       */
+      public fun extensionReference(extensionReference: String)
+
+      /**
+       * @param parameterName The parameter name.
+       */
+      public fun parameterName(parameterName: String)
+
+      /**
+       * @param parameterValue The parameter value.
+       */
+      public fun parameterValue(parameterValue: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty.builder()
+
+      /**
+       * @param extensionReference The ARN or ID of the extension for which you are inserting a
+       * dynamic parameter.
+       */
+      override fun extensionReference(extensionReference: String) {
+        cdkBuilder.extensionReference(extensionReference)
+      }
+
+      /**
+       * @param parameterName The parameter name.
+       */
+      override fun parameterName(parameterName: String) {
+        cdkBuilder.parameterName(parameterName)
+      }
+
+      /**
+       * @param parameterValue The parameter value.
+       */
+      override fun parameterValue(parameterValue: String) {
+        cdkBuilder.parameterValue(parameterValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty,
+    ) : CdkObject(cdkObject), DynamicExtensionParametersProperty {
+      /**
+       * The ARN or ID of the extension for which you are inserting a dynamic parameter.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-dynamicextensionparameters.html#cfn-appconfig-deployment-dynamicextensionparameters-extensionreference)
+       */
+      override fun extensionReference(): String? = unwrap(this).getExtensionReference()
+
+      /**
+       * The parameter name.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-dynamicextensionparameters.html#cfn-appconfig-deployment-dynamicextensionparameters-parametername)
+       */
+      override fun parameterName(): String? = unwrap(this).getParameterName()
+
+      /**
+       * The parameter value.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-deployment-dynamicextensionparameters.html#cfn-appconfig-deployment-dynamicextensionparameters-parametervalue)
+       */
+      override fun parameterValue(): String? = unwrap(this).getParameterValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DynamicExtensionParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty):
+          DynamicExtensionParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DynamicExtensionParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DynamicExtensionParametersProperty):
+          software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.appconfig.CfnDeployment.DynamicExtensionParametersProperty
+    }
   }
 }

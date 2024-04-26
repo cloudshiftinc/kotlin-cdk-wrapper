@@ -1657,8 +1657,7 @@ public open class CfnIndex(
      * Indicates that this field determines how "fresh" a document is.
      *
      * For example, if document 1 was created on November 5, and document 2 was created on October
-     * 31, document 1 is "fresher" than document 2. You can only set the `Freshness` field on one
-     * `DATE` type field. Only applies to `DATE` fields.
+     * 31, document 1 is "fresher" than document 2. Only applies to `DATE` fields.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-freshness)
      */
@@ -1682,7 +1681,7 @@ public open class CfnIndex(
      * When the `RankOrder` field is `DESCENDING` , lower numbers are better. For example, in a task
      * tracking application, a priority 1 task is more important than a priority 5 task.
      *
-     * Only applies to `LONG` and `DOUBLE` fields.
+     * Only applies to `LONG` fields.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-rankorder)
      */
@@ -1723,16 +1722,14 @@ public open class CfnIndex(
       /**
        * @param freshness Indicates that this field determines how "fresh" a document is.
        * For example, if document 1 was created on November 5, and document 2 was created on October
-       * 31, document 1 is "fresher" than document 2. You can only set the `Freshness` field on one
-       * `DATE` type field. Only applies to `DATE` fields.
+       * 31, document 1 is "fresher" than document 2. Only applies to `DATE` fields.
        */
       public fun freshness(freshness: Boolean)
 
       /**
        * @param freshness Indicates that this field determines how "fresh" a document is.
        * For example, if document 1 was created on November 5, and document 2 was created on October
-       * 31, document 1 is "fresher" than document 2. You can only set the `Freshness` field on one
-       * `DATE` type field. Only applies to `DATE` fields.
+       * 31, document 1 is "fresher" than document 2. Only applies to `DATE` fields.
        */
       public fun freshness(freshness: IResolvable)
 
@@ -1750,7 +1747,7 @@ public open class CfnIndex(
        * When the `RankOrder` field is `DESCENDING` , lower numbers are better. For example, in a
        * task tracking application, a priority 1 task is more important than a priority 5 task.
        *
-       * Only applies to `LONG` and `DOUBLE` fields.
+       * Only applies to `LONG` fields.
        */
       public fun rankOrder(rankOrder: String)
 
@@ -1816,8 +1813,7 @@ public open class CfnIndex(
       /**
        * @param freshness Indicates that this field determines how "fresh" a document is.
        * For example, if document 1 was created on November 5, and document 2 was created on October
-       * 31, document 1 is "fresher" than document 2. You can only set the `Freshness` field on one
-       * `DATE` type field. Only applies to `DATE` fields.
+       * 31, document 1 is "fresher" than document 2. Only applies to `DATE` fields.
        */
       override fun freshness(freshness: Boolean) {
         cdkBuilder.freshness(freshness)
@@ -1826,8 +1822,7 @@ public open class CfnIndex(
       /**
        * @param freshness Indicates that this field determines how "fresh" a document is.
        * For example, if document 1 was created on November 5, and document 2 was created on October
-       * 31, document 1 is "fresher" than document 2. You can only set the `Freshness` field on one
-       * `DATE` type field. Only applies to `DATE` fields.
+       * 31, document 1 is "fresher" than document 2. Only applies to `DATE` fields.
        */
       override fun freshness(freshness: IResolvable) {
         cdkBuilder.freshness(freshness.let(IResolvable::unwrap))
@@ -1849,7 +1844,7 @@ public open class CfnIndex(
        * When the `RankOrder` field is `DESCENDING` , lower numbers are better. For example, in a
        * task tracking application, a priority 1 task is more important than a priority 5 task.
        *
-       * Only applies to `LONG` and `DOUBLE` fields.
+       * Only applies to `LONG` fields.
        */
       override fun rankOrder(rankOrder: String) {
         cdkBuilder.rankOrder(rankOrder)
@@ -1925,8 +1920,7 @@ public open class CfnIndex(
        * Indicates that this field determines how "fresh" a document is.
        *
        * For example, if document 1 was created on November 5, and document 2 was created on October
-       * 31, document 1 is "fresher" than document 2. You can only set the `Freshness` field on one
-       * `DATE` type field. Only applies to `DATE` fields.
+       * 31, document 1 is "fresher" than document 2. Only applies to `DATE` fields.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-freshness)
        */
@@ -1950,7 +1944,7 @@ public open class CfnIndex(
        * When the `RankOrder` field is `DESCENDING` , lower numbers are better. For example, in a
        * task tracking application, a priority 1 task is more important than a priority 5 task.
        *
-       * Only applies to `LONG` and `DOUBLE` fields.
+       * Only applies to `LONG` fields.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-index-relevance.html#cfn-kendra-index-relevance-rankorder)
        */

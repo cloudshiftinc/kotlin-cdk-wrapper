@@ -99,7 +99,7 @@ public interface CfnNetworkInterfaceProps {
   public fun enablePrimaryIpv6(): Any? = unwrap(this).getEnablePrimaryIpv6()
 
   /**
-   * The security group IDs associated with this network interface.
+   * The IDs of the security groups associated with this network interface.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-groupset)
    */
@@ -137,7 +137,7 @@ public interface CfnNetworkInterfaceProps {
   public fun ipv4Prefixes(): Any? = unwrap(this).getIpv4Prefixes()
 
   /**
-   * The number of IPv6 addresses to assign to a network interface.
+   * The number of IPv6 addresses to assign to the network interface.
    *
    * Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify specific
    * IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property.
@@ -151,8 +151,8 @@ public interface CfnNetworkInterfaceProps {
   public fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
 
   /**
-   * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to associate
-   * with the network interface.
+   * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+   * interface.
    *
    * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and don't
    * specify this property.
@@ -186,17 +186,16 @@ public interface CfnNetworkInterfaceProps {
   public fun ipv6Prefixes(): Any? = unwrap(this).getIpv6Prefixes()
 
   /**
-   * Assigns a single private IP address to the network interface, which is used as the primary
-   * private IP address.
+   * The private IPv4 address to assign to the network interface as the primary private IP address.
    *
-   * If you want to specify multiple private IP address, use the `PrivateIpAddresses` property.
+   * If you want to specify multiple private IP addresses, use the `PrivateIpAddresses` property.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddress)
    */
   public fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
   /**
-   * Assigns private IP addresses to the network interface.
+   * The private IPv4 addresses to assign to the network interface.
    *
    * You can specify a primary private IP address by setting the value of the `Primary` property to
    * `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically assign
@@ -247,7 +246,7 @@ public interface CfnNetworkInterfaceProps {
   public fun subnetId(): String
 
   /**
-   * An arbitrary set of tags (key-value pairs) for this network interface.
+   * The tags to apply to the network interface.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-tags)
    */
@@ -316,12 +315,12 @@ public interface CfnNetworkInterfaceProps {
     public fun enablePrimaryIpv6(enablePrimaryIpv6: IResolvable)
 
     /**
-     * @param groupSet The security group IDs associated with this network interface.
+     * @param groupSet The IDs of the security groups associated with this network interface.
      */
     public fun groupSet(groupSet: List<String>)
 
     /**
-     * @param groupSet The security group IDs associated with this network interface.
+     * @param groupSet The IDs of the security groups associated with this network interface.
      */
     public fun groupSet(vararg groupSet: String)
 
@@ -365,7 +364,7 @@ public interface CfnNetworkInterfaceProps {
     public fun ipv4Prefixes(vararg ipv4Prefixes: Any)
 
     /**
-     * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface.
+     * @param ipv6AddressCount The number of IPv6 addresses to assign to the network interface.
      * Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify
      * specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property.
      *
@@ -376,8 +375,8 @@ public interface CfnNetworkInterfaceProps {
     public fun ipv6AddressCount(ipv6AddressCount: Number)
 
     /**
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface.
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface.
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
      *
@@ -388,8 +387,8 @@ public interface CfnNetworkInterfaceProps {
     public fun ipv6Addresses(ipv6Addresses: IResolvable)
 
     /**
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface.
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface.
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
      *
@@ -400,8 +399,8 @@ public interface CfnNetworkInterfaceProps {
     public fun ipv6Addresses(ipv6Addresses: List<Any>)
 
     /**
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface.
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface.
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
      *
@@ -442,14 +441,14 @@ public interface CfnNetworkInterfaceProps {
     public fun ipv6Prefixes(vararg ipv6Prefixes: Any)
 
     /**
-     * @param privateIpAddress Assigns a single private IP address to the network interface, which
-     * is used as the primary private IP address.
-     * If you want to specify multiple private IP address, use the `PrivateIpAddresses` property.
+     * @param privateIpAddress The private IPv4 address to assign to the network interface as the
+     * primary private IP address.
+     * If you want to specify multiple private IP addresses, use the `PrivateIpAddresses` property.
      */
     public fun privateIpAddress(privateIpAddress: String)
 
     /**
-     * @param privateIpAddresses Assigns private IP addresses to the network interface.
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
      * assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not
@@ -462,7 +461,7 @@ public interface CfnNetworkInterfaceProps {
     public fun privateIpAddresses(privateIpAddresses: IResolvable)
 
     /**
-     * @param privateIpAddresses Assigns private IP addresses to the network interface.
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
      * assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not
@@ -475,7 +474,7 @@ public interface CfnNetworkInterfaceProps {
     public fun privateIpAddresses(privateIpAddresses: List<Any>)
 
     /**
-     * @param privateIpAddresses Assigns private IP addresses to the network interface.
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
      * assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not
@@ -524,12 +523,12 @@ public interface CfnNetworkInterfaceProps {
     public fun subnetId(subnetId: String)
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface.
+     * @param tags The tags to apply to the network interface.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface.
+     * @param tags The tags to apply to the network interface.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -608,14 +607,14 @@ public interface CfnNetworkInterfaceProps {
     }
 
     /**
-     * @param groupSet The security group IDs associated with this network interface.
+     * @param groupSet The IDs of the security groups associated with this network interface.
      */
     override fun groupSet(groupSet: List<String>) {
       cdkBuilder.groupSet(groupSet)
     }
 
     /**
-     * @param groupSet The security group IDs associated with this network interface.
+     * @param groupSet The IDs of the security groups associated with this network interface.
      */
     override fun groupSet(vararg groupSet: String): Unit = groupSet(groupSet.toList())
 
@@ -667,7 +666,7 @@ public interface CfnNetworkInterfaceProps {
     override fun ipv4Prefixes(vararg ipv4Prefixes: Any): Unit = ipv4Prefixes(ipv4Prefixes.toList())
 
     /**
-     * @param ipv6AddressCount The number of IPv6 addresses to assign to a network interface.
+     * @param ipv6AddressCount The number of IPv6 addresses to assign to the network interface.
      * Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify
      * specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property.
      *
@@ -680,8 +679,8 @@ public interface CfnNetworkInterfaceProps {
     }
 
     /**
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface.
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface.
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
      *
@@ -694,8 +693,8 @@ public interface CfnNetworkInterfaceProps {
     }
 
     /**
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface.
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface.
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
      *
@@ -708,8 +707,8 @@ public interface CfnNetworkInterfaceProps {
     }
 
     /**
-     * @param ipv6Addresses One or more specific IPv6 addresses from the IPv6 CIDR block range of
-     * your subnet to associate with the network interface.
+     * @param ipv6Addresses The IPv6 addresses from the IPv6 CIDR block range of your subnet to
+     * assign to the network interface.
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
      *
@@ -757,16 +756,16 @@ public interface CfnNetworkInterfaceProps {
     override fun ipv6Prefixes(vararg ipv6Prefixes: Any): Unit = ipv6Prefixes(ipv6Prefixes.toList())
 
     /**
-     * @param privateIpAddress Assigns a single private IP address to the network interface, which
-     * is used as the primary private IP address.
-     * If you want to specify multiple private IP address, use the `PrivateIpAddresses` property.
+     * @param privateIpAddress The private IPv4 address to assign to the network interface as the
+     * primary private IP address.
+     * If you want to specify multiple private IP addresses, use the `PrivateIpAddresses` property.
      */
     override fun privateIpAddress(privateIpAddress: String) {
       cdkBuilder.privateIpAddress(privateIpAddress)
     }
 
     /**
-     * @param privateIpAddresses Assigns private IP addresses to the network interface.
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
      * assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not
@@ -781,7 +780,7 @@ public interface CfnNetworkInterfaceProps {
     }
 
     /**
-     * @param privateIpAddresses Assigns private IP addresses to the network interface.
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
      * assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not
@@ -796,7 +795,7 @@ public interface CfnNetworkInterfaceProps {
     }
 
     /**
-     * @param privateIpAddresses Assigns private IP addresses to the network interface.
+     * @param privateIpAddresses The private IPv4 addresses to assign to the network interface.
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
      * assign private IP addresses, use the `SecondaryPrivateIpAddressCount` property and do not
@@ -854,14 +853,14 @@ public interface CfnNetworkInterfaceProps {
     }
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface.
+     * @param tags The tags to apply to the network interface.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
     }
 
     /**
-     * @param tags An arbitrary set of tags (key-value pairs) for this network interface.
+     * @param tags The tags to apply to the network interface.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -906,7 +905,7 @@ public interface CfnNetworkInterfaceProps {
     override fun enablePrimaryIpv6(): Any? = unwrap(this).getEnablePrimaryIpv6()
 
     /**
-     * The security group IDs associated with this network interface.
+     * The IDs of the security groups associated with this network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-groupset)
      */
@@ -944,7 +943,7 @@ public interface CfnNetworkInterfaceProps {
     override fun ipv4Prefixes(): Any? = unwrap(this).getIpv4Prefixes()
 
     /**
-     * The number of IPv6 addresses to assign to a network interface.
+     * The number of IPv6 addresses to assign to the network interface.
      *
      * Amazon EC2 automatically selects the IPv6 addresses from the subnet range. To specify
      * specific IPv6 addresses, use the `Ipv6Addresses` property and don't specify this property.
@@ -958,8 +957,8 @@ public interface CfnNetworkInterfaceProps {
     override fun ipv6AddressCount(): Number? = unwrap(this).getIpv6AddressCount()
 
     /**
-     * One or more specific IPv6 addresses from the IPv6 CIDR block range of your subnet to
-     * associate with the network interface.
+     * The IPv6 addresses from the IPv6 CIDR block range of your subnet to assign to the network
+     * interface.
      *
      * If you're specifying a number of IPv6 addresses, use the `Ipv6AddressCount` property and
      * don't specify this property.
@@ -994,17 +993,17 @@ public interface CfnNetworkInterfaceProps {
     override fun ipv6Prefixes(): Any? = unwrap(this).getIpv6Prefixes()
 
     /**
-     * Assigns a single private IP address to the network interface, which is used as the primary
-     * private IP address.
+     * The private IPv4 address to assign to the network interface as the primary private IP
+     * address.
      *
-     * If you want to specify multiple private IP address, use the `PrivateIpAddresses` property.
+     * If you want to specify multiple private IP addresses, use the `PrivateIpAddresses` property.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-privateipaddress)
      */
     override fun privateIpAddress(): String? = unwrap(this).getPrivateIpAddress()
 
     /**
-     * Assigns private IP addresses to the network interface.
+     * The private IPv4 addresses to assign to the network interface.
      *
      * You can specify a primary private IP address by setting the value of the `Primary` property
      * to `true` in the `PrivateIpAddressSpecification` property. If you want EC2 to automatically
@@ -1055,7 +1054,7 @@ public interface CfnNetworkInterfaceProps {
     override fun subnetId(): String = unwrap(this).getSubnetId()
 
     /**
-     * An arbitrary set of tags (key-value pairs) for this network interface.
+     * The tags to apply to the network interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-networkinterface.html#cfn-ec2-networkinterface-tags)
      */

@@ -230,9 +230,8 @@ public interface CfnTrailProps {
   /**
    * Specifies the name of the Amazon S3 bucket designated for publishing log files.
    *
-   * See [Amazon S3 Bucket Naming
-   * Requirements](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html)
-   * .
+   * See [Amazon S3 Bucket naming
+   * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname)
    */
@@ -243,7 +242,7 @@ public interface CfnTrailProps {
    * for log file delivery.
    *
    * For more information, see [Finding Your CloudTrail Log
-   * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html)
+   * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files)
    * . The maximum length is 200 characters.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix)
@@ -549,9 +548,8 @@ public interface CfnTrailProps {
     /**
      * @param s3BucketName Specifies the name of the Amazon S3 bucket designated for publishing log
      * files. 
-     * See [Amazon S3 Bucket Naming
-     * Requirements](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html)
-     * .
+     * See [Amazon S3 Bucket naming
+     * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
      */
     public fun s3BucketName(s3BucketName: String)
 
@@ -559,7 +557,7 @@ public interface CfnTrailProps {
      * @param s3KeyPrefix Specifies the Amazon S3 key prefix that comes after the name of the bucket
      * you have designated for log file delivery.
      * For more information, see [Finding Your CloudTrail Log
-     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html)
+     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files)
      * . The maximum length is 200 characters.
      */
     public fun s3KeyPrefix(s3KeyPrefix: String)
@@ -903,9 +901,8 @@ public interface CfnTrailProps {
     /**
      * @param s3BucketName Specifies the name of the Amazon S3 bucket designated for publishing log
      * files. 
-     * See [Amazon S3 Bucket Naming
-     * Requirements](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html)
-     * .
+     * See [Amazon S3 Bucket naming
+     * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
      */
     override fun s3BucketName(s3BucketName: String) {
       cdkBuilder.s3BucketName(s3BucketName)
@@ -915,7 +912,7 @@ public interface CfnTrailProps {
      * @param s3KeyPrefix Specifies the Amazon S3 key prefix that comes after the name of the bucket
      * you have designated for log file delivery.
      * For more information, see [Finding Your CloudTrail Log
-     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html)
+     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files)
      * . The maximum length is 200 characters.
      */
     override fun s3KeyPrefix(s3KeyPrefix: String) {
@@ -1123,9 +1120,8 @@ public interface CfnTrailProps {
     /**
      * Specifies the name of the Amazon S3 bucket designated for publishing log files.
      *
-     * See [Amazon S3 Bucket Naming
-     * Requirements](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html)
-     * .
+     * See [Amazon S3 Bucket naming
+     * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname)
      */
@@ -1136,7 +1132,7 @@ public interface CfnTrailProps {
      * designated for log file delivery.
      *
      * For more information, see [Finding Your CloudTrail Log
-     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html)
+     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files)
      * . The maximum length is 200 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix)

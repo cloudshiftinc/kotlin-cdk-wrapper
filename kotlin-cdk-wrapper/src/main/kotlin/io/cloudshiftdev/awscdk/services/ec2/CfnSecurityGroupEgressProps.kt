@@ -38,8 +38,8 @@ public interface CfnSecurityGroupEgressProps {
   /**
    * The IPv4 address range, in CIDR format.
    *
-   * You must specify a destination security group ( `DestinationPrefixListId` or
-   * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+   * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+   * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
    *
    * For examples of rules that you can add to security groups for specific access scenarios, see
    * [Security group rules for different use
@@ -53,8 +53,8 @@ public interface CfnSecurityGroupEgressProps {
   /**
    * The IPv6 address range, in CIDR format.
    *
-   * You must specify a destination security group ( `DestinationPrefixListId` or
-   * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+   * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+   * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
    *
    * For examples of rules that you can add to security groups for specific access scenarios, see
    * [Security group rules for different use
@@ -78,11 +78,11 @@ public interface CfnSecurityGroupEgressProps {
   /**
    * The prefix list IDs for an AWS service.
    *
-   * This is the AWS service that you want to access through a VPC endpoint from instances
-   * associated with the security group.
+   * This is the AWS service to access through a VPC endpoint from instances associated with the
+   * security group.
    *
-   * You must specify a destination security group ( `DestinationPrefixListId` or
-   * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+   * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+   * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupegress.html#cfn-ec2-securitygroupegress-destinationprefixlistid)
    */
@@ -91,8 +91,8 @@ public interface CfnSecurityGroupEgressProps {
   /**
    * The ID of the security group.
    *
-   * You must specify a destination security group ( `DestinationPrefixListId` or
-   * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+   * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+   * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupegress.html#cfn-ec2-securitygroupegress-destinationsecuritygroupid)
    */
@@ -149,8 +149,8 @@ public interface CfnSecurityGroupEgressProps {
   public interface Builder {
     /**
      * @param cidrIp The IPv4 address range, in CIDR format.
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -161,8 +161,8 @@ public interface CfnSecurityGroupEgressProps {
 
     /**
      * @param cidrIpv6 The IPv6 address range, in CIDR format.
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -180,18 +180,18 @@ public interface CfnSecurityGroupEgressProps {
 
     /**
      * @param destinationPrefixListId The prefix list IDs for an AWS service.
-     * This is the AWS service that you want to access through a VPC endpoint from instances
-     * associated with the security group.
+     * This is the AWS service to access through a VPC endpoint from instances associated with the
+     * security group.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      */
     public fun destinationPrefixListId(destinationPrefixListId: String)
 
     /**
      * @param destinationSecurityGroupId The ID of the security group.
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      */
     public fun destinationSecurityGroupId(destinationSecurityGroupId: String)
 
@@ -235,8 +235,8 @@ public interface CfnSecurityGroupEgressProps {
 
     /**
      * @param cidrIp The IPv4 address range, in CIDR format.
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -249,8 +249,8 @@ public interface CfnSecurityGroupEgressProps {
 
     /**
      * @param cidrIpv6 The IPv6 address range, in CIDR format.
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -272,11 +272,11 @@ public interface CfnSecurityGroupEgressProps {
 
     /**
      * @param destinationPrefixListId The prefix list IDs for an AWS service.
-     * This is the AWS service that you want to access through a VPC endpoint from instances
-     * associated with the security group.
+     * This is the AWS service to access through a VPC endpoint from instances associated with the
+     * security group.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      */
     override fun destinationPrefixListId(destinationPrefixListId: String) {
       cdkBuilder.destinationPrefixListId(destinationPrefixListId)
@@ -284,8 +284,8 @@ public interface CfnSecurityGroupEgressProps {
 
     /**
      * @param destinationSecurityGroupId The ID of the security group.
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      */
     override fun destinationSecurityGroupId(destinationSecurityGroupId: String) {
       cdkBuilder.destinationSecurityGroupId(destinationSecurityGroupId)
@@ -342,8 +342,8 @@ public interface CfnSecurityGroupEgressProps {
     /**
      * The IPv4 address range, in CIDR format.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -357,8 +357,8 @@ public interface CfnSecurityGroupEgressProps {
     /**
      * The IPv6 address range, in CIDR format.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -382,11 +382,11 @@ public interface CfnSecurityGroupEgressProps {
     /**
      * The prefix list IDs for an AWS service.
      *
-     * This is the AWS service that you want to access through a VPC endpoint from instances
-     * associated with the security group.
+     * This is the AWS service to access through a VPC endpoint from instances associated with the
+     * security group.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupegress.html#cfn-ec2-securitygroupegress-destinationprefixlistid)
      */
@@ -395,8 +395,8 @@ public interface CfnSecurityGroupEgressProps {
     /**
      * The ID of the security group.
      *
-     * You must specify a destination security group ( `DestinationPrefixListId` or
-     * `DestinationSecurityGroupId` ) or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` ,
+     * `DestinationPrefixListId` , or `DestinationSecurityGroupId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-securitygroupegress.html#cfn-ec2-securitygroupegress-destinationsecuritygroupid)
      */

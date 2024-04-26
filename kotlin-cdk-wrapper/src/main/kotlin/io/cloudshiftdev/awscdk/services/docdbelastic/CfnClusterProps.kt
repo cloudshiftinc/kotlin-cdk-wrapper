@@ -28,8 +28,11 @@ import kotlin.collections.List
  * .shardCount(123)
  * // the properties below are optional
  * .adminUserPassword("adminUserPassword")
+ * .backupRetentionPeriod(123)
  * .kmsKeyId("kmsKeyId")
+ * .preferredBackupWindow("preferredBackupWindow")
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .shardInstanceCount(123)
  * .subnetIds(List.of("subnetIds"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -80,6 +83,13 @@ public interface CfnClusterProps {
   public fun authType(): String
 
   /**
+   * The number of days for which automatic snapshots are retained.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-backupretentionperiod)
+   */
+  public fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
+
+  /**
    * The name of the new elastic cluster. This parameter is stored as a lowercase string.
    *
    * *Constraints* :
@@ -108,6 +118,14 @@ public interface CfnClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-kmskeyid)
    */
   public fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+  /**
+   * The daily time range during which automated backups are created if automated backups are
+   * enabled, as determined by `backupRetentionPeriod` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-preferredbackupwindow)
+   */
+  public fun preferredBackupWindow(): String? = unwrap(this).getPreferredBackupWindow()
 
   /**
    * The weekly time range during which system maintenance can occur, in Universal Coordinated Time
@@ -143,6 +161,16 @@ public interface CfnClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-shardcount)
    */
   public fun shardCount(): Number
+
+  /**
+   * The number of replica instances applying to all shards in the cluster.
+   *
+   * A `shardInstanceCount` value of 1 means there is one writer instance, and any additional
+   * instances are replicas that can be used for reads and to improve availability.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-shardinstancecount)
+   */
+  public fun shardInstanceCount(): Number? = unwrap(this).getShardInstanceCount()
 
   /**
    * The Amazon EC2 subnet IDs for the new elastic cluster.
@@ -200,6 +228,11 @@ public interface CfnClusterProps {
     public fun authType(authType: String)
 
     /**
+     * @param backupRetentionPeriod The number of days for which automatic snapshots are retained.
+     */
+    public fun backupRetentionPeriod(backupRetentionPeriod: Number)
+
+    /**
      * @param clusterName The name of the new elastic cluster. This parameter is stored as a
      * lowercase string. 
      * *Constraints* :
@@ -223,6 +256,12 @@ public interface CfnClusterProps {
      * Amazon Region.
      */
     public fun kmsKeyId(kmsKeyId: String)
+
+    /**
+     * @param preferredBackupWindow The daily time range during which automated backups are created
+     * if automated backups are enabled, as determined by `backupRetentionPeriod` .
+     */
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
     /**
      * @param preferredMaintenanceWindow The weekly time range during which system maintenance can
@@ -249,6 +288,14 @@ public interface CfnClusterProps {
      * Maximum is 32.
      */
     public fun shardCount(shardCount: Number)
+
+    /**
+     * @param shardInstanceCount The number of replica instances applying to all shards in the
+     * cluster.
+     * A `shardInstanceCount` value of 1 means there is one writer instance, and any additional
+     * instances are replicas that can be used for reads and to improve availability.
+     */
+    public fun shardInstanceCount(shardInstanceCount: Number)
 
     /**
      * @param subnetIds The Amazon EC2 subnet IDs for the new elastic cluster.
@@ -322,6 +369,13 @@ public interface CfnClusterProps {
     }
 
     /**
+     * @param backupRetentionPeriod The number of days for which automatic snapshots are retained.
+     */
+    override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
+      cdkBuilder.backupRetentionPeriod(backupRetentionPeriod)
+    }
+
+    /**
      * @param clusterName The name of the new elastic cluster. This parameter is stored as a
      * lowercase string. 
      * *Constraints* :
@@ -348,6 +402,14 @@ public interface CfnClusterProps {
      */
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
+    }
+
+    /**
+     * @param preferredBackupWindow The daily time range during which automated backups are created
+     * if automated backups are enabled, as determined by `backupRetentionPeriod` .
+     */
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
+      cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
     /**
@@ -380,6 +442,16 @@ public interface CfnClusterProps {
      */
     override fun shardCount(shardCount: Number) {
       cdkBuilder.shardCount(shardCount)
+    }
+
+    /**
+     * @param shardInstanceCount The number of replica instances applying to all shards in the
+     * cluster.
+     * A `shardInstanceCount` value of 1 means there is one writer instance, and any additional
+     * instances are replicas that can be used for reads and to improve availability.
+     */
+    override fun shardInstanceCount(shardInstanceCount: Number) {
+      cdkBuilder.shardInstanceCount(shardInstanceCount)
     }
 
     /**
@@ -466,6 +538,13 @@ public interface CfnClusterProps {
     override fun authType(): String = unwrap(this).getAuthType()
 
     /**
+     * The number of days for which automatic snapshots are retained.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-backupretentionperiod)
+     */
+    override fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
+
+    /**
      * The name of the new elastic cluster. This parameter is stored as a lowercase string.
      *
      * *Constraints* :
@@ -494,6 +573,14 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-kmskeyid)
      */
     override fun kmsKeyId(): String? = unwrap(this).getKmsKeyId()
+
+    /**
+     * The daily time range during which automated backups are created if automated backups are
+     * enabled, as determined by `backupRetentionPeriod` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-preferredbackupwindow)
+     */
+    override fun preferredBackupWindow(): String? = unwrap(this).getPreferredBackupWindow()
 
     /**
      * The weekly time range during which system maintenance can occur, in Universal Coordinated
@@ -530,6 +617,16 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-shardcount)
      */
     override fun shardCount(): Number = unwrap(this).getShardCount()
+
+    /**
+     * The number of replica instances applying to all shards in the cluster.
+     *
+     * A `shardInstanceCount` value of 1 means there is one writer instance, and any additional
+     * instances are replicas that can be used for reads and to improve availability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-shardinstancecount)
+     */
+    override fun shardInstanceCount(): Number? = unwrap(this).getShardInstanceCount()
 
     /**
      * The Amazon EC2 subnet IDs for the new elastic cluster.

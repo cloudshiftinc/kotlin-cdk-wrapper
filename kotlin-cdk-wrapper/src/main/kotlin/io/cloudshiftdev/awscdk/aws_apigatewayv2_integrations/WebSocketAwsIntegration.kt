@@ -2,7 +2,9 @@
 
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.apigatewayv2.ContentHandling
 import io.cloudshiftdev.awscdk.services.apigatewayv2.PassthroughBehavior
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegration
 import io.cloudshiftdev.awscdk.services.apigatewayv2.WebSocketRouteIntegrationBindOptions
@@ -83,6 +85,16 @@ public open class WebSocketAwsIntegration(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Specifies how to handle response payload content type conversions.
+     *
+     * Default: - The response payload will be passed through from the integration response to
+     * the route response or method response without modification.
+     *
+     * @param contentHandling Specifies how to handle response payload content type conversions. 
+     */
+    public fun contentHandling(contentHandling: ContentHandling)
+
+    /**
      * Specifies the credentials role required for the integration.
      *
      * Default: - No credential role provided.
@@ -156,6 +168,18 @@ public open class WebSocketAwsIntegration(
      * @param templateSelectionExpression The template selection expression for the integration. 
      */
     public fun templateSelectionExpression(templateSelectionExpression: String)
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl(
@@ -164,6 +188,18 @@ public open class WebSocketAwsIntegration(
     private val cdkBuilder:
         software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration.Builder =
         software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration.Builder.create(id)
+
+    /**
+     * Specifies how to handle response payload content type conversions.
+     *
+     * Default: - The response payload will be passed through from the integration response to
+     * the route response or method response without modification.
+     *
+     * @param contentHandling Specifies how to handle response payload content type conversions. 
+     */
+    override fun contentHandling(contentHandling: ContentHandling) {
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+    }
 
     /**
      * Specifies the credentials role required for the integration.
@@ -252,6 +288,20 @@ public open class WebSocketAwsIntegration(
      */
     override fun templateSelectionExpression(templateSelectionExpression: String) {
       cdkBuilder.templateSelectionExpression(templateSelectionExpression)
+    }
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegration

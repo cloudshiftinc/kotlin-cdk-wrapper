@@ -37,6 +37,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyCfnAppImageConfig")
  * .appImageConfigName("appImageConfigName")
  * // the properties below are optional
+ * .codeEditorAppImageConfig(CodeEditorAppImageConfigProperty.builder()
+ * .containerConfig(ContainerConfigProperty.builder()
+ * .containerArguments(List.of("containerArguments"))
+ * .containerEntrypoint(List.of("containerEntrypoint"))
+ * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
  * .jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty.builder()
  * .containerConfig(ContainerConfigProperty.builder()
  * .containerArguments(List.of("containerArguments"))
@@ -105,6 +115,38 @@ public open class CfnAppImageConfig(
    * `arn:aws:sagemaker:us-west-2:account-id:app-image-config/my-app-image-config-name` .
    */
   public open fun attrAppImageConfigArn(): String = unwrap(this).getAttrAppImageConfigArn()
+
+  /**
+   * The configuration for the file system and the runtime, such as the environment variables and
+   * entry point.
+   */
+  public open fun codeEditorAppImageConfig(): Any? = unwrap(this).getCodeEditorAppImageConfig()
+
+  /**
+   * The configuration for the file system and the runtime, such as the environment variables and
+   * entry point.
+   */
+  public open fun codeEditorAppImageConfig(`value`: IResolvable) {
+    unwrap(this).setCodeEditorAppImageConfig(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * The configuration for the file system and the runtime, such as the environment variables and
+   * entry point.
+   */
+  public open fun codeEditorAppImageConfig(`value`: CodeEditorAppImageConfigProperty) {
+    unwrap(this).setCodeEditorAppImageConfig(`value`.let(CodeEditorAppImageConfigProperty::unwrap))
+  }
+
+  /**
+   * The configuration for the file system and the runtime, such as the environment variables and
+   * entry point.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("013839b58756f7720ba02fceb4e6bc0007c80d7b23465c1cadf0a819967e14ef")
+  public open
+      fun codeEditorAppImageConfig(`value`: CodeEditorAppImageConfigProperty.Builder.() -> Unit):
+      Unit = codeEditorAppImageConfig(CodeEditorAppImageConfigProperty(`value`))
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -217,6 +259,39 @@ public open class CfnAppImageConfig(
      * The configuration for the file system and the runtime, such as the environment variables and
      * entry point.
      *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point. 
+     */
+    public fun codeEditorAppImageConfig(codeEditorAppImageConfig: IResolvable)
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point. 
+     */
+    public fun codeEditorAppImageConfig(codeEditorAppImageConfig: CodeEditorAppImageConfigProperty)
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("83cfe22a25b3b1ea97aee15f2d2e75fa7b25995790cc96d1ed49a2df4d9ebb13")
+    public
+        fun codeEditorAppImageConfig(codeEditorAppImageConfig: CodeEditorAppImageConfigProperty.Builder.() -> Unit)
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig)
      * @param jupyterLabAppImageConfig The configuration for the file system and the runtime, such
      * as the environment variables and entry point. 
@@ -319,6 +394,45 @@ public open class CfnAppImageConfig(
     override fun appImageConfigName(appImageConfigName: String) {
       cdkBuilder.appImageConfigName(appImageConfigName)
     }
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point. 
+     */
+    override fun codeEditorAppImageConfig(codeEditorAppImageConfig: IResolvable) {
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point. 
+     */
+    override
+        fun codeEditorAppImageConfig(codeEditorAppImageConfig: CodeEditorAppImageConfigProperty) {
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(CodeEditorAppImageConfigProperty::unwrap))
+    }
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("83cfe22a25b3b1ea97aee15f2d2e75fa7b25995790cc96d1ed49a2df4d9ebb13")
+    override
+        fun codeEditorAppImageConfig(codeEditorAppImageConfig: CodeEditorAppImageConfigProperty.Builder.() -> Unit):
+        Unit = codeEditorAppImageConfig(CodeEditorAppImageConfigProperty(codeEditorAppImageConfig))
 
     /**
      * The configuration for the file system and the runtime, such as the environment variables and
@@ -444,6 +558,126 @@ public open class CfnAppImageConfig(
     internal fun unwrap(wrapped: CfnAppImageConfig):
         software.amazon.awscdk.services.sagemaker.CfnAppImageConfig = wrapped.cdkObject as
         software.amazon.awscdk.services.sagemaker.CfnAppImageConfig
+  }
+
+  /**
+   * The configuration for the file system and kernels in a SageMaker image running as a Code Editor
+   * app.
+   *
+   * The `FileSystemConfig` object is not supported.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.sagemaker.*;
+   * CodeEditorAppImageConfigProperty codeEditorAppImageConfigProperty =
+   * CodeEditorAppImageConfigProperty.builder()
+   * .containerConfig(ContainerConfigProperty.builder()
+   * .containerArguments(List.of("containerArguments"))
+   * .containerEntrypoint(List.of("containerEntrypoint"))
+   * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+   * .key("key")
+   * .value("value")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-codeeditorappimageconfig.html)
+   */
+  public interface CodeEditorAppImageConfigProperty {
+    /**
+     * The container configuration for a SageMaker image.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-codeeditorappimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig-containerconfig)
+     */
+    public fun containerConfig(): Any? = unwrap(this).getContainerConfig()
+
+    /**
+     * A builder for [CodeEditorAppImageConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param containerConfig The container configuration for a SageMaker image.
+       */
+      public fun containerConfig(containerConfig: IResolvable)
+
+      /**
+       * @param containerConfig The container configuration for a SageMaker image.
+       */
+      public fun containerConfig(containerConfig: ContainerConfigProperty)
+
+      /**
+       * @param containerConfig The container configuration for a SageMaker image.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c8a4b1e075a734ba822eee820ebc5611f9f1d7bd4156f321571209bfc92ef17d")
+      public fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CodeEditorAppImageConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CodeEditorAppImageConfigProperty.builder()
+
+      /**
+       * @param containerConfig The container configuration for a SageMaker image.
+       */
+      override fun containerConfig(containerConfig: IResolvable) {
+        cdkBuilder.containerConfig(containerConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param containerConfig The container configuration for a SageMaker image.
+       */
+      override fun containerConfig(containerConfig: ContainerConfigProperty) {
+        cdkBuilder.containerConfig(containerConfig.let(ContainerConfigProperty::unwrap))
+      }
+
+      /**
+       * @param containerConfig The container configuration for a SageMaker image.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c8a4b1e075a734ba822eee820ebc5611f9f1d7bd4156f321571209bfc92ef17d")
+      override fun containerConfig(containerConfig: ContainerConfigProperty.Builder.() -> Unit):
+          Unit = containerConfig(ContainerConfigProperty(containerConfig))
+
+      public fun build():
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CodeEditorAppImageConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CodeEditorAppImageConfigProperty,
+    ) : CdkObject(cdkObject), CodeEditorAppImageConfigProperty {
+      /**
+       * The container configuration for a SageMaker image.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-appimageconfig-codeeditorappimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig-containerconfig)
+       */
+      override fun containerConfig(): Any? = unwrap(this).getContainerConfig()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CodeEditorAppImageConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CodeEditorAppImageConfigProperty):
+          CodeEditorAppImageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CodeEditorAppImageConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CodeEditorAppImageConfigProperty):
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CodeEditorAppImageConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.sagemaker.CfnAppImageConfig.CodeEditorAppImageConfigProperty
+    }
   }
 
   /**

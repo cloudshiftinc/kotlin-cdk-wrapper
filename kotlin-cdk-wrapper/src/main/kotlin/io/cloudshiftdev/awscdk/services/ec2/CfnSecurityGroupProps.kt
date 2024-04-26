@@ -34,7 +34,6 @@ import kotlin.collections.List
  * .destinationPrefixListId("destinationPrefixListId")
  * .destinationSecurityGroupId("destinationSecurityGroupId")
  * .fromPort(123)
- * .sourceSecurityGroupId("sourceSecurityGroupId")
  * .toPort(123)
  * .build()))
  * .securityGroupIngress(List.of(IngressProperty.builder()

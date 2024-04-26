@@ -3836,9 +3836,9 @@ public open class CfnDataSource(
     public fun databasePort(): Number
 
     /**
-     * The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager .
+     * The Amazon Resource Name (ARN) of an AWS Secrets Manager secret that stores the credentials.
      *
-     * The credentials should be a user/password pair. For more information, see [Using a Database
+     * The credentials should be a user-password pair. For more information, see [Using a Database
      * Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html) . For more
      * information about AWS Secrets Manager , see [What Is AWS Secrets
      * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS
@@ -3877,9 +3877,9 @@ public open class CfnDataSource(
       public fun databasePort(databasePort: Number)
 
       /**
-       * @param secretArn The Amazon Resource Name (ARN) of credentials stored in AWS Secrets
-       * Manager . 
-       * The credentials should be a user/password pair. For more information, see [Using a Database
+       * @param secretArn The Amazon Resource Name (ARN) of an AWS Secrets Manager secret that
+       * stores the credentials. 
+       * The credentials should be a user-password pair. For more information, see [Using a Database
        * Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html) . For
        * more information about AWS Secrets Manager , see [What Is AWS Secrets
        * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS
@@ -3922,9 +3922,9 @@ public open class CfnDataSource(
       }
 
       /**
-       * @param secretArn The Amazon Resource Name (ARN) of credentials stored in AWS Secrets
-       * Manager . 
-       * The credentials should be a user/password pair. For more information, see [Using a Database
+       * @param secretArn The Amazon Resource Name (ARN) of an AWS Secrets Manager secret that
+       * stores the credentials. 
+       * The credentials should be a user-password pair. For more information, see [Using a Database
        * Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html) . For
        * more information about AWS Secrets Manager , see [What Is AWS Secrets
        * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS
@@ -3973,9 +3973,10 @@ public open class CfnDataSource(
       override fun databasePort(): Number = unwrap(this).getDatabasePort()
 
       /**
-       * The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager .
+       * The Amazon Resource Name (ARN) of an AWS Secrets Manager secret that stores the
+       * credentials.
        *
-       * The credentials should be a user/password pair. For more information, see [Using a Database
+       * The credentials should be a user-password pair. For more information, see [Using a Database
        * Data Source](https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html) . For
        * more information about AWS Secrets Manager , see [What Is AWS Secrets
        * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html) in the *AWS
@@ -4127,11 +4128,11 @@ public open class CfnDataSource(
         unwrap(this).getPreExtractionHookConfiguration()
 
     /**
-     * The Amazon Resource Name (ARN) of a role with permission to run
+     * The Amazon Resource Name (ARN) of an IAM role with permission to run
      * `PreExtractionHookConfiguration` and `PostExtractionHookConfiguration` for altering document
      * metadata and content during the document ingestion process.
      *
-     * For more information, see [IAM roles for Amazon
+     * For more information, see [an IAM roles for Amazon
      * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-customdocumentenrichmentconfiguration.html#cfn-kendra-datasource-customdocumentenrichmentconfiguration-rolearn)
@@ -4233,10 +4234,10 @@ public open class CfnDataSource(
           fun preExtractionHookConfiguration(preExtractionHookConfiguration: HookConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of a role with permission to run
+       * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permission to run
        * `PreExtractionHookConfiguration` and `PostExtractionHookConfiguration` for altering document
        * metadata and content during the document ingestion process.
-       * For more information, see [IAM roles for Amazon
+       * For more information, see [an IAM roles for Amazon
        * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
        */
       public fun roleArn(roleArn: String)
@@ -4355,10 +4356,10 @@ public open class CfnDataSource(
           preExtractionHookConfiguration(HookConfigurationProperty(preExtractionHookConfiguration))
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of a role with permission to run
+       * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permission to run
        * `PreExtractionHookConfiguration` and `PostExtractionHookConfiguration` for altering document
        * metadata and content during the document ingestion process.
-       * For more information, see [IAM roles for Amazon
+       * For more information, see [an IAM roles for Amazon
        * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
        */
       override fun roleArn(roleArn: String) {
@@ -4410,11 +4411,11 @@ public open class CfnDataSource(
           unwrap(this).getPreExtractionHookConfiguration()
 
       /**
-       * The Amazon Resource Name (ARN) of a role with permission to run
+       * The Amazon Resource Name (ARN) of an IAM role with permission to run
        * `PreExtractionHookConfiguration` and `PostExtractionHookConfiguration` for altering document
        * metadata and content during the document ingestion process.
        *
-       * For more information, see [IAM roles for Amazon
+       * For more information, see [an IAM roles for Amazon
        * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-customdocumentenrichmentconfiguration.html#cfn-kendra-datasource-customdocumentenrichmentconfiguration-rolearn)
@@ -7652,10 +7653,10 @@ public open class CfnDataSource(
     public fun invocationCondition(): Any? = unwrap(this).getInvocationCondition()
 
     /**
-     * The Amazon Resource Name (ARN) of a role with permission to run a Lambda function during
+     * The Amazon Resource Name (ARN) of an IAM role with permission to run a Lambda function during
      * ingestion.
      *
-     * For more information, see [IAM roles for Amazon
+     * For more information, see [an IAM roles for Amazon
      * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-hookconfiguration.html#cfn-kendra-datasource-hookconfiguration-lambdaarn)
@@ -7704,9 +7705,9 @@ public open class CfnDataSource(
           fun invocationCondition(invocationCondition: DocumentAttributeConditionProperty.Builder.() -> Unit)
 
       /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of a role with permission to run a Lambda
-       * function during ingestion. 
-       * For more information, see [IAM roles for Amazon
+       * @param lambdaArn The Amazon Resource Name (ARN) of an IAM role with permission to run a
+       * Lambda function during ingestion. 
+       * For more information, see [an IAM roles for Amazon
        * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
        */
       public fun lambdaArn(lambdaArn: String)
@@ -7756,9 +7757,9 @@ public open class CfnDataSource(
           Unit = invocationCondition(DocumentAttributeConditionProperty(invocationCondition))
 
       /**
-       * @param lambdaArn The Amazon Resource Name (ARN) of a role with permission to run a Lambda
-       * function during ingestion. 
-       * For more information, see [IAM roles for Amazon
+       * @param lambdaArn The Amazon Resource Name (ARN) of an IAM role with permission to run a
+       * Lambda function during ingestion. 
+       * For more information, see [an IAM roles for Amazon
        * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
        */
       override fun lambdaArn(lambdaArn: String) {
@@ -7795,10 +7796,10 @@ public open class CfnDataSource(
       override fun invocationCondition(): Any? = unwrap(this).getInvocationCondition()
 
       /**
-       * The Amazon Resource Name (ARN) of a role with permission to run a Lambda function during
-       * ingestion.
+       * The Amazon Resource Name (ARN) of an IAM role with permission to run a Lambda function
+       * during ingestion.
        *
-       * For more information, see [IAM roles for Amazon
+       * For more information, see [an IAM roles for Amazon
        * Kendra](https://docs.aws.amazon.com/kendra/latest/dg/iam-roles.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-hookconfiguration.html#cfn-kendra-datasource-hookconfiguration-lambdaarn)
@@ -8596,8 +8597,8 @@ public open class CfnDataSource(
      * A list of users whose documents should be indexed.
      *
      * Specify the user names in email format, for example, `username&#64;tenantdomain` . If you
-     * need to index the documents of more than 100 users, use the `OneDriveUserS3Path` field to
-     * specify the location of a file containing a list of users.
+     * need to index the documents of more than 10 users, use the `OneDriveUserS3Path` field to specify
+     * the location of a file containing a list of users.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveusers.html#cfn-kendra-datasource-onedriveusers-onedriveuserlist)
      */
@@ -8619,7 +8620,7 @@ public open class CfnDataSource(
       /**
        * @param oneDriveUserList A list of users whose documents should be indexed.
        * Specify the user names in email format, for example, `username&#64;tenantdomain` . If you
-       * need to index the documents of more than 100 users, use the `OneDriveUserS3Path` field to
+       * need to index the documents of more than 10 users, use the `OneDriveUserS3Path` field to
        * specify the location of a file containing a list of users.
        */
       public fun oneDriveUserList(oneDriveUserList: List<String>)
@@ -8627,7 +8628,7 @@ public open class CfnDataSource(
       /**
        * @param oneDriveUserList A list of users whose documents should be indexed.
        * Specify the user names in email format, for example, `username&#64;tenantdomain` . If you
-       * need to index the documents of more than 100 users, use the `OneDriveUserS3Path` field to
+       * need to index the documents of more than 10 users, use the `OneDriveUserS3Path` field to
        * specify the location of a file containing a list of users.
        */
       public fun oneDriveUserList(vararg oneDriveUserList: String)
@@ -8661,7 +8662,7 @@ public open class CfnDataSource(
       /**
        * @param oneDriveUserList A list of users whose documents should be indexed.
        * Specify the user names in email format, for example, `username&#64;tenantdomain` . If you
-       * need to index the documents of more than 100 users, use the `OneDriveUserS3Path` field to
+       * need to index the documents of more than 10 users, use the `OneDriveUserS3Path` field to
        * specify the location of a file containing a list of users.
        */
       override fun oneDriveUserList(oneDriveUserList: List<String>) {
@@ -8671,7 +8672,7 @@ public open class CfnDataSource(
       /**
        * @param oneDriveUserList A list of users whose documents should be indexed.
        * Specify the user names in email format, for example, `username&#64;tenantdomain` . If you
-       * need to index the documents of more than 100 users, use the `OneDriveUserS3Path` field to
+       * need to index the documents of more than 10 users, use the `OneDriveUserS3Path` field to
        * specify the location of a file containing a list of users.
        */
       override fun oneDriveUserList(vararg oneDriveUserList: String): Unit =
@@ -8713,7 +8714,7 @@ public open class CfnDataSource(
        * A list of users whose documents should be indexed.
        *
        * Specify the user names in email format, for example, `username&#64;tenantdomain` . If you
-       * need to index the documents of more than 100 users, use the `OneDriveUserS3Path` field to
+       * need to index the documents of more than 10 users, use the `OneDriveUserS3Path` field to
        * specify the location of a file containing a list of users.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kendra-datasource-onedriveusers.html#cfn-kendra-datasource-onedriveusers-onedriveuserlist)
@@ -8769,8 +8770,10 @@ public open class CfnDataSource(
    */
   public interface ProxyConfigurationProperty {
     /**
-     * Your secret ARN, which you can create in [AWS Secrets
-     * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+     * The Amazon Resource Name (ARN) of an AWS Secrets Manager secret.
+     *
+     * You create a secret to store your credentials in [AWS Secrets
+     * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
      *
      * The credentials are optional. You use a secret if web proxy credentials are required to
      * connect to a website host. Amazon Kendra currently support basic authentication to connect to a
@@ -8805,8 +8808,10 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param credentials Your secret ARN, which you can create in [AWS Secrets
-       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+       * @param credentials The Amazon Resource Name (ARN) of an AWS Secrets Manager secret.
+       * You create a secret to store your credentials in [AWS Secrets
+       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+       *
        * The credentials are optional. You use a secret if web proxy credentials are required to
        * connect to a website host. Amazon Kendra currently support basic authentication to connect to
        * a web proxy server. The secret stores your credentials.
@@ -8834,8 +8839,10 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty.builder()
 
       /**
-       * @param credentials Your secret ARN, which you can create in [AWS Secrets
-       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+       * @param credentials The Amazon Resource Name (ARN) of an AWS Secrets Manager secret.
+       * You create a secret to store your credentials in [AWS Secrets
+       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+       *
        * The credentials are optional. You use a secret if web proxy credentials are required to
        * connect to a website host. Amazon Kendra currently support basic authentication to connect to
        * a web proxy server. The secret stores your credentials.
@@ -8871,8 +8878,10 @@ public open class CfnDataSource(
       cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.ProxyConfigurationProperty,
     ) : CdkObject(cdkObject), ProxyConfigurationProperty {
       /**
-       * Your secret ARN, which you can create in [AWS Secrets
-       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+       * The Amazon Resource Name (ARN) of an AWS Secrets Manager secret.
+       *
+       * You create a secret to store your credentials in [AWS Secrets
+       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
        *
        * The credentials are optional. You use a secret if web proxy credentials are required to
        * connect to a website host. Amazon Kendra currently support basic authentication to connect to
@@ -9001,17 +9010,20 @@ public open class CfnDataSource(
      * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion prefix
      * takes precendence and the document is not indexed. Examples of glob patterns include:
      *
-     * * `/myapp/config/ *` - All files inside config directory
-     * * `** / *.png` - All .png files in all directories
-     * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-     * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-     * * `** /!(*.module).ts` - All .ts files but not .module.ts
-     * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
-     * extensions .png and .jpg).
-     * * **internal** excludes all files in a directory that contain 'internal' in the file name,
-     * such as 'internal', 'internal_only', 'company_internal'.
-     * * *** / *internal** excludes all internal-related files in a directory and its
-     * subdirectories.
+     * * 
+     * * /myapp/config/ ** —All files inside config directory.
+     *
+     * * *** / *.png* —All .png files in all directories.
+     * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+     * * 
+     * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+     *
+     * * *** /!(*.module).ts* —All .ts files but not .module.ts
+     * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+     * .png and .jpg).
+     * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+     * 'internal', 'internal_only', 'company_internal'.
+     * * *** / *internal** —All internal-related files in a directory and its subdirectories.
      *
      * For more examples, see [Use of Exclude and Include
      * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9030,17 +9042,20 @@ public open class CfnDataSource(
      * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion prefix
      * takes precendence and the document is not indexed. Examples of glob patterns include:
      *
-     * * `/myapp/config/ *` - All files inside config directory
-     * * `** / *.png` - All .png files in all directories
-     * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-     * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-     * * `** /!(*.module).ts` - All .ts files but not .module.ts
-     * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
-     * extensions .png and .jpg).
-     * * **internal** includes all files in a directory that contain 'internal' in the file name,
-     * such as 'internal', 'internal_only', 'company_internal'.
-     * * *** / *internal** includes all internal-related files in a directory and its
-     * subdirectories.
+     * * 
+     * * /myapp/config/ ** —All files inside config directory.
+     *
+     * * *** / *.png* —All .png files in all directories.
+     * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+     * * 
+     * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+     *
+     * * *** /!(*.module).ts* —All .ts files but not .module.ts
+     * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+     * .png and .jpg).
+     * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+     * 'internal', 'internal_only', 'company_internal'.
+     * * *** / *internal** —All internal-related files in a directory and its subdirectories.
      *
      * For more examples, see [Use of Exclude and Include
      * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9132,17 +9147,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** excludes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** excludes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9157,17 +9175,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** excludes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** excludes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9182,17 +9203,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** includes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** includes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9207,17 +9231,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** includes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** includes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9326,17 +9353,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** excludes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** excludes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9353,17 +9383,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** excludes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** excludes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9379,17 +9412,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** includes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** includes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9406,17 +9442,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** includes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** includes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9486,17 +9525,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* excludes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** excludes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** excludes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -9515,17 +9557,20 @@ public open class CfnDataSource(
        * If a document matches both an inclusion and exclusion prefix or pattern, the exclusion
        * prefix takes precendence and the document is not indexed. Examples of glob patterns include:
        *
-       * * `/myapp/config/ *` - All files inside config directory
-       * * `** / *.png` - All .png files in all directories
-       * * `** / *.{png, ico, md}` - All .png, .ico or .md files in all directories
-       * * `/myapp/src/ ** / *.ts` - All .ts files inside src directory (and all its subdirectories)
-       * * `** /!(*.module).ts` - All .ts files but not .module.ts
-       * * **.png , *.jpg* includes all PNG and JPEG image files in a directory (files with the
-       * extensions .png and .jpg).
-       * * **internal** includes all files in a directory that contain 'internal' in the file name,
-       * such as 'internal', 'internal_only', 'company_internal'.
-       * * *** / *internal** includes all internal-related files in a directory and its
-       * subdirectories.
+       * * 
+       * * /myapp/config/ ** —All files inside config directory.
+       *
+       * * *** / *.png* —All .png files in all directories.
+       * * *** / *.{png, ico, md}* —All .png, .ico or .md files in all directories.
+       * * 
+       * * /myapp/src/ ** / *.ts* —All .ts files inside src directory (and all its subdirectories).
+       *
+       * * *** /!(*.module).ts* —All .ts files but not .module.ts
+       * * **.png , *.jpg* —All PNG and JPEG image files in a directory (files with the extensions
+       * .png and .jpg).
+       * * **internal** —All files in a directory that contain 'internal' in the file name, such as
+       * 'internal', 'internal_only', 'company_internal'.
+       * * *** / *internal** —All internal-related files in a directory and its subdirectories.
        *
        * For more examples, see [Use of Exclude and Include
        * Filters](https://docs.aws.amazon.com/cli/latest/reference/s3/#use-of-exclude-and-include-filters)
@@ -14007,8 +14052,10 @@ public open class CfnDataSource(
    */
   public interface WebCrawlerBasicAuthenticationProperty {
     /**
-     * Your secret ARN, which you can create in [AWS Secrets
-     * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+     * The Amazon Resource Name (ARN) of an AWS Secrets Manager secret.
+     *
+     * You create a secret to store your credentials in [AWS Secrets
+     * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
      *
      * You use a secret if basic authentication credentials are required to connect to a website.
      * The secret stores your credentials of user name and password.
@@ -14042,8 +14089,10 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param credentials Your secret ARN, which you can create in [AWS Secrets
-       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html). 
+       * @param credentials The Amazon Resource Name (ARN) of an AWS Secrets Manager secret. 
+       * You create a secret to store your credentials in [AWS Secrets
+       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+       *
        * You use a secret if basic authentication credentials are required to connect to a website.
        * The secret stores your credentials of user name and password.
        */
@@ -14072,8 +14121,10 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty.builder()
 
       /**
-       * @param credentials Your secret ARN, which you can create in [AWS Secrets
-       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html). 
+       * @param credentials The Amazon Resource Name (ARN) of an AWS Secrets Manager secret. 
+       * You create a secret to store your credentials in [AWS Secrets
+       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+       *
        * You use a secret if basic authentication credentials are required to connect to a website.
        * The secret stores your credentials of user name and password.
        */
@@ -14109,8 +14160,10 @@ public open class CfnDataSource(
       cdkObject: software.amazon.awscdk.services.kendra.CfnDataSource.WebCrawlerBasicAuthenticationProperty,
     ) : CdkObject(cdkObject), WebCrawlerBasicAuthenticationProperty {
       /**
-       * Your secret ARN, which you can create in [AWS Secrets
-       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).
+       * The Amazon Resource Name (ARN) of an AWS Secrets Manager secret.
+       *
+       * You create a secret to store your credentials in [AWS Secrets
+       * Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
        *
        * You use a secret if basic authentication credentials are required to connect to a website.
        * The secret stores your credentials of user name and password.

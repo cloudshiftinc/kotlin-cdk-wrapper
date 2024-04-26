@@ -36,6 +36,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .configurationSet("configurationSet")
  * .enabled(false)
+ * .orchestrationSendingRoleArn("orchestrationSendingRoleArn")
  * .roleArn("roleArn")
  * .build();
  * ```
@@ -155,6 +156,19 @@ public open class CfnEmailChannel(
   }
 
   /**
+   *
+   */
+  public open fun orchestrationSendingRoleArn(): String? =
+      unwrap(this).getOrchestrationSendingRoleArn()
+
+  /**
+   *
+   */
+  public open fun orchestrationSendingRoleArn(`value`: String) {
+    unwrap(this).setOrchestrationSendingRoleArn(`value`)
+  }
+
+  /**
    * The ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to
    * use when it submits email-related event data for the channel.
    */
@@ -230,6 +244,12 @@ public open class CfnEmailChannel(
      * Email Service (Amazon SES), that you want to use when you send email through the channel. 
      */
     public fun identity(identity: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
+     * @param orchestrationSendingRoleArn 
+     */
+    public fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String)
 
     /**
      * The ARN of the AWS Identity and Access Management (IAM) role that you want Amazon Pinpoint to
@@ -317,6 +337,14 @@ public open class CfnEmailChannel(
      */
     override fun identity(identity: String) {
       cdkBuilder.identity(identity)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-pinpoint-emailchannel.html#cfn-pinpoint-emailchannel-orchestrationsendingrolearn)
+     * @param orchestrationSendingRoleArn 
+     */
+    override fun orchestrationSendingRoleArn(orchestrationSendingRoleArn: String) {
+      cdkBuilder.orchestrationSendingRoleArn(orchestrationSendingRoleArn)
     }
 
     /**

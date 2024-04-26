@@ -27,10 +27,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnCustomerGateway cfnCustomerGateway = CfnCustomerGateway.Builder.create(this,
  * "MyCfnCustomerGateway")
- * .bgpAsn(123)
  * .ipAddress("ipAddress")
  * .type("type")
  * // the properties below are optional
+ * .bgpAsn(123)
+ * .bgpAsnExtended(123)
+ * .certificateArn("certificateArn")
  * .deviceName("deviceName")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -68,13 +70,37 @@ public open class CfnCustomerGateway(
   /**
    * For devices that support BGP, the customer gateway's BGP ASN.
    */
-  public open fun bgpAsn(): Number = unwrap(this).getBgpAsn()
+  public open fun bgpAsn(): Number? = unwrap(this).getBgpAsn()
 
   /**
    * For devices that support BGP, the customer gateway's BGP ASN.
    */
   public open fun bgpAsn(`value`: Number) {
     unwrap(this).setBgpAsn(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun bgpAsnExtended(): Number? = unwrap(this).getBgpAsnExtended()
+
+  /**
+   *
+   */
+  public open fun bgpAsnExtended(`value`: Number) {
+    unwrap(this).setBgpAsnExtended(`value`)
+  }
+
+  /**
+   * The Amazon Resource Name (ARN) for the customer gateway certificate.
+   */
+  public open fun certificateArn(): String? = unwrap(this).getCertificateArn()
+
+  /**
+   * The Amazon Resource Name (ARN) for the customer gateway certificate.
+   */
+  public open fun certificateArn(`value`: String) {
+    unwrap(this).setCertificateArn(`value`)
   }
 
   /**
@@ -163,6 +189,20 @@ public open class CfnCustomerGateway(
     public fun bgpAsn(bgpAsn: Number)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
+     * @param bgpAsnExtended 
+     */
+    public fun bgpAsnExtended(bgpAsnExtended: Number)
+
+    /**
+     * The Amazon Resource Name (ARN) for the customer gateway certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-certificatearn)
+     * @param certificateArn The Amazon Resource Name (ARN) for the customer gateway certificate. 
+     */
+    public fun certificateArn(certificateArn: String)
+
+    /**
      * The name of customer gateway device.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-devicename)
@@ -224,6 +264,24 @@ public open class CfnCustomerGateway(
      */
     override fun bgpAsn(bgpAsn: Number) {
       cdkBuilder.bgpAsn(bgpAsn)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
+     * @param bgpAsnExtended 
+     */
+    override fun bgpAsnExtended(bgpAsnExtended: Number) {
+      cdkBuilder.bgpAsnExtended(bgpAsnExtended)
+    }
+
+    /**
+     * The Amazon Resource Name (ARN) for the customer gateway certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-certificatearn)
+     * @param certificateArn The Amazon Resource Name (ARN) for the customer gateway certificate. 
+     */
+    override fun certificateArn(certificateArn: String) {
+      cdkBuilder.certificateArn(certificateArn)
     }
 
     /**

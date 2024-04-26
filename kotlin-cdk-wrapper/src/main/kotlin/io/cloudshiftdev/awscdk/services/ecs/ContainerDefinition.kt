@@ -90,6 +90,16 @@ public open class ContainerDefinition(
       Unit = addContainerDependencies(ContainerDependency(containerDependencies))
 
   /**
+   * This method adds a Docker label to the container.
+   *
+   * @param name 
+   * @param value 
+   */
+  public open fun addDockerLabel(name: String, `value`: String) {
+    unwrap(this).addDockerLabel(name, `value`)
+  }
+
+  /**
    * This method adds an environment variable to the container.
    *
    * @param name 

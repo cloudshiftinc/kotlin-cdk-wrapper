@@ -60,8 +60,7 @@ public interface CfnRuleGroupsNamespaceProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * An Amazon Managed Service for Prometheus workspace is a logical and isolated Prometheus server
-   * dedicated to ingesting, storing, and querying your Prometheus-compatible metrics.
+   * The ID of the workspace to add the rule groups namespace.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-rulegroupsnamespace.html#cfn-aps-rulegroupsnamespace-workspace)
    */
@@ -98,9 +97,7 @@ public interface CfnRuleGroupsNamespaceProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param workspace An Amazon Managed Service for Prometheus workspace is a logical and isolated
-     * Prometheus server dedicated to ingesting, storing, and querying your Prometheus-compatible
-     * metrics. 
+     * @param workspace The ID of the workspace to add the rule groups namespace. 
      */
     public fun workspace(workspace: String)
   }
@@ -141,9 +138,7 @@ public interface CfnRuleGroupsNamespaceProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param workspace An Amazon Managed Service for Prometheus workspace is a logical and isolated
-     * Prometheus server dedicated to ingesting, storing, and querying your Prometheus-compatible
-     * metrics. 
+     * @param workspace The ID of the workspace to add the rule groups namespace. 
      */
     override fun workspace(workspace: String) {
       cdkBuilder.workspace(workspace)
@@ -182,8 +177,7 @@ public interface CfnRuleGroupsNamespaceProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * An Amazon Managed Service for Prometheus workspace is a logical and isolated Prometheus
-     * server dedicated to ingesting, storing, and querying your Prometheus-compatible metrics.
+     * The ID of the workspace to add the rule groups namespace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-rulegroupsnamespace.html#cfn-aps-rulegroupsnamespace-workspace)
      */

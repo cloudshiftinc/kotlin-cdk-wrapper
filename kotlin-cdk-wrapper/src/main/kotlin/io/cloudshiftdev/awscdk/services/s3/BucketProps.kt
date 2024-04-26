@@ -135,7 +135,7 @@ public interface BucketProps {
    *
    * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-ssl-requests-only.html)
    */
-  public fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+  public fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
   /**
    * Whether this bucket should send notifications to Amazon EventBridge or not.
@@ -192,7 +192,7 @@ public interface BucketProps {
    *
    * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#example-object-tls-version)
    */
-  public fun minimumTlsVersion(): Number? = unwrap(this).getMinimumTLSVersion()
+  public fun minimumTLSVersion(): Number? = unwrap(this).getMinimumTLSVersion()
 
   /**
    * The role to be used by the notifications handler.
@@ -986,7 +986,7 @@ public interface BucketProps {
      *
      * [Documentation](https://docs.aws.amazon.com/config/latest/developerguide/s3-bucket-ssl-requests-only.html)
      */
-    override fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+    override fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
     /**
      * Whether this bucket should send notifications to Amazon EventBridge or not.
@@ -1043,7 +1043,7 @@ public interface BucketProps {
      *
      * [Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#example-object-tls-version)
      */
-    override fun minimumTlsVersion(): Number? = unwrap(this).getMinimumTLSVersion()
+    override fun minimumTLSVersion(): Number? = unwrap(this).getMinimumTLSVersion()
 
     /**
      * The role to be used by the notifications handler.

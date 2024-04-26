@@ -93,6 +93,12 @@ public open class BucketDeployment(
   public open fun deployedBucket(): IBucket = unwrap(this).getDeployedBucket().let(IBucket::wrap)
 
   /**
+   * Execution role of the Lambda function behind the custom CloudFormation resource of type
+   * `Custom::CDKBucketDeployment`.
+   */
+  public open fun handlerRole(): IRole = unwrap(this).getHandlerRole().let(IRole::wrap)
+
+  /**
    * The object keys for the sources deployed to the S3 bucket.
    *
    * This returns a list of tokenized object keys for source files that are deployed to the bucket.

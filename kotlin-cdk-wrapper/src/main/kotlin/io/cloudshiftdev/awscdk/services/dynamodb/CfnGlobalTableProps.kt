@@ -21,6 +21,7 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * Object policyDocument;
  * CfnGlobalTableProps cfnGlobalTableProps = CfnGlobalTableProps.builder()
  * .attributeDefinitions(List.of(AttributeDefinitionProperty.builder()
  * .attributeName("attributeName")
@@ -83,6 +84,14 @@ import kotlin.jvm.JvmName
  * .seedCapacity(123)
  * .build())
  * .readCapacityUnits(123)
+ * .build())
+ * .replicaStreamSpecification(ReplicaStreamSpecificationProperty.builder()
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .build())
+ * .build())
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument(policyDocument)
  * .build())
  * .sseSpecification(ReplicaSSESpecificationProperty.builder()
  * .kmsMasterKeyId("kmsMasterKeyId")

@@ -94,7 +94,7 @@ public interface IApplicationLoadBalancerMetrics {
    *
    * @param props
    */
-  public fun consumedLcUs(): Metric
+  public fun consumedLCUs(): Metric
 
   /**
    * The number of load balancer capacity units (LCU) used by your load balancer.
@@ -103,7 +103,7 @@ public interface IApplicationLoadBalancerMetrics {
    *
    * @param props
    */
-  public fun consumedLcUs(props: MetricOptions): Metric
+  public fun consumedLCUs(props: MetricOptions): Metric
 
   /**
    * The number of load balancer capacity units (LCU) used by your load balancer.
@@ -113,8 +113,8 @@ public interface IApplicationLoadBalancerMetrics {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("18e8e39bc441acca7c83d0b93ee82feb5719d75ccb2df798d695dbe35e061cf0")
-  public fun consumedLcUs(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("0a8818b706c379823814d623a4c84e8808252fc6cfff988c82b9c21805c7cc02")
+  public fun consumedLCUs(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Return the given named metric for this Application Load Balancer.
@@ -755,7 +755,7 @@ public interface IApplicationLoadBalancerMetrics {
    *
    * @param props
    */
-  public fun targetTlsNegotiationErrorCount(): Metric
+  public fun targetTLSNegotiationErrorCount(): Metric
 
   /**
    * The number of TLS connections initiated by the load balancer that did not establish a session
@@ -767,7 +767,7 @@ public interface IApplicationLoadBalancerMetrics {
    *
    * @param props
    */
-  public fun targetTlsNegotiationErrorCount(props: MetricOptions): Metric
+  public fun targetTLSNegotiationErrorCount(props: MetricOptions): Metric
 
   /**
    * The number of TLS connections initiated by the load balancer that did not establish a session
@@ -780,8 +780,8 @@ public interface IApplicationLoadBalancerMetrics {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("6bff36edbbe3c8f26db05b3096329ed86c89c5421a92a5ecf6d869f655103f54")
-  public fun targetTlsNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("680e36d5f42c32084e2104a1182ce24b50a180324bfe0c58c1bcd6523da0a161")
+  public fun targetTLSNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.IApplicationLoadBalancerMetrics,
@@ -872,7 +872,7 @@ public interface IApplicationLoadBalancerMetrics {
      *
      * @param props
      */
-    override fun consumedLcUs(): Metric = unwrap(this).consumedLCUs().let(Metric::wrap)
+    override fun consumedLCUs(): Metric = unwrap(this).consumedLCUs().let(Metric::wrap)
 
     /**
      * The number of load balancer capacity units (LCU) used by your load balancer.
@@ -881,7 +881,7 @@ public interface IApplicationLoadBalancerMetrics {
      *
      * @param props
      */
-    override fun consumedLcUs(props: MetricOptions): Metric =
+    override fun consumedLCUs(props: MetricOptions): Metric =
         unwrap(this).consumedLCUs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -892,9 +892,9 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("18e8e39bc441acca7c83d0b93ee82feb5719d75ccb2df798d695dbe35e061cf0")
-    override fun consumedLcUs(props: MetricOptions.Builder.() -> Unit): Metric =
-        consumedLcUs(MetricOptions(props))
+    @JvmName("0a8818b706c379823814d623a4c84e8808252fc6cfff988c82b9c21805c7cc02")
+    override fun consumedLCUs(props: MetricOptions.Builder.() -> Unit): Metric =
+        consumedLCUs(MetricOptions(props))
 
     /**
      * Return the given named metric for this Application Load Balancer.
@@ -1585,7 +1585,7 @@ public interface IApplicationLoadBalancerMetrics {
      *
      * @param props
      */
-    override fun targetTlsNegotiationErrorCount(): Metric =
+    override fun targetTLSNegotiationErrorCount(): Metric =
         unwrap(this).targetTLSNegotiationErrorCount().let(Metric::wrap)
 
     /**
@@ -1598,7 +1598,7 @@ public interface IApplicationLoadBalancerMetrics {
      *
      * @param props
      */
-    override fun targetTlsNegotiationErrorCount(props: MetricOptions): Metric =
+    override fun targetTLSNegotiationErrorCount(props: MetricOptions): Metric =
         unwrap(this).targetTLSNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -1612,9 +1612,9 @@ public interface IApplicationLoadBalancerMetrics {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("6bff36edbbe3c8f26db05b3096329ed86c89c5421a92a5ecf6d869f655103f54")
-    override fun targetTlsNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric =
-        targetTlsNegotiationErrorCount(MetricOptions(props))
+    @JvmName("680e36d5f42c32084e2104a1182ce24b50a180324bfe0c58c1bcd6523da0a161")
+    override fun targetTLSNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric =
+        targetTLSNegotiationErrorCount(MetricOptions(props))
   }
 
   public companion object {

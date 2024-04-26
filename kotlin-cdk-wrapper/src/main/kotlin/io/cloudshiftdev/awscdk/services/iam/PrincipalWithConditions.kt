@@ -159,7 +159,7 @@ public open class PrincipalWithConditions(
    *
    * Used when JSON.stringify() is called
    */
-  public override fun toJson(): Map<String, List<String>> = unwrap(this).toJSON() ?: emptyMap()
+  public override fun toJSON(): Map<String, List<String>> = unwrap(this).toJSON() ?: emptyMap()
 
   public companion object {
     internal fun wrap(cdkObject: software.amazon.awscdk.services.iam.PrincipalWithConditions):

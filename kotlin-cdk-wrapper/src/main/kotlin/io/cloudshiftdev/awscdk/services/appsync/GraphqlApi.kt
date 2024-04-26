@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.logs.ILogGroup
 import kotlin.Boolean
 import kotlin.Deprecated
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -238,6 +239,31 @@ public open class GraphqlApi(
     public fun name(name: String)
 
     /**
+     * A number indicating the maximum depth resolvers should be accepted when handling queries.
+     *
+     * Value must be withing range of 0 to 75
+     *
+     * Default: - The default value is 0 (or unspecified) which indicates no maximum depth.
+     *
+     * @param queryDepthLimit A number indicating the maximum depth resolvers should be accepted
+     * when handling queries. 
+     */
+    public fun queryDepthLimit(queryDepthLimit: Number)
+
+    /**
+     * A number indicating the maximum number of resolvers that should be accepted when handling
+     * queries.
+     *
+     * Value must be withing range of 0 to 10000
+     *
+     * Default: - The default value is 0 (or unspecified), which will set the limit to 10000
+     *
+     * @param resolverCountLimit A number indicating the maximum number of resolvers that should be
+     * accepted when handling queries. 
+     */
+    public fun resolverCountLimit(resolverCountLimit: Number)
+
+    /**
      * (deprecated) GraphQL schema definition. Specify how you want to define your schema.
      *
      * SchemaFile.fromAsset(filePath: string) allows schema definition through schema.graphql file
@@ -404,6 +430,35 @@ public open class GraphqlApi(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * A number indicating the maximum depth resolvers should be accepted when handling queries.
+     *
+     * Value must be withing range of 0 to 75
+     *
+     * Default: - The default value is 0 (or unspecified) which indicates no maximum depth.
+     *
+     * @param queryDepthLimit A number indicating the maximum depth resolvers should be accepted
+     * when handling queries. 
+     */
+    override fun queryDepthLimit(queryDepthLimit: Number) {
+      cdkBuilder.queryDepthLimit(queryDepthLimit)
+    }
+
+    /**
+     * A number indicating the maximum number of resolvers that should be accepted when handling
+     * queries.
+     *
+     * Value must be withing range of 0 to 10000
+     *
+     * Default: - The default value is 0 (or unspecified), which will set the limit to 10000
+     *
+     * @param resolverCountLimit A number indicating the maximum number of resolvers that should be
+     * accepted when handling queries. 
+     */
+    override fun resolverCountLimit(resolverCountLimit: Number) {
+      cdkBuilder.resolverCountLimit(resolverCountLimit)
     }
 
     /**

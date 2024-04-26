@@ -196,7 +196,7 @@ public open class DatabaseClusterFromSnapshot(
    *
    * @param props
    */
-  public open fun metricAcuUtilization(): Metric =
+  public open fun metricACUUtilization(): Metric =
       unwrap(this).metricACUUtilization().let(Metric::wrap)
 
   /**
@@ -210,7 +210,7 @@ public open class DatabaseClusterFromSnapshot(
    *
    * @param props
    */
-  public open fun metricAcuUtilization(props: MetricOptions): Metric =
+  public open fun metricACUUtilization(props: MetricOptions): Metric =
       unwrap(this).metricACUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -225,9 +225,9 @@ public open class DatabaseClusterFromSnapshot(
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("3f3662f4563df3003c54025065edc6881211474bc66d259be936d026eb80d439")
-  public open fun metricAcuUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
-      metricAcuUtilization(MetricOptions(props))
+  @JvmName("33b0ed64300589a3c8c62b653dd879a14ce77adab1e44f36e44db36cbd1b09b6")
+  public open fun metricACUUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricACUUtilization(MetricOptions(props))
 
   /**
    * As a cluster-level metric, it represents the average of the ServerlessDatabaseCapacity values
@@ -267,7 +267,7 @@ public open class DatabaseClusterFromSnapshot(
   /**
    * The secret attached to this cluster.
    */
-  public open fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
+  public override fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
   /**
    * Application for single user rotation of the master password to this cluster.

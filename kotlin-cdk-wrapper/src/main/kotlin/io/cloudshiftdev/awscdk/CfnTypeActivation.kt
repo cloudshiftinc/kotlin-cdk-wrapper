@@ -24,7 +24,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * [SetTypeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html)
  * to specify configuration properties for the extension. For more information, see [Configuring
  * extensions at the account
- * level](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-register.html#registry-set-configuration)
+ * level](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration)
  * in the *CloudFormation User Guide* .
  *
  * Example:

@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Boolean
 import kotlin.Deprecated
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -96,6 +97,25 @@ public interface GraphqlApiProps {
    * the name of the GraphQL API.
    */
   public fun name(): String
+
+  /**
+   * A number indicating the maximum depth resolvers should be accepted when handling queries.
+   *
+   * Value must be withing range of 0 to 75
+   *
+   * Default: - The default value is 0 (or unspecified) which indicates no maximum depth.
+   */
+  public fun queryDepthLimit(): Number? = unwrap(this).getQueryDepthLimit()
+
+  /**
+   * A number indicating the maximum number of resolvers that should be accepted when handling
+   * queries.
+   *
+   * Value must be withing range of 0 to 10000
+   *
+   * Default: - The default value is 0 (or unspecified), which will set the limit to 10000
+   */
+  public fun resolverCountLimit(): Number? = unwrap(this).getResolverCountLimit()
 
   /**
    * (deprecated) GraphQL schema definition. Specify how you want to define your schema.
@@ -199,6 +219,20 @@ public interface GraphqlApiProps {
      * @param name the name of the GraphQL API. 
      */
     public fun name(name: String)
+
+    /**
+     * @param queryDepthLimit A number indicating the maximum depth resolvers should be accepted
+     * when handling queries.
+     * Value must be withing range of 0 to 75
+     */
+    public fun queryDepthLimit(queryDepthLimit: Number)
+
+    /**
+     * @param resolverCountLimit A number indicating the maximum number of resolvers that should be
+     * accepted when handling queries.
+     * Value must be withing range of 0 to 10000
+     */
+    public fun resolverCountLimit(resolverCountLimit: Number)
 
     /**
      * @param schema GraphQL schema definition. Specify how you want to define your schema.
@@ -314,6 +348,24 @@ public interface GraphqlApiProps {
     }
 
     /**
+     * @param queryDepthLimit A number indicating the maximum depth resolvers should be accepted
+     * when handling queries.
+     * Value must be withing range of 0 to 75
+     */
+    override fun queryDepthLimit(queryDepthLimit: Number) {
+      cdkBuilder.queryDepthLimit(queryDepthLimit)
+    }
+
+    /**
+     * @param resolverCountLimit A number indicating the maximum number of resolvers that should be
+     * accepted when handling queries.
+     * Value must be withing range of 0 to 10000
+     */
+    override fun resolverCountLimit(resolverCountLimit: Number) {
+      cdkBuilder.resolverCountLimit(resolverCountLimit)
+    }
+
+    /**
      * @param schema GraphQL schema definition. Specify how you want to define your schema.
      * SchemaFile.fromAsset(filePath: string) allows schema definition through schema.graphql file
      * @deprecated use Definition.schema instead
@@ -405,6 +457,25 @@ public interface GraphqlApiProps {
      * the name of the GraphQL API.
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * A number indicating the maximum depth resolvers should be accepted when handling queries.
+     *
+     * Value must be withing range of 0 to 75
+     *
+     * Default: - The default value is 0 (or unspecified) which indicates no maximum depth.
+     */
+    override fun queryDepthLimit(): Number? = unwrap(this).getQueryDepthLimit()
+
+    /**
+     * A number indicating the maximum number of resolvers that should be accepted when handling
+     * queries.
+     *
+     * Value must be withing range of 0 to 10000
+     *
+     * Default: - The default value is 0 (or unspecified), which will set the limit to 10000
+     */
+    override fun resolverCountLimit(): Number? = unwrap(this).getResolverCountLimit()
 
     /**
      * (deprecated) GraphQL schema definition. Specify how you want to define your schema.

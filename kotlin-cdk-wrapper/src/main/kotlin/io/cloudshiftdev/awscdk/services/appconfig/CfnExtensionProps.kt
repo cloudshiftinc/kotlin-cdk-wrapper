@@ -35,6 +35,7 @@ import kotlin.collections.Map
  * .required(false)
  * // the properties below are optional
  * .description("description")
+ * .dynamic(false)
  * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")

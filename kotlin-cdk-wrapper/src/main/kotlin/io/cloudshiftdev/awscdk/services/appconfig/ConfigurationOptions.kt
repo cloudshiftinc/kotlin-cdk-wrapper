@@ -40,7 +40,10 @@ public interface ConfigurationOptions {
    * The list of environments to deploy the configuration to.
    *
    * If this parameter is not specified, then there will be no
-   * deployment.
+   * deployment created alongside this configuration.
+   *
+   * Deployments can be added later using the `IEnvironment.addDeployment` or
+   * `IEnvironment.addDeployments` methods.
    *
    * Default: - None.
    */
@@ -100,14 +103,20 @@ public interface ConfigurationOptions {
     /**
      * @param deployTo The list of environments to deploy the configuration to.
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      */
     public fun deployTo(deployTo: List<IEnvironment>)
 
     /**
      * @param deployTo The list of environments to deploy the configuration to.
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      */
     public fun deployTo(vararg deployTo: IEnvironment)
 
@@ -154,7 +163,10 @@ public interface ConfigurationOptions {
     /**
      * @param deployTo The list of environments to deploy the configuration to.
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      */
     override fun deployTo(deployTo: List<IEnvironment>) {
       cdkBuilder.deployTo(deployTo.map(IEnvironment::unwrap))
@@ -163,7 +175,10 @@ public interface ConfigurationOptions {
     /**
      * @param deployTo The list of environments to deploy the configuration to.
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      */
     override fun deployTo(vararg deployTo: IEnvironment): Unit = deployTo(deployTo.toList())
 
@@ -225,7 +240,10 @@ public interface ConfigurationOptions {
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      *
      * Default: - None.
      */

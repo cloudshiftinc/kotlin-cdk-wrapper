@@ -2,9 +2,11 @@
 
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.apigatewayv2.ContentHandling
 import io.cloudshiftdev.awscdk.services.apigatewayv2.PassthroughBehavior
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
@@ -12,7 +14,7 @@ import kotlin.Unit
 import kotlin.collections.Map
 
 /**
- * Props for AWS type integration for an HTTP Api.
+ * Props for AWS type integration for a WebSocket Api.
  *
  * Example:
  *
@@ -44,6 +46,15 @@ import kotlin.collections.Map
  * ```
  */
 public interface WebSocketAwsIntegrationProps {
+  /**
+   * Specifies how to handle response payload content type conversions.
+   *
+   * Default: - The response payload will be passed through from the integration response to
+   * the route response or method response without modification.
+   */
+  public fun contentHandling(): ContentHandling? =
+      unwrap(this).getContentHandling()?.let(ContentHandling::wrap)
+
   /**
    * Specifies the credentials role required for the integration.
    *
@@ -105,10 +116,24 @@ public interface WebSocketAwsIntegrationProps {
   public fun templateSelectionExpression(): String? = unwrap(this).getTemplateSelectionExpression()
 
   /**
+   * The maximum amount of time an integration will run before it returns without a response.
+   *
+   * Must be between 50 milliseconds and 29 seconds.
+   *
+   * Default: Duration.seconds(29)
+   */
+  public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
+
+  /**
    * A builder for [WebSocketAwsIntegrationProps]
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param contentHandling Specifies how to handle response payload content type conversions.
+     */
+    public fun contentHandling(contentHandling: ContentHandling)
+
     /**
      * @param credentialsRole Specifies the credentials role required for the integration.
      */
@@ -154,12 +179,26 @@ public interface WebSocketAwsIntegrationProps {
      * @param templateSelectionExpression The template selection expression for the integration.
      */
     public fun templateSelectionExpression(templateSelectionExpression: String)
+
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    public fun timeout(timeout: Duration)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder:
         software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegrationProps.Builder =
         software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegrationProps.builder()
+
+    /**
+     * @param contentHandling Specifies how to handle response payload content type conversions.
+     */
+    override fun contentHandling(contentHandling: ContentHandling) {
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+    }
 
     /**
      * @param credentialsRole Specifies the credentials role required for the integration.
@@ -221,6 +260,15 @@ public interface WebSocketAwsIntegrationProps {
       cdkBuilder.templateSelectionExpression(templateSelectionExpression)
     }
 
+    /**
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response.
+     * Must be between 50 milliseconds and 29 seconds.
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration::unwrap))
+    }
+
     public fun build():
         software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegrationProps =
         cdkBuilder.build()
@@ -229,6 +277,15 @@ public interface WebSocketAwsIntegrationProps {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.aws_apigatewayv2_integrations.WebSocketAwsIntegrationProps,
   ) : CdkObject(cdkObject), WebSocketAwsIntegrationProps {
+    /**
+     * Specifies how to handle response payload content type conversions.
+     *
+     * Default: - The response payload will be passed through from the integration response to
+     * the route response or method response without modification.
+     */
+    override fun contentHandling(): ContentHandling? =
+        unwrap(this).getContentHandling()?.let(ContentHandling::wrap)
+
     /**
      * Specifies the credentials role required for the integration.
      *
@@ -289,6 +346,15 @@ public interface WebSocketAwsIntegrationProps {
      */
     override fun templateSelectionExpression(): String? =
         unwrap(this).getTemplateSelectionExpression()
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     */
+    override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

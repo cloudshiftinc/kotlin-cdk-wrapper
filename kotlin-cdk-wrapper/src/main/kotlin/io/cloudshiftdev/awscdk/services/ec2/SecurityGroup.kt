@@ -53,16 +53,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * SecurityGroup mySecurityGroupWithoutInlineRules = SecurityGroup.Builder.create(this,
- * "SecurityGroup")
+ * Vpc vpc;
+ * SecurityGroup mySecurityGroup = SecurityGroup.Builder.create(this,
+ * "SecurityGroup").vpc(vpc).build();
+ * AutoScalingGroup.Builder.create(this, "ASG")
  * .vpc(vpc)
- * .description("Allow ssh access to ec2 instances")
- * .allowAllOutbound(true)
- * .disableInlineRules(true)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+ * .machineImage(MachineImage.latestAmazonLinux2())
+ * .securityGroup(mySecurityGroup)
  * .build();
- * //This will add the rule as an external cloud formation construct
- * mySecurityGroupWithoutInlineRules.addIngressRule(Peer.anyIpv4(), Port.tcp(22), "allow ssh access
- * from the world");
  * ```
  */
 public open class SecurityGroup(

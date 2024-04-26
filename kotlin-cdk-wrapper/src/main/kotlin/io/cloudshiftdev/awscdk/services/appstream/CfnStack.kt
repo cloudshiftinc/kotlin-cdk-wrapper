@@ -1192,7 +1192,7 @@ public open class CfnStack(
        * You can allow the same persistent application settings to be used across multiple stacks by
        * specifying the same settings group for each stack.
        */
-      public fun tingsGroup(settingsGroup: String)
+      public fun settingsGroup(settingsGroup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1222,7 +1222,7 @@ public open class CfnStack(
        * You can allow the same persistent application settings to be used across multiple stacks by
        * specifying the same settings group for each stack.
        */
-      override fun tingsGroup(settingsGroup: String) {
+      override fun settingsGroup(settingsGroup: String) {
         cdkBuilder.settingsGroup(settingsGroup)
       }
 

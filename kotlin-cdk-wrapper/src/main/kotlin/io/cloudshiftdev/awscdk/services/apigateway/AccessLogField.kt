@@ -125,7 +125,7 @@ public open class AccessLogField(
     public fun contextIdentityCaller(): String =
         software.amazon.awscdk.services.apigateway.AccessLogField.contextIdentityCaller()
 
-    public fun contextIdentityClientCertIssunerDn(): String =
+    public fun contextIdentityClientCertIssunerDN(): String =
         software.amazon.awscdk.services.apigateway.AccessLogField.contextIdentityClientCertIssunerDN()
 
     public fun contextIdentityClientCertPem(): String =
@@ -134,7 +134,7 @@ public open class AccessLogField(
     public fun contextIdentityClientCertSerialNumber(): String =
         software.amazon.awscdk.services.apigateway.AccessLogField.contextIdentityClientCertSerialNumber()
 
-    public fun contextIdentityClientCertSubjectDn(): String =
+    public fun contextIdentityClientCertSubjectDN(): String =
         software.amazon.awscdk.services.apigateway.AccessLogField.contextIdentityClientCertSubjectDN()
 
     public fun contextIdentityClientCertValidityNotAfter(): String =

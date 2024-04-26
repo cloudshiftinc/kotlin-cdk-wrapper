@@ -41,8 +41,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * For a custom Amazon SQS notification extension, enter the ARN of an Amazon SQS message queue in
  * the `Uri` field.
  *
- * For more information about extensions, see [Working with AWS AppConfig
- * extensions](https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html)
+ * For more information about extensions, see [Extending
+ * workflows](https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html)
  * in the *AWS AppConfig User Guide* .
  *
  * Example:
@@ -63,6 +63,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .required(false)
  * // the properties below are optional
  * .description("description")
+ * .dynamic(false)
  * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -428,21 +429,7 @@ public open class CfnExtension(
   }
 
   /**
-   * An action defines the tasks that the extension performs during the AWS AppConfig workflow.
-   *
-   * Each action includes an action point such as `ON_CREATE_HOSTED_CONFIGURATION` ,
-   * `PRE_DEPLOYMENT` , or `ON_DEPLOYMENT` . Each action also includes a name, a URI to an AWS Lambda
-   * function, and an Amazon Resource Name (ARN) for an AWS Identity and Access Management assume role.
-   * You specify the name, URI, and ARN for each *action point* defined in the extension. You can
-   * specify the following actions for an extension:
-   *
-   * * `PRE_CREATE_HOSTED_CONFIGURATION_VERSION`
-   * * `PRE_START_DEPLOYMENT`
-   * * `ON_DEPLOYMENT_START`
-   * * `ON_DEPLOYMENT_STEP`
-   * * `ON_DEPLOYMENT_BAKING`
-   * * `ON_DEPLOYMENT_COMPLETE`
-   * * `ON_DEPLOYMENT_ROLLED_BACK`
+   * The actions defined in the extension.
    *
    * Example:
    *
@@ -463,7 +450,7 @@ public open class CfnExtension(
    */
   public interface ActionProperty {
     /**
-     * Information about the action.
+     * Information about actions defined in the extension.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-action.html#cfn-appconfig-extension-action-description)
      */
@@ -500,7 +487,7 @@ public open class CfnExtension(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param description Information about the action.
+       * @param description Information about actions defined in the extension.
        */
       public fun description(description: String)
 
@@ -530,7 +517,7 @@ public open class CfnExtension(
           software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty.builder()
 
       /**
-       * @param description Information about the action.
+       * @param description Information about actions defined in the extension.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -569,7 +556,7 @@ public open class CfnExtension(
       cdkObject: software.amazon.awscdk.services.appconfig.CfnExtension.ActionProperty,
     ) : CdkObject(cdkObject), ActionProperty {
       /**
-       * Information about the action.
+       * Information about actions defined in the extension.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-action.html#cfn-appconfig-extension-action-description)
        */
@@ -624,8 +611,8 @@ public open class CfnExtension(
    * entered in an extension when invoked.
    *
    * Parameter values are specified in an extension association. For more information about
-   * extensions, see [Working with AWS AppConfig
-   * extensions](https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html)
+   * extensions, see [Extending
+   * workflows](https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html)
    * in the *AWS AppConfig User Guide* .
    *
    * Example:
@@ -638,6 +625,7 @@ public open class CfnExtension(
    * .required(false)
    * // the properties below are optional
    * .description("description")
+   * .dynamic(false)
    * .build();
    * ```
    *
@@ -650,6 +638,16 @@ public open class CfnExtension(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-parameter.html#cfn-appconfig-extension-parameter-description)
      */
     public fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Indicates whether this parameter's value can be supplied at the extension's action point
+     * instead of during extension association.
+     *
+     * Dynamic parameters can't be marked `Required` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-parameter.html#cfn-appconfig-extension-parameter-dynamic)
+     */
+    public fun `dynamic`(): Any? = unwrap(this).getDynamic()
 
     /**
      * A parameter value must be specified in the extension association.
@@ -667,6 +665,20 @@ public open class CfnExtension(
        * @param description Information about the parameter.
        */
       public fun description(description: String)
+
+      /**
+       * @param dynamic Indicates whether this parameter's value can be supplied at the extension's
+       * action point instead of during extension association.
+       * Dynamic parameters can't be marked `Required` .
+       */
+      public fun `dynamic`(`dynamic`: Boolean)
+
+      /**
+       * @param dynamic Indicates whether this parameter's value can be supplied at the extension's
+       * action point instead of during extension association.
+       * Dynamic parameters can't be marked `Required` .
+       */
+      public fun `dynamic`(`dynamic`: IResolvable)
 
       /**
        * @param required A parameter value must be specified in the extension association. 
@@ -689,6 +701,24 @@ public open class CfnExtension(
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
+      }
+
+      /**
+       * @param dynamic Indicates whether this parameter's value can be supplied at the extension's
+       * action point instead of during extension association.
+       * Dynamic parameters can't be marked `Required` .
+       */
+      override fun `dynamic`(`dynamic`: Boolean) {
+        cdkBuilder.`dynamic`(`dynamic`)
+      }
+
+      /**
+       * @param dynamic Indicates whether this parameter's value can be supplied at the extension's
+       * action point instead of during extension association.
+       * Dynamic parameters can't be marked `Required` .
+       */
+      override fun `dynamic`(`dynamic`: IResolvable) {
+        cdkBuilder.`dynamic`(`dynamic`.let(IResolvable::unwrap))
       }
 
       /**
@@ -718,6 +748,16 @@ public open class CfnExtension(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-parameter.html#cfn-appconfig-extension-parameter-description)
        */
       override fun description(): String? = unwrap(this).getDescription()
+
+      /**
+       * Indicates whether this parameter's value can be supplied at the extension's action point
+       * instead of during extension association.
+       *
+       * Dynamic parameters can't be marked `Required` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appconfig-extension-parameter.html#cfn-appconfig-extension-parameter-dynamic)
+       */
+      override fun `dynamic`(): Any? = unwrap(this).getDynamic()
 
       /**
        * A parameter value must be specified in the extension association.

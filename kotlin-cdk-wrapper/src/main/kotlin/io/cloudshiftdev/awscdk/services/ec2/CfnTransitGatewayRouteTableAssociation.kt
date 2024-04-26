@@ -57,11 +57,6 @@ public open class CfnTransitGatewayRouteTableAssociation(
   )
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 

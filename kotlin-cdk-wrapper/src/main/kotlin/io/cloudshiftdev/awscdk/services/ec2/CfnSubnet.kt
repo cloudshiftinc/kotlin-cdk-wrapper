@@ -215,6 +215,18 @@ public open class CfnSubnet(
   }
 
   /**
+   * Indicates the device position for local network interfaces in this subnet.
+   */
+  public open fun enableLniAtDeviceIndex(): Number? = unwrap(this).getEnableLniAtDeviceIndex()
+
+  /**
+   * Indicates the device position for local network interfaces in this subnet.
+   */
+  public open fun enableLniAtDeviceIndex(`value`: Number) {
+    unwrap(this).setEnableLniAtDeviceIndex(`value`)
+  }
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -492,6 +504,18 @@ public open class CfnSubnet(
     public fun enableDns64(enableDns64: IResolvable)
 
     /**
+     * Indicates the device position for local network interfaces in this subnet.
+     *
+     * For example, `1` indicates local network interfaces in this subnet are the secondary network
+     * interface (eth1).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enablelniatdeviceindex)
+     * @param enableLniAtDeviceIndex Indicates the device position for local network interfaces in
+     * this subnet. 
+     */
+    public fun enableLniAtDeviceIndex(enableLniAtDeviceIndex: Number)
+
+    /**
      * An IPv4 IPAM pool ID for the subnet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-ipv4ipampoolid)
@@ -755,6 +779,20 @@ public open class CfnSubnet(
      */
     override fun enableDns64(enableDns64: IResolvable) {
       cdkBuilder.enableDns64(enableDns64.let(IResolvable::unwrap))
+    }
+
+    /**
+     * Indicates the device position for local network interfaces in this subnet.
+     *
+     * For example, `1` indicates local network interfaces in this subnet are the secondary network
+     * interface (eth1).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enablelniatdeviceindex)
+     * @param enableLniAtDeviceIndex Indicates the device position for local network interfaces in
+     * this subnet. 
+     */
+    override fun enableLniAtDeviceIndex(enableLniAtDeviceIndex: Number) {
+      cdkBuilder.enableLniAtDeviceIndex(enableLniAtDeviceIndex)
     }
 
     /**

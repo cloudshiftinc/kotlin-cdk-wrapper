@@ -129,7 +129,7 @@ public abstract class PrincipalBase(
    *
    * Used when JSON.stringify() is called
    */
-  public open fun toJson(): Map<String, List<String>> = unwrap(this).toJSON() ?: emptyMap()
+  public open fun toJSON(): Map<String, List<String>> = unwrap(this).toJSON() ?: emptyMap()
 
   /**
    * Returns a new PrincipalWithConditions using this principal as the base, with the passed

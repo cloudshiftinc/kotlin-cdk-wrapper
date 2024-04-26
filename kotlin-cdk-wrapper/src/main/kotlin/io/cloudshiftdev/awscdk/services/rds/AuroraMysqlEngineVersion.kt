@@ -186,6 +186,9 @@ public open class AuroraMysqlEngineVersion(
     public val VER_2_11_4: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_11_4)
 
+    public val VER_2_11_5: AuroraMysqlEngineVersion =
+        AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_11_5)
+
     public val VER_2_12_0: AuroraMysqlEngineVersion =
         AuroraMysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraMysqlEngineVersion.VER_2_12_0)
 

@@ -63,9 +63,7 @@ public interface CfnBackupVaultProps {
   public fun backupVaultName(): String
 
   /**
-   * Metadata that you can assign to help organize the resources that you create.
-   *
-   * Each tag is a key-value pair.
+   * The tags to assign to the backup vault.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags)
    */
@@ -123,9 +121,7 @@ public interface CfnBackupVaultProps {
     public fun backupVaultName(backupVaultName: String)
 
     /**
-     * @param backupVaultTags Metadata that you can assign to help organize the resources that you
-     * create.
-     * Each tag is a key-value pair.
+     * @param backupVaultTags The tags to assign to the backup vault.
      */
     public fun backupVaultTags(backupVaultTags: Map<String, String>)
 
@@ -205,9 +201,7 @@ public interface CfnBackupVaultProps {
     }
 
     /**
-     * @param backupVaultTags Metadata that you can assign to help organize the resources that you
-     * create.
-     * Each tag is a key-value pair.
+     * @param backupVaultTags The tags to assign to the backup vault.
      */
     override fun backupVaultTags(backupVaultTags: Map<String, String>) {
       cdkBuilder.backupVaultTags(backupVaultTags)
@@ -304,9 +298,7 @@ public interface CfnBackupVaultProps {
     override fun backupVaultName(): String = unwrap(this).getBackupVaultName()
 
     /**
-     * Metadata that you can assign to help organize the resources that you create.
-     *
-     * Each tag is a key-value pair.
+     * The tags to assign to the backup vault.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupvault.html#cfn-backup-backupvault-backupvaulttags)
      */

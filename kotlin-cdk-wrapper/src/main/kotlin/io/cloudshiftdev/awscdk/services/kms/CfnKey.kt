@@ -309,6 +309,18 @@ public open class CfnKey(
   }
 
   /**
+   * The number of days between each automatic rotation.
+   */
+  public open fun rotationPeriodInDays(): Number? = unwrap(this).getRotationPeriodInDays()
+
+  /**
+   * The number of days between each automatic rotation.
+   */
+  public open fun rotationPeriodInDays(`value`: Number) {
+    unwrap(this).setRotationPeriodInDays(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -799,6 +811,18 @@ public open class CfnKey(
      * deletes a KMS key that has been removed from a CloudFormation stack. 
      */
     public fun pendingWindowInDays(pendingWindowInDays: Number)
+
+    /**
+     * The number of days between each automatic rotation.
+     *
+     * The default value is 365 days.
+     *
+     * Default: - 365
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-rotationperiodindays)
+     * @param rotationPeriodInDays The number of days between each automatic rotation. 
+     */
+    public fun rotationPeriodInDays(rotationPeriodInDays: Number)
 
     /**
      * Assigns one or more tags to the replica key.
@@ -1338,6 +1362,20 @@ public open class CfnKey(
      */
     override fun pendingWindowInDays(pendingWindowInDays: Number) {
       cdkBuilder.pendingWindowInDays(pendingWindowInDays)
+    }
+
+    /**
+     * The number of days between each automatic rotation.
+     *
+     * The default value is 365 days.
+     *
+     * Default: - 365
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-rotationperiodindays)
+     * @param rotationPeriodInDays The number of days between each automatic rotation. 
+     */
+    override fun rotationPeriodInDays(rotationPeriodInDays: Number) {
+      cdkBuilder.rotationPeriodInDays(rotationPeriodInDays)
     }
 
     /**

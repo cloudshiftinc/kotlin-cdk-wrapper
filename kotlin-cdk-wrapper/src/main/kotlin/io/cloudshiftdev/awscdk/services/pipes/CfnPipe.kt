@@ -7051,6 +7051,15 @@ public open class CfnPipe(
     /**
      * The parameters for using a stream as a source.
      *
+     * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This includes
+     * both clusters you manage yourself, as well as those hosted by a third-party provider, such as
+     * [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+     * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+     * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+     * [Apache Kafka streams as a
+     * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+     * *Amazon EventBridge User Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourceparameters.html#cfn-pipes-pipe-pipesourceparameters-selfmanagedkafkaparameters)
      */
     public fun selfManagedKafkaParameters(): Any? = unwrap(this).getSelfManagedKafkaParameters()
@@ -7199,17 +7208,41 @@ public open class CfnPipe(
 
       /**
        * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
+       * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
+       * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+       * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+       * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+       * [Apache Kafka streams as a
+       * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+       * *Amazon EventBridge User Guide* .
        */
       public fun selfManagedKafkaParameters(selfManagedKafkaParameters: IResolvable)
 
       /**
        * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
+       * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
+       * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+       * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+       * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+       * [Apache Kafka streams as a
+       * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+       * *Amazon EventBridge User Guide* .
        */
       public
           fun selfManagedKafkaParameters(selfManagedKafkaParameters: PipeSourceSelfManagedKafkaParametersProperty)
 
       /**
        * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
+       * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
+       * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+       * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+       * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+       * [Apache Kafka streams as a
+       * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+       * *Amazon EventBridge User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc7c2eb898cf64ad061c5d11e2ae61bf1e56548d691fa7599e2d78c81aa8bdf6")
@@ -7407,6 +7440,14 @@ public open class CfnPipe(
 
       /**
        * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
+       * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
+       * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+       * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+       * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+       * [Apache Kafka streams as a
+       * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+       * *Amazon EventBridge User Guide* .
        */
       override fun selfManagedKafkaParameters(selfManagedKafkaParameters: IResolvable) {
         cdkBuilder.selfManagedKafkaParameters(selfManagedKafkaParameters.let(IResolvable::unwrap))
@@ -7414,6 +7455,14 @@ public open class CfnPipe(
 
       /**
        * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
+       * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
+       * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+       * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+       * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+       * [Apache Kafka streams as a
+       * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+       * *Amazon EventBridge User Guide* .
        */
       override
           fun selfManagedKafkaParameters(selfManagedKafkaParameters: PipeSourceSelfManagedKafkaParametersProperty) {
@@ -7422,6 +7471,14 @@ public open class CfnPipe(
 
       /**
        * @param selfManagedKafkaParameters The parameters for using a stream as a source.
+       * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
+       * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
+       * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+       * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+       * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+       * [Apache Kafka streams as a
+       * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+       * *Amazon EventBridge User Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fc7c2eb898cf64ad061c5d11e2ae61bf1e56548d691fa7599e2d78c81aa8bdf6")
@@ -7512,6 +7569,15 @@ public open class CfnPipe(
 
       /**
        * The parameters for using a stream as a source.
+       *
+       * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This
+       * includes both clusters you manage yourself, as well as those hosted by a third-party provider,
+       * such as [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+       * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+       * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see
+       * [Apache Kafka streams as a
+       * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+       * *Amazon EventBridge User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pipes-pipe-pipesourceparameters.html#cfn-pipes-pipe-pipesourceparameters-selfmanagedkafkaparameters)
        */
@@ -7769,6 +7835,15 @@ public open class CfnPipe(
 
   /**
    * The parameters for using a stream as a source.
+   *
+   * A *self managed* cluster refers to any Apache Kafka cluster not hosted by AWS . This includes
+   * both clusters you manage yourself, as well as those hosted by a third-party provider, such as
+   * [Confluent Cloud](https://docs.aws.amazon.com/https://www.confluent.io/) ,
+   * [CloudKarafka](https://docs.aws.amazon.com/https://www.cloudkarafka.com/) , or
+   * [Redpanda](https://docs.aws.amazon.com/https://redpanda.com/) . For more information, see [Apache
+   * Kafka streams as a
+   * source](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-pipes-kafka.html) in the
+   * *Amazon EventBridge User Guide* .
    *
    * Example:
    *

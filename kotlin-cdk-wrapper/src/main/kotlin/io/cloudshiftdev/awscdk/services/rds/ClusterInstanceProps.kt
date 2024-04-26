@@ -40,6 +40,7 @@ import kotlin.collections.Map
  * "parametersKey", "parameters"))
  * .performanceInsightEncryptionKey(key)
  * .performanceInsightRetention(PerformanceInsightRetention.DEFAULT)
+ * .preferredMaintenanceWindow("preferredMaintenanceWindow")
  * .promotionTier(123)
  * .publiclyAccessible(false)
  * .build();
@@ -141,6 +142,13 @@ public interface ClusterInstanceProps : ClusterInstanceOptions {
      * Insights data.
      */
     public fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention)
+
+    /**
+     * @param preferredMaintenanceWindow A preferred maintenance window day/time range. Should be
+     * specified as a range ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC).
+     * Example: 'Sun:23:45-Mon:00:15'
+     */
+    public fun preferredMaintenanceWindow(preferredMaintenanceWindow: String)
 
     /**
      * @param promotionTier The promotion tier of the cluster instance.
@@ -256,6 +264,15 @@ public interface ClusterInstanceProps : ClusterInstanceOptions {
     override
         fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
       cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention::unwrap))
+    }
+
+    /**
+     * @param preferredMaintenanceWindow A preferred maintenance window day/time range. Should be
+     * specified as a range ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC).
+     * Example: 'Sun:23:45-Mon:00:15'
+     */
+    override fun preferredMaintenanceWindow(preferredMaintenanceWindow: String) {
+      cdkBuilder.preferredMaintenanceWindow(preferredMaintenanceWindow)
     }
 
     /**
@@ -422,6 +439,20 @@ public interface ClusterInstanceProps : ClusterInstanceOptions {
      */
     override fun performanceInsightRetention(): PerformanceInsightRetention? =
         unwrap(this).getPerformanceInsightRetention()?.let(PerformanceInsightRetention::wrap)
+
+    /**
+     * A preferred maintenance window day/time range. Should be specified as a range
+     * ddd:hh24:mi-ddd:hh24:mi (24H Clock UTC).
+     *
+     * Example: 'Sun:23:45-Mon:00:15'
+     *
+     * Default: - 30-minute window selected at random from an 8-hour block of time for
+     * each AWS Region, occurring on a random day of the week.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_UpgradeDBInstance.Maintenance.html#Concepts.DBMaintenance)
+     */
+    override fun preferredMaintenanceWindow(): String? =
+        unwrap(this).getPreferredMaintenanceWindow()
 
     /**
      * The promotion tier of the cluster instance.

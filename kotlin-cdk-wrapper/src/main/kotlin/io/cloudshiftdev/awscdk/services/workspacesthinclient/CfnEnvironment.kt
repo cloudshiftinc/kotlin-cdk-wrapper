@@ -150,26 +150,26 @@ public open class CfnEnvironment(
   }
 
   /**
-   * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces , WorkSpaces
-   * Web, or AppStream 2.0 .
+   * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces, WorkSpaces Web,
+   * or AppStream 2.0.
    */
   public open fun desktopArn(): String = unwrap(this).getDesktopArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces , WorkSpaces
-   * Web, or AppStream 2.0 .
+   * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces, WorkSpaces Web,
+   * or AppStream 2.0.
    */
   public open fun desktopArn(`value`: String) {
     unwrap(this).setDesktopArn(`value`)
   }
 
   /**
-   * The URL for the identity provider login (only for environments that use AppStream 2.0 ).
+   * The URL for the identity provider login (only for environments that use AppStream 2.0).
    */
   public open fun desktopEndpoint(): String? = unwrap(this).getDesktopEndpoint()
 
   /**
-   * The URL for the identity provider login (only for environments that use AppStream 2.0 ).
+   * The URL for the identity provider login (only for environments that use AppStream 2.0).
    */
   public open fun desktopEndpoint(`value`: String) {
     unwrap(this).setDesktopEndpoint(`value`)
@@ -292,21 +292,21 @@ public open class CfnEnvironment(
     public fun desiredSoftwareSetId(desiredSoftwareSetId: String)
 
     /**
-     * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces , WorkSpaces
-     * Web, or AppStream 2.0 .
+     * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces, WorkSpaces
+     * Web, or AppStream 2.0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktoparn)
      * @param desktopArn The Amazon Resource Name (ARN) of the desktop to stream from Amazon
-     * WorkSpaces , WorkSpaces Web, or AppStream 2.0 . 
+     * WorkSpaces, WorkSpaces Web, or AppStream 2.0. 
      */
     public fun desktopArn(desktopArn: String)
 
     /**
-     * The URL for the identity provider login (only for environments that use AppStream 2.0 ).
+     * The URL for the identity provider login (only for environments that use AppStream 2.0).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktopendpoint)
      * @param desktopEndpoint The URL for the identity provider login (only for environments that
-     * use AppStream 2.0 ). 
+     * use AppStream 2.0). 
      */
     public fun desktopEndpoint(desktopEndpoint: String)
 
@@ -416,23 +416,23 @@ public open class CfnEnvironment(
     }
 
     /**
-     * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces , WorkSpaces
-     * Web, or AppStream 2.0 .
+     * The Amazon Resource Name (ARN) of the desktop to stream from Amazon WorkSpaces, WorkSpaces
+     * Web, or AppStream 2.0.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktoparn)
      * @param desktopArn The Amazon Resource Name (ARN) of the desktop to stream from Amazon
-     * WorkSpaces , WorkSpaces Web, or AppStream 2.0 . 
+     * WorkSpaces, WorkSpaces Web, or AppStream 2.0. 
      */
     override fun desktopArn(desktopArn: String) {
       cdkBuilder.desktopArn(desktopArn)
     }
 
     /**
-     * The URL for the identity provider login (only for environments that use AppStream 2.0 ).
+     * The URL for the identity provider login (only for environments that use AppStream 2.0).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesthinclient-environment.html#cfn-workspacesthinclient-environment-desktopendpoint)
      * @param desktopEndpoint The URL for the identity provider login (only for environments that
-     * use AppStream 2.0 ). 
+     * use AppStream 2.0). 
      */
     override fun desktopEndpoint(desktopEndpoint: String) {
       cdkBuilder.desktopEndpoint(desktopEndpoint)

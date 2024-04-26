@@ -27,15 +27,16 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Cluster cluster = Cluster.Builder.create(this, "HelloEKS")
+ * // or
+ * Vpc vpc;
+ * Cluster.Builder.create(this, "MyCluster")
+ * .kubectlMemory(Size.gibibytes(4))
  * .version(KubernetesVersion.V1_29)
- * .defaultCapacity(0)
  * .build();
- * cluster.addNodegroupCapacity("custom-node-group", NodegroupOptions.builder()
- * .instanceTypes(List.of(new InstanceType("m5.large")))
- * .minSize(4)
- * .diskSize(100)
- * .amiType(NodegroupAmiType.AL2_X86_64_GPU)
+ * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
+ * .kubectlMemory(Size.gibibytes(4))
+ * .vpc(vpc)
+ * .clusterName("cluster-name")
  * .build());
  * ```
  */

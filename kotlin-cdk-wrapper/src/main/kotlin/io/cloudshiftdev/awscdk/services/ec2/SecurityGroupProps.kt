@@ -14,16 +14,14 @@ import kotlin.Unit
  *
  * ```
  * Vpc vpc;
- * SecurityGroup securityGroup1 = SecurityGroup.Builder.create(this,
- * "SecurityGroup1").vpc(vpc).build();
- * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
+ * SecurityGroup mySecurityGroup = SecurityGroup.Builder.create(this,
+ * "SecurityGroup").vpc(vpc).build();
+ * AutoScalingGroup.Builder.create(this, "ASG")
  * .vpc(vpc)
- * .internetFacing(true)
- * .securityGroup(securityGroup1)
+ * .instanceType(InstanceType.of(InstanceClass.BURSTABLE2, InstanceSize.MICRO))
+ * .machineImage(MachineImage.latestAmazonLinux2())
+ * .securityGroup(mySecurityGroup)
  * .build();
- * SecurityGroup securityGroup2 = SecurityGroup.Builder.create(this,
- * "SecurityGroup2").vpc(vpc).build();
- * lb.addSecurityGroup(securityGroup2);
  * ```
  */
 public interface SecurityGroupProps {

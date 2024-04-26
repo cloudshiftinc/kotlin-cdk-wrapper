@@ -28,6 +28,12 @@ import kotlin.jvm.JvmName
  * .executionRole("executionRole")
  * // the properties below are optional
  * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
  * .lifecycleConfigArn("lifecycleConfigArn")

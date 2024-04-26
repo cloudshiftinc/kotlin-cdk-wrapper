@@ -333,6 +333,32 @@ public open class CfnAppBlock(
         fun postSetupScriptDetails(postSetupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit)
 
     /**
+     * The setup script details of the app block.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
+     * @param setupScriptDetails The setup script details of the app block. 
+     */
+    public fun setupScriptDetails(setupScriptDetails: IResolvable)
+
+    /**
+     * The setup script details of the app block.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
+     * @param setupScriptDetails The setup script details of the app block. 
+     */
+    public fun setupScriptDetails(setupScriptDetails: ScriptDetailsProperty)
+
+    /**
+     * The setup script details of the app block.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
+     * @param setupScriptDetails The setup script details of the app block. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("db33a4969d6cb951bacdca0158df9228ec6e36d2613549b0591e6a649f0d71be")
+    public fun setupScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit)
+
+    /**
      * The source S3 location of the app block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-sources3location)
@@ -373,32 +399,6 @@ public open class CfnAppBlock(
      * @param tags The tags of the app block. 
      */
     public fun tags(vararg tags: CfnTag)
-
-    /**
-     * The setup script details of the app block.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
-     * @param setupScriptDetails The setup script details of the app block. 
-     */
-    public fun upScriptDetails(setupScriptDetails: IResolvable)
-
-    /**
-     * The setup script details of the app block.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
-     * @param setupScriptDetails The setup script details of the app block. 
-     */
-    public fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty)
-
-    /**
-     * The setup script details of the app block.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
-     * @param setupScriptDetails The setup script details of the app block. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("b7acea0a2b75f58dc64d95ddd807c88fa359b8dae5432710bdd03baec04bf7e4")
-    public fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -483,6 +483,37 @@ public open class CfnAppBlock(
         Unit = postSetupScriptDetails(ScriptDetailsProperty(postSetupScriptDetails))
 
     /**
+     * The setup script details of the app block.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
+     * @param setupScriptDetails The setup script details of the app block. 
+     */
+    override fun setupScriptDetails(setupScriptDetails: IResolvable) {
+      cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The setup script details of the app block.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
+     * @param setupScriptDetails The setup script details of the app block. 
+     */
+    override fun setupScriptDetails(setupScriptDetails: ScriptDetailsProperty) {
+      cdkBuilder.setupScriptDetails(setupScriptDetails.let(ScriptDetailsProperty::unwrap))
+    }
+
+    /**
+     * The setup script details of the app block.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
+     * @param setupScriptDetails The setup script details of the app block. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("db33a4969d6cb951bacdca0158df9228ec6e36d2613549b0591e6a649f0d71be")
+    override fun setupScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit):
+        Unit = setupScriptDetails(ScriptDetailsProperty(setupScriptDetails))
+
+    /**
      * The source S3 location of the app block.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-sources3location)
@@ -530,37 +561,6 @@ public open class CfnAppBlock(
      * @param tags The tags of the app block. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-    /**
-     * The setup script details of the app block.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
-     * @param setupScriptDetails The setup script details of the app block. 
-     */
-    override fun upScriptDetails(setupScriptDetails: IResolvable) {
-      cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The setup script details of the app block.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
-     * @param setupScriptDetails The setup script details of the app block. 
-     */
-    override fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty) {
-      cdkBuilder.setupScriptDetails(setupScriptDetails.let(ScriptDetailsProperty::unwrap))
-    }
-
-    /**
-     * The setup script details of the app block.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appstream-appblock.html#cfn-appstream-appblock-setupscriptdetails)
-     * @param setupScriptDetails The setup script details of the app block. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("b7acea0a2b75f58dc64d95ddd807c88fa359b8dae5432710bdd03baec04bf7e4")
-    override fun upScriptDetails(setupScriptDetails: ScriptDetailsProperty.Builder.() -> Unit): Unit
-        = upScriptDetails(ScriptDetailsProperty(setupScriptDetails))
 
     public fun build(): software.amazon.awscdk.services.appstream.CfnAppBlock = cdkBuilder.build()
   }

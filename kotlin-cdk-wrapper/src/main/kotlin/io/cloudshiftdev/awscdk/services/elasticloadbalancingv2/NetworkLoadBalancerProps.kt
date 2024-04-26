@@ -20,31 +20,38 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration;
  * Vpc vpc = new Vpc(this, "VPC");
- * NetworkLoadBalancer nlb = NetworkLoadBalancer.Builder.create(this, "NLB")
- * .vpc(vpc)
- * .build();
- * VpcLink link = VpcLink.Builder.create(this, "link")
- * .targets(List.of(nlb))
- * .build();
- * Integration integration = Integration.Builder.create()
- * .type(IntegrationType.HTTP_PROXY)
- * .integrationHttpMethod("ANY")
- * .options(IntegrationOptions.builder()
- * .connectionType(ConnectionType.VPC_LINK)
- * .vpcLink(link)
- * .build())
+ * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
+ * NetworkListener listener = lb.addListener("listener",
+ * BaseNetworkListenerProps.builder().port(80).build());
+ * listener.addTargets("target", AddNetworkTargetsProps.builder()
+ * .port(80)
+ * .build());
+ * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+ * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
  * .build();
  * ```
  */
 public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
   /**
-   * Indicates whether cross-zone load balancing is enabled.
+   * The AZ affinity routing policy.
    *
-   * Default: false
+   * Default: - AZ affinity is disabled.
+   *
+   * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#zonal-dns-affinity)
    */
-  public fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+  public fun clientRoutingPolicy(): ClientRoutingPolicy? =
+      unwrap(this).getClientRoutingPolicy()?.let(ClientRoutingPolicy::wrap)
+
+  /**
+   * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+   * Balancer through AWS PrivateLink.
+   *
+   * Default: true
+   */
+  public fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): Boolean? =
+      unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
 
   /**
    * The type of IP addresses to use.
@@ -71,6 +78,11 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param clientRoutingPolicy The AZ affinity routing policy.
+     */
+    public fun clientRoutingPolicy(clientRoutingPolicy: ClientRoutingPolicy)
+
+    /**
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
      */
     public fun crossZoneEnabled(crossZoneEnabled: Boolean)
@@ -79,6 +91,20 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * @param deletionProtection Indicates whether deletion protection is enabled.
      */
     public fun deletionProtection(deletionProtection: Boolean)
+
+    /**
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW).
+     */
+    public fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean)
+
+    /**
+     * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
+     * inbound security group rules for traffic sent to a Network Load Balancer through AWS
+     * PrivateLink.
+     */
+    public
+        fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: Boolean)
 
     /**
      * @param internetFacing Whether the load balancer has an internet-routable address.
@@ -131,6 +157,13 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps.builder()
 
     /**
+     * @param clientRoutingPolicy The AZ affinity routing policy.
+     */
+    override fun clientRoutingPolicy(clientRoutingPolicy: ClientRoutingPolicy) {
+      cdkBuilder.clientRoutingPolicy(clientRoutingPolicy.let(ClientRoutingPolicy::unwrap))
+    }
+
+    /**
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
      */
     override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
@@ -142,6 +175,24 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      */
     override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
+    }
+
+    /**
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW).
+     */
+    override fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean) {
+      cdkBuilder.denyAllIgwTraffic(denyAllIgwTraffic)
+    }
+
+    /**
+     * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
+     * inbound security group rules for traffic sent to a Network Load Balancer through AWS
+     * PrivateLink.
+     */
+    override
+        fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: Boolean) {
+      cdkBuilder.enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic)
     }
 
     /**
@@ -211,9 +262,23 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancerProps,
   ) : CdkObject(cdkObject), NetworkLoadBalancerProps {
     /**
+     * The AZ affinity routing policy.
+     *
+     * Default: - AZ affinity is disabled.
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#zonal-dns-affinity)
+     */
+    override fun clientRoutingPolicy(): ClientRoutingPolicy? =
+        unwrap(this).getClientRoutingPolicy()?.let(ClientRoutingPolicy::wrap)
+
+    /**
      * Indicates whether cross-zone load balancing is enabled.
      *
-     * Default: false
+     * Default: - false for Network Load Balancers and true for Application Load Balancers.
+     * This can not be `false` for Application Load Balancers.
+     *
+     * [Documentation]( -
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      */
     override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
 
@@ -223,6 +288,22 @@ public interface NetworkLoadBalancerProps : BaseLoadBalancerProps {
      * Default: false
      */
     override fun deletionProtection(): Boolean? = unwrap(this).getDeletionProtection()
+
+    /**
+     * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+     *
+     * Default: - false for internet-facing load balancers and true for internal load balancers
+     */
+    override fun denyAllIgwTraffic(): Boolean? = unwrap(this).getDenyAllIgwTraffic()
+
+    /**
+     * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+     * Balancer through AWS PrivateLink.
+     *
+     * Default: true
+     */
+    override fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): Boolean? =
+        unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
 
     /**
      * Whether the load balancer has an internet-routable address.

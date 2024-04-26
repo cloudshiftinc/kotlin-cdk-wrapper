@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -40,6 +41,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .performanceScoreThreshold(123)
  * .build())
+ * .includeLinkedAccounts(false)
  * .internetMeasurementsLogDelivery(InternetMeasurementsLogDeliveryProperty.builder()
  * .s3Config(S3ConfigProperty.builder()
  * .bucketName("bucketName")
@@ -47,6 +49,7 @@ import kotlin.jvm.JvmName
  * .logDeliveryStatus("logDeliveryStatus")
  * .build())
  * .build())
+ * .linkedAccountId("linkedAccountId")
  * .maxCityNetworksToMonitor(123)
  * .resources(List.of("resources"))
  * .resourcesToAdd(List.of("resourcesToAdd"))
@@ -92,6 +95,19 @@ public interface CfnMonitorProps {
   public fun healthEventsConfig(): Any? = unwrap(this).getHealthEventsConfig()
 
   /**
+   * A boolean option that you can set to `TRUE` to include monitors for linked accounts in a list
+   * of monitors, when you've set up cross-account sharing in Internet Monitor.
+   *
+   * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+   * For more information, see [Internet Monitor cross-account
+   * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+   * in the Amazon CloudWatch User Guide.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html#cfn-internetmonitor-monitor-includelinkedaccounts)
+   */
+  public fun includeLinkedAccounts(): Any? = unwrap(this).getIncludeLinkedAccounts()
+
+  /**
    * Publish internet measurements for a monitor for all city-networks (up to the 500,000 service
    * limit) to another location, such as an Amazon S3 bucket.
    *
@@ -102,6 +118,18 @@ public interface CfnMonitorProps {
    */
   public fun internetMeasurementsLogDelivery(): Any? =
       unwrap(this).getInternetMeasurementsLogDelivery()
+
+  /**
+   * The account ID for an account that you've set up cross-account sharing for in Internet Monitor.
+   *
+   * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+   * For more information, see [Internet Monitor cross-account
+   * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+   * in the Amazon CloudWatch User Guide.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html#cfn-internetmonitor-monitor-linkedaccountid)
+   */
+  public fun linkedAccountId(): String? = unwrap(this).getLinkedAccountId()
 
   /**
    * The maximum number of city-networks to monitor for your resources.
@@ -288,6 +316,28 @@ public interface CfnMonitorProps {
         fun healthEventsConfig(healthEventsConfig: CfnMonitor.HealthEventsConfigProperty.Builder.() -> Unit)
 
     /**
+     * @param includeLinkedAccounts A boolean option that you can set to `TRUE` to include monitors
+     * for linked accounts in a list of monitors, when you've set up cross-account sharing in Internet
+     * Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     */
+    public fun includeLinkedAccounts(includeLinkedAccounts: Boolean)
+
+    /**
+     * @param includeLinkedAccounts A boolean option that you can set to `TRUE` to include monitors
+     * for linked accounts in a list of monitors, when you've set up cross-account sharing in Internet
+     * Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     */
+    public fun includeLinkedAccounts(includeLinkedAccounts: IResolvable)
+
+    /**
      * @param internetMeasurementsLogDelivery Publish internet measurements for a monitor for all
      * city-networks (up to the 500,000 service limit) to another location, such as an Amazon S3
      * bucket.
@@ -317,6 +367,16 @@ public interface CfnMonitorProps {
     @JvmName("028392a41afcc5d121021085744808e7d08fd41be29a4986bada68513d04a167")
     public
         fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: CfnMonitor.InternetMeasurementsLogDeliveryProperty.Builder.() -> Unit)
+
+    /**
+     * @param linkedAccountId The account ID for an account that you've set up cross-account sharing
+     * for in Internet Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     */
+    public fun linkedAccountId(linkedAccountId: String)
 
     /**
      * @param maxCityNetworksToMonitor The maximum number of city-networks to monitor for your
@@ -527,6 +587,32 @@ public interface CfnMonitorProps {
         Unit = healthEventsConfig(CfnMonitor.HealthEventsConfigProperty(healthEventsConfig))
 
     /**
+     * @param includeLinkedAccounts A boolean option that you can set to `TRUE` to include monitors
+     * for linked accounts in a list of monitors, when you've set up cross-account sharing in Internet
+     * Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     */
+    override fun includeLinkedAccounts(includeLinkedAccounts: Boolean) {
+      cdkBuilder.includeLinkedAccounts(includeLinkedAccounts)
+    }
+
+    /**
+     * @param includeLinkedAccounts A boolean option that you can set to `TRUE` to include monitors
+     * for linked accounts in a list of monitors, when you've set up cross-account sharing in Internet
+     * Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     */
+    override fun includeLinkedAccounts(includeLinkedAccounts: IResolvable) {
+      cdkBuilder.includeLinkedAccounts(includeLinkedAccounts.let(IResolvable::unwrap))
+    }
+
+    /**
      * @param internetMeasurementsLogDelivery Publish internet measurements for a monitor for all
      * city-networks (up to the 500,000 service limit) to another location, such as an Amazon S3
      * bucket.
@@ -562,6 +648,18 @@ public interface CfnMonitorProps {
         fun internetMeasurementsLogDelivery(internetMeasurementsLogDelivery: CfnMonitor.InternetMeasurementsLogDeliveryProperty.Builder.() -> Unit):
         Unit =
         internetMeasurementsLogDelivery(CfnMonitor.InternetMeasurementsLogDeliveryProperty(internetMeasurementsLogDelivery))
+
+    /**
+     * @param linkedAccountId The account ID for an account that you've set up cross-account sharing
+     * for in Internet Monitor.
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     */
+    override fun linkedAccountId(linkedAccountId: String) {
+      cdkBuilder.linkedAccountId(linkedAccountId)
+    }
 
     /**
      * @param maxCityNetworksToMonitor The maximum number of city-networks to monitor for your
@@ -737,6 +835,19 @@ public interface CfnMonitorProps {
     override fun healthEventsConfig(): Any? = unwrap(this).getHealthEventsConfig()
 
     /**
+     * A boolean option that you can set to `TRUE` to include monitors for linked accounts in a list
+     * of monitors, when you've set up cross-account sharing in Internet Monitor.
+     *
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html#cfn-internetmonitor-monitor-includelinkedaccounts)
+     */
+    override fun includeLinkedAccounts(): Any? = unwrap(this).getIncludeLinkedAccounts()
+
+    /**
      * Publish internet measurements for a monitor for all city-networks (up to the 500,000 service
      * limit) to another location, such as an Amazon S3 bucket.
      *
@@ -747,6 +858,19 @@ public interface CfnMonitorProps {
      */
     override fun internetMeasurementsLogDelivery(): Any? =
         unwrap(this).getInternetMeasurementsLogDelivery()
+
+    /**
+     * The account ID for an account that you've set up cross-account sharing for in Internet
+     * Monitor.
+     *
+     * You configure cross-account sharing by using Amazon CloudWatch Observability Access Manager.
+     * For more information, see [Internet Monitor cross-account
+     * observability](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cwim-cross-account.html)
+     * in the Amazon CloudWatch User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-internetmonitor-monitor.html#cfn-internetmonitor-monitor-linkedaccountid)
+     */
+    override fun linkedAccountId(): String? = unwrap(this).getLinkedAccountId()
 
     /**
      * The maximum number of city-networks to monitor for your resources.

@@ -368,12 +368,12 @@ public open class CfnServer(
       s3StorageOptions(S3StorageOptionsProperty(`value`))
 
   /**
-   * Specifies the name of the security policy that is attached to the server.
+   * Specifies the name of the security policy for the server.
    */
   public open fun securityPolicyName(): String? = unwrap(this).getSecurityPolicyName()
 
   /**
-   * Specifies the name of the security policy that is attached to the server.
+   * Specifies the name of the security policy for the server.
    */
   public open fun securityPolicyName(`value`: String) {
     unwrap(this).setSecurityPolicyName(`value`)
@@ -496,6 +496,9 @@ public open class CfnServer(
 
     /**
      * Specifies the domain of the storage system that is used for file transfers.
+     *
+     * There are two domains available: Amazon Simple Storage Service (Amazon S3) and Amazon Elastic
+     * File System (Amazon EFS). The default value is S3.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-domain)
      * @param domain Specifies the domain of the storage system that is used for file transfers. 
@@ -884,11 +887,10 @@ public open class CfnServer(
     public fun s3StorageOptions(s3StorageOptions: S3StorageOptionsProperty.Builder.() -> Unit)
 
     /**
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-securitypolicyname)
-     * @param securityPolicyName Specifies the name of the security policy that is attached to the
-     * server. 
+     * @param securityPolicyName Specifies the name of the security policy for the server. 
      */
     public fun securityPolicyName(securityPolicyName: String)
 
@@ -1045,6 +1047,9 @@ public open class CfnServer(
 
     /**
      * Specifies the domain of the storage system that is used for file transfers.
+     *
+     * There are two domains available: Amazon Simple Storage Service (Amazon S3) and Amazon Elastic
+     * File System (Amazon EFS). The default value is S3.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-domain)
      * @param domain Specifies the domain of the storage system that is used for file transfers. 
@@ -1467,11 +1472,10 @@ public open class CfnServer(
         Unit = s3StorageOptions(S3StorageOptionsProperty(s3StorageOptions))
 
     /**
-     * Specifies the name of the security policy that is attached to the server.
+     * Specifies the name of the security policy for the server.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-securitypolicyname)
-     * @param securityPolicyName Specifies the name of the security policy that is attached to the
-     * server. 
+     * @param securityPolicyName Specifies the name of the security policy for the server. 
      */
     override fun securityPolicyName(securityPolicyName: String) {
       cdkBuilder.securityPolicyName(securityPolicyName)

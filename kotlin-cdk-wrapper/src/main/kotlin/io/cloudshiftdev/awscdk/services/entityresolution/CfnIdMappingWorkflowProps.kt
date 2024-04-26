@@ -37,17 +37,19 @@ import kotlin.jvm.JvmName
  * .build())
  * .inputSourceConfig(List.of(IdMappingWorkflowInputSourceProperty.builder()
  * .inputSourceArn("inputSourceArn")
- * .schemaArn("schemaArn")
- * .build()))
- * .outputSourceConfig(List.of(IdMappingWorkflowOutputSourceProperty.builder()
- * .outputS3Path("outputS3Path")
  * // the properties below are optional
- * .kmsArn("kmsArn")
+ * .schemaArn("schemaArn")
+ * .type("type")
  * .build()))
  * .roleArn("roleArn")
  * .workflowName("workflowName")
  * // the properties below are optional
  * .description("description")
+ * .outputSourceConfig(List.of(IdMappingWorkflowOutputSourceProperty.builder()
+ * .outputS3Path("outputS3Path")
+ * // the properties below are optional
+ * .kmsArn("kmsArn")
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -85,7 +87,7 @@ public interface CfnIdMappingWorkflowProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-outputsourceconfig)
    */
-  public fun outputSourceConfig(): Any
+  public fun outputSourceConfig(): Any? = unwrap(this).getOutputSourceConfig()
 
   /**
    * The Amazon Resource Name (ARN) of the IAM role.
@@ -165,19 +167,19 @@ public interface CfnIdMappingWorkflowProps {
 
     /**
      * @param outputSourceConfig A list of `IdMappingWorkflowOutputSource` objects, each of which
-     * contains fields `OutputS3Path` and `Output` . 
+     * contains fields `OutputS3Path` and `Output` .
      */
     public fun outputSourceConfig(outputSourceConfig: IResolvable)
 
     /**
      * @param outputSourceConfig A list of `IdMappingWorkflowOutputSource` objects, each of which
-     * contains fields `OutputS3Path` and `Output` . 
+     * contains fields `OutputS3Path` and `Output` .
      */
     public fun outputSourceConfig(outputSourceConfig: List<Any>)
 
     /**
      * @param outputSourceConfig A list of `IdMappingWorkflowOutputSource` objects, each of which
-     * contains fields `OutputS3Path` and `Output` . 
+     * contains fields `OutputS3Path` and `Output` .
      */
     public fun outputSourceConfig(vararg outputSourceConfig: Any)
 
@@ -270,7 +272,7 @@ public interface CfnIdMappingWorkflowProps {
 
     /**
      * @param outputSourceConfig A list of `IdMappingWorkflowOutputSource` objects, each of which
-     * contains fields `OutputS3Path` and `Output` . 
+     * contains fields `OutputS3Path` and `Output` .
      */
     override fun outputSourceConfig(outputSourceConfig: IResolvable) {
       cdkBuilder.outputSourceConfig(outputSourceConfig.let(IResolvable::unwrap))
@@ -278,7 +280,7 @@ public interface CfnIdMappingWorkflowProps {
 
     /**
      * @param outputSourceConfig A list of `IdMappingWorkflowOutputSource` objects, each of which
-     * contains fields `OutputS3Path` and `Output` . 
+     * contains fields `OutputS3Path` and `Output` .
      */
     override fun outputSourceConfig(outputSourceConfig: List<Any>) {
       cdkBuilder.outputSourceConfig(outputSourceConfig.map{CdkObjectWrappers.unwrap(it)})
@@ -286,7 +288,7 @@ public interface CfnIdMappingWorkflowProps {
 
     /**
      * @param outputSourceConfig A list of `IdMappingWorkflowOutputSource` objects, each of which
-     * contains fields `OutputS3Path` and `Output` . 
+     * contains fields `OutputS3Path` and `Output` .
      */
     override fun outputSourceConfig(vararg outputSourceConfig: Any): Unit =
         outputSourceConfig(outputSourceConfig.toList())
@@ -354,7 +356,7 @@ public interface CfnIdMappingWorkflowProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-entityresolution-idmappingworkflow.html#cfn-entityresolution-idmappingworkflow-outputsourceconfig)
      */
-    override fun outputSourceConfig(): Any = unwrap(this).getOutputSourceConfig()
+    override fun outputSourceConfig(): Any? = unwrap(this).getOutputSourceConfig()
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role.

@@ -24,7 +24,7 @@ import kotlin.Unit
  * Vpc.Builder.create(this, "TheVPC")
  * .natGatewayProvider(provider)
  * .build();
- * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.HTTP);
  * ```
  */
 public open class Port(
@@ -133,6 +133,40 @@ public open class Port(
   }
 
   public companion object {
+    public val DNS_TCP: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.DNS_TCP)
+
+    public val DNS_UDP: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.DNS_UDP)
+
+    public val HTTP: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.HTTP)
+
+    public val HTTPS: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.HTTPS)
+
+    public val IMAP: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.IMAP)
+
+    public val IMAPS: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.IMAPS)
+
+    public val LDAP: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.LDAP)
+
+    public val MSSQL: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.MSSQL)
+
+    public val MYSQL_AURORA: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.MYSQL_AURORA)
+
+    public val NFS: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.NFS)
+
+    public val POP3: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.POP3)
+
+    public val POP3_S: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.POP3_S)
+
+    public val POSTGRES: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.POSTGRES)
+
+    public val RDP: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.RDP)
+
+    public val SMB: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.SMB)
+
+    public val SMTP: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.SMTP)
+
+    public val SSH: Port = Port.wrap(software.amazon.awscdk.services.ec2.Port.SSH)
+
     public fun ah(): Port = software.amazon.awscdk.services.ec2.Port.ah().let(Port::wrap)
 
     public fun allIcmp(): Port = software.amazon.awscdk.services.ec2.Port.allIcmp().let(Port::wrap)

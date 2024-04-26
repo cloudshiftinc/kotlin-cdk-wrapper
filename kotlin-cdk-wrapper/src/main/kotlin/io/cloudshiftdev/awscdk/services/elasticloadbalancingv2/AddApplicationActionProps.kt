@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
 import kotlin.collections.List
@@ -31,6 +32,23 @@ public interface AddApplicationActionProps : AddRuleProps {
    * Action to perform.
    */
   public fun action(): ListenerAction
+
+  /**
+   * `ListenerRule`s have a `Rule` suffix on their logicalId by default. This allows you to remove
+   * that suffix.
+   *
+   * Legacy behavior of the `addTargetGroups()` convenience method did not include the `Rule` suffix
+   * on the logicalId of the generated `ListenerRule`.
+   * At some point, increasing complexity of requirements can require users to switch from the
+   * `addTargetGroups()` method
+   * to the `addAction()` method.
+   * When migrating `ListenerRule`s deployed by a legacy version of `addTargetGroups()`,
+   * you will need to enable this flag to avoid changing the logicalId of your resource.
+   * Otherwise Cfn will attempt to replace the `ListenerRule` and fail.
+   *
+   * Default: - use standard logicalId with the `Rule` suffix
+   */
+  public fun removeSuffix(): Boolean? = unwrap(this).getRemoveSuffix()
 
   /**
    * A builder for [AddApplicationActionProps]
@@ -61,6 +79,20 @@ public interface AddApplicationActionProps : AddRuleProps {
      * Priorities must be unique.
      */
     public fun priority(priority: Number)
+
+    /**
+     * @param removeSuffix `ListenerRule`s have a `Rule` suffix on their logicalId by default. This
+     * allows you to remove that suffix.
+     * Legacy behavior of the `addTargetGroups()` convenience method did not include the `Rule`
+     * suffix on the logicalId of the generated `ListenerRule`.
+     * At some point, increasing complexity of requirements can require users to switch from the
+     * `addTargetGroups()` method
+     * to the `addAction()` method.
+     * When migrating `ListenerRule`s deployed by a legacy version of `addTargetGroups()`,
+     * you will need to enable this flag to avoid changing the logicalId of your resource.
+     * Otherwise Cfn will attempt to replace the `ListenerRule` and fail.
+     */
+    public fun removeSuffix(removeSuffix: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -100,6 +132,22 @@ public interface AddApplicationActionProps : AddRuleProps {
       cdkBuilder.priority(priority)
     }
 
+    /**
+     * @param removeSuffix `ListenerRule`s have a `Rule` suffix on their logicalId by default. This
+     * allows you to remove that suffix.
+     * Legacy behavior of the `addTargetGroups()` convenience method did not include the `Rule`
+     * suffix on the logicalId of the generated `ListenerRule`.
+     * At some point, increasing complexity of requirements can require users to switch from the
+     * `addTargetGroups()` method
+     * to the `addAction()` method.
+     * When migrating `ListenerRule`s deployed by a legacy version of `addTargetGroups()`,
+     * you will need to enable this flag to avoid changing the logicalId of your resource.
+     * Otherwise Cfn will attempt to replace the `ListenerRule` and fail.
+     */
+    override fun removeSuffix(removeSuffix: Boolean) {
+      cdkBuilder.removeSuffix(removeSuffix)
+    }
+
     public fun build():
         software.amazon.awscdk.services.elasticloadbalancingv2.AddApplicationActionProps =
         cdkBuilder.build()
@@ -135,6 +183,23 @@ public interface AddApplicationActionProps : AddRuleProps {
      * Default: Target groups are used as defaults
      */
     override fun priority(): Number? = unwrap(this).getPriority()
+
+    /**
+     * `ListenerRule`s have a `Rule` suffix on their logicalId by default. This allows you to remove
+     * that suffix.
+     *
+     * Legacy behavior of the `addTargetGroups()` convenience method did not include the `Rule`
+     * suffix on the logicalId of the generated `ListenerRule`.
+     * At some point, increasing complexity of requirements can require users to switch from the
+     * `addTargetGroups()` method
+     * to the `addAction()` method.
+     * When migrating `ListenerRule`s deployed by a legacy version of `addTargetGroups()`,
+     * you will need to enable this flag to avoid changing the logicalId of your resource.
+     * Otherwise Cfn will attempt to replace the `ListenerRule` and fail.
+     *
+     * Default: - use standard logicalId with the `Rule` suffix
+     */
+    override fun removeSuffix(): Boolean? = unwrap(this).getRemoveSuffix()
   }
 
   public companion object {

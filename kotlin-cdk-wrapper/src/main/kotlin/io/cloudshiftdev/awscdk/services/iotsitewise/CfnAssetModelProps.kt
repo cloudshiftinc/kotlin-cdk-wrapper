@@ -202,6 +202,10 @@ public interface CfnAssetModelProps {
   /**
    * The external ID of the asset model.
    *
+   * For more information, see [Using external
+   * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+   * the *AWS IoT SiteWise User Guide* .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelexternalid)
    */
   public fun assetModelExternalId(): String? = unwrap(this).getAssetModelExternalId()
@@ -245,7 +249,12 @@ public interface CfnAssetModelProps {
   public fun assetModelProperties(): Any? = unwrap(this).getAssetModelProperties()
 
   /**
-   * The type of the asset model (ASSET_MODEL OR COMPONENT_MODEL).
+   * The type of asset model.
+   *
+   * * *ASSET_MODEL* – (default) An asset model that you can use to create assets. Can't be included
+   * as a component in another asset model.
+   * * *COMPONENT_MODEL* – A reusable component that you can include in the composite models of
+   * other asset models. You can't create assets directly from this type of asset model.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodeltype)
    */
@@ -322,6 +331,9 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelExternalId The external ID of the asset model.
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      */
     public fun assetModelExternalId(assetModelExternalId: String)
 
@@ -406,7 +418,11 @@ public interface CfnAssetModelProps {
     public fun assetModelProperties(vararg assetModelProperties: Any)
 
     /**
-     * @param assetModelType The type of the asset model (ASSET_MODEL OR COMPONENT_MODEL).
+     * @param assetModelType The type of asset model.
+     * * *ASSET_MODEL* – (default) An asset model that you can use to create assets. Can't be
+     * included as a component in another asset model.
+     * * *COMPONENT_MODEL* – A reusable component that you can include in the composite models of
+     * other asset models. You can't create assets directly from this type of asset model.
      */
     public fun assetModelType(assetModelType: String)
 
@@ -493,6 +509,9 @@ public interface CfnAssetModelProps {
 
     /**
      * @param assetModelExternalId The external ID of the asset model.
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      */
     override fun assetModelExternalId(assetModelExternalId: String) {
       cdkBuilder.assetModelExternalId(assetModelExternalId)
@@ -591,7 +610,11 @@ public interface CfnAssetModelProps {
         assetModelProperties(assetModelProperties.toList())
 
     /**
-     * @param assetModelType The type of the asset model (ASSET_MODEL OR COMPONENT_MODEL).
+     * @param assetModelType The type of asset model.
+     * * *ASSET_MODEL* – (default) An asset model that you can use to create assets. Can't be
+     * included as a component in another asset model.
+     * * *COMPONENT_MODEL* – A reusable component that you can include in the composite models of
+     * other asset models. You can't create assets directly from this type of asset model.
      */
     override fun assetModelType(assetModelType: String) {
       cdkBuilder.assetModelType(assetModelType)
@@ -652,6 +675,10 @@ public interface CfnAssetModelProps {
     /**
      * The external ID of the asset model.
      *
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodelexternalid)
      */
     override fun assetModelExternalId(): String? = unwrap(this).getAssetModelExternalId()
@@ -695,7 +722,12 @@ public interface CfnAssetModelProps {
     override fun assetModelProperties(): Any? = unwrap(this).getAssetModelProperties()
 
     /**
-     * The type of the asset model (ASSET_MODEL OR COMPONENT_MODEL).
+     * The type of asset model.
+     *
+     * * *ASSET_MODEL* – (default) An asset model that you can use to create assets. Can't be
+     * included as a component in another asset model.
+     * * *COMPONENT_MODEL* – A reusable component that you can include in the composite models of
+     * other asset models. You can't create assets directly from this type of asset model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-assetmodel.html#cfn-iotsitewise-assetmodel-assetmodeltype)
      */

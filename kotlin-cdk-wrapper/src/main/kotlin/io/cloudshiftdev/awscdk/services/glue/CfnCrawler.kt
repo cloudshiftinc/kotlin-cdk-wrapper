@@ -85,6 +85,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .crawlerSecurityConfiguration("crawlerSecurityConfiguration")
  * .databaseName("databaseName")
  * .description("description")
+ * .lakeFormationConfiguration(LakeFormationConfigurationProperty.builder()
+ * .accountId("accountId")
+ * .useLakeFormationCredentials(false)
+ * .build())
  * .name("name")
  * .recrawlPolicy(RecrawlPolicyProperty.builder()
  * .recrawlBehavior("recrawlBehavior")
@@ -204,6 +208,38 @@ public open class CfnCrawler(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
+
+  /**
+   * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead
+   * of the IAM role credentials.
+   */
+  public open fun lakeFormationConfiguration(): Any? = unwrap(this).getLakeFormationConfiguration()
+
+  /**
+   * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead
+   * of the IAM role credentials.
+   */
+  public open fun lakeFormationConfiguration(`value`: IResolvable) {
+    unwrap(this).setLakeFormationConfiguration(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead
+   * of the IAM role credentials.
+   */
+  public open fun lakeFormationConfiguration(`value`: LakeFormationConfigurationProperty) {
+    unwrap(this).setLakeFormationConfiguration(`value`.let(LakeFormationConfigurationProperty::unwrap))
+  }
+
+  /**
+   * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler instead
+   * of the IAM role credentials.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("2935444c2bc7453aa9a924e2c2efb1d90768a961ba225252610821139b19cde3")
+  public open
+      fun lakeFormationConfiguration(`value`: LakeFormationConfigurationProperty.Builder.() -> Unit):
+      Unit = lakeFormationConfiguration(LakeFormationConfigurationProperty(`value`))
 
   /**
    * The name of the crawler.
@@ -433,6 +469,40 @@ public open class CfnCrawler(
      * @param description A description of the crawler. 
      */
     public fun description(description: String)
+
+    /**
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler
+     * instead of the IAM role credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-lakeformationconfiguration)
+     * @param lakeFormationConfiguration Specifies whether the crawler should use AWS Lake Formation
+     * credentials for the crawler instead of the IAM role credentials. 
+     */
+    public fun lakeFormationConfiguration(lakeFormationConfiguration: IResolvable)
+
+    /**
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler
+     * instead of the IAM role credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-lakeformationconfiguration)
+     * @param lakeFormationConfiguration Specifies whether the crawler should use AWS Lake Formation
+     * credentials for the crawler instead of the IAM role credentials. 
+     */
+    public
+        fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty)
+
+    /**
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler
+     * instead of the IAM role credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-lakeformationconfiguration)
+     * @param lakeFormationConfiguration Specifies whether the crawler should use AWS Lake Formation
+     * credentials for the crawler instead of the IAM role credentials. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ce4f68f22a6828a413282324e52178507c8d1f903afaeeb51ae32a169ee840ae")
+    public
+        fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The name of the crawler.
@@ -676,6 +746,46 @@ public open class CfnCrawler(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler
+     * instead of the IAM role credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-lakeformationconfiguration)
+     * @param lakeFormationConfiguration Specifies whether the crawler should use AWS Lake Formation
+     * credentials for the crawler instead of the IAM role credentials. 
+     */
+    override fun lakeFormationConfiguration(lakeFormationConfiguration: IResolvable) {
+      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(IResolvable::unwrap))
+    }
+
+    /**
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler
+     * instead of the IAM role credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-lakeformationconfiguration)
+     * @param lakeFormationConfiguration Specifies whether the crawler should use AWS Lake Formation
+     * credentials for the crawler instead of the IAM role credentials. 
+     */
+    override
+        fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty) {
+      cdkBuilder.lakeFormationConfiguration(lakeFormationConfiguration.let(LakeFormationConfigurationProperty::unwrap))
+    }
+
+    /**
+     * Specifies whether the crawler should use AWS Lake Formation credentials for the crawler
+     * instead of the IAM role credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-lakeformationconfiguration)
+     * @param lakeFormationConfiguration Specifies whether the crawler should use AWS Lake Formation
+     * credentials for the crawler instead of the IAM role credentials. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ce4f68f22a6828a413282324e52178507c8d1f903afaeeb51ae32a169ee840ae")
+    override
+        fun lakeFormationConfiguration(lakeFormationConfiguration: LakeFormationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        lakeFormationConfiguration(LakeFormationConfigurationProperty(lakeFormationConfiguration))
 
     /**
      * The name of the crawler.
@@ -1749,6 +1859,142 @@ public open class CfnCrawler(
       internal fun unwrap(wrapped: JdbcTargetProperty):
           software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.glue.CfnCrawler.JdbcTargetProperty
+    }
+  }
+
+  /**
+   * Specifies AWS Lake Formation configuration settings for the crawler.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.glue.*;
+   * LakeFormationConfigurationProperty lakeFormationConfigurationProperty =
+   * LakeFormationConfigurationProperty.builder()
+   * .accountId("accountId")
+   * .useLakeFormationCredentials(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-lakeformationconfiguration.html)
+   */
+  public interface LakeFormationConfigurationProperty {
+    /**
+     * Required for cross account crawls.
+     *
+     * For same account crawls as the target data, this can be left as null.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-lakeformationconfiguration.html#cfn-glue-crawler-lakeformationconfiguration-accountid)
+     */
+    public fun accountId(): String? = unwrap(this).getAccountId()
+
+    /**
+     * Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM
+     * role credentials.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-lakeformationconfiguration.html#cfn-glue-crawler-lakeformationconfiguration-uselakeformationcredentials)
+     */
+    public fun useLakeFormationCredentials(): Any? = unwrap(this).getUseLakeFormationCredentials()
+
+    /**
+     * A builder for [LakeFormationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountId Required for cross account crawls.
+       * For same account crawls as the target data, this can be left as null.
+       */
+      public fun accountId(accountId: String)
+
+      /**
+       * @param useLakeFormationCredentials Specifies whether to use AWS Lake Formation credentials
+       * for the crawler instead of the IAM role credentials.
+       */
+      public fun useLakeFormationCredentials(useLakeFormationCredentials: Boolean)
+
+      /**
+       * @param useLakeFormationCredentials Specifies whether to use AWS Lake Formation credentials
+       * for the crawler instead of the IAM role credentials.
+       */
+      public fun useLakeFormationCredentials(useLakeFormationCredentials: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty.builder()
+
+      /**
+       * @param accountId Required for cross account crawls.
+       * For same account crawls as the target data, this can be left as null.
+       */
+      override fun accountId(accountId: String) {
+        cdkBuilder.accountId(accountId)
+      }
+
+      /**
+       * @param useLakeFormationCredentials Specifies whether to use AWS Lake Formation credentials
+       * for the crawler instead of the IAM role credentials.
+       */
+      override fun useLakeFormationCredentials(useLakeFormationCredentials: Boolean) {
+        cdkBuilder.useLakeFormationCredentials(useLakeFormationCredentials)
+      }
+
+      /**
+       * @param useLakeFormationCredentials Specifies whether to use AWS Lake Formation credentials
+       * for the crawler instead of the IAM role credentials.
+       */
+      override fun useLakeFormationCredentials(useLakeFormationCredentials: IResolvable) {
+        cdkBuilder.useLakeFormationCredentials(useLakeFormationCredentials.let(IResolvable::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty,
+    ) : CdkObject(cdkObject), LakeFormationConfigurationProperty {
+      /**
+       * Required for cross account crawls.
+       *
+       * For same account crawls as the target data, this can be left as null.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-lakeformationconfiguration.html#cfn-glue-crawler-lakeformationconfiguration-accountid)
+       */
+      override fun accountId(): String? = unwrap(this).getAccountId()
+
+      /**
+       * Specifies whether to use AWS Lake Formation credentials for the crawler instead of the IAM
+       * role credentials.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-crawler-lakeformationconfiguration.html#cfn-glue-crawler-lakeformationconfiguration-uselakeformationcredentials)
+       */
+      override fun useLakeFormationCredentials(): Any? =
+          unwrap(this).getUseLakeFormationCredentials()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LakeFormationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty):
+          LakeFormationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LakeFormationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LakeFormationConfigurationProperty):
+          software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.glue.CfnCrawler.LakeFormationConfigurationProperty
     }
   }
 

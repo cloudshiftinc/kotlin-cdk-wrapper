@@ -242,7 +242,9 @@ public open class CfnLoggingConfiguration(
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` .
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
+     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
+     * visibility configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -262,7 +264,9 @@ public open class CfnLoggingConfiguration(
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` .
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
+     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
+     * visibility configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -282,7 +286,9 @@ public open class CfnLoggingConfiguration(
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` .
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
+     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
+     * visibility configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -363,7 +369,9 @@ public open class CfnLoggingConfiguration(
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` .
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
+     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
+     * visibility configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -385,7 +393,9 @@ public open class CfnLoggingConfiguration(
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` .
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
+     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
+     * visibility configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)
@@ -407,7 +417,9 @@ public open class CfnLoggingConfiguration(
      *
      *
      * You can specify only the following fields for redaction: `UriPath` , `QueryString` ,
-     * `SingleHeader` , and `Method` .
+     * `SingleHeader` , and `Method` . &gt; This setting has no impact on request sampling. With
+     * request sampling, the only way to exclude fields is by disabling sampling in the web ACL
+     * visibility configuration.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-loggingconfiguration.html#cfn-wafv2-loggingconfiguration-redactedfields)

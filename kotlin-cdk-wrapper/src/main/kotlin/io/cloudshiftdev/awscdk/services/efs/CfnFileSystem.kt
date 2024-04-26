@@ -1834,8 +1834,8 @@ public open class CfnFileSystem(
    */
   public interface ReplicationDestinationProperty {
     /**
-     * The AWS For One Zone file systems, the replication configuration must specify the
-     * Availability Zone in which the destination file system is located.
+     * For One Zone file systems, the replication configuration must specify the Availability Zone
+     * in which the destination file system is located.
      *
      * Use the format `us-east-1a` to specify the Availability Zone. For more information about One
      * Zone file systems, see [EFS file system
@@ -1883,9 +1883,8 @@ public open class CfnFileSystem(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param availabilityZoneName The AWS For One Zone file systems, the replication
-       * configuration must specify the Availability Zone in which the destination file system is
-       * located.
+       * @param availabilityZoneName For One Zone file systems, the replication configuration must
+       * specify the Availability Zone in which the destination file system is located.
        * Use the format `us-east-1a` to specify the Availability Zone. For more information about
        * One Zone file systems, see [EFS file system
        * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
@@ -1922,9 +1921,8 @@ public open class CfnFileSystem(
           software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty.builder()
 
       /**
-       * @param availabilityZoneName The AWS For One Zone file systems, the replication
-       * configuration must specify the Availability Zone in which the destination file system is
-       * located.
+       * @param availabilityZoneName For One Zone file systems, the replication configuration must
+       * specify the Availability Zone in which the destination file system is located.
        * Use the format `us-east-1a` to specify the Availability Zone. For more information about
        * One Zone file systems, see [EFS file system
        * types](https://docs.aws.amazon.com/efs/latest/ug/storage-classes.html) in the *Amazon EFS User
@@ -1971,8 +1969,8 @@ public open class CfnFileSystem(
       cdkObject: software.amazon.awscdk.services.efs.CfnFileSystem.ReplicationDestinationProperty,
     ) : CdkObject(cdkObject), ReplicationDestinationProperty {
       /**
-       * The AWS For One Zone file systems, the replication configuration must specify the
-       * Availability Zone in which the destination file system is located.
+       * For One Zone file systems, the replication configuration must specify the Availability Zone
+       * in which the destination file system is located.
        *
        * Use the format `us-east-1a` to specify the Availability Zone. For more information about
        * One Zone file systems, see [EFS file system

@@ -33,8 +33,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .shardCount(123)
  * // the properties below are optional
  * .adminUserPassword("adminUserPassword")
+ * .backupRetentionPeriod(123)
  * .kmsKeyId("kmsKeyId")
+ * .preferredBackupWindow("preferredBackupWindow")
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
+ * .shardInstanceCount(123)
  * .subnetIds(List.of("subnetIds"))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -116,6 +119,18 @@ public open class CfnCluster(
   }
 
   /**
+   * The number of days for which automatic snapshots are retained.
+   */
+  public open fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
+
+  /**
+   * The number of days for which automatic snapshots are retained.
+   */
+  public open fun backupRetentionPeriod(`value`: Number) {
+    unwrap(this).setBackupRetentionPeriod(`value`)
+  }
+
+  /**
    * The name of the new elastic cluster.
    *
    * This parameter is stored as a lowercase string.
@@ -150,6 +165,20 @@ public open class CfnCluster(
    */
   public open fun kmsKeyId(`value`: String) {
     unwrap(this).setKmsKeyId(`value`)
+  }
+
+  /**
+   * The daily time range during which automated backups are created if automated backups are
+   * enabled, as determined by `backupRetentionPeriod` .
+   */
+  public open fun preferredBackupWindow(): String? = unwrap(this).getPreferredBackupWindow()
+
+  /**
+   * The daily time range during which automated backups are created if automated backups are
+   * enabled, as determined by `backupRetentionPeriod` .
+   */
+  public open fun preferredBackupWindow(`value`: String) {
+    unwrap(this).setPreferredBackupWindow(`value`)
   }
 
   /**
@@ -189,6 +218,18 @@ public open class CfnCluster(
    */
   public open fun shardCount(`value`: Number) {
     unwrap(this).setShardCount(`value`)
+  }
+
+  /**
+   * The number of replica instances applying to all shards in the cluster.
+   */
+  public open fun shardInstanceCount(): Number? = unwrap(this).getShardInstanceCount()
+
+  /**
+   * The number of replica instances applying to all shards in the cluster.
+   */
+  public open fun shardInstanceCount(`value`: Number) {
+    unwrap(this).setShardInstanceCount(`value`)
   }
 
   /**
@@ -298,6 +339,14 @@ public open class CfnCluster(
     public fun authType(authType: String)
 
     /**
+     * The number of days for which automatic snapshots are retained.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-backupretentionperiod)
+     * @param backupRetentionPeriod The number of days for which automatic snapshots are retained. 
+     */
+    public fun backupRetentionPeriod(backupRetentionPeriod: Number)
+
+    /**
      * The name of the new elastic cluster. This parameter is stored as a lowercase string.
      *
      * *Constraints* :
@@ -329,6 +378,16 @@ public open class CfnCluster(
      * @param kmsKeyId The KMS key identifier to use to encrypt the new elastic cluster. 
      */
     public fun kmsKeyId(kmsKeyId: String)
+
+    /**
+     * The daily time range during which automated backups are created if automated backups are
+     * enabled, as determined by `backupRetentionPeriod` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-preferredbackupwindow)
+     * @param preferredBackupWindow The daily time range during which automated backups are created
+     * if automated backups are enabled, as determined by `backupRetentionPeriod` . 
+     */
+    public fun preferredBackupWindow(preferredBackupWindow: String)
 
     /**
      * The weekly time range during which system maintenance can occur, in Universal Coordinated
@@ -368,6 +427,18 @@ public open class CfnCluster(
      * @param shardCount The number of shards assigned to the elastic cluster. 
      */
     public fun shardCount(shardCount: Number)
+
+    /**
+     * The number of replica instances applying to all shards in the cluster.
+     *
+     * A `shardInstanceCount` value of 1 means there is one writer instance, and any additional
+     * instances are replicas that can be used for reads and to improve availability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-shardinstancecount)
+     * @param shardInstanceCount The number of replica instances applying to all shards in the
+     * cluster. 
+     */
+    public fun shardInstanceCount(shardInstanceCount: Number)
 
     /**
      * The Amazon EC2 subnet IDs for the new elastic cluster.
@@ -476,6 +547,16 @@ public open class CfnCluster(
     }
 
     /**
+     * The number of days for which automatic snapshots are retained.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-backupretentionperiod)
+     * @param backupRetentionPeriod The number of days for which automatic snapshots are retained. 
+     */
+    override fun backupRetentionPeriod(backupRetentionPeriod: Number) {
+      cdkBuilder.backupRetentionPeriod(backupRetentionPeriod)
+    }
+
+    /**
      * The name of the new elastic cluster. This parameter is stored as a lowercase string.
      *
      * *Constraints* :
@@ -510,6 +591,18 @@ public open class CfnCluster(
      */
     override fun kmsKeyId(kmsKeyId: String) {
       cdkBuilder.kmsKeyId(kmsKeyId)
+    }
+
+    /**
+     * The daily time range during which automated backups are created if automated backups are
+     * enabled, as determined by `backupRetentionPeriod` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-preferredbackupwindow)
+     * @param preferredBackupWindow The daily time range during which automated backups are created
+     * if automated backups are enabled, as determined by `backupRetentionPeriod` . 
+     */
+    override fun preferredBackupWindow(preferredBackupWindow: String) {
+      cdkBuilder.preferredBackupWindow(preferredBackupWindow)
     }
 
     /**
@@ -555,6 +648,20 @@ public open class CfnCluster(
      */
     override fun shardCount(shardCount: Number) {
       cdkBuilder.shardCount(shardCount)
+    }
+
+    /**
+     * The number of replica instances applying to all shards in the cluster.
+     *
+     * A `shardInstanceCount` value of 1 means there is one writer instance, and any additional
+     * instances are replicas that can be used for reads and to improve availability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdbelastic-cluster.html#cfn-docdbelastic-cluster-shardinstancecount)
+     * @param shardInstanceCount The number of replica instances applying to all shards in the
+     * cluster. 
+     */
+    override fun shardInstanceCount(shardInstanceCount: Number) {
+      cdkBuilder.shardInstanceCount(shardInstanceCount)
     }
 
     /**

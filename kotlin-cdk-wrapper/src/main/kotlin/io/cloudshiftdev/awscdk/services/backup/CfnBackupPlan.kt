@@ -150,15 +150,13 @@ public open class CfnBackupPlan(
       backupPlan(BackupPlanResourceTypeProperty(`value`))
 
   /**
-   * To help organize your resources, you can assign your own metadata to the resources that you
-   * create.
+   * The tags to assign to the backup plan.
    */
   public open fun backupPlanTags(): Map<String, String> = unwrap(this).getBackupPlanTags() ?:
       emptyMap()
 
   /**
-   * To help organize your resources, you can assign your own metadata to the resources that you
-   * create.
+   * The tags to assign to the backup plan.
    */
   public open fun backupPlanTags(`value`: Map<String, String>) {
     unwrap(this).setBackupPlanTags(`value`)
@@ -214,15 +212,10 @@ public open class CfnBackupPlan(
     public fun backupPlan(backupPlan: BackupPlanResourceTypeProperty.Builder.() -> Unit)
 
     /**
-     * To help organize your resources, you can assign your own metadata to the resources that you
-     * create.
-     *
-     * Each tag is a key-value pair. The specified tags are assigned to all backups created with
-     * this plan.
+     * The tags to assign to the backup plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags)
-     * @param backupPlanTags To help organize your resources, you can assign your own metadata to
-     * the resources that you create. 
+     * @param backupPlanTags The tags to assign to the backup plan. 
      */
     public fun backupPlanTags(backupPlanTags: Map<String, String>)
   }
@@ -269,15 +262,10 @@ public open class CfnBackupPlan(
         backupPlan(BackupPlanResourceTypeProperty(backupPlan))
 
     /**
-     * To help organize your resources, you can assign your own metadata to the resources that you
-     * create.
-     *
-     * Each tag is a key-value pair. The specified tags are assigned to all backups created with
-     * this plan.
+     * The tags to assign to the backup plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags)
-     * @param backupPlanTags To help organize your resources, you can assign your own metadata to
-     * the resources that you create. 
+     * @param backupPlanTags The tags to assign to the backup plan. 
      */
     override fun backupPlanTags(backupPlanTags: Map<String, String>) {
       cdkBuilder.backupPlanTags(backupPlanTags)
@@ -782,10 +770,7 @@ public open class CfnBackupPlan(
     public fun lifecycle(): Any? = unwrap(this).getLifecycle()
 
     /**
-     * To help organize your resources, you can assign your own metadata to the resources that you
-     * create.
-     *
-     * Each tag is a key-value pair.
+     * The tags to assign to the resources.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)
      */
@@ -900,16 +885,12 @@ public open class CfnBackupPlan(
       public fun lifecycle(lifecycle: LifecycleResourceTypeProperty.Builder.() -> Unit)
 
       /**
-       * @param recoveryPointTags To help organize your resources, you can assign your own metadata
-       * to the resources that you create.
-       * Each tag is a key-value pair.
+       * @param recoveryPointTags The tags to assign to the resources.
        */
       public fun recoveryPointTags(recoveryPointTags: IResolvable)
 
       /**
-       * @param recoveryPointTags To help organize your resources, you can assign your own metadata
-       * to the resources that you create.
-       * Each tag is a key-value pair.
+       * @param recoveryPointTags The tags to assign to the resources.
        */
       public fun recoveryPointTags(recoveryPointTags: Map<String, String>)
 
@@ -1028,18 +1009,14 @@ public open class CfnBackupPlan(
           lifecycle(LifecycleResourceTypeProperty(lifecycle))
 
       /**
-       * @param recoveryPointTags To help organize your resources, you can assign your own metadata
-       * to the resources that you create.
-       * Each tag is a key-value pair.
+       * @param recoveryPointTags The tags to assign to the resources.
        */
       override fun recoveryPointTags(recoveryPointTags: IResolvable) {
         cdkBuilder.recoveryPointTags(recoveryPointTags.let(IResolvable::unwrap))
       }
 
       /**
-       * @param recoveryPointTags To help organize your resources, you can assign your own metadata
-       * to the resources that you create.
-       * Each tag is a key-value pair.
+       * @param recoveryPointTags The tags to assign to the resources.
        */
       override fun recoveryPointTags(recoveryPointTags: Map<String, String>) {
         cdkBuilder.recoveryPointTags(recoveryPointTags)
@@ -1129,10 +1106,7 @@ public open class CfnBackupPlan(
       override fun lifecycle(): Any? = unwrap(this).getLifecycle()
 
       /**
-       * To help organize your resources, you can assign your own metadata to the resources that you
-       * create.
-       *
-       * Each tag is a key-value pair.
+       * The tags to assign to the resources.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-backupruleresourcetype.html#cfn-backup-backupplan-backupruleresourcetype-recoverypointtags)
        */
@@ -1446,6 +1420,9 @@ public open class CfnBackupPlan(
     public fun moveToColdStorageAfterDays(): Number? = unwrap(this).getMoveToColdStorageAfterDays()
 
     /**
+     * If the value is true, your backup plan transitions supported resources to archive (cold)
+     * storage tier in accordance with your lifecycle settings.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-optintoarchiveforsupportedresources)
      */
     public fun optInToArchiveForSupportedResources(): Any? =
@@ -1470,12 +1447,16 @@ public open class CfnBackupPlan(
       public fun moveToColdStorageAfterDays(moveToColdStorageAfterDays: Number)
 
       /**
-       * @param optInToArchiveForSupportedResources the value to be set.
+       * @param optInToArchiveForSupportedResources If the value is true, your backup plan
+       * transitions supported resources to archive (cold) storage tier in accordance with your
+       * lifecycle settings.
        */
       public fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: Boolean)
 
       /**
-       * @param optInToArchiveForSupportedResources the value to be set.
+       * @param optInToArchiveForSupportedResources If the value is true, your backup plan
+       * transitions supported resources to archive (cold) storage tier in accordance with your
+       * lifecycle settings.
        */
       public
           fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: IResolvable)
@@ -1505,7 +1486,9 @@ public open class CfnBackupPlan(
       }
 
       /**
-       * @param optInToArchiveForSupportedResources the value to be set.
+       * @param optInToArchiveForSupportedResources If the value is true, your backup plan
+       * transitions supported resources to archive (cold) storage tier in accordance with your
+       * lifecycle settings.
        */
       override
           fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: Boolean) {
@@ -1513,7 +1496,9 @@ public open class CfnBackupPlan(
       }
 
       /**
-       * @param optInToArchiveForSupportedResources the value to be set.
+       * @param optInToArchiveForSupportedResources If the value is true, your backup plan
+       * transitions supported resources to archive (cold) storage tier in accordance with your
+       * lifecycle settings.
        */
       override
           fun optInToArchiveForSupportedResources(optInToArchiveForSupportedResources: IResolvable) {
@@ -1546,6 +1531,9 @@ public open class CfnBackupPlan(
           unwrap(this).getMoveToColdStorageAfterDays()
 
       /**
+       * If the value is true, your backup plan transitions supported resources to archive (cold)
+       * storage tier in accordance with your lifecycle settings.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-backupplan-lifecycleresourcetype.html#cfn-backup-backupplan-lifecycleresourcetype-optintoarchiveforsupportedresources)
        */
       override fun optInToArchiveForSupportedResources(): Any? =

@@ -47,6 +47,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .filterType("filterType")
  * .value("value")
  * .build()))
+ * .manifestConfig(ManifestConfigProperty.builder()
+ * .source(SourceProperty.builder()
+ * .s3(ManifestConfigSourceS3Property.builder()
+ * .bucketAccessRoleArn("bucketAccessRoleArn")
+ * .manifestObjectPath("manifestObjectPath")
+ * .manifestObjectVersionId("manifestObjectVersionId")
+ * .s3BucketArn("s3BucketArn")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .action("action")
+ * .format("format")
+ * .build())
  * .name("name")
  * .options(OptionsProperty.builder()
  * .atime("atime")
@@ -228,6 +241,33 @@ public open class CfnTask(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
   }
+
+  /**
+   * The configuration of the manifest that lists the files or objects to transfer.
+   */
+  public open fun manifestConfig(): Any? = unwrap(this).getManifestConfig()
+
+  /**
+   * The configuration of the manifest that lists the files or objects to transfer.
+   */
+  public open fun manifestConfig(`value`: IResolvable) {
+    unwrap(this).setManifestConfig(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * The configuration of the manifest that lists the files or objects to transfer.
+   */
+  public open fun manifestConfig(`value`: ManifestConfigProperty) {
+    unwrap(this).setManifestConfig(`value`.let(ManifestConfigProperty::unwrap))
+  }
+
+  /**
+   * The configuration of the manifest that lists the files or objects to transfer.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("3f3d5d70b2fdc8b5bbd54d646e05702d83dfc05c58a414d9a28345e7fce8bb9d")
+  public open fun manifestConfig(`value`: ManifestConfigProperty.Builder.() -> Unit): Unit =
+      manifestConfig(ManifestConfigProperty(`value`))
 
   /**
    * The name of a task.
@@ -479,6 +519,47 @@ public open class CfnTask(
      * transfer. 
      */
     public fun includes(vararg includes: Any)
+
+    /**
+     * The configuration of the manifest that lists the files or objects to transfer.
+     *
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer. 
+     */
+    public fun manifestConfig(manifestConfig: IResolvable)
+
+    /**
+     * The configuration of the manifest that lists the files or objects to transfer.
+     *
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer. 
+     */
+    public fun manifestConfig(manifestConfig: ManifestConfigProperty)
+
+    /**
+     * The configuration of the manifest that lists the files or objects to transfer.
+     *
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7312f9c8ef32669d9d5371b2c1ce143f2bcca81052d450c0f5d9d7bcf9d5e543")
+    public fun manifestConfig(manifestConfig: ManifestConfigProperty.Builder.() -> Unit)
 
     /**
      * The name of a task.
@@ -786,6 +867,52 @@ public open class CfnTask(
      * transfer. 
      */
     override fun includes(vararg includes: Any): Unit = includes(includes.toList())
+
+    /**
+     * The configuration of the manifest that lists the files or objects to transfer.
+     *
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer. 
+     */
+    override fun manifestConfig(manifestConfig: IResolvable) {
+      cdkBuilder.manifestConfig(manifestConfig.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The configuration of the manifest that lists the files or objects to transfer.
+     *
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer. 
+     */
+    override fun manifestConfig(manifestConfig: ManifestConfigProperty) {
+      cdkBuilder.manifestConfig(manifestConfig.let(ManifestConfigProperty::unwrap))
+    }
+
+    /**
+     * The configuration of the manifest that lists the files or objects to transfer.
+     *
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7312f9c8ef32669d9d5371b2c1ce143f2bcca81052d450c0f5d9d7bcf9d5e543")
+    override fun manifestConfig(manifestConfig: ManifestConfigProperty.Builder.() -> Unit): Unit =
+        manifestConfig(ManifestConfigProperty(manifestConfig))
 
     /**
      * The name of a task.
@@ -1340,6 +1467,472 @@ public open class CfnTask(
           software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.datasync.CfnTask.FilterRuleProperty
+    }
+  }
+
+  /**
+   * Configures a manifest, which is a list of files or objects that you want AWS DataSync to
+   * transfer.
+   *
+   * For more information and configuration examples, see [Specifying what DataSync transfers by
+   * using a
+   * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * ManifestConfigProperty manifestConfigProperty = ManifestConfigProperty.builder()
+   * .source(SourceProperty.builder()
+   * .s3(ManifestConfigSourceS3Property.builder()
+   * .bucketAccessRoleArn("bucketAccessRoleArn")
+   * .manifestObjectPath("manifestObjectPath")
+   * .manifestObjectVersionId("manifestObjectVersionId")
+   * .s3BucketArn("s3BucketArn")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .action("action")
+   * .format("format")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfig.html)
+   */
+  public interface ManifestConfigProperty {
+    /**
+     * Specifies what DataSync uses the manifest for.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfig.html#cfn-datasync-task-manifestconfig-action)
+     */
+    public fun action(): String? = unwrap(this).getAction()
+
+    /**
+     * Specifies the file format of your manifest.
+     *
+     * For more information, see [Creating a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-create)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfig.html#cfn-datasync-task-manifestconfig-format)
+     */
+    public fun format(): String? = unwrap(this).getFormat()
+
+    /**
+     * Specifies the manifest that you want DataSync to use and where it's hosted.
+     *
+     *
+     * You must specify this parameter if you're configuring a new manifest on or after February 7,
+     * 2024.
+     *
+     * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+     * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+     * manifest. For more information, see [Providing DataSync access to your
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+     * .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfig.html#cfn-datasync-task-manifestconfig-source)
+     */
+    public fun source(): Any
+
+    /**
+     * A builder for [ManifestConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action Specifies what DataSync uses the manifest for.
+       */
+      public fun action(action: String)
+
+      /**
+       * @param format Specifies the file format of your manifest.
+       * For more information, see [Creating a
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-create)
+       * .
+       */
+      public fun format(format: String)
+
+      /**
+       * @param source Specifies the manifest that you want DataSync to use and where it's hosted. 
+       *
+       * You must specify this parameter if you're configuring a new manifest on or after February
+       * 7, 2024.
+       *
+       * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+       * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+       * manifest. For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      public fun source(source: IResolvable)
+
+      /**
+       * @param source Specifies the manifest that you want DataSync to use and where it's hosted. 
+       *
+       * You must specify this parameter if you're configuring a new manifest on or after February
+       * 7, 2024.
+       *
+       * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+       * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+       * manifest. For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      public fun source(source: SourceProperty)
+
+      /**
+       * @param source Specifies the manifest that you want DataSync to use and where it's hosted. 
+       *
+       * You must specify this parameter if you're configuring a new manifest on or after February
+       * 7, 2024.
+       *
+       * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+       * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+       * manifest. For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f5a570674918e0074e935aea0ece9d88aa46198985d958b1683bf8d6f1ec598")
+      public fun source(source: SourceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty.builder()
+
+      /**
+       * @param action Specifies what DataSync uses the manifest for.
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param format Specifies the file format of your manifest.
+       * For more information, see [Creating a
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-create)
+       * .
+       */
+      override fun format(format: String) {
+        cdkBuilder.format(format)
+      }
+
+      /**
+       * @param source Specifies the manifest that you want DataSync to use and where it's hosted. 
+       *
+       * You must specify this parameter if you're configuring a new manifest on or after February
+       * 7, 2024.
+       *
+       * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+       * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+       * manifest. For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      override fun source(source: IResolvable) {
+        cdkBuilder.source(source.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param source Specifies the manifest that you want DataSync to use and where it's hosted. 
+       *
+       * You must specify this parameter if you're configuring a new manifest on or after February
+       * 7, 2024.
+       *
+       * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+       * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+       * manifest. For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      override fun source(source: SourceProperty) {
+        cdkBuilder.source(source.let(SourceProperty::unwrap))
+      }
+
+      /**
+       * @param source Specifies the manifest that you want DataSync to use and where it's hosted. 
+       *
+       * You must specify this parameter if you're configuring a new manifest on or after February
+       * 7, 2024.
+       *
+       * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+       * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+       * manifest. For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5f5a570674918e0074e935aea0ece9d88aa46198985d958b1683bf8d6f1ec598")
+      override fun source(source: SourceProperty.Builder.() -> Unit): Unit =
+          source(SourceProperty(source))
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty,
+    ) : CdkObject(cdkObject), ManifestConfigProperty {
+      /**
+       * Specifies what DataSync uses the manifest for.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfig.html#cfn-datasync-task-manifestconfig-action)
+       */
+      override fun action(): String? = unwrap(this).getAction()
+
+      /**
+       * Specifies the file format of your manifest.
+       *
+       * For more information, see [Creating a
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-create)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfig.html#cfn-datasync-task-manifestconfig-format)
+       */
+      override fun format(): String? = unwrap(this).getFormat()
+
+      /**
+       * Specifies the manifest that you want DataSync to use and where it's hosted.
+       *
+       *
+       * You must specify this parameter if you're configuring a new manifest on or after February
+       * 7, 2024.
+       *
+       * If you don't, you'll get a 400 status code and `ValidationException` error stating that
+       * you're missing the IAM role for DataSync to access the S3 bucket where you're hosting your
+       * manifest. For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfig.html#cfn-datasync-task-manifestconfig-source)
+       */
+      override fun source(): Any = unwrap(this).getSource()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ManifestConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty):
+          ManifestConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ManifestConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManifestConfigProperty):
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigProperty
+    }
+  }
+
+  /**
+   * Specifies the S3 bucket where you're hosting the manifest that you want AWS DataSync to use.
+   *
+   * For more information and configuration examples, see [Specifying what DataSync transfers by
+   * using a
+   * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * ManifestConfigSourceS3Property manifestConfigSourceS3Property =
+   * ManifestConfigSourceS3Property.builder()
+   * .bucketAccessRoleArn("bucketAccessRoleArn")
+   * .manifestObjectPath("manifestObjectPath")
+   * .manifestObjectVersionId("manifestObjectVersionId")
+   * .s3BucketArn("s3BucketArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html)
+   */
+  public interface ManifestConfigSourceS3Property {
+    /**
+     * Specifies the AWS Identity and Access Management (IAM) role that allows DataSync to access
+     * your manifest.
+     *
+     * For more information, see [Providing DataSync access to your
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-bucketaccessrolearn)
+     */
+    public fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
+
+    /**
+     * Specifies the Amazon S3 object key of your manifest.
+     *
+     * This can include a prefix (for example, `prefix/my-manifest.csv` ).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectpath)
+     */
+    public fun manifestObjectPath(): String? = unwrap(this).getManifestObjectPath()
+
+    /**
+     * Specifies the object version ID of the manifest that you want DataSync to use.
+     *
+     * If you don't set this, DataSync uses the latest version of the object.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectversionid)
+     */
+    public fun manifestObjectVersionId(): String? = unwrap(this).getManifestObjectVersionId()
+
+    /**
+     * Specifies the Amazon Resource Name (ARN) of the S3 bucket where you're hosting your manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-s3bucketarn)
+     */
+    public fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
+
+    /**
+     * A builder for [ManifestConfigSourceS3Property]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketAccessRoleArn Specifies the AWS Identity and Access Management (IAM) role that
+       * allows DataSync to access your manifest.
+       * For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      public fun bucketAccessRoleArn(bucketAccessRoleArn: String)
+
+      /**
+       * @param manifestObjectPath Specifies the Amazon S3 object key of your manifest.
+       * This can include a prefix (for example, `prefix/my-manifest.csv` ).
+       */
+      public fun manifestObjectPath(manifestObjectPath: String)
+
+      /**
+       * @param manifestObjectVersionId Specifies the object version ID of the manifest that you
+       * want DataSync to use.
+       * If you don't set this, DataSync uses the latest version of the object.
+       */
+      public fun manifestObjectVersionId(manifestObjectVersionId: String)
+
+      /**
+       * @param s3BucketArn Specifies the Amazon Resource Name (ARN) of the S3 bucket where you're
+       * hosting your manifest.
+       */
+      public fun s3BucketArn(s3BucketArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property.builder()
+
+      /**
+       * @param bucketAccessRoleArn Specifies the AWS Identity and Access Management (IAM) role that
+       * allows DataSync to access your manifest.
+       * For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       */
+      override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
+        cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
+      }
+
+      /**
+       * @param manifestObjectPath Specifies the Amazon S3 object key of your manifest.
+       * This can include a prefix (for example, `prefix/my-manifest.csv` ).
+       */
+      override fun manifestObjectPath(manifestObjectPath: String) {
+        cdkBuilder.manifestObjectPath(manifestObjectPath)
+      }
+
+      /**
+       * @param manifestObjectVersionId Specifies the object version ID of the manifest that you
+       * want DataSync to use.
+       * If you don't set this, DataSync uses the latest version of the object.
+       */
+      override fun manifestObjectVersionId(manifestObjectVersionId: String) {
+        cdkBuilder.manifestObjectVersionId(manifestObjectVersionId)
+      }
+
+      /**
+       * @param s3BucketArn Specifies the Amazon Resource Name (ARN) of the S3 bucket where you're
+       * hosting your manifest.
+       */
+      override fun s3BucketArn(s3BucketArn: String) {
+        cdkBuilder.s3BucketArn(s3BucketArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property,
+    ) : CdkObject(cdkObject), ManifestConfigSourceS3Property {
+      /**
+       * Specifies the AWS Identity and Access Management (IAM) role that allows DataSync to access
+       * your manifest.
+       *
+       * For more information, see [Providing DataSync access to your
+       * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html#transferring-with-manifest-access)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-bucketaccessrolearn)
+       */
+      override fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
+
+      /**
+       * Specifies the Amazon S3 object key of your manifest.
+       *
+       * This can include a prefix (for example, `prefix/my-manifest.csv` ).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectpath)
+       */
+      override fun manifestObjectPath(): String? = unwrap(this).getManifestObjectPath()
+
+      /**
+       * Specifies the object version ID of the manifest that you want DataSync to use.
+       *
+       * If you don't set this, DataSync uses the latest version of the object.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-manifestobjectversionid)
+       */
+      override fun manifestObjectVersionId(): String? = unwrap(this).getManifestObjectVersionId()
+
+      /**
+       * Specifies the Amazon Resource Name (ARN) of the S3 bucket where you're hosting your
+       * manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-manifestconfigsources3.html#cfn-datasync-task-manifestconfigsources3-s3bucketarn)
+       */
+      override fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ManifestConfigSourceS3Property {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property):
+          ManifestConfigSourceS3Property = CdkObjectWrappers.wrap(cdkObject) as?
+          ManifestConfigSourceS3Property ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ManifestConfigSourceS3Property):
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.datasync.CfnTask.ManifestConfigSourceS3Property
     }
   }
 
@@ -2864,9 +3457,6 @@ public open class CfnTask(
   }
 
   /**
-   * Specifies the Amazon S3 bucket where DataSync uploads your [task
-   * report](https://docs.aws.amazon.com/datasync/latest/userguide/task-reports.html) .
-   *
    * Example:
    *
    * ```
@@ -2884,26 +3474,16 @@ public open class CfnTask(
    */
   public interface S3Property {
     /**
-     * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a
-     * task report to your S3 bucket.
-     *
-     * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-     * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-bucketaccessrolearn)
      */
     public fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
 
     /**
-     * Specifies the ARN of the S3 bucket where DataSync uploads your report.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-s3bucketarn)
      */
     public fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
 
     /**
-     * Specifies a bucket prefix for your report.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-subdirectory)
      */
     public fun subdirectory(): String? = unwrap(this).getSubdirectory()
@@ -2914,20 +3494,17 @@ public open class CfnTask(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bucketAccessRoleArn Specifies the Amazon Resource Name (ARN) of the IAM policy that
-       * allows DataSync to upload a task report to your S3 bucket.
-       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
+       * @param bucketAccessRoleArn the value to be set.
        */
       public fun bucketAccessRoleArn(bucketAccessRoleArn: String)
 
       /**
-       * @param s3BucketArn Specifies the ARN of the S3 bucket where DataSync uploads your report.
+       * @param s3BucketArn the value to be set.
        */
       public fun s3BucketArn(s3BucketArn: String)
 
       /**
-       * @param subdirectory Specifies a bucket prefix for your report.
+       * @param subdirectory the value to be set.
        */
       public fun subdirectory(subdirectory: String)
     }
@@ -2937,24 +3514,21 @@ public open class CfnTask(
           software.amazon.awscdk.services.datasync.CfnTask.S3Property.builder()
 
       /**
-       * @param bucketAccessRoleArn Specifies the Amazon Resource Name (ARN) of the IAM policy that
-       * allows DataSync to upload a task report to your S3 bucket.
-       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
+       * @param bucketAccessRoleArn the value to be set.
        */
       override fun bucketAccessRoleArn(bucketAccessRoleArn: String) {
         cdkBuilder.bucketAccessRoleArn(bucketAccessRoleArn)
       }
 
       /**
-       * @param s3BucketArn Specifies the ARN of the S3 bucket where DataSync uploads your report.
+       * @param s3BucketArn the value to be set.
        */
       override fun s3BucketArn(s3BucketArn: String) {
         cdkBuilder.s3BucketArn(s3BucketArn)
       }
 
       /**
-       * @param subdirectory Specifies a bucket prefix for your report.
+       * @param subdirectory the value to be set.
        */
       override fun subdirectory(subdirectory: String) {
         cdkBuilder.subdirectory(subdirectory)
@@ -2968,26 +3542,16 @@ public open class CfnTask(
       cdkObject: software.amazon.awscdk.services.datasync.CfnTask.S3Property,
     ) : CdkObject(cdkObject), S3Property {
       /**
-       * Specifies the Amazon Resource Name (ARN) of the IAM policy that allows DataSync to upload a
-       * task report to your S3 bucket.
-       *
-       * For more information, see [Allowing DataSync to upload a task report to an Amazon S3
-       * bucket](https://docs.aws.amazon.com/datasync/latest/userguide/creating-task-reports.html) .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-bucketaccessrolearn)
        */
       override fun bucketAccessRoleArn(): String? = unwrap(this).getBucketAccessRoleArn()
 
       /**
-       * Specifies the ARN of the S3 bucket where DataSync uploads your report.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-s3bucketarn)
        */
       override fun s3BucketArn(): String? = unwrap(this).getS3BucketArn()
 
       /**
-       * Specifies a bucket prefix for your report.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-s3.html#cfn-datasync-task-s3-subdirectory)
        */
       override fun subdirectory(): String? = unwrap(this).getSubdirectory()
@@ -3098,6 +3662,120 @@ public open class CfnTask(
       internal fun unwrap(wrapped: SkippedProperty):
           software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty = (wrapped as
           CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.SkippedProperty
+    }
+  }
+
+  /**
+   * Specifies the manifest that you want AWS DataSync to use and where it's hosted.
+   *
+   * For more information and configuration examples, see [Specifying what DataSync transfers by
+   * using a
+   * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html) .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.datasync.*;
+   * SourceProperty sourceProperty = SourceProperty.builder()
+   * .s3(ManifestConfigSourceS3Property.builder()
+   * .bucketAccessRoleArn("bucketAccessRoleArn")
+   * .manifestObjectPath("manifestObjectPath")
+   * .manifestObjectVersionId("manifestObjectVersionId")
+   * .s3BucketArn("s3BucketArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-source.html)
+   */
+  public interface SourceProperty {
+    /**
+     * Specifies the S3 bucket where you're hosting your manifest.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-source.html#cfn-datasync-task-source-s3)
+     */
+    public fun s3(): Any? = unwrap(this).getS3()
+
+    /**
+     * A builder for [SourceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       */
+      public fun s3(s3: IResolvable)
+
+      /**
+       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       */
+      public fun s3(s3: ManifestConfigSourceS3Property)
+
+      /**
+       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2c84797c8e89c694150a127c56ebc9c607a228975717c44e723edbef68f83f08")
+      public fun s3(s3: ManifestConfigSourceS3Property.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.datasync.CfnTask.SourceProperty.Builder =
+          software.amazon.awscdk.services.datasync.CfnTask.SourceProperty.builder()
+
+      /**
+       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       */
+      override fun s3(s3: IResolvable) {
+        cdkBuilder.s3(s3.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       */
+      override fun s3(s3: ManifestConfigSourceS3Property) {
+        cdkBuilder.s3(s3.let(ManifestConfigSourceS3Property::unwrap))
+      }
+
+      /**
+       * @param s3 Specifies the S3 bucket where you're hosting your manifest.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2c84797c8e89c694150a127c56ebc9c607a228975717c44e723edbef68f83f08")
+      override fun s3(s3: ManifestConfigSourceS3Property.Builder.() -> Unit): Unit =
+          s3(ManifestConfigSourceS3Property(s3))
+
+      public fun build(): software.amazon.awscdk.services.datasync.CfnTask.SourceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SourceProperty,
+    ) : CdkObject(cdkObject), SourceProperty {
+      /**
+       * Specifies the S3 bucket where you're hosting your manifest.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datasync-task-source.html#cfn-datasync-task-source-s3)
+       */
+      override fun s3(): Any? = unwrap(this).getS3()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SourceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.datasync.CfnTask.SourceProperty):
+          SourceProperty = CdkObjectWrappers.wrap(cdkObject) as? SourceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SourceProperty):
+          software.amazon.awscdk.services.datasync.CfnTask.SourceProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.datasync.CfnTask.SourceProperty
     }
   }
 

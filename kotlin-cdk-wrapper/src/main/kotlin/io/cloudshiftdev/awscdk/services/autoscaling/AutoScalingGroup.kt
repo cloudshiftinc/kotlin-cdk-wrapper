@@ -249,7 +249,7 @@ public open class AutoScalingGroup(
    *
    * @param loadBalancer 
    */
-  public override fun attachToClassicLb(loadBalancer: LoadBalancer) {
+  public override fun attachToClassicLB(loadBalancer: LoadBalancer) {
     unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
   }
 

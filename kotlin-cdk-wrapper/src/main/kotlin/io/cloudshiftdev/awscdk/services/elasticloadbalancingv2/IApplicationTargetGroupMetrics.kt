@@ -292,7 +292,7 @@ public interface IApplicationTargetGroupMetrics {
    *
    * @param props
    */
-  public fun targetTlsNegotiationErrorCount(): Metric
+  public fun targetTLSNegotiationErrorCount(): Metric
 
   /**
    * The number of TLS connections initiated by the load balancer that did not establish a session
@@ -304,7 +304,7 @@ public interface IApplicationTargetGroupMetrics {
    *
    * @param props
    */
-  public fun targetTlsNegotiationErrorCount(props: MetricOptions): Metric
+  public fun targetTLSNegotiationErrorCount(props: MetricOptions): Metric
 
   /**
    * The number of TLS connections initiated by the load balancer that did not establish a session
@@ -317,8 +317,8 @@ public interface IApplicationTargetGroupMetrics {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("6bff36edbbe3c8f26db05b3096329ed86c89c5421a92a5ecf6d869f655103f54")
-  public fun targetTlsNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("680e36d5f42c32084e2104a1182ce24b50a180324bfe0c58c1bcd6523da0a161")
+  public fun targetTLSNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * The number of unhealthy hosts in the target group.
@@ -651,7 +651,7 @@ public interface IApplicationTargetGroupMetrics {
      *
      * @param props
      */
-    override fun targetTlsNegotiationErrorCount(): Metric =
+    override fun targetTLSNegotiationErrorCount(): Metric =
         unwrap(this).targetTLSNegotiationErrorCount().let(Metric::wrap)
 
     /**
@@ -664,7 +664,7 @@ public interface IApplicationTargetGroupMetrics {
      *
      * @param props
      */
-    override fun targetTlsNegotiationErrorCount(props: MetricOptions): Metric =
+    override fun targetTLSNegotiationErrorCount(props: MetricOptions): Metric =
         unwrap(this).targetTLSNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -678,9 +678,9 @@ public interface IApplicationTargetGroupMetrics {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("6bff36edbbe3c8f26db05b3096329ed86c89c5421a92a5ecf6d869f655103f54")
-    override fun targetTlsNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric =
-        targetTlsNegotiationErrorCount(MetricOptions(props))
+    @JvmName("680e36d5f42c32084e2104a1182ce24b50a180324bfe0c58c1bcd6523da0a161")
+    override fun targetTLSNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit): Metric =
+        targetTLSNegotiationErrorCount(MetricOptions(props))
 
     /**
      * The number of unhealthy hosts in the target group.

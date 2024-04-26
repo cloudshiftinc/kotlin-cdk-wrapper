@@ -21,15 +21,14 @@ import kotlin.String
  * Example:
  *
  * ```
- * InstanceType instanceType;
- * NatInstanceProviderV2 provider = NatProvider.instanceV2(NatInstanceProps.builder()
- * .instanceType(instanceType)
- * .defaultAllowedTraffic(NatTrafficDirection.OUTBOUND_ONLY)
- * .build());
- * Vpc.Builder.create(this, "TheVPC")
- * .natGatewayProvider(provider)
+ * Vpc vpc;
+ * Cluster cluster = Cluster.Builder.create(this, "Cluster")
+ * .clusterName("myCluster")
+ * .kafkaVersion(KafkaVersion.V2_8_1)
+ * .vpc(vpc)
  * .build();
- * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * cluster.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(2181));
+ * cluster.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(9094));
  * ```
  */
 public open class Peer(

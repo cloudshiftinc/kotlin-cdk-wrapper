@@ -55,6 +55,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .schemaName("schemaName")
  * .build()))
  * // the properties below are optional
+ * .autoImportDataQualityResult(false)
  * .dataAccessRole("dataAccessRole")
  * .build())
  * .redshiftRunConfiguration(RedshiftRunConfigurationInputProperty.builder()
@@ -865,6 +866,7 @@ public open class CfnDataSource(
    * .schemaName("schemaName")
    * .build()))
    * // the properties below are optional
+   * .autoImportDataQualityResult(false)
    * .dataAccessRole("dataAccessRole")
    * .build())
    * .redshiftRunConfiguration(RedshiftRunConfigurationInputProperty.builder()
@@ -1341,6 +1343,7 @@ public open class CfnDataSource(
    * .schemaName("schemaName")
    * .build()))
    * // the properties below are optional
+   * .autoImportDataQualityResult(false)
    * .dataAccessRole("dataAccessRole")
    * .build();
    * ```
@@ -1348,6 +1351,14 @@ public open class CfnDataSource(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html)
    */
   public interface GlueRunConfigurationInputProperty {
+    /**
+     * Specifies whether to automatically import data quality metrics as part of the data source
+     * run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-autoimportdataqualityresult)
+     */
+    public fun autoImportDataQualityResult(): Any? = unwrap(this).getAutoImportDataQualityResult()
+
     /**
      * The data access role included in the configuration details of the AWS Glue data source.
      *
@@ -1368,6 +1379,18 @@ public open class CfnDataSource(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param autoImportDataQualityResult Specifies whether to automatically import data quality
+       * metrics as part of the data source run.
+       */
+      public fun autoImportDataQualityResult(autoImportDataQualityResult: Boolean)
+
+      /**
+       * @param autoImportDataQualityResult Specifies whether to automatically import data quality
+       * metrics as part of the data source run.
+       */
+      public fun autoImportDataQualityResult(autoImportDataQualityResult: IResolvable)
+
       /**
        * @param dataAccessRole The data access role included in the configuration details of the AWS
        * Glue data source.
@@ -1398,6 +1421,22 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty.Builder
           =
           software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty.builder()
+
+      /**
+       * @param autoImportDataQualityResult Specifies whether to automatically import data quality
+       * metrics as part of the data source run.
+       */
+      override fun autoImportDataQualityResult(autoImportDataQualityResult: Boolean) {
+        cdkBuilder.autoImportDataQualityResult(autoImportDataQualityResult)
+      }
+
+      /**
+       * @param autoImportDataQualityResult Specifies whether to automatically import data quality
+       * metrics as part of the data source run.
+       */
+      override fun autoImportDataQualityResult(autoImportDataQualityResult: IResolvable) {
+        cdkBuilder.autoImportDataQualityResult(autoImportDataQualityResult.let(IResolvable::unwrap))
+      }
 
       /**
        * @param dataAccessRole The data access role included in the configuration details of the AWS
@@ -1438,6 +1477,15 @@ public open class CfnDataSource(
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.datazone.CfnDataSource.GlueRunConfigurationInputProperty,
     ) : CdkObject(cdkObject), GlueRunConfigurationInputProperty {
+      /**
+       * Specifies whether to automatically import data quality metrics as part of the data source
+       * run.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datazone-datasource-gluerunconfigurationinput.html#cfn-datazone-datasource-gluerunconfigurationinput-autoimportdataqualityresult)
+       */
+      override fun autoImportDataQualityResult(): Any? =
+          unwrap(this).getAutoImportDataQualityResult()
+
       /**
        * The data access role included in the configuration details of the AWS Glue data source.
        *

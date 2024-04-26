@@ -32,6 +32,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnDHCPOptions cfnDHCPOptions = CfnDHCPOptions.Builder.create(this, "MyCfnDHCPOptions")
  * .domainName("domainName")
  * .domainNameServers(List.of("domainNameServers"))
+ * .ipv6AddressPreferredLeaseTime(123)
  * .netbiosNameServers(List.of("netbiosNameServers"))
  * .netbiosNodeType(123)
  * .ntpServers(List.of("ntpServers"))
@@ -111,6 +112,21 @@ public open class CfnDHCPOptions(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector::unwrap))
+  }
+
+  /**
+   * A value (in seconds, minutes, hours, or years) for how frequently a running instance with an
+   * IPv6 assigned to it goes through DHCPv6 lease renewal.
+   */
+  public open fun ipv6AddressPreferredLeaseTime(): Number? =
+      unwrap(this).getIpv6AddressPreferredLeaseTime()
+
+  /**
+   * A value (in seconds, minutes, hours, or years) for how frequently a running instance with an
+   * IPv6 assigned to it goes through DHCPv6 lease renewal.
+   */
+  public open fun ipv6AddressPreferredLeaseTime(`value`: Number) {
+    unwrap(this).setIpv6AddressPreferredLeaseTime(`value`)
   }
 
   /**
@@ -227,6 +243,21 @@ public open class CfnDHCPOptions(
     public fun domainNameServers(vararg domainNameServers: String)
 
     /**
+     * A value (in seconds, minutes, hours, or years) for how frequently a running instance with an
+     * IPv6 assigned to it goes through DHCPv6 lease renewal.
+     *
+     * Acceptable values are between 140 and 2147483647 seconds (approximately 68 years). If no
+     * value is entered, the default lease time is 140 seconds. If you use long-term addressing for EC2
+     * instances, you can increase the lease time and avoid frequent lease renewal requests. Lease
+     * renewal typically occurs when half of the lease time has elapsed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-ipv6addresspreferredleasetime)
+     * @param ipv6AddressPreferredLeaseTime A value (in seconds, minutes, hours, or years) for how
+     * frequently a running instance with an IPv6 assigned to it goes through DHCPv6 lease renewal. 
+     */
+    public fun ipv6AddressPreferredLeaseTime(ipv6AddressPreferredLeaseTime: Number)
+
+    /**
      * The IPv4 addresses of up to four NetBIOS name servers.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-netbiosnameservers)
@@ -333,6 +364,23 @@ public open class CfnDHCPOptions(
      */
     override fun domainNameServers(vararg domainNameServers: String): Unit =
         domainNameServers(domainNameServers.toList())
+
+    /**
+     * A value (in seconds, minutes, hours, or years) for how frequently a running instance with an
+     * IPv6 assigned to it goes through DHCPv6 lease renewal.
+     *
+     * Acceptable values are between 140 and 2147483647 seconds (approximately 68 years). If no
+     * value is entered, the default lease time is 140 seconds. If you use long-term addressing for EC2
+     * instances, you can increase the lease time and avoid frequent lease renewal requests. Lease
+     * renewal typically occurs when half of the lease time has elapsed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-dhcpoptions.html#cfn-ec2-dhcpoptions-ipv6addresspreferredleasetime)
+     * @param ipv6AddressPreferredLeaseTime A value (in seconds, minutes, hours, or years) for how
+     * frequently a running instance with an IPv6 assigned to it goes through DHCPv6 lease renewal. 
+     */
+    override fun ipv6AddressPreferredLeaseTime(ipv6AddressPreferredLeaseTime: Number) {
+      cdkBuilder.ipv6AddressPreferredLeaseTime(ipv6AddressPreferredLeaseTime)
+    }
 
     /**
      * The IPv4 addresses of up to four NetBIOS name servers.

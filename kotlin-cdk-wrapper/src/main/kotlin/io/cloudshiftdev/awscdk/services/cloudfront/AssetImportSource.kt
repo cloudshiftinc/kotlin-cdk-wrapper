@@ -29,7 +29,7 @@ import kotlin.jvm.JvmName
  * DockerImage dockerImage;
  * IGrantable grantable;
  * ILocalBundling localBundling;
- * AssetImportSource assetImportSource = AssetImportSource.Builder.create("path")
+ * ImportSource assetImportSource = AssetImportSource.fromAsset("path", AssetOptions.builder()
  * .assetHash("assetHash")
  * .assetHashType(AssetHashType.SOURCE)
  * .bundling(BundlingOptions.builder()
@@ -60,7 +60,7 @@ import kotlin.jvm.JvmName
  * .followSymlinks(SymlinkFollowMode.NEVER)
  * .ignoreMode(IgnoreMode.GLOB)
  * .readers(List.of(grantable))
- * .build();
+ * .build());
  * ```
  */
 public open class AssetImportSource(

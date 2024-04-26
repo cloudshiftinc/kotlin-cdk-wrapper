@@ -57,6 +57,11 @@ import kotlin.jvm.JvmName
  * .allowedAnalyses(List.of("allowedAnalyses"))
  * // the properties below are optional
  * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
+ * .differentialPrivacy(DifferentialPrivacyProperty.builder()
+ * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
+ * .name("name")
+ * .build()))
+ * .build())
  * .build())
  * .list(AnalysisRuleListProperty.builder()
  * .joinColumns(List.of("joinColumns"))

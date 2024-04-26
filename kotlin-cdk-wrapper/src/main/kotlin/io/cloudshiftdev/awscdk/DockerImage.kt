@@ -96,7 +96,7 @@ public open class DockerImage(
    *
    * @return The overridden image name if set or image hash name in that order
    */
-  public open fun toJson(): String = unwrap(this).toJSON()
+  public open fun toJSON(): String = unwrap(this).toJSON()
 
   public companion object {
     public fun fromBuild(path: String): DockerImage =

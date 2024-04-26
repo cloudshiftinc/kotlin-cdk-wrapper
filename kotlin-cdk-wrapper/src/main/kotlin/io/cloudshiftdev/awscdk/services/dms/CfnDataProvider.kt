@@ -281,6 +281,32 @@ public open class CfnDataProvider(
     public fun exactSettings(exactSettings: IResolvable)
 
     /**
+     * The settings in JSON format for a data provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
+     * @param settings The settings in JSON format for a data provider. 
+     */
+    public fun settings(settings: IResolvable)
+
+    /**
+     * The settings in JSON format for a data provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
+     * @param settings The settings in JSON format for a data provider. 
+     */
+    public fun settings(settings: SettingsProperty)
+
+    /**
+     * The settings in JSON format for a data provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
+     * @param settings The settings in JSON format for a data provider. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ee40722a720d7943e5c842a5aa735bea262d50da0c487f2b9017c7fe45ea2928")
+    public fun settings(settings: SettingsProperty.Builder.() -> Unit)
+
+    /**
      * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-tags)
@@ -295,32 +321,6 @@ public open class CfnDataProvider(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     public fun tags(vararg tags: CfnTag)
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    public fun tings(settings: IResolvable)
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    public fun tings(settings: SettingsProperty)
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("7c39604e34fcba258422b1df3816092070b4c839ccb0f3d3f90ea77f4a50919e")
-    public fun tings(settings: SettingsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -406,6 +406,37 @@ public open class CfnDataProvider(
     }
 
     /**
+     * The settings in JSON format for a data provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
+     * @param settings The settings in JSON format for a data provider. 
+     */
+    override fun settings(settings: IResolvable) {
+      cdkBuilder.settings(settings.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The settings in JSON format for a data provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
+     * @param settings The settings in JSON format for a data provider. 
+     */
+    override fun settings(settings: SettingsProperty) {
+      cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
+    }
+
+    /**
+     * The settings in JSON format for a data provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
+     * @param settings The settings in JSON format for a data provider. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ee40722a720d7943e5c842a5aa735bea262d50da0c487f2b9017c7fe45ea2928")
+    override fun settings(settings: SettingsProperty.Builder.() -> Unit): Unit =
+        settings(SettingsProperty(settings))
+
+    /**
      * An array of key-value pairs to apply to this resource.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-tags)
@@ -422,37 +453,6 @@ public open class CfnDataProvider(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    override fun tings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
-    }
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    override fun tings(settings: SettingsProperty) {
-      cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
-    }
-
-    /**
-     * The settings in JSON format for a data provider.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-dataprovider.html#cfn-dms-dataprovider-settings)
-     * @param settings The settings in JSON format for a data provider. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("7c39604e34fcba258422b1df3816092070b4c839ccb0f3d3f90ea77f4a50919e")
-    override fun tings(settings: SettingsProperty.Builder.() -> Unit): Unit =
-        tings(SettingsProperty(settings))
 
     public fun build(): software.amazon.awscdk.services.dms.CfnDataProvider = cdkBuilder.build()
   }

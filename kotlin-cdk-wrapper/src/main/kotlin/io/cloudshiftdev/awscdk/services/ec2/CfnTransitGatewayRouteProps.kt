@@ -21,10 +21,10 @@ import kotlin.Unit
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnTransitGatewayRouteProps cfnTransitGatewayRouteProps = CfnTransitGatewayRouteProps.builder()
+ * .destinationCidrBlock("destinationCidrBlock")
  * .transitGatewayRouteTableId("transitGatewayRouteTableId")
  * // the properties below are optional
  * .blackhole(false)
- * .destinationCidrBlock("destinationCidrBlock")
  * .transitGatewayAttachmentId("transitGatewayAttachmentId")
  * .build();
  * ```
@@ -44,7 +44,7 @@ public interface CfnTransitGatewayRouteProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html#cfn-ec2-transitgatewayroute-destinationcidrblock)
    */
-  public fun destinationCidrBlock(): String? = unwrap(this).getDestinationCidrBlock()
+  public fun destinationCidrBlock(): String
 
   /**
    * The ID of the attachment.
@@ -76,7 +76,7 @@ public interface CfnTransitGatewayRouteProps {
     public fun blackhole(blackhole: IResolvable)
 
     /**
-     * @param destinationCidrBlock The CIDR block used for destination matches.
+     * @param destinationCidrBlock The CIDR block used for destination matches. 
      */
     public fun destinationCidrBlock(destinationCidrBlock: String)
 
@@ -110,7 +110,7 @@ public interface CfnTransitGatewayRouteProps {
     }
 
     /**
-     * @param destinationCidrBlock The CIDR block used for destination matches.
+     * @param destinationCidrBlock The CIDR block used for destination matches. 
      */
     override fun destinationCidrBlock(destinationCidrBlock: String) {
       cdkBuilder.destinationCidrBlock(destinationCidrBlock)
@@ -149,7 +149,7 @@ public interface CfnTransitGatewayRouteProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgatewayroute.html#cfn-ec2-transitgatewayroute-destinationcidrblock)
      */
-    override fun destinationCidrBlock(): String? = unwrap(this).getDestinationCidrBlock()
+    override fun destinationCidrBlock(): String = unwrap(this).getDestinationCidrBlock()
 
     /**
      * The ID of the attachment.

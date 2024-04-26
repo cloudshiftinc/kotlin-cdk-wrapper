@@ -663,8 +663,6 @@ public open class CfnTransformer(
     /**
      * Returns the version to use for the specified X12 transaction set.
      *
-     * Supported versions are `4010` , `4030` , and `5010` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-version)
      */
     public fun version(): String? = unwrap(this).getVersion()
@@ -683,7 +681,6 @@ public open class CfnTransformer(
 
       /**
        * @param version Returns the version to use for the specified X12 transaction set.
-       * Supported versions are `4010` , `4030` , and `5010` .
        */
       public fun version(version: String)
     }
@@ -704,7 +701,6 @@ public open class CfnTransformer(
 
       /**
        * @param version Returns the version to use for the specified X12 transaction set.
-       * Supported versions are `4010` , `4030` , and `5010` .
        */
       override fun version(version: String) {
         cdkBuilder.version(version)
@@ -728,8 +724,6 @@ public open class CfnTransformer(
 
       /**
        * Returns the version to use for the specified X12 transaction set.
-       *
-       * Supported versions are `4010` , `4030` , and `5010` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-x12details.html#cfn-b2bi-transformer-x12details-version)
        */

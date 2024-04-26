@@ -47,8 +47,8 @@ public interface CapacityConfig {
 
   /**
    * The hardware configuration of the computer that hosts the dedicated master node, such as
-   * `m3.medium.search`. For valid values, see [Supported Instance Types]
-   * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
+   * `m3.medium.search`. For valid values, see [Supported Instance
+   * Types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
    * in the Amazon OpenSearch Service Developer Guide.
    *
    * Default: - r5.large.search
@@ -65,17 +65,20 @@ public interface CapacityConfig {
   /**
    * Indicates whether Multi-AZ with Standby deployment option is enabled.
    *
-   * For more information, see [Multi-AZ with Standby]
-   * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby)
+   * For more information, see <a
+   * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby">Multi-AZ
+   * with
+   * Standby</a>
    *
-   * Default: - no multi-az with standby
+   * Default: - multi-az with standby if the feature flag `ENABLE_OPENSEARCH_MULTIAZ_WITH_STANDBY`
+   * is true, no multi-az with standby otherwise
    */
   public fun multiAzWithStandbyEnabled(): Boolean? = unwrap(this).getMultiAzWithStandbyEnabled()
 
   /**
    * The instance type for your UltraWarm node, such as `ultrawarm1.medium.search`. For valid
-   * values, see [UltraWarm Storage Limits]
-   * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
+   * values, see [UltraWarm Storage
+   * Limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
    * in the Amazon OpenSearch Service Developer Guide.
    *
    * Default: - ultrawarm1.medium.search
@@ -111,8 +114,7 @@ public interface CapacityConfig {
     /**
      * @param masterNodeInstanceType The hardware configuration of the computer that hosts the
      * dedicated master node, such as `m3.medium.search`. For valid values, see [Supported Instance
-     * Types]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
+     * Types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
      * in the Amazon OpenSearch Service Developer Guide.
      */
     public fun masterNodeInstanceType(masterNodeInstanceType: String)
@@ -125,15 +127,17 @@ public interface CapacityConfig {
     /**
      * @param multiAzWithStandbyEnabled Indicates whether Multi-AZ with Standby deployment option is
      * enabled.
-     * For more information, see [Multi-AZ with Standby]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby)
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby">Multi-AZ
+     * with
+     * Standby</a>
      */
     public fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean)
 
     /**
      * @param warmInstanceType The instance type for your UltraWarm node, such as
-     * `ultrawarm1.medium.search`. For valid values, see [UltraWarm Storage Limits]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
+     * `ultrawarm1.medium.search`. For valid values, see [UltraWarm Storage
+     * Limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
      * in the Amazon OpenSearch Service Developer Guide.
      */
     public fun warmInstanceType(warmInstanceType: String)
@@ -170,8 +174,7 @@ public interface CapacityConfig {
     /**
      * @param masterNodeInstanceType The hardware configuration of the computer that hosts the
      * dedicated master node, such as `m3.medium.search`. For valid values, see [Supported Instance
-     * Types]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
+     * Types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
      * in the Amazon OpenSearch Service Developer Guide.
      */
     override fun masterNodeInstanceType(masterNodeInstanceType: String) {
@@ -188,8 +191,10 @@ public interface CapacityConfig {
     /**
      * @param multiAzWithStandbyEnabled Indicates whether Multi-AZ with Standby deployment option is
      * enabled.
-     * For more information, see [Multi-AZ with Standby]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby)
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby">Multi-AZ
+     * with
+     * Standby</a>
      */
     override fun multiAzWithStandbyEnabled(multiAzWithStandbyEnabled: Boolean) {
       cdkBuilder.multiAzWithStandbyEnabled(multiAzWithStandbyEnabled)
@@ -197,8 +202,8 @@ public interface CapacityConfig {
 
     /**
      * @param warmInstanceType The instance type for your UltraWarm node, such as
-     * `ultrawarm1.medium.search`. For valid values, see [UltraWarm Storage Limits]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
+     * `ultrawarm1.medium.search`. For valid values, see [UltraWarm Storage
+     * Limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
      * in the Amazon OpenSearch Service Developer Guide.
      */
     override fun warmInstanceType(warmInstanceType: String) {
@@ -239,8 +244,8 @@ public interface CapacityConfig {
 
     /**
      * The hardware configuration of the computer that hosts the dedicated master node, such as
-     * `m3.medium.search`. For valid values, see [Supported Instance Types]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
+     * `m3.medium.search`. For valid values, see [Supported Instance
+     * Types](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/supported-instance-types.html)
      * in the Amazon OpenSearch Service Developer Guide.
      *
      * Default: - r5.large.search
@@ -257,17 +262,20 @@ public interface CapacityConfig {
     /**
      * Indicates whether Multi-AZ with Standby deployment option is enabled.
      *
-     * For more information, see [Multi-AZ with Standby]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby)
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/opensearch-service/latest/developerguide/managedomains-multiaz.html#managedomains-za-standby">Multi-AZ
+     * with
+     * Standby</a>
      *
-     * Default: - no multi-az with standby
+     * Default: - multi-az with standby if the feature flag `ENABLE_OPENSEARCH_MULTIAZ_WITH_STANDBY`
+     * is true, no multi-az with standby otherwise
      */
     override fun multiAzWithStandbyEnabled(): Boolean? = unwrap(this).getMultiAzWithStandbyEnabled()
 
     /**
      * The instance type for your UltraWarm node, such as `ultrawarm1.medium.search`. For valid
-     * values, see [UltraWarm Storage Limits]
-     * (https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
+     * values, see [UltraWarm Storage
+     * Limits](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/limits.html#limits-ultrawarm)
      * in the Amazon OpenSearch Service Developer Guide.
      *
      * Default: - ultrawarm1.medium.search

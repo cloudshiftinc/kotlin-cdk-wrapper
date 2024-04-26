@@ -2730,8 +2730,7 @@ public open class CfnScalingPolicy(
   }
 
   /**
-   * This structure defines the CloudWatch metric to return, along with the statistic, period, and
-   * unit.
+   * This structure defines the CloudWatch metric to return, along with the statistic and unit.
    *
    * `TargetTrackingMetricStat` is a property of the [AWS::ApplicationAutoScaling::ScalingPolicy
    * TargetTrackingMetricDataQuery](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingmetricdataquery.html)

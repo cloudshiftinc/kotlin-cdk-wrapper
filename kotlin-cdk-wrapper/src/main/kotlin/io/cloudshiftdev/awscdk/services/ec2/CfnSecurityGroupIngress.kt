@@ -20,9 +20,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * with a source security group. For more information, see [Security group
  * rules](https://docs.aws.amazon.com/vpc/latest/userguide/security-group-rules.html) .
  *
- * You must specify only one of the following sources: an IPv4 or IPv6 address range, a prefix list,
- * or a security group. Otherwise, the stack launches successfully, but the rule is not added to the
- * security group.
+ * You must specify exactly one of the following sources: an IPv4 address range, an IPv6 address
+ * range, a prefix list, or a security group.
  *
  * You must specify a protocol for each rule (for example, TCP). If the protocol is TCP or UDP, you
  * must also specify a port or port range. If the protocol is ICMP or ICMPv6, you must also specify the
@@ -249,8 +248,8 @@ public open class CfnSecurityGroupIngress(
     /**
      * The IPv4 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -265,8 +264,8 @@ public open class CfnSecurityGroupIngress(
     /**
      * The IPv6 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -419,8 +418,8 @@ public open class CfnSecurityGroupIngress(
     /**
      * The IPv4 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -437,8 +436,8 @@ public open class CfnSecurityGroupIngress(
     /**
      * The IPv6 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use

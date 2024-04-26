@@ -528,10 +528,12 @@ public open class CfnConnector(
     /**
      * The algorithm that is used to encrypt the file.
      *
+     * Note the following:
      *
-     * You can only specify `NONE` if the URL for your connector uses HTTPS. This ensures that no
-     * traffic is sent in clear text.
-     *
+     * * Do not use the `DES_EDE3_CBC` algorithm unless you must support a legacy client that
+     * requires it, as it is a weak encryption algorithm.
+     * * You can only specify `NONE` if the URL for your connector uses HTTPS. Using HTTPS ensures
+     * that no traffic is sent in clear text.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html#cfn-transfer-connector-as2config-encryptionalgorithm)
      */
@@ -635,9 +637,12 @@ public open class CfnConnector(
 
       /**
        * @param encryptionAlgorithm The algorithm that is used to encrypt the file.
+       * Note the following:
        *
-       * You can only specify `NONE` if the URL for your connector uses HTTPS. This ensures that no
-       * traffic is sent in clear text.
+       * * Do not use the `DES_EDE3_CBC` algorithm unless you must support a legacy client that
+       * requires it, as it is a weak encryption algorithm.
+       * * You can only specify `NONE` if the URL for your connector uses HTTPS. Using HTTPS ensures
+       * that no traffic is sent in clear text.
        */
       public fun encryptionAlgorithm(encryptionAlgorithm: String)
 
@@ -731,9 +736,12 @@ public open class CfnConnector(
 
       /**
        * @param encryptionAlgorithm The algorithm that is used to encrypt the file.
+       * Note the following:
        *
-       * You can only specify `NONE` if the URL for your connector uses HTTPS. This ensures that no
-       * traffic is sent in clear text.
+       * * Do not use the `DES_EDE3_CBC` algorithm unless you must support a legacy client that
+       * requires it, as it is a weak encryption algorithm.
+       * * You can only specify `NONE` if the URL for your connector uses HTTPS. Using HTTPS ensures
+       * that no traffic is sent in clear text.
        */
       override fun encryptionAlgorithm(encryptionAlgorithm: String) {
         cdkBuilder.encryptionAlgorithm(encryptionAlgorithm)
@@ -844,10 +852,12 @@ public open class CfnConnector(
       /**
        * The algorithm that is used to encrypt the file.
        *
+       * Note the following:
        *
-       * You can only specify `NONE` if the URL for your connector uses HTTPS. This ensures that no
-       * traffic is sent in clear text.
-       *
+       * * Do not use the `DES_EDE3_CBC` algorithm unless you must support a legacy client that
+       * requires it, as it is a weak encryption algorithm.
+       * * You can only specify `NONE` if the URL for your connector uses HTTPS. Using HTTPS ensures
+       * that no traffic is sent in clear text.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-transfer-connector-as2config.html#cfn-transfer-connector-as2config-encryptionalgorithm)
        */

@@ -21,17 +21,21 @@ import kotlin.String
  * //     "MyBar": {
  * //       "Type": "Foo::Bar",
  * //       "Properties": {
- * //         "Fred": ["Flob", "Cat"]
+ * //         "Fred": {
+ * //           "Wobble": ["Flob", "Flib"],
+ * //         }
  * //       }
  * //     }
  * //   }
  * // }
  * // The following will NOT throw an assertion error
  * template.hasResourceProperties("Foo::Bar", Map.of(
- * "Fred", Match.arrayWith(List.of("Flob"))));
+ * "Fred", Map.of(
+ * "Wobble", List.of(Match.anyValue(), Match.anyValue()))));
  * // The following will throw an assertion error
- * template.hasResourceProperties("Foo::Bar", Match.objectLike(Map.of(
- * "Fred", Match.arrayWith(List.of("Wobble")))));
+ * template.hasResourceProperties("Foo::Bar", Map.of(
+ * "Fred", Map.of(
+ * "Wimble", Match.anyValue())));
  * ```
  */
 public abstract class Matcher(

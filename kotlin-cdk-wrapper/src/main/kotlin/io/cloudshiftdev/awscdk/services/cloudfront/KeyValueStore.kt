@@ -15,9 +15,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * KeyValueStore store = KeyValueStore.Builder.create(this, "KeyValueStore")
- * .keyValueStoreName("KeyValueStore")
- * .source(ImportSource.fromAsset("path-to-data.json"))
+ * KeyValueStore store = new KeyValueStore(this, "KeyValueStore");
+ * Function.Builder.create(this, "Function")
+ * .code(FunctionCode.fromInline("function handler(event) { return event.request }"))
+ * // Note that JS_2_0 must be used for Key Value Store support
+ * .runtime(FunctionRuntime.JS_2_0)
+ * .keyValueStore(store)
  * .build();
  * ```
  */

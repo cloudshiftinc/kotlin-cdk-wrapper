@@ -60,7 +60,11 @@ public interface CfnAssetProps {
   public fun assetDescription(): String? = unwrap(this).getAssetDescription()
 
   /**
-   * The External ID of the asset.
+   * The external ID of the asset model composite model.
+   *
+   * For more information, see [Using external
+   * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+   * the *AWS IoT SiteWise User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetexternalid)
    */
@@ -126,7 +130,10 @@ public interface CfnAssetProps {
     public fun assetDescription(assetDescription: String)
 
     /**
-     * @param assetExternalId The External ID of the asset.
+     * @param assetExternalId The external ID of the asset model composite model.
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      */
     public fun assetExternalId(assetExternalId: String)
 
@@ -212,7 +219,10 @@ public interface CfnAssetProps {
     }
 
     /**
-     * @param assetExternalId The External ID of the asset.
+     * @param assetExternalId The external ID of the asset model composite model.
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      */
     override fun assetExternalId(assetExternalId: String) {
       cdkBuilder.assetExternalId(assetExternalId)
@@ -318,7 +328,11 @@ public interface CfnAssetProps {
     override fun assetDescription(): String? = unwrap(this).getAssetDescription()
 
     /**
-     * The External ID of the asset.
+     * The external ID of the asset model composite model.
+     *
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetexternalid)
      */

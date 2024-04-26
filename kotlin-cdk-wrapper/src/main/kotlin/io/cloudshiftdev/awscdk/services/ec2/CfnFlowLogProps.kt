@@ -53,25 +53,18 @@ public interface CfnFlowLogProps {
   public fun deliverCrossAccountRole(): String? = unwrap(this).getDeliverCrossAccountRole()
 
   /**
-   * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log
-   * group in your account.
+   * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
    *
-   * This parameter is required if the destination type is `cloud-watch-logs` and unsupported
-   * otherwise.
+   * This parameter is required if the destination type is `cloud-watch-logs` , or if the
+   * destination type is `kinesis-data-firehose` and the delivery stream and the resources to monitor
+   * are in different accounts.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-deliverlogspermissionarn)
    */
   public fun deliverLogsPermissionArn(): String? = unwrap(this).getDeliverLogsPermissionArn()
 
   /**
-   * The destination options. The following options are supported:.
-   *
-   * * `FileFormat` - The format for the flow log ( `plain-text` | `parquet` ). The default is
-   * `plain-text` .
-   * * `HiveCompatiblePartitions` - Indicates whether to use Hive-compatible prefixes for flow logs
-   * stored in Amazon S3 ( `true` | `false` ). The default is `false` .
-   * * `PerHourPartition` - Indicates whether to partition the flow log per hour ( `true` | `false`
-   * ). The default is `false` .
+   * The destination options.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-destinationoptions)
    */
@@ -202,20 +195,15 @@ public interface CfnFlowLogProps {
 
     /**
      * @param deliverLogsPermissionArn The ARN of the IAM role that allows Amazon EC2 to publish
-     * flow logs to a CloudWatch Logs log group in your account.
-     * This parameter is required if the destination type is `cloud-watch-logs` and unsupported
-     * otherwise.
+     * flow logs to the log destination.
+     * This parameter is required if the destination type is `cloud-watch-logs` , or if the
+     * destination type is `kinesis-data-firehose` and the delivery stream and the resources to monitor
+     * are in different accounts.
      */
     public fun deliverLogsPermissionArn(deliverLogsPermissionArn: String)
 
     /**
-     * @param destinationOptions The destination options. The following options are supported:.
-     * * `FileFormat` - The format for the flow log ( `plain-text` | `parquet` ). The default is
-     * `plain-text` .
-     * * `HiveCompatiblePartitions` - Indicates whether to use Hive-compatible prefixes for flow
-     * logs stored in Amazon S3 ( `true` | `false` ). The default is `false` .
-     * * `PerHourPartition` - Indicates whether to partition the flow log per hour ( `true` |
-     * `false` ). The default is `false` .
+     * @param destinationOptions The destination options.
      */
     public fun destinationOptions(destinationOptions: Any)
 
@@ -329,22 +317,17 @@ public interface CfnFlowLogProps {
 
     /**
      * @param deliverLogsPermissionArn The ARN of the IAM role that allows Amazon EC2 to publish
-     * flow logs to a CloudWatch Logs log group in your account.
-     * This parameter is required if the destination type is `cloud-watch-logs` and unsupported
-     * otherwise.
+     * flow logs to the log destination.
+     * This parameter is required if the destination type is `cloud-watch-logs` , or if the
+     * destination type is `kinesis-data-firehose` and the delivery stream and the resources to monitor
+     * are in different accounts.
      */
     override fun deliverLogsPermissionArn(deliverLogsPermissionArn: String) {
       cdkBuilder.deliverLogsPermissionArn(deliverLogsPermissionArn)
     }
 
     /**
-     * @param destinationOptions The destination options. The following options are supported:.
-     * * `FileFormat` - The format for the flow log ( `plain-text` | `parquet` ). The default is
-     * `plain-text` .
-     * * `HiveCompatiblePartitions` - Indicates whether to use Hive-compatible prefixes for flow
-     * logs stored in Amazon S3 ( `true` | `false` ). The default is `false` .
-     * * `PerHourPartition` - Indicates whether to partition the flow log per hour ( `true` |
-     * `false` ). The default is `false` .
+     * @param destinationOptions The destination options.
      */
     override fun destinationOptions(destinationOptions: Any) {
       cdkBuilder.destinationOptions(destinationOptions)
@@ -477,25 +460,18 @@ public interface CfnFlowLogProps {
     override fun deliverCrossAccountRole(): String? = unwrap(this).getDeliverCrossAccountRole()
 
     /**
-     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to a CloudWatch Logs log
-     * group in your account.
+     * The ARN of the IAM role that allows Amazon EC2 to publish flow logs to the log destination.
      *
-     * This parameter is required if the destination type is `cloud-watch-logs` and unsupported
-     * otherwise.
+     * This parameter is required if the destination type is `cloud-watch-logs` , or if the
+     * destination type is `kinesis-data-firehose` and the delivery stream and the resources to monitor
+     * are in different accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-deliverlogspermissionarn)
      */
     override fun deliverLogsPermissionArn(): String? = unwrap(this).getDeliverLogsPermissionArn()
 
     /**
-     * The destination options. The following options are supported:.
-     *
-     * * `FileFormat` - The format for the flow log ( `plain-text` | `parquet` ). The default is
-     * `plain-text` .
-     * * `HiveCompatiblePartitions` - Indicates whether to use Hive-compatible prefixes for flow
-     * logs stored in Amazon S3 ( `true` | `false` ). The default is `false` .
-     * * `PerHourPartition` - Indicates whether to partition the flow log per hour ( `true` |
-     * `false` ). The default is `false` .
+     * The destination options.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-flowlog.html#cfn-ec2-flowlog-destinationoptions)
      */

@@ -42,8 +42,8 @@ public interface CfnSecurityGroupIngressProps {
   /**
    * The IPv4 address range, in CIDR format.
    *
-   * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` ) or
-   * a CIDR range ( `CidrIp` or `CidrIpv6` ).
+   * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+   * or `SourceSecurityGroupId` .
    *
    * For examples of rules that you can add to security groups for specific access scenarios, see
    * [Security group rules for different use
@@ -57,8 +57,8 @@ public interface CfnSecurityGroupIngressProps {
   /**
    * The IPv6 address range, in CIDR format.
    *
-   * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` ) or
-   * a CIDR range ( `CidrIp` or `CidrIpv6` ).
+   * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+   * or `SourceSecurityGroupId` .
    *
    * For examples of rules that you can add to security groups for specific access scenarios, see
    * [Security group rules for different use
@@ -191,8 +191,8 @@ public interface CfnSecurityGroupIngressProps {
   public interface Builder {
     /**
      * @param cidrIp The IPv4 address range, in CIDR format.
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -203,8 +203,8 @@ public interface CfnSecurityGroupIngressProps {
 
     /**
      * @param cidrIpv6 The IPv6 address range, in CIDR format.
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -309,8 +309,8 @@ public interface CfnSecurityGroupIngressProps {
 
     /**
      * @param cidrIp The IPv4 address range, in CIDR format.
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -323,8 +323,8 @@ public interface CfnSecurityGroupIngressProps {
 
     /**
      * @param cidrIpv6 The IPv6 address range, in CIDR format.
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -454,8 +454,8 @@ public interface CfnSecurityGroupIngressProps {
     /**
      * The IPv4 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use
@@ -469,8 +469,8 @@ public interface CfnSecurityGroupIngressProps {
     /**
      * The IPv6 address range, in CIDR format.
      *
-     * You must specify a source security group ( `SourcePrefixListId` or `SourceSecurityGroupId` )
-     * or a CIDR range ( `CidrIp` or `CidrIpv6` ).
+     * You must specify exactly one of the following: `CidrIp` , `CidrIpv6` , `SourcePrefixListId` ,
+     * or `SourceSecurityGroupId` .
      *
      * For examples of rules that you can add to security groups for specific access scenarios, see
      * [Security group rules for different use

@@ -100,14 +100,6 @@ public interface CfnPresetProps {
     public fun name(name: String)
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     */
-    public fun tags(tags: Any)
-
-    /**
      * @param settingsJson Specify, in JSON format, the transcoding job settings for this output
      * preset. 
      * This specification must conform to the AWS Elemental MediaConvert job validation. For
@@ -118,7 +110,15 @@ public interface CfnPresetProps {
      * Presets](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-presets.html) in the **
      * .
      */
-    public fun tingsJson(settingsJson: Any)
+    public fun settingsJson(settingsJson: Any)
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     */
+    public fun tags(tags: Any)
   }
 
   private class BuilderImpl : Builder {
@@ -147,16 +147,6 @@ public interface CfnPresetProps {
     }
 
     /**
-     * @param tags An array of key-value pairs to apply to this resource.
-     * For more information, see
-     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
-     * .
-     */
-    override fun tags(tags: Any) {
-      cdkBuilder.tags(tags)
-    }
-
-    /**
      * @param settingsJson Specify, in JSON format, the transcoding job settings for this output
      * preset. 
      * This specification must conform to the AWS Elemental MediaConvert job validation. For
@@ -167,8 +157,18 @@ public interface CfnPresetProps {
      * Presets](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-presets.html) in the **
      * .
      */
-    override fun tingsJson(settingsJson: Any) {
+    override fun settingsJson(settingsJson: Any) {
       cdkBuilder.settingsJson(settingsJson)
+    }
+
+    /**
+     * @param tags An array of key-value pairs to apply to this resource.
+     * For more information, see
+     * [Tag](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resource-tags.html)
+     * .
+     */
+    override fun tags(tags: Any) {
+      cdkBuilder.tags(tags)
     }
 
     public fun build(): software.amazon.awscdk.services.mediaconvert.CfnPresetProps =

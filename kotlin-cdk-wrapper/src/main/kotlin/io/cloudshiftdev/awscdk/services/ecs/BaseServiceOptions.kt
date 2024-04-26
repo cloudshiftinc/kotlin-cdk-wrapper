@@ -159,7 +159,7 @@ public interface BaseServiceOptions {
    *
    * Default: false
    */
-  public fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+  public fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
   /**
    * Whether to enable the ability to execute into a container.
@@ -704,7 +704,7 @@ public interface BaseServiceOptions {
      *
      * Default: false
      */
-    override fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+    override fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
     /**
      * Whether to enable the ability to execute into a container.

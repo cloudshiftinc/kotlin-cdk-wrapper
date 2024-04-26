@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.appconfig
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -21,10 +22,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Environment env = Environment.Builder.create(this, "MyEnv")
  * .application(app)
  * .build();
- * HostedConfiguration.Builder.create(this, "MyHostedConfig")
+ * HostedConfiguration.Builder.create(this, "MyFirstHostedConfig")
  * .application(app)
  * .deployTo(List.of(env))
- * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+ * .content(ConfigurationContent.fromInlineText("This is my first configuration content."))
+ * .build();
+ * HostedConfiguration.Builder.create(this, "MySecondHostedConfig")
+ * .application(app)
+ * .deployTo(List.of(env))
+ * .content(ConfigurationContent.fromInlineText("This is my second configuration content."))
  * .build();
  * ```
  *
@@ -48,6 +54,32 @@ public open class Environment(
     props: EnvironmentProps.Builder.() -> Unit,
   ) : this(scope, id, EnvironmentProps(props)
   )
+
+  /**
+   * Creates a deployment of the supplied configuration to this environment.
+   *
+   * Note that you can only deploy one configuration at a time to an environment.
+   * However, you can deploy one configuration each to different environments at the same time.
+   * If more than one deployment is requested for this environment, they will occur in the same
+   * order they were provided.
+   *
+   * @param configuration 
+   */
+  public override fun addDeployment(configuration: IConfiguration) {
+    unwrap(this).addDeployment(configuration.let(IConfiguration::unwrap))
+  }
+
+  /**
+   * Creates a deployment for each of the supplied configurations to this environment.
+   *
+   * These configurations will be deployed in the same order as the input array.
+   *
+   * @param configurations 
+   */
+  public override fun addDeployments(vararg configurations: IConfiguration) {
+    unwrap(this).addDeployments(*configurations.map{CdkObjectWrappers.unwrap(it) as
+        software.amazon.awscdk.services.appconfig.IConfiguration}.toTypedArray())
+  }
 
   /**
    * Adds an extension association to the environment.

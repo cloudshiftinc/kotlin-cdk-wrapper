@@ -58,6 +58,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .copyAccessControlListsForTopics(false)
  * .copyTopicConfigurations(false)
  * .detectAndCopyNewTopics(false)
+ * .startingPosition(ReplicationStartingPositionProperty.builder()
+ * .type("type")
+ * .build())
  * .topicsToExclude(List.of("topicsToExclude"))
  * .build())
  * .build()))
@@ -1177,6 +1180,9 @@ public open class CfnReplicator(
    * .copyAccessControlListsForTopics(false)
    * .copyTopicConfigurations(false)
    * .detectAndCopyNewTopics(false)
+   * .startingPosition(ReplicationStartingPositionProperty.builder()
+   * .type("type")
+   * .build())
    * .topicsToExclude(List.of("topicsToExclude"))
    * .build())
    * .build();
@@ -1410,6 +1416,90 @@ public open class CfnReplicator(
   }
 
   /**
+   * Configuration for specifying the position in the topics to start replicating from.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.msk.*;
+   * ReplicationStartingPositionProperty replicationStartingPositionProperty =
+   * ReplicationStartingPositionProperty.builder()
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationstartingposition.html)
+   */
+  public interface ReplicationStartingPositionProperty {
+    /**
+     * The type of replication starting position.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationstartingposition.html#cfn-msk-replicator-replicationstartingposition-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [ReplicationStartingPositionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param type The type of replication starting position.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty.Builder
+          =
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty.builder()
+
+      /**
+       * @param type The type of replication starting position.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty,
+    ) : CdkObject(cdkObject), ReplicationStartingPositionProperty {
+      /**
+       * The type of replication starting position.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-replicationstartingposition.html#cfn-msk-replicator-replicationstartingposition-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ReplicationStartingPositionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty):
+          ReplicationStartingPositionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicationStartingPositionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicationStartingPositionProperty):
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.msk.CfnReplicator.ReplicationStartingPositionProperty
+    }
+  }
+
+  /**
    * Example:
    *
    * ```
@@ -1422,6 +1512,9 @@ public open class CfnReplicator(
    * .copyAccessControlListsForTopics(false)
    * .copyTopicConfigurations(false)
    * .detectAndCopyNewTopics(false)
+   * .startingPosition(ReplicationStartingPositionProperty.builder()
+   * .type("type")
+   * .build())
    * .topicsToExclude(List.of("topicsToExclude"))
    * .build();
    * ```
@@ -1451,6 +1544,13 @@ public open class CfnReplicator(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-detectandcopynewtopics)
      */
     public fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
+
+    /**
+     * Configuration for specifying the position in the topics to start replicating from.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-startingposition)
+     */
+    public fun startingPosition(): Any? = unwrap(this).getStartingPosition()
 
     /**
      * List of regular expression patterns indicating the topics that should not be replicated.
@@ -1504,6 +1604,27 @@ public open class CfnReplicator(
        * @param detectAndCopyNewTopics Whether to periodically check for new topics and partitions.
        */
       public fun detectAndCopyNewTopics(detectAndCopyNewTopics: IResolvable)
+
+      /**
+       * @param startingPosition Configuration for specifying the position in the topics to start
+       * replicating from.
+       */
+      public fun startingPosition(startingPosition: IResolvable)
+
+      /**
+       * @param startingPosition Configuration for specifying the position in the topics to start
+       * replicating from.
+       */
+      public fun startingPosition(startingPosition: ReplicationStartingPositionProperty)
+
+      /**
+       * @param startingPosition Configuration for specifying the position in the topics to start
+       * replicating from.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b216c9fb6cd3c2d96380696c26c913ca537b6a0175cb86fa24f15fddcce2b9d6")
+      public
+          fun startingPosition(startingPosition: ReplicationStartingPositionProperty.Builder.() -> Unit)
 
       /**
        * @param topicsToExclude List of regular expression patterns indicating the topics that
@@ -1582,6 +1703,32 @@ public open class CfnReplicator(
       }
 
       /**
+       * @param startingPosition Configuration for specifying the position in the topics to start
+       * replicating from.
+       */
+      override fun startingPosition(startingPosition: IResolvable) {
+        cdkBuilder.startingPosition(startingPosition.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param startingPosition Configuration for specifying the position in the topics to start
+       * replicating from.
+       */
+      override fun startingPosition(startingPosition: ReplicationStartingPositionProperty) {
+        cdkBuilder.startingPosition(startingPosition.let(ReplicationStartingPositionProperty::unwrap))
+      }
+
+      /**
+       * @param startingPosition Configuration for specifying the position in the topics to start
+       * replicating from.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b216c9fb6cd3c2d96380696c26c913ca537b6a0175cb86fa24f15fddcce2b9d6")
+      override
+          fun startingPosition(startingPosition: ReplicationStartingPositionProperty.Builder.() -> Unit):
+          Unit = startingPosition(ReplicationStartingPositionProperty(startingPosition))
+
+      /**
        * @param topicsToExclude List of regular expression patterns indicating the topics that
        * should not be replicated.
        */
@@ -1641,6 +1788,13 @@ public open class CfnReplicator(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-detectandcopynewtopics)
        */
       override fun detectAndCopyNewTopics(): Any? = unwrap(this).getDetectAndCopyNewTopics()
+
+      /**
+       * Configuration for specifying the position in the topics to start replicating from.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-msk-replicator-topicreplication.html#cfn-msk-replicator-topicreplication-startingposition)
+       */
+      override fun startingPosition(): Any? = unwrap(this).getStartingPosition()
 
       /**
        * List of regular expression patterns indicating the topics that should not be replicated.

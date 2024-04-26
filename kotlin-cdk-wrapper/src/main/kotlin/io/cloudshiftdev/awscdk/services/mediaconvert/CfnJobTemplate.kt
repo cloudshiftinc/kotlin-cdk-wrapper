@@ -407,6 +407,23 @@ public open class CfnJobTemplate(
     public fun queue(queue: String)
 
     /**
+     * Specify, in JSON format, the transcoding job settings for this job template.
+     *
+     * This specification must conform to the AWS Elemental MediaConvert job validation. For
+     * information about forming this specification, see the Remarks section later in this topic.
+     *
+     * For more information about MediaConvert job templates, see [Working with AWS Elemental
+     * MediaConvert Job
+     * Templates](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-job-templates.html)
+     * in the ** .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-settingsjson)
+     * @param settingsJson Specify, in JSON format, the transcoding job settings for this job
+     * template. 
+     */
+    public fun settingsJson(settingsJson: Any)
+
+    /**
      * Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch Events.
      *
      * Set the interval, in seconds, between status updates. MediaConvert sends an update at this
@@ -462,23 +479,6 @@ public open class CfnJobTemplate(
      * @param tags An array of key-value pairs to apply to this resource. 
      */
     public fun tags(tags: Any)
-
-    /**
-     * Specify, in JSON format, the transcoding job settings for this job template.
-     *
-     * This specification must conform to the AWS Elemental MediaConvert job validation. For
-     * information about forming this specification, see the Remarks section later in this topic.
-     *
-     * For more information about MediaConvert job templates, see [Working with AWS Elemental
-     * MediaConvert Job
-     * Templates](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-job-templates.html)
-     * in the ** .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-settingsjson)
-     * @param settingsJson Specify, in JSON format, the transcoding job settings for this job
-     * template. 
-     */
-    public fun tingsJson(settingsJson: Any)
   }
 
   private class BuilderImpl(
@@ -650,6 +650,25 @@ public open class CfnJobTemplate(
     }
 
     /**
+     * Specify, in JSON format, the transcoding job settings for this job template.
+     *
+     * This specification must conform to the AWS Elemental MediaConvert job validation. For
+     * information about forming this specification, see the Remarks section later in this topic.
+     *
+     * For more information about MediaConvert job templates, see [Working with AWS Elemental
+     * MediaConvert Job
+     * Templates](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-job-templates.html)
+     * in the ** .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-settingsjson)
+     * @param settingsJson Specify, in JSON format, the transcoding job settings for this job
+     * template. 
+     */
+    override fun settingsJson(settingsJson: Any) {
+      cdkBuilder.settingsJson(settingsJson)
+    }
+
+    /**
      * Specify how often MediaConvert sends STATUS_UPDATE events to Amazon CloudWatch Events.
      *
      * Set the interval, in seconds, between status updates. MediaConvert sends an update at this
@@ -708,25 +727,6 @@ public open class CfnJobTemplate(
      */
     override fun tags(tags: Any) {
       cdkBuilder.tags(tags)
-    }
-
-    /**
-     * Specify, in JSON format, the transcoding job settings for this job template.
-     *
-     * This specification must conform to the AWS Elemental MediaConvert job validation. For
-     * information about forming this specification, see the Remarks section later in this topic.
-     *
-     * For more information about MediaConvert job templates, see [Working with AWS Elemental
-     * MediaConvert Job
-     * Templates](https://docs.aws.amazon.com/mediaconvert/latest/ug/working-with-job-templates.html)
-     * in the ** .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconvert-jobtemplate.html#cfn-mediaconvert-jobtemplate-settingsjson)
-     * @param settingsJson Specify, in JSON format, the transcoding job settings for this job
-     * template. 
-     */
-    override fun tingsJson(settingsJson: Any) {
-      cdkBuilder.settingsJson(settingsJson)
     }
 
     public fun build(): software.amazon.awscdk.services.mediaconvert.CfnJobTemplate =

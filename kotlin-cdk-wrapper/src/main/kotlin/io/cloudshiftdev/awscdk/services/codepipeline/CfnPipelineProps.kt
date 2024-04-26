@@ -47,6 +47,7 @@ import kotlin.jvm.JvmName
  * .region("region")
  * .roleArn("roleArn")
  * .runOrder(123)
+ * .timeoutInMinutes(123)
  * .build()))
  * .name("name")
  * // the properties below are optional

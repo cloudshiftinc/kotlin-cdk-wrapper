@@ -21,27 +21,27 @@ import kotlin.jvm.JvmName
  * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
  * .isDefault(true)
  * .build());
- * Cluster cluster = Cluster.Builder.create(this, "Ec2Cluster").vpc(vpc).build();
- * cluster.addCapacity("DefaultAutoScalingGroup", AddCapacityOptions.builder()
- * .instanceType(new InstanceType("t2.micro"))
- * .vpcSubnets(SubnetSelection.builder().subnetType(SubnetType.PUBLIC).build())
- * .build());
+ * Cluster cluster = Cluster.Builder.create(this, "FargateCluster").vpc(vpc).build();
  * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
- * .compatibility(Compatibility.EC2)
+ * .memoryMiB("512")
+ * .cpu("256")
+ * .compatibility(Compatibility.FARGATE)
  * .build();
- * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * ContainerDefinition containerDefinition = taskDefinition.addContainer("TheContainer",
+ * ContainerDefinitionOptions.builder()
  * .image(ContainerImage.fromRegistry("foo/bar"))
  * .memoryLimitMiB(256)
  * .build());
- * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
+ * EcsRunTask runTask = EcsRunTask.Builder.create(this, "RunFargate")
  * .integrationPattern(IntegrationPattern.RUN_JOB)
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .launchTarget(EcsEc2LaunchTarget.Builder.create()
- * .placementStrategies(List.of(PlacementStrategy.spreadAcrossInstances(),
- * PlacementStrategy.packedByCpu(), PlacementStrategy.randomly()))
- * .placementConstraints(List.of(PlacementConstraint.memberOf("blieptuut")))
- * .build())
+ * .assignPublicIp(true)
+ * .containerOverrides(List.of(ContainerOverride.builder()
+ * .containerDefinition(containerDefinition)
+ * .environment(List.of(TaskEnvironmentVariable.builder().name("SOME_KEY").value(JsonPath.stringAt("$.SomeKey")).build()))
+ * .build()))
+ * .launchTarget(new EcsFargateLaunchTarget())
  * .propagatedTagSource(PropagatedTagSource.TASK_DEFINITION)
  * .build();
  * ```
@@ -154,7 +154,9 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
   /**
    * The process namespace to use for the containers in the task.
    *
-   * Not supported in Fargate and Windows containers.
+   * Only supported for tasks that are hosted on AWS Fargate if the tasks
+   * are using platform version 1.4.0 or later (Linux).
+   * Not supported in Windows containers.
    *
    * Default: - PidMode used by the task is not specified
    */
@@ -297,7 +299,9 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
 
     /**
      * @param pidMode The process namespace to use for the containers in the task.
-     * Not supported in Fargate and Windows containers.
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
      */
     public fun pidMode(pidMode: PidMode)
 
@@ -493,7 +497,9 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
 
     /**
      * @param pidMode The process namespace to use for the containers in the task.
-     * Not supported in Fargate and Windows containers.
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
      */
     override fun pidMode(pidMode: PidMode) {
       cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
@@ -704,7 +710,9 @@ public interface TaskDefinitionProps : CommonTaskDefinitionProps {
     /**
      * The process namespace to use for the containers in the task.
      *
-     * Not supported in Fargate and Windows containers.
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
      *
      * Default: - PidMode used by the task is not specified
      */

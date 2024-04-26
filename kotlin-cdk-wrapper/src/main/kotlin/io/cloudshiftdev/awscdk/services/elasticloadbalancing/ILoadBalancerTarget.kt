@@ -17,7 +17,7 @@ public interface ILoadBalancerTarget : IConnectable {
    * @param loadBalancer [disable-awslint:ref-via-interface] The load balancer to attach the target
    * to. 
    */
-  public fun attachToClassicLb(loadBalancer: LoadBalancer)
+  public fun attachToClassicLB(loadBalancer: LoadBalancer)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancing.ILoadBalancerTarget,
@@ -28,7 +28,7 @@ public interface ILoadBalancerTarget : IConnectable {
      * @param loadBalancer [disable-awslint:ref-via-interface] The load balancer to attach the
      * target to. 
      */
-    override fun attachToClassicLb(loadBalancer: LoadBalancer) {
+    override fun attachToClassicLB(loadBalancer: LoadBalancer) {
       unwrap(this).attachToClassicLB(loadBalancer.let(LoadBalancer::unwrap))
     }
 

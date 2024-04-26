@@ -35,6 +35,19 @@ import kotlin.jvm.JvmName
  * .filterType("filterType")
  * .value("value")
  * .build()))
+ * .manifestConfig(ManifestConfigProperty.builder()
+ * .source(SourceProperty.builder()
+ * .s3(ManifestConfigSourceS3Property.builder()
+ * .bucketAccessRoleArn("bucketAccessRoleArn")
+ * .manifestObjectPath("manifestObjectPath")
+ * .manifestObjectVersionId("manifestObjectVersionId")
+ * .s3BucketArn("s3BucketArn")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .action("action")
+ * .format("format")
+ * .build())
  * .name("name")
  * .options(OptionsProperty.builder()
  * .atime("atime")
@@ -135,6 +148,16 @@ public interface CfnTaskProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
    */
   public fun includes(): Any? = unwrap(this).getIncludes()
+
+  /**
+   * The configuration of the manifest that lists the files or objects to transfer.
+   *
+   * For more information, see [Specifying what DataSync transfers by using a
+   * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html) .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+   */
+  public fun manifestConfig(): Any? = unwrap(this).getManifestConfig()
 
   /**
    * The name of a task.
@@ -274,6 +297,35 @@ public interface CfnTaskProps {
      * DataSync](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      */
     public fun includes(vararg includes: Any)
+
+    /**
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer.
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     */
+    public fun manifestConfig(manifestConfig: IResolvable)
+
+    /**
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer.
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     */
+    public fun manifestConfig(manifestConfig: CfnTask.ManifestConfigProperty)
+
+    /**
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer.
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ec8c77e6c6dfdb2c9cf682f7b4f269325702ad0aed75a50819a625d846d9ed6b")
+    public fun manifestConfig(manifestConfig: CfnTask.ManifestConfigProperty.Builder.() -> Unit)
 
     /**
      * @param name The name of a task.
@@ -487,6 +539,40 @@ public interface CfnTaskProps {
     override fun includes(vararg includes: Any): Unit = includes(includes.toList())
 
     /**
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer.
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     */
+    override fun manifestConfig(manifestConfig: IResolvable) {
+      cdkBuilder.manifestConfig(manifestConfig.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer.
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     */
+    override fun manifestConfig(manifestConfig: CfnTask.ManifestConfigProperty) {
+      cdkBuilder.manifestConfig(manifestConfig.let(CfnTask.ManifestConfigProperty::unwrap))
+    }
+
+    /**
+     * @param manifestConfig The configuration of the manifest that lists the files or objects to
+     * transfer.
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ec8c77e6c6dfdb2c9cf682f7b4f269325702ad0aed75a50819a625d846d9ed6b")
+    override fun manifestConfig(manifestConfig: CfnTask.ManifestConfigProperty.Builder.() -> Unit):
+        Unit = manifestConfig(CfnTask.ManifestConfigProperty(manifestConfig))
+
+    /**
      * @param name The name of a task.
      * This value is a text reference that is used to identify the task in the console.
      */
@@ -682,6 +768,17 @@ public interface CfnTaskProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
      */
     override fun includes(): Any? = unwrap(this).getIncludes()
+
+    /**
+     * The configuration of the manifest that lists the files or objects to transfer.
+     *
+     * For more information, see [Specifying what DataSync transfers by using a
+     * manifest](https://docs.aws.amazon.com/datasync/latest/userguide/transferring-with-manifest.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-manifestconfig)
+     */
+    override fun manifestConfig(): Any? = unwrap(this).getManifestConfig()
 
     /**
      * The name of a task.

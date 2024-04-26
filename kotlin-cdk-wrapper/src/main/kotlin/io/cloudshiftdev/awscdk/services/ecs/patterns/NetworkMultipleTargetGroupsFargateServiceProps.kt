@@ -595,7 +595,7 @@ public interface NetworkMultipleTargetGroupsFargateServiceProps :
      *
      * Default: false
      */
-    override fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+    override fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
     /**
      * Whether ECS Exec should be enabled.

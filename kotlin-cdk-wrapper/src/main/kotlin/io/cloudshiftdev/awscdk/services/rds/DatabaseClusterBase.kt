@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import io.cloudshiftdev.awscdk.services.secretsmanager.SecretAttachmentTargetProps
 import kotlin.String
 import kotlin.Unit
@@ -106,7 +107,7 @@ public abstract class DatabaseClusterBase(
    *
    * @param grantee 
    */
-  public open fun grantDataApiAccess(grantee: IGrantable): Grant =
+  public override fun grantDataApiAccess(grantee: IGrantable): Grant =
       unwrap(this).grantDataApiAccess(grantee.let(IGrantable::unwrap)).let(Grant::wrap)
 
   /**
@@ -156,7 +157,7 @@ public abstract class DatabaseClusterBase(
    *
    * @param props
    */
-  public override fun metricCpuUtilization(): Metric =
+  public override fun metricCPUUtilization(): Metric =
       unwrap(this).metricCPUUtilization().let(Metric::wrap)
 
   /**
@@ -166,7 +167,7 @@ public abstract class DatabaseClusterBase(
    *
    * @param props
    */
-  public override fun metricCpuUtilization(props: MetricOptions): Metric =
+  public override fun metricCPUUtilization(props: MetricOptions): Metric =
       unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -177,9 +178,9 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("06a38048efcdd43000e7f66d74001004b818625d95136f460bf350a2397a31d0")
-  public override fun metricCpuUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
-      metricCpuUtilization(MetricOptions(props))
+  @JvmName("66a273587ca08857c76d1952aa0bb360d86bfe06cc24788a922415fa0fa097ef")
+  public override fun metricCPUUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricCPUUtilization(MetricOptions(props))
 
   /**
    * The number of database connections in use.
@@ -545,7 +546,7 @@ public abstract class DatabaseClusterBase(
    *
    * @param props
    */
-  public override fun metricVolumeReadIoPs(): Metric =
+  public override fun metricVolumeReadIOPs(): Metric =
       unwrap(this).metricVolumeReadIOPs().let(Metric::wrap)
 
   /**
@@ -555,7 +556,7 @@ public abstract class DatabaseClusterBase(
    *
    * @param props
    */
-  public override fun metricVolumeReadIoPs(props: MetricOptions): Metric =
+  public override fun metricVolumeReadIOPs(props: MetricOptions): Metric =
       unwrap(this).metricVolumeReadIOPs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -566,9 +567,9 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("72067052a26857a00db0f687d77e4b1548626bbc1cc21cf9326d161fc9b68886")
-  public override fun metricVolumeReadIoPs(props: MetricOptions.Builder.() -> Unit): Metric =
-      metricVolumeReadIoPs(MetricOptions(props))
+  @JvmName("086a9f6911f369e61d0fcde9022eb67ad1713fce19147894ef9b125ba6821a32")
+  public override fun metricVolumeReadIOPs(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricVolumeReadIOPs(MetricOptions(props))
 
   /**
    * The number of write disk I/O operations to the cluster volume, reported at 5-minute intervals.
@@ -577,7 +578,7 @@ public abstract class DatabaseClusterBase(
    *
    * @param props
    */
-  public override fun metricVolumeWriteIoPs(): Metric =
+  public override fun metricVolumeWriteIOPs(): Metric =
       unwrap(this).metricVolumeWriteIOPs().let(Metric::wrap)
 
   /**
@@ -587,7 +588,7 @@ public abstract class DatabaseClusterBase(
    *
    * @param props
    */
-  public override fun metricVolumeWriteIoPs(props: MetricOptions): Metric =
+  public override fun metricVolumeWriteIOPs(props: MetricOptions): Metric =
       unwrap(this).metricVolumeWriteIOPs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -598,9 +599,14 @@ public abstract class DatabaseClusterBase(
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("e049e75cf4d1c56da8bf142e554ca3f6d27b3533201bcb1be743dd489f70476a")
-  public override fun metricVolumeWriteIoPs(props: MetricOptions.Builder.() -> Unit): Metric =
-      metricVolumeWriteIoPs(MetricOptions(props))
+  @JvmName("f19f045892b48d2f8dfe909a7aebc7e660a59bbc59651b3f2119beea07c2cdd9")
+  public override fun metricVolumeWriteIOPs(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricVolumeWriteIOPs(MetricOptions(props))
+
+  /**
+   * The secret attached to this cluster.
+   */
+  public open fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.rds.DatabaseClusterBase,

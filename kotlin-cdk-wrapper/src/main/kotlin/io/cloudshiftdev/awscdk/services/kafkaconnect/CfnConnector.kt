@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.kafkaconnect
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -96,6 +99,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .build())
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .workerConfiguration(WorkerConfigurationProperty.builder()
  * .revision(123)
  * .workerConfigurationArn("workerConfigurationArn")
@@ -107,7 +114,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnConnector(
   cdkObject: software.amazon.awscdk.services.kafkaconnect.CfnConnector,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -155,6 +162,12 @@ public open class CfnConnector(
   @JvmName("f7e37a8165fad58bd8ca4dadf760ea39c593867ba513098dc0a5b1b868bcda0e")
   public open fun capacity(`value`: CapacityProperty.Builder.() -> Unit): Unit =
       capacity(CapacityProperty(`value`))
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The configuration of the connector.
@@ -371,6 +384,23 @@ public open class CfnConnector(
   public open fun serviceExecutionRoleArn(`value`: String) {
     unwrap(this).setServiceExecutionRoleArn(`value`)
   }
+
+  /**
+   * A collection of tags associated with a resource.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * A collection of tags associated with a resource.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+  }
+
+  /**
+   * A collection of tags associated with a resource.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * The worker configurations that are in use with the connector.
@@ -637,6 +667,22 @@ public open class CfnConnector(
      * connector to access Amazon Web Services resources. 
      */
     public fun serviceExecutionRoleArn(serviceExecutionRoleArn: String)
+
+    /**
+     * A collection of tags associated with a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-tags)
+     * @param tags A collection of tags associated with a resource. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * A collection of tags associated with a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-tags)
+     * @param tags A collection of tags associated with a resource. 
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * The worker configurations that are in use with the connector.
@@ -949,6 +995,24 @@ public open class CfnConnector(
     override fun serviceExecutionRoleArn(serviceExecutionRoleArn: String) {
       cdkBuilder.serviceExecutionRoleArn(serviceExecutionRoleArn)
     }
+
+    /**
+     * A collection of tags associated with a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-tags)
+     * @param tags A collection of tags associated with a resource. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    /**
+     * A collection of tags associated with a resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kafkaconnect-connector.html#cfn-kafkaconnect-connector-tags)
+     * @param tags A collection of tags associated with a resource. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * The worker configurations that are in use with the connector.

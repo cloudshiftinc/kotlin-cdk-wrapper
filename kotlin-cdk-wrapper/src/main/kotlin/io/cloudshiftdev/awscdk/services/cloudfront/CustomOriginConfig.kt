@@ -42,7 +42,7 @@ public interface CustomOriginConfig {
    *
    * Default: OriginSslPolicy.TLS_V1_2
    */
-  public fun allowedOriginSslVersions(): List<OriginSslPolicy> =
+  public fun allowedOriginSSLVersions(): List<OriginSslPolicy> =
       unwrap(this).getAllowedOriginSSLVersions()?.map(OriginSslPolicy::wrap) ?: emptyList()
 
   /**
@@ -271,7 +271,7 @@ public interface CustomOriginConfig {
      *
      * Default: OriginSslPolicy.TLS_V1_2
      */
-    override fun allowedOriginSslVersions(): List<OriginSslPolicy> =
+    override fun allowedOriginSSLVersions(): List<OriginSslPolicy> =
         unwrap(this).getAllowedOriginSSLVersions()?.map(OriginSslPolicy::wrap) ?: emptyList()
 
     /**

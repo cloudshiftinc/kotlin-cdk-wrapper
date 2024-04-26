@@ -29,7 +29,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * Create an application
  * * Create an environment
  * * Create a configuration profile
- * * Create a deployment strategy
+ * * Choose a pre-defined deployment strategy or create your own
  * * Deploy the configuration
  *
  * For more information, see [AWS

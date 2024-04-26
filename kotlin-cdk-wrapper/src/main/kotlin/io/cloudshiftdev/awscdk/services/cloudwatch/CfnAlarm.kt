@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -80,6 +83,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .okActions(List.of("okActions"))
  * .period(123)
  * .statistic("statistic")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .threshold(123)
  * .thresholdMetricId("thresholdMetricId")
  * .treatMissingData("treatMissingData")
@@ -91,7 +98,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnAlarm(
   cdkObject: software.amazon.awscdk.services.cloudwatch.CfnAlarm,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -176,6 +183,12 @@ public open class CfnAlarm(
    * `arn:aws:cloudwatch:us-west-2:123456789012:alarm:myCloudWatchAlarm-CPUAlarm-UXMMZK36R55Z` .
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The arithmetic operation to use when comparing the specified statistic and threshold.
@@ -389,6 +402,23 @@ public open class CfnAlarm(
   public open fun statistic(`value`: String) {
     unwrap(this).setStatistic(`value`)
   }
+
+  /**
+   * A list of key-value pairs to associate with the alarm.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * A list of key-value pairs to associate with the alarm.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+  }
+
+  /**
+   * A list of key-value pairs to associate with the alarm.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * The value to compare with the specified statistic.
@@ -779,6 +809,36 @@ public open class CfnAlarm(
      * percentile. For percentile statistics, use `ExtendedStatistic` . 
      */
     public fun statistic(statistic: String)
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * The value to compare with the specified statistic.
@@ -1214,6 +1274,38 @@ public open class CfnAlarm(
     override fun statistic(statistic: String) {
       cdkBuilder.statistic(statistic)
     }
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
      * The value to compare with the specified statistic.

@@ -2,13 +2,16 @@
 
 package io.cloudshiftdev.awscdk.services.oam
 
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnLink`.
@@ -24,6 +27,14 @@ import kotlin.collections.Map
  * .sinkIdentifier("sinkIdentifier")
  * // the properties below are optional
  * .labelTemplate("labelTemplate")
+ * .linkConfiguration(LinkConfigurationProperty.builder()
+ * .logGroupConfiguration(LinkFilterProperty.builder()
+ * .filter("filter")
+ * .build())
+ * .metricConfiguration(LinkFilterProperty.builder()
+ * .filter("filter")
+ * .build())
+ * .build())
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -48,11 +59,16 @@ public interface CfnLinkProps {
   public fun labelTemplate(): String? = unwrap(this).getLabelTemplate()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+   */
+  public fun linkConfiguration(): Any? = unwrap(this).getLinkConfiguration()
+
+  /**
    * An array of strings that define which types of data that the source account shares with the
    * monitoring account.
    *
    * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-   * AWS::ApplicationInsights::Application` .
+   * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
    */
@@ -97,10 +113,28 @@ public interface CfnLinkProps {
     public fun labelTemplate(labelTemplate: String)
 
     /**
+     * @param linkConfiguration the value to be set.
+     */
+    public fun linkConfiguration(linkConfiguration: IResolvable)
+
+    /**
+     * @param linkConfiguration the value to be set.
+     */
+    public fun linkConfiguration(linkConfiguration: CfnLink.LinkConfigurationProperty)
+
+    /**
+     * @param linkConfiguration the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c16b83fb005aa5f502bdd496d9c5765d2c4a68deb4bc415651ae331455a32cfc")
+    public
+        fun linkConfiguration(linkConfiguration: CfnLink.LinkConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param resourceTypes An array of strings that define which types of data that the source
      * account shares with the monitoring account. 
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      */
     public fun resourceTypes(resourceTypes: List<String>)
 
@@ -108,7 +142,7 @@ public interface CfnLinkProps {
      * @param resourceTypes An array of strings that define which types of data that the source
      * account shares with the monitoring account. 
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      */
     public fun resourceTypes(vararg resourceTypes: String)
 
@@ -149,10 +183,33 @@ public interface CfnLinkProps {
     }
 
     /**
+     * @param linkConfiguration the value to be set.
+     */
+    override fun linkConfiguration(linkConfiguration: IResolvable) {
+      cdkBuilder.linkConfiguration(linkConfiguration.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param linkConfiguration the value to be set.
+     */
+    override fun linkConfiguration(linkConfiguration: CfnLink.LinkConfigurationProperty) {
+      cdkBuilder.linkConfiguration(linkConfiguration.let(CfnLink.LinkConfigurationProperty::unwrap))
+    }
+
+    /**
+     * @param linkConfiguration the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c16b83fb005aa5f502bdd496d9c5765d2c4a68deb4bc415651ae331455a32cfc")
+    override
+        fun linkConfiguration(linkConfiguration: CfnLink.LinkConfigurationProperty.Builder.() -> Unit):
+        Unit = linkConfiguration(CfnLink.LinkConfigurationProperty(linkConfiguration))
+
+    /**
      * @param resourceTypes An array of strings that define which types of data that the source
      * account shares with the monitoring account. 
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      */
     override fun resourceTypes(resourceTypes: List<String>) {
       cdkBuilder.resourceTypes(resourceTypes)
@@ -162,7 +219,7 @@ public interface CfnLinkProps {
      * @param resourceTypes An array of strings that define which types of data that the source
      * account shares with the monitoring account. 
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      */
     override fun resourceTypes(vararg resourceTypes: String): Unit =
         resourceTypes(resourceTypes.toList())
@@ -210,11 +267,16 @@ public interface CfnLinkProps {
     override fun labelTemplate(): String? = unwrap(this).getLabelTemplate()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+     */
+    override fun linkConfiguration(): Any? = unwrap(this).getLinkConfiguration()
+
+    /**
      * An array of strings that define which types of data that the source account shares with the
      * monitoring account.
      *
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
      */

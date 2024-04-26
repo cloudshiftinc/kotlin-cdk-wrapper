@@ -58,6 +58,9 @@ public open class GatewayVpcEndpointAwsService(
     public val S3: GatewayVpcEndpointAwsService =
         GatewayVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService.S3)
 
+    public val S3_EXPRESS: GatewayVpcEndpointAwsService =
+        GatewayVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService.S3_EXPRESS)
+
     internal fun wrap(cdkObject: software.amazon.awscdk.services.ec2.GatewayVpcEndpointAwsService):
         GatewayVpcEndpointAwsService = GatewayVpcEndpointAwsService(cdkObject)
 

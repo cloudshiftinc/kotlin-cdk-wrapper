@@ -5,19 +5,21 @@ package io.cloudshiftdev.awscdk.services.events.targets
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.apigateway.RestApi
 import io.cloudshiftdev.awscdk.services.events.IRule
 import io.cloudshiftdev.awscdk.services.events.IRuleTarget
 import io.cloudshiftdev.awscdk.services.events.RuleTargetConfig
 import io.cloudshiftdev.awscdk.services.events.RuleTargetInput
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.sqs.IQueue
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
-import io.cloudshiftdev.awscdk.services.apigateway.RestApi as CloudshiftdevAwscdkServicesApigatewayRestApi
-import software.amazon.awscdk.services.apigateway.RestApi as AmazonAwscdkServicesApigatewayRestApi
+import io.cloudshiftdev.awscdk.services.apigateway.IRestApi as CloudshiftdevAwscdkServicesApigatewayIRestApi
+import software.amazon.awscdk.services.apigateway.IRestApi as AmazonAwscdkServicesApigatewayIRestApi
 
 /**
  * Use an API Gateway REST APIs as a target for Amazon EventBridge rules.
@@ -54,17 +56,17 @@ import software.amazon.awscdk.services.apigateway.RestApi as AmazonAwscdkService
 public open class ApiGateway(
   cdkObject: software.amazon.awscdk.services.events.targets.ApiGateway,
 ) : CdkObject(cdkObject), IRuleTarget {
-  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi) :
-      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayRestApi::unwrap))
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi) :
+      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayIRestApi::unwrap))
   )
 
-  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi, props: ApiGatewayProps)
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi, props: ApiGatewayProps)
       :
-      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayRestApi::unwrap),
+      this(software.amazon.awscdk.services.events.targets.ApiGateway(restApi.let(CloudshiftdevAwscdkServicesApigatewayIRestApi::unwrap),
       props.let(ApiGatewayProps::unwrap))
   )
 
-  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi,
+  public constructor(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi,
       props: ApiGatewayProps.Builder.() -> Unit) : this(restApi, ApiGatewayProps(props)
   )
 
@@ -91,10 +93,16 @@ public open class ApiGateway(
       unwrap(this).bind(rule.let(IRule::unwrap), id).let(RuleTargetConfig::wrap)
 
   /**
-   *
+   * Returns the target IRestApi.
    */
-  public open fun restApi(): CloudshiftdevAwscdkServicesApigatewayRestApi =
-      unwrap(this).getRestApi().let(CloudshiftdevAwscdkServicesApigatewayRestApi::wrap)
+  public open fun iRestApi(): CloudshiftdevAwscdkServicesApigatewayIRestApi =
+      unwrap(this).getIRestApi().let(CloudshiftdevAwscdkServicesApigatewayIRestApi::wrap)
+
+  /**
+   * @deprecated Use the `iRestApi` getter instead
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public open fun restApi(): RestApi = unwrap(this).getRestApi().let(RestApi::wrap)
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.events.targets.ApiGateway].
@@ -237,7 +245,7 @@ public open class ApiGateway(
   }
 
   private class BuilderImpl(
-    restApi: AmazonAwscdkServicesApigatewayRestApi,
+    restApi: AmazonAwscdkServicesApigatewayIRestApi,
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.targets.ApiGateway.Builder =
         software.amazon.awscdk.services.events.targets.ApiGateway.Builder.create(restApi)
@@ -404,9 +412,9 @@ public open class ApiGateway(
   }
 
   public companion object {
-    public operator fun invoke(restApi: CloudshiftdevAwscdkServicesApigatewayRestApi,
+    public operator fun invoke(restApi: CloudshiftdevAwscdkServicesApigatewayIRestApi,
         block: Builder.() -> Unit = {}): ApiGateway {
-      val builderImpl = BuilderImpl(CloudshiftdevAwscdkServicesApigatewayRestApi.unwrap(restApi))
+      val builderImpl = BuilderImpl(CloudshiftdevAwscdkServicesApigatewayIRestApi.unwrap(restApi))
       return ApiGateway(builderImpl.apply(block).build())
     }
 

@@ -10550,7 +10550,7 @@ public open class CfnEndpoint(
      *
      * You can later remove these artifacts.
      *
-     * If this value is set to `N` , you don't have to create tables or triggers on the source
+     * If this value is set to `True` , you don't have to create tables or triggers on the source
      * database.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-captureddls)
@@ -10567,6 +10567,8 @@ public open class CfnEndpoint(
 
     /**
      * The schema in which the operational DDL database artifacts are created.
+     *
+     * The default value is `public` .
      *
      * Example: `ddlArtifactsSchema=xyzddlschema;`
      *
@@ -10588,6 +10590,8 @@ public open class CfnEndpoint(
      * When set to `true` , this value causes a task to fail if the actual size of a LOB column is
      * greater than the specified `LobMaxSize` .
      *
+     * The default value is `false` .
+     *
      * If task is set to Limited LOB mode and this option is set to true, the task fails instead of
      * truncating the LOB data.
      *
@@ -10602,6 +10606,8 @@ public open class CfnEndpoint(
      * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
      * moving and prevents storage full scenarios.
      *
+     * The default value is `false` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatenable)
      */
     public fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
@@ -10609,12 +10615,16 @@ public open class CfnEndpoint(
     /**
      * Sets the WAL heartbeat frequency (in minutes).
      *
+     * The default value is 5 minutes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency)
      */
     public fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
 
     /**
      * Sets the schema in which the heartbeat artifacts are created.
+     *
+     * The default value is `public` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatschema)
      */
@@ -10626,12 +10636,16 @@ public open class CfnEndpoint(
      * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on both
      * the source and target endpoints for it to take effect.
      *
+     * The default value is `false` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean)
      */
     public fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
 
     /**
      * Specifies the maximum size (in KB) of any .csv file used to transfer data to PostgreSQL.
+     *
+     * The default value is 32,768 KB (32 MB).
      *
      * Example: `maxFileSize=512`
      *
@@ -10641,6 +10655,8 @@ public open class CfnEndpoint(
 
     /**
      * Specifies the plugin to use to create a replication slot.
+     *
+     * The default value is `pglogical` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-pluginname)
      */
@@ -10727,7 +10743,7 @@ public open class CfnEndpoint(
        * PostgreSQL database when the task starts.
        * You can later remove these artifacts.
        *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * If this value is set to `True` , you don't have to create tables or triggers on the source
        * database.
        */
       public fun captureDdls(captureDdls: Boolean)
@@ -10737,7 +10753,7 @@ public open class CfnEndpoint(
        * PostgreSQL database when the task starts.
        * You can later remove these artifacts.
        *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * If this value is set to `True` , you don't have to create tables or triggers on the source
        * database.
        */
       public fun captureDdls(captureDdls: IResolvable)
@@ -10752,6 +10768,8 @@ public open class CfnEndpoint(
       /**
        * @param ddlArtifactsSchema The schema in which the operational DDL database artifacts are
        * created.
+       * The default value is `public` .
+       *
        * Example: `ddlArtifactsSchema=xyzddlschema;`
        */
       public fun ddlArtifactsSchema(ddlArtifactsSchema: String)
@@ -10766,6 +10784,8 @@ public open class CfnEndpoint(
       /**
        * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
        * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * The default value is `false` .
+       *
        * If task is set to Limited LOB mode and this option is set to true, the task fails instead
        * of truncating the LOB data.
        */
@@ -10774,6 +10794,8 @@ public open class CfnEndpoint(
       /**
        * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
        * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * The default value is `false` .
+       *
        * If task is set to Limited LOB mode and this option is set to true, the task fails instead
        * of truncating the LOB data.
        */
@@ -10785,6 +10807,8 @@ public open class CfnEndpoint(
        * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
        * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
        * moving and prevents storage full scenarios.
+       *
+       * The default value is `false` .
        */
       public fun heartbeatEnable(heartbeatEnable: Boolean)
 
@@ -10794,16 +10818,20 @@ public open class CfnEndpoint(
        * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
        * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
        * moving and prevents storage full scenarios.
+       *
+       * The default value is `false` .
        */
       public fun heartbeatEnable(heartbeatEnable: IResolvable)
 
       /**
        * @param heartbeatFrequency Sets the WAL heartbeat frequency (in minutes).
+       * The default value is 5 minutes.
        */
       public fun heartbeatFrequency(heartbeatFrequency: Number)
 
       /**
        * @param heartbeatSchema Sets the schema in which the heartbeat artifacts are created.
+       * The default value is `public` .
        */
       public fun heartbeatSchema(heartbeatSchema: String)
 
@@ -10811,6 +10839,8 @@ public open class CfnEndpoint(
        * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
        * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
        * both the source and target endpoints for it to take effect.
+       *
+       * The default value is `false` .
        */
       public fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean)
 
@@ -10818,18 +10848,23 @@ public open class CfnEndpoint(
        * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
        * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
        * both the source and target endpoints for it to take effect.
+       *
+       * The default value is `false` .
        */
       public fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable)
 
       /**
        * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
        * data to PostgreSQL.
+       * The default value is 32,768 KB (32 MB).
+       *
        * Example: `maxFileSize=512`
        */
       public fun maxFileSize(maxFileSize: Number)
 
       /**
        * @param pluginName Specifies the plugin to use to create a replication slot.
+       * The default value is `pglogical` .
        */
       public fun pluginName(pluginName: String)
 
@@ -10911,7 +10946,7 @@ public open class CfnEndpoint(
        * PostgreSQL database when the task starts.
        * You can later remove these artifacts.
        *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * If this value is set to `True` , you don't have to create tables or triggers on the source
        * database.
        */
       override fun captureDdls(captureDdls: Boolean) {
@@ -10923,7 +10958,7 @@ public open class CfnEndpoint(
        * PostgreSQL database when the task starts.
        * You can later remove these artifacts.
        *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * If this value is set to `True` , you don't have to create tables or triggers on the source
        * database.
        */
       override fun captureDdls(captureDdls: IResolvable) {
@@ -10942,6 +10977,8 @@ public open class CfnEndpoint(
       /**
        * @param ddlArtifactsSchema The schema in which the operational DDL database artifacts are
        * created.
+       * The default value is `public` .
+       *
        * Example: `ddlArtifactsSchema=xyzddlschema;`
        */
       override fun ddlArtifactsSchema(ddlArtifactsSchema: String) {
@@ -10960,6 +10997,8 @@ public open class CfnEndpoint(
       /**
        * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
        * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * The default value is `false` .
+       *
        * If task is set to Limited LOB mode and this option is set to true, the task fails instead
        * of truncating the LOB data.
        */
@@ -10970,6 +11009,8 @@ public open class CfnEndpoint(
       /**
        * @param failTasksOnLobTruncation When set to `true` , this value causes a task to fail if
        * the actual size of a LOB column is greater than the specified `LobMaxSize` .
+       * The default value is `false` .
+       *
        * If task is set to Limited LOB mode and this option is set to true, the task fails instead
        * of truncating the LOB data.
        */
@@ -10983,6 +11024,8 @@ public open class CfnEndpoint(
        * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
        * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
        * moving and prevents storage full scenarios.
+       *
+       * The default value is `false` .
        */
       override fun heartbeatEnable(heartbeatEnable: Boolean) {
         cdkBuilder.heartbeatEnable(heartbeatEnable)
@@ -10994,6 +11037,8 @@ public open class CfnEndpoint(
        * By doing this, it prevents idle logical replication slots from holding onto old WAL logs,
        * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
        * moving and prevents storage full scenarios.
+       *
+       * The default value is `false` .
        */
       override fun heartbeatEnable(heartbeatEnable: IResolvable) {
         cdkBuilder.heartbeatEnable(heartbeatEnable.let(IResolvable::unwrap))
@@ -11001,6 +11046,7 @@ public open class CfnEndpoint(
 
       /**
        * @param heartbeatFrequency Sets the WAL heartbeat frequency (in minutes).
+       * The default value is 5 minutes.
        */
       override fun heartbeatFrequency(heartbeatFrequency: Number) {
         cdkBuilder.heartbeatFrequency(heartbeatFrequency)
@@ -11008,6 +11054,7 @@ public open class CfnEndpoint(
 
       /**
        * @param heartbeatSchema Sets the schema in which the heartbeat artifacts are created.
+       * The default value is `public` .
        */
       override fun heartbeatSchema(heartbeatSchema: String) {
         cdkBuilder.heartbeatSchema(heartbeatSchema)
@@ -11017,6 +11064,8 @@ public open class CfnEndpoint(
        * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
        * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
        * both the source and target endpoints for it to take effect.
+       *
+       * The default value is `false` .
        */
       override fun mapBooleanAsBoolean(mapBooleanAsBoolean: Boolean) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean)
@@ -11026,6 +11075,8 @@ public open class CfnEndpoint(
        * @param mapBooleanAsBoolean When true, lets PostgreSQL migrate the boolean type as boolean.
        * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
        * both the source and target endpoints for it to take effect.
+       *
+       * The default value is `false` .
        */
       override fun mapBooleanAsBoolean(mapBooleanAsBoolean: IResolvable) {
         cdkBuilder.mapBooleanAsBoolean(mapBooleanAsBoolean.let(IResolvable::unwrap))
@@ -11034,6 +11085,8 @@ public open class CfnEndpoint(
       /**
        * @param maxFileSize Specifies the maximum size (in KB) of any .csv file used to transfer
        * data to PostgreSQL.
+       * The default value is 32,768 KB (32 MB).
+       *
        * Example: `maxFileSize=512`
        */
       override fun maxFileSize(maxFileSize: Number) {
@@ -11042,6 +11095,7 @@ public open class CfnEndpoint(
 
       /**
        * @param pluginName Specifies the plugin to use to create a replication slot.
+       * The default value is `pglogical` .
        */
       override fun pluginName(pluginName: String) {
         cdkBuilder.pluginName(pluginName)
@@ -11133,7 +11187,7 @@ public open class CfnEndpoint(
        *
        * You can later remove these artifacts.
        *
-       * If this value is set to `N` , you don't have to create tables or triggers on the source
+       * If this value is set to `True` , you don't have to create tables or triggers on the source
        * database.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-captureddls)
@@ -11150,6 +11204,8 @@ public open class CfnEndpoint(
 
       /**
        * The schema in which the operational DDL database artifacts are created.
+       *
+       * The default value is `public` .
        *
        * Example: `ddlArtifactsSchema=xyzddlschema;`
        *
@@ -11171,6 +11227,8 @@ public open class CfnEndpoint(
        * When set to `true` , this value causes a task to fail if the actual size of a LOB column is
        * greater than the specified `LobMaxSize` .
        *
+       * The default value is `false` .
+       *
        * If task is set to Limited LOB mode and this option is set to true, the task fails instead
        * of truncating the LOB data.
        *
@@ -11185,6 +11243,8 @@ public open class CfnEndpoint(
        * which can result in storage full situations on the source. This heartbeat keeps `restart_lsn`
        * moving and prevents storage full scenarios.
        *
+       * The default value is `false` .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatenable)
        */
       override fun heartbeatEnable(): Any? = unwrap(this).getHeartbeatEnable()
@@ -11192,12 +11252,16 @@ public open class CfnEndpoint(
       /**
        * Sets the WAL heartbeat frequency (in minutes).
        *
+       * The default value is 5 minutes.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatfrequency)
        */
       override fun heartbeatFrequency(): Number? = unwrap(this).getHeartbeatFrequency()
 
       /**
        * Sets the schema in which the heartbeat artifacts are created.
+       *
+       * The default value is `public` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-heartbeatschema)
        */
@@ -11209,12 +11273,16 @@ public open class CfnEndpoint(
        * By default, PostgreSQL migrates booleans as `varchar(5)` . You must set this setting on
        * both the source and target endpoints for it to take effect.
        *
+       * The default value is `false` .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-mapbooleanasboolean)
        */
       override fun mapBooleanAsBoolean(): Any? = unwrap(this).getMapBooleanAsBoolean()
 
       /**
        * Specifies the maximum size (in KB) of any .csv file used to transfer data to PostgreSQL.
+       *
+       * The default value is 32,768 KB (32 MB).
        *
        * Example: `maxFileSize=512`
        *
@@ -11224,6 +11292,8 @@ public open class CfnEndpoint(
 
       /**
        * Specifies the plugin to use to create a replication slot.
+       *
+       * The default value is `pglogical` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-postgresqlsettings.html#cfn-dms-endpoint-postgresqlsettings-pluginname)
        */

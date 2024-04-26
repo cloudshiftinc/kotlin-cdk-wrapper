@@ -37,11 +37,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .cacheUsageLimits(CacheUsageLimitsProperty.builder()
  * .dataStorage(DataStorageProperty.builder()
- * .maximum(123)
  * .unit("unit")
+ * // the properties below are optional
+ * .maximum(123)
+ * .minimum(123)
  * .build())
  * .ecpuPerSecond(ECPUPerSecondProperty.builder()
  * .maximum(123)
+ * .minimum(123)
  * .build())
  * .build())
  * .dailySnapshotTime("dailySnapshotTime")
@@ -1021,11 +1024,14 @@ public open class CfnServerlessCache(
    * import io.cloudshiftdev.awscdk.services.elasticache.*;
    * CacheUsageLimitsProperty cacheUsageLimitsProperty = CacheUsageLimitsProperty.builder()
    * .dataStorage(DataStorageProperty.builder()
-   * .maximum(123)
    * .unit("unit")
+   * // the properties below are optional
+   * .maximum(123)
+   * .minimum(123)
    * .build())
    * .ecpuPerSecond(ECPUPerSecondProperty.builder()
    * .maximum(123)
+   * .minimum(123)
    * .build())
    * .build();
    * ```
@@ -1194,8 +1200,10 @@ public open class CfnServerlessCache(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.elasticache.*;
    * DataStorageProperty dataStorageProperty = DataStorageProperty.builder()
-   * .maximum(123)
    * .unit("unit")
+   * // the properties below are optional
+   * .maximum(123)
+   * .minimum(123)
    * .build();
    * ```
    *
@@ -1207,7 +1215,14 @@ public open class CfnServerlessCache(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-maximum)
      */
-    public fun maximum(): Number
+    public fun maximum(): Number? = unwrap(this).getMaximum()
+
+    /**
+     * The lower limit for data storage the cache is set to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-minimum)
+     */
+    public fun minimum(): Number? = unwrap(this).getMinimum()
 
     /**
      * The unit that the storage is measured in, in GB.
@@ -1222,9 +1237,14 @@ public open class CfnServerlessCache(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maximum The upper limit for data storage the cache is set to use. 
+       * @param maximum The upper limit for data storage the cache is set to use.
        */
       public fun maximum(maximum: Number)
+
+      /**
+       * @param minimum The lower limit for data storage the cache is set to use.
+       */
+      public fun minimum(minimum: Number)
 
       /**
        * @param unit The unit that the storage is measured in, in GB. 
@@ -1239,10 +1259,17 @@ public open class CfnServerlessCache(
           software.amazon.awscdk.services.elasticache.CfnServerlessCache.DataStorageProperty.builder()
 
       /**
-       * @param maximum The upper limit for data storage the cache is set to use. 
+       * @param maximum The upper limit for data storage the cache is set to use.
        */
       override fun maximum(maximum: Number) {
         cdkBuilder.maximum(maximum)
+      }
+
+      /**
+       * @param minimum The lower limit for data storage the cache is set to use.
+       */
+      override fun minimum(minimum: Number) {
+        cdkBuilder.minimum(minimum)
       }
 
       /**
@@ -1265,7 +1292,14 @@ public open class CfnServerlessCache(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-maximum)
        */
-      override fun maximum(): Number = unwrap(this).getMaximum()
+      override fun maximum(): Number? = unwrap(this).getMaximum()
+
+      /**
+       * The lower limit for data storage the cache is set to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-datastorage.html#cfn-elasticache-serverlesscache-datastorage-minimum)
+       */
+      override fun minimum(): Number? = unwrap(this).getMinimum()
 
       /**
        * The unit that the storage is measured in, in GB.
@@ -1305,6 +1339,7 @@ public open class CfnServerlessCache(
    * import io.cloudshiftdev.awscdk.services.elasticache.*;
    * ECPUPerSecondProperty eCPUPerSecondProperty = ECPUPerSecondProperty.builder()
    * .maximum(123)
+   * .minimum(123)
    * .build();
    * ```
    *
@@ -1316,7 +1351,15 @@ public open class CfnServerlessCache(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-ecpupersecond.html#cfn-elasticache-serverlesscache-ecpupersecond-maximum)
      */
-    public fun maximum(): Number
+    public fun maximum(): Number? = unwrap(this).getMaximum()
+
+    /**
+     * The configuration for the minimum number of ECPUs the cache should be able consume per
+     * second.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-ecpupersecond.html#cfn-elasticache-serverlesscache-ecpupersecond-minimum)
+     */
+    public fun minimum(): Number? = unwrap(this).getMinimum()
 
     /**
      * A builder for [ECPUPerSecondProperty]
@@ -1325,9 +1368,15 @@ public open class CfnServerlessCache(
     public interface Builder {
       /**
        * @param maximum The configuration for the maximum number of ECPUs the cache can consume per
-       * second. 
+       * second.
        */
       public fun maximum(maximum: Number)
+
+      /**
+       * @param minimum The configuration for the minimum number of ECPUs the cache should be able
+       * consume per second.
+       */
+      public fun minimum(minimum: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1338,10 +1387,18 @@ public open class CfnServerlessCache(
 
       /**
        * @param maximum The configuration for the maximum number of ECPUs the cache can consume per
-       * second. 
+       * second.
        */
       override fun maximum(maximum: Number) {
         cdkBuilder.maximum(maximum)
+      }
+
+      /**
+       * @param minimum The configuration for the minimum number of ECPUs the cache should be able
+       * consume per second.
+       */
+      override fun minimum(minimum: Number) {
+        cdkBuilder.minimum(minimum)
       }
 
       public fun build():
@@ -1357,7 +1414,15 @@ public open class CfnServerlessCache(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-ecpupersecond.html#cfn-elasticache-serverlesscache-ecpupersecond-maximum)
        */
-      override fun maximum(): Number = unwrap(this).getMaximum()
+      override fun maximum(): Number? = unwrap(this).getMaximum()
+
+      /**
+       * The configuration for the minimum number of ECPUs the cache should be able consume per
+       * second.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-serverlesscache-ecpupersecond.html#cfn-elasticache-serverlesscache-ecpupersecond-minimum)
+       */
+      override fun minimum(): Number? = unwrap(this).getMinimum()
     }
 
     public companion object {

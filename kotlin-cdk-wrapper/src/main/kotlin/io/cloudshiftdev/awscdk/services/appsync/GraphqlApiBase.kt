@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.services.events.IEventBus
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.rds.IDatabaseCluster
 import io.cloudshiftdev.awscdk.services.rds.IServerlessCluster
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Boolean
@@ -390,6 +391,84 @@ public abstract class GraphqlApiBase(
     databaseName: String,
     options: DataSourceOptions.Builder.() -> Unit,
   ): RdsDataSource = addRdsDataSource(id, serverlessCluster, secretStore, databaseName,
+      DataSourceOptions(options))
+
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless V2 cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
+  public override fun addRdsDataSourceV2(
+    id: String,
+    serverlessCluster: IDatabaseCluster,
+    secretStore: ISecret,
+  ): RdsDataSource = unwrap(this).addRdsDataSourceV2(id,
+      serverlessCluster.let(IDatabaseCluster::unwrap),
+      secretStore.let(ISecret::unwrap)).let(RdsDataSource::wrap)
+
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless V2 cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
+  public override fun addRdsDataSourceV2(
+    id: String,
+    serverlessCluster: IDatabaseCluster,
+    secretStore: ISecret,
+    databaseName: String,
+  ): RdsDataSource = unwrap(this).addRdsDataSourceV2(id,
+      serverlessCluster.let(IDatabaseCluster::unwrap), secretStore.let(ISecret::unwrap),
+      databaseName).let(RdsDataSource::wrap)
+
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless V2 cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
+  public override fun addRdsDataSourceV2(
+    id: String,
+    serverlessCluster: IDatabaseCluster,
+    secretStore: ISecret,
+    databaseName: String,
+    options: DataSourceOptions,
+  ): RdsDataSource = unwrap(this).addRdsDataSourceV2(id,
+      serverlessCluster.let(IDatabaseCluster::unwrap), secretStore.let(ISecret::unwrap),
+      databaseName, options.let(DataSourceOptions::unwrap)).let(RdsDataSource::wrap)
+
+  /**
+   * add a new Rds data source to this API.
+   *
+   * @param id The data source's id. 
+   * @param serverlessCluster The serverless V2 cluster to interact with this data source. 
+   * @param secretStore The secret store that contains the username and password for the serverless
+   * cluster. 
+   * @param databaseName The optional name of the database to use within the cluster.
+   * @param options The optional configuration for this data source.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("0ac39443c1f1e3dc3b207cab5d6c797d277750bffdbf77218e1e142cf4d9800c")
+  public override fun addRdsDataSourceV2(
+    id: String,
+    serverlessCluster: IDatabaseCluster,
+    secretStore: ISecret,
+    databaseName: String,
+    options: DataSourceOptions.Builder.() -> Unit,
+  ): RdsDataSource = addRdsDataSourceV2(id, serverlessCluster, secretStore, databaseName,
       DataSourceOptions(options))
 
   /**

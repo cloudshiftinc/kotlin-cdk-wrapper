@@ -44,6 +44,15 @@ public interface INetworkLoadBalancer : ILoadBalancerV2, IVpcEndpointServiceLoad
       NetworkListener
 
   /**
+   * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+   * Balancer through AWS PrivateLink.
+   *
+   * Default: on
+   */
+  public fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): String? =
+      unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
+
+  /**
    * The type of IP addresses to use.
    *
    * Default: IpAddressType.IPV4
@@ -113,6 +122,15 @@ public interface INetworkLoadBalancer : ILoadBalancerV2, IVpcEndpointServiceLoad
      * The network connections associated with this resource.
      */
     override fun connections(): Connections = unwrap(this).getConnections().let(Connections::wrap)
+
+    /**
+     * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+     * Balancer through AWS PrivateLink.
+     *
+     * Default: on
+     */
+    override fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): String? =
+        unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
 
     /**
      * The environment this resource belongs to.

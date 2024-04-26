@@ -112,26 +112,26 @@ public open class CfnTableOptimizer(
   }
 
   /**
-   *
+   * Specifies configuration details of a table optimizer.
    */
   public open fun tableOptimizerConfiguration(): Any = unwrap(this).getTableOptimizerConfiguration()
 
   /**
-   *
+   * Specifies configuration details of a table optimizer.
    */
   public open fun tableOptimizerConfiguration(`value`: IResolvable) {
     unwrap(this).setTableOptimizerConfiguration(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   *
+   * Specifies configuration details of a table optimizer.
    */
   public open fun tableOptimizerConfiguration(`value`: TableOptimizerConfigurationProperty) {
     unwrap(this).setTableOptimizerConfiguration(`value`.let(TableOptimizerConfigurationProperty::unwrap))
   }
 
   /**
-   *
+   * Specifies configuration details of a table optimizer.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("6acec22b313a6085ba5e377067e32e85711a941ea7f2359e7304e530517931cc")
@@ -185,21 +185,27 @@ public open class CfnTableOptimizer(
     public fun tableName(tableName: String)
 
     /**
+     * Specifies configuration details of a table optimizer.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
-     * @param tableOptimizerConfiguration 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     public fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable)
 
     /**
+     * Specifies configuration details of a table optimizer.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
-     * @param tableOptimizerConfiguration 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     public
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty)
 
     /**
+     * Specifies configuration details of a table optimizer.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
-     * @param tableOptimizerConfiguration 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a2c8297cdf6212a0fbaf3da179bd2b62e493c16bf68663d123d3d098e086c04")
@@ -259,16 +265,20 @@ public open class CfnTableOptimizer(
     }
 
     /**
+     * Specifies configuration details of a table optimizer.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
-     * @param tableOptimizerConfiguration 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     override fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable) {
       cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(IResolvable::unwrap))
     }
 
     /**
+     * Specifies configuration details of a table optimizer.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
-     * @param tableOptimizerConfiguration 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     override
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: TableOptimizerConfigurationProperty) {
@@ -276,8 +286,10 @@ public open class CfnTableOptimizer(
     }
 
     /**
+     * Specifies configuration details of a table optimizer.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
-     * @param tableOptimizerConfiguration 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("3a2c8297cdf6212a0fbaf3da179bd2b62e493c16bf68663d123d3d098e086c04")

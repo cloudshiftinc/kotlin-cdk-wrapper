@@ -41,6 +41,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .playbackMode("playbackMode")
  * // the properties below are optional
+ * .audiences(List.of("audiences"))
  * .fillerSlate(SlateSourceProperty.builder()
  * .sourceLocationName("sourceLocationName")
  * .vodSourceName("vodSourceName")
@@ -62,6 +63,13 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html)
  */
 public interface CfnChannelProps {
+  /**
+   * The list of audiences defined in channel.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-audiences)
+   */
+  public fun audiences(): List<String> = unwrap(this).getAudiences() ?: emptyList()
+
   /**
    * The name of the channel.
    *
@@ -137,6 +145,16 @@ public interface CfnChannelProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param audiences The list of audiences defined in channel.
+     */
+    public fun audiences(audiences: List<String>)
+
+    /**
+     * @param audiences The list of audiences defined in channel.
+     */
+    public fun audiences(vararg audiences: String)
+
     /**
      * @param channelName The name of the channel. 
      */
@@ -254,6 +272,18 @@ public interface CfnChannelProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.mediatailor.CfnChannelProps.Builder =
         software.amazon.awscdk.services.mediatailor.CfnChannelProps.builder()
+
+    /**
+     * @param audiences The list of audiences defined in channel.
+     */
+    override fun audiences(audiences: List<String>) {
+      cdkBuilder.audiences(audiences)
+    }
+
+    /**
+     * @param audiences The list of audiences defined in channel.
+     */
+    override fun audiences(vararg audiences: String): Unit = audiences(audiences.toList())
 
     /**
      * @param channelName The name of the channel. 
@@ -403,6 +433,13 @@ public interface CfnChannelProps {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.mediatailor.CfnChannelProps,
   ) : CdkObject(cdkObject), CfnChannelProps {
+    /**
+     * The list of audiences defined in channel.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediatailor-channel.html#cfn-mediatailor-channel-audiences)
+     */
+    override fun audiences(): List<String> = unwrap(this).getAudiences() ?: emptyList()
+
     /**
      * The name of the channel.
      *

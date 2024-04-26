@@ -147,7 +147,7 @@ public interface CloudFrontWebDistributionProps {
    *
    * [Documentation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html#API_CreateDistribution_RequestParameters.)
    */
-  public fun webAclId(): String? = unwrap(this).getWebACLId()
+  public fun webACLId(): String? = unwrap(this).getWebACLId()
 
   /**
    * A builder for [CloudFrontWebDistributionProps]
@@ -525,7 +525,7 @@ public interface CloudFrontWebDistributionProps {
      *
      * [Documentation](https://docs.aws.amazon.com/cloudfront/latest/APIReference/API_CreateDistribution.html#API_CreateDistribution_RequestParameters.)
      */
-    override fun webAclId(): String? = unwrap(this).getWebACLId()
+    override fun webACLId(): String? = unwrap(this).getWebACLId()
   }
 
   public companion object {

@@ -204,27 +204,27 @@ public open class CfnRestoreTestingSelection(
   }
 
   /**
-   * The RestoreTestingPlanName is a unique string that is the name of the restore testing plan.
+   * Unique string that is the name of the restore testing plan.
    */
   public open fun restoreTestingPlanName(): String = unwrap(this).getRestoreTestingPlanName()
 
   /**
-   * The RestoreTestingPlanName is a unique string that is the name of the restore testing plan.
+   * Unique string that is the name of the restore testing plan.
    */
   public open fun restoreTestingPlanName(`value`: String) {
     unwrap(this).setRestoreTestingPlanName(`value`)
   }
 
   /**
-   * This is the unique name of the restore testing selection that belongs to the related restore
-   * testing plan.
+   * The unique name of the restore testing selection that belongs to the related restore testing
+   * plan.
    */
   public open fun restoreTestingSelectionName(): String =
       unwrap(this).getRestoreTestingSelectionName()
 
   /**
-   * This is the unique name of the restore testing selection that belongs to the related restore
-   * testing plan.
+   * The unique name of the restore testing selection that belongs to the related restore testing
+   * plan.
    */
   public open fun restoreTestingSelectionName(`value`: String) {
     unwrap(this).setRestoreTestingSelectionName(`value`)
@@ -359,21 +359,23 @@ public open class CfnRestoreTestingSelection(
     public fun restoreMetadataOverrides(restoreMetadataOverrides: Map<String, String>)
 
     /**
-     * The RestoreTestingPlanName is a unique string that is the name of the restore testing plan.
+     * Unique string that is the name of the restore testing plan.
+     *
+     * The name cannot be changed after creation. The name must consist of only alphanumeric
+     * characters and underscores. Maximum length is 50.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingplanname)
-     * @param restoreTestingPlanName The RestoreTestingPlanName is a unique string that is the name
-     * of the restore testing plan. 
+     * @param restoreTestingPlanName Unique string that is the name of the restore testing plan. 
      */
     public fun restoreTestingPlanName(restoreTestingPlanName: String)
 
     /**
-     * This is the unique name of the restore testing selection that belongs to the related restore
-     * testing plan.
+     * The unique name of the restore testing selection that belongs to the related restore testing
+     * plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingselectionname)
-     * @param restoreTestingSelectionName This is the unique name of the restore testing selection
-     * that belongs to the related restore testing plan. 
+     * @param restoreTestingSelectionName The unique name of the restore testing selection that
+     * belongs to the related restore testing plan. 
      */
     public fun restoreTestingSelectionName(restoreTestingSelectionName: String)
 
@@ -527,23 +529,25 @@ public open class CfnRestoreTestingSelection(
     }
 
     /**
-     * The RestoreTestingPlanName is a unique string that is the name of the restore testing plan.
+     * Unique string that is the name of the restore testing plan.
+     *
+     * The name cannot be changed after creation. The name must consist of only alphanumeric
+     * characters and underscores. Maximum length is 50.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingplanname)
-     * @param restoreTestingPlanName The RestoreTestingPlanName is a unique string that is the name
-     * of the restore testing plan. 
+     * @param restoreTestingPlanName Unique string that is the name of the restore testing plan. 
      */
     override fun restoreTestingPlanName(restoreTestingPlanName: String) {
       cdkBuilder.restoreTestingPlanName(restoreTestingPlanName)
     }
 
     /**
-     * This is the unique name of the restore testing selection that belongs to the related restore
-     * testing plan.
+     * The unique name of the restore testing selection that belongs to the related restore testing
+     * plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingselection.html#cfn-backup-restoretestingselection-restoretestingselectionname)
-     * @param restoreTestingSelectionName This is the unique name of the restore testing selection
-     * that belongs to the related restore testing plan. 
+     * @param restoreTestingSelectionName The unique name of the restore testing selection that
+     * belongs to the related restore testing plan. 
      */
     override fun restoreTestingSelectionName(restoreTestingSelectionName: String) {
       cdkBuilder.restoreTestingSelectionName(restoreTestingSelectionName)
@@ -610,22 +614,14 @@ public open class CfnRestoreTestingSelection(
    */
   public interface KeyValueProperty {
     /**
-     * The tag key (String). The key can't start with `aws:` .
-     *
-     * Length Constraints: Minimum length of 1. Maximum length of 128.
-     *
-     * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+     * The tag key.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-key)
      */
     public fun key(): String
 
     /**
-     * The value of the key.
-     *
-     * Length Constraints: Maximum length of 256.
-     *
-     * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+     * The tag value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-value)
      */
@@ -637,18 +633,12 @@ public open class CfnRestoreTestingSelection(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param key The tag key (String). The key can't start with `aws:` . 
-       * Length Constraints: Minimum length of 1. Maximum length of 128.
-       *
-       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+       * @param key The tag key. 
        */
       public fun key(key: String)
 
       /**
-       * @param value The value of the key. 
-       * Length Constraints: Maximum length of 256.
-       *
-       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+       * @param value The tag value. 
        */
       public fun `value`(`value`: String)
     }
@@ -660,20 +650,14 @@ public open class CfnRestoreTestingSelection(
           software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty.builder()
 
       /**
-       * @param key The tag key (String). The key can't start with `aws:` . 
-       * Length Constraints: Minimum length of 1. Maximum length of 128.
-       *
-       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+       * @param key The tag key. 
        */
       override fun key(key: String) {
         cdkBuilder.key(key)
       }
 
       /**
-       * @param value The value of the key. 
-       * Length Constraints: Maximum length of 256.
-       *
-       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+       * @param value The tag value. 
        */
       override fun `value`(`value`: String) {
         cdkBuilder.`value`(`value`)
@@ -688,22 +672,14 @@ public open class CfnRestoreTestingSelection(
       cdkObject: software.amazon.awscdk.services.backup.CfnRestoreTestingSelection.KeyValueProperty,
     ) : CdkObject(cdkObject), KeyValueProperty {
       /**
-       * The tag key (String). The key can't start with `aws:` .
-       *
-       * Length Constraints: Minimum length of 1. Maximum length of 128.
-       *
-       * Pattern: `^(?![aA]{1}[wW]{1}[sS]{1}:)([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]+)$`
+       * The tag key.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-key)
        */
       override fun key(): String = unwrap(this).getKey()
 
       /**
-       * The value of the key.
-       *
-       * Length Constraints: Maximum length of 256.
-       *
-       * Pattern: `^([\p{L}\p{Z}\p{N}_.:/=+\-&#64;]*)$`
+       * The tag value.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-restoretestingselection-keyvalue.html#cfn-backup-restoretestingselection-keyvalue-value)
        */
@@ -729,7 +705,7 @@ public open class CfnRestoreTestingSelection(
   }
 
   /**
-   * A list of conditions that you define for resources in your restore testing plan using tags.
+   * The conditions that you define for resources in your restore testing plan using tags.
    *
    * For example, `"StringEquals": { "Key": "aws:ResourceTag/CreatedByCryo", "Value": "true" },` .
    * Condition operators are case sensitive.

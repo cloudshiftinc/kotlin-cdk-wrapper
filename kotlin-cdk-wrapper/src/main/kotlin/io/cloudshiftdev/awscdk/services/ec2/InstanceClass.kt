@@ -48,6 +48,7 @@ public enum class InstanceClass(
   MEMORY5_AMD(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY5_AMD),
   R5A(software.amazon.awscdk.services.ec2.InstanceClass.R5A),
   MEMORY5_AMD_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY5_AMD_NVME_DRIVE),
+  R5AD(software.amazon.awscdk.services.ec2.InstanceClass.R5AD),
   HIGH_MEMORY_3TB_1(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_3TB_1),
   U_3TB1(software.amazon.awscdk.services.ec2.InstanceClass.U_3TB1),
   HIGH_MEMORY_6TB_1(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_6TB_1),
@@ -60,7 +61,6 @@ public enum class InstanceClass(
   U_18TB1(software.amazon.awscdk.services.ec2.InstanceClass.U_18TB1),
   HIGH_MEMORY_24TB_1(software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_24TB_1),
   U_24TB1(software.amazon.awscdk.services.ec2.InstanceClass.U_24TB1),
-  R5AD(software.amazon.awscdk.services.ec2.InstanceClass.R5AD),
   MEMORY5_EBS_OPTIMIZED(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY5_EBS_OPTIMIZED),
   R5B(software.amazon.awscdk.services.ec2.InstanceClass.R5B),
   MEMORY6_GRAVITON(software.amazon.awscdk.services.ec2.InstanceClass.MEMORY6_GRAVITON),
@@ -122,9 +122,11 @@ public enum class InstanceClass(
   STORAGE3_ENHANCED_NETWORK(software.amazon.awscdk.services.ec2.InstanceClass.STORAGE3_ENHANCED_NETWORK),
   D3EN(software.amazon.awscdk.services.ec2.InstanceClass.D3EN),
   STORAGE_COMPUTE_1(software.amazon.awscdk.services.ec2.InstanceClass.STORAGE_COMPUTE_1),
-  TRN1(software.amazon.awscdk.services.ec2.InstanceClass.TRN1),
-  TRN1N(software.amazon.awscdk.services.ec2.InstanceClass.TRN1N),
   H1(software.amazon.awscdk.services.ec2.InstanceClass.H1),
+  TRAINING_ACCELERATOR1(software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR1),
+  TRN1(software.amazon.awscdk.services.ec2.InstanceClass.TRN1),
+  TRAINING_ACCELERATOR1_ENHANCED_NETWORK(software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR1_ENHANCED_NETWORK),
+  TRN1N(software.amazon.awscdk.services.ec2.InstanceClass.TRN1N),
   IO3(software.amazon.awscdk.services.ec2.InstanceClass.IO3),
   I3(software.amazon.awscdk.services.ec2.InstanceClass.I3),
   IO3_DENSE_NVME_DRIVE(software.amazon.awscdk.services.ec2.InstanceClass.IO3_DENSE_NVME_DRIVE),
@@ -237,6 +239,8 @@ public enum class InstanceClass(
   HPC7G(software.amazon.awscdk.services.ec2.InstanceClass.HPC7G),
   DEEP_LEARNING1(software.amazon.awscdk.services.ec2.InstanceClass.DEEP_LEARNING1),
   DL1(software.amazon.awscdk.services.ec2.InstanceClass.DL1),
+  DEEP_LEARNING2_QUALCOMM(software.amazon.awscdk.services.ec2.InstanceClass.DEEP_LEARNING2_QUALCOMM),
+  DL2Q(software.amazon.awscdk.services.ec2.InstanceClass.DL2Q),
   ;
 
   public companion object {
@@ -297,6 +301,7 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.R5A -> InstanceClass.R5A
       software.amazon.awscdk.services.ec2.InstanceClass.MEMORY5_AMD_NVME_DRIVE ->
           InstanceClass.MEMORY5_AMD_NVME_DRIVE
+      software.amazon.awscdk.services.ec2.InstanceClass.R5AD -> InstanceClass.R5AD
       software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_3TB_1 ->
           InstanceClass.HIGH_MEMORY_3TB_1
       software.amazon.awscdk.services.ec2.InstanceClass.U_3TB1 -> InstanceClass.U_3TB1
@@ -315,7 +320,6 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.HIGH_MEMORY_24TB_1 ->
           InstanceClass.HIGH_MEMORY_24TB_1
       software.amazon.awscdk.services.ec2.InstanceClass.U_24TB1 -> InstanceClass.U_24TB1
-      software.amazon.awscdk.services.ec2.InstanceClass.R5AD -> InstanceClass.R5AD
       software.amazon.awscdk.services.ec2.InstanceClass.MEMORY5_EBS_OPTIMIZED ->
           InstanceClass.MEMORY5_EBS_OPTIMIZED
       software.amazon.awscdk.services.ec2.InstanceClass.R5B -> InstanceClass.R5B
@@ -398,9 +402,13 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.D3EN -> InstanceClass.D3EN
       software.amazon.awscdk.services.ec2.InstanceClass.STORAGE_COMPUTE_1 ->
           InstanceClass.STORAGE_COMPUTE_1
-      software.amazon.awscdk.services.ec2.InstanceClass.TRN1 -> InstanceClass.TRN1
-      software.amazon.awscdk.services.ec2.InstanceClass.TRN1N -> InstanceClass.TRN1N
       software.amazon.awscdk.services.ec2.InstanceClass.H1 -> InstanceClass.H1
+      software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR1 ->
+          InstanceClass.TRAINING_ACCELERATOR1
+      software.amazon.awscdk.services.ec2.InstanceClass.TRN1 -> InstanceClass.TRN1
+      software.amazon.awscdk.services.ec2.InstanceClass.TRAINING_ACCELERATOR1_ENHANCED_NETWORK ->
+          InstanceClass.TRAINING_ACCELERATOR1_ENHANCED_NETWORK
+      software.amazon.awscdk.services.ec2.InstanceClass.TRN1N -> InstanceClass.TRN1N
       software.amazon.awscdk.services.ec2.InstanceClass.IO3 -> InstanceClass.IO3
       software.amazon.awscdk.services.ec2.InstanceClass.I3 -> InstanceClass.I3
       software.amazon.awscdk.services.ec2.InstanceClass.IO3_DENSE_NVME_DRIVE ->
@@ -551,6 +559,9 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.DEEP_LEARNING1 ->
           InstanceClass.DEEP_LEARNING1
       software.amazon.awscdk.services.ec2.InstanceClass.DL1 -> InstanceClass.DL1
+      software.amazon.awscdk.services.ec2.InstanceClass.DEEP_LEARNING2_QUALCOMM ->
+          InstanceClass.DEEP_LEARNING2_QUALCOMM
+      software.amazon.awscdk.services.ec2.InstanceClass.DL2Q -> InstanceClass.DL2Q
     }
 
     internal fun unwrap(wrapped: InstanceClass): software.amazon.awscdk.services.ec2.InstanceClass =

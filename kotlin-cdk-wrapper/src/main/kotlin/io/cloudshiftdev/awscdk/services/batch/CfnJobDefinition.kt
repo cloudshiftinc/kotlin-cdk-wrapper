@@ -87,26 +87,34 @@ public open class CfnJobDefinition(
       = containerProperties(ContainerPropertiesProperty(`value`))
 
   /**
-   *
+   * An object that contains the properties for the Amazon ECS resources of a job.When
+   * `ecsProperties` is used in the job definition, it can't be used in addition to
+   * `containerProperties` , `eksProperties` , or `nodeProperties` .
    */
   public open fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
 
   /**
-   *
+   * An object that contains the properties for the Amazon ECS resources of a job.When
+   * `ecsProperties` is used in the job definition, it can't be used in addition to
+   * `containerProperties` , `eksProperties` , or `nodeProperties` .
    */
   public open fun ecsProperties(`value`: IResolvable) {
     unwrap(this).setEcsProperties(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   *
+   * An object that contains the properties for the Amazon ECS resources of a job.When
+   * `ecsProperties` is used in the job definition, it can't be used in addition to
+   * `containerProperties` , `eksProperties` , or `nodeProperties` .
    */
   public open fun ecsProperties(`value`: EcsPropertiesProperty) {
     unwrap(this).setEcsProperties(`value`.let(EcsPropertiesProperty::unwrap))
   }
 
   /**
-   *
+   * An object that contains the properties for the Amazon ECS resources of a job.When
+   * `ecsProperties` is used in the job definition, it can't be used in addition to
+   * `containerProperties` , `eksProperties` , or `nodeProperties` .
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("09e3912d8371d4c53e08e94f5b2983eb4a125656a5323641df24890891d00ea9")
@@ -378,20 +386,38 @@ public open class CfnJobDefinition(
         fun containerProperties(containerProperties: ContainerPropertiesProperty.Builder.() -> Unit)
 
     /**
+     * An object that contains the properties for the Amazon ECS resources of a job.When
+     * `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
-     * @param ecsProperties 
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     public fun ecsProperties(ecsProperties: IResolvable)
 
     /**
+     * An object that contains the properties for the Amazon ECS resources of a job.When
+     * `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
-     * @param ecsProperties 
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     public fun ecsProperties(ecsProperties: EcsPropertiesProperty)
 
     /**
+     * An object that contains the properties for the Amazon ECS resources of a job.When
+     * `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
-     * @param ecsProperties 
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13805dc0544dd39ef2261e3377eb2aa144bc22e99667bbaff6b834e53aab3461")
@@ -713,24 +739,42 @@ public open class CfnJobDefinition(
         Unit = containerProperties(ContainerPropertiesProperty(containerProperties))
 
     /**
+     * An object that contains the properties for the Amazon ECS resources of a job.When
+     * `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
-     * @param ecsProperties 
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     override fun ecsProperties(ecsProperties: IResolvable) {
       cdkBuilder.ecsProperties(ecsProperties.let(IResolvable::unwrap))
     }
 
     /**
+     * An object that contains the properties for the Amazon ECS resources of a job.When
+     * `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
-     * @param ecsProperties 
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     override fun ecsProperties(ecsProperties: EcsPropertiesProperty) {
       cdkBuilder.ecsProperties(ecsProperties.let(EcsPropertiesProperty::unwrap))
     }
 
     /**
+     * An object that contains the properties for the Amazon ECS resources of a job.When
+     * `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
-     * @param ecsProperties 
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("13805dc0544dd39ef2261e3377eb2aa144bc22e99667bbaff6b834e53aab3461")
@@ -3569,6 +3613,8 @@ public open class CfnJobDefinition(
   }
 
   /**
+   * An object that contains the properties for the Amazon ECS resources of a job.
+   *
    * Example:
    *
    * ```
@@ -3683,6 +3729,12 @@ public open class CfnJobDefinition(
    */
   public interface EcsPropertiesProperty {
     /**
+     * An object that contains the properties for the Amazon ECS task definition of a job.
+     *
+     *
+     * This object is currently limited to one element.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecsproperties.html#cfn-batch-jobdefinition-ecsproperties-taskproperties)
      */
     public fun taskProperties(): Any
@@ -3693,17 +3745,26 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param taskProperties the value to be set. 
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one element.
        */
       public fun taskProperties(taskProperties: IResolvable)
 
       /**
-       * @param taskProperties the value to be set. 
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one element.
        */
       public fun taskProperties(taskProperties: List<Any>)
 
       /**
-       * @param taskProperties the value to be set. 
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one element.
        */
       public fun taskProperties(vararg taskProperties: Any)
     }
@@ -3714,21 +3775,30 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EcsPropertiesProperty.builder()
 
       /**
-       * @param taskProperties the value to be set. 
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one element.
        */
       override fun taskProperties(taskProperties: IResolvable) {
         cdkBuilder.taskProperties(taskProperties.let(IResolvable::unwrap))
       }
 
       /**
-       * @param taskProperties the value to be set. 
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one element.
        */
       override fun taskProperties(taskProperties: List<Any>) {
         cdkBuilder.taskProperties(taskProperties.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param taskProperties the value to be set. 
+       * @param taskProperties An object that contains the properties for the Amazon ECS task
+       * definition of a job. 
+       *
+       * This object is currently limited to one element.
        */
       override fun taskProperties(vararg taskProperties: Any): Unit =
           taskProperties(taskProperties.toList())
@@ -3742,6 +3812,12 @@ public open class CfnJobDefinition(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EcsPropertiesProperty,
     ) : CdkObject(cdkObject), EcsPropertiesProperty {
       /**
+       * An object that contains the properties for the Amazon ECS task definition of a job.
+       *
+       *
+       * This object is currently limited to one element.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecsproperties.html#cfn-batch-jobdefinition-ecsproperties-taskproperties)
        */
       override fun taskProperties(): Any = unwrap(this).getTaskProperties()
@@ -3766,6 +3842,12 @@ public open class CfnJobDefinition(
   }
 
   /**
+   * The properties for a task definition that describes the container and volume definitions of an
+   * Amazon ECS task.
+   *
+   * You can specify which Docker images to use, the required resources, and other configurations
+   * related to launching the task definition through an Amazon ECS service or task.
+   *
    * Example:
    *
    * ```
@@ -3878,51 +3960,124 @@ public open class CfnJobDefinition(
    */
   public interface EcsTaskPropertiesProperty {
     /**
+     * This object is a list of containers.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-containers)
      */
     public fun containers(): Any? = unwrap(this).getContainers()
 
     /**
+     * The amount of ephemeral storage to allocate for the task.
+     *
+     * This parameter is used to expand the total amount of ephemeral storage available, beyond the
+     * default amount, for tasks hosted on AWS Fargate .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-ephemeralstorage)
      */
     public fun ephemeralStorage(): Any? = unwrap(this).getEphemeralStorage()
 
     /**
+     * The Amazon Resource Name (ARN) of the execution role that AWS Batch can assume.
+     *
+     * For jobs that run on Fargate resources, you must provide an execution role. For more
+     * information, see [AWS Batch execution IAM
+     * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+     * Batch User Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-executionrolearn)
      */
     public fun executionRoleArn(): String? = unwrap(this).getExecutionRoleArn()
 
     /**
+     * The IPC resource namespace to use for the containers in the task.
+     *
+     * The valid values are `host` , `task` , or `none` .
+     *
+     * If `host` is specified, all containers within the tasks that specified the `host` IPC mode on
+     * the same container instance share the same IPC resources with the host Amazon EC2 instance.
+     *
+     * If `task` is specified, all containers within the specified `task` share the same IPC
+     * resources.
+     *
+     * If `none` is specified, the IPC resources within the containers of a task are private, and
+     * are not shared with other containers in a task or on the container instance.
+     *
+     * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+     * daemon setting on the container instance. For more information, see [IPC
+     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+     * in the Docker run reference.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-ipcmode)
      */
     public fun ipcMode(): String? = unwrap(this).getIpcMode()
 
     /**
+     * The network configuration for jobs that are running on Fargate resources.
+     *
+     * Jobs that are running on Amazon EC2 resources must not specify this parameter.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-networkconfiguration)
      */
     public fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
 
     /**
+     * The process namespace to use for the containers in the task.
+     *
+     * The valid values are `host` or `task` . For example, monitoring sidecars might need `pidMode`
+     * to access information about other containers running in the same task.
+     *
+     * If `host` is specified, all containers within the tasks that specified the `host` PID mode on
+     * the same container instance share the process namespace with the host Amazon EC2 instance.
+     *
+     * If `task` is specified, all containers within the specified task share the same process
+     * namespace.
+     *
+     * If no value is specified, the default is a private namespace for each container. For more
+     * information, see [PID
+     * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+     * in the Docker run reference.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-pidmode)
      */
     public fun pidMode(): String? = unwrap(this).getPidMode()
 
     /**
+     * The Fargate platform version where the jobs are running.
+     *
+     * A platform version is specified only for jobs that are running on Fargate resources. If one
+     * isn't specified, the `LATEST` platform version is used by default. This uses a recent, approved
+     * version of the Fargate platform for compute resources. For more information, see [AWS Fargate
+     * platform
+     * versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-platformversion)
      */
     public fun platformVersion(): String? = unwrap(this).getPlatformVersion()
 
     /**
+     * An object that represents the compute environment architecture for AWS Batch jobs on Fargate.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-runtimeplatform)
      */
     public fun runtimePlatform(): Any? = unwrap(this).getRuntimePlatform()
 
     /**
+     * The Amazon Resource Name (ARN) that's associated with the Amazon ECS task.
+     *
+     *
+     * This is object is comparable to
+     * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+     * .
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-taskrolearn)
      */
     public fun taskRoleArn(): String? = unwrap(this).getTaskRoleArn()
 
     /**
+     * A list of volumes that are associated with the job.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-volumes)
      */
     public fun volumes(): Any? = unwrap(this).getVolumes()
@@ -3933,59 +4088,91 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param containers the value to be set.
+       * @param containers This object is a list of containers.
        */
       public fun containers(containers: IResolvable)
 
       /**
-       * @param containers the value to be set.
+       * @param containers This object is a list of containers.
        */
       public fun containers(containers: List<Any>)
 
       /**
-       * @param containers the value to be set.
+       * @param containers This object is a list of containers.
        */
       public fun containers(vararg containers: Any)
 
       /**
-       * @param ephemeralStorage the value to be set.
+       * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
+       * This parameter is used to expand the total amount of ephemeral storage available, beyond
+       * the default amount, for tasks hosted on AWS Fargate .
        */
       public fun ephemeralStorage(ephemeralStorage: IResolvable)
 
       /**
-       * @param ephemeralStorage the value to be set.
+       * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
+       * This parameter is used to expand the total amount of ephemeral storage available, beyond
+       * the default amount, for tasks hosted on AWS Fargate .
        */
       public fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty)
 
       /**
-       * @param ephemeralStorage the value to be set.
+       * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
+       * This parameter is used to expand the total amount of ephemeral storage available, beyond
+       * the default amount, for tasks hosted on AWS Fargate .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8eefd7cb29595cfed78cd8ff38b8770d2eaef0a58e68ba2882a4ac4a0f9d5e93")
       public fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty.Builder.() -> Unit)
 
       /**
-       * @param executionRoleArn the value to be set.
+       * @param executionRoleArn The Amazon Resource Name (ARN) of the execution role that AWS Batch
+       * can assume.
+       * For jobs that run on Fargate resources, you must provide an execution role. For more
+       * information, see [AWS Batch execution IAM
+       * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+       * Batch User Guide* .
        */
       public fun executionRoleArn(executionRoleArn: String)
 
       /**
-       * @param ipcMode the value to be set.
+       * @param ipcMode The IPC resource namespace to use for the containers in the task.
+       * The valid values are `host` , `task` , or `none` .
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` IPC mode
+       * on the same container instance share the same IPC resources with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified `task` share the same IPC
+       * resources.
+       *
+       * If `none` is specified, the IPC resources within the containers of a task are private, and
+       * are not shared with other containers in a task or on the container instance.
+       *
+       * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+       * daemon setting on the container instance. For more information, see [IPC
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+       * in the Docker run reference.
        */
       public fun ipcMode(ipcMode: String)
 
       /**
-       * @param networkConfiguration the value to be set.
+       * @param networkConfiguration The network configuration for jobs that are running on Fargate
+       * resources.
+       * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       public fun networkConfiguration(networkConfiguration: IResolvable)
 
       /**
-       * @param networkConfiguration the value to be set.
+       * @param networkConfiguration The network configuration for jobs that are running on Fargate
+       * resources.
+       * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       public fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty)
 
       /**
-       * @param networkConfiguration the value to be set.
+       * @param networkConfiguration The network configuration for jobs that are running on Fargate
+       * resources.
+       * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bff70e0dc28c6c36432aff7111c3b9d9e30c7ca1e52a66163d58c1461ffe08df")
@@ -3993,49 +4180,76 @@ public open class CfnJobDefinition(
           fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param pidMode the value to be set.
+       * @param pidMode The process namespace to use for the containers in the task.
+       * The valid values are `host` or `task` . For example, monitoring sidecars might need
+       * `pidMode` to access information about other containers running in the same task.
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` PID mode
+       * on the same container instance share the process namespace with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified task share the same process
+       * namespace.
+       *
+       * If no value is specified, the default is a private namespace for each container. For more
+       * information, see [PID
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+       * in the Docker run reference.
        */
       public fun pidMode(pidMode: String)
 
       /**
-       * @param platformVersion the value to be set.
+       * @param platformVersion The Fargate platform version where the jobs are running.
+       * A platform version is specified only for jobs that are running on Fargate resources. If one
+       * isn't specified, the `LATEST` platform version is used by default. This uses a recent,
+       * approved version of the Fargate platform for compute resources. For more information, see [AWS
+       * Fargate platform
+       * versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       public fun platformVersion(platformVersion: String)
 
       /**
-       * @param runtimePlatform the value to be set.
+       * @param runtimePlatform An object that represents the compute environment architecture for
+       * AWS Batch jobs on Fargate.
        */
       public fun runtimePlatform(runtimePlatform: IResolvable)
 
       /**
-       * @param runtimePlatform the value to be set.
+       * @param runtimePlatform An object that represents the compute environment architecture for
+       * AWS Batch jobs on Fargate.
        */
       public fun runtimePlatform(runtimePlatform: RuntimePlatformProperty)
 
       /**
-       * @param runtimePlatform the value to be set.
+       * @param runtimePlatform An object that represents the compute environment architecture for
+       * AWS Batch jobs on Fargate.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ed572a0ef01fcfabe74c077a255ddc880506d2f03176a9a8317fa977b05bb759")
       public fun runtimePlatform(runtimePlatform: RuntimePlatformProperty.Builder.() -> Unit)
 
       /**
-       * @param taskRoleArn the value to be set.
+       * @param taskRoleArn The Amazon Resource Name (ARN) that's associated with the Amazon ECS
+       * task.
+       *
+       * This is object is comparable to
+       * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+       * .
        */
       public fun taskRoleArn(taskRoleArn: String)
 
       /**
-       * @param volumes the value to be set.
+       * @param volumes A list of volumes that are associated with the job.
        */
       public fun volumes(volumes: IResolvable)
 
       /**
-       * @param volumes the value to be set.
+       * @param volumes A list of volumes that are associated with the job.
        */
       public fun volumes(volumes: List<Any>)
 
       /**
-       * @param volumes the value to be set.
+       * @param volumes A list of volumes that are associated with the job.
        */
       public fun volumes(vararg volumes: Any)
     }
@@ -4046,40 +4260,46 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.EcsTaskPropertiesProperty.builder()
 
       /**
-       * @param containers the value to be set.
+       * @param containers This object is a list of containers.
        */
       override fun containers(containers: IResolvable) {
         cdkBuilder.containers(containers.let(IResolvable::unwrap))
       }
 
       /**
-       * @param containers the value to be set.
+       * @param containers This object is a list of containers.
        */
       override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param containers the value to be set.
+       * @param containers This object is a list of containers.
        */
       override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
       /**
-       * @param ephemeralStorage the value to be set.
+       * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
+       * This parameter is used to expand the total amount of ephemeral storage available, beyond
+       * the default amount, for tasks hosted on AWS Fargate .
        */
       override fun ephemeralStorage(ephemeralStorage: IResolvable) {
         cdkBuilder.ephemeralStorage(ephemeralStorage.let(IResolvable::unwrap))
       }
 
       /**
-       * @param ephemeralStorage the value to be set.
+       * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
+       * This parameter is used to expand the total amount of ephemeral storage available, beyond
+       * the default amount, for tasks hosted on AWS Fargate .
        */
       override fun ephemeralStorage(ephemeralStorage: EphemeralStorageProperty) {
         cdkBuilder.ephemeralStorage(ephemeralStorage.let(EphemeralStorageProperty::unwrap))
       }
 
       /**
-       * @param ephemeralStorage the value to be set.
+       * @param ephemeralStorage The amount of ephemeral storage to allocate for the task.
+       * This parameter is used to expand the total amount of ephemeral storage available, beyond
+       * the default amount, for tasks hosted on AWS Fargate .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8eefd7cb29595cfed78cd8ff38b8770d2eaef0a58e68ba2882a4ac4a0f9d5e93")
@@ -4087,35 +4307,61 @@ public open class CfnJobDefinition(
           Unit = ephemeralStorage(EphemeralStorageProperty(ephemeralStorage))
 
       /**
-       * @param executionRoleArn the value to be set.
+       * @param executionRoleArn The Amazon Resource Name (ARN) of the execution role that AWS Batch
+       * can assume.
+       * For jobs that run on Fargate resources, you must provide an execution role. For more
+       * information, see [AWS Batch execution IAM
+       * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+       * Batch User Guide* .
        */
       override fun executionRoleArn(executionRoleArn: String) {
         cdkBuilder.executionRoleArn(executionRoleArn)
       }
 
       /**
-       * @param ipcMode the value to be set.
+       * @param ipcMode The IPC resource namespace to use for the containers in the task.
+       * The valid values are `host` , `task` , or `none` .
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` IPC mode
+       * on the same container instance share the same IPC resources with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified `task` share the same IPC
+       * resources.
+       *
+       * If `none` is specified, the IPC resources within the containers of a task are private, and
+       * are not shared with other containers in a task or on the container instance.
+       *
+       * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+       * daemon setting on the container instance. For more information, see [IPC
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+       * in the Docker run reference.
        */
       override fun ipcMode(ipcMode: String) {
         cdkBuilder.ipcMode(ipcMode)
       }
 
       /**
-       * @param networkConfiguration the value to be set.
+       * @param networkConfiguration The network configuration for jobs that are running on Fargate
+       * resources.
+       * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       override fun networkConfiguration(networkConfiguration: IResolvable) {
         cdkBuilder.networkConfiguration(networkConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param networkConfiguration the value to be set.
+       * @param networkConfiguration The network configuration for jobs that are running on Fargate
+       * resources.
+       * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       override fun networkConfiguration(networkConfiguration: NetworkConfigurationProperty) {
         cdkBuilder.networkConfiguration(networkConfiguration.let(NetworkConfigurationProperty::unwrap))
       }
 
       /**
-       * @param networkConfiguration the value to be set.
+       * @param networkConfiguration The network configuration for jobs that are running on Fargate
+       * resources.
+       * Jobs that are running on Amazon EC2 resources must not specify this parameter.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("bff70e0dc28c6c36432aff7111c3b9d9e30c7ca1e52a66163d58c1461ffe08df")
@@ -4124,35 +4370,57 @@ public open class CfnJobDefinition(
           Unit = networkConfiguration(NetworkConfigurationProperty(networkConfiguration))
 
       /**
-       * @param pidMode the value to be set.
+       * @param pidMode The process namespace to use for the containers in the task.
+       * The valid values are `host` or `task` . For example, monitoring sidecars might need
+       * `pidMode` to access information about other containers running in the same task.
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` PID mode
+       * on the same container instance share the process namespace with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified task share the same process
+       * namespace.
+       *
+       * If no value is specified, the default is a private namespace for each container. For more
+       * information, see [PID
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+       * in the Docker run reference.
        */
       override fun pidMode(pidMode: String) {
         cdkBuilder.pidMode(pidMode)
       }
 
       /**
-       * @param platformVersion the value to be set.
+       * @param platformVersion The Fargate platform version where the jobs are running.
+       * A platform version is specified only for jobs that are running on Fargate resources. If one
+       * isn't specified, the `LATEST` platform version is used by default. This uses a recent,
+       * approved version of the Fargate platform for compute resources. For more information, see [AWS
+       * Fargate platform
+       * versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun platformVersion(platformVersion: String) {
         cdkBuilder.platformVersion(platformVersion)
       }
 
       /**
-       * @param runtimePlatform the value to be set.
+       * @param runtimePlatform An object that represents the compute environment architecture for
+       * AWS Batch jobs on Fargate.
        */
       override fun runtimePlatform(runtimePlatform: IResolvable) {
         cdkBuilder.runtimePlatform(runtimePlatform.let(IResolvable::unwrap))
       }
 
       /**
-       * @param runtimePlatform the value to be set.
+       * @param runtimePlatform An object that represents the compute environment architecture for
+       * AWS Batch jobs on Fargate.
        */
       override fun runtimePlatform(runtimePlatform: RuntimePlatformProperty) {
         cdkBuilder.runtimePlatform(runtimePlatform.let(RuntimePlatformProperty::unwrap))
       }
 
       /**
-       * @param runtimePlatform the value to be set.
+       * @param runtimePlatform An object that represents the compute environment architecture for
+       * AWS Batch jobs on Fargate.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("ed572a0ef01fcfabe74c077a255ddc880506d2f03176a9a8317fa977b05bb759")
@@ -4160,28 +4428,33 @@ public open class CfnJobDefinition(
           Unit = runtimePlatform(RuntimePlatformProperty(runtimePlatform))
 
       /**
-       * @param taskRoleArn the value to be set.
+       * @param taskRoleArn The Amazon Resource Name (ARN) that's associated with the Amazon ECS
+       * task.
+       *
+       * This is object is comparable to
+       * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+       * .
        */
       override fun taskRoleArn(taskRoleArn: String) {
         cdkBuilder.taskRoleArn(taskRoleArn)
       }
 
       /**
-       * @param volumes the value to be set.
+       * @param volumes A list of volumes that are associated with the job.
        */
       override fun volumes(volumes: IResolvable) {
         cdkBuilder.volumes(volumes.let(IResolvable::unwrap))
       }
 
       /**
-       * @param volumes the value to be set.
+       * @param volumes A list of volumes that are associated with the job.
        */
       override fun volumes(volumes: List<Any>) {
         cdkBuilder.volumes(volumes.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param volumes the value to be set.
+       * @param volumes A list of volumes that are associated with the job.
        */
       override fun volumes(vararg volumes: Any): Unit = volumes(volumes.toList())
 
@@ -4194,51 +4467,125 @@ public open class CfnJobDefinition(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.EcsTaskPropertiesProperty,
     ) : CdkObject(cdkObject), EcsTaskPropertiesProperty {
       /**
+       * This object is a list of containers.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-containers)
        */
       override fun containers(): Any? = unwrap(this).getContainers()
 
       /**
+       * The amount of ephemeral storage to allocate for the task.
+       *
+       * This parameter is used to expand the total amount of ephemeral storage available, beyond
+       * the default amount, for tasks hosted on AWS Fargate .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-ephemeralstorage)
        */
       override fun ephemeralStorage(): Any? = unwrap(this).getEphemeralStorage()
 
       /**
+       * The Amazon Resource Name (ARN) of the execution role that AWS Batch can assume.
+       *
+       * For jobs that run on Fargate resources, you must provide an execution role. For more
+       * information, see [AWS Batch execution IAM
+       * role](https://docs.aws.amazon.com/batch/latest/userguide/execution-IAM-role.html) in the *AWS
+       * Batch User Guide* .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-executionrolearn)
        */
       override fun executionRoleArn(): String? = unwrap(this).getExecutionRoleArn()
 
       /**
+       * The IPC resource namespace to use for the containers in the task.
+       *
+       * The valid values are `host` , `task` , or `none` .
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` IPC mode
+       * on the same container instance share the same IPC resources with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified `task` share the same IPC
+       * resources.
+       *
+       * If `none` is specified, the IPC resources within the containers of a task are private, and
+       * are not shared with other containers in a task or on the container instance.
+       *
+       * If no value is specified, then the IPC resource namespace sharing depends on the Docker
+       * daemon setting on the container instance. For more information, see [IPC
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#ipc-settings---ipc)
+       * in the Docker run reference.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-ipcmode)
        */
       override fun ipcMode(): String? = unwrap(this).getIpcMode()
 
       /**
+       * The network configuration for jobs that are running on Fargate resources.
+       *
+       * Jobs that are running on Amazon EC2 resources must not specify this parameter.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-networkconfiguration)
        */
       override fun networkConfiguration(): Any? = unwrap(this).getNetworkConfiguration()
 
       /**
+       * The process namespace to use for the containers in the task.
+       *
+       * The valid values are `host` or `task` . For example, monitoring sidecars might need
+       * `pidMode` to access information about other containers running in the same task.
+       *
+       * If `host` is specified, all containers within the tasks that specified the `host` PID mode
+       * on the same container instance share the process namespace with the host Amazon EC2 instance.
+       *
+       * If `task` is specified, all containers within the specified task share the same process
+       * namespace.
+       *
+       * If no value is specified, the default is a private namespace for each container. For more
+       * information, see [PID
+       * settings](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#pid-settings---pid)
+       * in the Docker run reference.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-pidmode)
        */
       override fun pidMode(): String? = unwrap(this).getPidMode()
 
       /**
+       * The Fargate platform version where the jobs are running.
+       *
+       * A platform version is specified only for jobs that are running on Fargate resources. If one
+       * isn't specified, the `LATEST` platform version is used by default. This uses a recent,
+       * approved version of the Fargate platform for compute resources. For more information, see [AWS
+       * Fargate platform
+       * versions](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/platform_versions.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-platformversion)
        */
       override fun platformVersion(): String? = unwrap(this).getPlatformVersion()
 
       /**
+       * An object that represents the compute environment architecture for AWS Batch jobs on
+       * Fargate.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-runtimeplatform)
        */
       override fun runtimePlatform(): Any? = unwrap(this).getRuntimePlatform()
 
       /**
+       * The Amazon Resource Name (ARN) that's associated with the Amazon ECS task.
+       *
+       *
+       * This is object is comparable to
+       * [ContainerProperties:jobRoleArn](https://docs.aws.amazon.com/batch/latest/APIReference/API_ContainerProperties.html)
+       * .
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-taskrolearn)
        */
       override fun taskRoleArn(): String? = unwrap(this).getTaskRoleArn()
 
       /**
+       * A list of volumes that are associated with the job.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecstaskproperties.html#cfn-batch-jobdefinition-ecstaskproperties-volumes)
        */
       override fun volumes(): Any? = unwrap(this).getVolumes()
@@ -4725,6 +5072,7 @@ public open class CfnJobDefinition(
    * .requests(requests)
    * .build())
    * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
    * .privileged(false)
    * .readOnlyRootFilesystem(false)
    * .runAsGroup(123)
@@ -5681,6 +6029,7 @@ public open class CfnJobDefinition(
    * .requests(requests)
    * .build())
    * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
    * .privileged(false)
    * .readOnlyRootFilesystem(false)
    * .runAsGroup(123)
@@ -5695,6 +6044,9 @@ public open class CfnJobDefinition(
    * .build()))
    * .dnsPolicy("dnsPolicy")
    * .hostNetwork(false)
+   * .imagePullSecrets(List.of(ImagePullSecretProperty.builder()
+   * .name("name")
+   * .build()))
    * .initContainers(List.of(EksContainerProperty.builder()
    * .image("image")
    * // the properties below are optional
@@ -5712,6 +6064,7 @@ public open class CfnJobDefinition(
    * .requests(requests)
    * .build())
    * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
    * .privileged(false)
    * .readOnlyRootFilesystem(false)
    * .runAsGroup(123)
@@ -7030,6 +7383,96 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.batch.CfnJobDefinition.HostPathProperty
+    }
+  }
+
+  /**
+   * References a Kubernetes secret resource.
+   *
+   * This name of the secret must start and end with an alphanumeric character, is required to be
+   * lowercase, can include periods (.) and hyphens (-), and can't contain more than 253 characters.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * ImagePullSecretProperty imagePullSecretProperty = ImagePullSecretProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-imagepullsecret.html)
+   */
+  public interface ImagePullSecretProperty {
+    /**
+     * Provides a unique identifier for the `ImagePullSecret` .
+     *
+     * This object is required when `EksPodProperties$imagePullSecrets` is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-imagepullsecret.html#cfn-batch-jobdefinition-imagepullsecret-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [ImagePullSecretProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name Provides a unique identifier for the `ImagePullSecret` . 
+       * This object is required when `EksPodProperties$imagePullSecrets` is used.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty.Builder =
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty.builder()
+
+      /**
+       * @param name Provides a unique identifier for the `ImagePullSecret` . 
+       * This object is required when `EksPodProperties$imagePullSecrets` is used.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty,
+    ) : CdkObject(cdkObject), ImagePullSecretProperty {
+      /**
+       * Provides a unique identifier for the `ImagePullSecret` .
+       *
+       * This object is required when `EksPodProperties$imagePullSecrets` is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-imagepullsecret.html#cfn-batch-jobdefinition-imagepullsecret-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ImagePullSecretProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty):
+          ImagePullSecretProperty = CdkObjectWrappers.wrap(cdkObject) as? ImagePullSecretProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ImagePullSecretProperty):
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobDefinition.ImagePullSecretProperty
     }
   }
 
@@ -9111,11 +9554,22 @@ public open class CfnJobDefinition(
     public fun container(): Any? = unwrap(this).getContainer()
 
     /**
+     * This is an object that represents the properties of the node range for a multi-node parallel
+     * job.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-ecsproperties)
      */
     public fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
 
     /**
+     * The instance types of the underlying host infrastructure of a multi-node parallel job.
+     *
+     *
+     * This parameter isn't applicable to jobs that are running on Fargate resources.
+     *
+     * In addition, this list object is currently limited to one element.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-instancetypes)
      */
     public fun instanceTypes(): List<String> = unwrap(this).getInstanceTypes() ?: emptyList()
@@ -9157,29 +9611,42 @@ public open class CfnJobDefinition(
       public fun container(container: ContainerPropertiesProperty.Builder.() -> Unit)
 
       /**
-       * @param ecsProperties the value to be set.
+       * @param ecsProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
        */
       public fun ecsProperties(ecsProperties: IResolvable)
 
       /**
-       * @param ecsProperties the value to be set.
+       * @param ecsProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
        */
       public fun ecsProperties(ecsProperties: EcsPropertiesProperty)
 
       /**
-       * @param ecsProperties the value to be set.
+       * @param ecsProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("66d8ff9e0f4f24b1d9c32aa5170dfcbcdf49c358ce50e8c393906952bbdddbcf")
       public fun ecsProperties(ecsProperties: EcsPropertiesProperty.Builder.() -> Unit)
 
       /**
-       * @param instanceTypes the value to be set.
+       * @param instanceTypes The instance types of the underlying host infrastructure of a
+       * multi-node parallel job.
+       *
+       * This parameter isn't applicable to jobs that are running on Fargate resources.
+       *
+       * In addition, this list object is currently limited to one element.
        */
       public fun instanceTypes(instanceTypes: List<String>)
 
       /**
-       * @param instanceTypes the value to be set.
+       * @param instanceTypes The instance types of the underlying host infrastructure of a
+       * multi-node parallel job.
+       *
+       * This parameter isn't applicable to jobs that are running on Fargate resources.
+       *
+       * In addition, this list object is currently limited to one element.
        */
       public fun instanceTypes(vararg instanceTypes: String)
 
@@ -9223,21 +9690,24 @@ public open class CfnJobDefinition(
           container(ContainerPropertiesProperty(container))
 
       /**
-       * @param ecsProperties the value to be set.
+       * @param ecsProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
        */
       override fun ecsProperties(ecsProperties: IResolvable) {
         cdkBuilder.ecsProperties(ecsProperties.let(IResolvable::unwrap))
       }
 
       /**
-       * @param ecsProperties the value to be set.
+       * @param ecsProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
        */
       override fun ecsProperties(ecsProperties: EcsPropertiesProperty) {
         cdkBuilder.ecsProperties(ecsProperties.let(EcsPropertiesProperty::unwrap))
       }
 
       /**
-       * @param ecsProperties the value to be set.
+       * @param ecsProperties This is an object that represents the properties of the node range for
+       * a multi-node parallel job.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("66d8ff9e0f4f24b1d9c32aa5170dfcbcdf49c358ce50e8c393906952bbdddbcf")
@@ -9245,14 +9715,24 @@ public open class CfnJobDefinition(
           ecsProperties(EcsPropertiesProperty(ecsProperties))
 
       /**
-       * @param instanceTypes the value to be set.
+       * @param instanceTypes The instance types of the underlying host infrastructure of a
+       * multi-node parallel job.
+       *
+       * This parameter isn't applicable to jobs that are running on Fargate resources.
+       *
+       * In addition, this list object is currently limited to one element.
        */
       override fun instanceTypes(instanceTypes: List<String>) {
         cdkBuilder.instanceTypes(instanceTypes)
       }
 
       /**
-       * @param instanceTypes the value to be set.
+       * @param instanceTypes The instance types of the underlying host infrastructure of a
+       * multi-node parallel job.
+       *
+       * This parameter isn't applicable to jobs that are running on Fargate resources.
+       *
+       * In addition, this list object is currently limited to one element.
        */
       override fun instanceTypes(vararg instanceTypes: String): Unit =
           instanceTypes(instanceTypes.toList())
@@ -9286,11 +9766,22 @@ public open class CfnJobDefinition(
       override fun container(): Any? = unwrap(this).getContainer()
 
       /**
+       * This is an object that represents the properties of the node range for a multi-node
+       * parallel job.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-ecsproperties)
        */
       override fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
 
       /**
+       * The instance types of the underlying host infrastructure of a multi-node parallel job.
+       *
+       *
+       * This parameter isn't applicable to jobs that are running on Fargate resources.
+       *
+       * In addition, this list object is currently limited to one element.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-noderangeproperty.html#cfn-batch-jobdefinition-noderangeproperty-instancetypes)
        */
       override fun instanceTypes(): List<String> = unwrap(this).getInstanceTypes() ?: emptyList()
@@ -9358,6 +9849,7 @@ public open class CfnJobDefinition(
    * .requests(requests)
    * .build())
    * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
    * .privileged(false)
    * .readOnlyRootFilesystem(false)
    * .runAsGroup(123)
@@ -9372,6 +9864,9 @@ public open class CfnJobDefinition(
    * .build()))
    * .dnsPolicy("dnsPolicy")
    * .hostNetwork(false)
+   * .imagePullSecrets(List.of(ImagePullSecretProperty.builder()
+   * .name("name")
+   * .build()))
    * .initContainers(List.of(EksContainerProperty.builder()
    * .image("image")
    * // the properties below are optional
@@ -9389,6 +9884,7 @@ public open class CfnJobDefinition(
    * .requests(requests)
    * .build())
    * .securityContext(SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
    * .privileged(false)
    * .readOnlyRootFilesystem(false)
    * .runAsGroup(123)
@@ -9467,6 +9963,23 @@ public open class CfnJobDefinition(
     public fun hostNetwork(): Any? = unwrap(this).getHostNetwork()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-imagepullsecrets)
+     */
+    public fun imagePullSecrets(): Any? = unwrap(this).getImagePullSecrets()
+
+    /**
+     * These containers run before application containers, always runs to completion, and must
+     * complete successfully before the next container starts.
+     *
+     * These containers are registered with the Amazon EKS Connector agent and persists the
+     * registration information in the Kubernetes backend data store. For more information, see [Init
+     * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+     * in the *Kubernetes documentation* .
+     *
+     *
+     * This object is limited to 10 elements
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-initcontainers)
      */
     public fun initContainers(): Any? = unwrap(this).getInitContainers()
@@ -9498,6 +10011,13 @@ public open class CfnJobDefinition(
     public fun serviceAccountName(): String? = unwrap(this).getServiceAccountName()
 
     /**
+     * Indicates if the processes in a container are shared, or visible, to other containers in the
+     * same pod.
+     *
+     * For more information, see [Share Process Namespace between Containers in a
+     * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-shareprocessnamespace)
      */
     public fun shareProcessNamespace(): Any? = unwrap(this).getShareProcessNamespace()
@@ -9567,17 +10087,56 @@ public open class CfnJobDefinition(
       public fun hostNetwork(hostNetwork: IResolvable)
 
       /**
-       * @param initContainers the value to be set.
+       * @param imagePullSecrets the value to be set.
+       */
+      public fun imagePullSecrets(imagePullSecrets: IResolvable)
+
+      /**
+       * @param imagePullSecrets the value to be set.
+       */
+      public fun imagePullSecrets(imagePullSecrets: List<Any>)
+
+      /**
+       * @param imagePullSecrets the value to be set.
+       */
+      public fun imagePullSecrets(vararg imagePullSecrets: Any)
+
+      /**
+       * @param initContainers These containers run before application containers, always runs to
+       * completion, and must complete successfully before the next container starts.
+       * These containers are registered with the Amazon EKS Connector agent and persists the
+       * registration information in the Kubernetes backend data store. For more information, see [Init
+       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+       * in the *Kubernetes documentation* .
+       *
+       *
+       * This object is limited to 10 elements
        */
       public fun initContainers(initContainers: IResolvable)
 
       /**
-       * @param initContainers the value to be set.
+       * @param initContainers These containers run before application containers, always runs to
+       * completion, and must complete successfully before the next container starts.
+       * These containers are registered with the Amazon EKS Connector agent and persists the
+       * registration information in the Kubernetes backend data store. For more information, see [Init
+       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+       * in the *Kubernetes documentation* .
+       *
+       *
+       * This object is limited to 10 elements
        */
       public fun initContainers(initContainers: List<Any>)
 
       /**
-       * @param initContainers the value to be set.
+       * @param initContainers These containers run before application containers, always runs to
+       * completion, and must complete successfully before the next container starts.
+       * These containers are registered with the Amazon EKS Connector agent and persists the
+       * registration information in the Kubernetes backend data store. For more information, see [Init
+       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+       * in the *Kubernetes documentation* .
+       *
+       *
+       * This object is limited to 10 elements
        */
       public fun initContainers(vararg initContainers: Any)
 
@@ -9620,12 +10179,20 @@ public open class CfnJobDefinition(
       public fun serviceAccountName(serviceAccountName: String)
 
       /**
-       * @param shareProcessNamespace the value to be set.
+       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
+       * visible, to other containers in the same pod.
+       * For more information, see [Share Process Namespace between Containers in a
+       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
+       * .
        */
       public fun shareProcessNamespace(shareProcessNamespace: Boolean)
 
       /**
-       * @param shareProcessNamespace the value to be set.
+       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
+       * visible, to other containers in the same pod.
+       * For more information, see [Share Process Namespace between Containers in a
+       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
+       * .
        */
       public fun shareProcessNamespace(shareProcessNamespace: IResolvable)
 
@@ -9713,21 +10280,65 @@ public open class CfnJobDefinition(
       }
 
       /**
-       * @param initContainers the value to be set.
+       * @param imagePullSecrets the value to be set.
+       */
+      override fun imagePullSecrets(imagePullSecrets: IResolvable) {
+        cdkBuilder.imagePullSecrets(imagePullSecrets.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param imagePullSecrets the value to be set.
+       */
+      override fun imagePullSecrets(imagePullSecrets: List<Any>) {
+        cdkBuilder.imagePullSecrets(imagePullSecrets.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param imagePullSecrets the value to be set.
+       */
+      override fun imagePullSecrets(vararg imagePullSecrets: Any): Unit =
+          imagePullSecrets(imagePullSecrets.toList())
+
+      /**
+       * @param initContainers These containers run before application containers, always runs to
+       * completion, and must complete successfully before the next container starts.
+       * These containers are registered with the Amazon EKS Connector agent and persists the
+       * registration information in the Kubernetes backend data store. For more information, see [Init
+       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+       * in the *Kubernetes documentation* .
+       *
+       *
+       * This object is limited to 10 elements
        */
       override fun initContainers(initContainers: IResolvable) {
         cdkBuilder.initContainers(initContainers.let(IResolvable::unwrap))
       }
 
       /**
-       * @param initContainers the value to be set.
+       * @param initContainers These containers run before application containers, always runs to
+       * completion, and must complete successfully before the next container starts.
+       * These containers are registered with the Amazon EKS Connector agent and persists the
+       * registration information in the Kubernetes backend data store. For more information, see [Init
+       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+       * in the *Kubernetes documentation* .
+       *
+       *
+       * This object is limited to 10 elements
        */
       override fun initContainers(initContainers: List<Any>) {
         cdkBuilder.initContainers(initContainers.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param initContainers the value to be set.
+       * @param initContainers These containers run before application containers, always runs to
+       * completion, and must complete successfully before the next container starts.
+       * These containers are registered with the Amazon EKS Connector agent and persists the
+       * registration information in the Kubernetes backend data store. For more information, see [Init
+       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+       * in the *Kubernetes documentation* .
+       *
+       *
+       * This object is limited to 10 elements
        */
       override fun initContainers(vararg initContainers: Any): Unit =
           initContainers(initContainers.toList())
@@ -9778,14 +10389,22 @@ public open class CfnJobDefinition(
       }
 
       /**
-       * @param shareProcessNamespace the value to be set.
+       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
+       * visible, to other containers in the same pod.
+       * For more information, see [Share Process Namespace between Containers in a
+       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
+       * .
        */
       override fun shareProcessNamespace(shareProcessNamespace: Boolean) {
         cdkBuilder.shareProcessNamespace(shareProcessNamespace)
       }
 
       /**
-       * @param shareProcessNamespace the value to be set.
+       * @param shareProcessNamespace Indicates if the processes in a container are shared, or
+       * visible, to other containers in the same pod.
+       * For more information, see [Share Process Namespace between Containers in a
+       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
+       * .
        */
       override fun shareProcessNamespace(shareProcessNamespace: IResolvable) {
         cdkBuilder.shareProcessNamespace(shareProcessNamespace.let(IResolvable::unwrap))
@@ -9857,6 +10476,23 @@ public open class CfnJobDefinition(
       override fun hostNetwork(): Any? = unwrap(this).getHostNetwork()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-imagepullsecrets)
+       */
+      override fun imagePullSecrets(): Any? = unwrap(this).getImagePullSecrets()
+
+      /**
+       * These containers run before application containers, always runs to completion, and must
+       * complete successfully before the next container starts.
+       *
+       * These containers are registered with the Amazon EKS Connector agent and persists the
+       * registration information in the Kubernetes backend data store. For more information, see [Init
+       * Containers](https://docs.aws.amazon.com/https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
+       * in the *Kubernetes documentation* .
+       *
+       *
+       * This object is limited to 10 elements
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-initcontainers)
        */
       override fun initContainers(): Any? = unwrap(this).getInitContainers()
@@ -9888,6 +10524,13 @@ public open class CfnJobDefinition(
       override fun serviceAccountName(): String? = unwrap(this).getServiceAccountName()
 
       /**
+       * Indicates if the processes in a container are shared, or visible, to other containers in
+       * the same pod.
+       *
+       * For more information, see [Share Process Namespace between Containers in a
+       * Pod](https://docs.aws.amazon.com/https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-shareprocessnamespace)
        */
       override fun shareProcessNamespace(): Any? = unwrap(this).getShareProcessNamespace()
@@ -11097,6 +11740,7 @@ public open class CfnJobDefinition(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.batch.*;
    * SecurityContextProperty securityContextProperty = SecurityContextProperty.builder()
+   * .allowPrivilegeEscalation(false)
    * .privileged(false)
    * .readOnlyRootFilesystem(false)
    * .runAsGroup(123)
@@ -11108,6 +11752,11 @@ public open class CfnJobDefinition(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html)
    */
   public interface SecurityContextProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-allowprivilegeescalation)
+     */
+    public fun allowPrivilegeEscalation(): Any? = unwrap(this).getAllowPrivilegeEscalation()
+
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-privileged)
      */
@@ -11138,6 +11787,16 @@ public open class CfnJobDefinition(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param allowPrivilegeEscalation the value to be set.
+       */
+      public fun allowPrivilegeEscalation(allowPrivilegeEscalation: Boolean)
+
+      /**
+       * @param allowPrivilegeEscalation the value to be set.
+       */
+      public fun allowPrivilegeEscalation(allowPrivilegeEscalation: IResolvable)
+
       /**
        * @param privileged the value to be set.
        */
@@ -11183,6 +11842,20 @@ public open class CfnJobDefinition(
       private val cdkBuilder:
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty.Builder =
           software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty.builder()
+
+      /**
+       * @param allowPrivilegeEscalation the value to be set.
+       */
+      override fun allowPrivilegeEscalation(allowPrivilegeEscalation: Boolean) {
+        cdkBuilder.allowPrivilegeEscalation(allowPrivilegeEscalation)
+      }
+
+      /**
+       * @param allowPrivilegeEscalation the value to be set.
+       */
+      override fun allowPrivilegeEscalation(allowPrivilegeEscalation: IResolvable) {
+        cdkBuilder.allowPrivilegeEscalation(allowPrivilegeEscalation.let(IResolvable::unwrap))
+      }
 
       /**
        * @param privileged the value to be set.
@@ -11249,6 +11922,11 @@ public open class CfnJobDefinition(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.SecurityContextProperty,
     ) : CdkObject(cdkObject), SecurityContextProperty {
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-allowprivilegeescalation)
+       */
+      override fun allowPrivilegeEscalation(): Any? = unwrap(this).getAllowPrivilegeEscalation()
+
+      /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-securitycontext.html#cfn-batch-jobdefinition-securitycontext-privileged)
        */
       override fun privileged(): Any? = unwrap(this).getPrivileged()
@@ -11293,6 +11971,8 @@ public open class CfnJobDefinition(
   }
 
   /**
+   * A list of containers that this task depends on.
+   *
    * Example:
    *
    * ```
@@ -11310,11 +11990,24 @@ public open class CfnJobDefinition(
    */
   public interface TaskContainerDependencyProperty {
     /**
+     * The dependency condition of the container. The following are the available conditions and
+     * their behavior:.
+     *
+     * * `START` - This condition emulates the behavior of links and volumes today. It validates
+     * that a dependent container is started before permitting other containers to start.
+     * * `COMPLETE` - This condition validates that a dependent container runs to completion (exits)
+     * before permitting other containers to start. This can be useful for nonessential containers that
+     * run a script and then exit. This condition can't be set on an essential container.
+     * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+     * container exits with a zero status. This condition can't be set on an essential container.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerdependency.html#cfn-batch-jobdefinition-taskcontainerdependency-condition)
      */
     public fun condition(): String
 
     /**
+     * A unique identifier for the container.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerdependency.html#cfn-batch-jobdefinition-taskcontainerdependency-containername)
      */
     public fun containerName(): String
@@ -11325,12 +12018,21 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param condition the value to be set. 
+       * @param condition The dependency condition of the container. The following are the available
+       * conditions and their behavior:. 
+       * * `START` - This condition emulates the behavior of links and volumes today. It validates
+       * that a dependent container is started before permitting other containers to start.
+       * * `COMPLETE` - This condition validates that a dependent container runs to completion
+       * (exits) before permitting other containers to start. This can be useful for nonessential
+       * containers that run a script and then exit. This condition can't be set on an essential
+       * container.
+       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+       * container exits with a zero status. This condition can't be set on an essential container.
        */
       public fun condition(condition: String)
 
       /**
-       * @param containerName the value to be set. 
+       * @param containerName A unique identifier for the container. 
        */
       public fun containerName(containerName: String)
     }
@@ -11342,14 +12044,23 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.TaskContainerDependencyProperty.builder()
 
       /**
-       * @param condition the value to be set. 
+       * @param condition The dependency condition of the container. The following are the available
+       * conditions and their behavior:. 
+       * * `START` - This condition emulates the behavior of links and volumes today. It validates
+       * that a dependent container is started before permitting other containers to start.
+       * * `COMPLETE` - This condition validates that a dependent container runs to completion
+       * (exits) before permitting other containers to start. This can be useful for nonessential
+       * containers that run a script and then exit. This condition can't be set on an essential
+       * container.
+       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+       * container exits with a zero status. This condition can't be set on an essential container.
        */
       override fun condition(condition: String) {
         cdkBuilder.condition(condition)
       }
 
       /**
-       * @param containerName the value to be set. 
+       * @param containerName A unique identifier for the container. 
        */
       override fun containerName(containerName: String) {
         cdkBuilder.containerName(containerName)
@@ -11364,11 +12075,25 @@ public open class CfnJobDefinition(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TaskContainerDependencyProperty,
     ) : CdkObject(cdkObject), TaskContainerDependencyProperty {
       /**
+       * The dependency condition of the container. The following are the available conditions and
+       * their behavior:.
+       *
+       * * `START` - This condition emulates the behavior of links and volumes today. It validates
+       * that a dependent container is started before permitting other containers to start.
+       * * `COMPLETE` - This condition validates that a dependent container runs to completion
+       * (exits) before permitting other containers to start. This can be useful for nonessential
+       * containers that run a script and then exit. This condition can't be set on an essential
+       * container.
+       * * `SUCCESS` - This condition is the same as `COMPLETE` , but it also requires that the
+       * container exits with a zero status. This condition can't be set on an essential container.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerdependency.html#cfn-batch-jobdefinition-taskcontainerdependency-condition)
        */
       override fun condition(): String = unwrap(this).getCondition()
 
       /**
+       * A unique identifier for the container.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerdependency.html#cfn-batch-jobdefinition-taskcontainerdependency-containername)
        */
       override fun containerName(): String = unwrap(this).getContainerName()
@@ -11393,6 +12118,10 @@ public open class CfnJobDefinition(
   }
 
   /**
+   * Container properties are used for Amazon ECS-based job definitions.
+   *
+   * These properties to describe the container that's launched as part of a job.
+   *
    * Example:
    *
    * ```
@@ -11472,81 +12201,292 @@ public open class CfnJobDefinition(
    */
   public interface TaskContainerPropertiesProperty {
     /**
+     * The command that's passed to the container.
+     *
+     * This parameter maps to `Cmd` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `COMMAND`
+     * parameter to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . For more
+     * information, see [Dockerfile reference:
+     * CMD](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-command)
      */
     public fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
     /**
+     * A list of containers that this container depends on.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-dependson)
      */
     public fun dependsOn(): Any? = unwrap(this).getDependsOn()
 
     /**
+     * The environment variables to pass to a container.
+     *
+     * This parameter maps to Env inthe [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+     * parameter to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+     *
+     *
+     * We don't recommend using plaintext environment variables for sensitive information, such as
+     * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+     * convention is reserved for variables that AWS Batch sets.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-environment)
      */
     public fun environment(): Any? = unwrap(this).getEnvironment()
 
     /**
+     * If the essential parameter of a container is marked as `true` , and that container fails or
+     * stops for any reason, all other containers that are part of the task are stopped.
+     *
+     * If the `essential` parameter of a container is marked as false, its failure doesn't affect
+     * the rest of the containers in a task. If this parameter is omitted, a container is assumed to be
+     * essential.
+     *
+     * All jobs must have at least one essential container. If you have an application that's
+     * composed of multiple containers, group containers that are used for a common purpose into
+     * components, and separate the different components into multiple task definitions. For more
+     * information, see [Application
+     * Architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-essential)
      */
     public fun essential(): Any? = unwrap(this).getEssential()
 
     /**
+     * The image used to start a container.
+     *
+     * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
+     * registry are available. Other repositories are specified with either `repository-url/image:tag`
+     * or `repository-url/image&#64;digest` . Up to 255 letters (uppercase and lowercase), numbers,
+     * hyphens, underscores, colons, periods, forward slashes, and number signs are allowed. This
+     * parameter maps to `Image` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
+     * parameter of the [*docker
+     * run*](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-image)
      */
     public fun image(): String
 
     /**
+     * Linux-specific modifications that are applied to the container, such as Linux kernel
+     * capabilities.
+     *
+     * For more information, see
+     * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-linuxparameters)
      */
     public fun linuxParameters(): Any? = unwrap(this).getLinuxParameters()
 
     /**
+     * The log configuration specification for the container.
+     *
+     * This parameter maps to `LogConfig` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+     * `--log-driver` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     * By default, containers use the same logging driver that the Docker daemon uses. However the
+     * container can use a different logging driver than the Docker daemon by specifying a log driver
+     * with this parameter in the container definition. To use a different logging driver for a
+     * container, the log system must be configured properly on the container instance (or on a
+     * different log server for remote logging options). For more information about the options for
+     * different supported log drivers, see [Configure logging
+     * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/) in
+     * the *Docker documentation* .
+     *
+     *
+     * Amazon ECS currently supports a subset of the logging drivers available to the Docker daemon
+     * (shown in the `LogConfiguration` data type). Additional log drivers may be available in future
+     * releases of the Amazon ECS container agent.
+     *
+     *
+     * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+     * instance. To check the Docker Remote API version on your container instance, log in to your
+     * container instance and run the following command: sudo docker version `--format
+     * '{{.Server.APIVersion}}'`
+     *
+     *
+     * The Amazon ECS container agent running on a container instance must register the logging
+     * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment variable
+     * before containers placed on that instance can use these log configuration options. For more
+     * information, see [Amazon ECS container agent
+     * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+     * in the *Amazon Elastic Container Service Developer Guide* .
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-logconfiguration)
      */
     public fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
 
     /**
+     * The mount points for data volumes in your container.
+     *
+     * This parameter maps to `Volumes` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+     * [--volume](https://docs.aws.amazon.com/) option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+     * Windows containers can't mount directories on a different drive, and mount point can't be across
+     * drives.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-mountpoints)
      */
     public fun mountPoints(): Any? = unwrap(this).getMountPoints()
 
     /**
+     * The name of a container.
+     *
+     * The name can be used as a unique identifier to target your `dependsOn` and `Overrides`
+     * objects.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-name)
      */
     public fun name(): String? = unwrap(this).getName()
 
     /**
+     * When this parameter is `true` , the container is given elevated privileges on the host
+     * container instance (similar to the `root` user).
+     *
+     * This parameter maps to `Privileged` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+     * `--privileged` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     *
+     * This parameter is not supported for Windows containers or tasks run on Fargate.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-privileged)
      */
     public fun privileged(): Any? = unwrap(this).getPrivileged()
 
     /**
+     * When this parameter is true, the container is given read-only access to its root file system.
+     *
+     * This parameter maps to `ReadonlyRootfs` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+     * `--read-only` option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     *
+     * This parameter is not supported for Windows containers.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-readonlyrootfilesystem)
      */
     public fun readonlyRootFilesystem(): Any? = unwrap(this).getReadonlyRootFilesystem()
 
     /**
+     * The private repository authentication credentials to use.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-repositorycredentials)
      */
     public fun repositoryCredentials(): Any? = unwrap(this).getRepositoryCredentials()
 
     /**
+     * The type and amount of a resource to assign to a container.
+     *
+     * The only supported resource is a GPU.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-resourcerequirements)
      */
     public fun resourceRequirements(): Any? = unwrap(this).getResourceRequirements()
 
     /**
+     * The secrets to pass to the container.
+     *
+     * For more information, see [Specifying Sensitive
+     * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+     * in the Amazon Elastic Container Service Developer Guide.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-secrets)
      */
     public fun secrets(): Any? = unwrap(this).getSecrets()
 
     /**
+     * A list of `ulimits` to set in the container.
+     *
+     * If a `ulimit` value is specified in a task definition, it overrides the default values set by
+     * Docker. This parameter maps to `Ulimits` in the [Create a
+     * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+     * section of the [Docker Remote
+     * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+     * option to [docker
+     * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+     * .
+     *
+     * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the operating
+     * system with the exception of the nofile resource limit parameter which Fargate overrides. The
+     * `nofile` resource limit sets a restriction on the number of open files that a container can use.
+     * The default `nofile` soft limit is `1024` and the default hard limit is `65535` .
+     *
+     * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+     * instance. To check the Docker Remote API version on your container instance, log in to your
+     * container instance and run the following command: sudo docker version `--format
+     * '{{.Server.APIVersion}}'`
+     *
+     *
+     * This parameter is not supported for Windows containers.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-ulimits)
      */
     public fun ulimits(): Any? = unwrap(this).getUlimits()
 
     /**
+     * The user to use inside the container.
+     *
+     * This parameter maps to User in the Create a container section of the Docker Remote API and
+     * the --user option to docker run.
+     *
+     *
+     * When running tasks using the `host` network mode, don't run containers using the `root user
+     * (UID 0)` . We recommend using a non-root user for better security.
+     *
+     *
+     * You can specify the `user` using the following formats. If specifying a UID or GID, you must
+     * specify it as a positive integer.
+     *
+     * * `user`
+     * * `user:group`
+     * * `uid`
+     * * `uid:gid`
+     * * `user:gi`
+     * * `uid:group`
+     *
+     *
+     * This parameter is not supported for Windows containers.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-user)
      */
     public fun user(): String? = unwrap(this).getUser()
@@ -11557,146 +12497,426 @@ public open class CfnJobDefinition(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param command the value to be set.
+       * @param command The command that's passed to the container.
+       * This parameter maps to `Cmd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `COMMAND`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . For more
+       * information, see [Dockerfile reference:
+       * CMD](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd) .
        */
       public fun command(command: List<String>)
 
       /**
-       * @param command the value to be set.
+       * @param command The command that's passed to the container.
+       * This parameter maps to `Cmd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `COMMAND`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . For more
+       * information, see [Dockerfile reference:
+       * CMD](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd) .
        */
       public fun command(vararg command: String)
 
       /**
-       * @param dependsOn the value to be set.
+       * @param dependsOn A list of containers that this container depends on.
        */
       public fun dependsOn(dependsOn: IResolvable)
 
       /**
-       * @param dependsOn the value to be set.
+       * @param dependsOn A list of containers that this container depends on.
        */
       public fun dependsOn(dependsOn: List<Any>)
 
       /**
-       * @param dependsOn the value to be set.
+       * @param dependsOn A list of containers that this container depends on.
        */
       public fun dependsOn(vararg dependsOn: Any)
 
       /**
-       * @param environment the value to be set.
+       * @param environment The environment variables to pass to a container.
+       * This parameter maps to Env inthe [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+       *
+       *
+       * We don't recommend using plaintext environment variables for sensitive information, such as
+       * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+       * convention is reserved for variables that AWS Batch sets.
        */
       public fun environment(environment: IResolvable)
 
       /**
-       * @param environment the value to be set.
+       * @param environment The environment variables to pass to a container.
+       * This parameter maps to Env inthe [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+       *
+       *
+       * We don't recommend using plaintext environment variables for sensitive information, such as
+       * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+       * convention is reserved for variables that AWS Batch sets.
        */
       public fun environment(environment: List<Any>)
 
       /**
-       * @param environment the value to be set.
+       * @param environment The environment variables to pass to a container.
+       * This parameter maps to Env inthe [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+       *
+       *
+       * We don't recommend using plaintext environment variables for sensitive information, such as
+       * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+       * convention is reserved for variables that AWS Batch sets.
        */
       public fun environment(vararg environment: Any)
 
       /**
-       * @param essential the value to be set.
+       * @param essential If the essential parameter of a container is marked as `true` , and that
+       * container fails or stops for any reason, all other containers that are part of the task are
+       * stopped.
+       * If the `essential` parameter of a container is marked as false, its failure doesn't affect
+       * the rest of the containers in a task. If this parameter is omitted, a container is assumed to
+       * be essential.
+       *
+       * All jobs must have at least one essential container. If you have an application that's
+       * composed of multiple containers, group containers that are used for a common purpose into
+       * components, and separate the different components into multiple task definitions. For more
+       * information, see [Application
+       * Architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       public fun essential(essential: Boolean)
 
       /**
-       * @param essential the value to be set.
+       * @param essential If the essential parameter of a container is marked as `true` , and that
+       * container fails or stops for any reason, all other containers that are part of the task are
+       * stopped.
+       * If the `essential` parameter of a container is marked as false, its failure doesn't affect
+       * the rest of the containers in a task. If this parameter is omitted, a container is assumed to
+       * be essential.
+       *
+       * All jobs must have at least one essential container. If you have an application that's
+       * composed of multiple containers, group containers that are used for a common purpose into
+       * components, and separate the different components into multiple task definitions. For more
+       * information, see [Application
+       * Architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       public fun essential(essential: IResolvable)
 
       /**
-       * @param image the value to be set. 
+       * @param image The image used to start a container. 
+       * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
+       * registry are available. Other repositories are specified with either
+       * `repository-url/image:tag` or `repository-url/image&#64;digest` . Up to 255 letters (uppercase
+       * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
+       * signs are allowed. This parameter maps to `Image` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
+       * parameter of the [*docker
+       * run*](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
        */
       public fun image(image: String)
 
       /**
-       * @param linuxParameters the value to be set.
+       * @param linuxParameters Linux-specific modifications that are applied to the container, such
+       * as Linux kernel capabilities.
+       * For more information, see
+       * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+       * .
        */
       public fun linuxParameters(linuxParameters: IResolvable)
 
       /**
-       * @param linuxParameters the value to be set.
+       * @param linuxParameters Linux-specific modifications that are applied to the container, such
+       * as Linux kernel capabilities.
+       * For more information, see
+       * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+       * .
        */
       public fun linuxParameters(linuxParameters: LinuxParametersProperty)
 
       /**
-       * @param linuxParameters the value to be set.
+       * @param linuxParameters Linux-specific modifications that are applied to the container, such
+       * as Linux kernel capabilities.
+       * For more information, see
+       * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("19170a13fe587140f52b0d1dca6ae814149b4c2f39891024990e70a036011ce6")
       public fun linuxParameters(linuxParameters: LinuxParametersProperty.Builder.() -> Unit)
 
       /**
-       * @param logConfiguration the value to be set.
+       * @param logConfiguration The log configuration specification for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However the
+       * container can use a different logging driver than the Docker daemon by specifying a log driver
+       * with this parameter in the container definition. To use a different logging driver for a
+       * container, the log system must be configured properly on the container instance (or on a
+       * different log server for remote logging options). For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the *Docker documentation* .
+       *
+       *
+       * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon (shown in the `LogConfiguration` data type). Additional log drivers may be available in
+       * future releases of the Amazon ECS container agent.
+       *
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * The Amazon ECS container agent running on a container instance must register the logging
+       * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       public fun logConfiguration(logConfiguration: IResolvable)
 
       /**
-       * @param logConfiguration the value to be set.
+       * @param logConfiguration The log configuration specification for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However the
+       * container can use a different logging driver than the Docker daemon by specifying a log driver
+       * with this parameter in the container definition. To use a different logging driver for a
+       * container, the log system must be configured properly on the container instance (or on a
+       * different log server for remote logging options). For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the *Docker documentation* .
+       *
+       *
+       * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon (shown in the `LogConfiguration` data type). Additional log drivers may be available in
+       * future releases of the Amazon ECS container agent.
+       *
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * The Amazon ECS container agent running on a container instance must register the logging
+       * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       public fun logConfiguration(logConfiguration: LogConfigurationProperty)
 
       /**
-       * @param logConfiguration the value to be set.
+       * @param logConfiguration The log configuration specification for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However the
+       * container can use a different logging driver than the Docker daemon by specifying a log driver
+       * with this parameter in the container definition. To use a different logging driver for a
+       * container, the log system must be configured properly on the container instance (or on a
+       * different log server for remote logging options). For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the *Docker documentation* .
+       *
+       *
+       * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon (shown in the `LogConfiguration` data type). Additional log drivers may be available in
+       * future releases of the Amazon ECS container agent.
+       *
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * The Amazon ECS container agent running on a container instance must register the logging
+       * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07cb87f43f4bebadd01f6ebb5f9bd7dc010b0b3927192f24ce10039e10545ee")
       public fun logConfiguration(logConfiguration: LogConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param mountPoints the value to be set.
+       * @param mountPoints The mount points for data volumes in your container.
+       * This parameter maps to `Volumes` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * [--volume](https://docs.aws.amazon.com/) option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+       * Windows containers can't mount directories on a different drive, and mount point can't be
+       * across drives.
        */
       public fun mountPoints(mountPoints: IResolvable)
 
       /**
-       * @param mountPoints the value to be set.
+       * @param mountPoints The mount points for data volumes in your container.
+       * This parameter maps to `Volumes` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * [--volume](https://docs.aws.amazon.com/) option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+       * Windows containers can't mount directories on a different drive, and mount point can't be
+       * across drives.
        */
       public fun mountPoints(mountPoints: List<Any>)
 
       /**
-       * @param mountPoints the value to be set.
+       * @param mountPoints The mount points for data volumes in your container.
+       * This parameter maps to `Volumes` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * [--volume](https://docs.aws.amazon.com/) option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+       * Windows containers can't mount directories on a different drive, and mount point can't be
+       * across drives.
        */
       public fun mountPoints(vararg mountPoints: Any)
 
       /**
-       * @param name the value to be set.
+       * @param name The name of a container.
+       * The name can be used as a unique identifier to target your `dependsOn` and `Overrides`
+       * objects.
        */
       public fun name(name: String)
 
       /**
-       * @param privileged the value to be set.
+       * @param privileged When this parameter is `true` , the container is given elevated
+       * privileges on the host container instance (similar to the `root` user).
+       * This parameter maps to `Privileged` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--privileged` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers or tasks run on Fargate.
        */
       public fun privileged(privileged: Boolean)
 
       /**
-       * @param privileged the value to be set.
+       * @param privileged When this parameter is `true` , the container is given elevated
+       * privileges on the host container instance (similar to the `root` user).
+       * This parameter maps to `Privileged` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--privileged` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers or tasks run on Fargate.
        */
       public fun privileged(privileged: IResolvable)
 
       /**
-       * @param readonlyRootFilesystem the value to be set.
+       * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
+       * access to its root file system.
+       * This parameter maps to `ReadonlyRootfs` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--read-only` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean)
 
       /**
-       * @param readonlyRootFilesystem the value to be set.
+       * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
+       * access to its root file system.
+       * This parameter maps to `ReadonlyRootfs` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--read-only` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       public fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable)
 
       /**
-       * @param repositoryCredentials the value to be set.
+       * @param repositoryCredentials The private repository authentication credentials to use.
        */
       public fun repositoryCredentials(repositoryCredentials: IResolvable)
 
       /**
-       * @param repositoryCredentials the value to be set.
+       * @param repositoryCredentials The private repository authentication credentials to use.
        */
       public fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty)
 
       /**
-       * @param repositoryCredentials the value to be set.
+       * @param repositoryCredentials The private repository authentication credentials to use.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8d9376f019bdc67670dd0f6b52daadd3aecc1e9d8846fddac7c2fe9d0ce3420e")
@@ -11704,52 +12924,150 @@ public open class CfnJobDefinition(
           fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty.Builder.() -> Unit)
 
       /**
-       * @param resourceRequirements the value to be set.
+       * @param resourceRequirements The type and amount of a resource to assign to a container.
+       * The only supported resource is a GPU.
        */
       public fun resourceRequirements(resourceRequirements: IResolvable)
 
       /**
-       * @param resourceRequirements the value to be set.
+       * @param resourceRequirements The type and amount of a resource to assign to a container.
+       * The only supported resource is a GPU.
        */
       public fun resourceRequirements(resourceRequirements: List<Any>)
 
       /**
-       * @param resourceRequirements the value to be set.
+       * @param resourceRequirements The type and amount of a resource to assign to a container.
+       * The only supported resource is a GPU.
        */
       public fun resourceRequirements(vararg resourceRequirements: Any)
 
       /**
-       * @param secrets the value to be set.
+       * @param secrets The secrets to pass to the container.
+       * For more information, see [Specifying Sensitive
+       * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the Amazon Elastic Container Service Developer Guide.
        */
       public fun secrets(secrets: IResolvable)
 
       /**
-       * @param secrets the value to be set.
+       * @param secrets The secrets to pass to the container.
+       * For more information, see [Specifying Sensitive
+       * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the Amazon Elastic Container Service Developer Guide.
        */
       public fun secrets(secrets: List<Any>)
 
       /**
-       * @param secrets the value to be set.
+       * @param secrets The secrets to pass to the container.
+       * For more information, see [Specifying Sensitive
+       * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the Amazon Elastic Container Service Developer Guide.
        */
       public fun secrets(vararg secrets: Any)
 
       /**
-       * @param ulimits the value to be set.
+       * @param ulimits A list of `ulimits` to set in the container.
+       * If a `ulimit` value is specified in a task definition, it overrides the default values set
+       * by Docker. This parameter maps to `Ulimits` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the
+       * operating system with the exception of the nofile resource limit parameter which Fargate
+       * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+       * container can use. The default `nofile` soft limit is `1024` and the default hard limit is
+       * `65535` .
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       public fun ulimits(ulimits: IResolvable)
 
       /**
-       * @param ulimits the value to be set.
+       * @param ulimits A list of `ulimits` to set in the container.
+       * If a `ulimit` value is specified in a task definition, it overrides the default values set
+       * by Docker. This parameter maps to `Ulimits` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the
+       * operating system with the exception of the nofile resource limit parameter which Fargate
+       * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+       * container can use. The default `nofile` soft limit is `1024` and the default hard limit is
+       * `65535` .
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       public fun ulimits(ulimits: List<Any>)
 
       /**
-       * @param ulimits the value to be set.
+       * @param ulimits A list of `ulimits` to set in the container.
+       * If a `ulimit` value is specified in a task definition, it overrides the default values set
+       * by Docker. This parameter maps to `Ulimits` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the
+       * operating system with the exception of the nofile resource limit parameter which Fargate
+       * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+       * container can use. The default `nofile` soft limit is `1024` and the default hard limit is
+       * `65535` .
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       public fun ulimits(vararg ulimits: Any)
 
       /**
-       * @param user the value to be set.
+       * @param user The user to use inside the container.
+       * This parameter maps to User in the Create a container section of the Docker Remote API and
+       * the --user option to docker run.
+       *
+       *
+       * When running tasks using the `host` network mode, don't run containers using the `root user
+       * (UID 0)` . We recommend using a non-root user for better security.
+       *
+       *
+       * You can specify the `user` using the following formats. If specifying a UID or GID, you
+       * must specify it as a positive integer.
+       *
+       * * `user`
+       * * `user:group`
+       * * `uid`
+       * * `uid:gid`
+       * * `user:gi`
+       * * `uid:group`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       public fun user(user: String)
     }
@@ -11761,92 +13079,188 @@ public open class CfnJobDefinition(
           software.amazon.awscdk.services.batch.CfnJobDefinition.TaskContainerPropertiesProperty.builder()
 
       /**
-       * @param command the value to be set.
+       * @param command The command that's passed to the container.
+       * This parameter maps to `Cmd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `COMMAND`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . For more
+       * information, see [Dockerfile reference:
+       * CMD](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd) .
        */
       override fun command(command: List<String>) {
         cdkBuilder.command(command)
       }
 
       /**
-       * @param command the value to be set.
+       * @param command The command that's passed to the container.
+       * This parameter maps to `Cmd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `COMMAND`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . For more
+       * information, see [Dockerfile reference:
+       * CMD](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd) .
        */
       override fun command(vararg command: String): Unit = command(command.toList())
 
       /**
-       * @param dependsOn the value to be set.
+       * @param dependsOn A list of containers that this container depends on.
        */
       override fun dependsOn(dependsOn: IResolvable) {
         cdkBuilder.dependsOn(dependsOn.let(IResolvable::unwrap))
       }
 
       /**
-       * @param dependsOn the value to be set.
+       * @param dependsOn A list of containers that this container depends on.
        */
       override fun dependsOn(dependsOn: List<Any>) {
         cdkBuilder.dependsOn(dependsOn.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param dependsOn the value to be set.
+       * @param dependsOn A list of containers that this container depends on.
        */
       override fun dependsOn(vararg dependsOn: Any): Unit = dependsOn(dependsOn.toList())
 
       /**
-       * @param environment the value to be set.
+       * @param environment The environment variables to pass to a container.
+       * This parameter maps to Env inthe [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+       *
+       *
+       * We don't recommend using plaintext environment variables for sensitive information, such as
+       * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+       * convention is reserved for variables that AWS Batch sets.
        */
       override fun environment(environment: IResolvable) {
         cdkBuilder.environment(environment.let(IResolvable::unwrap))
       }
 
       /**
-       * @param environment the value to be set.
+       * @param environment The environment variables to pass to a container.
+       * This parameter maps to Env inthe [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+       *
+       *
+       * We don't recommend using plaintext environment variables for sensitive information, such as
+       * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+       * convention is reserved for variables that AWS Batch sets.
        */
       override fun environment(environment: List<Any>) {
         cdkBuilder.environment(environment.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param environment the value to be set.
+       * @param environment The environment variables to pass to a container.
+       * This parameter maps to Env inthe [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+       *
+       *
+       * We don't recommend using plaintext environment variables for sensitive information, such as
+       * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+       * convention is reserved for variables that AWS Batch sets.
        */
       override fun environment(vararg environment: Any): Unit = environment(environment.toList())
 
       /**
-       * @param essential the value to be set.
+       * @param essential If the essential parameter of a container is marked as `true` , and that
+       * container fails or stops for any reason, all other containers that are part of the task are
+       * stopped.
+       * If the `essential` parameter of a container is marked as false, its failure doesn't affect
+       * the rest of the containers in a task. If this parameter is omitted, a container is assumed to
+       * be essential.
+       *
+       * All jobs must have at least one essential container. If you have an application that's
+       * composed of multiple containers, group containers that are used for a common purpose into
+       * components, and separate the different components into multiple task definitions. For more
+       * information, see [Application
+       * Architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun essential(essential: Boolean) {
         cdkBuilder.essential(essential)
       }
 
       /**
-       * @param essential the value to be set.
+       * @param essential If the essential parameter of a container is marked as `true` , and that
+       * container fails or stops for any reason, all other containers that are part of the task are
+       * stopped.
+       * If the `essential` parameter of a container is marked as false, its failure doesn't affect
+       * the rest of the containers in a task. If this parameter is omitted, a container is assumed to
+       * be essential.
+       *
+       * All jobs must have at least one essential container. If you have an application that's
+       * composed of multiple containers, group containers that are used for a common purpose into
+       * components, and separate the different components into multiple task definitions. For more
+       * information, see [Application
+       * Architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun essential(essential: IResolvable) {
         cdkBuilder.essential(essential.let(IResolvable::unwrap))
       }
 
       /**
-       * @param image the value to be set. 
+       * @param image The image used to start a container. 
+       * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
+       * registry are available. Other repositories are specified with either
+       * `repository-url/image:tag` or `repository-url/image&#64;digest` . Up to 255 letters (uppercase
+       * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
+       * signs are allowed. This parameter maps to `Image` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
+       * parameter of the [*docker
+       * run*](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
        */
       override fun image(image: String) {
         cdkBuilder.image(image)
       }
 
       /**
-       * @param linuxParameters the value to be set.
+       * @param linuxParameters Linux-specific modifications that are applied to the container, such
+       * as Linux kernel capabilities.
+       * For more information, see
+       * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+       * .
        */
       override fun linuxParameters(linuxParameters: IResolvable) {
         cdkBuilder.linuxParameters(linuxParameters.let(IResolvable::unwrap))
       }
 
       /**
-       * @param linuxParameters the value to be set.
+       * @param linuxParameters Linux-specific modifications that are applied to the container, such
+       * as Linux kernel capabilities.
+       * For more information, see
+       * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+       * .
        */
       override fun linuxParameters(linuxParameters: LinuxParametersProperty) {
         cdkBuilder.linuxParameters(linuxParameters.let(LinuxParametersProperty::unwrap))
       }
 
       /**
-       * @param linuxParameters the value to be set.
+       * @param linuxParameters Linux-specific modifications that are applied to the container, such
+       * as Linux kernel capabilities.
+       * For more information, see
+       * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("19170a13fe587140f52b0d1dca6ae814149b4c2f39891024990e70a036011ce6")
@@ -11854,21 +13268,126 @@ public open class CfnJobDefinition(
           Unit = linuxParameters(LinuxParametersProperty(linuxParameters))
 
       /**
-       * @param logConfiguration the value to be set.
+       * @param logConfiguration The log configuration specification for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However the
+       * container can use a different logging driver than the Docker daemon by specifying a log driver
+       * with this parameter in the container definition. To use a different logging driver for a
+       * container, the log system must be configured properly on the container instance (or on a
+       * different log server for remote logging options). For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the *Docker documentation* .
+       *
+       *
+       * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon (shown in the `LogConfiguration` data type). Additional log drivers may be available in
+       * future releases of the Amazon ECS container agent.
+       *
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * The Amazon ECS container agent running on a container instance must register the logging
+       * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: IResolvable) {
         cdkBuilder.logConfiguration(logConfiguration.let(IResolvable::unwrap))
       }
 
       /**
-       * @param logConfiguration the value to be set.
+       * @param logConfiguration The log configuration specification for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However the
+       * container can use a different logging driver than the Docker daemon by specifying a log driver
+       * with this parameter in the container definition. To use a different logging driver for a
+       * container, the log system must be configured properly on the container instance (or on a
+       * different log server for remote logging options). For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the *Docker documentation* .
+       *
+       *
+       * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon (shown in the `LogConfiguration` data type). Additional log drivers may be available in
+       * future releases of the Amazon ECS container agent.
+       *
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * The Amazon ECS container agent running on a container instance must register the logging
+       * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       override fun logConfiguration(logConfiguration: LogConfigurationProperty) {
         cdkBuilder.logConfiguration(logConfiguration.let(LogConfigurationProperty::unwrap))
       }
 
       /**
-       * @param logConfiguration the value to be set.
+       * @param logConfiguration The log configuration specification for the container.
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However the
+       * container can use a different logging driver than the Docker daemon by specifying a log driver
+       * with this parameter in the container definition. To use a different logging driver for a
+       * container, the log system must be configured properly on the container instance (or on a
+       * different log server for remote logging options). For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the *Docker documentation* .
+       *
+       *
+       * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon (shown in the `LogConfiguration` data type). Additional log drivers may be available in
+       * future releases of the Amazon ECS container agent.
+       *
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * The Amazon ECS container agent running on a container instance must register the logging
+       * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f07cb87f43f4bebadd01f6ebb5f9bd7dc010b0b3927192f24ce10039e10545ee")
@@ -11876,75 +13395,154 @@ public open class CfnJobDefinition(
           Unit = logConfiguration(LogConfigurationProperty(logConfiguration))
 
       /**
-       * @param mountPoints the value to be set.
+       * @param mountPoints The mount points for data volumes in your container.
+       * This parameter maps to `Volumes` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * [--volume](https://docs.aws.amazon.com/) option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+       * Windows containers can't mount directories on a different drive, and mount point can't be
+       * across drives.
        */
       override fun mountPoints(mountPoints: IResolvable) {
         cdkBuilder.mountPoints(mountPoints.let(IResolvable::unwrap))
       }
 
       /**
-       * @param mountPoints the value to be set.
+       * @param mountPoints The mount points for data volumes in your container.
+       * This parameter maps to `Volumes` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * [--volume](https://docs.aws.amazon.com/) option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+       * Windows containers can't mount directories on a different drive, and mount point can't be
+       * across drives.
        */
       override fun mountPoints(mountPoints: List<Any>) {
         cdkBuilder.mountPoints(mountPoints.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param mountPoints the value to be set.
+       * @param mountPoints The mount points for data volumes in your container.
+       * This parameter maps to `Volumes` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * [--volume](https://docs.aws.amazon.com/) option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+       * Windows containers can't mount directories on a different drive, and mount point can't be
+       * across drives.
        */
       override fun mountPoints(vararg mountPoints: Any): Unit = mountPoints(mountPoints.toList())
 
       /**
-       * @param name the value to be set.
+       * @param name The name of a container.
+       * The name can be used as a unique identifier to target your `dependsOn` and `Overrides`
+       * objects.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
       }
 
       /**
-       * @param privileged the value to be set.
+       * @param privileged When this parameter is `true` , the container is given elevated
+       * privileges on the host container instance (similar to the `root` user).
+       * This parameter maps to `Privileged` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--privileged` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers or tasks run on Fargate.
        */
       override fun privileged(privileged: Boolean) {
         cdkBuilder.privileged(privileged)
       }
 
       /**
-       * @param privileged the value to be set.
+       * @param privileged When this parameter is `true` , the container is given elevated
+       * privileges on the host container instance (similar to the `root` user).
+       * This parameter maps to `Privileged` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--privileged` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers or tasks run on Fargate.
        */
       override fun privileged(privileged: IResolvable) {
         cdkBuilder.privileged(privileged.let(IResolvable::unwrap))
       }
 
       /**
-       * @param readonlyRootFilesystem the value to be set.
+       * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
+       * access to its root file system.
+       * This parameter maps to `ReadonlyRootfs` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--read-only` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
         cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem)
       }
 
       /**
-       * @param readonlyRootFilesystem the value to be set.
+       * @param readonlyRootFilesystem When this parameter is true, the container is given read-only
+       * access to its root file system.
+       * This parameter maps to `ReadonlyRootfs` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--read-only` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       override fun readonlyRootFilesystem(readonlyRootFilesystem: IResolvable) {
         cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem.let(IResolvable::unwrap))
       }
 
       /**
-       * @param repositoryCredentials the value to be set.
+       * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: IResolvable) {
         cdkBuilder.repositoryCredentials(repositoryCredentials.let(IResolvable::unwrap))
       }
 
       /**
-       * @param repositoryCredentials the value to be set.
+       * @param repositoryCredentials The private repository authentication credentials to use.
        */
       override fun repositoryCredentials(repositoryCredentials: RepositoryCredentialsProperty) {
         cdkBuilder.repositoryCredentials(repositoryCredentials.let(RepositoryCredentialsProperty::unwrap))
       }
 
       /**
-       * @param repositoryCredentials the value to be set.
+       * @param repositoryCredentials The private repository authentication credentials to use.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8d9376f019bdc67670dd0f6b52daadd3aecc1e9d8846fddac7c2fe9d0ce3420e")
@@ -11953,65 +13551,163 @@ public open class CfnJobDefinition(
           Unit = repositoryCredentials(RepositoryCredentialsProperty(repositoryCredentials))
 
       /**
-       * @param resourceRequirements the value to be set.
+       * @param resourceRequirements The type and amount of a resource to assign to a container.
+       * The only supported resource is a GPU.
        */
       override fun resourceRequirements(resourceRequirements: IResolvable) {
         cdkBuilder.resourceRequirements(resourceRequirements.let(IResolvable::unwrap))
       }
 
       /**
-       * @param resourceRequirements the value to be set.
+       * @param resourceRequirements The type and amount of a resource to assign to a container.
+       * The only supported resource is a GPU.
        */
       override fun resourceRequirements(resourceRequirements: List<Any>) {
         cdkBuilder.resourceRequirements(resourceRequirements.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param resourceRequirements the value to be set.
+       * @param resourceRequirements The type and amount of a resource to assign to a container.
+       * The only supported resource is a GPU.
        */
       override fun resourceRequirements(vararg resourceRequirements: Any): Unit =
           resourceRequirements(resourceRequirements.toList())
 
       /**
-       * @param secrets the value to be set.
+       * @param secrets The secrets to pass to the container.
+       * For more information, see [Specifying Sensitive
+       * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the Amazon Elastic Container Service Developer Guide.
        */
       override fun secrets(secrets: IResolvable) {
         cdkBuilder.secrets(secrets.let(IResolvable::unwrap))
       }
 
       /**
-       * @param secrets the value to be set.
+       * @param secrets The secrets to pass to the container.
+       * For more information, see [Specifying Sensitive
+       * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the Amazon Elastic Container Service Developer Guide.
        */
       override fun secrets(secrets: List<Any>) {
         cdkBuilder.secrets(secrets.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param secrets the value to be set.
+       * @param secrets The secrets to pass to the container.
+       * For more information, see [Specifying Sensitive
+       * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the Amazon Elastic Container Service Developer Guide.
        */
       override fun secrets(vararg secrets: Any): Unit = secrets(secrets.toList())
 
       /**
-       * @param ulimits the value to be set.
+       * @param ulimits A list of `ulimits` to set in the container.
+       * If a `ulimit` value is specified in a task definition, it overrides the default values set
+       * by Docker. This parameter maps to `Ulimits` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the
+       * operating system with the exception of the nofile resource limit parameter which Fargate
+       * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+       * container can use. The default `nofile` soft limit is `1024` and the default hard limit is
+       * `65535` .
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       override fun ulimits(ulimits: IResolvable) {
         cdkBuilder.ulimits(ulimits.let(IResolvable::unwrap))
       }
 
       /**
-       * @param ulimits the value to be set.
+       * @param ulimits A list of `ulimits` to set in the container.
+       * If a `ulimit` value is specified in a task definition, it overrides the default values set
+       * by Docker. This parameter maps to `Ulimits` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the
+       * operating system with the exception of the nofile resource limit parameter which Fargate
+       * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+       * container can use. The default `nofile` soft limit is `1024` and the default hard limit is
+       * `65535` .
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       override fun ulimits(ulimits: List<Any>) {
         cdkBuilder.ulimits(ulimits.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param ulimits the value to be set.
+       * @param ulimits A list of `ulimits` to set in the container.
+       * If a `ulimit` value is specified in a task definition, it overrides the default values set
+       * by Docker. This parameter maps to `Ulimits` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the
+       * operating system with the exception of the nofile resource limit parameter which Fargate
+       * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+       * container can use. The default `nofile` soft limit is `1024` and the default hard limit is
+       * `65535` .
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       override fun ulimits(vararg ulimits: Any): Unit = ulimits(ulimits.toList())
 
       /**
-       * @param user the value to be set.
+       * @param user The user to use inside the container.
+       * This parameter maps to User in the Create a container section of the Docker Remote API and
+       * the --user option to docker run.
+       *
+       *
+       * When running tasks using the `host` network mode, don't run containers using the `root user
+       * (UID 0)` . We recommend using a non-root user for better security.
+       *
+       *
+       * You can specify the `user` using the following formats. If specifying a UID or GID, you
+       * must specify it as a positive integer.
+       *
+       * * `user`
+       * * `user:group`
+       * * `uid`
+       * * `uid:gid`
+       * * `user:gi`
+       * * `uid:group`
+       *
+       *
+       * This parameter is not supported for Windows containers.
        */
       override fun user(user: String) {
         cdkBuilder.user(user)
@@ -12026,81 +13722,294 @@ public open class CfnJobDefinition(
       cdkObject: software.amazon.awscdk.services.batch.CfnJobDefinition.TaskContainerPropertiesProperty,
     ) : CdkObject(cdkObject), TaskContainerPropertiesProperty {
       /**
+       * The command that's passed to the container.
+       *
+       * This parameter maps to `Cmd` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `COMMAND`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) . For more
+       * information, see [Dockerfile reference:
+       * CMD](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/builder/#cmd) .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-command)
        */
       override fun command(): List<String> = unwrap(this).getCommand() ?: emptyList()
 
       /**
+       * A list of containers that this container depends on.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-dependson)
        */
       override fun dependsOn(): Any? = unwrap(this).getDependsOn()
 
       /**
+       * The environment variables to pass to a container.
+       *
+       * This parameter maps to Env inthe [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/#create-a-container)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.23/) and the `--env`
+       * parameter to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/) .
+       *
+       *
+       * We don't recommend using plaintext environment variables for sensitive information, such as
+       * credential data. &gt; Environment variables cannot start with `AWS_BATCH` . This naming
+       * convention is reserved for variables that AWS Batch sets.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-environment)
        */
       override fun environment(): Any? = unwrap(this).getEnvironment()
 
       /**
+       * If the essential parameter of a container is marked as `true` , and that container fails or
+       * stops for any reason, all other containers that are part of the task are stopped.
+       *
+       * If the `essential` parameter of a container is marked as false, its failure doesn't affect
+       * the rest of the containers in a task. If this parameter is omitted, a container is assumed to
+       * be essential.
+       *
+       * All jobs must have at least one essential container. If you have an application that's
+       * composed of multiple containers, group containers that are used for a common purpose into
+       * components, and separate the different components into multiple task definitions. For more
+       * information, see [Application
+       * Architecture](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/application_architecture.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-essential)
        */
       override fun essential(): Any? = unwrap(this).getEssential()
 
       /**
+       * The image used to start a container.
+       *
+       * This string is passed directly to the Docker daemon. By default, images in the Docker Hub
+       * registry are available. Other repositories are specified with either
+       * `repository-url/image:tag` or `repository-url/image&#64;digest` . Up to 255 letters (uppercase
+       * and lowercase), numbers, hyphens, underscores, colons, periods, forward slashes, and number
+       * signs are allowed. This parameter maps to `Image` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `IMAGE`
+       * parameter of the [*docker
+       * run*](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-image)
        */
       override fun image(): String = unwrap(this).getImage()
 
       /**
+       * Linux-specific modifications that are applied to the container, such as Linux kernel
+       * capabilities.
+       *
+       * For more information, see
+       * [KernelCapabilities](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_KernelCapabilities.html)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-linuxparameters)
        */
       override fun linuxParameters(): Any? = unwrap(this).getLinuxParameters()
 
       /**
+       * The log configuration specification for the container.
+       *
+       * This parameter maps to `LogConfig` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--log-driver` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * By default, containers use the same logging driver that the Docker daemon uses. However the
+       * container can use a different logging driver than the Docker daemon by specifying a log driver
+       * with this parameter in the container definition. To use a different logging driver for a
+       * container, the log system must be configured properly on the container instance (or on a
+       * different log server for remote logging options). For more information about the options for
+       * different supported log drivers, see [Configure logging
+       * drivers](https://docs.aws.amazon.com/https://docs.docker.com/engine/admin/logging/overview/)
+       * in the *Docker documentation* .
+       *
+       *
+       * Amazon ECS currently supports a subset of the logging drivers available to the Docker
+       * daemon (shown in the `LogConfiguration` data type). Additional log drivers may be available in
+       * future releases of the Amazon ECS container agent.
+       *
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * The Amazon ECS container agent running on a container instance must register the logging
+       * drivers available on that instance with the `ECS_AVAILABLE_LOGGING_DRIVERS` environment
+       * variable before containers placed on that instance can use these log configuration options.
+       * For more information, see [Amazon ECS container agent
+       * configuration](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-agent-config.html)
+       * in the *Amazon Elastic Container Service Developer Guide* .
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-logconfiguration)
        */
       override fun logConfiguration(): Any? = unwrap(this).getLogConfiguration()
 
       /**
+       * The mount points for data volumes in your container.
+       *
+       * This parameter maps to `Volumes` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * [--volume](https://docs.aws.amazon.com/) option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Windows containers can mount whole directories on the same drive as `$env:ProgramData` .
+       * Windows containers can't mount directories on a different drive, and mount point can't be
+       * across drives.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-mountpoints)
        */
       override fun mountPoints(): Any? = unwrap(this).getMountPoints()
 
       /**
+       * The name of a container.
+       *
+       * The name can be used as a unique identifier to target your `dependsOn` and `Overrides`
+       * objects.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-name)
        */
       override fun name(): String? = unwrap(this).getName()
 
       /**
+       * When this parameter is `true` , the container is given elevated privileges on the host
+       * container instance (similar to the `root` user).
+       *
+       * This parameter maps to `Privileged` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--privileged` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers or tasks run on Fargate.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-privileged)
        */
       override fun privileged(): Any? = unwrap(this).getPrivileged()
 
       /**
+       * When this parameter is true, the container is given read-only access to its root file
+       * system.
+       *
+       * This parameter maps to `ReadonlyRootfs` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the
+       * `--read-only` option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       *
+       * This parameter is not supported for Windows containers.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-readonlyrootfilesystem)
        */
       override fun readonlyRootFilesystem(): Any? = unwrap(this).getReadonlyRootFilesystem()
 
       /**
+       * The private repository authentication credentials to use.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-repositorycredentials)
        */
       override fun repositoryCredentials(): Any? = unwrap(this).getRepositoryCredentials()
 
       /**
+       * The type and amount of a resource to assign to a container.
+       *
+       * The only supported resource is a GPU.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-resourcerequirements)
        */
       override fun resourceRequirements(): Any? = unwrap(this).getResourceRequirements()
 
       /**
+       * The secrets to pass to the container.
+       *
+       * For more information, see [Specifying Sensitive
+       * Data](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/specifying-sensitive-data.html)
+       * in the Amazon Elastic Container Service Developer Guide.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-secrets)
        */
       override fun secrets(): Any? = unwrap(this).getSecrets()
 
       /**
+       * A list of `ulimits` to set in the container.
+       *
+       * If a `ulimit` value is specified in a task definition, it overrides the default values set
+       * by Docker. This parameter maps to `Ulimits` in the [Create a
+       * container](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/#operation/ContainerCreate)
+       * section of the [Docker Remote
+       * API](https://docs.aws.amazon.com/https://docs.docker.com/engine/api/v1.35/) and the `--ulimit`
+       * option to [docker
+       * run](https://docs.aws.amazon.com/https://docs.docker.com/engine/reference/run/#security-configuration)
+       * .
+       *
+       * Amazon ECS tasks hosted on Fargate use the default resource limit values set by the
+       * operating system with the exception of the nofile resource limit parameter which Fargate
+       * overrides. The `nofile` resource limit sets a restriction on the number of open files that a
+       * container can use. The default `nofile` soft limit is `1024` and the default hard limit is
+       * `65535` .
+       *
+       * This parameter requires version 1.18 of the Docker Remote API or greater on your container
+       * instance. To check the Docker Remote API version on your container instance, log in to your
+       * container instance and run the following command: sudo docker version `--format
+       * '{{.Server.APIVersion}}'`
+       *
+       *
+       * This parameter is not supported for Windows containers.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-ulimits)
        */
       override fun ulimits(): Any? = unwrap(this).getUlimits()
 
       /**
+       * The user to use inside the container.
+       *
+       * This parameter maps to User in the Create a container section of the Docker Remote API and
+       * the --user option to docker run.
+       *
+       *
+       * When running tasks using the `host` network mode, don't run containers using the `root user
+       * (UID 0)` . We recommend using a non-root user for better security.
+       *
+       *
+       * You can specify the `user` using the following formats. If specifying a UID or GID, you
+       * must specify it as a positive integer.
+       *
+       * * `user`
+       * * `user:group`
+       * * `uid`
+       * * `uid:gid`
+       * * `user:gi`
+       * * `uid:group`
+       *
+       *
+       * This parameter is not supported for Windows containers.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-taskcontainerproperties.html#cfn-batch-jobdefinition-taskcontainerproperties-user)
        */
       override fun user(): String? = unwrap(this).getUser()

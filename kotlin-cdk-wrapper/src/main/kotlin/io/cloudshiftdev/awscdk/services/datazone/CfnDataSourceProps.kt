@@ -48,6 +48,7 @@ import kotlin.jvm.JvmName
  * .schemaName("schemaName")
  * .build()))
  * // the properties below are optional
+ * .autoImportDataQualityResult(false)
  * .dataAccessRole("dataAccessRole")
  * .build())
  * .redshiftRunConfiguration(RedshiftRunConfigurationInputProperty.builder()

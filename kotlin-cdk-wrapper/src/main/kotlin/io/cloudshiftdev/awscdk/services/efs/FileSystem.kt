@@ -329,6 +329,15 @@ public open class FileSystem(
     public fun removalPolicy(removalPolicy: RemovalPolicy)
 
     /**
+     * Replication configuration for the file system.
+     *
+     * Default: - no replication
+     *
+     * @param replicationConfiguration Replication configuration for the file system. 
+     */
+    public fun replicationConfiguration(replicationConfiguration: ReplicationConfiguration)
+
+    /**
      * Whether to enable the filesystem's replication overwrite protection or not.
      *
      * Set false if you want to create a read-only filesystem for use as a replication destination.
@@ -575,6 +584,17 @@ public open class FileSystem(
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+    }
+
+    /**
+     * Replication configuration for the file system.
+     *
+     * Default: - no replication
+     *
+     * @param replicationConfiguration Replication configuration for the file system. 
+     */
+    override fun replicationConfiguration(replicationConfiguration: ReplicationConfiguration) {
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfiguration::unwrap))
     }
 
     /**

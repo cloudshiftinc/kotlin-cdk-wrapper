@@ -614,12 +614,30 @@ public open class CfnAutoScalingGroup(
   }
 
   /**
+   * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+   * `NotificationConfigurations` property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource.  For an example template snippet, see [Auto scaling template
+   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+   * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
+   * *Amazon EC2 Auto Scaling User Guide*.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
   public open fun notificationConfiguration(): Any? = unwrap(this).getNotificationConfiguration()
 
   /**
+   * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+   * `NotificationConfigurations` property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource.  For an example template snippet, see [Auto scaling template
+   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+   * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
+   * *Amazon EC2 Auto Scaling User Guide*.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
@@ -628,6 +646,15 @@ public open class CfnAutoScalingGroup(
   }
 
   /**
+   * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+   * `NotificationConfigurations` property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource.  For an example template snippet, see [Auto scaling template
+   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+   * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
+   * *Amazon EC2 Auto Scaling User Guide*.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
@@ -636,6 +663,15 @@ public open class CfnAutoScalingGroup(
   }
 
   /**
+   * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+   * `NotificationConfigurations` property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource.  For an example template snippet, see [Auto scaling template
+   * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+   *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+   * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in the
+   * *Amazon EC2 Auto Scaling User Guide*.
+   *
    * @deprecated this property has been deprecated
    */
   @Deprecated(message = "deprecated in CDK")
@@ -872,8 +908,8 @@ public open class CfnAutoScalingGroup(
      *
      * The amount of time, in seconds, between one scaling activity ending and another one starting
      * due to simple scaling policies. For more information, see [Scaling cooldowns for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Default: `300` seconds
      *
@@ -936,9 +972,9 @@ public open class CfnAutoScalingGroup(
      * The unit of measurement for the value specified for desired capacity.
      *
      * Amazon EC2 Auto Scaling supports `DesiredCapacityType` for attribute-based instance type
-     * selection only. For more information, see [Creating an Auto Scaling group using attribute-based
+     * selection only. For more information, see [Create a mixed instances group using attribute-based
      * instance type
-     * selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html)
+     * selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-mixed-instances-group-attribute-based-instance-type-selection.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * By default, Amazon EC2 Auto Scaling specifies `units` , which translates into number of
@@ -976,9 +1012,10 @@ public open class CfnAutoScalingGroup(
      * A comma-separated value string of one or more health check types.
      *
      * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check
-     * and cannot be disabled. For more information, see [Health checks for Auto Scaling
-     * instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the
-     * *Amazon EC2 Auto Scaling User Guide* .
+     * and cannot be disabled. For more information, see [Health checks for instances in an Auto
+     * Scaling
+     * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Only specify `EC2` if you must clear a value that was previously set.
      *
@@ -1166,8 +1203,8 @@ public open class CfnAutoScalingGroup(
      * The maximum amount of time, in seconds, that an instance can be in service.
      *
      * The default is null. If specified, the value must be either 0 or a number equal to or greater
-     * than 86,400 seconds (1 day). For more information, see [Replacing Auto Scaling instances based
-     * on maximum instance
+     * than 86,400 seconds (1 day). For more information, see [Replace Auto Scaling instances based on
+     * maximum instance
      * lifetime](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
@@ -1294,7 +1331,7 @@ public open class CfnAutoScalingGroup(
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto
      * Scaling when scaling in.
      *
-     * For more information about preventing instances from terminating on scale in, see [Using
+     * For more information about preventing instances from terminating on scale in, see [Use
      * instance scale-in
      * protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -1309,7 +1346,7 @@ public open class CfnAutoScalingGroup(
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto
      * Scaling when scaling in.
      *
-     * For more information about preventing instances from terminating on scale in, see [Using
+     * For more information about preventing instances from terminating on scale in, see [Use
      * instance scale-in
      * protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -1321,26 +1358,74 @@ public open class CfnAutoScalingGroup(
     public fun newInstancesProtectedFromScaleIn(newInstancesProtectedFromScaleIn: IResolvable)
 
     /**
+     * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+     * `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
      * @deprecated this property has been deprecated
-     * @param notificationConfiguration 
+     * @param notificationConfiguration A structure that specifies an Amazon SNS notification
+     * configuration for the `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*. 
      */
     @Deprecated(message = "deprecated in CDK")
     public fun notificationConfiguration(notificationConfiguration: IResolvable)
 
     /**
+     * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+     * `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
      * @deprecated this property has been deprecated
-     * @param notificationConfiguration 
+     * @param notificationConfiguration A structure that specifies an Amazon SNS notification
+     * configuration for the `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*. 
      */
     @Deprecated(message = "deprecated in CDK")
     public
         fun notificationConfiguration(notificationConfiguration: NotificationConfigurationProperty)
 
     /**
+     * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+     * `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
      * @deprecated this property has been deprecated
-     * @param notificationConfiguration 
+     * @param notificationConfiguration A structure that specifies an Amazon SNS notification
+     * configuration for the `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*. 
      */
     @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1477,9 +1562,9 @@ public open class CfnAutoScalingGroup(
     /**
      * A policy or a list of policies that are used to select the instance to terminate.
      *
-     * These policies are executed in the order that you list them. For more information, see [Work
-     * with Amazon EC2 Auto Scaling termination
-     * policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
+     * These policies are executed in the order that you list them. For more information, see
+     * [Configure termination policies for Amazon EC2 Auto
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Valid values: `Default` | `AllocationStrategy` | `ClosestToNextInstanceHour` |
@@ -1495,9 +1580,9 @@ public open class CfnAutoScalingGroup(
     /**
      * A policy or a list of policies that are used to select the instance to terminate.
      *
-     * These policies are executed in the order that you list them. For more information, see [Work
-     * with Amazon EC2 Auto Scaling termination
-     * policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
+     * These policies are executed in the order that you list them. For more information, see
+     * [Configure termination policies for Amazon EC2 Auto
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Valid values: `Default` | `AllocationStrategy` | `ClosestToNextInstanceHour` |
@@ -1674,8 +1759,8 @@ public open class CfnAutoScalingGroup(
      *
      * The amount of time, in seconds, between one scaling activity ending and another one starting
      * due to simple scaling policies. For more information, see [Scaling cooldowns for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Default: `300` seconds
      *
@@ -1744,9 +1829,9 @@ public open class CfnAutoScalingGroup(
      * The unit of measurement for the value specified for desired capacity.
      *
      * Amazon EC2 Auto Scaling supports `DesiredCapacityType` for attribute-based instance type
-     * selection only. For more information, see [Creating an Auto Scaling group using attribute-based
+     * selection only. For more information, see [Create a mixed instances group using attribute-based
      * instance type
-     * selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html)
+     * selection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-mixed-instances-group-attribute-based-instance-type-selection.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * By default, Amazon EC2 Auto Scaling specifies `units` , which translates into number of
@@ -1788,9 +1873,10 @@ public open class CfnAutoScalingGroup(
      * A comma-separated value string of one or more health check types.
      *
      * The valid values are `EC2` , `ELB` , and `VPC_LATTICE` . `EC2` is the default health check
-     * and cannot be disabled. For more information, see [Health checks for Auto Scaling
-     * instances](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck.html) in the
-     * *Amazon EC2 Auto Scaling User Guide* .
+     * and cannot be disabled. For more information, see [Health checks for instances in an Auto
+     * Scaling
+     * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-health-checks.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Only specify `EC2` if you must clear a value that was previously set.
      *
@@ -2003,8 +2089,8 @@ public open class CfnAutoScalingGroup(
      * The maximum amount of time, in seconds, that an instance can be in service.
      *
      * The default is null. If specified, the value must be either 0 or a number equal to or greater
-     * than 86,400 seconds (1 day). For more information, see [Replacing Auto Scaling instances based
-     * on maximum instance
+     * than 86,400 seconds (1 day). For more information, see [Replace Auto Scaling instances based on
+     * maximum instance
      * lifetime](https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
@@ -2147,7 +2233,7 @@ public open class CfnAutoScalingGroup(
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto
      * Scaling when scaling in.
      *
-     * For more information about preventing instances from terminating on scale in, see [Using
+     * For more information about preventing instances from terminating on scale in, see [Use
      * instance scale-in
      * protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -2164,7 +2250,7 @@ public open class CfnAutoScalingGroup(
      * Indicates whether newly launched instances are protected from termination by Amazon EC2 Auto
      * Scaling when scaling in.
      *
-     * For more information about preventing instances from terminating on scale in, see [Using
+     * For more information about preventing instances from terminating on scale in, see [Use
      * instance scale-in
      * protection](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-instance-protection.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
@@ -2178,9 +2264,25 @@ public open class CfnAutoScalingGroup(
     }
 
     /**
+     * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+     * `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
      * @deprecated this property has been deprecated
-     * @param notificationConfiguration 
+     * @param notificationConfiguration A structure that specifies an Amazon SNS notification
+     * configuration for the `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*. 
      */
     @Deprecated(message = "deprecated in CDK")
     override fun notificationConfiguration(notificationConfiguration: IResolvable) {
@@ -2188,9 +2290,25 @@ public open class CfnAutoScalingGroup(
     }
 
     /**
+     * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+     * `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
      * @deprecated this property has been deprecated
-     * @param notificationConfiguration 
+     * @param notificationConfiguration A structure that specifies an Amazon SNS notification
+     * configuration for the `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*. 
      */
     @Deprecated(message = "deprecated in CDK")
     override
@@ -2199,9 +2317,25 @@ public open class CfnAutoScalingGroup(
     }
 
     /**
+     * (deprecated) A structure that specifies an Amazon SNS notification configuration for the
+     * `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-notificationconfiguration)
      * @deprecated this property has been deprecated
-     * @param notificationConfiguration 
+     * @param notificationConfiguration A structure that specifies an Amazon SNS notification
+     * configuration for the `NotificationConfigurations` property of the
+     * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+     * resource.  For an example template snippet, see [Auto scaling template
+     * snippets](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/quickref-autoscaling.html).
+     *  For more information, see [Get Amazon SNS notifications when your Auto Scaling group
+     * scales](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ASGettingNotifications.html) in
+     * the *Amazon EC2 Auto Scaling User Guide*. 
      */
     @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -2354,9 +2488,9 @@ public open class CfnAutoScalingGroup(
     /**
      * A policy or a list of policies that are used to select the instance to terminate.
      *
-     * These policies are executed in the order that you list them. For more information, see [Work
-     * with Amazon EC2 Auto Scaling termination
-     * policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
+     * These policies are executed in the order that you list them. For more information, see
+     * [Configure termination policies for Amazon EC2 Auto
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Valid values: `Default` | `AllocationStrategy` | `ClosestToNextInstanceHour` |
@@ -2374,9 +2508,9 @@ public open class CfnAutoScalingGroup(
     /**
      * A policy or a list of policies that are used to select the instance to terminate.
      *
-     * These policies are executed in the order that you list them. For more information, see [Work
-     * with Amazon EC2 Auto Scaling termination
-     * policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
+     * These policies are executed in the order that you list them. For more information, see
+     * [Configure termination policies for Amazon EC2 Auto
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-termination-policies.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Valid values: `Default` | `AllocationStrategy` | `ClosestToNextInstanceHour` |
@@ -5722,7 +5856,7 @@ public open class CfnAutoScalingGroup(
      * The instance type, such as `m3.xlarge` . You must specify an instance type that is supported
      * in your requested Region and Availability Zones. For more information, see [Instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-     * Elastic Compute Cloud User Guide* .
+     * EC2 User Guide for Linux Instances* .
      *
      * You can specify up to 40 instance types per Auto Scaling group.
      *
@@ -5835,7 +5969,7 @@ public open class CfnAutoScalingGroup(
        * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
        * type that is supported in your requested Region and Availability Zones. For more information,
        * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * in the *Amazon EC2 User Guide for Linux Instances* .
        * You can specify up to 40 instance types per Auto Scaling group.
        */
       public fun instanceType(instanceType: String)
@@ -5981,7 +6115,7 @@ public open class CfnAutoScalingGroup(
        * @param instanceType The instance type, such as `m3.xlarge` . You must specify an instance
        * type that is supported in your requested Region and Availability Zones. For more information,
        * see [Instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
-       * in the *Amazon Elastic Compute Cloud User Guide* .
+       * in the *Amazon EC2 User Guide for Linux Instances* .
        * You can specify up to 40 instance types per Auto Scaling group.
        */
       override fun instanceType(instanceType: String) {
@@ -6102,7 +6236,7 @@ public open class CfnAutoScalingGroup(
        * The instance type, such as `m3.xlarge` . You must specify an instance type that is
        * supported in your requested Region and Availability Zones. For more information, see [Instance
        * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
-       * Elastic Compute Cloud User Guide* .
+       * EC2 User Guide for Linux Instances* .
        *
        * You can specify up to 40 instance types per Auto Scaling group.
        *
@@ -6735,9 +6869,9 @@ public open class CfnAutoScalingGroup(
      * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified
      * notification target.
      *
-     * For information about creating this role, see [Configure a notification target for a
-     * lifecycle
-     * hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target)
+     * For information about creating this role, see [Prepare to add a lifecycle hook to your Auto
+     * Scaling
+     * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html)
      * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.
@@ -6799,9 +6933,9 @@ public open class CfnAutoScalingGroup(
       /**
        * @param roleArn The ARN of the IAM role that allows the Auto Scaling group to publish to the
        * specified notification target.
-       * For information about creating this role, see [Configure a notification target for a
-       * lifecycle
-       * hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target)
+       * For information about creating this role, see [Prepare to add a lifecycle hook to your Auto
+       * Scaling
+       * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        *
        * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.
@@ -6875,9 +7009,9 @@ public open class CfnAutoScalingGroup(
       /**
        * @param roleArn The ARN of the IAM role that allows the Auto Scaling group to publish to the
        * specified notification target.
-       * For information about creating this role, see [Configure a notification target for a
-       * lifecycle
-       * hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target)
+       * For information about creating this role, see [Prepare to add a lifecycle hook to your Auto
+       * Scaling
+       * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        *
        * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.
@@ -6957,9 +7091,9 @@ public open class CfnAutoScalingGroup(
        * The ARN of the IAM role that allows the Auto Scaling group to publish to the specified
        * notification target.
        *
-       * For information about creating this role, see [Configure a notification target for a
-       * lifecycle
-       * hook](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html#lifecycle-hook-notification-target)
+       * For information about creating this role, see [Prepare to add a lifecycle hook to your Auto
+       * Scaling
+       * group](https://docs.aws.amazon.com/autoscaling/ec2/userguide/prepare-for-lifecycle-notifications.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        *
        * Valid only if the notification target is an Amazon SNS topic or an Amazon SQS queue.
@@ -7280,9 +7414,9 @@ public open class CfnAutoScalingGroup(
      *
      * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
      *
-     * For more information, see [Auto Scaling group
-     * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
-     * in the *Amazon EC2 Auto Scaling User Guide* .
+     * For more information, see [Amazon CloudWatch metrics for Amazon EC2 Auto
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html) in
+     * the *Amazon EC2 Auto Scaling User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-metrics)
      */
@@ -7327,8 +7461,8 @@ public open class CfnAutoScalingGroup(
        *
        * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
        *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * For more information, see [Amazon CloudWatch metrics for Amazon EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        */
       public fun metrics(metrics: List<String>)
@@ -7360,8 +7494,8 @@ public open class CfnAutoScalingGroup(
        *
        * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
        *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * For more information, see [Amazon CloudWatch metrics for Amazon EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        */
       public fun metrics(vararg metrics: String)
@@ -7409,8 +7543,8 @@ public open class CfnAutoScalingGroup(
        *
        * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
        *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * For more information, see [Amazon CloudWatch metrics for Amazon EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        */
       override fun metrics(metrics: List<String>) {
@@ -7444,8 +7578,8 @@ public open class CfnAutoScalingGroup(
        *
        * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
        *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * For more information, see [Amazon CloudWatch metrics for Amazon EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        */
       override fun metrics(vararg metrics: String): Unit = metrics(metrics.toList())
@@ -7495,8 +7629,8 @@ public open class CfnAutoScalingGroup(
        *
        * If you specify `Granularity` and don't specify any metrics, all metrics are enabled.
        *
-       * For more information, see [Auto Scaling group
-       * metrics](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-cloudwatch-monitoring.html#as-group-metrics)
+       * For more information, see [Amazon CloudWatch metrics for Amazon EC2 Auto
+       * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-metrics.html)
        * in the *Amazon EC2 Auto Scaling User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-metricscollection.html#cfn-autoscaling-autoscalinggroup-metricscollection-metrics)

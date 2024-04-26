@@ -94,12 +94,12 @@ public open class CfnAsset(
   }
 
   /**
-   * The External ID of the asset.
+   * The external ID of the asset model composite model.
    */
   public open fun assetExternalId(): String? = unwrap(this).getAssetExternalId()
 
   /**
-   * The External ID of the asset.
+   * The external ID of the asset model composite model.
    */
   public open fun assetExternalId(`value`: String) {
     unwrap(this).setAssetExternalId(`value`)
@@ -233,10 +233,14 @@ public open class CfnAsset(
     public fun assetDescription(assetDescription: String)
 
     /**
-     * The External ID of the asset.
+     * The external ID of the asset model composite model.
+     *
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetexternalid)
-     * @param assetExternalId The External ID of the asset. 
+     * @param assetExternalId The external ID of the asset model composite model. 
      */
     public fun assetExternalId(assetExternalId: String)
 
@@ -367,10 +371,14 @@ public open class CfnAsset(
     }
 
     /**
-     * The External ID of the asset.
+     * The external ID of the asset model composite model.
+     *
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-asset.html#cfn-iotsitewise-asset-assetexternalid)
-     * @param assetExternalId The External ID of the asset. 
+     * @param assetExternalId The external ID of the asset model composite model. 
      */
     override fun assetExternalId(assetExternalId: String) {
       cdkBuilder.assetExternalId(assetExternalId)
@@ -552,14 +560,24 @@ public open class CfnAsset(
     public fun childAssetId(): String
 
     /**
-     * String-friendly customer provided external ID.
+     * The external ID of the hierarchy, if it has one.
+     *
+     * When you update an asset hierarchy, you may assign an external ID if it doesn't already have
+     * one. You can't change the external ID of an asset hierarchy that already has one. For more
+     * information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-externalid)
      */
     public fun externalId(): String? = unwrap(this).getExternalId()
 
     /**
-     * Customer provided actual UUID for property.
+     * The ID of the hierarchy. This ID is a `hierarchyId` .
+     *
+     *
+     * This is a return value and can't be set.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-id)
      */
@@ -585,12 +603,19 @@ public open class CfnAsset(
       public fun childAssetId(childAssetId: String)
 
       /**
-       * @param externalId String-friendly customer provided external ID.
+       * @param externalId The external ID of the hierarchy, if it has one.
+       * When you update an asset hierarchy, you may assign an external ID if it doesn't already
+       * have one. You can't change the external ID of an asset hierarchy that already has one. For
+       * more information, see [Using external
+       * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids)
+       * in the *AWS IoT SiteWise User Guide* .
        */
       public fun externalId(externalId: String)
 
       /**
-       * @param id Customer provided actual UUID for property.
+       * @param id The ID of the hierarchy. This ID is a `hierarchyId` .
+       *
+       * This is a return value and can't be set.
        */
       public fun id(id: String)
 
@@ -614,14 +639,21 @@ public open class CfnAsset(
       }
 
       /**
-       * @param externalId String-friendly customer provided external ID.
+       * @param externalId The external ID of the hierarchy, if it has one.
+       * When you update an asset hierarchy, you may assign an external ID if it doesn't already
+       * have one. You can't change the external ID of an asset hierarchy that already has one. For
+       * more information, see [Using external
+       * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids)
+       * in the *AWS IoT SiteWise User Guide* .
        */
       override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
       /**
-       * @param id Customer provided actual UUID for property.
+       * @param id The ID of the hierarchy. This ID is a `hierarchyId` .
+       *
+       * This is a return value and can't be set.
        */
       override fun id(id: String) {
         cdkBuilder.id(id)
@@ -651,14 +683,24 @@ public open class CfnAsset(
       override fun childAssetId(): String = unwrap(this).getChildAssetId()
 
       /**
-       * String-friendly customer provided external ID.
+       * The external ID of the hierarchy, if it has one.
+       *
+       * When you update an asset hierarchy, you may assign an external ID if it doesn't already
+       * have one. You can't change the external ID of an asset hierarchy that already has one. For
+       * more information, see [Using external
+       * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids)
+       * in the *AWS IoT SiteWise User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-externalid)
        */
       override fun externalId(): String? = unwrap(this).getExternalId()
 
       /**
-       * Customer provided actual UUID for property.
+       * The ID of the hierarchy. This ID is a `hierarchyId` .
+       *
+       *
+       * This is a return value and can't be set.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assethierarchy.html#cfn-iotsitewise-asset-assethierarchy-id)
        */
@@ -727,14 +769,22 @@ public open class CfnAsset(
     public fun alias(): String? = unwrap(this).getAlias()
 
     /**
-     * String-friendly customer provided external ID.
+     * The external ID of the property.
+     *
+     * For more information, see [Using external
+     * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids) in
+     * the *AWS IoT SiteWise User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-externalid)
      */
     public fun externalId(): String? = unwrap(this).getExternalId()
 
     /**
-     * Customer provided actual UUID for property.
+     * The ID of the asset property.
+     *
+     *
+     * This is a return value and can't be set.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-id)
      */
@@ -783,12 +833,17 @@ public open class CfnAsset(
       public fun alias(alias: String)
 
       /**
-       * @param externalId String-friendly customer provided external ID.
+       * @param externalId The external ID of the property.
+       * For more information, see [Using external
+       * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids)
+       * in the *AWS IoT SiteWise User Guide* .
        */
       public fun externalId(externalId: String)
 
       /**
-       * @param id Customer provided actual UUID for property.
+       * @param id The ID of the asset property.
+       *
+       * This is a return value and can't be set.
        */
       public fun id(id: String)
 
@@ -832,14 +887,19 @@ public open class CfnAsset(
       }
 
       /**
-       * @param externalId String-friendly customer provided external ID.
+       * @param externalId The external ID of the property.
+       * For more information, see [Using external
+       * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids)
+       * in the *AWS IoT SiteWise User Guide* .
        */
       override fun externalId(externalId: String) {
         cdkBuilder.externalId(externalId)
       }
 
       /**
-       * @param id Customer provided actual UUID for property.
+       * @param id The ID of the asset property.
+       *
+       * This is a return value and can't be set.
        */
       override fun id(id: String) {
         cdkBuilder.id(id)
@@ -893,14 +953,22 @@ public open class CfnAsset(
       override fun alias(): String? = unwrap(this).getAlias()
 
       /**
-       * String-friendly customer provided external ID.
+       * The external ID of the property.
+       *
+       * For more information, see [Using external
+       * IDs](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/object-ids.html#external-ids)
+       * in the *AWS IoT SiteWise User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-externalid)
        */
       override fun externalId(): String? = unwrap(this).getExternalId()
 
       /**
-       * Customer provided actual UUID for property.
+       * The ID of the asset property.
+       *
+       *
+       * This is a return value and can't be set.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-asset-assetproperty.html#cfn-iotsitewise-asset-assetproperty-id)
        */

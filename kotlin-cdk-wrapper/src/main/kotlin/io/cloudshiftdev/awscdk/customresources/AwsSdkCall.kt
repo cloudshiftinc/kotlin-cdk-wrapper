@@ -78,6 +78,23 @@ public interface AwsSdkCall {
   public fun ignoreErrorCodesMatching(): String? = unwrap(this).getIgnoreErrorCodesMatching()
 
   /**
+   * A property used to configure logging during lambda function execution.
+   *
+   * Note: The default Logging configuration is all. This configuration will enable logging on all
+   * logged data
+   * in the lambda handler. This includes:
+   *
+   * * The event object that is received by the lambda handler
+   * * The response received after making a API call
+   * * The response object that the lambda handler will return
+   * * SDK versioning information
+   * * Caught and uncaught errors
+   *
+   * Default: Logging.all()
+   */
+  public fun logging(): Logging? = unwrap(this).getLogging()?.let(Logging::wrap)
+
+  /**
    * Restrict the data returned by the custom resource to specific paths in the API response.
    *
    * Use this to limit the data returned by the custom
@@ -172,6 +189,20 @@ public interface AwsSdkCall {
      * error will not be thrown.
      */
     public fun ignoreErrorCodesMatching(ignoreErrorCodesMatching: String)
+
+    /**
+     * @param logging A property used to configure logging during lambda function execution.
+     * Note: The default Logging configuration is all. This configuration will enable logging on all
+     * logged data
+     * in the lambda handler. This includes:
+     *
+     * * The event object that is received by the lambda handler
+     * * The response received after making a API call
+     * * The response object that the lambda handler will return
+     * * SDK versioning information
+     * * Caught and uncaught errors
+     */
+    public fun logging(logging: Logging)
 
     /**
      * @param outputPaths Restrict the data returned by the custom resource to specific paths in the
@@ -270,6 +301,22 @@ public interface AwsSdkCall {
      */
     override fun ignoreErrorCodesMatching(ignoreErrorCodesMatching: String) {
       cdkBuilder.ignoreErrorCodesMatching(ignoreErrorCodesMatching)
+    }
+
+    /**
+     * @param logging A property used to configure logging during lambda function execution.
+     * Note: The default Logging configuration is all. This configuration will enable logging on all
+     * logged data
+     * in the lambda handler. This includes:
+     *
+     * * The event object that is received by the lambda handler
+     * * The response received after making a API call
+     * * The response object that the lambda handler will return
+     * * SDK versioning information
+     * * Caught and uncaught errors
+     */
+    override fun logging(logging: Logging) {
+      cdkBuilder.logging(logging.let(Logging::unwrap))
     }
 
     /**
@@ -385,6 +432,23 @@ public interface AwsSdkCall {
      * Default: - do not catch errors
      */
     override fun ignoreErrorCodesMatching(): String? = unwrap(this).getIgnoreErrorCodesMatching()
+
+    /**
+     * A property used to configure logging during lambda function execution.
+     *
+     * Note: The default Logging configuration is all. This configuration will enable logging on all
+     * logged data
+     * in the lambda handler. This includes:
+     *
+     * * The event object that is received by the lambda handler
+     * * The response received after making a API call
+     * * The response object that the lambda handler will return
+     * * SDK versioning information
+     * * Caught and uncaught errors
+     *
+     * Default: Logging.all()
+     */
+    override fun logging(): Logging? = unwrap(this).getLogging()?.let(Logging::wrap)
 
     /**
      * Restrict the data returned by the custom resource to specific paths in the API response.

@@ -64,6 +64,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .userPoolArn("userPoolArn")
  * // the properties below are optional
  * .clientIds(List.of("clientIds"))
+ * .groupConfiguration(CognitoGroupConfigurationProperty.builder()
+ * .groupEntityType("groupEntityType")
+ * .build())
  * .build())
  * .build())
  * .policyStoreId("policyStoreId")
@@ -124,26 +127,26 @@ public open class CfnIdentitySource(
   public open fun attrIdentitySourceId(): String = unwrap(this).getAttrIdentitySourceId()
 
   /**
-   * Contains configuration information used when creating a new identity source.
+   * Contains configuration information about an identity source.
    */
   public open fun configuration(): Any = unwrap(this).getConfiguration()
 
   /**
-   * Contains configuration information used when creating a new identity source.
+   * Contains configuration information about an identity source.
    */
   public open fun configuration(`value`: IResolvable) {
     unwrap(this).setConfiguration(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * Contains configuration information used when creating a new identity source.
+   * Contains configuration information about an identity source.
    */
   public open fun configuration(`value`: IdentitySourceConfigurationProperty) {
     unwrap(this).setConfiguration(`value`.let(IdentitySourceConfigurationProperty::unwrap))
   }
 
   /**
-   * Contains configuration information used when creating a new identity source.
+   * Contains configuration information about an identity source.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("3f097b6a0169411a9541f2f293b2ec50920e1c9135042b5e23a00482ca4233e1")
@@ -191,62 +194,26 @@ public open class CfnIdentitySource(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Contains configuration information used when creating a new identity source.
-     *
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * Contains configuration information about an identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
+     * @param configuration Contains configuration information about an identity source. 
      */
     public fun configuration(configuration: IResolvable)
 
     /**
-     * Contains configuration information used when creating a new identity source.
-     *
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * Contains configuration information about an identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
+     * @param configuration Contains configuration information about an identity source. 
      */
     public fun configuration(configuration: IdentitySourceConfigurationProperty)
 
     /**
-     * Contains configuration information used when creating a new identity source.
-     *
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * Contains configuration information about an identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
+     * @param configuration Contains configuration information about an identity source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbfe0ed3878f6d1c30b37f35051aaaf5948f60ea00fa239fb3ec49a4c3cee4d")
@@ -285,66 +252,30 @@ public open class CfnIdentitySource(
         id)
 
     /**
-     * Contains configuration information used when creating a new identity source.
-     *
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * Contains configuration information about an identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
+     * @param configuration Contains configuration information about an identity source. 
      */
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
     /**
-     * Contains configuration information used when creating a new identity source.
-     *
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * Contains configuration information about an identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
+     * @param configuration Contains configuration information about an identity source. 
      */
     override fun configuration(configuration: IdentitySourceConfigurationProperty) {
       cdkBuilder.configuration(configuration.let(IdentitySourceConfigurationProperty::unwrap))
     }
 
     /**
-     * Contains configuration information used when creating a new identity source.
-     *
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * Contains configuration information about an identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
+     * @param configuration Contains configuration information about an identity source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("8bbfe0ed3878f6d1c30b37f35051aaaf5948f60ea00fa239fb3ec49a4c3cee4d")
@@ -405,6 +336,105 @@ public open class CfnIdentitySource(
   }
 
   /**
+   * The type of entity that a policy store maps to groups from an Amazon Cognito user pool identity
+   * source.
+   *
+   * This data type is part of a
+   * [CognitoUserPoolConfiguration](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CognitoUserPoolConfiguration.html)
+   * structure and is a request parameter in
+   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.verifiedpermissions.*;
+   * CognitoGroupConfigurationProperty cognitoGroupConfigurationProperty =
+   * CognitoGroupConfigurationProperty.builder()
+   * .groupEntityType("groupEntityType")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitogroupconfiguration.html)
+   */
+  public interface CognitoGroupConfigurationProperty {
+    /**
+     * The name of the schema entity type that's mapped to the user pool group.
+     *
+     * Defaults to `AWS::CognitoGroup` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitogroupconfiguration.html#cfn-verifiedpermissions-identitysource-cognitogroupconfiguration-groupentitytype)
+     */
+    public fun groupEntityType(): String
+
+    /**
+     * A builder for [CognitoGroupConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param groupEntityType The name of the schema entity type that's mapped to the user pool
+       * group. 
+       * Defaults to `AWS::CognitoGroup` .
+       */
+      public fun groupEntityType(groupEntityType: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty.builder()
+
+      /**
+       * @param groupEntityType The name of the schema entity type that's mapped to the user pool
+       * group. 
+       * Defaults to `AWS::CognitoGroup` .
+       */
+      override fun groupEntityType(groupEntityType: String) {
+        cdkBuilder.groupEntityType(groupEntityType)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty,
+    ) : CdkObject(cdkObject), CognitoGroupConfigurationProperty {
+      /**
+       * The name of the schema entity type that's mapped to the user pool group.
+       *
+       * Defaults to `AWS::CognitoGroup` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitogroupconfiguration.html#cfn-verifiedpermissions-identitysource-cognitogroupconfiguration-groupentitytype)
+       */
+      override fun groupEntityType(): String = unwrap(this).getGroupEntityType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CognitoGroupConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty):
+          CognitoGroupConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CognitoGroupConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CognitoGroupConfigurationProperty):
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.CognitoGroupConfigurationProperty
+    }
+  }
+
+  /**
    * A structure that contains configuration information used when creating or updating an identity
    * source that represents a connection to an Amazon Cognito user pool used as an identity provider
    * for Verified Permissions .
@@ -420,6 +450,9 @@ public open class CfnIdentitySource(
    * .userPoolArn("userPoolArn")
    * // the properties below are optional
    * .clientIds(List.of("clientIds"))
+   * .groupConfiguration(CognitoGroupConfigurationProperty.builder()
+   * .groupEntityType("groupEntityType")
+   * .build())
    * .build();
    * ```
    *
@@ -435,6 +468,14 @@ public open class CfnIdentitySource(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-clientids)
      */
     public fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+
+    /**
+     * The type of entity that a policy store maps to groups from an Amazon Cognito user pool
+     * identity source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-groupconfiguration)
+     */
+    public fun groupConfiguration(): Any? = unwrap(this).getGroupConfiguration()
 
     /**
      * The [Amazon Resource Name
@@ -463,6 +504,27 @@ public open class CfnIdentitySource(
        * Example: `"ClientIds": ["&amp;ExampleCogClientId;"]`
        */
       public fun clientIds(vararg clientIds: String)
+
+      /**
+       * @param groupConfiguration The type of entity that a policy store maps to groups from an
+       * Amazon Cognito user pool identity source.
+       */
+      public fun groupConfiguration(groupConfiguration: IResolvable)
+
+      /**
+       * @param groupConfiguration The type of entity that a policy store maps to groups from an
+       * Amazon Cognito user pool identity source.
+       */
+      public fun groupConfiguration(groupConfiguration: CognitoGroupConfigurationProperty)
+
+      /**
+       * @param groupConfiguration The type of entity that a policy store maps to groups from an
+       * Amazon Cognito user pool identity source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8c5f638c5e106cbb2c9bd28fc549fa07c96453673ad0b8790d827edaf575c470")
+      public
+          fun groupConfiguration(groupConfiguration: CognitoGroupConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param userPoolArn The [Amazon Resource Name
@@ -495,6 +557,32 @@ public open class CfnIdentitySource(
       override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
 
       /**
+       * @param groupConfiguration The type of entity that a policy store maps to groups from an
+       * Amazon Cognito user pool identity source.
+       */
+      override fun groupConfiguration(groupConfiguration: IResolvable) {
+        cdkBuilder.groupConfiguration(groupConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param groupConfiguration The type of entity that a policy store maps to groups from an
+       * Amazon Cognito user pool identity source.
+       */
+      override fun groupConfiguration(groupConfiguration: CognitoGroupConfigurationProperty) {
+        cdkBuilder.groupConfiguration(groupConfiguration.let(CognitoGroupConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param groupConfiguration The type of entity that a policy store maps to groups from an
+       * Amazon Cognito user pool identity source.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("8c5f638c5e106cbb2c9bd28fc549fa07c96453673ad0b8790d827edaf575c470")
+      override
+          fun groupConfiguration(groupConfiguration: CognitoGroupConfigurationProperty.Builder.() -> Unit):
+          Unit = groupConfiguration(CognitoGroupConfigurationProperty(groupConfiguration))
+
+      /**
        * @param userPoolArn The [Amazon Resource Name
        * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
        * Amazon Cognito user pool that contains the identities to be authorized. 
@@ -520,6 +608,14 @@ public open class CfnIdentitySource(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-clientids)
        */
       override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
+
+      /**
+       * The type of entity that a policy store maps to groups from an Amazon Cognito user pool
+       * identity source.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-cognitouserpoolconfiguration.html#cfn-verifiedpermissions-identitysource-cognitouserpoolconfiguration-groupconfiguration)
+       */
+      override fun groupConfiguration(): Any? = unwrap(this).getGroupConfiguration()
 
       /**
        * The [Amazon Resource Name
@@ -573,6 +669,9 @@ public open class CfnIdentitySource(
    * .userPoolArn("userPoolArn")
    * // the properties below are optional
    * .clientIds(List.of("clientIds"))
+   * .groupConfiguration(CognitoGroupConfigurationProperty.builder()
+   * .groupEntityType("groupEntityType")
+   * .build())
    * .build())
    * .build();
    * ```
@@ -696,8 +795,6 @@ public open class CfnIdentitySource(
   }
 
   /**
-   * A structure that contains configuration of the identity source.
-   *
    * Example:
    *
    * ```
@@ -717,41 +814,21 @@ public open class CfnIdentitySource(
    */
   public interface IdentitySourceDetailsProperty {
     /**
-     * The application client IDs associated with the specified Amazon Cognito user pool that are
-     * enabled for this identity source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-clientids)
      */
     public fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
 
     /**
-     * The well-known URL that points to this user pool's OIDC discovery endpoint.
-     *
-     * This is a URL string in the following format. This URL replaces the placeholders for both the
-     * AWS Region and the user pool identifier with those appropriate for this user pool.
-     *
-     * `https://cognito-idp. *&lt;region&gt;* .amazonaws.com/ *&lt;user-pool-id&gt;*
-     * /.well-known/openid-configuration`
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-discoveryurl)
      */
     public fun discoveryUrl(): String? = unwrap(this).getDiscoveryUrl()
 
     /**
-     * A string that identifies the type of OIDC service represented by this identity source.
-     *
-     * At this time, the only valid value is `cognito` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-openidissuer)
      */
     public fun openIdIssuer(): String? = unwrap(this).getOpenIdIssuer()
 
     /**
-     * The [Amazon Resource Name
-     * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-     * Amazon Cognito user pool whose identities are accessible to this Verified Permissions policy
-     * store.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-userpoolarn)
      */
     public fun userPoolArn(): String? = unwrap(this).getUserPoolArn()
@@ -762,40 +839,27 @@ public open class CfnIdentitySource(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param clientIds The application client IDs associated with the specified Amazon Cognito
-       * user pool that are enabled for this identity source.
+       * @param clientIds the value to be set.
        */
       public fun clientIds(clientIds: List<String>)
 
       /**
-       * @param clientIds The application client IDs associated with the specified Amazon Cognito
-       * user pool that are enabled for this identity source.
+       * @param clientIds the value to be set.
        */
       public fun clientIds(vararg clientIds: String)
 
       /**
-       * @param discoveryUrl The well-known URL that points to this user pool's OIDC discovery
-       * endpoint.
-       * This is a URL string in the following format. This URL replaces the placeholders for both
-       * the AWS Region and the user pool identifier with those appropriate for this user pool.
-       *
-       * `https://cognito-idp. *&lt;region&gt;* .amazonaws.com/ *&lt;user-pool-id&gt;*
-       * /.well-known/openid-configuration`
+       * @param discoveryUrl the value to be set.
        */
       public fun discoveryUrl(discoveryUrl: String)
 
       /**
-       * @param openIdIssuer A string that identifies the type of OIDC service represented by this
-       * identity source.
-       * At this time, the only valid value is `cognito` .
+       * @param openIdIssuer the value to be set.
        */
       public fun openIdIssuer(openIdIssuer: String)
 
       /**
-       * @param userPoolArn The [Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Amazon Cognito user pool whose identities are accessible to this Verified Permissions policy
-       * store.
+       * @param userPoolArn the value to be set.
        */
       public fun userPoolArn(userPoolArn: String)
     }
@@ -807,46 +871,33 @@ public open class CfnIdentitySource(
           software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty.builder()
 
       /**
-       * @param clientIds The application client IDs associated with the specified Amazon Cognito
-       * user pool that are enabled for this identity source.
+       * @param clientIds the value to be set.
        */
       override fun clientIds(clientIds: List<String>) {
         cdkBuilder.clientIds(clientIds)
       }
 
       /**
-       * @param clientIds The application client IDs associated with the specified Amazon Cognito
-       * user pool that are enabled for this identity source.
+       * @param clientIds the value to be set.
        */
       override fun clientIds(vararg clientIds: String): Unit = clientIds(clientIds.toList())
 
       /**
-       * @param discoveryUrl The well-known URL that points to this user pool's OIDC discovery
-       * endpoint.
-       * This is a URL string in the following format. This URL replaces the placeholders for both
-       * the AWS Region and the user pool identifier with those appropriate for this user pool.
-       *
-       * `https://cognito-idp. *&lt;region&gt;* .amazonaws.com/ *&lt;user-pool-id&gt;*
-       * /.well-known/openid-configuration`
+       * @param discoveryUrl the value to be set.
        */
       override fun discoveryUrl(discoveryUrl: String) {
         cdkBuilder.discoveryUrl(discoveryUrl)
       }
 
       /**
-       * @param openIdIssuer A string that identifies the type of OIDC service represented by this
-       * identity source.
-       * At this time, the only valid value is `cognito` .
+       * @param openIdIssuer the value to be set.
        */
       override fun openIdIssuer(openIdIssuer: String) {
         cdkBuilder.openIdIssuer(openIdIssuer)
       }
 
       /**
-       * @param userPoolArn The [Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Amazon Cognito user pool whose identities are accessible to this Verified Permissions policy
-       * store.
+       * @param userPoolArn the value to be set.
        */
       override fun userPoolArn(userPoolArn: String) {
         cdkBuilder.userPoolArn(userPoolArn)
@@ -861,41 +912,21 @@ public open class CfnIdentitySource(
       cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySource.IdentitySourceDetailsProperty,
     ) : CdkObject(cdkObject), IdentitySourceDetailsProperty {
       /**
-       * The application client IDs associated with the specified Amazon Cognito user pool that are
-       * enabled for this identity source.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-clientids)
        */
       override fun clientIds(): List<String> = unwrap(this).getClientIds() ?: emptyList()
 
       /**
-       * The well-known URL that points to this user pool's OIDC discovery endpoint.
-       *
-       * This is a URL string in the following format. This URL replaces the placeholders for both
-       * the AWS Region and the user pool identifier with those appropriate for this user pool.
-       *
-       * `https://cognito-idp. *&lt;region&gt;* .amazonaws.com/ *&lt;user-pool-id&gt;*
-       * /.well-known/openid-configuration`
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-discoveryurl)
        */
       override fun discoveryUrl(): String? = unwrap(this).getDiscoveryUrl()
 
       /**
-       * A string that identifies the type of OIDC service represented by this identity source.
-       *
-       * At this time, the only valid value is `cognito` .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-openidissuer)
        */
       override fun openIdIssuer(): String? = unwrap(this).getOpenIdIssuer()
 
       /**
-       * The [Amazon Resource Name
-       * (ARN)](https://docs.aws.amazon.com//general/latest/gr/aws-arns-and-namespaces.html) of the
-       * Amazon Cognito user pool whose identities are accessible to this Verified Permissions policy
-       * store.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-verifiedpermissions-identitysource-identitysourcedetails.html#cfn-verifiedpermissions-identitysource-identitysourcedetails-userpoolarn)
        */
       override fun userPoolArn(): String? = unwrap(this).getUserPoolArn()

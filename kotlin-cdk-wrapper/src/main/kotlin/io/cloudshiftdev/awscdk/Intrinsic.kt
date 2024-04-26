@@ -63,7 +63,7 @@ public open class Intrinsic(
    *
    * Called automatically when JSON.stringify() is called on a Token.
    */
-  public open fun toJson(): Any = unwrap(this).toJSON()
+  public open fun toJSON(): Any = unwrap(this).toJSON()
 
   /**
    * Convert an instance of this Token to a string list.

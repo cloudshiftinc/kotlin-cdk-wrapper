@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IRole
@@ -19,6 +20,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
  * import io.cloudshiftdev.awscdk.services.iam.*;
  * Role role;
@@ -29,6 +31,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .integrationUri("integrationUri")
  * .webSocketApi(webSocketApi)
  * // the properties below are optional
+ * .contentHandling(ContentHandling.CONVERT_TO_BINARY)
  * .credentialsRole(role)
  * .integrationMethod("integrationMethod")
  * .passthroughBehavior(PassthroughBehavior.WHEN_NO_MATCH)
@@ -37,6 +40,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .requestTemplates(Map.of(
  * "requestTemplatesKey", "requestTemplates"))
  * .templateSelectionExpression("templateSelectionExpression")
+ * .timeout(Duration.minutes(30))
  * .build();
  * ```
  */
@@ -75,6 +79,16 @@ public open class WebSocketIntegration(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Specifies how to handle response payload content type conversions.
+     *
+     * Default: - The response payload will be passed through from the integration response to
+     * the route response or method response without modification.
+     *
+     * @param contentHandling Specifies how to handle response payload content type conversions. 
+     */
+    public fun contentHandling(contentHandling: ContentHandling)
+
     /**
      * Specifies the IAM role required for the integration.
      *
@@ -160,6 +174,18 @@ public open class WebSocketIntegration(
     public fun templateSelectionExpression(templateSelectionExpression: String)
 
     /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    public fun timeout(timeout: Duration)
+
+    /**
      * The WebSocket API to which this integration should be bound.
      *
      * @param webSocketApi The WebSocket API to which this integration should be bound. 
@@ -174,6 +200,18 @@ public open class WebSocketIntegration(
     private val cdkBuilder:
         software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration.Builder =
         software.amazon.awscdk.services.apigatewayv2.WebSocketIntegration.Builder.create(scope, id)
+
+    /**
+     * Specifies how to handle response payload content type conversions.
+     *
+     * Default: - The response payload will be passed through from the integration response to
+     * the route response or method response without modification.
+     *
+     * @param contentHandling Specifies how to handle response payload content type conversions. 
+     */
+    override fun contentHandling(contentHandling: ContentHandling) {
+      cdkBuilder.contentHandling(contentHandling.let(ContentHandling::unwrap))
+    }
 
     /**
      * Specifies the IAM role required for the integration.
@@ -273,6 +311,20 @@ public open class WebSocketIntegration(
      */
     override fun templateSelectionExpression(templateSelectionExpression: String) {
       cdkBuilder.templateSelectionExpression(templateSelectionExpression)
+    }
+
+    /**
+     * The maximum amount of time an integration will run before it returns without a response.
+     *
+     * Must be between 50 milliseconds and 29 seconds.
+     *
+     * Default: Duration.seconds(29)
+     *
+     * @param timeout The maximum amount of time an integration will run before it returns without a
+     * response. 
+     */
+    override fun timeout(timeout: Duration) {
+      cdkBuilder.timeout(timeout.let(Duration::unwrap))
     }
 
     /**

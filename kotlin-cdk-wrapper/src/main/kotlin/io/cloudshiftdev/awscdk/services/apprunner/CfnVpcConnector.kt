@@ -235,6 +235,11 @@ public open class CfnVpcConnector(
      *
      * A tag is a key-value pair.
      *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
      * @param tags A list of metadata items that you can associate with your VPC connector resource.
      * 
@@ -245,6 +250,11 @@ public open class CfnVpcConnector(
      * A list of metadata items that you can associate with your VPC connector resource.
      *
      * A tag is a key-value pair.
+     *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
      * @param tags A list of metadata items that you can associate with your VPC connector resource.
@@ -340,6 +350,11 @@ public open class CfnVpcConnector(
      *
      * A tag is a key-value pair.
      *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
      * @param tags A list of metadata items that you can associate with your VPC connector resource.
      * 
@@ -352,6 +367,11 @@ public open class CfnVpcConnector(
      * A list of metadata items that you can associate with your VPC connector resource.
      *
      * A tag is a key-value pair.
+     *
+     *
+     * A `VpcConnector` is immutable, so you cannot update its tags. To change the tags, replace the
+     * resource. To replace a `VpcConnector` , you must provide a new combination of security groups.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apprunner-vpcconnector.html#cfn-apprunner-vpcconnector-tags)
      * @param tags A list of metadata items that you can associate with your VPC connector resource.

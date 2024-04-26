@@ -40,6 +40,13 @@ import kotlin.Unit
  */
 public interface CrossAccountZoneDelegationRecordProps {
   /**
+   * Region from which to obtain temporary credentials.
+   *
+   * Default: - the Route53 signing region in the current partition
+   */
+  public fun assumeRoleRegion(): String? = unwrap(this).getAssumeRoleRegion()
+
+  /**
    * The zone to be delegated.
    */
   public fun delegatedZone(): IHostedZone
@@ -84,6 +91,11 @@ public interface CrossAccountZoneDelegationRecordProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param assumeRoleRegion Region from which to obtain temporary credentials.
+     */
+    public fun assumeRoleRegion(assumeRoleRegion: String)
+
+    /**
      * @param delegatedZone The zone to be delegated. 
      */
     public fun delegatedZone(delegatedZone: IHostedZone)
@@ -118,6 +130,13 @@ public interface CrossAccountZoneDelegationRecordProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps.Builder =
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps.builder()
+
+    /**
+     * @param assumeRoleRegion Region from which to obtain temporary credentials.
+     */
+    override fun assumeRoleRegion(assumeRoleRegion: String) {
+      cdkBuilder.assumeRoleRegion(assumeRoleRegion)
+    }
 
     /**
      * @param delegatedZone The zone to be delegated. 
@@ -169,6 +188,13 @@ public interface CrossAccountZoneDelegationRecordProps {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecordProps,
   ) : CdkObject(cdkObject), CrossAccountZoneDelegationRecordProps {
+    /**
+     * Region from which to obtain temporary credentials.
+     *
+     * Default: - the Route53 signing region in the current partition
+     */
+    override fun assumeRoleRegion(): String? = unwrap(this).getAssumeRoleRegion()
+
     /**
      * The zone to be delegated.
      */

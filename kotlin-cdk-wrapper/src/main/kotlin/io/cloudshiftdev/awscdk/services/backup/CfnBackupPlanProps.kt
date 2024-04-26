@@ -74,11 +74,7 @@ public interface CfnBackupPlanProps {
   public fun backupPlan(): Any
 
   /**
-   * To help organize your resources, you can assign your own metadata to the resources that you
-   * create.
-   *
-   * Each tag is a key-value pair. The specified tags are assigned to all backups created with this
-   * plan.
+   * The tags to assign to the backup plan.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags)
    */
@@ -111,10 +107,7 @@ public interface CfnBackupPlanProps {
         fun backupPlan(backupPlan: CfnBackupPlan.BackupPlanResourceTypeProperty.Builder.() -> Unit)
 
     /**
-     * @param backupPlanTags To help organize your resources, you can assign your own metadata to
-     * the resources that you create.
-     * Each tag is a key-value pair. The specified tags are assigned to all backups created with
-     * this plan.
+     * @param backupPlanTags The tags to assign to the backup plan.
      */
     public fun backupPlanTags(backupPlanTags: Map<String, String>)
   }
@@ -150,10 +143,7 @@ public interface CfnBackupPlanProps {
         Unit = backupPlan(CfnBackupPlan.BackupPlanResourceTypeProperty(backupPlan))
 
     /**
-     * @param backupPlanTags To help organize your resources, you can assign your own metadata to
-     * the resources that you create.
-     * Each tag is a key-value pair. The specified tags are assigned to all backups created with
-     * this plan.
+     * @param backupPlanTags The tags to assign to the backup plan.
      */
     override fun backupPlanTags(backupPlanTags: Map<String, String>) {
       cdkBuilder.backupPlanTags(backupPlanTags)
@@ -174,11 +164,7 @@ public interface CfnBackupPlanProps {
     override fun backupPlan(): Any = unwrap(this).getBackupPlan()
 
     /**
-     * To help organize your resources, you can assign your own metadata to the resources that you
-     * create.
-     *
-     * Each tag is a key-value pair. The specified tags are assigned to all backups created with
-     * this plan.
+     * The tags to assign to the backup plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-backupplan.html#cfn-backup-backupplan-backupplantags)
      */

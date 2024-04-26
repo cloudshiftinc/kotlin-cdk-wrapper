@@ -64,6 +64,15 @@ public open class CrossAccountZoneDelegationRecord(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Region from which to obtain temporary credentials.
+     *
+     * Default: - the Route53 signing region in the current partition
+     *
+     * @param assumeRoleRegion Region from which to obtain temporary credentials. 
+     */
+    public fun assumeRoleRegion(assumeRoleRegion: String)
+
+    /**
      * The zone to be delegated.
      *
      * @param delegatedZone The zone to be delegated. 
@@ -122,6 +131,17 @@ public open class CrossAccountZoneDelegationRecord(
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord.Builder =
         software.amazon.awscdk.services.route53.CrossAccountZoneDelegationRecord.Builder.create(scope,
         id)
+
+    /**
+     * Region from which to obtain temporary credentials.
+     *
+     * Default: - the Route53 signing region in the current partition
+     *
+     * @param assumeRoleRegion Region from which to obtain temporary credentials. 
+     */
+    override fun assumeRoleRegion(assumeRoleRegion: String) {
+      cdkBuilder.assumeRoleRegion(assumeRoleRegion)
+    }
 
     /**
      * The zone to be delegated.

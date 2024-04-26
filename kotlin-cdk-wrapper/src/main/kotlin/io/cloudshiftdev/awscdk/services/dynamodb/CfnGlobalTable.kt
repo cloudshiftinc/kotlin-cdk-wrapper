@@ -108,6 +108,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+ * Object policyDocument;
  * CfnGlobalTable cfnGlobalTable = CfnGlobalTable.Builder.create(this, "MyCfnGlobalTable")
  * .attributeDefinitions(List.of(AttributeDefinitionProperty.builder()
  * .attributeName("attributeName")
@@ -170,6 +171,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .seedCapacity(123)
  * .build())
  * .readCapacityUnits(123)
+ * .build())
+ * .replicaStreamSpecification(ReplicaStreamSpecificationProperty.builder()
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument(policyDocument)
+ * .build())
+ * .build())
+ * .resourcePolicy(ResourcePolicyProperty.builder()
+ * .policyDocument(policyDocument)
  * .build())
  * .sseSpecification(ReplicaSSESpecificationProperty.builder()
  * .kmsMasterKeyId("kmsMasterKeyId")
@@ -3808,6 +3817,7 @@ public open class CfnGlobalTable(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * Object policyDocument;
    * ReplicaSpecificationProperty replicaSpecificationProperty =
    * ReplicaSpecificationProperty.builder()
    * .region("region")
@@ -3862,6 +3872,14 @@ public open class CfnGlobalTable(
    * .seedCapacity(123)
    * .build())
    * .readCapacityUnits(123)
+   * .build())
+   * .replicaStreamSpecification(ReplicaStreamSpecificationProperty.builder()
+   * .resourcePolicy(ResourcePolicyProperty.builder()
+   * .policyDocument(policyDocument)
+   * .build())
+   * .build())
+   * .resourcePolicy(ResourcePolicyProperty.builder()
+   * .policyDocument(policyDocument)
    * .build())
    * .sseSpecification(ReplicaSSESpecificationProperty.builder()
    * .kmsMasterKeyId("kmsMasterKeyId")
@@ -3938,6 +3956,31 @@ public open class CfnGlobalTable(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-region)
      */
     public fun region(): String
+
+    /**
+     * Represents the DynamoDB Streams configuration for a global table replica.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-replicastreamspecification)
+     */
+    public fun replicaStreamSpecification(): Any? = unwrap(this).getReplicaStreamSpecification()
+
+    /**
+     * A resource-based policy document that contains permissions to add to the specified replica of
+     * a DynamoDB global table.
+     *
+     * Resource-based policies let you define access permissions by specifying who has access to
+     * each resource, and the actions they are allowed to perform on each resource.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+     */
+    public fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
 
     /**
      * Allows you to specify a customer-managed key for the replica.
@@ -4105,6 +4148,78 @@ public open class CfnGlobalTable(
        * @param region The region in which this replica exists. 
        */
       public fun region(region: String)
+
+      /**
+       * @param replicaStreamSpecification Represents the DynamoDB Streams configuration for a
+       * global table replica.
+       */
+      public fun replicaStreamSpecification(replicaStreamSpecification: IResolvable)
+
+      /**
+       * @param replicaStreamSpecification Represents the DynamoDB Streams configuration for a
+       * global table replica.
+       */
+      public
+          fun replicaStreamSpecification(replicaStreamSpecification: ReplicaStreamSpecificationProperty)
+
+      /**
+       * @param replicaStreamSpecification Represents the DynamoDB Streams configuration for a
+       * global table replica.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d266938c0d6175f430ad87daaec4f53238b764dbe50abbb85c842fcfb611a0c")
+      public
+          fun replicaStreamSpecification(replicaStreamSpecification: ReplicaStreamSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains permissions to add to
+       * the specified replica of a DynamoDB global table.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      public fun resourcePolicy(resourcePolicy: IResolvable)
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains permissions to add to
+       * the specified replica of a DynamoDB global table.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty)
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains permissions to add to
+       * the specified replica of a DynamoDB global table.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc4eb99dacedf0dcd85e9dd608ab0515a57863e8d1489e0a10ba4cd0e0c9c92c")
+      public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit)
 
       /**
        * @param sseSpecification Allows you to specify a customer-managed key for the replica.
@@ -4328,6 +4443,89 @@ public open class CfnGlobalTable(
       }
 
       /**
+       * @param replicaStreamSpecification Represents the DynamoDB Streams configuration for a
+       * global table replica.
+       */
+      override fun replicaStreamSpecification(replicaStreamSpecification: IResolvable) {
+        cdkBuilder.replicaStreamSpecification(replicaStreamSpecification.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param replicaStreamSpecification Represents the DynamoDB Streams configuration for a
+       * global table replica.
+       */
+      override
+          fun replicaStreamSpecification(replicaStreamSpecification: ReplicaStreamSpecificationProperty) {
+        cdkBuilder.replicaStreamSpecification(replicaStreamSpecification.let(ReplicaStreamSpecificationProperty::unwrap))
+      }
+
+      /**
+       * @param replicaStreamSpecification Represents the DynamoDB Streams configuration for a
+       * global table replica.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2d266938c0d6175f430ad87daaec4f53238b764dbe50abbb85c842fcfb611a0c")
+      override
+          fun replicaStreamSpecification(replicaStreamSpecification: ReplicaStreamSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          replicaStreamSpecification(ReplicaStreamSpecificationProperty(replicaStreamSpecification))
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains permissions to add to
+       * the specified replica of a DynamoDB global table.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      override fun resourcePolicy(resourcePolicy: IResolvable) {
+        cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains permissions to add to
+       * the specified replica of a DynamoDB global table.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
+        cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty::unwrap))
+      }
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains permissions to add to
+       * the specified replica of a DynamoDB global table.
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bc4eb99dacedf0dcd85e9dd608ab0515a57863e8d1489e0a10ba4cd0e0c9c92c")
+      override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit): Unit =
+          resourcePolicy(ResourcePolicyProperty(resourcePolicy))
+
+      /**
        * @param sseSpecification Allows you to specify a customer-managed key for the replica.
        * When using customer-managed keys for server-side encryption, this property must have a
        * value in all replicas.
@@ -4453,6 +4651,32 @@ public open class CfnGlobalTable(
       override fun region(): String = unwrap(this).getRegion()
 
       /**
+       * Represents the DynamoDB Streams configuration for a global table replica.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-replicastreamspecification)
+       */
+      override fun replicaStreamSpecification(): Any? = unwrap(this).getReplicaStreamSpecification()
+
+      /**
+       * A resource-based policy document that contains permissions to add to the specified replica
+       * of a DynamoDB global table.
+       *
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaspecification.html#cfn-dynamodb-globaltable-replicaspecification-resourcepolicy)
+       */
+      override fun resourcePolicy(): Any? = unwrap(this).getResourcePolicy()
+
+      /**
        * Allows you to specify a customer-managed key for the replica.
        *
        * When using customer-managed keys for server-side encryption, this property must have a
@@ -4498,6 +4722,408 @@ public open class CfnGlobalTable(
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaSpecificationProperty
+    }
+  }
+
+  /**
+   * Represents the DynamoDB Streams configuration for a global table replica.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * Object policyDocument;
+   * ReplicaStreamSpecificationProperty replicaStreamSpecificationProperty =
+   * ReplicaStreamSpecificationProperty.builder()
+   * .resourcePolicy(ResourcePolicyProperty.builder()
+   * .policyDocument(policyDocument)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicastreamspecification.html)
+   */
+  public interface ReplicaStreamSpecificationProperty {
+    /**
+     * A resource-based policy document that contains the permissions for the specified stream of a
+     * DynamoDB global table replica.
+     *
+     * Resource-based policies let you define access permissions by specifying who has access to
+     * each resource, and the actions they are allowed to perform on each resource.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * You can update the `ResourcePolicy` property if you've specified more than one table using
+     * the [AWS
+     * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+     * resource.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicastreamspecification.html#cfn-dynamodb-globaltable-replicastreamspecification-resourcepolicy)
+     */
+    public fun resourcePolicy(): Any
+
+    /**
+     * A builder for [ReplicaStreamSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourcePolicy A resource-based policy document that contains the permissions for
+       * the specified stream of a DynamoDB global table replica. 
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * You can update the `ResourcePolicy` property if you've specified more than one table using
+       * the [AWS
+       * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+       * resource.
+       */
+      public fun resourcePolicy(resourcePolicy: IResolvable)
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains the permissions for
+       * the specified stream of a DynamoDB global table replica. 
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * You can update the `ResourcePolicy` property if you've specified more than one table using
+       * the [AWS
+       * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+       * resource.
+       */
+      public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty)
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains the permissions for
+       * the specified stream of a DynamoDB global table replica. 
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * You can update the `ResourcePolicy` property if you've specified more than one table using
+       * the [AWS
+       * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+       * resource.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1d9dc54025c1a70ad31b7f954ae90cd43bbaeae4f661785a9aa0c31c9fb2c559")
+      public fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty.builder()
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains the permissions for
+       * the specified stream of a DynamoDB global table replica. 
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * You can update the `ResourcePolicy` property if you've specified more than one table using
+       * the [AWS
+       * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+       * resource.
+       */
+      override fun resourcePolicy(resourcePolicy: IResolvable) {
+        cdkBuilder.resourcePolicy(resourcePolicy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains the permissions for
+       * the specified stream of a DynamoDB global table replica. 
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * You can update the `ResourcePolicy` property if you've specified more than one table using
+       * the [AWS
+       * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+       * resource.
+       */
+      override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty) {
+        cdkBuilder.resourcePolicy(resourcePolicy.let(ResourcePolicyProperty::unwrap))
+      }
+
+      /**
+       * @param resourcePolicy A resource-based policy document that contains the permissions for
+       * the specified stream of a DynamoDB global table replica. 
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * You can update the `ResourcePolicy` property if you've specified more than one table using
+       * the [AWS
+       * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+       * resource.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1d9dc54025c1a70ad31b7f954ae90cd43bbaeae4f661785a9aa0c31c9fb2c559")
+      override fun resourcePolicy(resourcePolicy: ResourcePolicyProperty.Builder.() -> Unit): Unit =
+          resourcePolicy(ResourcePolicyProperty(resourcePolicy))
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty,
+    ) : CdkObject(cdkObject), ReplicaStreamSpecificationProperty {
+      /**
+       * A resource-based policy document that contains the permissions for the specified stream of
+       * a DynamoDB global table replica.
+       *
+       * Resource-based policies let you define access permissions by specifying who has access to
+       * each resource, and the actions they are allowed to perform on each resource.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * You can update the `ResourcePolicy` property if you've specified more than one table using
+       * the [AWS
+       * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+       * resource.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicastreamspecification.html#cfn-dynamodb-globaltable-replicastreamspecification-resourcepolicy)
+       */
+      override fun resourcePolicy(): Any = unwrap(this).getResourcePolicy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ReplicaStreamSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty):
+          ReplicaStreamSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReplicaStreamSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReplicaStreamSpecificationProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ReplicaStreamSpecificationProperty
+    }
+  }
+
+  /**
+   * Creates or updates a resource-based policy document that contains the permissions for DynamoDB
+   * resources, such as a table, its indexes, and stream.
+   *
+   * Resource-based policies let you define access permissions by specifying who has access to each
+   * resource, and the actions they are allowed to perform on each resource.
+   *
+   * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+   * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information about
+   * resource-based policies, see [Using resource-based policies for
+   * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+   * and [Resource-based policy
+   * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+   *
+   * While defining resource-based policies in your CloudFormation templates, the following
+   * considerations apply:
+   *
+   * * The maximum size supported for a resource-based policy document in JSON format is 20 KB.
+   * DynamoDB counts whitespaces when calculating the size of a policy against this limit.
+   * * Resource-based policies don't support [drift
+   * detection](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html#)
+   * . If you update a policy outside of the CloudFormation stack template, you'll need to update the
+   * CloudFormation stack with the changes.
+   * * Resource-based policies don't support out-of-band changes. If you add, update, or delete a
+   * policy outside of the CloudFormation template, the change won't be overwritten if there are no
+   * changes to the policy within the template.
+   *
+   * For example, say that your template contains a resource-based policy, which you later update
+   * outside of the template. If you don't make any changes to the policy in the template, the updated
+   * policy in DynamoDB won’t be synced with the policy in the template.
+   *
+   * Conversely, say that your template doesn’t contain a resource-based policy, but you add a
+   * policy outside of the template. This policy won’t be removed from DynamoDB as long as you don’t
+   * add it to the template. When you add a policy to the template and update the stack, the existing
+   * policy in DynamoDB will be updated to match the one defined in the template.
+   *
+   * * Within a resource-based policy, if the action for a DynamoDB service-linked role (SLR) to
+   * replicate data for a global table is denied, adding or deleting a replica will fail with an error.
+   * * The [AWS
+   * ::DynamoDB::GlobalTable](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html)
+   * resource doesn't support creating a replica in the same stack update in Regions other than the
+   * Region where you deploy the stack update.
+   *
+   * For a full list of all considerations, see [Resource-based policy
+   * considerations](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-considerations.html)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * Object policyDocument;
+   * ResourcePolicyProperty resourcePolicyProperty = ResourcePolicyProperty.builder()
+   * .policyDocument(policyDocument)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-resourcepolicy.html)
+   */
+  public interface ResourcePolicyProperty {
+    /**
+     * A resource-based policy document that contains permissions to add to the specified DynamoDB
+     * table, its indexes, and stream.
+     *
+     * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+     * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+     * about resource-based policies, see [Using resource-based policies for
+     * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+     * and [Resource-based policy
+     * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html) .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-resourcepolicy.html#cfn-dynamodb-globaltable-resourcepolicy-policydocument)
+     */
+    public fun policyDocument(): Any
+
+    /**
+     * A builder for [ResourcePolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param policyDocument A resource-based policy document that contains permissions to add to
+       * the specified DynamoDB table, its indexes, and stream. 
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      public fun policyDocument(policyDocument: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty.Builder =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty.builder()
+
+      /**
+       * @param policyDocument A resource-based policy document that contains permissions to add to
+       * the specified DynamoDB table, its indexes, and stream. 
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       */
+      override fun policyDocument(policyDocument: Any) {
+        cdkBuilder.policyDocument(policyDocument)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty,
+    ) : CdkObject(cdkObject), ResourcePolicyProperty {
+      /**
+       * A resource-based policy document that contains permissions to add to the specified DynamoDB
+       * table, its indexes, and stream.
+       *
+       * In a CloudFormation template, you can provide the policy in JSON or YAML format because
+       * CloudFormation converts YAML to JSON before submitting it to DynamoDB . For more information
+       * about resource-based policies, see [Using resource-based policies for
+       * DynamoDB](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/access-control-resource-based.html)
+       * and [Resource-based policy
+       * examples](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/rbac-examples.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-resourcepolicy.html#cfn-dynamodb-globaltable-resourcepolicy-policydocument)
+       */
+      override fun policyDocument(): Any = unwrap(this).getPolicyDocument()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourcePolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty):
+          ResourcePolicyProperty = CdkObjectWrappers.wrap(cdkObject) as? ResourcePolicyProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourcePolicyProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.ResourcePolicyProperty
     }
   }
 

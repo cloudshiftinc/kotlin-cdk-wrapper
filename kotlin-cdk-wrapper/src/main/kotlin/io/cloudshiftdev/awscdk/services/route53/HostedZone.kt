@@ -22,14 +22,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * HostedZone myHostedZone = HostedZone.Builder.create(this, "HostedZone")
+ * Key kmsKey = Key.Builder.create(this, "KmsCMK")
+ * .keySpec(KeySpec.ECC_NIST_P256)
+ * .keyUsage(KeyUsage.SIGN_VERIFY)
+ * .build();
+ * HostedZone hostedZone = HostedZone.Builder.create(this, "HostedZone")
  * .zoneName("example.com")
  * .build();
- * Certificate.Builder.create(this, "Certificate")
- * .domainName("hello.example.com")
- * .certificateName("Hello World Service") // Optionally provide an certificate name
- * .validation(CertificateValidation.fromDns(myHostedZone))
- * .build();
+ * // Enable DNSSEC signing for the zone
+ * hostedZone.enableDnssec(ZoneSigningOptions.builder().kmsKey(kmsKey).build());
  * ```
  */
 public open class HostedZone(
@@ -59,6 +60,30 @@ public open class HostedZone(
   public open fun addVpc(vpc: IVpc) {
     unwrap(this).addVpc(vpc.let(IVpc::unwrap))
   }
+
+  /**
+   * Enable DNSSEC for this hosted zone.
+   *
+   * This will create a key signing key with the given options and enable DNSSEC signing
+   * for the hosted zone.
+   *
+   * @param options 
+   */
+  public open fun enableDnssec(options: ZoneSigningOptions): IKeySigningKey =
+      unwrap(this).enableDnssec(options.let(ZoneSigningOptions::unwrap)).let(IKeySigningKey::wrap)
+
+  /**
+   * Enable DNSSEC for this hosted zone.
+   *
+   * This will create a key signing key with the given options and enable DNSSEC signing
+   * for the hosted zone.
+   *
+   * @param options 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("ceefb2857feae99de9b42d3d05ee3eef724b6edefe1639dae12efb3d05df371a")
+  public open fun enableDnssec(options: ZoneSigningOptions.Builder.() -> Unit): IKeySigningKey =
+      enableDnssec(ZoneSigningOptions(options))
 
   /**
    * Grant permissions to add delegation records to this zone.

@@ -54,7 +54,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnRecordingConfigurationProps {
   /**
-   * A destination configuration contains information about where recorded video will be stored.
+   * A destination configuration describes an S3 bucket where recorded video will be stored.
    *
    * See the DestinationConfiguration property type for more information.
    *
@@ -120,14 +120,14 @@ public interface CfnRecordingConfigurationProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      * See the DestinationConfiguration property type for more information.
      */
     public fun destinationConfiguration(destinationConfiguration: IResolvable)
 
     /**
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      * See the DestinationConfiguration property type for more information.
      */
@@ -135,7 +135,7 @@ public interface CfnRecordingConfigurationProps {
         fun destinationConfiguration(destinationConfiguration: CfnRecordingConfiguration.DestinationConfigurationProperty)
 
     /**
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      * See the DestinationConfiguration property type for more information.
      */
@@ -234,7 +234,7 @@ public interface CfnRecordingConfigurationProps {
         software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps.builder()
 
     /**
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      * See the DestinationConfiguration property type for more information.
      */
@@ -243,7 +243,7 @@ public interface CfnRecordingConfigurationProps {
     }
 
     /**
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      * See the DestinationConfiguration property type for more information.
      */
@@ -253,7 +253,7 @@ public interface CfnRecordingConfigurationProps {
     }
 
     /**
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      * See the DestinationConfiguration property type for more information.
      */
@@ -373,7 +373,7 @@ public interface CfnRecordingConfigurationProps {
     cdkObject: software.amazon.awscdk.services.ivs.CfnRecordingConfigurationProps,
   ) : CdkObject(cdkObject), CfnRecordingConfigurationProps {
     /**
-     * A destination configuration contains information about where recorded video will be stored.
+     * A destination configuration describes an S3 bucket where recorded video will be stored.
      *
      * See the DestinationConfiguration property type for more information.
      *

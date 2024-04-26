@@ -3290,7 +3290,22 @@ public open class CfnProject(
      *
      * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
      * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-     * * `BUILD_GENERAL1_LARGE` : Use up to 15 GB memory and 8 vCPUs for builds.
+     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+     * environment type.
+     * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on your
+     * environment type.
+     * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage for
+     * builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_LAMBDA_1GB` : Use up to 1 GB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_2GB` : Use up to 2 GB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_4GB` : Use up to 4 GB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_8GB` : Use up to 8 GB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_10GB` : Use up to 10 GB memory for builds. Only available for environment
+     * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
      *
      * For more information, see [Build Environment Compute
      * Types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
@@ -3444,7 +3459,22 @@ public open class CfnProject(
        *
        * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
        * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-       * * `BUILD_GENERAL1_LARGE` : Use up to 15 GB memory and 8 vCPUs for builds.
+       * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+       * environment type.
+       * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on
+       * your environment type.
+       * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage
+       * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+       * * `BUILD_LAMBDA_1GB` : Use up to 1 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_2GB` : Use up to 2 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_4GB` : Use up to 4 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_8GB` : Use up to 8 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_10GB` : Use up to 10 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
        *
        * For more information, see [Build Environment Compute
        * Types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
@@ -3660,7 +3690,22 @@ public open class CfnProject(
        *
        * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
        * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-       * * `BUILD_GENERAL1_LARGE` : Use up to 15 GB memory and 8 vCPUs for builds.
+       * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+       * environment type.
+       * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on
+       * your environment type.
+       * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage
+       * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+       * * `BUILD_LAMBDA_1GB` : Use up to 1 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_2GB` : Use up to 2 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_4GB` : Use up to 4 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_8GB` : Use up to 8 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_10GB` : Use up to 10 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
        *
        * For more information, see [Build Environment Compute
        * Types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
@@ -3906,7 +3951,22 @@ public open class CfnProject(
        *
        * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
        * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-       * * `BUILD_GENERAL1_LARGE` : Use up to 15 GB memory and 8 vCPUs for builds.
+       * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+       * environment type.
+       * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on
+       * your environment type.
+       * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage
+       * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+       * * `BUILD_LAMBDA_1GB` : Use up to 1 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_2GB` : Use up to 2 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_4GB` : Use up to 4 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_8GB` : Use up to 8 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+       * * `BUILD_LAMBDA_10GB` : Use up to 10 GB memory for builds. Only available for environment
+       * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
        *
        * For more information, see [Build Environment Compute
        * Types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
@@ -5612,10 +5672,11 @@ public open class CfnProject(
      * The source version for the corresponding source identifier. If specified, must be one of:.
      *
      * * For CodeCommit: the commit ID, branch, or Git tag to use.
-     * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
-     * the version of the source code you want to build. If a pull request ID is specified, it must use
-     * the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified, the
-     * branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is used.
+     * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
+     * corresponds to the version of the source code you want to build. If a pull request ID is
+     * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name
+     * is specified, the branch's HEAD commit ID is used. If not specified, the default branch's HEAD
+     * commit ID is used.
      * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
      * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID is
      * used. If not specified, the default branch's HEAD commit ID is used.
@@ -5646,11 +5707,11 @@ public open class CfnProject(
        * @param sourceVersion The source version for the corresponding source identifier. If
        * specified, must be one of:.
        * * For CodeCommit: the commit ID, branch, or Git tag to use.
-       * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
-       * the version of the source code you want to build. If a pull request ID is specified, it must
-       * use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified,
-       * the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is
-       * used.
+       * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
+       * corresponds to the version of the source code you want to build. If a pull request ID is
+       * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch
+       * name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's
+       * HEAD commit ID is used.
        * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
        * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID
        * is used. If not specified, the default branch's HEAD commit ID is used.
@@ -5683,11 +5744,11 @@ public open class CfnProject(
        * @param sourceVersion The source version for the corresponding source identifier. If
        * specified, must be one of:.
        * * For CodeCommit: the commit ID, branch, or Git tag to use.
-       * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
-       * the version of the source code you want to build. If a pull request ID is specified, it must
-       * use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified,
-       * the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is
-       * used.
+       * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
+       * corresponds to the version of the source code you want to build. If a pull request ID is
+       * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch
+       * name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's
+       * HEAD commit ID is used.
        * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
        * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID
        * is used. If not specified, the default branch's HEAD commit ID is used.
@@ -5724,11 +5785,11 @@ public open class CfnProject(
        * The source version for the corresponding source identifier. If specified, must be one of:.
        *
        * * For CodeCommit: the commit ID, branch, or Git tag to use.
-       * * For GitHub: the commit ID, pull request ID, branch name, or tag name that corresponds to
-       * the version of the source code you want to build. If a pull request ID is specified, it must
-       * use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch name is specified,
-       * the branch's HEAD commit ID is used. If not specified, the default branch's HEAD commit ID is
-       * used.
+       * * For GitHub or GitLab: the commit ID, pull request ID, branch name, or tag name that
+       * corresponds to the version of the source code you want to build. If a pull request ID is
+       * specified, it must use the format `pr/pull-request-ID` (for example, `pr/25` ). If a branch
+       * name is specified, the branch's HEAD commit ID is used. If not specified, the default branch's
+       * HEAD commit ID is used.
        * * For Bitbucket: the commit ID, branch name, or tag name that corresponds to the version of
        * the source code you want to build. If a branch name is specified, the branch's HEAD commit ID
        * is used. If not specified, the default branch's HEAD commit ID is used.
@@ -6576,6 +6637,15 @@ public open class CfnProject(
      * GitHub account, you do not need to finish creating the build project. You can leave the AWS
      * CodeBuild console.) To instruct AWS CodeBuild to use this connection, in the `source` object,
      * set the `auth` object's `type` value to `OAUTH` .
+     * * For source code in an GitLab or self-managed GitLab repository, the HTTPS clone URL to the
+     * repository that contains the source and the buildspec file. You must connect your AWS account to
+     * your GitLab account. Use the AWS CodeBuild console to start creating a build project. When you
+     * use the console to connect (or reconnect) with GitLab, on the Connections *Authorize
+     * application* page, choose *Authorize* . Then on the AWS CodeConnections *Create GitLab
+     * connection* page, choose *Connect to GitLab* . (After you have connected to your GitLab account,
+     * you do not need to finish creating the build project. You can leave the AWS CodeBuild console.)
+     * To instruct AWS CodeBuild to override the default connection and use this connection instead,
+     * set the `auth` object's `type` value to `CODECONNECTIONS` in the `source` object.
      * * For source code in a Bitbucket repository, the HTTPS clone URL to the repository that
      * contains the source and the buildspec file. You must connect your AWS account to your Bitbucket
      * account. Use the AWS CodeBuild console to start creating a build project. When you use the
@@ -6620,8 +6690,10 @@ public open class CfnProject(
      * * `CODECOMMIT` : The source code is in an CodeCommit repository.
      * * `CODEPIPELINE` : The source code settings are specified in the source action of a pipeline
      * in CodePipeline.
-     * * `GITHUB` : The source code is in a GitHub or GitHub Enterprise Cloud repository.
+     * * `GITHUB` : The source code is in a GitHub repository.
      * * `GITHUB_ENTERPRISE` : The source code is in a GitHub Enterprise Server repository.
+     * * `GITLAB` : The source code is in a GitLab repository.
+     * * `GITLAB_SELF_MANAGED` : The source code is in a self-managed GitLab repository.
      * * `NO_SOURCE` : The project does not have input source code.
      * * `S3` : The source code is in an Amazon S3 bucket.
      *
@@ -6768,6 +6840,15 @@ public open class CfnProject(
        * connected to your GitHub account, you do not need to finish creating the build project. You
        * can leave the AWS CodeBuild console.) To instruct AWS CodeBuild to use this connection, in the
        * `source` object, set the `auth` object's `type` value to `OAUTH` .
+       * * For source code in an GitLab or self-managed GitLab repository, the HTTPS clone URL to
+       * the repository that contains the source and the buildspec file. You must connect your AWS
+       * account to your GitLab account. Use the AWS CodeBuild console to start creating a build
+       * project. When you use the console to connect (or reconnect) with GitLab, on the Connections
+       * *Authorize application* page, choose *Authorize* . Then on the AWS CodeConnections *Create
+       * GitLab connection* page, choose *Connect to GitLab* . (After you have connected to your GitLab
+       * account, you do not need to finish creating the build project. You can leave the AWS CodeBuild
+       * console.) To instruct AWS CodeBuild to override the default connection and use this connection
+       * instead, set the `auth` object's `type` value to `CODECONNECTIONS` in the `source` object.
        * * For source code in a Bitbucket repository, the HTTPS clone URL to the repository that
        * contains the source and the buildspec file. You must connect your AWS account to your
        * Bitbucket account. Use the AWS CodeBuild console to start creating a build project. When you
@@ -6814,8 +6895,10 @@ public open class CfnProject(
        * * `CODECOMMIT` : The source code is in an CodeCommit repository.
        * * `CODEPIPELINE` : The source code settings are specified in the source action of a
        * pipeline in CodePipeline.
-       * * `GITHUB` : The source code is in a GitHub or GitHub Enterprise Cloud repository.
+       * * `GITHUB` : The source code is in a GitHub repository.
        * * `GITHUB_ENTERPRISE` : The source code is in a GitHub Enterprise Server repository.
+       * * `GITLAB` : The source code is in a GitLab repository.
+       * * `GITLAB_SELF_MANAGED` : The source code is in a self-managed GitLab repository.
        * * `NO_SOURCE` : The project does not have input source code.
        * * `S3` : The source code is in an Amazon S3 bucket.
        */
@@ -6985,6 +7068,15 @@ public open class CfnProject(
        * connected to your GitHub account, you do not need to finish creating the build project. You
        * can leave the AWS CodeBuild console.) To instruct AWS CodeBuild to use this connection, in the
        * `source` object, set the `auth` object's `type` value to `OAUTH` .
+       * * For source code in an GitLab or self-managed GitLab repository, the HTTPS clone URL to
+       * the repository that contains the source and the buildspec file. You must connect your AWS
+       * account to your GitLab account. Use the AWS CodeBuild console to start creating a build
+       * project. When you use the console to connect (or reconnect) with GitLab, on the Connections
+       * *Authorize application* page, choose *Authorize* . Then on the AWS CodeConnections *Create
+       * GitLab connection* page, choose *Connect to GitLab* . (After you have connected to your GitLab
+       * account, you do not need to finish creating the build project. You can leave the AWS CodeBuild
+       * console.) To instruct AWS CodeBuild to override the default connection and use this connection
+       * instead, set the `auth` object's `type` value to `CODECONNECTIONS` in the `source` object.
        * * For source code in a Bitbucket repository, the HTTPS clone URL to the repository that
        * contains the source and the buildspec file. You must connect your AWS account to your
        * Bitbucket account. Use the AWS CodeBuild console to start creating a build project. When you
@@ -7039,8 +7131,10 @@ public open class CfnProject(
        * * `CODECOMMIT` : The source code is in an CodeCommit repository.
        * * `CODEPIPELINE` : The source code settings are specified in the source action of a
        * pipeline in CodePipeline.
-       * * `GITHUB` : The source code is in a GitHub or GitHub Enterprise Cloud repository.
+       * * `GITHUB` : The source code is in a GitHub repository.
        * * `GITHUB_ENTERPRISE` : The source code is in a GitHub Enterprise Server repository.
+       * * `GITLAB` : The source code is in a GitLab repository.
+       * * `GITLAB_SELF_MANAGED` : The source code is in a self-managed GitLab repository.
        * * `NO_SOURCE` : The project does not have input source code.
        * * `S3` : The source code is in an Amazon S3 bucket.
        */
@@ -7146,6 +7240,15 @@ public open class CfnProject(
        * connected to your GitHub account, you do not need to finish creating the build project. You
        * can leave the AWS CodeBuild console.) To instruct AWS CodeBuild to use this connection, in the
        * `source` object, set the `auth` object's `type` value to `OAUTH` .
+       * * For source code in an GitLab or self-managed GitLab repository, the HTTPS clone URL to
+       * the repository that contains the source and the buildspec file. You must connect your AWS
+       * account to your GitLab account. Use the AWS CodeBuild console to start creating a build
+       * project. When you use the console to connect (or reconnect) with GitLab, on the Connections
+       * *Authorize application* page, choose *Authorize* . Then on the AWS CodeConnections *Create
+       * GitLab connection* page, choose *Connect to GitLab* . (After you have connected to your GitLab
+       * account, you do not need to finish creating the build project. You can leave the AWS CodeBuild
+       * console.) To instruct AWS CodeBuild to override the default connection and use this connection
+       * instead, set the `auth` object's `type` value to `CODECONNECTIONS` in the `source` object.
        * * For source code in a Bitbucket repository, the HTTPS clone URL to the repository that
        * contains the source and the buildspec file. You must connect your AWS account to your
        * Bitbucket account. Use the AWS CodeBuild console to start creating a build project. When you
@@ -7190,8 +7293,10 @@ public open class CfnProject(
        * * `CODECOMMIT` : The source code is in an CodeCommit repository.
        * * `CODEPIPELINE` : The source code settings are specified in the source action of a
        * pipeline in CodePipeline.
-       * * `GITHUB` : The source code is in a GitHub or GitHub Enterprise Cloud repository.
+       * * `GITHUB` : The source code is in a GitHub repository.
        * * `GITHUB_ENTERPRISE` : The source code is in a GitHub Enterprise Server repository.
+       * * `GITLAB` : The source code is in a GitLab repository.
+       * * `GITLAB_SELF_MANAGED` : The source code is in a self-managed GitLab repository.
        * * `NO_SOURCE` : The project does not have input source code.
        * * `S3` : The source code is in an Amazon S3 bucket.
        *
@@ -7451,18 +7556,20 @@ public open class CfnProject(
     /**
      * The type of webhook filter.
      *
-     * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
-     * `FILE_PATH` , and `COMMIT_MESSAGE` .
+     * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF` ,
+     * `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
      *
      * * EVENT
-     * * A webhook event triggers a build when the provided `pattern` matches one of six event
+     * * A webhook event triggers a build when the provided `pattern` matches one of nine event
      * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
-     * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-     * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters
-     * all push, pull request created, and pull request updated events.
+     * `PULL_REQUEST_REOPENED` , `PULL_REQUEST_MERGED` , `RELEASED` , `PRERELEASED` , and
+     * `WORKFLOW_JOB_QUEUED` . The `EVENT` patterns are specified as a comma-separated string. For
+     * example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters all push, pull request
+     * created, and pull request updated events.
      *
      *
-     * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+     * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
+     * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
      *
      *
      * * ACTOR_ACCOUNT_ID
@@ -7472,8 +7579,10 @@ public open class CfnProject(
      * * A webhook event triggers a build when the head reference matches the regular expression
      * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
      *
+     *
      * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
      * Bitbucket push, and Bitbucket pull request events.
+     *
      *
      * * BASE_REF
      * * A webhook event triggers a build when the base reference matches the regular expression
@@ -7499,6 +7608,29 @@ public open class CfnProject(
      *
      * Works with GitHub and Bitbucket events push and pull requests events. Also works with GitHub
      * Enterprise push events, but does not work with GitHub Enterprise pull request events.
+     *
+     *
+     * * TAG_NAME
+     * * A webhook triggers a build when the tag name of the release matches the regular expression
+     * `pattern` .
+     *
+     *
+     * Works with `RELEASED` and `PRERELEASED` events only.
+     *
+     *
+     * * RELEASE_NAME
+     * * A webhook triggers a build when the release name matches the regular expression `pattern` .
+     *
+     *
+     * Works with `RELEASED` and `PRERELEASED` events only.
+     *
+     *
+     * * WORKFLOW_NAME
+     * * A webhook triggers a build when the workflow name matches the regular expression `pattern`
+     * .
+     *
+     *
+     * Works with `WORKFLOW_JOB_QUEUED` events only.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)
@@ -7541,18 +7673,20 @@ public open class CfnProject(
 
       /**
        * @param type The type of webhook filter. 
-       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
+       * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
+       * , `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
        *
        * * EVENT
-       * * A webhook event triggers a build when the provided `pattern` matches one of six event
+       * * A webhook event triggers a build when the provided `pattern` matches one of nine event
        * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
-       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
-       * filters all push, pull request created, and pull request updated events.
+       * `PULL_REQUEST_REOPENED` , `PULL_REQUEST_MERGED` , `RELEASED` , `PRERELEASED` , and
+       * `WORKFLOW_JOB_QUEUED` . The `EVENT` patterns are specified as a comma-separated string. For
+       * example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters all push, pull request
+       * created, and pull request updated events.
        *
        *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
+       * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
        *
        *
        * * ACTOR_ACCOUNT_ID
@@ -7562,8 +7696,10 @@ public open class CfnProject(
        * * A webhook event triggers a build when the head reference matches the regular expression
        * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
        *
+       *
        * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
        * Bitbucket push, and Bitbucket pull request events.
+       *
        *
        * * BASE_REF
        * * A webhook event triggers a build when the base reference matches the regular expression
@@ -7589,6 +7725,30 @@ public open class CfnProject(
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
        * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       *
+       *
+       * * TAG_NAME
+       * * A webhook triggers a build when the tag name of the release matches the regular
+       * expression `pattern` .
+       *
+       *
+       * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * RELEASE_NAME
+       * * A webhook triggers a build when the release name matches the regular expression `pattern`
+       * .
+       *
+       *
+       * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * WORKFLOW_NAME
+       * * A webhook triggers a build when the workflow name matches the regular expression
+       * `pattern` .
+       *
+       *
+       * Works with `WORKFLOW_JOB_QUEUED` events only.
        */
       public fun type(type: String)
     }
@@ -7635,18 +7795,20 @@ public open class CfnProject(
 
       /**
        * @param type The type of webhook filter. 
-       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
+       * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
+       * , `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
        *
        * * EVENT
-       * * A webhook event triggers a build when the provided `pattern` matches one of six event
+       * * A webhook event triggers a build when the provided `pattern` matches one of nine event
        * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
-       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
-       * filters all push, pull request created, and pull request updated events.
+       * `PULL_REQUEST_REOPENED` , `PULL_REQUEST_MERGED` , `RELEASED` , `PRERELEASED` , and
+       * `WORKFLOW_JOB_QUEUED` . The `EVENT` patterns are specified as a comma-separated string. For
+       * example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters all push, pull request
+       * created, and pull request updated events.
        *
        *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
+       * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
        *
        *
        * * ACTOR_ACCOUNT_ID
@@ -7656,8 +7818,10 @@ public open class CfnProject(
        * * A webhook event triggers a build when the head reference matches the regular expression
        * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
        *
+       *
        * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
        * Bitbucket push, and Bitbucket pull request events.
+       *
        *
        * * BASE_REF
        * * A webhook event triggers a build when the base reference matches the regular expression
@@ -7683,6 +7847,30 @@ public open class CfnProject(
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
        * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       *
+       *
+       * * TAG_NAME
+       * * A webhook triggers a build when the tag name of the release matches the regular
+       * expression `pattern` .
+       *
+       *
+       * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * RELEASE_NAME
+       * * A webhook triggers a build when the release name matches the regular expression `pattern`
+       * .
+       *
+       *
+       * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * WORKFLOW_NAME
+       * * A webhook triggers a build when the workflow name matches the regular expression
+       * `pattern` .
+       *
+       *
+       * Works with `WORKFLOW_JOB_QUEUED` events only.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -7724,18 +7912,20 @@ public open class CfnProject(
       /**
        * The type of webhook filter.
        *
-       * There are six webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
-       * , `FILE_PATH` , and `COMMIT_MESSAGE` .
+       * There are nine webhook filter types: `EVENT` , `ACTOR_ACCOUNT_ID` , `HEAD_REF` , `BASE_REF`
+       * , `FILE_PATH` , `COMMIT_MESSAGE` , `TAG_NAME` , `RELEASE_NAME` , and `WORKFLOW_NAME` .
        *
        * * EVENT
-       * * A webhook event triggers a build when the provided `pattern` matches one of six event
+       * * A webhook event triggers a build when the provided `pattern` matches one of nine event
        * types: `PUSH` , `PULL_REQUEST_CREATED` , `PULL_REQUEST_UPDATED` , `PULL_REQUEST_CLOSED` ,
-       * `PULL_REQUEST_REOPENED` , and `PULL_REQUEST_MERGED` . The `EVENT` patterns are specified as a
-       * comma-separated string. For example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED`
-       * filters all push, pull request created, and pull request updated events.
+       * `PULL_REQUEST_REOPENED` , `PULL_REQUEST_MERGED` , `RELEASED` , `PRERELEASED` , and
+       * `WORKFLOW_JOB_QUEUED` . The `EVENT` patterns are specified as a comma-separated string. For
+       * example, `PUSH, PULL_REQUEST_CREATED, PULL_REQUEST_UPDATED` filters all push, pull request
+       * created, and pull request updated events.
        *
        *
-       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only.
+       * The `PULL_REQUEST_REOPENED` works with GitHub and GitHub Enterprise only. The `RELEASED` ,
+       * `PRERELEASED` , and `WORKFLOW_JOB_QUEUED` work with GitHub only.
        *
        *
        * * ACTOR_ACCOUNT_ID
@@ -7745,8 +7935,10 @@ public open class CfnProject(
        * * A webhook event triggers a build when the head reference matches the regular expression
        * `pattern` . For example, `refs/heads/branch-name` and `refs/tags/tag-name` .
        *
+       *
        * Works with GitHub and GitHub Enterprise push, GitHub and GitHub Enterprise pull request,
        * Bitbucket push, and Bitbucket pull request events.
+       *
        *
        * * BASE_REF
        * * A webhook event triggers a build when the base reference matches the regular expression
@@ -7772,6 +7964,30 @@ public open class CfnProject(
        *
        * Works with GitHub and Bitbucket events push and pull requests events. Also works with
        * GitHub Enterprise push events, but does not work with GitHub Enterprise pull request events.
+       *
+       *
+       * * TAG_NAME
+       * * A webhook triggers a build when the tag name of the release matches the regular
+       * expression `pattern` .
+       *
+       *
+       * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * RELEASE_NAME
+       * * A webhook triggers a build when the release name matches the regular expression `pattern`
+       * .
+       *
+       *
+       * Works with `RELEASED` and `PRERELEASED` events only.
+       *
+       *
+       * * WORKFLOW_NAME
+       * * A webhook triggers a build when the workflow name matches the regular expression
+       * `pattern` .
+       *
+       *
+       * Works with `WORKFLOW_JOB_QUEUED` events only.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-project-webhookfilter.html#cfn-codebuild-project-webhookfilter-type)

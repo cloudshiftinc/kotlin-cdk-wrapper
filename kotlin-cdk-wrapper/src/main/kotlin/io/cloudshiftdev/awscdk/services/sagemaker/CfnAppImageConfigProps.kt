@@ -25,6 +25,16 @@ import kotlin.jvm.JvmName
  * CfnAppImageConfigProps cfnAppImageConfigProps = CfnAppImageConfigProps.builder()
  * .appImageConfigName("appImageConfigName")
  * // the properties below are optional
+ * .codeEditorAppImageConfig(CodeEditorAppImageConfigProperty.builder()
+ * .containerConfig(ContainerConfigProperty.builder()
+ * .containerArguments(List.of("containerArguments"))
+ * .containerEntrypoint(List.of("containerEntrypoint"))
+ * .containerEnvironmentVariables(List.of(CustomImageContainerEnvironmentVariableProperty.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
+ * .build())
+ * .build())
  * .jupyterLabAppImageConfig(JupyterLabAppImageConfigProperty.builder()
  * .containerConfig(ContainerConfigProperty.builder()
  * .containerArguments(List.of("containerArguments"))
@@ -71,6 +81,14 @@ public interface CfnAppImageConfigProps {
    * The configuration for the file system and the runtime, such as the environment variables and
    * entry point.
    *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+   */
+  public fun codeEditorAppImageConfig(): Any? = unwrap(this).getCodeEditorAppImageConfig()
+
+  /**
+   * The configuration for the file system and the runtime, such as the environment variables and
+   * entry point.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-jupyterlabappimageconfig)
    */
   public fun jupyterLabAppImageConfig(): Any? = unwrap(this).getJupyterLabAppImageConfig()
@@ -103,6 +121,28 @@ public interface CfnAppImageConfigProps {
      * Must be unique to your account.
      */
     public fun appImageConfigName(appImageConfigName: String)
+
+    /**
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point.
+     */
+    public fun codeEditorAppImageConfig(codeEditorAppImageConfig: IResolvable)
+
+    /**
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point.
+     */
+    public
+        fun codeEditorAppImageConfig(codeEditorAppImageConfig: CfnAppImageConfig.CodeEditorAppImageConfigProperty)
+
+    /**
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ead6929d53cfc02b7c6c2dc4e8dc4acc28ee9e73b935d6ebe06e39fdd5a80a1c")
+    public
+        fun codeEditorAppImageConfig(codeEditorAppImageConfig: CfnAppImageConfig.CodeEditorAppImageConfigProperty.Builder.() -> Unit)
 
     /**
      * @param jupyterLabAppImageConfig The configuration for the file system and the runtime, such
@@ -176,6 +216,34 @@ public interface CfnAppImageConfigProps {
     override fun appImageConfigName(appImageConfigName: String) {
       cdkBuilder.appImageConfigName(appImageConfigName)
     }
+
+    /**
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point.
+     */
+    override fun codeEditorAppImageConfig(codeEditorAppImageConfig: IResolvable) {
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point.
+     */
+    override
+        fun codeEditorAppImageConfig(codeEditorAppImageConfig: CfnAppImageConfig.CodeEditorAppImageConfigProperty) {
+      cdkBuilder.codeEditorAppImageConfig(codeEditorAppImageConfig.let(CfnAppImageConfig.CodeEditorAppImageConfigProperty::unwrap))
+    }
+
+    /**
+     * @param codeEditorAppImageConfig The configuration for the file system and the runtime, such
+     * as the environment variables and entry point.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ead6929d53cfc02b7c6c2dc4e8dc4acc28ee9e73b935d6ebe06e39fdd5a80a1c")
+    override
+        fun codeEditorAppImageConfig(codeEditorAppImageConfig: CfnAppImageConfig.CodeEditorAppImageConfigProperty.Builder.() -> Unit):
+        Unit =
+        codeEditorAppImageConfig(CfnAppImageConfig.CodeEditorAppImageConfigProperty(codeEditorAppImageConfig))
 
     /**
      * @param jupyterLabAppImageConfig The configuration for the file system and the runtime, such
@@ -266,6 +334,14 @@ public interface CfnAppImageConfigProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-appimageconfigname)
      */
     override fun appImageConfigName(): String = unwrap(this).getAppImageConfigName()
+
+    /**
+     * The configuration for the file system and the runtime, such as the environment variables and
+     * entry point.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-appimageconfig.html#cfn-sagemaker-appimageconfig-codeeditorappimageconfig)
+     */
+    override fun codeEditorAppImageConfig(): Any? = unwrap(this).getCodeEditorAppImageConfig()
 
     /**
      * The configuration for the file system and the runtime, such as the environment variables and

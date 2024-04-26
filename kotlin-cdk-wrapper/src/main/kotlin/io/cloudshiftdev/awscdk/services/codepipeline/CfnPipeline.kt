@@ -64,6 +64,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .region("region")
  * .roleArn("roleArn")
  * .runOrder(123)
+ * .timeoutInMinutes(123)
  * .build()))
  * .name("name")
  * // the properties below are optional
@@ -1147,14 +1148,6 @@ public open class CfnPipeline(
   /**
    * Represents information about an action declaration.
    *
-   *
-   * Documentation for the `timeoutInMinutes` parameter in the `ActionDeclaration` is not yet
-   * available for CloudFormation and CDK resources in CodePipeline. For more information about the
-   * configurable timeout for manual approval actions, see the
-   * [ActionDeclaration](https://docs.aws.amazon.com/codepipeline/latest/APIReference/API_ActionDeclaration.html)
-   * in the CodePipeline API Reference.
-   *
-   *
    * Example:
    *
    * ```
@@ -1182,6 +1175,7 @@ public open class CfnPipeline(
    * .region("region")
    * .roleArn("roleArn")
    * .runOrder(123)
+   * .timeoutInMinutes(123)
    * .build();
    * ```
    *
@@ -1291,6 +1285,16 @@ public open class CfnPipeline(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-runorder)
      */
     public fun runOrder(): Number? = unwrap(this).getRunOrder()
+
+    /**
+     * A timeout duration in minutes that can be applied against the ActionType’s default timeout
+     * value specified in [Quotas for AWS
+     * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html) . This
+     * attribute is available only to the manual approval ActionType.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-timeoutinminutes)
+     */
+    public fun timeoutInMinutes(): Number? = unwrap(this).getTimeoutInMinutes()
 
     /**
      * A builder for [ActionDeclarationProperty]
@@ -1446,6 +1450,14 @@ public open class CfnPipeline(
        * @param runOrder The order in which actions are run.
        */
       public fun runOrder(runOrder: Number)
+
+      /**
+       * @param timeoutInMinutes A timeout duration in minutes that can be applied against the
+       * ActionType’s default timeout value specified in [Quotas for AWS
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html) . This
+       * attribute is available only to the manual approval ActionType.
+       */
+      public fun timeoutInMinutes(timeoutInMinutes: Number)
     }
 
     private class BuilderImpl : Builder {
@@ -1631,6 +1643,16 @@ public open class CfnPipeline(
         cdkBuilder.runOrder(runOrder)
       }
 
+      /**
+       * @param timeoutInMinutes A timeout duration in minutes that can be applied against the
+       * ActionType’s default timeout value specified in [Quotas for AWS
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html) . This
+       * attribute is available only to the manual approval ActionType.
+       */
+      override fun timeoutInMinutes(timeoutInMinutes: Number) {
+        cdkBuilder.timeoutInMinutes(timeoutInMinutes)
+      }
+
       public fun build():
           software.amazon.awscdk.services.codepipeline.CfnPipeline.ActionDeclarationProperty =
           cdkBuilder.build()
@@ -1742,6 +1764,16 @@ public open class CfnPipeline(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-runorder)
        */
       override fun runOrder(): Number? = unwrap(this).getRunOrder()
+
+      /**
+       * A timeout duration in minutes that can be applied against the ActionType’s default timeout
+       * value specified in [Quotas for AWS
+       * CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/limits.html) . This
+       * attribute is available only to the manual approval ActionType.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-timeoutinminutes)
+       */
+      override fun timeoutInMinutes(): Number? = unwrap(this).getTimeoutInMinutes()
     }
 
     public companion object {
@@ -4261,6 +4293,7 @@ public open class CfnPipeline(
    * .region("region")
    * .roleArn("roleArn")
    * .runOrder(123)
+   * .timeoutInMinutes(123)
    * .build()))
    * .name("name")
    * // the properties below are optional

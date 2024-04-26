@@ -310,6 +310,15 @@ public open class TaskDefinition(
   public open fun obtainExecutionRole(): IRole = unwrap(this).obtainExecutionRole().let(IRole::wrap)
 
   /**
+   * The process namespace to use for the containers in the task.
+   *
+   * Only supported for tasks that are hosted on AWS Fargate if the tasks
+   * are using platform version 1.4.0 or later (Linux).
+   * Not supported in Windows containers.
+   */
+  public open fun pidMode(): PidMode? = unwrap(this).getPidMode()?.let(PidMode::wrap)
+
+  /**
    * Whether this task definition has at least a container that references a specific JSON field of
    * a secret stored in Secrets Manager.
    */
@@ -491,7 +500,9 @@ public open class TaskDefinition(
     /**
      * The process namespace to use for the containers in the task.
      *
-     * Not supported in Fargate and Windows containers.
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
      *
      * Default: - PidMode used by the task is not specified
      *
@@ -783,7 +794,9 @@ public open class TaskDefinition(
     /**
      * The process namespace to use for the containers in the task.
      *
-     * Not supported in Fargate and Windows containers.
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
      *
      * Default: - PidMode used by the task is not specified
      *

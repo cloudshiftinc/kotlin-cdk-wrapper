@@ -14,18 +14,13 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.bedrock.*;
- * FoundationModel model = FoundationModel.fromFoundationModelId(this, "Model",
- * FoundationModelIdentifier.AMAZON_TITAN_TEXT_G1_EXPRESS_V1);
- * BedrockInvokeModel task = BedrockInvokeModel.Builder.create(this, "Prompt Model")
- * .model(model)
- * .body(TaskInput.fromObject(Map.of(
- * "inputText", "Generate a list of five first names.",
- * "textGenerationConfig", Map.of(
- * "maxTokenCount", 100,
- * "temperature", 1))))
- * .resultSelector(Map.of(
- * "names", JsonPath.stringAt("$.Body.results[0].outputText")))
+ * Function fn;
+ * LambdaInvoke.Builder.create(this, "Invoke with callback")
+ * .lambdaFunction(fn)
+ * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
+ * .payload(TaskInput.fromObject(Map.of(
+ * "token", JsonPath.getTaskToken(),
+ * "input", JsonPath.stringAt("$.someField"))))
  * .build();
  * ```
  */

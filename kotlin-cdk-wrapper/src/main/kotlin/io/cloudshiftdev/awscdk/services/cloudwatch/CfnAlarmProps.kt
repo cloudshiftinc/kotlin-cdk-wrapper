@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -66,6 +67,10 @@ import kotlin.collections.List
  * .okActions(List.of("okActions"))
  * .period(123)
  * .statistic("statistic")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .threshold(123)
  * .thresholdMetricId("thresholdMetricId")
  * .treatMissingData("treatMissingData")
@@ -284,6 +289,20 @@ public interface CfnAlarmProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-statistic)
    */
   public fun statistic(): String? = unwrap(this).getStatistic()
+
+  /**
+   * A list of key-value pairs to associate with the alarm.
+   *
+   * You can associate as many as 50 tags with an alarm. To be able to associate tags with the alarm
+   * when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+   *
+   * Tags can help you organize and categorize your resources. You can also use them to scope user
+   * permissions by granting a user permission to access or change only resources with certain tag
+   * values.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * The value to compare with the specified statistic.
@@ -558,6 +577,28 @@ public interface CfnAlarmProps {
      * `Metrics` .
      */
     public fun statistic(statistic: String)
+
+    /**
+     * @param tags A list of key-value pairs to associate with the alarm.
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags A list of key-value pairs to associate with the alarm.
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     */
+    public fun tags(vararg tags: CfnTag)
 
     /**
      * @param threshold The value to compare with the specified statistic.
@@ -867,6 +908,30 @@ public interface CfnAlarmProps {
     }
 
     /**
+     * @param tags A list of key-value pairs to associate with the alarm.
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    /**
+     * @param tags A list of key-value pairs to associate with the alarm.
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
      * @param threshold The value to compare with the specified statistic.
      */
     override fun threshold(threshold: Number) {
@@ -1124,6 +1189,20 @@ public interface CfnAlarmProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-statistic)
      */
     override fun statistic(): String? = unwrap(this).getStatistic()
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-alarm.html#cfn-cloudwatch-alarm-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
      * The value to compare with the specified statistic.

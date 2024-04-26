@@ -62,7 +62,7 @@ public open class PhysicalResourceIdReference(
   /**
    * toJSON serialization to replace `PhysicalResourceIdReference` with a magic string.
    */
-  public open fun toJson(): String = unwrap(this).toJSON()
+  public open fun toJSON(): String = unwrap(this).toJSON()
 
   public companion object {
     internal

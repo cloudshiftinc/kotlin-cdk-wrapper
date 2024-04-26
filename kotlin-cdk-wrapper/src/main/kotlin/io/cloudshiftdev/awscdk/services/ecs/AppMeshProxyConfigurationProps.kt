@@ -64,7 +64,7 @@ public interface AppMeshProxyConfigurationProps {
    * This is used to ensure the proxy ignores its own traffic. If IgnoredUID is specified, this
    * field can be empty.
    */
-  public fun ignoredGid(): Number? = unwrap(this).getIgnoredGID()
+  public fun ignoredGID(): Number? = unwrap(this).getIgnoredGID()
 
   /**
    * The user ID (UID) of the proxy container as defined by the user parameter in a container
@@ -73,7 +73,7 @@ public interface AppMeshProxyConfigurationProps {
    * This is used to ensure the proxy ignores its own traffic. If IgnoredGID is specified, this
    * field can be empty.
    */
-  public fun ignoredUid(): Number? = unwrap(this).getIgnoredUID()
+  public fun ignoredUID(): Number? = unwrap(this).getIgnoredUID()
 
   /**
    * Specifies the port that outgoing traffic from the AppPorts is directed to.
@@ -287,7 +287,7 @@ public interface AppMeshProxyConfigurationProps {
      * This is used to ensure the proxy ignores its own traffic. If IgnoredUID is specified, this
      * field can be empty.
      */
-    override fun ignoredGid(): Number? = unwrap(this).getIgnoredGID()
+    override fun ignoredGID(): Number? = unwrap(this).getIgnoredGID()
 
     /**
      * The user ID (UID) of the proxy container as defined by the user parameter in a container
@@ -296,7 +296,7 @@ public interface AppMeshProxyConfigurationProps {
      * This is used to ensure the proxy ignores its own traffic. If IgnoredGID is specified, this
      * field can be empty.
      */
-    override fun ignoredUid(): Number? = unwrap(this).getIgnoredUID()
+    override fun ignoredUID(): Number? = unwrap(this).getIgnoredUID()
 
     /**
      * Specifies the port that outgoing traffic from the AppPorts is directed to.

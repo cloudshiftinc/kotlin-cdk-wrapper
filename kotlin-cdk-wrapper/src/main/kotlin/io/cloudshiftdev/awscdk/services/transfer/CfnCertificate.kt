@@ -210,12 +210,16 @@ public open class CfnCertificate(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
-   * Specifies whether this certificate is used for signing or encryption.
+   * Specifies how this certificate is used.
+   *
+   * It can be used in the following ways:.
    */
   public open fun usage(): String = unwrap(this).getUsage()
 
   /**
-   * Specifies whether this certificate is used for signing or encryption.
+   * Specifies how this certificate is used.
+   *
+   * It can be used in the following ways:.
    */
   public open fun usage(`value`: String) {
     unwrap(this).setUsage(`value`)
@@ -292,10 +296,14 @@ public open class CfnCertificate(
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * Specifies whether this certificate is used for signing or encryption.
+     * Specifies how this certificate is used. It can be used in the following ways:.
+     *
+     * * `SIGNING` : For signing AS2 messages
+     * * `ENCRYPTION` : For encrypting AS2 messages
+     * * `TLS` : For securing AS2 communications sent over HTTPS
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-usage)
-     * @param usage Specifies whether this certificate is used for signing or encryption. 
+     * @param usage Specifies how this certificate is used. It can be used in the following ways:. 
      */
     public fun usage(usage: String)
   }
@@ -387,10 +395,14 @@ public open class CfnCertificate(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * Specifies whether this certificate is used for signing or encryption.
+     * Specifies how this certificate is used. It can be used in the following ways:.
+     *
+     * * `SIGNING` : For signing AS2 messages
+     * * `ENCRYPTION` : For encrypting AS2 messages
+     * * `TLS` : For securing AS2 communications sent over HTTPS
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-usage)
-     * @param usage Specifies whether this certificate is used for signing or encryption. 
+     * @param usage Specifies how this certificate is used. It can be used in the following ways:. 
      */
     override fun usage(usage: String) {
       cdkBuilder.usage(usage)

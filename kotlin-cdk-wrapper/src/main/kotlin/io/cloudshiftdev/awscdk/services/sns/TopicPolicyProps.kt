@@ -42,7 +42,7 @@ public interface TopicPolicyProps {
    *
    * Default: false
    */
-  public fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+  public fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
   /**
    * IAM policy document to apply to topic(s).
@@ -148,7 +148,7 @@ public interface TopicPolicyProps {
      *
      * Default: false
      */
-    override fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+    override fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
     /**
      * IAM policy document to apply to topic(s).

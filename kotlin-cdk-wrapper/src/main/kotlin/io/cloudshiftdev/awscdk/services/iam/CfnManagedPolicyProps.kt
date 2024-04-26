@@ -105,6 +105,8 @@ public interface CfnManagedPolicyProps {
    * You cannot use an asterisk (*) in the path name.
    *
    *
+   * Default: - "/"
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-path)
    */
   public fun path(): String? = unwrap(this).getPath()
@@ -578,6 +580,8 @@ public interface CfnManagedPolicyProps {
      *
      * You cannot use an asterisk (*) in the path name.
      *
+     *
+     * Default: - "/"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-managedpolicy.html#cfn-iam-managedpolicy-path)
      */

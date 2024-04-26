@@ -76,7 +76,7 @@ public open class CfnJson(
    * This is required in case someone JSON.stringifys an object which references this object.
    * Otherwise, we'll get a cyclic JSON reference.
    */
-  public open fun toJson(): String = unwrap(this).toJSON()
+  public open fun toJSON(): String = unwrap(this).toJSON()
 
   /**
    * An Fn::GetAtt to the JSON object passed through `value` and resolved during synthesis.

@@ -1506,7 +1506,7 @@ public open class CfnMatchingWorkflow(
     /**
      * The type of matching.
      *
-     * There are two types of matching: `RULE_MATCHING` and `ML_MATCHING` .
+     * There are three types of matching: `RULE_MATCHING` , `ML_MATCHING` , and `PROVIDER` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-resolutiontechniques.html#cfn-entityresolution-matchingworkflow-resolutiontechniques-resolutiontype)
      */
@@ -1545,7 +1545,7 @@ public open class CfnMatchingWorkflow(
 
       /**
        * @param resolutionType The type of matching.
-       * There are two types of matching: `RULE_MATCHING` and `ML_MATCHING` .
+       * There are three types of matching: `RULE_MATCHING` , `ML_MATCHING` , and `PROVIDER` .
        */
       public fun resolutionType(resolutionType: String)
 
@@ -1602,7 +1602,7 @@ public open class CfnMatchingWorkflow(
 
       /**
        * @param resolutionType The type of matching.
-       * There are two types of matching: `RULE_MATCHING` and `ML_MATCHING` .
+       * There are three types of matching: `RULE_MATCHING` , `ML_MATCHING` , and `PROVIDER` .
        */
       override fun resolutionType(resolutionType: String) {
         cdkBuilder.resolutionType(resolutionType)
@@ -1652,7 +1652,7 @@ public open class CfnMatchingWorkflow(
       /**
        * The type of matching.
        *
-       * There are two types of matching: `RULE_MATCHING` and `ML_MATCHING` .
+       * There are three types of matching: `RULE_MATCHING` , `ML_MATCHING` , and `PROVIDER` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-matchingworkflow-resolutiontechniques.html#cfn-entityresolution-matchingworkflow-resolutiontechniques-resolutiontype)
        */

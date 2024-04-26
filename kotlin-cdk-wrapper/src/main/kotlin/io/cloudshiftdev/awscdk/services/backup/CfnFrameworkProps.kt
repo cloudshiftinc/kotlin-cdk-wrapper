@@ -72,7 +72,7 @@ public interface CfnFrameworkProps {
   public fun frameworkName(): String? = unwrap(this).getFrameworkName()
 
   /**
-   * A list of tags with which to tag your framework.
+   * The tags to assign to your framework.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
    */
@@ -119,12 +119,12 @@ public interface CfnFrameworkProps {
     public fun frameworkName(frameworkName: String)
 
     /**
-     * @param frameworkTags A list of tags with which to tag your framework.
+     * @param frameworkTags The tags to assign to your framework.
      */
     public fun frameworkTags(frameworkTags: List<CfnTag>)
 
     /**
-     * @param frameworkTags A list of tags with which to tag your framework.
+     * @param frameworkTags The tags to assign to your framework.
      */
     public fun frameworkTags(vararg frameworkTags: CfnTag)
   }
@@ -177,14 +177,14 @@ public interface CfnFrameworkProps {
     }
 
     /**
-     * @param frameworkTags A list of tags with which to tag your framework.
+     * @param frameworkTags The tags to assign to your framework.
      */
     override fun frameworkTags(frameworkTags: List<CfnTag>) {
       cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
     }
 
     /**
-     * @param frameworkTags A list of tags with which to tag your framework.
+     * @param frameworkTags The tags to assign to your framework.
      */
     override fun frameworkTags(vararg frameworkTags: CfnTag): Unit =
         frameworkTags(frameworkTags.toList())
@@ -223,7 +223,7 @@ public interface CfnFrameworkProps {
     override fun frameworkName(): String? = unwrap(this).getFrameworkName()
 
     /**
-     * A list of tags with which to tag your framework.
+     * The tags to assign to your framework.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
      */

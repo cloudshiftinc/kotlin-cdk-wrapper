@@ -218,6 +218,23 @@ public interface CfnCustomActionTypeProps {
     public fun provider(provider: String)
 
     /**
+     * @param settings URLs that provide users information about this custom action.
+     */
+    public fun settings(settings: IResolvable)
+
+    /**
+     * @param settings URLs that provide users information about this custom action.
+     */
+    public fun settings(settings: CfnCustomActionType.SettingsProperty)
+
+    /**
+     * @param settings URLs that provide users information about this custom action.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9f879674783ccde8da210cf65e012f0e5dc2c709abc8e626120f64dbffd587d9")
+    public fun settings(settings: CfnCustomActionType.SettingsProperty.Builder.() -> Unit)
+
+    /**
      * @param tags The tags for the custom action.
      */
     public fun tags(tags: List<CfnTag>)
@@ -226,23 +243,6 @@ public interface CfnCustomActionTypeProps {
      * @param tags The tags for the custom action.
      */
     public fun tags(vararg tags: CfnTag)
-
-    /**
-     * @param settings URLs that provide users information about this custom action.
-     */
-    public fun tings(settings: IResolvable)
-
-    /**
-     * @param settings URLs that provide users information about this custom action.
-     */
-    public fun tings(settings: CfnCustomActionType.SettingsProperty)
-
-    /**
-     * @param settings URLs that provide users information about this custom action.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("c5dad734a778bd8f7c0451e773d7159ec6f4e3d028fe71958bfd43ec648fb9d3")
-    public fun tings(settings: CfnCustomActionType.SettingsProperty.Builder.() -> Unit)
 
     /**
      * @param version The version identifier of the custom action. 
@@ -364,6 +364,28 @@ public interface CfnCustomActionTypeProps {
     }
 
     /**
+     * @param settings URLs that provide users information about this custom action.
+     */
+    override fun settings(settings: IResolvable) {
+      cdkBuilder.settings(settings.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param settings URLs that provide users information about this custom action.
+     */
+    override fun settings(settings: CfnCustomActionType.SettingsProperty) {
+      cdkBuilder.settings(settings.let(CfnCustomActionType.SettingsProperty::unwrap))
+    }
+
+    /**
+     * @param settings URLs that provide users information about this custom action.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9f879674783ccde8da210cf65e012f0e5dc2c709abc8e626120f64dbffd587d9")
+    override fun settings(settings: CfnCustomActionType.SettingsProperty.Builder.() -> Unit): Unit =
+        settings(CfnCustomActionType.SettingsProperty(settings))
+
+    /**
      * @param tags The tags for the custom action.
      */
     override fun tags(tags: List<CfnTag>) {
@@ -374,28 +396,6 @@ public interface CfnCustomActionTypeProps {
      * @param tags The tags for the custom action.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-    /**
-     * @param settings URLs that provide users information about this custom action.
-     */
-    override fun tings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
-    }
-
-    /**
-     * @param settings URLs that provide users information about this custom action.
-     */
-    override fun tings(settings: CfnCustomActionType.SettingsProperty) {
-      cdkBuilder.settings(settings.let(CfnCustomActionType.SettingsProperty::unwrap))
-    }
-
-    /**
-     * @param settings URLs that provide users information about this custom action.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("c5dad734a778bd8f7c0451e773d7159ec6f4e3d028fe71958bfd43ec648fb9d3")
-    override fun tings(settings: CfnCustomActionType.SettingsProperty.Builder.() -> Unit): Unit =
-        tings(CfnCustomActionType.SettingsProperty(settings))
 
     /**
      * @param version The version identifier of the custom action. 

@@ -949,8 +949,9 @@ public open class CfnModel(
     /**
      * The environment variables to set in the Docker container.
      *
-     * Each key and value in the `Environment` string to string map can have length of up to 1024.
-     * We support up to 16 entries in the map.
+     * The maximum length of each key and value in the `Environment` map is 1024 bytes. The maximum
+     * length of all keys and values in the map, combined, is 32 KB. If you pass multiple containers to
+     * a `CreateModel` request, then the maximum length of all of their maps, combined, is also 32 KB.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html#cfn-sagemaker-model-containerdefinition-environment)
      */
@@ -1088,8 +1089,10 @@ public open class CfnModel(
 
       /**
        * @param environment The environment variables to set in the Docker container.
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
+       * The maximum length of each key and value in the `Environment` map is 1024 bytes. The
+       * maximum length of all keys and values in the map, combined, is 32 KB. If you pass multiple
+       * containers to a `CreateModel` request, then the maximum length of all of their maps, combined,
+       * is also 32 KB.
        */
       public fun environment(environment: Any)
 
@@ -1270,8 +1273,10 @@ public open class CfnModel(
 
       /**
        * @param environment The environment variables to set in the Docker container.
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
+       * The maximum length of each key and value in the `Environment` map is 1024 bytes. The
+       * maximum length of all keys and values in the map, combined, is 32 KB. If you pass multiple
+       * containers to a `CreateModel` request, then the maximum length of all of their maps, combined,
+       * is also 32 KB.
        */
       override fun environment(environment: Any) {
         cdkBuilder.environment(environment)
@@ -1482,8 +1487,10 @@ public open class CfnModel(
       /**
        * The environment variables to set in the Docker container.
        *
-       * Each key and value in the `Environment` string to string map can have length of up to 1024.
-       * We support up to 16 entries in the map.
+       * The maximum length of each key and value in the `Environment` map is 1024 bytes. The
+       * maximum length of all keys and values in the map, combined, is 32 KB. If you pass multiple
+       * containers to a `CreateModel` request, then the maximum length of all of their maps, combined,
+       * is also 32 KB.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-containerdefinition.html#cfn-sagemaker-model-containerdefinition-environment)
        */

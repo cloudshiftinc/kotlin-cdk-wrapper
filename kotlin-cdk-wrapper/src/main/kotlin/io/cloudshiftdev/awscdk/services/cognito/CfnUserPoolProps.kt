@@ -184,8 +184,8 @@ public interface CfnUserPoolProps {
   /**
    * When active, `DeletionProtection` prevents accidental deletion of your user pool.
    *
-   * Before you can delete a user pool that you have protected against deletion, you must deactivate
-   * this feature.
+   * Before you can delete a user pool that you have protected against deletion, you
+   * must deactivate this feature.
    *
    * When you try to delete a protected user pool in a `DeleteUserPool` API request, Amazon Cognito
    * returns an `InvalidParameterException` error. To delete a protected user pool, send a new
@@ -505,8 +505,8 @@ public interface CfnUserPoolProps {
     /**
      * @param deletionProtection When active, `DeletionProtection` prevents accidental deletion of
      * your user pool.
-     * Before you can delete a user pool that you have protected against deletion, you must
-     * deactivate this feature.
+     * Before you can delete a user pool that you have protected against deletion, you
+     * must deactivate this feature.
      *
      * When you try to delete a protected user pool in a `DeleteUserPool` API request, Amazon
      * Cognito returns an `InvalidParameterException` error. To delete a protected user pool, send a
@@ -1023,8 +1023,8 @@ public interface CfnUserPoolProps {
     /**
      * @param deletionProtection When active, `DeletionProtection` prevents accidental deletion of
      * your user pool.
-     * Before you can delete a user pool that you have protected against deletion, you must
-     * deactivate this feature.
+     * Before you can delete a user pool that you have protected against deletion, you
+     * must deactivate this feature.
      *
      * When you try to delete a protected user pool in a `DeleteUserPool` API request, Amazon
      * Cognito returns an `InvalidParameterException` error. To delete a protected user pool, send a
@@ -1560,8 +1560,8 @@ public interface CfnUserPoolProps {
     /**
      * When active, `DeletionProtection` prevents accidental deletion of your user pool.
      *
-     * Before you can delete a user pool that you have protected against deletion, you must
-     * deactivate this feature.
+     * Before you can delete a user pool that you have protected against deletion, you
+     * must deactivate this feature.
      *
      * When you try to delete a protected user pool in a `DeleteUserPool` API request, Amazon
      * Cognito returns an `InvalidParameterException` error. To delete a protected user pool, send a

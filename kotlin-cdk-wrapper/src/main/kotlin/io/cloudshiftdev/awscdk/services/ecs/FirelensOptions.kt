@@ -54,7 +54,7 @@ public interface FirelensOptions {
    *
    * Default: - true
    */
-  public fun enableEcsLogMetadata(): Boolean? = unwrap(this).getEnableECSLogMetadata()
+  public fun enableECSLogMetadata(): Boolean? = unwrap(this).getEnableECSLogMetadata()
 
   /**
    * A builder for [FirelensOptions]
@@ -145,7 +145,7 @@ public interface FirelensOptions {
      *
      * Default: - true
      */
-    override fun enableEcsLogMetadata(): Boolean? = unwrap(this).getEnableECSLogMetadata()
+    override fun enableECSLogMetadata(): Boolean? = unwrap(this).getEnableECSLogMetadata()
   }
 
   public companion object {

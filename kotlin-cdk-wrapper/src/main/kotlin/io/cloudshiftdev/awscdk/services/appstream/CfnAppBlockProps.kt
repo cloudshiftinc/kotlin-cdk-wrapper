@@ -168,6 +168,24 @@ public interface CfnAppBlockProps {
         fun postSetupScriptDetails(postSetupScriptDetails: CfnAppBlock.ScriptDetailsProperty.Builder.() -> Unit)
 
     /**
+     * @param setupScriptDetails The setup script details of the app block.
+     */
+    public fun setupScriptDetails(setupScriptDetails: IResolvable)
+
+    /**
+     * @param setupScriptDetails The setup script details of the app block.
+     */
+    public fun setupScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty)
+
+    /**
+     * @param setupScriptDetails The setup script details of the app block.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3a640df71b6acc88a548333bd7c0c7d41b8319b76416a0e7cdef2bf4a56d3637")
+    public
+        fun setupScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty.Builder.() -> Unit)
+
+    /**
      * @param sourceS3Location The source S3 location of the app block. 
      */
     public fun sourceS3Location(sourceS3Location: IResolvable)
@@ -193,24 +211,6 @@ public interface CfnAppBlockProps {
      * @param tags The tags of the app block.
      */
     public fun tags(vararg tags: CfnTag)
-
-    /**
-     * @param setupScriptDetails The setup script details of the app block.
-     */
-    public fun upScriptDetails(setupScriptDetails: IResolvable)
-
-    /**
-     * @param setupScriptDetails The setup script details of the app block.
-     */
-    public fun upScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty)
-
-    /**
-     * @param setupScriptDetails The setup script details of the app block.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("db995324b8b4ec7653a6e67f0ed64e37b1788dbbcab9e54b1cfbec7c348a543d")
-    public
-        fun upScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -270,6 +270,29 @@ public interface CfnAppBlockProps {
         Unit = postSetupScriptDetails(CfnAppBlock.ScriptDetailsProperty(postSetupScriptDetails))
 
     /**
+     * @param setupScriptDetails The setup script details of the app block.
+     */
+    override fun setupScriptDetails(setupScriptDetails: IResolvable) {
+      cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param setupScriptDetails The setup script details of the app block.
+     */
+    override fun setupScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty) {
+      cdkBuilder.setupScriptDetails(setupScriptDetails.let(CfnAppBlock.ScriptDetailsProperty::unwrap))
+    }
+
+    /**
+     * @param setupScriptDetails The setup script details of the app block.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3a640df71b6acc88a548333bd7c0c7d41b8319b76416a0e7cdef2bf4a56d3637")
+    override
+        fun setupScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty.Builder.() -> Unit):
+        Unit = setupScriptDetails(CfnAppBlock.ScriptDetailsProperty(setupScriptDetails))
+
+    /**
      * @param sourceS3Location The source S3 location of the app block. 
      */
     override fun sourceS3Location(sourceS3Location: IResolvable) {
@@ -303,29 +326,6 @@ public interface CfnAppBlockProps {
      * @param tags The tags of the app block.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-    /**
-     * @param setupScriptDetails The setup script details of the app block.
-     */
-    override fun upScriptDetails(setupScriptDetails: IResolvable) {
-      cdkBuilder.setupScriptDetails(setupScriptDetails.let(IResolvable::unwrap))
-    }
-
-    /**
-     * @param setupScriptDetails The setup script details of the app block.
-     */
-    override fun upScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty) {
-      cdkBuilder.setupScriptDetails(setupScriptDetails.let(CfnAppBlock.ScriptDetailsProperty::unwrap))
-    }
-
-    /**
-     * @param setupScriptDetails The setup script details of the app block.
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("db995324b8b4ec7653a6e67f0ed64e37b1788dbbcab9e54b1cfbec7c348a543d")
-    override
-        fun upScriptDetails(setupScriptDetails: CfnAppBlock.ScriptDetailsProperty.Builder.() -> Unit):
-        Unit = upScriptDetails(CfnAppBlock.ScriptDetailsProperty(setupScriptDetails))
 
     public fun build(): software.amazon.awscdk.services.appstream.CfnAppBlockProps =
         cdkBuilder.build()

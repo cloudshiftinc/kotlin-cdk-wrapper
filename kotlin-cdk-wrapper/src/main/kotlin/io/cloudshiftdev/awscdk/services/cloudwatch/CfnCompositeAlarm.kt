@@ -3,8 +3,11 @@
 package io.cloudshiftdev.awscdk.services.cloudwatch
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
@@ -30,8 +33,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * create a composite alarm and set up alerts only for the composite alarm. For example, you could
  * create a composite alarm that goes into ALARM state only when more than one of the underlying metric
  * alarms are in ALARM state.
- *
- * Currently, the only alarm actions that can be taken by composite alarms are notifying SNS topics.
  *
  * When this operation creates an alarm, the alarm state is immediately set to INSUFFICIENT_DATA.
  * The alarm is then evaluated and its state is set appropriately. Any actions associated with the new
@@ -60,6 +61,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .alarmName("alarmName")
  * .insufficientDataActions(List.of("insufficientDataActions"))
  * .okActions(List.of("okActions"))
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -67,7 +72,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  */
 public open class CfnCompositeAlarm(
   cdkObject: software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm,
-) : CfnResource(cdkObject), IInspectable {
+) : CfnResource(cdkObject), IInspectable, ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -210,6 +215,12 @@ public open class CfnCompositeAlarm(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
    * Examines the CloudFormation resource and discloses attributes.
    *
    * @param inspector tree inspector to collect and process attributes. 
@@ -256,6 +267,23 @@ public open class CfnCompositeAlarm(
    * The actions to execute when this alarm transitions to the OK state from any other state.
    */
   public open fun okActions(vararg `value`: String): Unit = okActions(`value`.toList())
+
+  /**
+   * A list of key-value pairs to associate with the alarm.
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * A list of key-value pairs to associate with the alarm.
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag::unwrap))
+  }
+
+  /**
+   * A list of key-value pairs to associate with the alarm.
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.cloudwatch.CfnCompositeAlarm].
@@ -467,6 +495,36 @@ public open class CfnCompositeAlarm(
      * other state. 
      */
     public fun okActions(vararg okActions: String)
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -705,6 +763,38 @@ public open class CfnCompositeAlarm(
      * other state. 
      */
     override fun okActions(vararg okActions: String): Unit = okActions(okActions.toList())
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag::unwrap))
+    }
+
+    /**
+     * A list of key-value pairs to associate with the alarm.
+     *
+     * You can associate as many as 50 tags with an alarm. To be able to associate tags with the
+     * alarm when you create the alarm, you must have the `cloudwatch:TagResource` permission.
+     *
+     * Tags can help you organize and categorize your resources. You can also use them to scope user
+     * permissions by granting a user permission to access or change only resources with certain tag
+     * values.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-compositealarm.html#cfn-cloudwatch-compositealarm-tags)
+     * @param tags A list of key-value pairs to associate with the alarm. 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.cloudwatch.CfnCompositeAlarm =
         cdkBuilder.build()

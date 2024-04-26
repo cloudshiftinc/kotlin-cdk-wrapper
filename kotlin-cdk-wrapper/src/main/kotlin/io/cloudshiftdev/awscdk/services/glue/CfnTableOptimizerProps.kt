@@ -61,6 +61,8 @@ public interface CfnTableOptimizerProps {
   public fun tableName(): String
 
   /**
+   * Specifies configuration details of a table optimizer.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
    */
   public fun tableOptimizerConfiguration(): Any
@@ -97,18 +99,18 @@ public interface CfnTableOptimizerProps {
     public fun tableName(tableName: String)
 
     /**
-     * @param tableOptimizerConfiguration the value to be set. 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     public fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable)
 
     /**
-     * @param tableOptimizerConfiguration the value to be set. 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     public
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: CfnTableOptimizer.TableOptimizerConfigurationProperty)
 
     /**
-     * @param tableOptimizerConfiguration the value to be set. 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("95d457aada3848bb90e499321d16bd07efffbb6dd76133703d496e810e99cbb1")
@@ -150,14 +152,14 @@ public interface CfnTableOptimizerProps {
     }
 
     /**
-     * @param tableOptimizerConfiguration the value to be set. 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     override fun tableOptimizerConfiguration(tableOptimizerConfiguration: IResolvable) {
       cdkBuilder.tableOptimizerConfiguration(tableOptimizerConfiguration.let(IResolvable::unwrap))
     }
 
     /**
-     * @param tableOptimizerConfiguration the value to be set. 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     override
         fun tableOptimizerConfiguration(tableOptimizerConfiguration: CfnTableOptimizer.TableOptimizerConfigurationProperty) {
@@ -165,7 +167,7 @@ public interface CfnTableOptimizerProps {
     }
 
     /**
-     * @param tableOptimizerConfiguration the value to be set. 
+     * @param tableOptimizerConfiguration Specifies configuration details of a table optimizer. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("95d457aada3848bb90e499321d16bd07efffbb6dd76133703d496e810e99cbb1")
@@ -215,6 +217,8 @@ public interface CfnTableOptimizerProps {
     override fun tableName(): String = unwrap(this).getTableName()
 
     /**
+     * Specifies configuration details of a table optimizer.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-tableoptimizer.html#cfn-glue-tableoptimizer-tableoptimizerconfiguration)
      */
     override fun tableOptimizerConfiguration(): Any = unwrap(this).getTableOptimizerConfiguration()

@@ -18,7 +18,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.iam.*;
  * import io.cloudshiftdev.awscdk.services.lambda.*;
  * Function myLambdaFunction;
  * Bucket destinationBucket;

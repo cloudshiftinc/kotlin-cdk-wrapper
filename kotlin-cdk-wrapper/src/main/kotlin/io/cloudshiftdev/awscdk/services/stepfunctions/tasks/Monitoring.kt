@@ -76,7 +76,7 @@ public interface Monitoring {
    *
    * Default: true
    */
-  public fun persistentAppUi(): Boolean? = unwrap(this).getPersistentAppUI()
+  public fun persistentAppUI(): Boolean? = unwrap(this).getPersistentAppUI()
 
   /**
    * A builder for [Monitoring]
@@ -205,7 +205,7 @@ public interface Monitoring {
      *
      * Default: true
      */
-    override fun persistentAppUi(): Boolean? = unwrap(this).getPersistentAppUI()
+    override fun persistentAppUI(): Boolean? = unwrap(this).getPersistentAppUI()
   }
 
   public companion object {

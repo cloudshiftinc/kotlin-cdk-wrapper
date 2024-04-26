@@ -114,34 +114,34 @@ public open class CfnApplicationOutput(
   }
 
   /**
-   * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-   * which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written.
+   * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+   * identify an in-application stream and a destination where you want the in-application stream data
+   * to be written.
    */
   public open fun output(): Any = unwrap(this).getOutput()
 
   /**
-   * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-   * which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written.
+   * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+   * identify an in-application stream and a destination where you want the in-application stream data
+   * to be written.
    */
   public open fun output(`value`: IResolvable) {
     unwrap(this).setOutput(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-   * which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written.
+   * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+   * identify an in-application stream and a destination where you want the in-application stream data
+   * to be written.
    */
   public open fun output(`value`: OutputProperty) {
     unwrap(this).setOutput(`value`.let(OutputProperty::unwrap))
   }
 
   /**
-   * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-   * which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written.
+   * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+   * identify an in-application stream and a destination where you want the in-application stream data
+   * to be written.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d614209d4ed192b9890035b521e5e299a73477b3e7feb007bf03c155d3d5146c")
@@ -163,42 +163,42 @@ public open class CfnApplicationOutput(
     public fun applicationName(applicationName: String)
 
     /**
-     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-     * which you identify an in-application stream and a destination where you want the in-application
-     * stream data to be written.
+     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+     * identify an in-application stream and a destination where you want the in-application stream
+     * data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      */
     public fun output(output: IResolvable)
 
     /**
-     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-     * which you identify an in-application stream and a destination where you want the in-application
-     * stream data to be written.
+     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+     * identify an in-application stream and a destination where you want the in-application stream
+     * data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      */
     public fun output(output: OutputProperty)
 
     /**
-     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-     * which you identify an in-application stream and a destination where you want the in-application
-     * stream data to be written.
+     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+     * identify an in-application stream and a destination where you want the in-application stream
+     * data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      */
@@ -227,14 +227,14 @@ public open class CfnApplicationOutput(
     }
 
     /**
-     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-     * which you identify an in-application stream and a destination where you want the in-application
-     * stream data to be written.
+     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+     * identify an in-application stream and a destination where you want the in-application stream
+     * data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      */
@@ -243,14 +243,14 @@ public open class CfnApplicationOutput(
     }
 
     /**
-     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-     * which you identify an in-application stream and a destination where you want the in-application
-     * stream data to be written.
+     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+     * identify an in-application stream and a destination where you want the in-application stream
+     * data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      */
@@ -259,14 +259,14 @@ public open class CfnApplicationOutput(
     }
 
     /**
-     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-     * which you identify an in-application stream and a destination where you want the in-application
-     * stream data to be written.
+     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+     * identify an in-application stream and a destination where you want the in-application stream
+     * data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationoutput.html#cfn-kinesisanalyticsv2-applicationoutput-output)
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      */
@@ -302,8 +302,8 @@ public open class CfnApplicationOutput(
   }
 
   /**
-   * Describes the data format when records are written to the destination in a SQL-based Managed
-   * Service for Apache Flink application.
+   * Describes the data format when records are written to the destination in a SQL-based Kinesis
+   * Data Analytics application.
    *
    * Example:
    *
@@ -385,8 +385,8 @@ public open class CfnApplicationOutput(
   }
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, when configuring application
-   * output, identifies a Kinesis Data Firehose delivery stream as the destination.
+   * For a SQL-based Kinesis Data Analytics application, when configuring application output,
+   * identifies a Kinesis Data Firehose delivery stream as the destination.
    *
    * You provide the stream Amazon Resource Name (ARN) of the delivery stream.
    *
@@ -471,8 +471,8 @@ public open class CfnApplicationOutput(
   }
 
   /**
-   * When you configure a SQL-based Managed Service for Apache Flink application's output,
-   * identifies a Kinesis data stream as the destination.
+   * When you configure a SQL-based Kinesis Data Analytics application's output, identifies a
+   * Kinesis data stream as the destination.
    *
    * You provide the stream Amazon Resource Name (ARN).
    *
@@ -557,8 +557,8 @@ public open class CfnApplicationOutput(
   }
 
   /**
-   * When you configure a SQL-based Managed Service for Apache Flink application's output,
-   * identifies an Amazon Lambda function as the destination.
+   * When you configure a SQL-based Kinesis Data Analytics application's output, identifies an
+   * Amazon Lambda function as the destination.
    *
    * You provide the function Amazon Resource Name (ARN) of the Lambda function.
    *
@@ -668,9 +668,9 @@ public open class CfnApplicationOutput(
   }
 
   /**
-   * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-   * which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written.
+   * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+   * identify an in-application stream and a destination where you want the in-application stream data
+   * to be written.
    *
    * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
    *

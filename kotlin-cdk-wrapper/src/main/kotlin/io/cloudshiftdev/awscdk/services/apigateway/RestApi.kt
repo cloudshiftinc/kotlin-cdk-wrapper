@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Size
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.PolicyDocument
+import kotlin.Any
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.Number
@@ -28,23 +29,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Bucket destinationBucket = new Bucket(this, "Bucket");
- * Role deliveryStreamRole = Role.Builder.create(this, "Role")
- * .assumedBy(new ServicePrincipal("firehose.amazonaws.com"))
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .definition(Chain.start(new Pass(this, "Pass")))
  * .build();
- * CfnDeliveryStream stream = CfnDeliveryStream.Builder.create(this, "MyStream")
- * .deliveryStreamName("amazon-apigateway-delivery-stream")
- * .s3DestinationConfiguration(S3DestinationConfigurationProperty.builder()
- * .bucketArn(destinationBucket.getBucketArn())
- * .roleArn(deliveryStreamRole.getRoleArn())
- * .build())
+ * RestApi api = RestApi.Builder.create(this, "Api")
+ * .restApiName("MyApi")
  * .build();
- * RestApi api = RestApi.Builder.create(this, "books")
- * .deployOptions(StageOptions.builder()
- * .accessLogDestination(new FirehoseLogDestination(stream))
- * .accessLogFormat(AccessLogFormat.jsonWithStandardFields())
- * .build())
- * .build();
+ * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
  * ```
  */
 public open class RestApi(
@@ -1022,6 +1014,9 @@ public open class RestApi(
     ): IRestApi =
         software.amazon.awscdk.services.apigateway.RestApi.fromRestApiId(scope.let(CloudshiftdevConstructsConstruct::unwrap),
         id, restApiId).let(IRestApi::wrap)
+
+    public fun isRestApi(x: Any): Boolean =
+        software.amazon.awscdk.services.apigateway.RestApi.isRestApi(x)
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

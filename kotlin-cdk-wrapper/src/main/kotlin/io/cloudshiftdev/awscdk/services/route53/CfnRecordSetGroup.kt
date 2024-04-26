@@ -2780,7 +2780,7 @@ public open class CfnRecordSetGroup(
      * of the resource record sets in the group.
      *
      * Valid values for multivalue answer resource record sets: `A` | `AAAA` | `MX` | `NAPTR` |
-     * `PTR` | `SPF` | `SRV` | `TXT`
+     * `PTR` | `SPF` | `SRV` | `TXT` | `CAA`
      *
      *
      * SPF records were formerly used to verify the identity of the sender of email messages.
@@ -3391,7 +3391,7 @@ public open class CfnRecordSetGroup(
        * all of the resource record sets in the group.
        *
        * Valid values for multivalue answer resource record sets: `A` | `AAAA` | `MX` | `NAPTR` |
-       * `PTR` | `SPF` | `SRV` | `TXT`
+       * `PTR` | `SPF` | `SRV` | `TXT` | `CAA`
        *
        *
        * SPF records were formerly used to verify the identity of the sender of email messages.
@@ -4042,7 +4042,7 @@ public open class CfnRecordSetGroup(
        * all of the resource record sets in the group.
        *
        * Valid values for multivalue answer resource record sets: `A` | `AAAA` | `MX` | `NAPTR` |
-       * `PTR` | `SPF` | `SRV` | `TXT`
+       * `PTR` | `SPF` | `SRV` | `TXT` | `CAA`
        *
        *
        * SPF records were formerly used to verify the identity of the sender of email messages.
@@ -4526,7 +4526,7 @@ public open class CfnRecordSetGroup(
        * all of the resource record sets in the group.
        *
        * Valid values for multivalue answer resource record sets: `A` | `AAAA` | `MX` | `NAPTR` |
-       * `PTR` | `SPF` | `SRV` | `TXT`
+       * `PTR` | `SPF` | `SRV` | `TXT` | `CAA`
        *
        *
        * SPF records were formerly used to verify the identity of the sender of email messages.

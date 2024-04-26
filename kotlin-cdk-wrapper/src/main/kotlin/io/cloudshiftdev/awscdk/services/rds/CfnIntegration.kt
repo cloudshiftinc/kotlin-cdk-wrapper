@@ -33,6 +33,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .additionalEncryptionContext(Map.of(
  * "additionalEncryptionContextKey", "additionalEncryptionContext"))
+ * .dataFilter("dataFilter")
+ * .description("description")
  * .integrationName("integrationName")
  * .kmsKeyId("kmsKeyId")
  * .tags(List.of(CfnTag.builder()
@@ -101,6 +103,30 @@ public open class CfnIntegration(
    */
   public override fun cdkTagManager(): TagManager =
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
+
+  /**
+   * Data filters for the integration.
+   */
+  public open fun dataFilter(): String? = unwrap(this).getDataFilter()
+
+  /**
+   * Data filters for the integration.
+   */
+  public open fun dataFilter(`value`: String) {
+    unwrap(this).setDataFilter(`value`)
+  }
+
+  /**
+   * A description of the integration.
+   */
+  public open fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * A description of the integration.
+   */
+  public open fun description(`value`: String) {
+    unwrap(this).setDescription(`value`)
+  }
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -216,6 +242,25 @@ public open class CfnIntegration(
     public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
 
     /**
+     * Data filters for the integration.
+     *
+     * These filters determine which tables from the source database are sent to the target Amazon
+     * Redshift data warehouse.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-datafilter)
+     * @param dataFilter Data filters for the integration. 
+     */
+    public fun dataFilter(dataFilter: String)
+
+    /**
+     * A description of the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-description)
+     * @param description A description of the integration. 
+     */
+    public fun description(description: String)
+
+    /**
      * The name of the integration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-integrationname)
@@ -319,6 +364,29 @@ public open class CfnIntegration(
      */
     override fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>) {
       cdkBuilder.additionalEncryptionContext(additionalEncryptionContext)
+    }
+
+    /**
+     * Data filters for the integration.
+     *
+     * These filters determine which tables from the source database are sent to the target Amazon
+     * Redshift data warehouse.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-datafilter)
+     * @param dataFilter Data filters for the integration. 
+     */
+    override fun dataFilter(dataFilter: String) {
+      cdkBuilder.dataFilter(dataFilter)
+    }
+
+    /**
+     * A description of the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-description)
+     * @param description A description of the integration. 
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**

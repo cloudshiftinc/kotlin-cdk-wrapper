@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.ec2.Connections
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
+import io.cloudshiftdev.awscdk.services.s3.IBucket
 import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
@@ -146,6 +147,34 @@ public open class ApplicationLoadBalancer(
    */
   public override fun listeners(): List<ApplicationListener> =
       unwrap(this).getListeners().map(ApplicationListener::wrap)
+
+  /**
+   * Enable access logging for this load balancer.
+   *
+   * A region must be specified on the stack containing the load balancer; you cannot enable logging
+   * on
+   * environment-agnostic stacks. See https://docs.aws.amazon.com/cdk/latest/guide/environments.html
+   *
+   * @param bucket 
+   * @param prefix
+   */
+  public override fun logAccessLogs(bucket: IBucket) {
+    unwrap(this).logAccessLogs(bucket.let(IBucket::unwrap))
+  }
+
+  /**
+   * Enable access logging for this load balancer.
+   *
+   * A region must be specified on the stack containing the load balancer; you cannot enable logging
+   * on
+   * environment-agnostic stacks. See https://docs.aws.amazon.com/cdk/latest/guide/environments.html
+   *
+   * @param bucket 
+   * @param prefix
+   */
+  public override fun logAccessLogs(bucket: IBucket, prefix: String) {
+    unwrap(this).logAccessLogs(bucket.let(IBucket::unwrap), prefix)
+  }
 
   /**
    * (deprecated) Return the given named metric for this Application Load Balancer.
@@ -288,7 +317,7 @@ public open class ApplicationLoadBalancer(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricConsumedLcUs(): Metric = unwrap(this).metricConsumedLCUs().let(Metric::wrap)
+  public open fun metricConsumedLCUs(): Metric = unwrap(this).metricConsumedLCUs().let(Metric::wrap)
 
   /**
    * (deprecated) The number of load balancer capacity units (LCU) used by your load balancer.
@@ -299,7 +328,7 @@ public open class ApplicationLoadBalancer(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricConsumedLcUs(props: MetricOptions): Metric =
+  public open fun metricConsumedLCUs(props: MetricOptions): Metric =
       unwrap(this).metricConsumedLCUs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -312,9 +341,9 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("0ad78129a917eee56b57e367cb552e5520e44cc8850a30b6843c7637bddf5442")
-  public open fun metricConsumedLcUs(props: MetricOptions.Builder.() -> Unit): Metric =
-      metricConsumedLcUs(MetricOptions(props))
+  @JvmName("e3e6de8e93f42ba897d92007009735fcc06aede8f8d1f7a9b5b0846ad0b5c213")
+  public open fun metricConsumedLCUs(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricConsumedLCUs(MetricOptions(props))
 
   /**
    * (deprecated) The number of user authentications that could not be completed.
@@ -1094,7 +1123,7 @@ public open class ApplicationLoadBalancer(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricTargetTlsNegotiationErrorCount(): Metric =
+  public open fun metricTargetTLSNegotiationErrorCount(): Metric =
       unwrap(this).metricTargetTLSNegotiationErrorCount().let(Metric::wrap)
 
   /**
@@ -1109,7 +1138,7 @@ public open class ApplicationLoadBalancer(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricTargetTlsNegotiationErrorCount(props: MetricOptions): Metric =
+  public open fun metricTargetTLSNegotiationErrorCount(props: MetricOptions): Metric =
       unwrap(this).metricTargetTLSNegotiationErrorCount(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -1125,9 +1154,9 @@ public open class ApplicationLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("6fb589e77244f79e7b207d6efccaa92a565bce39740975d0c083f19f8a1853d0")
-  public open fun metricTargetTlsNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit):
-      Metric = metricTargetTlsNegotiationErrorCount(MetricOptions(props))
+  @JvmName("70bf713a49db7cc1ea5cbee18d1539d5f4fc72d053cab9032f0270e4cb252ce2")
+  public open fun metricTargetTLSNegotiationErrorCount(props: MetricOptions.Builder.() -> Unit):
+      Metric = metricTargetTLSNegotiationErrorCount(MetricOptions(props))
 
   /**
    * All metrics available for this load balancer.
@@ -1144,6 +1173,29 @@ public open class ApplicationLoadBalancer(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The client keep alive duration.
+     *
+     * The valid range is 60 to 604800 seconds (1 minute to 7 days).
+     *
+     * Default: - Duration.seconds(3600)
+     *
+     * @param clientKeepAlive The client keep alive duration. 
+     */
+    public fun clientKeepAlive(clientKeepAlive: Duration)
+
+    /**
+     * Indicates whether cross-zone load balancing is enabled.
+     *
+     * Default: - false for Network Load Balancers and true for Application Load Balancers.
+     * This can not be `false` for Application Load Balancers.
+     *
+     * [Documentation]( -
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
+     */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
+
+    /**
      * Indicates whether deletion protection is enabled.
      *
      * Default: false
@@ -1151,6 +1203,16 @@ public open class ApplicationLoadBalancer(
      * @param deletionProtection Indicates whether deletion protection is enabled. 
      */
     public fun deletionProtection(deletionProtection: Boolean)
+
+    /**
+     * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+     *
+     * Default: - false for internet-facing load balancers and true for internal load balancers
+     *
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW). 
+     */
+    public fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean)
 
     /**
      * Determines how the load balancer handles requests that might pose a security risk to your
@@ -1220,6 +1282,28 @@ public open class ApplicationLoadBalancer(
     public fun loadBalancerName(loadBalancerName: String)
 
     /**
+     * Indicates whether the Application Load Balancer should preserve the host header in the HTTP
+     * request and send it to the target without any change.
+     *
+     * Default: false
+     *
+     * @param preserveHostHeader Indicates whether the Application Load Balancer should preserve the
+     * host header in the HTTP request and send it to the target without any change. 
+     */
+    public fun preserveHostHeader(preserveHostHeader: Boolean)
+
+    /**
+     * Indicates whether the X-Forwarded-For header should preserve the source port that the client
+     * used to connect to the load balancer.
+     *
+     * Default: false
+     *
+     * @param preserveXffClientPort Indicates whether the X-Forwarded-For header should preserve the
+     * source port that the client used to connect to the load balancer. 
+     */
+    public fun preserveXffClientPort(preserveXffClientPort: Boolean)
+
+    /**
      * Security group to associate with this load balancer.
      *
      * Default: A security group is created
@@ -1254,6 +1338,49 @@ public open class ApplicationLoadBalancer(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("37ab8b88b872e71ae62e225b437c3fd8223e8c24ae05dc0ea4ccb865fb06a8c6")
     public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
+
+    /**
+     * Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is
+     * unable to forward the request to AWS WAF.
+     *
+     * Default: false
+     *
+     * @param wafFailOpen Indicates whether to allow a WAF-enabled load balancer to route requests
+     * to targets if it is unable to forward the request to AWS WAF. 
+     */
+    public fun wafFailOpen(wafFailOpen: Boolean)
+
+    /**
+     * Indicates whether the two headers (x-amzn-tls-version and x-amzn-tls-cipher-suite), which
+     * contain information about the negotiated TLS version and cipher suite, are added to the client
+     * request before sending it to the target.
+     *
+     * The x-amzn-tls-version header has information about the TLS protocol version negotiated with
+     * the client,
+     * and the x-amzn-tls-cipher-suite header has information about the cipher suite negotiated with
+     * the client.
+     *
+     * Both headers are in OpenSSL format.
+     *
+     * Default: false
+     *
+     * @param xAmznTlsVersionAndCipherSuiteHeaders Indicates whether the two headers
+     * (x-amzn-tls-version and x-amzn-tls-cipher-suite), which contain information about the negotiated
+     * TLS version and cipher suite, are added to the client request before sending it to the target. 
+     */
+    public fun xAmznTlsVersionAndCipherSuiteHeaders(xAmznTlsVersionAndCipherSuiteHeaders: Boolean)
+
+    /**
+     * Enables you to modify, preserve, or remove the X-Forwarded-For header in the HTTP request
+     * before the Application Load Balancer sends the request to the target.
+     *
+     * Default: XffHeaderProcessingMode.APPEND
+     *
+     * @param xffHeaderProcessingMode Enables you to modify, preserve, or remove the X-Forwarded-For
+     * header in the HTTP request before the Application Load Balancer sends the request to the target.
+     * 
+     */
+    public fun xffHeaderProcessingMode(xffHeaderProcessingMode: XffHeaderProcessingMode)
   }
 
   private class BuilderImpl(
@@ -1266,6 +1393,33 @@ public open class ApplicationLoadBalancer(
         id)
 
     /**
+     * The client keep alive duration.
+     *
+     * The valid range is 60 to 604800 seconds (1 minute to 7 days).
+     *
+     * Default: - Duration.seconds(3600)
+     *
+     * @param clientKeepAlive The client keep alive duration. 
+     */
+    override fun clientKeepAlive(clientKeepAlive: Duration) {
+      cdkBuilder.clientKeepAlive(clientKeepAlive.let(Duration::unwrap))
+    }
+
+    /**
+     * Indicates whether cross-zone load balancing is enabled.
+     *
+     * Default: - false for Network Load Balancers and true for Application Load Balancers.
+     * This can not be `false` for Application Load Balancers.
+     *
+     * [Documentation]( -
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
+     */
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+      cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
+
+    /**
      * Indicates whether deletion protection is enabled.
      *
      * Default: false
@@ -1274,6 +1428,18 @@ public open class ApplicationLoadBalancer(
      */
     override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
+    }
+
+    /**
+     * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+     *
+     * Default: - false for internet-facing load balancers and true for internal load balancers
+     *
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW). 
+     */
+    override fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean) {
+      cdkBuilder.denyAllIgwTraffic(denyAllIgwTraffic)
     }
 
     /**
@@ -1358,6 +1524,32 @@ public open class ApplicationLoadBalancer(
     }
 
     /**
+     * Indicates whether the Application Load Balancer should preserve the host header in the HTTP
+     * request and send it to the target without any change.
+     *
+     * Default: false
+     *
+     * @param preserveHostHeader Indicates whether the Application Load Balancer should preserve the
+     * host header in the HTTP request and send it to the target without any change. 
+     */
+    override fun preserveHostHeader(preserveHostHeader: Boolean) {
+      cdkBuilder.preserveHostHeader(preserveHostHeader)
+    }
+
+    /**
+     * Indicates whether the X-Forwarded-For header should preserve the source port that the client
+     * used to connect to the load balancer.
+     *
+     * Default: false
+     *
+     * @param preserveXffClientPort Indicates whether the X-Forwarded-For header should preserve the
+     * source port that the client used to connect to the load balancer. 
+     */
+    override fun preserveXffClientPort(preserveXffClientPort: Boolean) {
+      cdkBuilder.preserveXffClientPort(preserveXffClientPort)
+    }
+
+    /**
      * Security group to associate with this load balancer.
      *
      * Default: A security group is created
@@ -1399,6 +1591,56 @@ public open class ApplicationLoadBalancer(
     @JvmName("37ab8b88b872e71ae62e225b437c3fd8223e8c24ae05dc0ea4ccb865fb06a8c6")
     override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
+
+    /**
+     * Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is
+     * unable to forward the request to AWS WAF.
+     *
+     * Default: false
+     *
+     * @param wafFailOpen Indicates whether to allow a WAF-enabled load balancer to route requests
+     * to targets if it is unable to forward the request to AWS WAF. 
+     */
+    override fun wafFailOpen(wafFailOpen: Boolean) {
+      cdkBuilder.wafFailOpen(wafFailOpen)
+    }
+
+    /**
+     * Indicates whether the two headers (x-amzn-tls-version and x-amzn-tls-cipher-suite), which
+     * contain information about the negotiated TLS version and cipher suite, are added to the client
+     * request before sending it to the target.
+     *
+     * The x-amzn-tls-version header has information about the TLS protocol version negotiated with
+     * the client,
+     * and the x-amzn-tls-cipher-suite header has information about the cipher suite negotiated with
+     * the client.
+     *
+     * Both headers are in OpenSSL format.
+     *
+     * Default: false
+     *
+     * @param xAmznTlsVersionAndCipherSuiteHeaders Indicates whether the two headers
+     * (x-amzn-tls-version and x-amzn-tls-cipher-suite), which contain information about the negotiated
+     * TLS version and cipher suite, are added to the client request before sending it to the target. 
+     */
+    override
+        fun xAmznTlsVersionAndCipherSuiteHeaders(xAmznTlsVersionAndCipherSuiteHeaders: Boolean) {
+      cdkBuilder.xAmznTlsVersionAndCipherSuiteHeaders(xAmznTlsVersionAndCipherSuiteHeaders)
+    }
+
+    /**
+     * Enables you to modify, preserve, or remove the X-Forwarded-For header in the HTTP request
+     * before the Application Load Balancer sends the request to the target.
+     *
+     * Default: XffHeaderProcessingMode.APPEND
+     *
+     * @param xffHeaderProcessingMode Enables you to modify, preserve, or remove the X-Forwarded-For
+     * header in the HTTP request before the Application Load Balancer sends the request to the target.
+     * 
+     */
+    override fun xffHeaderProcessingMode(xffHeaderProcessingMode: XffHeaderProcessingMode) {
+      cdkBuilder.xffHeaderProcessingMode(xffHeaderProcessingMode.let(XffHeaderProcessingMode::unwrap))
+    }
 
     public fun build():
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancer =

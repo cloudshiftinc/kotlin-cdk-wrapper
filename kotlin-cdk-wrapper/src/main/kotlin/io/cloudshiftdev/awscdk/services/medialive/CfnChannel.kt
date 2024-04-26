@@ -32363,17 +32363,17 @@ public open class CfnChannel(
       /**
        * @param settings The destination settings for an output.
        */
-      public fun tings(settings: IResolvable)
+      public fun settings(settings: IResolvable)
 
       /**
        * @param settings The destination settings for an output.
        */
-      public fun tings(settings: List<Any>)
+      public fun settings(settings: List<Any>)
 
       /**
        * @param settings The destination settings for an output.
        */
-      public fun tings(vararg settings: Any)
+      public fun settings(vararg settings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -32439,21 +32439,21 @@ public open class CfnChannel(
       /**
        * @param settings The destination settings for an output.
        */
-      override fun tings(settings: IResolvable) {
+      override fun settings(settings: IResolvable) {
         cdkBuilder.settings(settings.let(IResolvable::unwrap))
       }
 
       /**
        * @param settings The destination settings for an output.
        */
-      override fun tings(settings: List<Any>) {
+      override fun settings(settings: List<Any>) {
         cdkBuilder.settings(settings.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
        * @param settings The destination settings for an output.
        */
-      override fun tings(vararg settings: Any): Unit = tings(settings.toList())
+      override fun settings(vararg settings: Any): Unit = settings(settings.toList())
 
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationProperty =
@@ -37169,7 +37169,7 @@ public open class CfnChannel(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-standardhlssettings.html#cfn-medialive-channel-standardhlssettings-m3u8settings)
      */
-    public fun m3u8Settings(): Any? = unwrap(this).getM3U8Settings()
+    public fun m3U8Settings(): Any? = unwrap(this).getM3U8Settings()
 
     /**
      * A builder for [StandardHlsSettingsProperty]
@@ -37187,19 +37187,19 @@ public open class CfnChannel(
       /**
        * @param m3U8Settings Settings for the M3U8 container.
        */
-      public fun m3u8Settings(m3U8Settings: IResolvable)
+      public fun m3U8Settings(m3U8Settings: IResolvable)
 
       /**
        * @param m3U8Settings Settings for the M3U8 container.
        */
-      public fun m3u8Settings(m3U8Settings: M3u8SettingsProperty)
+      public fun m3U8Settings(m3U8Settings: M3u8SettingsProperty)
 
       /**
        * @param m3U8Settings Settings for the M3U8 container.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("38b5e11b940a0f49b93bfecfb05e7fe43fe5e9e271d6f17adb9f58c531eef318")
-      public fun m3u8Settings(m3U8Settings: M3u8SettingsProperty.Builder.() -> Unit)
+      @JvmName("ed91af366c64c0492810f6a8a94c76563177ab5ba00b44813ddb3e791afb5187")
+      public fun m3U8Settings(m3U8Settings: M3u8SettingsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -37220,14 +37220,14 @@ public open class CfnChannel(
       /**
        * @param m3U8Settings Settings for the M3U8 container.
        */
-      override fun m3u8Settings(m3U8Settings: IResolvable) {
+      override fun m3U8Settings(m3U8Settings: IResolvable) {
         cdkBuilder.m3U8Settings(m3U8Settings.let(IResolvable::unwrap))
       }
 
       /**
        * @param m3U8Settings Settings for the M3U8 container.
        */
-      override fun m3u8Settings(m3U8Settings: M3u8SettingsProperty) {
+      override fun m3U8Settings(m3U8Settings: M3u8SettingsProperty) {
         cdkBuilder.m3U8Settings(m3U8Settings.let(M3u8SettingsProperty::unwrap))
       }
 
@@ -37235,9 +37235,9 @@ public open class CfnChannel(
        * @param m3U8Settings Settings for the M3U8 container.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-      @JvmName("38b5e11b940a0f49b93bfecfb05e7fe43fe5e9e271d6f17adb9f58c531eef318")
-      override fun m3u8Settings(m3U8Settings: M3u8SettingsProperty.Builder.() -> Unit): Unit =
-          m3u8Settings(M3u8SettingsProperty(m3U8Settings))
+      @JvmName("ed91af366c64c0492810f6a8a94c76563177ab5ba00b44813ddb3e791afb5187")
+      override fun m3U8Settings(m3U8Settings: M3u8SettingsProperty.Builder.() -> Unit): Unit =
+          m3U8Settings(M3u8SettingsProperty(m3U8Settings))
 
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.StandardHlsSettingsProperty =
@@ -37262,7 +37262,7 @@ public open class CfnChannel(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-standardhlssettings.html#cfn-medialive-channel-standardhlssettings-m3u8settings)
        */
-      override fun m3u8Settings(): Any? = unwrap(this).getM3U8Settings()
+      override fun m3U8Settings(): Any? = unwrap(this).getM3U8Settings()
     }
 
     public companion object {

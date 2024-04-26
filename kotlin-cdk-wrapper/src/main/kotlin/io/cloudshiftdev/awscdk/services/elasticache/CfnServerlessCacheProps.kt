@@ -29,11 +29,14 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .cacheUsageLimits(CacheUsageLimitsProperty.builder()
  * .dataStorage(DataStorageProperty.builder()
- * .maximum(123)
  * .unit("unit")
+ * // the properties below are optional
+ * .maximum(123)
+ * .minimum(123)
  * .build())
  * .ecpuPerSecond(ECPUPerSecondProperty.builder()
  * .maximum(123)
+ * .minimum(123)
  * .build())
  * .build())
  * .dailySnapshotTime("dailySnapshotTime")

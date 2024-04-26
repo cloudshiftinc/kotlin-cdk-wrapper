@@ -66,6 +66,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .allowedAnalyses(List.of("allowedAnalyses"))
  * // the properties below are optional
  * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
+ * .differentialPrivacy(DifferentialPrivacyProperty.builder()
+ * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
+ * .name("name")
+ * .build()))
+ * .build())
  * .build())
  * .list(AnalysisRuleListProperty.builder()
  * .joinColumns(List.of("joinColumns"))
@@ -1246,6 +1251,11 @@ public open class CfnConfiguredTable(
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
+   * .differentialPrivacy(DifferentialPrivacyProperty.builder()
+   * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
    * .build();
    * ```
    *
@@ -1268,6 +1278,13 @@ public open class CfnConfiguredTable(
      */
     public fun allowedAnalysisProviders(): List<String> = unwrap(this).getAllowedAnalysisProviders()
         ?: emptyList()
+
+    /**
+     * The differential privacy configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-differentialprivacy)
+     */
+    public fun differentialPrivacy(): Any? = unwrap(this).getDifferentialPrivacy()
 
     /**
      * A builder for [AnalysisRuleCustomProperty]
@@ -1299,6 +1316,24 @@ public open class CfnConfiguredTable(
        * Required when `allowedAnalyses` is `ANY_QUERY` .
        */
       public fun allowedAnalysisProviders(vararg allowedAnalysisProviders: String)
+
+      /**
+       * @param differentialPrivacy The differential privacy configuration.
+       */
+      public fun differentialPrivacy(differentialPrivacy: IResolvable)
+
+      /**
+       * @param differentialPrivacy The differential privacy configuration.
+       */
+      public fun differentialPrivacy(differentialPrivacy: DifferentialPrivacyProperty)
+
+      /**
+       * @param differentialPrivacy The differential privacy configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("68525e7452b4a2f759a4506872d5696396f687bb0c04eda5fe6627d5d83f845c")
+      public
+          fun differentialPrivacy(differentialPrivacy: DifferentialPrivacyProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -1339,6 +1374,29 @@ public open class CfnConfiguredTable(
       override fun allowedAnalysisProviders(vararg allowedAnalysisProviders: String): Unit =
           allowedAnalysisProviders(allowedAnalysisProviders.toList())
 
+      /**
+       * @param differentialPrivacy The differential privacy configuration.
+       */
+      override fun differentialPrivacy(differentialPrivacy: IResolvable) {
+        cdkBuilder.differentialPrivacy(differentialPrivacy.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param differentialPrivacy The differential privacy configuration.
+       */
+      override fun differentialPrivacy(differentialPrivacy: DifferentialPrivacyProperty) {
+        cdkBuilder.differentialPrivacy(differentialPrivacy.let(DifferentialPrivacyProperty::unwrap))
+      }
+
+      /**
+       * @param differentialPrivacy The differential privacy configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("68525e7452b4a2f759a4506872d5696396f687bb0c04eda5fe6627d5d83f845c")
+      override
+          fun differentialPrivacy(differentialPrivacy: DifferentialPrivacyProperty.Builder.() -> Unit):
+          Unit = differentialPrivacy(DifferentialPrivacyProperty(differentialPrivacy))
+
       public fun build():
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.AnalysisRuleCustomProperty =
           cdkBuilder.build()
@@ -1363,6 +1421,13 @@ public open class CfnConfiguredTable(
        */
       override fun allowedAnalysisProviders(): List<String> =
           unwrap(this).getAllowedAnalysisProviders() ?: emptyList()
+
+      /**
+       * The differential privacy configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-analysisrulecustom.html#cfn-cleanrooms-configuredtable-analysisrulecustom-differentialprivacy)
+       */
+      override fun differentialPrivacy(): Any? = unwrap(this).getDifferentialPrivacy()
     }
 
     public companion object {
@@ -1604,6 +1669,11 @@ public open class CfnConfiguredTable(
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
+   * .differentialPrivacy(DifferentialPrivacyProperty.builder()
+   * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
    * .build())
    * .list(AnalysisRuleListProperty.builder()
    * .joinColumns(List.of("joinColumns"))
@@ -1771,6 +1841,11 @@ public open class CfnConfiguredTable(
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
+   * .differentialPrivacy(DifferentialPrivacyProperty.builder()
+   * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
    * .build())
    * .list(AnalysisRuleListProperty.builder()
    * .joinColumns(List.of("joinColumns"))
@@ -1910,6 +1985,11 @@ public open class CfnConfiguredTable(
    * .allowedAnalyses(List.of("allowedAnalyses"))
    * // the properties below are optional
    * .allowedAnalysisProviders(List.of("allowedAnalysisProviders"))
+   * .differentialPrivacy(DifferentialPrivacyProperty.builder()
+   * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build())
    * .build())
    * .list(AnalysisRuleListProperty.builder()
    * .joinColumns(List.of("joinColumns"))
@@ -2125,6 +2205,239 @@ public open class CfnConfiguredTable(
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.ConfiguredTableAnalysisRulePolicyV1Property
+    }
+  }
+
+  /**
+   * Specifies the name of the column that contains the unique identifier of your users, whose
+   * privacy you want to protect.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * DifferentialPrivacyColumnProperty differentialPrivacyColumnProperty =
+   * DifferentialPrivacyColumnProperty.builder()
+   * .name("name")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-differentialprivacycolumn.html)
+   */
+  public interface DifferentialPrivacyColumnProperty {
+    /**
+     * The name of the column, such as user_id, that contains the unique identifier of your users,
+     * whose privacy you want to protect.
+     *
+     * If you want to turn on differential privacy for two or more tables in a collaboration, you
+     * must configure the same column as the user identifier column in both analysis rules.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-differentialprivacycolumn.html#cfn-cleanrooms-configuredtable-differentialprivacycolumn-name)
+     */
+    public fun name(): String
+
+    /**
+     * A builder for [DifferentialPrivacyColumnProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the column, such as user_id, that contains the unique identifier of
+       * your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      public fun name(name: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty.builder()
+
+      /**
+       * @param name The name of the column, such as user_id, that contains the unique identifier of
+       * your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty,
+    ) : CdkObject(cdkObject), DifferentialPrivacyColumnProperty {
+      /**
+       * The name of the column, such as user_id, that contains the unique identifier of your users,
+       * whose privacy you want to protect.
+       *
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-differentialprivacycolumn.html#cfn-cleanrooms-configuredtable-differentialprivacycolumn-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DifferentialPrivacyColumnProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty):
+          DifferentialPrivacyColumnProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DifferentialPrivacyColumnProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DifferentialPrivacyColumnProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyColumnProperty
+    }
+  }
+
+  /**
+   * The analysis method for the configured tables.
+   *
+   * The only valid value is currently `DIRECT_QUERY`.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.cleanrooms.*;
+   * DifferentialPrivacyProperty differentialPrivacyProperty = DifferentialPrivacyProperty.builder()
+   * .columns(List.of(DifferentialPrivacyColumnProperty.builder()
+   * .name("name")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-differentialprivacy.html)
+   */
+  public interface DifferentialPrivacyProperty {
+    /**
+     * The name of the column, such as user_id, that contains the unique identifier of your users,
+     * whose privacy you want to protect.
+     *
+     * If you want to turn on differential privacy for two or more tables in a collaboration, you
+     * must configure the same column as the user identifier column in both analysis rules.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-differentialprivacy.html#cfn-cleanrooms-configuredtable-differentialprivacy-columns)
+     */
+    public fun columns(): Any
+
+    /**
+     * A builder for [DifferentialPrivacyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param columns The name of the column, such as user_id, that contains the unique identifier
+       * of your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      public fun columns(columns: IResolvable)
+
+      /**
+       * @param columns The name of the column, such as user_id, that contains the unique identifier
+       * of your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      public fun columns(columns: List<Any>)
+
+      /**
+       * @param columns The name of the column, such as user_id, that contains the unique identifier
+       * of your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      public fun columns(vararg columns: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty.Builder
+          =
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty.builder()
+
+      /**
+       * @param columns The name of the column, such as user_id, that contains the unique identifier
+       * of your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      override fun columns(columns: IResolvable) {
+        cdkBuilder.columns(columns.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param columns The name of the column, such as user_id, that contains the unique identifier
+       * of your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      override fun columns(columns: List<Any>) {
+        cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param columns The name of the column, such as user_id, that contains the unique identifier
+       * of your users, whose privacy you want to protect. 
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       */
+      override fun columns(vararg columns: Any): Unit = columns(columns.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty,
+    ) : CdkObject(cdkObject), DifferentialPrivacyProperty {
+      /**
+       * The name of the column, such as user_id, that contains the unique identifier of your users,
+       * whose privacy you want to protect.
+       *
+       * If you want to turn on differential privacy for two or more tables in a collaboration, you
+       * must configure the same column as the user identifier column in both analysis rules.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-configuredtable-differentialprivacy.html#cfn-cleanrooms-configuredtable-differentialprivacy-columns)
+       */
+      override fun columns(): Any = unwrap(this).getColumns()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DifferentialPrivacyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty):
+          DifferentialPrivacyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DifferentialPrivacyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DifferentialPrivacyProperty):
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.cleanrooms.CfnConfiguredTable.DifferentialPrivacyProperty
     }
   }
 

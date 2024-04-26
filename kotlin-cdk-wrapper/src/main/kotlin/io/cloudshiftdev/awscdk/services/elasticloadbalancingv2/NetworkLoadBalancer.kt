@@ -24,21 +24,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration;
  * Vpc vpc = new Vpc(this, "VPC");
- * NetworkLoadBalancer nlb = NetworkLoadBalancer.Builder.create(this, "NLB")
- * .vpc(vpc)
- * .build();
- * VpcLink link = VpcLink.Builder.create(this, "link")
- * .targets(List.of(nlb))
- * .build();
- * Integration integration = Integration.Builder.create()
- * .type(IntegrationType.HTTP_PROXY)
- * .integrationHttpMethod("ANY")
- * .options(IntegrationOptions.builder()
- * .connectionType(ConnectionType.VPC_LINK)
- * .vpcLink(link)
- * .build())
+ * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
+ * NetworkListener listener = lb.addListener("listener",
+ * BaseNetworkListenerProps.builder().port(80).build());
+ * listener.addTargets("target", AddNetworkTargetsProps.builder()
+ * .port(80)
+ * .build());
+ * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+ * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
  * .build();
  * ```
  */
@@ -98,6 +93,13 @@ public open class NetworkLoadBalancer(
    */
   public override fun connections(): Connections =
       unwrap(this).getConnections().let(Connections::wrap)
+
+  /**
+   * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+   * Balancer through AWS PrivateLink.
+   */
+  public override fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(): String? =
+      unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
 
   /**
    * The type of IP addresses to use.
@@ -205,7 +207,7 @@ public open class NetworkLoadBalancer(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricConsumedLcUs(): Metric = unwrap(this).metricConsumedLCUs().let(Metric::wrap)
+  public open fun metricConsumedLCUs(): Metric = unwrap(this).metricConsumedLCUs().let(Metric::wrap)
 
   /**
    * (deprecated) The number of load balancer capacity units (LCU) used by your load balancer.
@@ -216,7 +218,7 @@ public open class NetworkLoadBalancer(
    * @param props
    */
   @Deprecated(message = "deprecated in CDK")
-  public open fun metricConsumedLcUs(props: MetricOptions): Metric =
+  public open fun metricConsumedLCUs(props: MetricOptions): Metric =
       unwrap(this).metricConsumedLCUs(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
   /**
@@ -229,9 +231,9 @@ public open class NetworkLoadBalancer(
    */
   @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("0ad78129a917eee56b57e367cb552e5520e44cc8850a30b6843c7637bddf5442")
-  public open fun metricConsumedLcUs(props: MetricOptions.Builder.() -> Unit): Metric =
-      metricConsumedLcUs(MetricOptions(props))
+  @JvmName("e3e6de8e93f42ba897d92007009735fcc06aede8f8d1f7a9b5b0846ad0b5c213")
+  public open fun metricConsumedLCUs(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricConsumedLCUs(MetricOptions(props))
 
   /**
    * (deprecated) The total number of new TCP flows (or connections) established from clients to
@@ -464,10 +466,23 @@ public open class NetworkLoadBalancer(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The AZ affinity routing policy.
+     *
+     * Default: - AZ affinity is disabled.
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#zonal-dns-affinity)
+     * @param clientRoutingPolicy The AZ affinity routing policy. 
+     */
+    public fun clientRoutingPolicy(clientRoutingPolicy: ClientRoutingPolicy)
+
+    /**
      * Indicates whether cross-zone load balancing is enabled.
      *
-     * Default: false
+     * Default: - false for Network Load Balancers and true for Application Load Balancers.
+     * This can not be `false` for Application Load Balancers.
      *
+     * [Documentation]( -
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
      */
     public fun crossZoneEnabled(crossZoneEnabled: Boolean)
@@ -480,6 +495,29 @@ public open class NetworkLoadBalancer(
      * @param deletionProtection Indicates whether deletion protection is enabled. 
      */
     public fun deletionProtection(deletionProtection: Boolean)
+
+    /**
+     * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+     *
+     * Default: - false for internet-facing load balancers and true for internal load balancers
+     *
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW). 
+     */
+    public fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean)
+
+    /**
+     * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+     * Balancer through AWS PrivateLink.
+     *
+     * Default: true
+     *
+     * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
+     * inbound security group rules for traffic sent to a Network Load Balancer through AWS
+     * PrivateLink. 
+     */
+    public
+        fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: Boolean)
 
     /**
      * Whether the load balancer has an internet-routable address.
@@ -567,10 +605,25 @@ public open class NetworkLoadBalancer(
         id)
 
     /**
+     * The AZ affinity routing policy.
+     *
+     * Default: - AZ affinity is disabled.
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/network-load-balancers.html#zonal-dns-affinity)
+     * @param clientRoutingPolicy The AZ affinity routing policy. 
+     */
+    override fun clientRoutingPolicy(clientRoutingPolicy: ClientRoutingPolicy) {
+      cdkBuilder.clientRoutingPolicy(clientRoutingPolicy.let(ClientRoutingPolicy::unwrap))
+    }
+
+    /**
      * Indicates whether cross-zone load balancing is enabled.
      *
-     * Default: false
+     * Default: - false for Network Load Balancers and true for Application Load Balancers.
+     * This can not be `false` for Application Load Balancers.
      *
+     * [Documentation]( -
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
      * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled. 
      */
     override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
@@ -586,6 +639,33 @@ public open class NetworkLoadBalancer(
      */
     override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
+    }
+
+    /**
+     * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+     *
+     * Default: - false for internet-facing load balancers and true for internal load balancers
+     *
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW). 
+     */
+    override fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean) {
+      cdkBuilder.denyAllIgwTraffic(denyAllIgwTraffic)
+    }
+
+    /**
+     * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
+     * Balancer through AWS PrivateLink.
+     *
+     * Default: true
+     *
+     * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
+     * inbound security group rules for traffic sent to a Network Load Balancer through AWS
+     * PrivateLink. 
+     */
+    override
+        fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: Boolean) {
+      cdkBuilder.enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic)
     }
 
     /**

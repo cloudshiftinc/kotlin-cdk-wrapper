@@ -4,14 +4,19 @@ package io.cloudshiftdev.awscdk.services.oam
 
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -42,6 +47,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .sinkIdentifier("sinkIdentifier")
  * // the properties below are optional
  * .labelTemplate("labelTemplate")
+ * .linkConfiguration(LinkConfigurationProperty.builder()
+ * .logGroupConfiguration(LinkFilterProperty.builder()
+ * .filter("filter")
+ * .build())
+ * .metricConfiguration(LinkFilterProperty.builder()
+ * .filter("filter")
+ * .build())
+ * .build())
  * .tags(Map.of(
  * "tagsKey", "tags"))
  * .build();
@@ -105,6 +118,33 @@ public open class CfnLink(
   public open fun labelTemplate(`value`: String) {
     unwrap(this).setLabelTemplate(`value`)
   }
+
+  /**
+   *
+   */
+  public open fun linkConfiguration(): Any? = unwrap(this).getLinkConfiguration()
+
+  /**
+   *
+   */
+  public open fun linkConfiguration(`value`: IResolvable) {
+    unwrap(this).setLinkConfiguration(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun linkConfiguration(`value`: LinkConfigurationProperty) {
+    unwrap(this).setLinkConfiguration(`value`.let(LinkConfigurationProperty::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f1c4f2ae27fd10fbd00313cd2fd1db2afc5874c89c47875133098be129bdfc14")
+  public open fun linkConfiguration(`value`: LinkConfigurationProperty.Builder.() -> Unit): Unit =
+      linkConfiguration(LinkConfigurationProperty(`value`))
 
   /**
    * An array of strings that define which types of data that the source account shares with the
@@ -178,11 +218,31 @@ public open class CfnLink(
     public fun labelTemplate(labelTemplate: String)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+     * @param linkConfiguration 
+     */
+    public fun linkConfiguration(linkConfiguration: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+     * @param linkConfiguration 
+     */
+    public fun linkConfiguration(linkConfiguration: LinkConfigurationProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+     * @param linkConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2f023ed46c2f574a2355e148ac03b8c6ca677f94961515df90dddb5daaafd79b")
+    public fun linkConfiguration(linkConfiguration: LinkConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * An array of strings that define which types of data that the source account shares with the
      * monitoring account.
      *
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
      * @param resourceTypes An array of strings that define which types of data that the source
@@ -195,7 +255,7 @@ public open class CfnLink(
      * monitoring account.
      *
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
      * @param resourceTypes An array of strings that define which types of data that the source
@@ -256,11 +316,36 @@ public open class CfnLink(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+     * @param linkConfiguration 
+     */
+    override fun linkConfiguration(linkConfiguration: IResolvable) {
+      cdkBuilder.linkConfiguration(linkConfiguration.let(IResolvable::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+     * @param linkConfiguration 
+     */
+    override fun linkConfiguration(linkConfiguration: LinkConfigurationProperty) {
+      cdkBuilder.linkConfiguration(linkConfiguration.let(LinkConfigurationProperty::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-linkconfiguration)
+     * @param linkConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2f023ed46c2f574a2355e148ac03b8c6ca677f94961515df90dddb5daaafd79b")
+    override fun linkConfiguration(linkConfiguration: LinkConfigurationProperty.Builder.() -> Unit):
+        Unit = linkConfiguration(LinkConfigurationProperty(linkConfiguration))
+
+    /**
      * An array of strings that define which types of data that the source account shares with the
      * monitoring account.
      *
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
      * @param resourceTypes An array of strings that define which types of data that the source
@@ -275,7 +360,7 @@ public open class CfnLink(
      * monitoring account.
      *
      * Valid values are `AWS::CloudWatch::Metric | AWS::Logs::LogGroup | AWS::XRay::Trace |
-     * AWS::ApplicationInsights::Application` .
+     * AWS::ApplicationInsights::Application | AWS::InternetMonitor::Monitor` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-oam-link.html#cfn-oam-link-resourcetypes)
      * @param resourceTypes An array of strings that define which types of data that the source
@@ -334,5 +419,232 @@ public open class CfnLink(
 
     internal fun unwrap(wrapped: CfnLink): software.amazon.awscdk.services.oam.CfnLink =
         wrapped.cdkObject as software.amazon.awscdk.services.oam.CfnLink
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.oam.*;
+   * LinkConfigurationProperty linkConfigurationProperty = LinkConfigurationProperty.builder()
+   * .logGroupConfiguration(LinkFilterProperty.builder()
+   * .filter("filter")
+   * .build())
+   * .metricConfiguration(LinkFilterProperty.builder()
+   * .filter("filter")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html)
+   */
+  public interface LinkConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-loggroupconfiguration)
+     */
+    public fun logGroupConfiguration(): Any? = unwrap(this).getLogGroupConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-metricconfiguration)
+     */
+    public fun metricConfiguration(): Any? = unwrap(this).getMetricConfiguration()
+
+    /**
+     * A builder for [LinkConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param logGroupConfiguration the value to be set.
+       */
+      public fun logGroupConfiguration(logGroupConfiguration: IResolvable)
+
+      /**
+       * @param logGroupConfiguration the value to be set.
+       */
+      public fun logGroupConfiguration(logGroupConfiguration: LinkFilterProperty)
+
+      /**
+       * @param logGroupConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6071a625c6b3d9a327b833ab989a7caddb31359aa7034471a709a9a56f27c917")
+      public fun logGroupConfiguration(logGroupConfiguration: LinkFilterProperty.Builder.() -> Unit)
+
+      /**
+       * @param metricConfiguration the value to be set.
+       */
+      public fun metricConfiguration(metricConfiguration: IResolvable)
+
+      /**
+       * @param metricConfiguration the value to be set.
+       */
+      public fun metricConfiguration(metricConfiguration: LinkFilterProperty)
+
+      /**
+       * @param metricConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10f1eac64888de848ebfafff66aa54b2a3f3a4e445e1ef1f0f075ad558f4f46b")
+      public fun metricConfiguration(metricConfiguration: LinkFilterProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty.Builder =
+          software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty.builder()
+
+      /**
+       * @param logGroupConfiguration the value to be set.
+       */
+      override fun logGroupConfiguration(logGroupConfiguration: IResolvable) {
+        cdkBuilder.logGroupConfiguration(logGroupConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param logGroupConfiguration the value to be set.
+       */
+      override fun logGroupConfiguration(logGroupConfiguration: LinkFilterProperty) {
+        cdkBuilder.logGroupConfiguration(logGroupConfiguration.let(LinkFilterProperty::unwrap))
+      }
+
+      /**
+       * @param logGroupConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6071a625c6b3d9a327b833ab989a7caddb31359aa7034471a709a9a56f27c917")
+      override
+          fun logGroupConfiguration(logGroupConfiguration: LinkFilterProperty.Builder.() -> Unit):
+          Unit = logGroupConfiguration(LinkFilterProperty(logGroupConfiguration))
+
+      /**
+       * @param metricConfiguration the value to be set.
+       */
+      override fun metricConfiguration(metricConfiguration: IResolvable) {
+        cdkBuilder.metricConfiguration(metricConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param metricConfiguration the value to be set.
+       */
+      override fun metricConfiguration(metricConfiguration: LinkFilterProperty) {
+        cdkBuilder.metricConfiguration(metricConfiguration.let(LinkFilterProperty::unwrap))
+      }
+
+      /**
+       * @param metricConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("10f1eac64888de848ebfafff66aa54b2a3f3a4e445e1ef1f0f075ad558f4f46b")
+      override fun metricConfiguration(metricConfiguration: LinkFilterProperty.Builder.() -> Unit):
+          Unit = metricConfiguration(LinkFilterProperty(metricConfiguration))
+
+      public fun build(): software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty,
+    ) : CdkObject(cdkObject), LinkConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-loggroupconfiguration)
+       */
+      override fun logGroupConfiguration(): Any? = unwrap(this).getLogGroupConfiguration()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkconfiguration.html#cfn-oam-link-linkconfiguration-metricconfiguration)
+       */
+      override fun metricConfiguration(): Any? = unwrap(this).getMetricConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LinkConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty):
+          LinkConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LinkConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LinkConfigurationProperty):
+          software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.oam.CfnLink.LinkConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.oam.*;
+   * LinkFilterProperty linkFilterProperty = LinkFilterProperty.builder()
+   * .filter("filter")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkfilter.html)
+   */
+  public interface LinkFilterProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkfilter.html#cfn-oam-link-linkfilter-filter)
+     */
+    public fun filter(): String
+
+    /**
+     * A builder for [LinkFilterProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param filter the value to be set. 
+       */
+      public fun filter(filter: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder: software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty.Builder
+          = software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty.builder()
+
+      /**
+       * @param filter the value to be set. 
+       */
+      override fun filter(filter: String) {
+        cdkBuilder.filter(filter)
+      }
+
+      public fun build(): software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty,
+    ) : CdkObject(cdkObject), LinkFilterProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-oam-link-linkfilter.html#cfn-oam-link-linkfilter-filter)
+       */
+      override fun filter(): String = unwrap(this).getFilter()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): LinkFilterProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty):
+          LinkFilterProperty = CdkObjectWrappers.wrap(cdkObject) as? LinkFilterProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LinkFilterProperty):
+          software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.oam.CfnLink.LinkFilterProperty
+    }
   }
 }

@@ -50,7 +50,7 @@ public abstract class InputFormat(
     @JvmName("2755f0fdb57e36185ffda293270efaf3fa63ca1727275d2fcf5c04e945bdd9ba")
     public fun csv(options: CsvOptions.Builder.() -> Unit): InputFormat = csv(CsvOptions(options))
 
-    public fun dynamoDbJson(): InputFormat =
+    public fun dynamoDBJson(): InputFormat =
         software.amazon.awscdk.services.dynamodb.InputFormat.dynamoDBJson().let(InputFormat::wrap)
 
     public fun ion(): InputFormat =

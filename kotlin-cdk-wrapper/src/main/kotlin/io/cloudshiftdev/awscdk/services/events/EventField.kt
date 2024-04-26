@@ -59,7 +59,7 @@ public open class EventField(
   /**
    * Convert the path to the field in the event pattern to JSON.
    */
-  public open fun toJson(): String = unwrap(this).toJSON()
+  public open fun toJSON(): String = unwrap(this).toJSON()
 
   public companion object {
     public fun account(): String = software.amazon.awscdk.services.events.EventField.getAccount()

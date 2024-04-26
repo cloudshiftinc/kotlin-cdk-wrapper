@@ -19,6 +19,27 @@ import kotlin.jvm.JvmName
  */
 public interface IEnvironment : IResource {
   /**
+   * Creates a deployment of the supplied configuration to this environment.
+   *
+   * Note that you can only deploy one configuration at a time to an environment.
+   * However, you can deploy one configuration each to different environments at the same time.
+   * If more than one deployment is requested for this environment, they will occur in the same
+   * order they were provided.
+   *
+   * @param configuration The configuration that will be deployed to this environment. 
+   */
+  public fun addDeployment(configuration: IConfiguration)
+
+  /**
+   * Creates a deployment for each of the supplied configurations to this environment.
+   *
+   * These configurations will be deployed in the same order as the input array.
+   *
+   * @param configurations The configurations that will be deployed to this environment. 
+   */
+  public fun addDeployments(vararg configurations: IConfiguration)
+
+  /**
    * Adds an extension association to the environment.
    *
    * @param extension The extension to create an association for. 
@@ -315,6 +336,32 @@ public interface IEnvironment : IResource {
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.appconfig.IEnvironment,
   ) : CdkObject(cdkObject), IEnvironment {
+    /**
+     * Creates a deployment of the supplied configuration to this environment.
+     *
+     * Note that you can only deploy one configuration at a time to an environment.
+     * However, you can deploy one configuration each to different environments at the same time.
+     * If more than one deployment is requested for this environment, they will occur in the same
+     * order they were provided.
+     *
+     * @param configuration The configuration that will be deployed to this environment. 
+     */
+    override fun addDeployment(configuration: IConfiguration) {
+      unwrap(this).addDeployment(configuration.let(IConfiguration::unwrap))
+    }
+
+    /**
+     * Creates a deployment for each of the supplied configurations to this environment.
+     *
+     * These configurations will be deployed in the same order as the input array.
+     *
+     * @param configurations The configurations that will be deployed to this environment. 
+     */
+    override fun addDeployments(vararg configurations: IConfiguration) {
+      unwrap(this).addDeployments(*configurations.map{CdkObjectWrappers.unwrap(it) as
+          software.amazon.awscdk.services.appconfig.IConfiguration}.toTypedArray())
+    }
+
     /**
      * Adds an extension association to the environment.
      *

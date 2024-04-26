@@ -30,6 +30,12 @@ import kotlin.collections.Map
  * .priority(123)
  * // the properties below are optional
  * .jobQueueName("jobQueueName")
+ * .jobStateTimeLimitActions(List.of(JobStateTimeLimitActionProperty.builder()
+ * .action("action")
+ * .maxTimeSeconds(123)
+ * .reason("reason")
+ * .state("state")
+ * .build()))
  * .schedulingPolicyArn("schedulingPolicyArn")
  * .state("state")
  * .tags(Map.of(
@@ -67,6 +73,16 @@ public interface CfnJobQueueProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobqueuename)
    */
   public fun jobQueueName(): String? = unwrap(this).getJobQueueName()
+
+  /**
+   * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+   * the specified state longer than specified times.
+   *
+   * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+   */
+  public fun jobStateTimeLimitActions(): Any? = unwrap(this).getJobStateTimeLimitActions()
 
   /**
    * The priority of the job queue.
@@ -174,6 +190,27 @@ public interface CfnJobQueueProps {
     public fun jobQueueName(jobQueueName: String)
 
     /**
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times.
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     */
+    public fun jobStateTimeLimitActions(jobStateTimeLimitActions: IResolvable)
+
+    /**
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times.
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     */
+    public fun jobStateTimeLimitActions(jobStateTimeLimitActions: List<Any>)
+
+    /**
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times.
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     */
+    public fun jobStateTimeLimitActions(vararg jobStateTimeLimitActions: Any)
+
+    /**
      * @param priority The priority of the job queue. 
      * Job queues with a higher priority (or a higher integer value for the `priority` parameter)
      * are evaluated first when associated with the same compute environment. Priority is determined in
@@ -274,6 +311,32 @@ public interface CfnJobQueueProps {
     }
 
     /**
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times.
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     */
+    override fun jobStateTimeLimitActions(jobStateTimeLimitActions: IResolvable) {
+      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times.
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     */
+    override fun jobStateTimeLimitActions(jobStateTimeLimitActions: List<Any>) {
+      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times.
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     */
+    override fun jobStateTimeLimitActions(vararg jobStateTimeLimitActions: Any): Unit =
+        jobStateTimeLimitActions(jobStateTimeLimitActions.toList())
+
+    /**
      * @param priority The priority of the job queue. 
      * Job queues with a higher priority (or a higher integer value for the `priority` parameter)
      * are evaluated first when associated with the same compute environment. Priority is determined in
@@ -348,6 +411,16 @@ public interface CfnJobQueueProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobqueuename)
      */
     override fun jobQueueName(): String? = unwrap(this).getJobQueueName()
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+     */
+    override fun jobStateTimeLimitActions(): Any? = unwrap(this).getJobStateTimeLimitActions()
 
     /**
      * The priority of the job queue.

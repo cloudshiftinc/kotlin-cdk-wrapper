@@ -19,23 +19,17 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * String crossAccountRoleArn = "arn:aws:iam::OTHERACCOUNT:role/CrossAccountRoleName"; // arn of
- * role deployed in separate account
- * String callRegion = "us-west-1"; // sdk call to be made in specified region (optional)
- * // sdk call to be made in specified region (optional)
- * AwsCustomResource.Builder.create(this, "CrossAccount")
- * .onCreate(AwsSdkCall.builder()
- * .assumedRoleArn(crossAccountRoleArn)
- * .region(callRegion) // optional
- * .service("sts")
- * .action("GetCallerIdentity")
- * .physicalResourceId(PhysicalResourceId.of("id"))
- * .build())
- * .policy(AwsCustomResourcePolicy.fromStatements(List.of(PolicyStatement.fromJson(Map.of(
- * "Effect", "Allow",
- * "Action", "sts:AssumeRole",
- * "Resource", crossAccountRoleArn)))))
+ * Bucket destinationBucket;
+ * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployFiles")
+ * .sources(List.of(Source.asset(join(__dirname, "source-files"))))
+ * .destinationBucket(destinationBucket)
  * .build();
+ * deployment.handlerRole.addToPolicy(
+ * PolicyStatement.Builder.create()
+ * .actions(List.of("kms:Decrypt", "kms:DescribeKey"))
+ * .effect(Effect.ALLOW)
+ * .resources(List.of("&lt;encryption key ARN&gt;"))
+ * .build());
  * ```
  */
 public open class PolicyStatement(
@@ -422,7 +416,7 @@ public open class PolicyStatement(
    *
    * Used when JSON.stringify() is called
    */
-  public open fun toJson(): Any = unwrap(this).toJSON()
+  public open fun toJSON(): Any = unwrap(this).toJSON()
 
   /**
    * JSON-ify the policy statement.

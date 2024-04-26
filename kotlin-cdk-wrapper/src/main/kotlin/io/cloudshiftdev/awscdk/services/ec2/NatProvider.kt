@@ -26,7 +26,7 @@ import kotlin.jvm.JvmName
  * Vpc.Builder.create(this, "TheVPC")
  * .natGatewayProvider(provider)
  * .build();
- * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.tcp(80));
+ * provider.connections.allowFrom(Peer.ipv4("1.2.3.4/8"), Port.HTTP);
  * ```
  */
 public abstract class NatProvider(

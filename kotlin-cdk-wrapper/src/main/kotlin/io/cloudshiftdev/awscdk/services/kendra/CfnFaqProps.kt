@@ -80,6 +80,11 @@ public interface CfnFaqProps {
   /**
    * The code for a language.
    *
+   * This shows a supported language for the FAQ document as part of the summary information for
+   * FAQs. English is supported by default. For more information on supported languages, including
+   * their codes, see [Adding documents in languages other than
+   * English](https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html) .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html#cfn-kendra-faq-languagecode)
    */
   public fun languageCode(): String? = unwrap(this).getLanguageCode()
@@ -150,6 +155,10 @@ public interface CfnFaqProps {
 
     /**
      * @param languageCode The code for a language.
+     * This shows a supported language for the FAQ document as part of the summary information for
+     * FAQs. English is supported by default. For more information on supported languages, including
+     * their codes, see [Adding documents in languages other than
+     * English](https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html) .
      */
     public fun languageCode(languageCode: String)
 
@@ -236,6 +245,10 @@ public interface CfnFaqProps {
 
     /**
      * @param languageCode The code for a language.
+     * This shows a supported language for the FAQ document as part of the summary information for
+     * FAQs. English is supported by default. For more information on supported languages, including
+     * their codes, see [Adding documents in languages other than
+     * English](https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html) .
      */
     override fun languageCode(languageCode: String) {
       cdkBuilder.languageCode(languageCode)
@@ -337,6 +350,11 @@ public interface CfnFaqProps {
 
     /**
      * The code for a language.
+     *
+     * This shows a supported language for the FAQ document as part of the summary information for
+     * FAQs. English is supported by default. For more information on supported languages, including
+     * their codes, see [Adding documents in languages other than
+     * English](https://docs.aws.amazon.com/kendra/latest/dg/in-adding-languages.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kendra-faq.html#cfn-kendra-faq-languagecode)
      */

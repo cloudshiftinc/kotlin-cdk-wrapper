@@ -413,14 +413,18 @@ public open class CfnWebACL(
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.
      *
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
      * @param associationConfig Specifies custom configurations for the associations between the web
@@ -432,14 +436,18 @@ public open class CfnWebACL(
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.
      *
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
      * @param associationConfig Specifies custom configurations for the associations between the web
@@ -451,14 +459,18 @@ public open class CfnWebACL(
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.
      *
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
      * @param associationConfig Specifies custom configurations for the associations between the web
@@ -791,14 +803,18 @@ public open class CfnWebACL(
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.
      *
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
      * @param associationConfig Specifies custom configurations for the associations between the web
@@ -812,14 +828,18 @@ public open class CfnWebACL(
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.
      *
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
      * @param associationConfig Specifies custom configurations for the associations between the web
@@ -833,14 +853,18 @@ public open class CfnWebACL(
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.
      *
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
      * @param associationConfig Specifies custom configurations for the associations between the web
@@ -2594,14 +2618,18 @@ public open class CfnWebACL(
    * Specifies custom configurations for the associations between the web ACL and protected
    * resources.
    *
-   * Use this to customize the maximum size of the request body that your protected CloudFront
-   * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+   * Use this to customize the maximum size of the request body that your protected resources
+   * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+   * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+   * bytes).
    *
    *
    * You are charged additional fees when your protected resources forward body sizes that are
    * larger than the default. For more information, see [AWS WAF
    * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
    *
+   *
+   * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
    *
    * Example:
    *
@@ -2621,16 +2649,21 @@ public open class CfnWebACL(
    */
   public interface AssociationConfigProperty {
     /**
-     * Customizes the maximum size of the request body that your protected CloudFront distributions
-     * forward to AWS WAF for inspection.
+     * Customizes the maximum size of the request body that your protected CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, and Verified Access resources forward to AWS WAF for inspection.
      *
-     * The default size is 16 KB (16,384 bytes).
+     * The default size is 16 KB (16,384 bytes). You can change the setting for any of the available
+     * resource types.
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * Example JSON: `{ "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }`
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-associationconfig.html#cfn-wafv2-webacl-associationconfig-requestbody)
      */
@@ -2643,25 +2676,39 @@ public open class CfnWebACL(
     public interface Builder {
       /**
        * @param requestBody Customizes the maximum size of the request body that your protected
-       * CloudFront distributions forward to AWS WAF for inspection.
-       * The default size is 16 KB (16,384 bytes).
+       * CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access resources forward to
+       * AWS WAF for inspection.
+       * The default size is 16 KB (16,384 bytes). You can change the setting for any of the
+       * available resource types.
        *
        *
        * You are charged additional fees when your protected resources forward body sizes that are
        * larger than the default. For more information, see [AWS WAF
        * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+       *
+       *
+       * Example JSON: `{ "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }`
+       *
+       * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
        */
       public fun requestBody(requestBody: IResolvable)
 
       /**
        * @param requestBody Customizes the maximum size of the request body that your protected
-       * CloudFront distributions forward to AWS WAF for inspection.
-       * The default size is 16 KB (16,384 bytes).
+       * CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access resources forward to
+       * AWS WAF for inspection.
+       * The default size is 16 KB (16,384 bytes). You can change the setting for any of the
+       * available resource types.
        *
        *
        * You are charged additional fees when your protected resources forward body sizes that are
        * larger than the default. For more information, see [AWS WAF
        * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+       *
+       *
+       * Example JSON: `{ "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }`
+       *
+       * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
        */
       public fun requestBody(requestBody: Map<String, Any>)
     }
@@ -2673,13 +2720,20 @@ public open class CfnWebACL(
 
       /**
        * @param requestBody Customizes the maximum size of the request body that your protected
-       * CloudFront distributions forward to AWS WAF for inspection.
-       * The default size is 16 KB (16,384 bytes).
+       * CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access resources forward to
+       * AWS WAF for inspection.
+       * The default size is 16 KB (16,384 bytes). You can change the setting for any of the
+       * available resource types.
        *
        *
        * You are charged additional fees when your protected resources forward body sizes that are
        * larger than the default. For more information, see [AWS WAF
        * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+       *
+       *
+       * Example JSON: `{ "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }`
+       *
+       * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
        */
       override fun requestBody(requestBody: IResolvable) {
         cdkBuilder.requestBody(requestBody.let(IResolvable::unwrap))
@@ -2687,13 +2741,20 @@ public open class CfnWebACL(
 
       /**
        * @param requestBody Customizes the maximum size of the request body that your protected
-       * CloudFront distributions forward to AWS WAF for inspection.
-       * The default size is 16 KB (16,384 bytes).
+       * CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access resources forward to
+       * AWS WAF for inspection.
+       * The default size is 16 KB (16,384 bytes). You can change the setting for any of the
+       * available resource types.
        *
        *
        * You are charged additional fees when your protected resources forward body sizes that are
        * larger than the default. For more information, see [AWS WAF
        * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+       *
+       *
+       * Example JSON: `{ "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }`
+       *
+       * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
        */
       override fun requestBody(requestBody: Map<String, Any>) {
         cdkBuilder.requestBody(requestBody.mapValues{CdkObjectWrappers.unwrap(it.value)})
@@ -2707,16 +2768,22 @@ public open class CfnWebACL(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.AssociationConfigProperty,
     ) : CdkObject(cdkObject), AssociationConfigProperty {
       /**
-       * Customizes the maximum size of the request body that your protected CloudFront
-       * distributions forward to AWS WAF for inspection.
+       * Customizes the maximum size of the request body that your protected CloudFront, API
+       * Gateway, Amazon Cognito, App Runner, and Verified Access resources forward to AWS WAF for
+       * inspection.
        *
-       * The default size is 16 KB (16,384 bytes).
+       * The default size is 16 KB (16,384 bytes). You can change the setting for any of the
+       * available resource types.
        *
        *
        * You are charged additional fees when your protected resources forward body sizes that are
        * larger than the default. For more information, see [AWS WAF
        * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
        *
+       *
+       * Example JSON: `{ "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }`
+       *
+       * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-associationconfig.html#cfn-wafv2-webacl-associationconfig-requestbody)
        */
@@ -2918,11 +2985,13 @@ public open class CfnWebACL(
      * What AWS WAF should do if the body is larger than AWS WAF can inspect.
      *
      * AWS WAF does not support inspecting the entire contents of the web request body if the body
-     * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-     * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+     * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+     * underlying host service only forwards the contents that are within the limit to AWS WAF for
+     * inspection.
      *
-     * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-     * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
+     * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+     * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+     * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
      *
      * The options for oversize handling are the following:
@@ -2951,12 +3020,14 @@ public open class CfnWebACL(
        * @param oversizeHandling What AWS WAF should do if the body is larger than AWS WAF can
        * inspect.
        * AWS WAF does not support inspecting the entire contents of the web request body if the body
-       * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-       * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
        *
-       * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-       * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
-       * ACL `AssociationConfig` , for additional processing fees.
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * The options for oversize handling are the following:
        *
@@ -2982,12 +3053,14 @@ public open class CfnWebACL(
        * @param oversizeHandling What AWS WAF should do if the body is larger than AWS WAF can
        * inspect.
        * AWS WAF does not support inspecting the entire contents of the web request body if the body
-       * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-       * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
        *
-       * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-       * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
-       * ACL `AssociationConfig` , for additional processing fees.
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * The options for oversize handling are the following:
        *
@@ -3017,12 +3090,14 @@ public open class CfnWebACL(
        * What AWS WAF should do if the body is larger than AWS WAF can inspect.
        *
        * AWS WAF does not support inspecting the entire contents of the web request body if the body
-       * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-       * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
        *
-       * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-       * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
-       * ACL `AssociationConfig` , for additional processing fees.
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * The options for oversize handling are the following:
        *
@@ -5923,6 +5998,9 @@ public open class CfnWebACL(
    * * In this documentation, the descriptions of the individual fields talk about specifying the
    * web request component to inspect, but for field redaction, you are specifying the component type
    * to redact from the logs.
+   * * If you have request sampling enabled, the redacted fields configuration for logging has no
+   * impact on sampling. The only way to exclude fields from request sampling is by disabling sampling
+   * in the web ACL visibility configuration.
    *
    * Example:
    *
@@ -5998,10 +6076,15 @@ public open class CfnWebACL(
      * contains any additional data that you want to send to your web server as the HTTP request body,
      * such as data from a form.
      *
-     * A limited amount of the request body is forwarded to AWS WAF for inspection by the underlying
-     * host service. For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront
-     * distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you can increase
-     * the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+     * AWS WAF does not support inspecting the entire contents of the web request body if the body
+     * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+     * underlying host service only forwards the contents that are within the limit to AWS WAF for
+     * inspection.
+     *
+     * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+     * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+     * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
+     * ACL `AssociationConfig` , for additional processing fees.
      *
      * For information about how to handle oversized request bodies, see the `Body` object
      * configuration.
@@ -6073,10 +6156,15 @@ public open class CfnWebACL(
      * contains any additional data that you want to send to your web server as the HTTP request body,
      * such as data from a form.
      *
-     * A limited amount of the request body is forwarded to AWS WAF for inspection by the underlying
-     * host service. For regional resources, the limit is 8 KB (8,192 bytes) and for CloudFront
-     * distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you can increase
-     * the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+     * AWS WAF does not support inspecting the entire contents of the web request body if the body
+     * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+     * underlying host service only forwards the contents that are within the limit to AWS WAF for
+     * inspection.
+     *
+     * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+     * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+     * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
+     * ACL `AssociationConfig` , for additional processing fees.
      *
      * For information about how to handle oversized request bodies, see the `JsonBody` object
      * configuration.
@@ -6156,10 +6244,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6172,10 +6265,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6188,10 +6286,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6353,10 +6456,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6369,10 +6477,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6385,10 +6498,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6457,10 +6575,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6475,10 +6598,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6493,10 +6621,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6673,10 +6806,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6691,10 +6829,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6709,10 +6852,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -6794,10 +6942,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `Body` object
        * configuration.
@@ -6869,10 +7022,15 @@ public open class CfnWebACL(
        * that contains any additional data that you want to send to your web server as the HTTP request
        * body, such as data from a form.
        *
-       * A limited amount of the request body is forwarded to AWS WAF for inspection by the
-       * underlying host service. For regional resources, the limit is 8 KB (8,192 bytes) and for
-       * CloudFront distributions, the limit is 16 KB (16,384 bytes). For CloudFront distributions, you
-       * can increase the limit in the web ACL's `AssociationConfig` , for additional processing fees.
+       * AWS WAF does not support inspecting the entire contents of the web request body if the body
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
+       *
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * For information about how to handle oversized request bodies, see the `JsonBody` object
        * configuration.
@@ -8673,11 +8831,13 @@ public open class CfnWebACL(
      * What AWS WAF should do if the body is larger than AWS WAF can inspect.
      *
      * AWS WAF does not support inspecting the entire contents of the web request body if the body
-     * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-     * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+     * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+     * underlying host service only forwards the contents that are within the limit to AWS WAF for
+     * inspection.
      *
-     * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-     * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
+     * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+     * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+     * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the web
      * ACL `AssociationConfig` , for additional processing fees.
      *
      * The options for oversize handling are the following:
@@ -8762,12 +8922,14 @@ public open class CfnWebACL(
        * @param oversizeHandling What AWS WAF should do if the body is larger than AWS WAF can
        * inspect.
        * AWS WAF does not support inspecting the entire contents of the web request body if the body
-       * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-       * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
        *
-       * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-       * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
-       * ACL `AssociationConfig` , for additional processing fees.
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * The options for oversize handling are the following:
        *
@@ -8859,12 +9021,14 @@ public open class CfnWebACL(
        * @param oversizeHandling What AWS WAF should do if the body is larger than AWS WAF can
        * inspect.
        * AWS WAF does not support inspecting the entire contents of the web request body if the body
-       * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-       * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
        *
-       * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-       * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
-       * ACL `AssociationConfig` , for additional processing fees.
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * The options for oversize handling are the following:
        *
@@ -8945,12 +9109,14 @@ public open class CfnWebACL(
        * What AWS WAF should do if the body is larger than AWS WAF can inspect.
        *
        * AWS WAF does not support inspecting the entire contents of the web request body if the body
-       * exceeds the limit for the resource type. If the body is larger than the limit, the underlying
-       * host service only forwards the contents that are below the limit to AWS WAF for inspection.
+       * exceeds the limit for the resource type. When a web request body is larger than the limit, the
+       * underlying host service only forwards the contents that are within the limit to AWS WAF for
+       * inspection.
        *
-       * The default limit is 8 KB (8,192 bytes) for regional resources and 16 KB (16,384 bytes) for
-       * CloudFront distributions. For CloudFront distributions, you can increase the limit in the web
-       * ACL `AssociationConfig` , for additional processing fees.
+       * * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
+       * * For CloudFront, API Gateway, Amazon Cognito, App Runner, and Verified Access, the default
+       * limit is 16 KB (16,384 bytes), and you can increase the limit for each resource type in the
+       * web ACL `AssociationConfig` , for additional processing fees.
        *
        * The options for oversize handling are the following:
        *
@@ -12041,6 +12207,17 @@ public open class CfnWebACL(
     public fun customKeys(): Any? = unwrap(this).getCustomKeys()
 
     /**
+     * The amount of time, in seconds, that AWS WAF should include in its request counts, looking
+     * back from the current time.
+     *
+     * For example, for a setting of 120, when AWS WAF checks the rate, it counts the requests for
+     * the 2 minutes immediately preceding the current time. Valid settings are 60, 120, 300, and 600.
+     *
+     * This setting doesn't determine how often AWS WAF checks the rate, but how far back it looks
+     * each time it checks. AWS WAF checks the rate about every 10 seconds.
+     *
+     * Default: `300` (5 minutes)
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatement.html#cfn-wafv2-webacl-ratebasedstatement-evaluationwindowsec)
      */
     public fun evaluationWindowSec(): Number? = unwrap(this).getEvaluationWindowSec()
@@ -12150,7 +12327,16 @@ public open class CfnWebACL(
       public fun customKeys(vararg customKeys: Any)
 
       /**
-       * @param evaluationWindowSec the value to be set.
+       * @param evaluationWindowSec The amount of time, in seconds, that AWS WAF should include in
+       * its request counts, looking back from the current time.
+       * For example, for a setting of 120, when AWS WAF checks the rate, it counts the requests for
+       * the 2 minutes immediately preceding the current time. Valid settings are 60, 120, 300, and
+       * 600.
+       *
+       * This setting doesn't determine how often AWS WAF checks the rate, but how far back it looks
+       * each time it checks. AWS WAF checks the rate about every 10 seconds.
+       *
+       * Default: `300` (5 minutes)
        */
       public fun evaluationWindowSec(evaluationWindowSec: Number)
 
@@ -12311,7 +12497,16 @@ public open class CfnWebACL(
       override fun customKeys(vararg customKeys: Any): Unit = customKeys(customKeys.toList())
 
       /**
-       * @param evaluationWindowSec the value to be set.
+       * @param evaluationWindowSec The amount of time, in seconds, that AWS WAF should include in
+       * its request counts, looking back from the current time.
+       * For example, for a setting of 120, when AWS WAF checks the rate, it counts the requests for
+       * the 2 minutes immediately preceding the current time. Valid settings are 60, 120, 300, and
+       * 600.
+       *
+       * This setting doesn't determine how often AWS WAF checks the rate, but how far back it looks
+       * each time it checks. AWS WAF checks the rate about every 10 seconds.
+       *
+       * Default: `300` (5 minutes)
        */
       override fun evaluationWindowSec(evaluationWindowSec: Number) {
         cdkBuilder.evaluationWindowSec(evaluationWindowSec)
@@ -12476,6 +12671,18 @@ public open class CfnWebACL(
       override fun customKeys(): Any? = unwrap(this).getCustomKeys()
 
       /**
+       * The amount of time, in seconds, that AWS WAF should include in its request counts, looking
+       * back from the current time.
+       *
+       * For example, for a setting of 120, when AWS WAF checks the rate, it counts the requests for
+       * the 2 minutes immediately preceding the current time. Valid settings are 60, 120, 300, and
+       * 600.
+       *
+       * This setting doesn't determine how often AWS WAF checks the rate, but how far back it looks
+       * each time it checks. AWS WAF checks the rate about every 10 seconds.
+       *
+       * Default: `300` (5 minutes)
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-ratebasedstatement.html#cfn-wafv2-webacl-ratebasedstatement-evaluationwindowsec)
        */
       override fun evaluationWindowSec(): Number? = unwrap(this).getEvaluationWindowSec()
@@ -14111,16 +14318,21 @@ public open class CfnWebACL(
   }
 
   /**
-   * Customizes the maximum size of the request body that your protected CloudFront distributions
-   * forward to AWS WAF for inspection.
+   * Customizes the maximum size of the request body that your protected CloudFront, API Gateway,
+   * Amazon Cognito, App Runner, and Verified Access resources forward to AWS WAF for inspection.
    *
-   * The default size is 16 KB (16,384 bytes).
+   * The default size is 16 KB (16,384 bytes). You can change the setting for any of the available
+   * resource types.
    *
    *
    * You are charged additional fees when your protected resources forward body sizes that are
    * larger than the default. For more information, see [AWS WAF
    * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
    *
+   *
+   * Example JSON: `{ "API_GATEWAY": "KB_48", "APP_RUNNER_SERVICE": "KB_32" }`
+   *
+   * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
    *
    * This is used in the `AssociationConfig` of the web ACL.
    *
@@ -14140,8 +14352,9 @@ public open class CfnWebACL(
    */
   public interface RequestBodyAssociatedResourceTypeConfigProperty {
     /**
-     * Specifies the maximum size of the web request body component that an associated CloudFront
-     * distribution should send to AWS WAF for inspection.
+     * Specifies the maximum size of the web request body component that an associated CloudFront,
+     * API Gateway, Amazon Cognito, App Runner, or Verified Access resource should send to AWS WAF for
+     * inspection.
      *
      * This applies to statements in the web ACL that inspect the body or JSON body.
      *
@@ -14158,7 +14371,8 @@ public open class CfnWebACL(
     public interface Builder {
       /**
        * @param defaultSizeInspectionLimit Specifies the maximum size of the web request body
-       * component that an associated CloudFront distribution should send to AWS WAF for inspection. 
+       * component that an associated CloudFront, API Gateway, Amazon Cognito, App Runner, or Verified
+       * Access resource should send to AWS WAF for inspection. 
        * This applies to statements in the web ACL that inspect the body or JSON body.
        *
        * Default: `16 KB (16,384 bytes)`
@@ -14174,7 +14388,8 @@ public open class CfnWebACL(
 
       /**
        * @param defaultSizeInspectionLimit Specifies the maximum size of the web request body
-       * component that an associated CloudFront distribution should send to AWS WAF for inspection. 
+       * component that an associated CloudFront, API Gateway, Amazon Cognito, App Runner, or Verified
+       * Access resource should send to AWS WAF for inspection. 
        * This applies to statements in the web ACL that inspect the body or JSON body.
        *
        * Default: `16 KB (16,384 bytes)`
@@ -14192,8 +14407,9 @@ public open class CfnWebACL(
       cdkObject: software.amazon.awscdk.services.wafv2.CfnWebACL.RequestBodyAssociatedResourceTypeConfigProperty,
     ) : CdkObject(cdkObject), RequestBodyAssociatedResourceTypeConfigProperty {
       /**
-       * Specifies the maximum size of the web request body component that an associated CloudFront
-       * distribution should send to AWS WAF for inspection.
+       * Specifies the maximum size of the web request body component that an associated CloudFront,
+       * API Gateway, Amazon Cognito, App Runner, or Verified Access resource should send to AWS WAF
+       * for inspection.
        *
        * This applies to statements in the web ACL that inspect the body or JSON body.
        *
@@ -19153,11 +19369,10 @@ public open class CfnWebACL(
    * than 100 bytes.
    *
    * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of bytes
-   * of the body up to the limit for the web ACL. By default, for regional web ACLs, this limit is 8 KB
-   * (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes). For CloudFront web
-   * ACLs, you can increase the limit in the web ACL `AssociationConfig` , for additional fees. If you
-   * know that the request body for your web requests should never exceed the inspection limit, you
-   * could use a size constraint statement to block requests that have a larger request body size.
+   * in the body up to the limit for the web ACL and protected resource type. If you know that the
+   * request body for your web requests should never exceed the inspection limit, you can use a size
+   * constraint statement to block requests that have a larger request body size. For more information
+   * about the inspection limits, see `Body` and `JsonBody` settings for the `FieldToMatch` data type.
    *
    * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI
    * counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -20043,12 +20258,11 @@ public open class CfnWebACL(
      * longer than 100 bytes.
      *
      * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-     * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this limit
-     * is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes). For
-     * CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-     * additional fees. If you know that the request body for your web requests should never exceed the
-     * inspection limit, you could use a size constraint statement to block requests that have a larger
-     * request body size.
+     * bytes in the body up to the limit for the web ACL and protected resource type. If you know that
+     * the request body for your web requests should never exceed the inspection limit, you can use a
+     * size constraint statement to block requests that have a larger request body size. For more
+     * information about the inspection limits, see `Body` and `JsonBody` settings for the
+     * `FieldToMatch` data type.
      *
      * If you choose URI for the value of Part of the request to filter on, the slash (/) in the URI
      * counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -20782,12 +20996,11 @@ public open class CfnWebACL(
        * longer than 100 bytes.
        *
        * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-       * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-       * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
-       * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-       * additional fees. If you know that the request body for your web requests should never exceed
-       * the inspection limit, you could use a size constraint statement to block requests that have a
-       * larger request body size.
+       * bytes in the body up to the limit for the web ACL and protected resource type. If you know
+       * that the request body for your web requests should never exceed the inspection limit, you can
+       * use a size constraint statement to block requests that have a larger request body size. For
+       * more information about the inspection limits, see `Body` and `JsonBody` settings for the
+       * `FieldToMatch` data type.
        *
        * If you choose URI for the value of Part of the request to filter on, the slash (/) in the
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -20802,12 +21015,11 @@ public open class CfnWebACL(
        * longer than 100 bytes.
        *
        * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-       * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-       * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
-       * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-       * additional fees. If you know that the request body for your web requests should never exceed
-       * the inspection limit, you could use a size constraint statement to block requests that have a
-       * larger request body size.
+       * bytes in the body up to the limit for the web ACL and protected resource type. If you know
+       * that the request body for your web requests should never exceed the inspection limit, you can
+       * use a size constraint statement to block requests that have a larger request body size. For
+       * more information about the inspection limits, see `Body` and `JsonBody` settings for the
+       * `FieldToMatch` data type.
        *
        * If you choose URI for the value of Part of the request to filter on, the slash (/) in the
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -20822,12 +21034,11 @@ public open class CfnWebACL(
        * longer than 100 bytes.
        *
        * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-       * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-       * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
-       * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-       * additional fees. If you know that the request body for your web requests should never exceed
-       * the inspection limit, you could use a size constraint statement to block requests that have a
-       * larger request body size.
+       * bytes in the body up to the limit for the web ACL and protected resource type. If you know
+       * that the request body for your web requests should never exceed the inspection limit, you can
+       * use a size constraint statement to block requests that have a larger request body size. For
+       * more information about the inspection limits, see `Body` and `JsonBody` settings for the
+       * `FieldToMatch` data type.
        *
        * If you choose URI for the value of Part of the request to filter on, the slash (/) in the
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -21659,12 +21870,11 @@ public open class CfnWebACL(
        * longer than 100 bytes.
        *
        * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-       * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-       * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
-       * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-       * additional fees. If you know that the request body for your web requests should never exceed
-       * the inspection limit, you could use a size constraint statement to block requests that have a
-       * larger request body size.
+       * bytes in the body up to the limit for the web ACL and protected resource type. If you know
+       * that the request body for your web requests should never exceed the inspection limit, you can
+       * use a size constraint statement to block requests that have a larger request body size. For
+       * more information about the inspection limits, see `Body` and `JsonBody` settings for the
+       * `FieldToMatch` data type.
        *
        * If you choose URI for the value of Part of the request to filter on, the slash (/) in the
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -21681,12 +21891,11 @@ public open class CfnWebACL(
        * longer than 100 bytes.
        *
        * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-       * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-       * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
-       * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-       * additional fees. If you know that the request body for your web requests should never exceed
-       * the inspection limit, you could use a size constraint statement to block requests that have a
-       * larger request body size.
+       * bytes in the body up to the limit for the web ACL and protected resource type. If you know
+       * that the request body for your web requests should never exceed the inspection limit, you can
+       * use a size constraint statement to block requests that have a larger request body size. For
+       * more information about the inspection limits, see `Body` and `JsonBody` settings for the
+       * `FieldToMatch` data type.
        *
        * If you choose URI for the value of Part of the request to filter on, the slash (/) in the
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -21704,12 +21913,11 @@ public open class CfnWebACL(
        * longer than 100 bytes.
        *
        * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-       * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-       * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
-       * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-       * additional fees. If you know that the request body for your web requests should never exceed
-       * the inspection limit, you could use a size constraint statement to block requests that have a
-       * larger request body size.
+       * bytes in the body up to the limit for the web ACL and protected resource type. If you know
+       * that the request body for your web requests should never exceed the inspection limit, you can
+       * use a size constraint statement to block requests that have a larger request body size. For
+       * more information about the inspection limits, see `Body` and `JsonBody` settings for the
+       * `FieldToMatch` data type.
        *
        * If you choose URI for the value of Part of the request to filter on, the slash (/) in the
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -22047,12 +22255,11 @@ public open class CfnWebACL(
        * longer than 100 bytes.
        *
        * If you configure AWS WAF to inspect the request body, AWS WAF inspects only the number of
-       * bytes of the body up to the limit for the web ACL. By default, for regional web ACLs, this
-       * limit is 8 KB (8,192 bytes) and for CloudFront web ACLs, this limit is 16 KB (16,384 bytes).
-       * For CloudFront web ACLs, you can increase the limit in the web ACL `AssociationConfig` , for
-       * additional fees. If you know that the request body for your web requests should never exceed
-       * the inspection limit, you could use a size constraint statement to block requests that have a
-       * larger request body size.
+       * bytes in the body up to the limit for the web ACL and protected resource type. If you know
+       * that the request body for your web requests should never exceed the inspection limit, you can
+       * use a size constraint statement to block requests that have a larger request body size. For
+       * more information about the inspection limits, see `Body` and `JsonBody` settings for the
+       * `FieldToMatch` data type.
        *
        * If you choose URI for the value of Part of the request to filter on, the slash (/) in the
        * URI counts as one character. For example, the URI `/logo.jpg` is nine characters long.
@@ -22282,6 +22489,12 @@ public open class CfnWebACL(
      *
      * You can view the sampled requests through the AWS WAF console.
      *
+     *
+     * Request sampling doesn't provide a field redaction option, and any field redaction that you
+     * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
+     * from request sampling is by disabling sampling in the web ACL visibility configuration.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-visibilityconfig.html#cfn-wafv2-webacl-visibilityconfig-sampledrequestsenabled)
      */
     public fun sampledRequestsEnabled(): Any
@@ -22335,6 +22548,11 @@ public open class CfnWebACL(
        * @param sampledRequestsEnabled Indicates whether AWS WAF should store a sampling of the web
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
+       *
+       *
+       * Request sampling doesn't provide a field redaction option, and any field redaction that you
+       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
+       * from request sampling is by disabling sampling in the web ACL visibility configuration.
        */
       public fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean)
 
@@ -22342,6 +22560,11 @@ public open class CfnWebACL(
        * @param sampledRequestsEnabled Indicates whether AWS WAF should store a sampling of the web
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
+       *
+       *
+       * Request sampling doesn't provide a field redaction option, and any field redaction that you
+       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
+       * from request sampling is by disabling sampling in the web ACL visibility configuration.
        */
       public fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable)
     }
@@ -22401,6 +22624,11 @@ public open class CfnWebACL(
        * @param sampledRequestsEnabled Indicates whether AWS WAF should store a sampling of the web
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
+       *
+       *
+       * Request sampling doesn't provide a field redaction option, and any field redaction that you
+       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
+       * from request sampling is by disabling sampling in the web ACL visibility configuration.
        */
       override fun sampledRequestsEnabled(sampledRequestsEnabled: Boolean) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled)
@@ -22410,6 +22638,11 @@ public open class CfnWebACL(
        * @param sampledRequestsEnabled Indicates whether AWS WAF should store a sampling of the web
        * requests that match the rules. 
        * You can view the sampled requests through the AWS WAF console.
+       *
+       *
+       * Request sampling doesn't provide a field redaction option, and any field redaction that you
+       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
+       * from request sampling is by disabling sampling in the web ACL visibility configuration.
        */
       override fun sampledRequestsEnabled(sampledRequestsEnabled: IResolvable) {
         cdkBuilder.sampledRequestsEnabled(sampledRequestsEnabled.let(IResolvable::unwrap))
@@ -22455,6 +22688,12 @@ public open class CfnWebACL(
        * Indicates whether AWS WAF should store a sampling of the web requests that match the rules.
        *
        * You can view the sampled requests through the AWS WAF console.
+       *
+       *
+       * Request sampling doesn't provide a field redaction option, and any field redaction that you
+       * specify in your logging configuration doesn't affect sampling. The only way to exclude fields
+       * from request sampling is by disabling sampling in the web ACL visibility configuration.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafv2-webacl-visibilityconfig.html#cfn-wafv2-webacl-visibilityconfig-sampledrequestsenabled)
        */

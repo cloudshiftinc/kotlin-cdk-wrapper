@@ -50,17 +50,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .inputSourceConfig(List.of(IdMappingWorkflowInputSourceProperty.builder()
  * .inputSourceArn("inputSourceArn")
- * .schemaArn("schemaArn")
- * .build()))
- * .outputSourceConfig(List.of(IdMappingWorkflowOutputSourceProperty.builder()
- * .outputS3Path("outputS3Path")
  * // the properties below are optional
- * .kmsArn("kmsArn")
+ * .schemaArn("schemaArn")
+ * .type("type")
  * .build()))
  * .roleArn("roleArn")
  * .workflowName("workflowName")
  * // the properties below are optional
  * .description("description")
+ * .outputSourceConfig(List.of(IdMappingWorkflowOutputSourceProperty.builder()
+ * .outputS3Path("outputS3Path")
+ * // the properties below are optional
+ * .kmsArn("kmsArn")
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -186,7 +188,7 @@ public open class CfnIdMappingWorkflow(
    * A list of `IdMappingWorkflowOutputSource` objects, each of which contains fields `OutputS3Path`
    * and `Output` .
    */
-  public open fun outputSourceConfig(): Any = unwrap(this).getOutputSourceConfig()
+  public open fun outputSourceConfig(): Any? = unwrap(this).getOutputSourceConfig()
 
   /**
    * A list of `IdMappingWorkflowOutputSource` objects, each of which contains fields `OutputS3Path`
@@ -733,7 +735,7 @@ public open class CfnIdMappingWorkflow(
   }
 
   /**
-   * An object containing `InputSourceARN` and `SchemaName` .
+   * An object containing `InputSourceARN` , `SchemaName` , and `Type` .
    *
    * Example:
    *
@@ -744,7 +746,9 @@ public open class CfnIdMappingWorkflow(
    * IdMappingWorkflowInputSourceProperty idMappingWorkflowInputSourceProperty =
    * IdMappingWorkflowInputSourceProperty.builder()
    * .inputSourceArn("inputSourceArn")
+   * // the properties below are optional
    * .schemaArn("schemaArn")
+   * .type("type")
    * .build();
    * ```
    *
@@ -763,7 +767,19 @@ public open class CfnIdMappingWorkflow(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-schemaarn)
      */
-    public fun schemaArn(): String
+    public fun schemaArn(): String? = unwrap(this).getSchemaArn()
+
+    /**
+     * The type of ID namespace. There are two types: `SOURCE` and `TARGET` .
+     *
+     * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
+     * mapping workflow.
+     *
+     * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
 
     /**
      * A builder for [IdMappingWorkflowInputSourceProperty]
@@ -777,9 +793,19 @@ public open class CfnIdMappingWorkflow(
 
       /**
        * @param schemaArn The ARN (Amazon Resource Name) that AWS Entity Resolution generated for
-       * the `SchemaMapping` . 
+       * the `SchemaMapping` .
        */
       public fun schemaArn(schemaArn: String)
+
+      /**
+       * @param type The type of ID namespace. There are two types: `SOURCE` and `TARGET` .
+       * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
+       * mapping workflow.
+       *
+       * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve
+       * to.
+       */
+      public fun type(type: String)
     }
 
     private class BuilderImpl : Builder {
@@ -797,10 +823,22 @@ public open class CfnIdMappingWorkflow(
 
       /**
        * @param schemaArn The ARN (Amazon Resource Name) that AWS Entity Resolution generated for
-       * the `SchemaMapping` . 
+       * the `SchemaMapping` .
        */
       override fun schemaArn(schemaArn: String) {
         cdkBuilder.schemaArn(schemaArn)
+      }
+
+      /**
+       * @param type The type of ID namespace. There are two types: `SOURCE` and `TARGET` .
+       * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
+       * mapping workflow.
+       *
+       * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve
+       * to.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
       }
 
       public fun build():
@@ -824,7 +862,20 @@ public open class CfnIdMappingWorkflow(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-schemaarn)
        */
-      override fun schemaArn(): String = unwrap(this).getSchemaArn()
+      override fun schemaArn(): String? = unwrap(this).getSchemaArn()
+
+      /**
+       * The type of ID namespace. There are two types: `SOURCE` and `TARGET` .
+       *
+       * The `SOURCE` contains configurations for `sourceId` data that will be processed in an ID
+       * mapping workflow.
+       *
+       * The `TARGET` contains a configuration of `targetId` to which all `sourceIds` will resolve
+       * to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-entityresolution-idmappingworkflow-idmappingworkflowinputsource.html#cfn-entityresolution-idmappingworkflow-idmappingworkflowinputsource-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
     }
 
     public companion object {

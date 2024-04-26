@@ -16,9 +16,18 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * KeyValueStore store = KeyValueStore.Builder.create(this, "KeyValueStore")
- * .keyValueStoreName("KeyValueStore")
+ * KeyValueStore storeAsset = KeyValueStore.Builder.create(this, "KeyValueStoreAsset")
+ * .keyValueStoreName("KeyValueStoreAsset")
  * .source(ImportSource.fromAsset("path-to-data.json"))
+ * .build();
+ * KeyValueStore storeInline = KeyValueStore.Builder.create(this, "KeyValueStoreInline")
+ * .keyValueStoreName("KeyValueStoreInline")
+ * .source(ImportSource.fromInline(JSON.stringify(Map.of(
+ * "data", List.of(Map.of(
+ * "key", "key1",
+ * "value", "value1"), Map.of(
+ * "key", "key2",
+ * "value", "value2"))))))
  * .build();
  * ```
  */
@@ -45,6 +54,9 @@ public abstract class ImportSource(
     public fun fromBucket(bucket: IBucket, key: String): ImportSource =
         software.amazon.awscdk.services.cloudfront.ImportSource.fromBucket(bucket.let(IBucket::unwrap),
         key).let(ImportSource::wrap)
+
+    public fun fromInline(`data`: String): ImportSource =
+        software.amazon.awscdk.services.cloudfront.ImportSource.fromInline(`data`).let(ImportSource::wrap)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cloudfront.ImportSource):
         ImportSource = CdkObjectWrappers.wrap(cdkObject) as? ImportSource ?: Wrapper(cdkObject)

@@ -674,7 +674,7 @@ public open class CfnEndpointGroup(
     /**
      * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints
      * (resources) that can be added to accelerators and principals that have permission to add the
-     * endpoints to accelerators.
+     * endpoints.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-attachmentarn)
      */
@@ -739,7 +739,7 @@ public open class CfnEndpointGroup(
       /**
        * @param attachmentArn The Amazon Resource Name (ARN) of the cross-account attachment that
        * specifies the endpoints (resources) that can be added to accelerators and principals that have
-       * permission to add the endpoints to accelerators.
+       * permission to add the endpoints.
        */
       public fun attachmentArn(attachmentArn: String)
 
@@ -806,7 +806,7 @@ public open class CfnEndpointGroup(
       /**
        * @param attachmentArn The Amazon Resource Name (ARN) of the cross-account attachment that
        * specifies the endpoints (resources) that can be added to accelerators and principals that have
-       * permission to add the endpoints to accelerators.
+       * permission to add the endpoints.
        */
       override fun attachmentArn(attachmentArn: String) {
         cdkBuilder.attachmentArn(attachmentArn)
@@ -884,7 +884,7 @@ public open class CfnEndpointGroup(
       /**
        * The Amazon Resource Name (ARN) of the cross-account attachment that specifies the endpoints
        * (resources) that can be added to accelerators and principals that have permission to add the
-       * endpoints to accelerators.
+       * endpoints.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-globalaccelerator-endpointgroup-endpointconfiguration.html#cfn-globalaccelerator-endpointgroup-endpointconfiguration-attachmentarn)
        */

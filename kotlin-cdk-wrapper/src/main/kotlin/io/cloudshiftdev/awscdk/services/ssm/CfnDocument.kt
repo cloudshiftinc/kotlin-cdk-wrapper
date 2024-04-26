@@ -306,6 +306,9 @@ public open class CfnDocument(
      * * `aws`
      * * `amazon`
      * * `amzn`
+     * * `AWSEC2`
+     * * `AWSConfigRemediation`
+     * * `AWSSupport`
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-name)
@@ -520,6 +523,9 @@ public open class CfnDocument(
      * * `aws`
      * * `amazon`
      * * `amzn`
+     * * `AWSEC2`
+     * * `AWSConfigRemediation`
+     * * `AWSSupport`
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-name)

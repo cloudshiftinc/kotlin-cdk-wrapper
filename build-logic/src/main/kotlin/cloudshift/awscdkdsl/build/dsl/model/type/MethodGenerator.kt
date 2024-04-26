@@ -15,7 +15,6 @@ import com.squareup.kotlinpoet.ParameterSpec
 import com.squareup.kotlinpoet.ParameterizedTypeName
 import com.squareup.kotlinpoet.TypeName
 import com.squareup.kotlinpoet.UNIT
-import net.pearx.kasechange.toCamelCase
 
 internal class MethodGenerator(
     model: CdkModel,
@@ -115,9 +114,13 @@ internal data class MethodSpec(
 ) {
 
     val name: String
-        get() = when (cdkName) {
-            "set", "get" -> cdkName
-            else -> cdkName.removePrefix("set").removePrefix("get").toCamelCase()
+        get() = when {
+            cdkName.length < 4 -> cdkName
+            (cdkName.startsWith("get") || cdkName.startsWith("set")) && cdkName[3].isUpperCase() -> cdkName.removePrefix(
+                    "set",
+            ).removePrefix("get").replaceFirstChar(Char::lowercaseChar)
+
+            else -> cdkName
         }
 
     data class Parameter(

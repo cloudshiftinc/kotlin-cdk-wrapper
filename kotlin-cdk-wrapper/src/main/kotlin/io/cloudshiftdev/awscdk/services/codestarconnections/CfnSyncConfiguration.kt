@@ -29,6 +29,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .resourceName("resourceName")
  * .roleArn("roleArn")
  * .syncType("syncType")
+ * // the properties below are optional
+ * .publishDeploymentStatus("publishDeploymentStatus")
+ * .triggerResourceUpdateOn("triggerResourceUpdateOn")
  * .build();
  * ```
  *
@@ -103,6 +106,18 @@ public open class CfnSyncConfiguration(
   }
 
   /**
+   * Whether to enable or disable publishing of deployment status to source providers.
+   */
+  public open fun publishDeploymentStatus(): String? = unwrap(this).getPublishDeploymentStatus()
+
+  /**
+   * Whether to enable or disable publishing of deployment status to source providers.
+   */
+  public open fun publishDeploymentStatus(`value`: String) {
+    unwrap(this).setPublishDeploymentStatus(`value`)
+  }
+
+  /**
    * The ID of the repository link associated with a specific sync configuration.
    */
   public open fun repositoryLinkId(): String = unwrap(this).getRepositoryLinkId()
@@ -151,6 +166,18 @@ public open class CfnSyncConfiguration(
   }
 
   /**
+   * When to trigger Git sync to begin the stack update.
+   */
+  public open fun triggerResourceUpdateOn(): String? = unwrap(this).getTriggerResourceUpdateOn()
+
+  /**
+   * When to trigger Git sync to begin the stack update.
+   */
+  public open fun triggerResourceUpdateOn(`value`: String) {
+    unwrap(this).setTriggerResourceUpdateOn(`value`)
+  }
+
+  /**
    * A fluent builder for
    * [io.cloudshiftdev.awscdk.services.codestarconnections.CfnSyncConfiguration].
    */
@@ -174,6 +201,15 @@ public open class CfnSyncConfiguration(
      * configuration. 
      */
     public fun configFile(configFile: String)
+
+    /**
+     * Whether to enable or disable publishing of deployment status to source providers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-syncconfiguration.html#cfn-codestarconnections-syncconfiguration-publishdeploymentstatus)
+     * @param publishDeploymentStatus Whether to enable or disable publishing of deployment status
+     * to source providers. 
+     */
+    public fun publishDeploymentStatus(publishDeploymentStatus: String)
 
     /**
      * The ID of the repository link associated with a specific sync configuration.
@@ -209,6 +245,14 @@ public open class CfnSyncConfiguration(
      * @param syncType The type of sync for a specific sync configuration. 
      */
     public fun syncType(syncType: String)
+
+    /**
+     * When to trigger Git sync to begin the stack update.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-syncconfiguration.html#cfn-codestarconnections-syncconfiguration-triggerresourceupdateon)
+     * @param triggerResourceUpdateOn When to trigger Git sync to begin the stack update. 
+     */
+    public fun triggerResourceUpdateOn(triggerResourceUpdateOn: String)
   }
 
   private class BuilderImpl(
@@ -241,6 +285,17 @@ public open class CfnSyncConfiguration(
      */
     override fun configFile(configFile: String) {
       cdkBuilder.configFile(configFile)
+    }
+
+    /**
+     * Whether to enable or disable publishing of deployment status to source providers.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-syncconfiguration.html#cfn-codestarconnections-syncconfiguration-publishdeploymentstatus)
+     * @param publishDeploymentStatus Whether to enable or disable publishing of deployment status
+     * to source providers. 
+     */
+    override fun publishDeploymentStatus(publishDeploymentStatus: String) {
+      cdkBuilder.publishDeploymentStatus(publishDeploymentStatus)
     }
 
     /**
@@ -284,6 +339,16 @@ public open class CfnSyncConfiguration(
      */
     override fun syncType(syncType: String) {
       cdkBuilder.syncType(syncType)
+    }
+
+    /**
+     * When to trigger Git sync to begin the stack update.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codestarconnections-syncconfiguration.html#cfn-codestarconnections-syncconfiguration-triggerresourceupdateon)
+     * @param triggerResourceUpdateOn When to trigger Git sync to begin the stack update. 
+     */
+    override fun triggerResourceUpdateOn(triggerResourceUpdateOn: String) {
+      cdkBuilder.triggerResourceUpdateOn(triggerResourceUpdateOn)
     }
 
     public fun build(): software.amazon.awscdk.services.codestarconnections.CfnSyncConfiguration =

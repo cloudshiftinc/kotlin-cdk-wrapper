@@ -13,18 +13,42 @@ import kotlin.String
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.events.*;
- * GraphqlApi api = GraphqlApi.Builder.create(this, "EventBridgeApi")
- * .name("EventBridgeApi")
- * .definition(Definition.fromFile(join(__dirname, "appsync.eventbridge.graphql")))
+ * // Build a data source for AppSync to access the database.
+ * GraphqlApi api;
+ * // Create username and password secret for DB Cluster
+ * DatabaseSecret secret = DatabaseSecret.Builder.create(this, "AuroraSecret")
+ * .username("clusteradmin")
  * .build();
- * EventBus bus = EventBus.Builder.create(this, "DestinationEventBus").build();
- * EventBridgeDataSource dataSource = api.addEventBridgeDataSource("NoneDS", bus);
- * dataSource.createResolver("EventResolver", BaseResolverProps.builder()
+ * // The VPC to place the cluster in
+ * Vpc vpc = new Vpc(this, "AuroraVpc");
+ * // Create the serverless cluster, provide all values needed to customise the database.
+ * ServerlessCluster cluster = ServerlessCluster.Builder.create(this, "AuroraCluster")
+ * .engine(DatabaseClusterEngine.AURORA_MYSQL)
+ * .vpc(vpc)
+ * .credentials(Map.of("username", "clusteradmin"))
+ * .clusterIdentifier("db-endpoint-test")
+ * .defaultDatabaseName("demos")
+ * .build();
+ * RdsDataSource rdsDS = api.addRdsDataSource("rds", cluster, secret, "demos");
+ * // Set up a resolver for an RDS query.
+ * rdsDS.createResolver("QueryGetDemosRdsResolver", BaseResolverProps.builder()
+ * .typeName("Query")
+ * .fieldName("getDemosRds")
+ * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
+ * \"statements\": [\n      \"SELECT * FROM demos\"\n    ]\n  }\n  "))
+ * .responseMappingTemplate(MappingTemplate.fromString("\n   
+ * $utils.toJson($utils.rds.toJsonObject($ctx.result)[0])\n  "))
+ * .build());
+ * // Set up a resolver for an RDS mutation.
+ * rdsDS.createResolver("MutationAddDemoRdsResolver", BaseResolverProps.builder()
  * .typeName("Mutation")
- * .fieldName("emitEvent")
- * .requestMappingTemplate(MappingTemplate.fromFile("request.vtl"))
- * .responseMappingTemplate(MappingTemplate.fromFile("response.vtl"))
+ * .fieldName("addDemoRds")
+ * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
+ * \"statements\": [\n      \"INSERT INTO demos VALUES (:id, :version)\",\n      \"SELECT * WHERE id =
+ * :id\"\n    ],\n    \"variableMap\": {\n      \":id\": $util.toJson($util.autoId()),\n     
+ * \":version\": $util.toJson($ctx.args.version)\n    }\n  }\n  "))
+ * .responseMappingTemplate(MappingTemplate.fromString("\n   
+ * $utils.toJson($utils.rds.toJsonObject($ctx.result)[1][0])\n  "))
  * .build());
  * ```
  */

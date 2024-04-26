@@ -334,6 +334,11 @@ public interface CfnServiceProps {
    * [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html) API
    * action.
    *
+   * You must set this to a value other than `NONE` when you use Cost Explorer. For more
+   * information, see [Amazon ECS usage
+   * reports](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
    * The default is `NONE` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-propagatetags)
@@ -773,6 +778,11 @@ public interface CfnServiceProps {
      * during task creation. To add tags to a task after task creation, use the
      * [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html)
      * API action.
+     *
+     * You must set this to a value other than `NONE` when you use Cost Explorer. For more
+     * information, see [Amazon ECS usage
+     * reports](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
      *
      * The default is `NONE` .
      */
@@ -1325,6 +1335,11 @@ public interface CfnServiceProps {
      * [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html)
      * API action.
      *
+     * You must set this to a value other than `NONE` when you use Cost Explorer. For more
+     * information, see [Amazon ECS usage
+     * reports](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
+     *
      * The default is `NONE` .
      */
     override fun propagateTags(propagateTags: String) {
@@ -1747,6 +1762,11 @@ public interface CfnServiceProps {
      * during task creation. To add tags to a task after task creation, use the
      * [TagResource](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TagResource.html)
      * API action.
+     *
+     * You must set this to a value other than `NONE` when you use Cost Explorer. For more
+     * information, see [Amazon ECS usage
+     * reports](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/usage-reports.html) in the
+     * *Amazon Elastic Container Service Developer Guide* .
      *
      * The default is `NONE` .
      *

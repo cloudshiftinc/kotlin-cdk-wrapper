@@ -202,6 +202,21 @@ public interface CfnDeliveryStreamProps {
    *
    * You can specify up to 50 tags when creating a delivery stream.
    *
+   * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
+   * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
+   * permissions to create tags. If you do not provide this permission, requests to create new Firehose
+   * delivery streams with IAM resource tags will fail with an `AccessDeniedException` such as
+   * following.
+   *
+   * *AccessDeniedException*
+   *
+   * User: arn:aws:sts::x:assumed-role/x/x is not authorized to perform: firehose:TagDeliveryStream
+   * on resource: arn:aws:firehose:us-east-1:x:deliverystream/x with an explicit deny in an
+   * identity-based policy.
+   *
+   * For an example IAM policy, see [Tag
+   * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -583,6 +598,21 @@ public interface CfnDeliveryStreamProps {
      * AWS Billing and Cost Management User Guide.
      *
      * You can specify up to 50 tags when creating a delivery stream.
+     *
+     * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
+     * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
+     * permissions to create tags. If you do not provide this permission, requests to create new
+     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
+     * as following.
+     *
+     * *AccessDeniedException*
+     *
+     * User: arn:aws:sts::x:assumed-role/x/x is not authorized to perform:
+     * firehose:TagDeliveryStream on resource: arn:aws:firehose:us-east-1:x:deliverystream/x with an
+     * explicit deny in an identity-based policy.
+     *
+     * For an example IAM policy, see [Tag
+     * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      */
     public fun tags(tags: List<CfnTag>)
 
@@ -596,6 +626,21 @@ public interface CfnDeliveryStreamProps {
      * AWS Billing and Cost Management User Guide.
      *
      * You can specify up to 50 tags when creating a delivery stream.
+     *
+     * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
+     * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
+     * permissions to create tags. If you do not provide this permission, requests to create new
+     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
+     * as following.
+     *
+     * *AccessDeniedException*
+     *
+     * User: arn:aws:sts::x:assumed-role/x/x is not authorized to perform:
+     * firehose:TagDeliveryStream on resource: arn:aws:firehose:us-east-1:x:deliverystream/x with an
+     * explicit deny in an identity-based policy.
+     *
+     * For an example IAM policy, see [Tag
+     * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -1054,6 +1099,21 @@ public interface CfnDeliveryStreamProps {
      * AWS Billing and Cost Management User Guide.
      *
      * You can specify up to 50 tags when creating a delivery stream.
+     *
+     * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
+     * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
+     * permissions to create tags. If you do not provide this permission, requests to create new
+     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
+     * as following.
+     *
+     * *AccessDeniedException*
+     *
+     * User: arn:aws:sts::x:assumed-role/x/x is not authorized to perform:
+     * firehose:TagDeliveryStream on resource: arn:aws:firehose:us-east-1:x:deliverystream/x with an
+     * explicit deny in an identity-based policy.
+     *
+     * For an example IAM policy, see [Tag
+     * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag::unwrap))
@@ -1069,6 +1129,21 @@ public interface CfnDeliveryStreamProps {
      * AWS Billing and Cost Management User Guide.
      *
      * You can specify up to 50 tags when creating a delivery stream.
+     *
+     * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
+     * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
+     * permissions to create tags. If you do not provide this permission, requests to create new
+     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
+     * as following.
+     *
+     * *AccessDeniedException*
+     *
+     * User: arn:aws:sts::x:assumed-role/x/x is not authorized to perform:
+     * firehose:TagDeliveryStream on resource: arn:aws:firehose:us-east-1:x:deliverystream/x with an
+     * explicit deny in an identity-based policy.
+     *
+     * For an example IAM policy, see [Tag
+     * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -1239,6 +1314,21 @@ public interface CfnDeliveryStreamProps {
      * AWS Billing and Cost Management User Guide.
      *
      * You can specify up to 50 tags when creating a delivery stream.
+     *
+     * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
+     * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
+     * permissions to create tags. If you do not provide this permission, requests to create new
+     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
+     * as following.
+     *
+     * *AccessDeniedException*
+     *
+     * User: arn:aws:sts::x:assumed-role/x/x is not authorized to perform:
+     * firehose:TagDeliveryStream on resource: arn:aws:firehose:us-east-1:x:deliverystream/x with an
+     * explicit deny in an identity-based policy.
+     *
+     * For an example IAM policy, see [Tag
+     * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-tags)
      */

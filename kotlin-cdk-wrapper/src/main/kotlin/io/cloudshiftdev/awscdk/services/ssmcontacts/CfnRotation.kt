@@ -212,6 +212,11 @@ public open class CfnRotation(
     /**
      * The Amazon Resource Names (ARNs) of the contacts to add to the rotation.
      *
+     *
+     * Only the `PERSONAL` contact type is supported. The contact types `ESCALATION` and
+     * `ONCALL_SCHEDULE` are not supported for this operation.
+     *
+     *
      * The order in which you list the contacts is their shift order in the rotation schedule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-contactids)
@@ -221,6 +226,11 @@ public open class CfnRotation(
 
     /**
      * The Amazon Resource Names (ARNs) of the contacts to add to the rotation.
+     *
+     *
+     * Only the `PERSONAL` contact type is supported. The contact types `ESCALATION` and
+     * `ONCALL_SCHEDULE` are not supported for this operation.
+     *
      *
      * The order in which you list the contacts is their shift order in the rotation schedule.
      *
@@ -305,6 +315,11 @@ public open class CfnRotation(
      * [Time Zone Database](https://docs.aws.amazon.com/https://www.iana.org/time-zones) on the IANA
      * website.
      *
+     *
+     * Designators for time zones that don’t support Daylight Savings Time rules, such as Pacific
+     * Standard Time (PST), are not supported.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-timezoneid)
      * @param timeZoneId The time zone to base the rotation’s activity on, in Internet Assigned
      * Numbers Authority (IANA) format. 
@@ -322,6 +337,11 @@ public open class CfnRotation(
     /**
      * The Amazon Resource Names (ARNs) of the contacts to add to the rotation.
      *
+     *
+     * Only the `PERSONAL` contact type is supported. The contact types `ESCALATION` and
+     * `ONCALL_SCHEDULE` are not supported for this operation.
+     *
+     *
      * The order in which you list the contacts is their shift order in the rotation schedule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-contactids)
@@ -333,6 +353,11 @@ public open class CfnRotation(
 
     /**
      * The Amazon Resource Names (ARNs) of the contacts to add to the rotation.
+     *
+     *
+     * Only the `PERSONAL` contact type is supported. The contact types `ESCALATION` and
+     * `ONCALL_SCHEDULE` are not supported for this operation.
+     *
      *
      * The order in which you list the contacts is their shift order in the rotation schedule.
      *
@@ -427,6 +452,11 @@ public open class CfnRotation(
      * For example: "America/Los_Angeles", "UTC", or "Asia/Seoul". For more information, see the
      * [Time Zone Database](https://docs.aws.amazon.com/https://www.iana.org/time-zones) on the IANA
      * website.
+     *
+     *
+     * Designators for time zones that don’t support Daylight Savings Time rules, such as Pacific
+     * Standard Time (PST), are not supported.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssmcontacts-rotation.html#cfn-ssmcontacts-rotation-timezoneid)
      * @param timeZoneId The time zone to base the rotation’s activity on, in Internet Assigned

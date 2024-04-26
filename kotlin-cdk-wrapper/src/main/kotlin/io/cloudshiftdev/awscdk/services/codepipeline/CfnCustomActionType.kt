@@ -405,6 +405,32 @@ public open class CfnCustomActionType(
     public fun provider(provider: String)
 
     /**
+     * URLs that provide users information about this custom action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
+     * @param settings URLs that provide users information about this custom action. 
+     */
+    public fun settings(settings: IResolvable)
+
+    /**
+     * URLs that provide users information about this custom action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
+     * @param settings URLs that provide users information about this custom action. 
+     */
+    public fun settings(settings: SettingsProperty)
+
+    /**
+     * URLs that provide users information about this custom action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
+     * @param settings URLs that provide users information about this custom action. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("73b752864910c8cd1fd1b0615620949f9560b886cf47eefc7159519d45d3f322")
+    public fun settings(settings: SettingsProperty.Builder.() -> Unit)
+
+    /**
      * The tags for the custom action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-tags)
@@ -419,32 +445,6 @@ public open class CfnCustomActionType(
      * @param tags The tags for the custom action. 
      */
     public fun tags(vararg tags: CfnTag)
-
-    /**
-     * URLs that provide users information about this custom action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
-     * @param settings URLs that provide users information about this custom action. 
-     */
-    public fun tings(settings: IResolvable)
-
-    /**
-     * URLs that provide users information about this custom action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
-     * @param settings URLs that provide users information about this custom action. 
-     */
-    public fun tings(settings: SettingsProperty)
-
-    /**
-     * URLs that provide users information about this custom action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
-     * @param settings URLs that provide users information about this custom action. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("66dba7e677bf870a75b236ff0b004c0bc110a4c4b2e371228cd57f32a20a1f6b")
-    public fun tings(settings: SettingsProperty.Builder.() -> Unit)
 
     /**
      * The version identifier of the custom action.
@@ -606,6 +606,37 @@ public open class CfnCustomActionType(
     }
 
     /**
+     * URLs that provide users information about this custom action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
+     * @param settings URLs that provide users information about this custom action. 
+     */
+    override fun settings(settings: IResolvable) {
+      cdkBuilder.settings(settings.let(IResolvable::unwrap))
+    }
+
+    /**
+     * URLs that provide users information about this custom action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
+     * @param settings URLs that provide users information about this custom action. 
+     */
+    override fun settings(settings: SettingsProperty) {
+      cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
+    }
+
+    /**
+     * URLs that provide users information about this custom action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
+     * @param settings URLs that provide users information about this custom action. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("73b752864910c8cd1fd1b0615620949f9560b886cf47eefc7159519d45d3f322")
+    override fun settings(settings: SettingsProperty.Builder.() -> Unit): Unit =
+        settings(SettingsProperty(settings))
+
+    /**
      * The tags for the custom action.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-tags)
@@ -622,37 +653,6 @@ public open class CfnCustomActionType(
      * @param tags The tags for the custom action. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
-
-    /**
-     * URLs that provide users information about this custom action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
-     * @param settings URLs that provide users information about this custom action. 
-     */
-    override fun tings(settings: IResolvable) {
-      cdkBuilder.settings(settings.let(IResolvable::unwrap))
-    }
-
-    /**
-     * URLs that provide users information about this custom action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
-     * @param settings URLs that provide users information about this custom action. 
-     */
-    override fun tings(settings: SettingsProperty) {
-      cdkBuilder.settings(settings.let(SettingsProperty::unwrap))
-    }
-
-    /**
-     * URLs that provide users information about this custom action.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-customactiontype.html#cfn-codepipeline-customactiontype-settings)
-     * @param settings URLs that provide users information about this custom action. 
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("66dba7e677bf870a75b236ff0b004c0bc110a4c4b2e371228cd57f32a20a1f6b")
-    override fun tings(settings: SettingsProperty.Builder.() -> Unit): Unit =
-        tings(SettingsProperty(settings))
 
     /**
      * The version identifier of the custom action.

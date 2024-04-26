@@ -25,10 +25,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnTransitGatewayRoute cfnTransitGatewayRoute = CfnTransitGatewayRoute.Builder.create(this,
  * "MyCfnTransitGatewayRoute")
+ * .destinationCidrBlock("destinationCidrBlock")
  * .transitGatewayRouteTableId("transitGatewayRouteTableId")
  * // the properties below are optional
  * .blackhole(false)
- * .destinationCidrBlock("destinationCidrBlock")
  * .transitGatewayAttachmentId("transitGatewayAttachmentId")
  * .build();
  * ```
@@ -81,7 +81,7 @@ public open class CfnTransitGatewayRoute(
   /**
    * The CIDR block used for destination matches.
    */
-  public open fun destinationCidrBlock(): String? = unwrap(this).getDestinationCidrBlock()
+  public open fun destinationCidrBlock(): String = unwrap(this).getDestinationCidrBlock()
 
   /**
    * The CIDR block used for destination matches.

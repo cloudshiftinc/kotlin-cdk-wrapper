@@ -171,6 +171,35 @@ public interface IDomain : IResource {
   public fun metricAutomatedSnapshotFailure(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
+   * Metric for CPU utilization.
+   *
+   * Default: maximum over 5 minutes
+   *
+   * @param props
+   */
+  public fun metricCPUUtilization(): Metric
+
+  /**
+   * Metric for CPU utilization.
+   *
+   * Default: maximum over 5 minutes
+   *
+   * @param props
+   */
+  public fun metricCPUUtilization(props: MetricOptions): Metric
+
+  /**
+   * Metric for CPU utilization.
+   *
+   * Default: maximum over 5 minutes
+   *
+   * @param props
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("66a273587ca08857c76d1952aa0bb360d86bfe06cc24788a922415fa0fa097ef")
+  public fun metricCPUUtilization(props: MetricOptions.Builder.() -> Unit): Metric
+
+  /**
    * Metric for the cluster blocking index writes.
    *
    * Default: maximum over 1 minute
@@ -258,35 +287,6 @@ public interface IDomain : IResource {
   public fun metricClusterStatusYellow(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
-   * Metric for CPU utilization.
-   *
-   * Default: maximum over 5 minutes
-   *
-   * @param props
-   */
-  public fun metricCpuUtilization(): Metric
-
-  /**
-   * Metric for CPU utilization.
-   *
-   * Default: maximum over 5 minutes
-   *
-   * @param props
-   */
-  public fun metricCpuUtilization(props: MetricOptions): Metric
-
-  /**
-   * Metric for CPU utilization.
-   *
-   * Default: maximum over 5 minutes
-   *
-   * @param props
-   */
-  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("06a38048efcdd43000e7f66d74001004b818625d95136f460bf350a2397a31d0")
-  public fun metricCpuUtilization(props: MetricOptions.Builder.() -> Unit): Metric
-
-  /**
    * Metric for the storage space of nodes in the cluster.
    *
    * Default: minimum over 5 minutes
@@ -351,7 +351,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricJvmMemoryPressure(): Metric
+  public fun metricJVMMemoryPressure(): Metric
 
   /**
    * Metric for JVM memory pressure.
@@ -360,7 +360,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricJvmMemoryPressure(props: MetricOptions): Metric
+  public fun metricJVMMemoryPressure(props: MetricOptions): Metric
 
   /**
    * Metric for JVM memory pressure.
@@ -370,8 +370,8 @@ public interface IDomain : IResource {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("283ffec8edbd9b28227078700405c8b7b7fe0f6bf433f6323ba9205b4c8a528f")
-  public fun metricJvmMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("bbc5860f20525c5c3cf2850d91d7efa180c7058337e1de65c8420bc7be81cc9b")
+  public fun metricJVMMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Metric for KMS key errors.
@@ -380,7 +380,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricKmsKeyError(): Metric
+  public fun metricKMSKeyError(): Metric
 
   /**
    * Metric for KMS key errors.
@@ -389,7 +389,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricKmsKeyError(props: MetricOptions): Metric
+  public fun metricKMSKeyError(props: MetricOptions): Metric
 
   /**
    * Metric for KMS key errors.
@@ -399,8 +399,8 @@ public interface IDomain : IResource {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("309d28dee34b268d496bc1e8ba269d5bff9ec10e9e17132d9a884e208a805741")
-  public fun metricKmsKeyError(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("e6d547afff79fd0803e3b15eb00be8f5c5c65020938e7e8c527fefe04c3ec7de")
+  public fun metricKMSKeyError(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Metric for KMS key being inaccessible.
@@ -409,7 +409,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricKmsKeyInaccessible(): Metric
+  public fun metricKMSKeyInaccessible(): Metric
 
   /**
    * Metric for KMS key being inaccessible.
@@ -418,7 +418,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricKmsKeyInaccessible(props: MetricOptions): Metric
+  public fun metricKMSKeyInaccessible(props: MetricOptions): Metric
 
   /**
    * Metric for KMS key being inaccessible.
@@ -428,8 +428,8 @@ public interface IDomain : IResource {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("bfca9e4cdc1ad37f6d57f9fdeb4258e1c6235ab92ed8224c8ee4cda359baaad6")
-  public fun metricKmsKeyInaccessible(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("5c4bf93f4e622d4a76178b4868be7efe604fd3d16316e4a05742bea79f81ef77")
+  public fun metricKMSKeyInaccessible(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Metric for master CPU utilization.
@@ -438,7 +438,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricMasterCpuUtilization(): Metric
+  public fun metricMasterCPUUtilization(): Metric
 
   /**
    * Metric for master CPU utilization.
@@ -447,7 +447,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricMasterCpuUtilization(props: MetricOptions): Metric
+  public fun metricMasterCPUUtilization(props: MetricOptions): Metric
 
   /**
    * Metric for master CPU utilization.
@@ -457,8 +457,8 @@ public interface IDomain : IResource {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("8a46b211229de3f431630b8ea4f99843647a1cab494f599c79138732a397c709")
-  public fun metricMasterCpuUtilization(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("9bfbec0deb2fa2aad0f19ca7ed1e5d7e6bd722bd278b8f9e86e0086d51527219")
+  public fun metricMasterCPUUtilization(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Metric for master JVM memory pressure.
@@ -467,7 +467,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricMasterJvmMemoryPressure(): Metric
+  public fun metricMasterJVMMemoryPressure(): Metric
 
   /**
    * Metric for master JVM memory pressure.
@@ -476,7 +476,7 @@ public interface IDomain : IResource {
    *
    * @param props
    */
-  public fun metricMasterJvmMemoryPressure(props: MetricOptions): Metric
+  public fun metricMasterJVMMemoryPressure(props: MetricOptions): Metric
 
   /**
    * Metric for master JVM memory pressure.
@@ -486,8 +486,8 @@ public interface IDomain : IResource {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("fbcf8e4882306bcb2bed673a80ed7a54a16cc27adfc1a7fe173fbb566b335350")
-  public fun metricMasterJvmMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("8abbe6fe8c9df31c7c02cf8f2ff374dd99996363ad1f3de815273cee61f4b816")
+  public fun metricMasterJVMMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * Metric for the number of nodes.
@@ -775,6 +775,38 @@ public interface IDomain : IResource {
         metricAutomatedSnapshotFailure(MetricOptions(props))
 
     /**
+     * Metric for CPU utilization.
+     *
+     * Default: maximum over 5 minutes
+     *
+     * @param props
+     */
+    override fun metricCPUUtilization(): Metric =
+        unwrap(this).metricCPUUtilization().let(Metric::wrap)
+
+    /**
+     * Metric for CPU utilization.
+     *
+     * Default: maximum over 5 minutes
+     *
+     * @param props
+     */
+    override fun metricCPUUtilization(props: MetricOptions): Metric =
+        unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
+
+    /**
+     * Metric for CPU utilization.
+     *
+     * Default: maximum over 5 minutes
+     *
+     * @param props
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("66a273587ca08857c76d1952aa0bb360d86bfe06cc24788a922415fa0fa097ef")
+    override fun metricCPUUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricCPUUtilization(MetricOptions(props))
+
+    /**
      * Metric for the cluster blocking index writes.
      *
      * Default: maximum over 1 minute
@@ -871,38 +903,6 @@ public interface IDomain : IResource {
         metricClusterStatusYellow(MetricOptions(props))
 
     /**
-     * Metric for CPU utilization.
-     *
-     * Default: maximum over 5 minutes
-     *
-     * @param props
-     */
-    override fun metricCpuUtilization(): Metric =
-        unwrap(this).metricCPUUtilization().let(Metric::wrap)
-
-    /**
-     * Metric for CPU utilization.
-     *
-     * Default: maximum over 5 minutes
-     *
-     * @param props
-     */
-    override fun metricCpuUtilization(props: MetricOptions): Metric =
-        unwrap(this).metricCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
-
-    /**
-     * Metric for CPU utilization.
-     *
-     * Default: maximum over 5 minutes
-     *
-     * @param props
-     */
-    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("06a38048efcdd43000e7f66d74001004b818625d95136f460bf350a2397a31d0")
-    override fun metricCpuUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricCpuUtilization(MetricOptions(props))
-
-    /**
      * Metric for the storage space of nodes in the cluster.
      *
      * Default: minimum over 5 minutes
@@ -973,7 +973,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricJvmMemoryPressure(): Metric =
+    override fun metricJVMMemoryPressure(): Metric =
         unwrap(this).metricJVMMemoryPressure().let(Metric::wrap)
 
     /**
@@ -983,7 +983,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricJvmMemoryPressure(props: MetricOptions): Metric =
+    override fun metricJVMMemoryPressure(props: MetricOptions): Metric =
         unwrap(this).metricJVMMemoryPressure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -994,9 +994,9 @@ public interface IDomain : IResource {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("283ffec8edbd9b28227078700405c8b7b7fe0f6bf433f6323ba9205b4c8a528f")
-    override fun metricJvmMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricJvmMemoryPressure(MetricOptions(props))
+    @JvmName("bbc5860f20525c5c3cf2850d91d7efa180c7058337e1de65c8420bc7be81cc9b")
+    override fun metricJVMMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricJVMMemoryPressure(MetricOptions(props))
 
     /**
      * Metric for KMS key errors.
@@ -1005,7 +1005,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricKmsKeyError(): Metric = unwrap(this).metricKMSKeyError().let(Metric::wrap)
+    override fun metricKMSKeyError(): Metric = unwrap(this).metricKMSKeyError().let(Metric::wrap)
 
     /**
      * Metric for KMS key errors.
@@ -1014,7 +1014,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricKmsKeyError(props: MetricOptions): Metric =
+    override fun metricKMSKeyError(props: MetricOptions): Metric =
         unwrap(this).metricKMSKeyError(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -1025,9 +1025,9 @@ public interface IDomain : IResource {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("309d28dee34b268d496bc1e8ba269d5bff9ec10e9e17132d9a884e208a805741")
-    override fun metricKmsKeyError(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricKmsKeyError(MetricOptions(props))
+    @JvmName("e6d547afff79fd0803e3b15eb00be8f5c5c65020938e7e8c527fefe04c3ec7de")
+    override fun metricKMSKeyError(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricKMSKeyError(MetricOptions(props))
 
     /**
      * Metric for KMS key being inaccessible.
@@ -1036,7 +1036,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricKmsKeyInaccessible(): Metric =
+    override fun metricKMSKeyInaccessible(): Metric =
         unwrap(this).metricKMSKeyInaccessible().let(Metric::wrap)
 
     /**
@@ -1046,7 +1046,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricKmsKeyInaccessible(props: MetricOptions): Metric =
+    override fun metricKMSKeyInaccessible(props: MetricOptions): Metric =
         unwrap(this).metricKMSKeyInaccessible(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -1057,9 +1057,9 @@ public interface IDomain : IResource {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("bfca9e4cdc1ad37f6d57f9fdeb4258e1c6235ab92ed8224c8ee4cda359baaad6")
-    override fun metricKmsKeyInaccessible(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricKmsKeyInaccessible(MetricOptions(props))
+    @JvmName("5c4bf93f4e622d4a76178b4868be7efe604fd3d16316e4a05742bea79f81ef77")
+    override fun metricKMSKeyInaccessible(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricKMSKeyInaccessible(MetricOptions(props))
 
     /**
      * Metric for master CPU utilization.
@@ -1068,7 +1068,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricMasterCpuUtilization(): Metric =
+    override fun metricMasterCPUUtilization(): Metric =
         unwrap(this).metricMasterCPUUtilization().let(Metric::wrap)
 
     /**
@@ -1078,7 +1078,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricMasterCpuUtilization(props: MetricOptions): Metric =
+    override fun metricMasterCPUUtilization(props: MetricOptions): Metric =
         unwrap(this).metricMasterCPUUtilization(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -1089,9 +1089,9 @@ public interface IDomain : IResource {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("8a46b211229de3f431630b8ea4f99843647a1cab494f599c79138732a397c709")
-    override fun metricMasterCpuUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricMasterCpuUtilization(MetricOptions(props))
+    @JvmName("9bfbec0deb2fa2aad0f19ca7ed1e5d7e6bd722bd278b8f9e86e0086d51527219")
+    override fun metricMasterCPUUtilization(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricMasterCPUUtilization(MetricOptions(props))
 
     /**
      * Metric for master JVM memory pressure.
@@ -1100,7 +1100,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricMasterJvmMemoryPressure(): Metric =
+    override fun metricMasterJVMMemoryPressure(): Metric =
         unwrap(this).metricMasterJVMMemoryPressure().let(Metric::wrap)
 
     /**
@@ -1110,7 +1110,7 @@ public interface IDomain : IResource {
      *
      * @param props
      */
-    override fun metricMasterJvmMemoryPressure(props: MetricOptions): Metric =
+    override fun metricMasterJVMMemoryPressure(props: MetricOptions): Metric =
         unwrap(this).metricMasterJVMMemoryPressure(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -1121,9 +1121,9 @@ public interface IDomain : IResource {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("fbcf8e4882306bcb2bed673a80ed7a54a16cc27adfc1a7fe173fbb566b335350")
-    override fun metricMasterJvmMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricMasterJvmMemoryPressure(MetricOptions(props))
+    @JvmName("8abbe6fe8c9df31c7c02cf8f2ff374dd99996363ad1f3de815273cee61f4b816")
+    override fun metricMasterJVMMemoryPressure(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricMasterJVMMemoryPressure(MetricOptions(props))
 
     /**
      * Metric for the number of nodes.

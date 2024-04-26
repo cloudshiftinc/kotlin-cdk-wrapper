@@ -445,8 +445,8 @@ public open class CfnScalingPolicy(
      *
      * Valid only if the policy type is `SimpleScaling` . For more information, see [Scaling
      * cooldowns for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Default: None
      *
@@ -732,8 +732,8 @@ public open class CfnScalingPolicy(
      *
      * Valid only if the policy type is `SimpleScaling` . For more information, see [Scaling
      * cooldowns for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Default: None
      *
@@ -2679,11 +2679,19 @@ public open class CfnScalingPolicy(
      *
      * The following are possible values:
      *
-     * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling cannot scale out capacity higher than the
-     * maximum capacity. The maximum capacity is enforced as a hard limit.
-     * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can scale out capacity higher than the
-     * maximum capacity when the forecast capacity is close to or exceeds the maximum capacity. The
-     * upper limit is determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+     * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling can't increase the maximum capacity of the
+     * group when the forecast capacity is close to or exceeds the maximum capacity.
+     * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can increase the maximum capacity of the
+     * group when the forecast capacity is close to or exceeds the maximum capacity. The upper limit is
+     * determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+     *
+     *
+     * Use caution when allowing the maximum capacity to be automatically increased. This can lead
+     * to more instances being launched than intended if the increased maximum capacity is not
+     * monitored and managed. The increased maximum capacity then becomes the new normal maximum
+     * capacity for the Auto Scaling group until you manually update it. The maximum capacity does not
+     * automatically decrease back to the original maximum.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingconfiguration.html#cfn-autoscaling-scalingpolicy-predictivescalingconfiguration-maxcapacitybreachbehavior)
      */
@@ -2755,11 +2763,18 @@ public open class CfnScalingPolicy(
        *
        * The following are possible values:
        *
-       * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling cannot scale out capacity higher than the
-       * maximum capacity. The maximum capacity is enforced as a hard limit.
-       * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can scale out capacity higher than the
-       * maximum capacity when the forecast capacity is close to or exceeds the maximum capacity. The
-       * upper limit is determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+       * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling can't increase the maximum capacity of the
+       * group when the forecast capacity is close to or exceeds the maximum capacity.
+       * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can increase the maximum capacity of the
+       * group when the forecast capacity is close to or exceeds the maximum capacity. The upper limit
+       * is determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+       *
+       *
+       * Use caution when allowing the maximum capacity to be automatically increased. This can lead
+       * to more instances being launched than intended if the increased maximum capacity is not
+       * monitored and managed. The increased maximum capacity then becomes the new normal maximum
+       * capacity for the Auto Scaling group until you manually update it. The maximum capacity does
+       * not automatically decrease back to the original maximum.
        */
       public fun maxCapacityBreachBehavior(maxCapacityBreachBehavior: String)
 
@@ -2839,11 +2854,18 @@ public open class CfnScalingPolicy(
        *
        * The following are possible values:
        *
-       * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling cannot scale out capacity higher than the
-       * maximum capacity. The maximum capacity is enforced as a hard limit.
-       * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can scale out capacity higher than the
-       * maximum capacity when the forecast capacity is close to or exceeds the maximum capacity. The
-       * upper limit is determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+       * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling can't increase the maximum capacity of the
+       * group when the forecast capacity is close to or exceeds the maximum capacity.
+       * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can increase the maximum capacity of the
+       * group when the forecast capacity is close to or exceeds the maximum capacity. The upper limit
+       * is determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+       *
+       *
+       * Use caution when allowing the maximum capacity to be automatically increased. This can lead
+       * to more instances being launched than intended if the increased maximum capacity is not
+       * monitored and managed. The increased maximum capacity then becomes the new normal maximum
+       * capacity for the Auto Scaling group until you manually update it. The maximum capacity does
+       * not automatically decrease back to the original maximum.
        */
       override fun maxCapacityBreachBehavior(maxCapacityBreachBehavior: String) {
         cdkBuilder.maxCapacityBreachBehavior(maxCapacityBreachBehavior)
@@ -2938,11 +2960,19 @@ public open class CfnScalingPolicy(
        *
        * The following are possible values:
        *
-       * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling cannot scale out capacity higher than the
-       * maximum capacity. The maximum capacity is enforced as a hard limit.
-       * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can scale out capacity higher than the
-       * maximum capacity when the forecast capacity is close to or exceeds the maximum capacity. The
-       * upper limit is determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+       * * `HonorMaxCapacity` - Amazon EC2 Auto Scaling can't increase the maximum capacity of the
+       * group when the forecast capacity is close to or exceeds the maximum capacity.
+       * * `IncreaseMaxCapacity` - Amazon EC2 Auto Scaling can increase the maximum capacity of the
+       * group when the forecast capacity is close to or exceeds the maximum capacity. The upper limit
+       * is determined by the forecasted capacity and the value for `MaxCapacityBuffer` .
+       *
+       *
+       * Use caution when allowing the maximum capacity to be automatically increased. This can lead
+       * to more instances being launched than intended if the increased maximum capacity is not
+       * monitored and managed. The increased maximum capacity then becomes the new normal maximum
+       * capacity for the Auto Scaling group until you manually update it. The maximum capacity does
+       * not automatically decrease back to the original maximum.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-predictivescalingconfiguration.html#cfn-autoscaling-scalingpolicy-predictivescalingconfiguration-maxcapacitybreachbehavior)
        */

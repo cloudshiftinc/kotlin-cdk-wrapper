@@ -26,6 +26,9 @@ import kotlin.jvm.JvmName
  * .userPoolArn("userPoolArn")
  * // the properties below are optional
  * .clientIds(List.of("clientIds"))
+ * .groupConfiguration(CognitoGroupConfigurationProperty.builder()
+ * .groupEntityType("groupEntityType")
+ * .build())
  * .build())
  * .build())
  * .policyStoreId("policyStoreId")
@@ -38,18 +41,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnIdentitySourceProps {
   /**
-   * Contains configuration information used when creating a new identity source.
-   *
-   *
-   * At this time, the only valid member of this structure is a Amazon Cognito user pool
-   * configuration.
-   *
-   * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-   *
-   *
-   * This data type is used as a request parameter for the
-   * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-   * operation.
+   * Contains configuration information about an identity source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
    */
@@ -79,50 +71,17 @@ public interface CfnIdentitySourceProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * @param configuration Contains configuration information about an identity source. 
      */
     public fun configuration(configuration: IResolvable)
 
     /**
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * @param configuration Contains configuration information about an identity source. 
      */
     public fun configuration(configuration: CfnIdentitySource.IdentitySourceConfigurationProperty)
 
     /**
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * @param configuration Contains configuration information about an identity source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b629a9e57b120a7a975fd1c6bbec319e646a4f38b1564a226380c164c79c8c2f")
@@ -150,36 +109,14 @@ public interface CfnIdentitySourceProps {
         software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps.builder()
 
     /**
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * @param configuration Contains configuration information about an identity source. 
      */
     override fun configuration(configuration: IResolvable) {
       cdkBuilder.configuration(configuration.let(IResolvable::unwrap))
     }
 
     /**
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * @param configuration Contains configuration information about an identity source. 
      */
     override
         fun configuration(configuration: CfnIdentitySource.IdentitySourceConfigurationProperty) {
@@ -187,18 +124,7 @@ public interface CfnIdentitySourceProps {
     }
 
     /**
-     * @param configuration Contains configuration information used when creating a new identity
-     * source. 
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * @param configuration Contains configuration information about an identity source. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b629a9e57b120a7a975fd1c6bbec319e646a4f38b1564a226380c164c79c8c2f")
@@ -232,18 +158,7 @@ public interface CfnIdentitySourceProps {
     cdkObject: software.amazon.awscdk.services.verifiedpermissions.CfnIdentitySourceProps,
   ) : CdkObject(cdkObject), CfnIdentitySourceProps {
     /**
-     * Contains configuration information used when creating a new identity source.
-     *
-     *
-     * At this time, the only valid member of this structure is a Amazon Cognito user pool
-     * configuration.
-     *
-     * You must specify a `userPoolArn` , and optionally, a `ClientId` .
-     *
-     *
-     * This data type is used as a request parameter for the
-     * [CreateIdentitySource](https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreateIdentitySource.html)
-     * operation.
+     * Contains configuration information about an identity source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-verifiedpermissions-identitysource.html#cfn-verifiedpermissions-identitysource-configuration)
      */

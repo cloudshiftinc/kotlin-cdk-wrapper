@@ -13,8 +13,6 @@ import kotlin.Unit
  * A logging configuration for delivery status of messages sent from SNS topic to subscribed
  * endpoints.
  *
- * For more information, see https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
- *
  * Example:
  *
  * ```
@@ -27,6 +25,8 @@ import kotlin.Unit
  * .successFeedbackSampleRate(50)
  * .build());
  * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.)
  */
 public interface LoggingConfig {
   /**

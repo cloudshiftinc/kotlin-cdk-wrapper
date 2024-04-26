@@ -223,7 +223,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
    *
    * Default: false
    */
-  public fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+  public fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
   /**
    * Whether ECS Exec should be enabled.
@@ -359,7 +359,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
    *
    * Default: false
    */
-  public fun redirectHttp(): Boolean? = unwrap(this).getRedirectHTTP()
+  public fun redirectHTTP(): Boolean? = unwrap(this).getRedirectHTTP()
 
   /**
    * The name of the service.
@@ -1067,7 +1067,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      *
      * Default: false
      */
-    override fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+    override fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
     /**
      * Whether ECS Exec should be enabled.
@@ -1203,7 +1203,7 @@ public interface ApplicationLoadBalancedServiceBaseProps {
      *
      * Default: false
      */
-    override fun redirectHttp(): Boolean? = unwrap(this).getRedirectHTTP()
+    override fun redirectHTTP(): Boolean? = unwrap(this).getRedirectHTTP()
 
     /**
      * The name of the service.

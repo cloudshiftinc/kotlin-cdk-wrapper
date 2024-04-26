@@ -287,11 +287,15 @@ public interface CfnDBClusterProps {
    * during the next maintenance window.
    *
    *
+   * Valid for Cluster Type: Aurora DB clusters only
+   *
    * Default: The existing name setting
    *
    * Constraints:
    *
    * * The DB parameter group must be in the same DB parameter group family as this DB cluster.
+   * * The `DBInstanceParameterGroupName` parameter is valid in combination with the
+   * `AllowMajorVersionUpgrade` parameter for a major version upgrade only.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbinstanceparametergroupname)
    */
@@ -456,21 +460,18 @@ public interface CfnDBClusterProps {
   /**
    * The DB engine mode of the DB cluster, either `provisioned` or `serverless` .
    *
-   * The `serverless` engine mode only supports Aurora Serverless v1.
+   * The `serverless` engine mode only applies for Aurora Serverless v1 DB clusters. Aurora
+   * Serverless v2 DB clusters use the `provisioned` engine mode.
    *
-   * Limitations and requirements apply to some DB engine modes. For more information, see the
+   * For information about limitations and requirements for Serverless DB clusters, see the
    * following sections in the *Amazon Aurora User Guide* :
    *
    * * [Limitations of Aurora Serverless
    * v1](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations)
    * * [Requirements for Aurora Serverless
    * v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html)
-   * * [Limitations of parallel
-   * query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations)
-   * * [Limitations of Aurora global
-   * databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations)
    *
-   * Valid for: Aurora DB clusters only
+   * Valid for Cluster Type: Aurora DB clusters only
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginemode)
    */
@@ -925,26 +926,24 @@ public interface CfnDBClusterProps {
   public fun restoreType(): String? = unwrap(this).getRestoreType()
 
   /**
-   * The `ScalingConfiguration` property type specifies the scaling configuration of an Aurora
-   * Serverless DB cluster.
+   * The scaling configuration of an Aurora Serverless v1 DB cluster.
    *
    * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
    * `ServerlessV2ScalingConfiguration` property.
    *
-   * Valid for: Aurora DB clusters only
+   * Valid for: Aurora Serverless v1 DB clusters only
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-scalingconfiguration)
    */
   public fun scalingConfiguration(): Any? = unwrap(this).getScalingConfiguration()
 
   /**
-   * The `ServerlessV2ScalingConfiguration` property type specifies the scaling configuration of an
-   * Aurora Serverless V2 DB cluster.
+   * The scaling configuration of an Aurora Serverless V2 DB cluster.
    *
    * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
    * `ScalingConfiguration` property.
    *
-   * Valid for: Aurora DB clusters only
+   * Valid for: Aurora Serverless v2 DB clusters only
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration)
    */
@@ -1306,11 +1305,15 @@ public interface CfnDBClusterProps {
      * than during the next maintenance window.
      *
      *
+     * Valid for Cluster Type: Aurora DB clusters only
+     *
      * Default: The existing name setting
      *
      * Constraints:
      *
      * * The DB parameter group must be in the same DB parameter group family as this DB cluster.
+     * * The `DBInstanceParameterGroupName` parameter is valid in combination with the
+     * `AllowMajorVersionUpgrade` parameter for a major version upgrade only.
      */
     public fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String)
 
@@ -1523,21 +1526,18 @@ public interface CfnDBClusterProps {
     /**
      * @param engineMode The DB engine mode of the DB cluster, either `provisioned` or `serverless`
      * .
-     * The `serverless` engine mode only supports Aurora Serverless v1.
+     * The `serverless` engine mode only applies for Aurora Serverless v1 DB clusters. Aurora
+     * Serverless v2 DB clusters use the `provisioned` engine mode.
      *
-     * Limitations and requirements apply to some DB engine modes. For more information, see the
+     * For information about limitations and requirements for Serverless DB clusters, see the
      * following sections in the *Amazon Aurora User Guide* :
      *
      * * [Limitations of Aurora Serverless
      * v1](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations)
      * * [Requirements for Aurora Serverless
      * v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html)
-     * * [Limitations of parallel
-     * query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations)
-     * * [Limitations of Aurora global
-     * databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations)
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters only
      */
     public fun engineMode(engineMode: String)
 
@@ -2021,32 +2021,29 @@ public interface CfnDBClusterProps {
     public fun restoreType(restoreType: String)
 
     /**
-     * @param scalingConfiguration The `ScalingConfiguration` property type specifies the scaling
-     * configuration of an Aurora Serverless DB cluster.
+     * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster.
      * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v1 DB clusters only
      */
     public fun scalingConfiguration(scalingConfiguration: IResolvable)
 
     /**
-     * @param scalingConfiguration The `ScalingConfiguration` property type specifies the scaling
-     * configuration of an Aurora Serverless DB cluster.
+     * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster.
      * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v1 DB clusters only
      */
     public fun scalingConfiguration(scalingConfiguration: CfnDBCluster.ScalingConfigurationProperty)
 
     /**
-     * @param scalingConfiguration The `ScalingConfiguration` property type specifies the scaling
-     * configuration of an Aurora Serverless DB cluster.
+     * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster.
      * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v1 DB clusters only
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("669faa99f851803fe28a32b25a008dcb1931d2e5b37783cf7d41a878fa8a1319")
@@ -2054,33 +2051,33 @@ public interface CfnDBClusterProps {
         fun scalingConfiguration(scalingConfiguration: CfnDBCluster.ScalingConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param serverlessV2ScalingConfiguration The `ServerlessV2ScalingConfiguration` property type
-     * specifies the scaling configuration of an Aurora Serverless V2 DB cluster.
+     * @param serverlessV2ScalingConfiguration The scaling configuration of an Aurora Serverless V2
+     * DB cluster.
      * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v2 DB clusters only
      */
     public fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable)
 
     /**
-     * @param serverlessV2ScalingConfiguration The `ServerlessV2ScalingConfiguration` property type
-     * specifies the scaling configuration of an Aurora Serverless V2 DB cluster.
+     * @param serverlessV2ScalingConfiguration The scaling configuration of an Aurora Serverless V2
+     * DB cluster.
      * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v2 DB clusters only
      */
     public
         fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: CfnDBCluster.ServerlessV2ScalingConfigurationProperty)
 
     /**
-     * @param serverlessV2ScalingConfiguration The `ServerlessV2ScalingConfiguration` property type
-     * specifies the scaling configuration of an Aurora Serverless V2 DB cluster.
+     * @param serverlessV2ScalingConfiguration The scaling configuration of an Aurora Serverless V2
+     * DB cluster.
      * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v2 DB clusters only
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1a7e00644e444918868049b5781d6f9ccb5826a3d4ffc86dc7538c18aba397e2")
@@ -2496,11 +2493,15 @@ public interface CfnDBClusterProps {
      * than during the next maintenance window.
      *
      *
+     * Valid for Cluster Type: Aurora DB clusters only
+     *
      * Default: The existing name setting
      *
      * Constraints:
      *
      * * The DB parameter group must be in the same DB parameter group family as this DB cluster.
+     * * The `DBInstanceParameterGroupName` parameter is valid in combination with the
+     * `AllowMajorVersionUpgrade` parameter for a major version upgrade only.
      */
     override fun dbInstanceParameterGroupName(dbInstanceParameterGroupName: String) {
       cdkBuilder.dbInstanceParameterGroupName(dbInstanceParameterGroupName)
@@ -2744,21 +2745,18 @@ public interface CfnDBClusterProps {
     /**
      * @param engineMode The DB engine mode of the DB cluster, either `provisioned` or `serverless`
      * .
-     * The `serverless` engine mode only supports Aurora Serverless v1.
+     * The `serverless` engine mode only applies for Aurora Serverless v1 DB clusters. Aurora
+     * Serverless v2 DB clusters use the `provisioned` engine mode.
      *
-     * Limitations and requirements apply to some DB engine modes. For more information, see the
+     * For information about limitations and requirements for Serverless DB clusters, see the
      * following sections in the *Amazon Aurora User Guide* :
      *
      * * [Limitations of Aurora Serverless
      * v1](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations)
      * * [Requirements for Aurora Serverless
      * v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html)
-     * * [Limitations of parallel
-     * query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations)
-     * * [Limitations of Aurora global
-     * databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations)
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters only
      */
     override fun engineMode(engineMode: String) {
       cdkBuilder.engineMode(engineMode)
@@ -3295,24 +3293,22 @@ public interface CfnDBClusterProps {
     }
 
     /**
-     * @param scalingConfiguration The `ScalingConfiguration` property type specifies the scaling
-     * configuration of an Aurora Serverless DB cluster.
+     * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster.
      * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v1 DB clusters only
      */
     override fun scalingConfiguration(scalingConfiguration: IResolvable) {
       cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable::unwrap))
     }
 
     /**
-     * @param scalingConfiguration The `ScalingConfiguration` property type specifies the scaling
-     * configuration of an Aurora Serverless DB cluster.
+     * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster.
      * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v1 DB clusters only
      */
     override
         fun scalingConfiguration(scalingConfiguration: CfnDBCluster.ScalingConfigurationProperty) {
@@ -3320,12 +3316,11 @@ public interface CfnDBClusterProps {
     }
 
     /**
-     * @param scalingConfiguration The `ScalingConfiguration` property type specifies the scaling
-     * configuration of an Aurora Serverless DB cluster.
+     * @param scalingConfiguration The scaling configuration of an Aurora Serverless v1 DB cluster.
      * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v1 DB clusters only
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("669faa99f851803fe28a32b25a008dcb1931d2e5b37783cf7d41a878fa8a1319")
@@ -3334,24 +3329,24 @@ public interface CfnDBClusterProps {
         Unit = scalingConfiguration(CfnDBCluster.ScalingConfigurationProperty(scalingConfiguration))
 
     /**
-     * @param serverlessV2ScalingConfiguration The `ServerlessV2ScalingConfiguration` property type
-     * specifies the scaling configuration of an Aurora Serverless V2 DB cluster.
+     * @param serverlessV2ScalingConfiguration The scaling configuration of an Aurora Serverless V2
+     * DB cluster.
      * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v2 DB clusters only
      */
     override fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable) {
       cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(IResolvable::unwrap))
     }
 
     /**
-     * @param serverlessV2ScalingConfiguration The `ServerlessV2ScalingConfiguration` property type
-     * specifies the scaling configuration of an Aurora Serverless V2 DB cluster.
+     * @param serverlessV2ScalingConfiguration The scaling configuration of an Aurora Serverless V2
+     * DB cluster.
      * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v2 DB clusters only
      */
     override
         fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: CfnDBCluster.ServerlessV2ScalingConfigurationProperty) {
@@ -3359,12 +3354,12 @@ public interface CfnDBClusterProps {
     }
 
     /**
-     * @param serverlessV2ScalingConfiguration The `ServerlessV2ScalingConfiguration` property type
-     * specifies the scaling configuration of an Aurora Serverless V2 DB cluster.
+     * @param serverlessV2ScalingConfiguration The scaling configuration of an Aurora Serverless V2
+     * DB cluster.
      * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v2 DB clusters only
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1a7e00644e444918868049b5781d6f9ccb5826a3d4ffc86dc7538c18aba397e2")
@@ -3761,11 +3756,15 @@ public interface CfnDBClusterProps {
      * than during the next maintenance window.
      *
      *
+     * Valid for Cluster Type: Aurora DB clusters only
+     *
      * Default: The existing name setting
      *
      * Constraints:
      *
      * * The DB parameter group must be in the same DB parameter group family as this DB cluster.
+     * * The `DBInstanceParameterGroupName` parameter is valid in combination with the
+     * `AllowMajorVersionUpgrade` parameter for a major version upgrade only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-dbinstanceparametergroupname)
      */
@@ -3930,21 +3929,18 @@ public interface CfnDBClusterProps {
     /**
      * The DB engine mode of the DB cluster, either `provisioned` or `serverless` .
      *
-     * The `serverless` engine mode only supports Aurora Serverless v1.
+     * The `serverless` engine mode only applies for Aurora Serverless v1 DB clusters. Aurora
+     * Serverless v2 DB clusters use the `provisioned` engine mode.
      *
-     * Limitations and requirements apply to some DB engine modes. For more information, see the
+     * For information about limitations and requirements for Serverless DB clusters, see the
      * following sections in the *Amazon Aurora User Guide* :
      *
      * * [Limitations of Aurora Serverless
      * v1](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless.html#aurora-serverless.limitations)
      * * [Requirements for Aurora Serverless
      * v2](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.requirements.html)
-     * * [Limitations of parallel
-     * query](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-mysql-parallel-query.html#aurora-mysql-parallel-query-limitations)
-     * * [Limitations of Aurora global
-     * databases](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-global-database.html#aurora-global-database.limitations)
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for Cluster Type: Aurora DB clusters only
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-enginemode)
      */
@@ -4408,26 +4404,24 @@ public interface CfnDBClusterProps {
     override fun restoreType(): String? = unwrap(this).getRestoreType()
 
     /**
-     * The `ScalingConfiguration` property type specifies the scaling configuration of an Aurora
-     * Serverless DB cluster.
+     * The scaling configuration of an Aurora Serverless v1 DB cluster.
      *
      * This property is only supported for Aurora Serverless v1. For Aurora Serverless v2, Use the
      * `ServerlessV2ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v1 DB clusters only
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-scalingconfiguration)
      */
     override fun scalingConfiguration(): Any? = unwrap(this).getScalingConfiguration()
 
     /**
-     * The `ServerlessV2ScalingConfiguration` property type specifies the scaling configuration of
-     * an Aurora Serverless V2 DB cluster.
+     * The scaling configuration of an Aurora Serverless V2 DB cluster.
      *
      * This property is only supported for Aurora Serverless v2. For Aurora Serverless v1, Use the
      * `ScalingConfiguration` property.
      *
-     * Valid for: Aurora DB clusters only
+     * Valid for: Aurora Serverless v2 DB clusters only
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration)
      */

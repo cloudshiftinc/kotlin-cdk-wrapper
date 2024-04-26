@@ -239,6 +239,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .transitEncryption("transitEncryption")
  * .transitEncryptionPort(123)
  * .build())
+ * .fSxWindowsFileServerVolumeConfiguration(FSxWindowsFileServerVolumeConfigurationProperty.builder()
+ * .fileSystemId("fileSystemId")
+ * .rootDirectory("rootDirectory")
+ * // the properties below are optional
+ * .authorizationConfig(FSxAuthorizationConfigProperty.builder()
+ * .credentialsParameter("credentialsParameter")
+ * .domain("domain")
+ * .build())
+ * .build())
  * .host(HostVolumePropertiesProperty.builder()
  * .sourcePath("sourcePath")
  * .build())
@@ -8819,7 +8828,7 @@ public open class CfnTaskDefinition(
     /**
      * The total amount, in GiB, of ephemeral storage to set for the task.
      *
-     * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+     * The minimum supported value is `20` GiB and the maximum supported value is `200` GiB.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html#cfn-ecs-taskdefinition-ephemeralstorage-sizeingib)
      */
@@ -8832,7 +8841,7 @@ public open class CfnTaskDefinition(
     public interface Builder {
       /**
        * @param sizeInGiB The total amount, in GiB, of ephemeral storage to set for the task.
-       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       * The minimum supported value is `20` GiB and the maximum supported value is `200` GiB.
        */
       public fun sizeInGiB(sizeInGiB: Number)
     }
@@ -8844,7 +8853,7 @@ public open class CfnTaskDefinition(
 
       /**
        * @param sizeInGiB The total amount, in GiB, of ephemeral storage to set for the task.
-       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       * The minimum supported value is `20` GiB and the maximum supported value is `200` GiB.
        */
       override fun sizeInGiB(sizeInGiB: Number) {
         cdkBuilder.sizeInGiB(sizeInGiB)
@@ -8861,7 +8870,7 @@ public open class CfnTaskDefinition(
       /**
        * The total amount, in GiB, of ephemeral storage to set for the task.
        *
-       * The minimum supported value is `21` GiB and the maximum supported value is `200` GiB.
+       * The minimum supported value is `20` GiB and the maximum supported value is `200` GiB.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-ephemeralstorage.html#cfn-ecs-taskdefinition-ephemeralstorage-sizeingib)
        */
@@ -8883,6 +8892,295 @@ public open class CfnTaskDefinition(
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskDefinition.EphemeralStorageProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * FSxAuthorizationConfigProperty fSxAuthorizationConfigProperty =
+   * FSxAuthorizationConfigProperty.builder()
+   * .credentialsParameter("credentialsParameter")
+   * .domain("domain")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html)
+   */
+  public interface FSxAuthorizationConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-credentialsparameter)
+     */
+    public fun credentialsParameter(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-domain)
+     */
+    public fun domain(): String
+
+    /**
+     * A builder for [FSxAuthorizationConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param credentialsParameter the value to be set. 
+       */
+      public fun credentialsParameter(credentialsParameter: String)
+
+      /**
+       * @param domain the value to be set. 
+       */
+      public fun domain(domain: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty.builder()
+
+      /**
+       * @param credentialsParameter the value to be set. 
+       */
+      override fun credentialsParameter(credentialsParameter: String) {
+        cdkBuilder.credentialsParameter(credentialsParameter)
+      }
+
+      /**
+       * @param domain the value to be set. 
+       */
+      override fun domain(domain: String) {
+        cdkBuilder.domain(domain)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty,
+    ) : CdkObject(cdkObject), FSxAuthorizationConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-credentialsparameter)
+       */
+      override fun credentialsParameter(): String = unwrap(this).getCredentialsParameter()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxauthorizationconfig.html#cfn-ecs-taskdefinition-fsxauthorizationconfig-domain)
+       */
+      override fun domain(): String = unwrap(this).getDomain()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FSxAuthorizationConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty):
+          FSxAuthorizationConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FSxAuthorizationConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FSxAuthorizationConfigProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxAuthorizationConfigProperty
+    }
+  }
+
+  /**
+   * This parameter is specified when you're using [Amazon FSx for Windows File
+   * Server](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/what-is.html) file system for task
+   * storage.
+   *
+   * For more information and the input format, see [Amazon FSx for Windows File Server
+   * volumes](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/wfsx-volumes.html) in the
+   * *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * FSxWindowsFileServerVolumeConfigurationProperty fSxWindowsFileServerVolumeConfigurationProperty
+   * = FSxWindowsFileServerVolumeConfigurationProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * .rootDirectory("rootDirectory")
+   * // the properties below are optional
+   * .authorizationConfig(FSxAuthorizationConfigProperty.builder()
+   * .credentialsParameter("credentialsParameter")
+   * .domain("domain")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration.html)
+   */
+  public interface FSxWindowsFileServerVolumeConfigurationProperty {
+    /**
+     * The authorization configuration details for the Amazon FSx for Windows File Server file
+     * system.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration.html#cfn-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration-authorizationconfig)
+     */
+    public fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+
+    /**
+     * The Amazon FSx for Windows File Server file system ID to use.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration.html#cfn-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration-filesystemid)
+     */
+    public fun fileSystemId(): String
+
+    /**
+     * The directory within the Amazon FSx for Windows File Server file system to mount as the root
+     * directory inside the host.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration.html#cfn-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration-rootdirectory)
+     */
+    public fun rootDirectory(): String
+
+    /**
+     * A builder for [FSxWindowsFileServerVolumeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon FSx for
+       * Windows File Server file system.
+       */
+      public fun authorizationConfig(authorizationConfig: IResolvable)
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon FSx for
+       * Windows File Server file system.
+       */
+      public fun authorizationConfig(authorizationConfig: FSxAuthorizationConfigProperty)
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon FSx for
+       * Windows File Server file system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7c2cf3e3c81c756e43249ded400581fc3d5675fef46a1e59cc5431f4399e40ba")
+      public
+          fun authorizationConfig(authorizationConfig: FSxAuthorizationConfigProperty.Builder.() -> Unit)
+
+      /**
+       * @param fileSystemId The Amazon FSx for Windows File Server file system ID to use. 
+       */
+      public fun fileSystemId(fileSystemId: String)
+
+      /**
+       * @param rootDirectory The directory within the Amazon FSx for Windows File Server file
+       * system to mount as the root directory inside the host. 
+       */
+      public fun rootDirectory(rootDirectory: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty.builder()
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon FSx for
+       * Windows File Server file system.
+       */
+      override fun authorizationConfig(authorizationConfig: IResolvable) {
+        cdkBuilder.authorizationConfig(authorizationConfig.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon FSx for
+       * Windows File Server file system.
+       */
+      override fun authorizationConfig(authorizationConfig: FSxAuthorizationConfigProperty) {
+        cdkBuilder.authorizationConfig(authorizationConfig.let(FSxAuthorizationConfigProperty::unwrap))
+      }
+
+      /**
+       * @param authorizationConfig The authorization configuration details for the Amazon FSx for
+       * Windows File Server file system.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7c2cf3e3c81c756e43249ded400581fc3d5675fef46a1e59cc5431f4399e40ba")
+      override
+          fun authorizationConfig(authorizationConfig: FSxAuthorizationConfigProperty.Builder.() -> Unit):
+          Unit = authorizationConfig(FSxAuthorizationConfigProperty(authorizationConfig))
+
+      /**
+       * @param fileSystemId The Amazon FSx for Windows File Server file system ID to use. 
+       */
+      override fun fileSystemId(fileSystemId: String) {
+        cdkBuilder.fileSystemId(fileSystemId)
+      }
+
+      /**
+       * @param rootDirectory The directory within the Amazon FSx for Windows File Server file
+       * system to mount as the root directory inside the host. 
+       */
+      override fun rootDirectory(rootDirectory: String) {
+        cdkBuilder.rootDirectory(rootDirectory)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty,
+    ) : CdkObject(cdkObject), FSxWindowsFileServerVolumeConfigurationProperty {
+      /**
+       * The authorization configuration details for the Amazon FSx for Windows File Server file
+       * system.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration.html#cfn-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration-authorizationconfig)
+       */
+      override fun authorizationConfig(): Any? = unwrap(this).getAuthorizationConfig()
+
+      /**
+       * The Amazon FSx for Windows File Server file system ID to use.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration.html#cfn-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration-filesystemid)
+       */
+      override fun fileSystemId(): String = unwrap(this).getFileSystemId()
+
+      /**
+       * The directory within the Amazon FSx for Windows File Server file system to mount as the
+       * root directory inside the host.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration.html#cfn-ecs-taskdefinition-fsxwindowsfileservervolumeconfiguration-rootdirectory)
+       */
+      override fun rootDirectory(): String = unwrap(this).getRootDirectory()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          FSxWindowsFileServerVolumeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty):
+          FSxWindowsFileServerVolumeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          FSxWindowsFileServerVolumeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FSxWindowsFileServerVolumeConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskDefinition.FSxWindowsFileServerVolumeConfigurationProperty
     }
   }
 
@@ -13838,6 +14136,15 @@ public open class CfnTaskDefinition(
    * .transitEncryption("transitEncryption")
    * .transitEncryptionPort(123)
    * .build())
+   * .fSxWindowsFileServerVolumeConfiguration(FSxWindowsFileServerVolumeConfigurationProperty.builder()
+   * .fileSystemId("fileSystemId")
+   * .rootDirectory("rootDirectory")
+   * // the properties below are optional
+   * .authorizationConfig(FSxAuthorizationConfigProperty.builder()
+   * .credentialsParameter("credentialsParameter")
+   * .domain("domain")
+   * .build())
+   * .build())
    * .host(HostVolumePropertiesProperty.builder()
    * .sourcePath("sourcePath")
    * .build())
@@ -13884,6 +14191,15 @@ public open class CfnTaskDefinition(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volume.html#cfn-ecs-taskdefinition-volume-efsvolumeconfiguration)
      */
     public fun efsVolumeConfiguration(): Any? = unwrap(this).getEfsVolumeConfiguration()
+
+    /**
+     * This parameter is specified when you use Amazon FSx for Windows File Server file system for
+     * task storage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volume.html#cfn-ecs-taskdefinition-volume-fsxwindowsfileservervolumeconfiguration)
+     */
+    public fun fSxWindowsFileServerVolumeConfiguration(): Any? =
+        unwrap(this).getFSxWindowsFileServerVolumeConfiguration()
 
     /**
      * This parameter is specified when you use bind mount host volumes.
@@ -14002,6 +14318,29 @@ public open class CfnTaskDefinition(
       @JvmName("038579f621b28993c3567dfa72c9d6cbd7adfcea5c48508a982e775a1af9b03f")
       public
           fun efsVolumeConfiguration(efsVolumeConfiguration: EFSVolumeConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param fSxWindowsFileServerVolumeConfiguration This parameter is specified when you use
+       * Amazon FSx for Windows File Server file system for task storage.
+       */
+      public
+          fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: IResolvable)
+
+      /**
+       * @param fSxWindowsFileServerVolumeConfiguration This parameter is specified when you use
+       * Amazon FSx for Windows File Server file system for task storage.
+       */
+      public
+          fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: FSxWindowsFileServerVolumeConfigurationProperty)
+
+      /**
+       * @param fSxWindowsFileServerVolumeConfiguration This parameter is specified when you use
+       * Amazon FSx for Windows File Server file system for task storage.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("914b2adb2ef13f4d8bb0fa7bbbbb1898eac695c1c2fbe474d77213f4e535bf42")
+      public
+          fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: FSxWindowsFileServerVolumeConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param host This parameter is specified when you use bind mount host volumes.
@@ -14162,6 +14501,35 @@ public open class CfnTaskDefinition(
           Unit = efsVolumeConfiguration(EFSVolumeConfigurationProperty(efsVolumeConfiguration))
 
       /**
+       * @param fSxWindowsFileServerVolumeConfiguration This parameter is specified when you use
+       * Amazon FSx for Windows File Server file system for task storage.
+       */
+      override
+          fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: IResolvable) {
+        cdkBuilder.fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param fSxWindowsFileServerVolumeConfiguration This parameter is specified when you use
+       * Amazon FSx for Windows File Server file system for task storage.
+       */
+      override
+          fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: FSxWindowsFileServerVolumeConfigurationProperty) {
+        cdkBuilder.fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration.let(FSxWindowsFileServerVolumeConfigurationProperty::unwrap))
+      }
+
+      /**
+       * @param fSxWindowsFileServerVolumeConfiguration This parameter is specified when you use
+       * Amazon FSx for Windows File Server file system for task storage.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("914b2adb2ef13f4d8bb0fa7bbbbb1898eac695c1c2fbe474d77213f4e535bf42")
+      override
+          fun fSxWindowsFileServerVolumeConfiguration(fSxWindowsFileServerVolumeConfiguration: FSxWindowsFileServerVolumeConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          fSxWindowsFileServerVolumeConfiguration(FSxWindowsFileServerVolumeConfigurationProperty(fSxWindowsFileServerVolumeConfiguration))
+
+      /**
        * @param host This parameter is specified when you use bind mount host volumes.
        * The contents of the `host` parameter determine whether your bind mount host volume persists
        * on the host container instance and where it's stored. If the `host` parameter is empty, then
@@ -14269,6 +14637,15 @@ public open class CfnTaskDefinition(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volume.html#cfn-ecs-taskdefinition-volume-efsvolumeconfiguration)
        */
       override fun efsVolumeConfiguration(): Any? = unwrap(this).getEfsVolumeConfiguration()
+
+      /**
+       * This parameter is specified when you use Amazon FSx for Windows File Server file system for
+       * task storage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volume.html#cfn-ecs-taskdefinition-volume-fsxwindowsfileservervolumeconfiguration)
+       */
+      override fun fSxWindowsFileServerVolumeConfiguration(): Any? =
+          unwrap(this).getFSxWindowsFileServerVolumeConfiguration()
 
       /**
        * This parameter is specified when you use bind mount host volumes.

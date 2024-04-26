@@ -36,6 +36,10 @@ public interface CfnJobDefinitionProps {
   public fun containerProperties(): Any? = unwrap(this).getContainerProperties()
 
   /**
+   * An object that contains the properties for the Amazon ECS resources of a job.When
+   * `ecsProperties` is used in the job definition, it can't be used in addition to
+   * `containerProperties` , `eksProperties` , or `nodeProperties` .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
    */
   public fun ecsProperties(): Any? = unwrap(this).getEcsProperties()
@@ -193,17 +197,23 @@ public interface CfnJobDefinitionProps {
         fun containerProperties(containerProperties: CfnJobDefinition.ContainerPropertiesProperty.Builder.() -> Unit)
 
     /**
-     * @param ecsProperties the value to be set.
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     public fun ecsProperties(ecsProperties: IResolvable)
 
     /**
-     * @param ecsProperties the value to be set.
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     public fun ecsProperties(ecsProperties: CfnJobDefinition.EcsPropertiesProperty)
 
     /**
-     * @param ecsProperties the value to be set.
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9d0f7241d0572f1ae89ed491015194934b521dc18be2e856aff197c63c11b9de")
@@ -431,21 +441,27 @@ public interface CfnJobDefinitionProps {
         containerProperties(CfnJobDefinition.ContainerPropertiesProperty(containerProperties))
 
     /**
-     * @param ecsProperties the value to be set.
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     override fun ecsProperties(ecsProperties: IResolvable) {
       cdkBuilder.ecsProperties(ecsProperties.let(IResolvable::unwrap))
     }
 
     /**
-     * @param ecsProperties the value to be set.
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     override fun ecsProperties(ecsProperties: CfnJobDefinition.EcsPropertiesProperty) {
       cdkBuilder.ecsProperties(ecsProperties.let(CfnJobDefinition.EcsPropertiesProperty::unwrap))
     }
 
     /**
-     * @param ecsProperties the value to be set.
+     * @param ecsProperties An object that contains the properties for the Amazon ECS resources of a
+     * job.When `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9d0f7241d0572f1ae89ed491015194934b521dc18be2e856aff197c63c11b9de")
@@ -692,6 +708,10 @@ public interface CfnJobDefinitionProps {
     override fun containerProperties(): Any? = unwrap(this).getContainerProperties()
 
     /**
+     * An object that contains the properties for the Amazon ECS resources of a job.When
+     * `ecsProperties` is used in the job definition, it can't be used in addition to
+     * `containerProperties` , `eksProperties` , or `nodeProperties` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-ecsproperties)
      */
     override fun ecsProperties(): Any? = unwrap(this).getEcsProperties()

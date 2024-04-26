@@ -59,6 +59,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .userSettings(UserSettingsProperty.builder()
  * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+ * .customImages(List.of(CustomImageProperty.builder()
+ * .appImageConfigName("appImageConfigName")
+ * .imageName("imageName")
+ * // the properties below are optional
+ * .imageVersionNumber(123)
+ * .build()))
  * .defaultResourceSpec(ResourceSpecProperty.builder()
  * .instanceType("instanceType")
  * .sageMakerImageArn("sageMakerImageArn")
@@ -535,6 +541,12 @@ public open class CfnUserProfile(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * CodeEditorAppSettingsProperty codeEditorAppSettingsProperty =
    * CodeEditorAppSettingsProperty.builder()
+   * .customImages(List.of(CustomImageProperty.builder()
+   * .appImageConfigName("appImageConfigName")
+   * .imageName("imageName")
+   * // the properties below are optional
+   * .imageVersionNumber(123)
+   * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
    * .sageMakerImageArn("sageMakerImageArn")
@@ -547,6 +559,13 @@ public open class CfnUserProfile(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html)
    */
   public interface CodeEditorAppSettingsProperty {
+    /**
+     * A list of custom SageMaker images that are configured to run as a Code Editor app.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-customimages)
+     */
+    public fun customImages(): Any? = unwrap(this).getCustomImages()
+
     /**
      * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
      * used by the Code Editor app.
@@ -568,6 +587,24 @@ public open class CfnUserProfile(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a Code
+       * Editor app.
+       */
+      public fun customImages(customImages: IResolvable)
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a Code
+       * Editor app.
+       */
+      public fun customImages(customImages: List<Any>)
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a Code
+       * Editor app.
+       */
+      public fun customImages(vararg customImages: Any)
+
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
        * the default SageMaker image used by the Code Editor app.
@@ -606,6 +643,29 @@ public open class CfnUserProfile(
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty.Builder
           =
           software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty.builder()
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a Code
+       * Editor app.
+       */
+      override fun customImages(customImages: IResolvable) {
+        cdkBuilder.customImages(customImages.let(IResolvable::unwrap))
+      }
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a Code
+       * Editor app.
+       */
+      override fun customImages(customImages: List<Any>) {
+        cdkBuilder.customImages(customImages.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param customImages A list of custom SageMaker images that are configured to run as a Code
+       * Editor app.
+       */
+      override fun customImages(vararg customImages: Any): Unit =
+          customImages(customImages.toList())
 
       /**
        * @param defaultResourceSpec The default instance type and the Amazon Resource Name (ARN) of
@@ -656,6 +716,13 @@ public open class CfnUserProfile(
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.sagemaker.CfnUserProfile.CodeEditorAppSettingsProperty,
     ) : CdkObject(cdkObject), CodeEditorAppSettingsProperty {
+      /**
+       * A list of custom SageMaker images that are configured to run as a Code Editor app.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-userprofile-codeeditorappsettings.html#cfn-sagemaker-userprofile-codeeditorappsettings-customimages)
+       */
+      override fun customImages(): Any? = unwrap(this).getCustomImages()
+
       /**
        * The default instance type and the Amazon Resource Name (ARN) of the default SageMaker image
        * used by the Code Editor app.
@@ -2605,6 +2672,12 @@ public open class CfnUserProfile(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * UserSettingsProperty userSettingsProperty = UserSettingsProperty.builder()
    * .codeEditorAppSettings(CodeEditorAppSettingsProperty.builder()
+   * .customImages(List.of(CustomImageProperty.builder()
+   * .appImageConfigName("appImageConfigName")
+   * .imageName("imageName")
+   * // the properties below are optional
+   * .imageVersionNumber(123)
+   * .build()))
    * .defaultResourceSpec(ResourceSpecProperty.builder()
    * .instanceType("instanceType")
    * .sageMakerImageArn("sageMakerImageArn")

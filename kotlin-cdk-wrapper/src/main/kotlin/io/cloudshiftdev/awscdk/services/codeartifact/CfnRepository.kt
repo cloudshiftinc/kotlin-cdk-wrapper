@@ -253,6 +253,10 @@ public open class CfnRepository(
     /**
      * An array of external connections associated with the repository.
      *
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-externalconnections)
      * @param externalConnections An array of external connections associated with the repository. 
      */
@@ -260,6 +264,10 @@ public open class CfnRepository(
 
     /**
      * An array of external connections associated with the repository.
+     *
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-externalconnections)
      * @param externalConnections An array of external connections associated with the repository. 
@@ -364,6 +372,10 @@ public open class CfnRepository(
     /**
      * An array of external connections associated with the repository.
      *
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-externalconnections)
      * @param externalConnections An array of external connections associated with the repository. 
      */
@@ -373,6 +385,10 @@ public open class CfnRepository(
 
     /**
      * An array of external connections associated with the repository.
+     *
+     * For more information, see [Supported external connection
+     * repositories](https://docs.aws.amazon.com/codeartifact/latest/ug/external-connection.html#supported-public-repositories)
+     * in the *CodeArtifact user guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codeartifact-repository.html#cfn-codeartifact-repository-externalconnections)
      * @param externalConnections An array of external connections associated with the repository. 

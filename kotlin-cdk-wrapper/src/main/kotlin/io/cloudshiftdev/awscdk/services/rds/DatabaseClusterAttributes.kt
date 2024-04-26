@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
+import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -21,7 +22,9 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * import io.cloudshiftdev.awscdk.services.rds.*;
+ * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
  * IClusterEngine clusterEngine;
+ * Secret secret;
  * SecurityGroup securityGroup;
  * DatabaseClusterAttributes databaseClusterAttributes = DatabaseClusterAttributes.builder()
  * .clusterIdentifier("clusterIdentifier")
@@ -33,6 +36,7 @@ import kotlin.collections.List
  * .instanceIdentifiers(List.of("instanceIdentifiers"))
  * .port(123)
  * .readerEndpointAddress("readerEndpointAddress")
+ * .secret(secret)
  * .securityGroups(List.of(securityGroup))
  * .build();
  * ```
@@ -95,6 +99,13 @@ public interface DatabaseClusterAttributes {
    * Default: - no reader address
    */
   public fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
+
+  /**
+   * The secret attached to the database cluster.
+   *
+   * Default: - the imported Cluster's secret is unknown
+   */
+  public fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
   /**
    * The security groups of the database cluster.
@@ -160,6 +171,11 @@ public interface DatabaseClusterAttributes {
      * @param readerEndpointAddress Reader endpoint address.
      */
     public fun readerEndpointAddress(readerEndpointAddress: String)
+
+    /**
+     * @param secret The secret attached to the database cluster.
+     */
+    public fun secret(secret: ISecret)
 
     /**
      * @param securityGroups The security groups of the database cluster.
@@ -247,6 +263,13 @@ public interface DatabaseClusterAttributes {
     }
 
     /**
+     * @param secret The secret attached to the database cluster.
+     */
+    override fun secret(secret: ISecret) {
+      cdkBuilder.secret(secret.let(ISecret::unwrap))
+    }
+
+    /**
      * @param securityGroups The security groups of the database cluster.
      */
     override fun securityGroups(securityGroups: List<ISecurityGroup>) {
@@ -323,6 +346,13 @@ public interface DatabaseClusterAttributes {
      * Default: - no reader address
      */
     override fun readerEndpointAddress(): String? = unwrap(this).getReaderEndpointAddress()
+
+    /**
+     * The secret attached to the database cluster.
+     *
+     * Default: - the imported Cluster's secret is unknown
+     */
+    override fun secret(): ISecret? = unwrap(this).getSecret()?.let(ISecret::wrap)
 
     /**
      * The security groups of the database cluster.

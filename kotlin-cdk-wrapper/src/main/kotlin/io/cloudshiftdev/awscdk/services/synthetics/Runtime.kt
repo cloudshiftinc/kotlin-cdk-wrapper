@@ -78,6 +78,9 @@ public open class Runtime(
     public val SYNTHETICS_NODEJS_PUPPETEER_6_2: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_6_2)
 
+    public val SYNTHETICS_NODEJS_PUPPETEER_7_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_7_0)
+
     public val SYNTHETICS_PYTHON_SELENIUM_1_0: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_1_0)
 
@@ -95,6 +98,9 @@ public open class Runtime(
 
     public val SYNTHETICS_PYTHON_SELENIUM_2_1: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_2_1)
+
+    public val SYNTHETICS_PYTHON_SELENIUM_3_0: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_3_0)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.synthetics.Runtime): Runtime =
         Runtime(cdkObject)

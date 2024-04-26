@@ -2096,6 +2096,16 @@ public open class CfnLayer(
       public fun deploy(vararg deploy: String)
 
       /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      public fun setup(setup: List<String>)
+
+      /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      public fun setup(vararg setup: String)
+
+      /**
        * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
        */
       public fun shutdown(shutdown: List<String>)
@@ -2114,16 +2124,6 @@ public open class CfnLayer(
        * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
        */
       public fun undeploy(vararg undeploy: String)
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      public fun up(setup: List<String>)
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      public fun up(vararg setup: String)
     }
 
     private class BuilderImpl : Builder {
@@ -2156,6 +2156,18 @@ public open class CfnLayer(
       override fun deploy(vararg deploy: String): Unit = deploy(deploy.toList())
 
       /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      override fun setup(setup: List<String>) {
+        cdkBuilder.setup(setup)
+      }
+
+      /**
+       * @param setup An array of custom recipe names to be run following a `setup` event.
+       */
+      override fun setup(vararg setup: String): Unit = setup(setup.toList())
+
+      /**
        * @param shutdown An array of custom recipe names to be run following a `shutdown` event.
        */
       override fun shutdown(shutdown: List<String>) {
@@ -2178,18 +2190,6 @@ public open class CfnLayer(
        * @param undeploy An array of custom recipe names to be run following a `undeploy` event.
        */
       override fun undeploy(vararg undeploy: String): Unit = undeploy(undeploy.toList())
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      override fun up(setup: List<String>) {
-        cdkBuilder.setup(setup)
-      }
-
-      /**
-       * @param setup An array of custom recipe names to be run following a `setup` event.
-       */
-      override fun up(vararg setup: String): Unit = up(setup.toList())
 
       public fun build(): software.amazon.awscdk.services.opsworks.CfnLayer.RecipesProperty =
           cdkBuilder.build()

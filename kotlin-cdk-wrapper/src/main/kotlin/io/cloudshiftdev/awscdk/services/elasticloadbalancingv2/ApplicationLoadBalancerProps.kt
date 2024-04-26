@@ -20,26 +20,44 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Cluster cluster;
- * TaskDefinition taskDefinition;
+ * import io.cloudshiftdev.awscdk.services.autoscaling.AutoScalingGroup;
+ * AutoScalingGroup asg;
  * Vpc vpc;
- * FargateService service = FargateService.Builder.create(this,
- * "Service").cluster(cluster).taskDefinition(taskDefinition).build();
- * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this,
- * "LB").vpc(vpc).internetFacing(true).build();
- * ApplicationListener listener = lb.addListener("Listener",
- * BaseApplicationListenerProps.builder().port(80).build());
- * service.registerLoadBalancerTargets(EcsTarget.builder()
- * .containerName("web")
- * .containerPort(80)
- * .newTargetGroupId("ECS")
- * .listener(ListenerConfig.applicationListener(listener, AddApplicationTargetsProps.builder()
- * .protocol(ApplicationProtocol.HTTPS)
- * .build()))
+ * // Create the load balancer in a VPC. 'internetFacing' is 'false'
+ * // by default, which creates an internal load balancer.
+ * ApplicationLoadBalancer lb = ApplicationLoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .build();
+ * // Add a listener and open up the load balancer's security group
+ * // to the world.
+ * ApplicationListener listener = lb.addListener("Listener", BaseApplicationListenerProps.builder()
+ * .port(80)
+ * // 'open: true' is the default, you can leave it out if you want. Set it
+ * // to 'false' and use `listener.connections` if you want to be selective
+ * // about who can access the load balancer.
+ * .open(true)
+ * .build());
+ * // Create an AutoScaling group and add it as a load balancing
+ * // target to the listener.
+ * listener.addTargets("ApplicationFleet", AddApplicationTargetsProps.builder()
+ * .port(8080)
+ * .targets(List.of(asg))
  * .build());
  * ```
+ *
+ * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/application-load-balancers.html#load-balancer-attributes)
  */
 public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
+  /**
+   * The client keep alive duration.
+   *
+   * The valid range is 60 to 604800 seconds (1 minute to 7 days).
+   *
+   * Default: - Duration.seconds(3600)
+   */
+  public fun clientKeepAlive(): Duration? = unwrap(this).getClientKeepAlive()?.let(Duration::wrap)
+
   /**
    * Determines how the load balancer handles requests that might pose a security risk to your
    * application.
@@ -80,6 +98,22 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
       unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
   /**
+   * Indicates whether the Application Load Balancer should preserve the host header in the HTTP
+   * request and send it to the target without any change.
+   *
+   * Default: false
+   */
+  public fun preserveHostHeader(): Boolean? = unwrap(this).getPreserveHostHeader()
+
+  /**
+   * Indicates whether the X-Forwarded-For header should preserve the source port that the client
+   * used to connect to the load balancer.
+   *
+   * Default: false
+   */
+  public fun preserveXffClientPort(): Boolean? = unwrap(this).getPreserveXffClientPort()
+
+  /**
    * Security group to associate with this load balancer.
    *
    * Default: A security group is created
@@ -88,14 +122,65 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
       unwrap(this).getSecurityGroup()?.let(ISecurityGroup::wrap)
 
   /**
+   * Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is
+   * unable to forward the request to AWS WAF.
+   *
+   * Default: false
+   */
+  public fun wafFailOpen(): Boolean? = unwrap(this).getWafFailOpen()
+
+  /**
+   * Indicates whether the two headers (x-amzn-tls-version and x-amzn-tls-cipher-suite), which
+   * contain information about the negotiated TLS version and cipher suite, are added to the client
+   * request before sending it to the target.
+   *
+   * The x-amzn-tls-version header has information about the TLS protocol version negotiated with
+   * the client,
+   * and the x-amzn-tls-cipher-suite header has information about the cipher suite negotiated with
+   * the client.
+   *
+   * Both headers are in OpenSSL format.
+   *
+   * Default: false
+   */
+  public fun xAmznTlsVersionAndCipherSuiteHeaders(): Boolean? =
+      unwrap(this).getXAmznTlsVersionAndCipherSuiteHeaders()
+
+  /**
+   * Enables you to modify, preserve, or remove the X-Forwarded-For header in the HTTP request
+   * before the Application Load Balancer sends the request to the target.
+   *
+   * Default: XffHeaderProcessingMode.APPEND
+   */
+  public fun xffHeaderProcessingMode(): XffHeaderProcessingMode? =
+      unwrap(this).getXffHeaderProcessingMode()?.let(XffHeaderProcessingMode::wrap)
+
+  /**
    * A builder for [ApplicationLoadBalancerProps]
    */
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param clientKeepAlive The client keep alive duration.
+     * The valid range is 60 to 604800 seconds (1 minute to 7 days).
+     */
+    public fun clientKeepAlive(clientKeepAlive: Duration)
+
+    /**
+     * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
+     */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
+
+    /**
      * @param deletionProtection Indicates whether deletion protection is enabled.
      */
     public fun deletionProtection(deletionProtection: Boolean)
+
+    /**
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW).
+     */
+    public fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean)
 
     /**
      * @param desyncMitigationMode Determines how the load balancer handles requests that might pose
@@ -135,6 +220,18 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
     public fun loadBalancerName(loadBalancerName: String)
 
     /**
+     * @param preserveHostHeader Indicates whether the Application Load Balancer should preserve the
+     * host header in the HTTP request and send it to the target without any change.
+     */
+    public fun preserveHostHeader(preserveHostHeader: Boolean)
+
+    /**
+     * @param preserveXffClientPort Indicates whether the X-Forwarded-For header should preserve the
+     * source port that the client used to connect to the load balancer.
+     */
+    public fun preserveXffClientPort(preserveXffClientPort: Boolean)
+
+    /**
      * @param securityGroup Security group to associate with this load balancer.
      */
     public fun securityGroup(securityGroup: ISecurityGroup)
@@ -155,6 +252,31 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("f697656458aa2de18c67293ca49b91fb052853eaaa6860bf0c9997bcf6a3b0e9")
     public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
+
+    /**
+     * @param wafFailOpen Indicates whether to allow a WAF-enabled load balancer to route requests
+     * to targets if it is unable to forward the request to AWS WAF.
+     */
+    public fun wafFailOpen(wafFailOpen: Boolean)
+
+    /**
+     * @param xAmznTlsVersionAndCipherSuiteHeaders Indicates whether the two headers
+     * (x-amzn-tls-version and x-amzn-tls-cipher-suite), which contain information about the negotiated
+     * TLS version and cipher suite, are added to the client request before sending it to the target.
+     * The x-amzn-tls-version header has information about the TLS protocol version negotiated with
+     * the client,
+     * and the x-amzn-tls-cipher-suite header has information about the cipher suite negotiated with
+     * the client.
+     *
+     * Both headers are in OpenSSL format.
+     */
+    public fun xAmznTlsVersionAndCipherSuiteHeaders(xAmznTlsVersionAndCipherSuiteHeaders: Boolean)
+
+    /**
+     * @param xffHeaderProcessingMode Enables you to modify, preserve, or remove the X-Forwarded-For
+     * header in the HTTP request before the Application Load Balancer sends the request to the target.
+     */
+    public fun xffHeaderProcessingMode(xffHeaderProcessingMode: XffHeaderProcessingMode)
   }
 
   private class BuilderImpl : Builder {
@@ -164,10 +286,33 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerProps.builder()
 
     /**
+     * @param clientKeepAlive The client keep alive duration.
+     * The valid range is 60 to 604800 seconds (1 minute to 7 days).
+     */
+    override fun clientKeepAlive(clientKeepAlive: Duration) {
+      cdkBuilder.clientKeepAlive(clientKeepAlive.let(Duration::unwrap))
+    }
+
+    /**
+     * @param crossZoneEnabled Indicates whether cross-zone load balancing is enabled.
+     */
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+      cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
+
+    /**
      * @param deletionProtection Indicates whether deletion protection is enabled.
      */
     override fun deletionProtection(deletionProtection: Boolean) {
       cdkBuilder.deletionProtection(deletionProtection)
+    }
+
+    /**
+     * @param denyAllIgwTraffic Indicates whether the load balancer blocks traffic through the
+     * Internet Gateway (IGW).
+     */
+    override fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean) {
+      cdkBuilder.denyAllIgwTraffic(denyAllIgwTraffic)
     }
 
     /**
@@ -222,6 +367,22 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
     }
 
     /**
+     * @param preserveHostHeader Indicates whether the Application Load Balancer should preserve the
+     * host header in the HTTP request and send it to the target without any change.
+     */
+    override fun preserveHostHeader(preserveHostHeader: Boolean) {
+      cdkBuilder.preserveHostHeader(preserveHostHeader)
+    }
+
+    /**
+     * @param preserveXffClientPort Indicates whether the X-Forwarded-For header should preserve the
+     * source port that the client used to connect to the load balancer.
+     */
+    override fun preserveXffClientPort(preserveXffClientPort: Boolean) {
+      cdkBuilder.preserveXffClientPort(preserveXffClientPort)
+    }
+
+    /**
      * @param securityGroup Security group to associate with this load balancer.
      */
     override fun securityGroup(securityGroup: ISecurityGroup) {
@@ -250,6 +411,38 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
     override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
 
+    /**
+     * @param wafFailOpen Indicates whether to allow a WAF-enabled load balancer to route requests
+     * to targets if it is unable to forward the request to AWS WAF.
+     */
+    override fun wafFailOpen(wafFailOpen: Boolean) {
+      cdkBuilder.wafFailOpen(wafFailOpen)
+    }
+
+    /**
+     * @param xAmznTlsVersionAndCipherSuiteHeaders Indicates whether the two headers
+     * (x-amzn-tls-version and x-amzn-tls-cipher-suite), which contain information about the negotiated
+     * TLS version and cipher suite, are added to the client request before sending it to the target.
+     * The x-amzn-tls-version header has information about the TLS protocol version negotiated with
+     * the client,
+     * and the x-amzn-tls-cipher-suite header has information about the cipher suite negotiated with
+     * the client.
+     *
+     * Both headers are in OpenSSL format.
+     */
+    override
+        fun xAmznTlsVersionAndCipherSuiteHeaders(xAmznTlsVersionAndCipherSuiteHeaders: Boolean) {
+      cdkBuilder.xAmznTlsVersionAndCipherSuiteHeaders(xAmznTlsVersionAndCipherSuiteHeaders)
+    }
+
+    /**
+     * @param xffHeaderProcessingMode Enables you to modify, preserve, or remove the X-Forwarded-For
+     * header in the HTTP request before the Application Load Balancer sends the request to the target.
+     */
+    override fun xffHeaderProcessingMode(xffHeaderProcessingMode: XffHeaderProcessingMode) {
+      cdkBuilder.xffHeaderProcessingMode(xffHeaderProcessingMode.let(XffHeaderProcessingMode::unwrap))
+    }
+
     public fun build():
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerProps =
         cdkBuilder.build()
@@ -259,11 +452,39 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationLoadBalancerProps,
   ) : CdkObject(cdkObject), ApplicationLoadBalancerProps {
     /**
+     * The client keep alive duration.
+     *
+     * The valid range is 60 to 604800 seconds (1 minute to 7 days).
+     *
+     * Default: - Duration.seconds(3600)
+     */
+    override fun clientKeepAlive(): Duration? =
+        unwrap(this).getClientKeepAlive()?.let(Duration::wrap)
+
+    /**
+     * Indicates whether cross-zone load balancing is enabled.
+     *
+     * Default: - false for Network Load Balancers and true for Application Load Balancers.
+     * This can not be `false` for Application Load Balancers.
+     *
+     * [Documentation]( -
+     * https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-loadbalancerattribute.html)
+     */
+    override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+
+    /**
      * Indicates whether deletion protection is enabled.
      *
      * Default: false
      */
     override fun deletionProtection(): Boolean? = unwrap(this).getDeletionProtection()
+
+    /**
+     * Indicates whether the load balancer blocks traffic through the Internet Gateway (IGW).
+     *
+     * Default: - false for internet-facing load balancers and true for internal load balancers
+     */
+    override fun denyAllIgwTraffic(): Boolean? = unwrap(this).getDenyAllIgwTraffic()
 
     /**
      * Determines how the load balancer handles requests that might pose a security risk to your
@@ -319,6 +540,22 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
     override fun loadBalancerName(): String? = unwrap(this).getLoadBalancerName()
 
     /**
+     * Indicates whether the Application Load Balancer should preserve the host header in the HTTP
+     * request and send it to the target without any change.
+     *
+     * Default: false
+     */
+    override fun preserveHostHeader(): Boolean? = unwrap(this).getPreserveHostHeader()
+
+    /**
+     * Indicates whether the X-Forwarded-For header should preserve the source port that the client
+     * used to connect to the load balancer.
+     *
+     * Default: false
+     */
+    override fun preserveXffClientPort(): Boolean? = unwrap(this).getPreserveXffClientPort()
+
+    /**
      * Security group to associate with this load balancer.
      *
      * Default: A security group is created
@@ -338,6 +575,40 @@ public interface ApplicationLoadBalancerProps : BaseLoadBalancerProps {
      */
     override fun vpcSubnets(): SubnetSelection? =
         unwrap(this).getVpcSubnets()?.let(SubnetSelection::wrap)
+
+    /**
+     * Indicates whether to allow a WAF-enabled load balancer to route requests to targets if it is
+     * unable to forward the request to AWS WAF.
+     *
+     * Default: false
+     */
+    override fun wafFailOpen(): Boolean? = unwrap(this).getWafFailOpen()
+
+    /**
+     * Indicates whether the two headers (x-amzn-tls-version and x-amzn-tls-cipher-suite), which
+     * contain information about the negotiated TLS version and cipher suite, are added to the client
+     * request before sending it to the target.
+     *
+     * The x-amzn-tls-version header has information about the TLS protocol version negotiated with
+     * the client,
+     * and the x-amzn-tls-cipher-suite header has information about the cipher suite negotiated with
+     * the client.
+     *
+     * Both headers are in OpenSSL format.
+     *
+     * Default: false
+     */
+    override fun xAmznTlsVersionAndCipherSuiteHeaders(): Boolean? =
+        unwrap(this).getXAmznTlsVersionAndCipherSuiteHeaders()
+
+    /**
+     * Enables you to modify, preserve, or remove the X-Forwarded-For header in the HTTP request
+     * before the Application Load Balancer sends the request to the target.
+     *
+     * Default: XffHeaderProcessingMode.APPEND
+     */
+    override fun xffHeaderProcessingMode(): XffHeaderProcessingMode? =
+        unwrap(this).getXffHeaderProcessingMode()?.let(XffHeaderProcessingMode::wrap)
   }
 
   public companion object {

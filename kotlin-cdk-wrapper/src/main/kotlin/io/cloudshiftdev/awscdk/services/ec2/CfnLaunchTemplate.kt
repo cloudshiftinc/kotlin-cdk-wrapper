@@ -5709,7 +5709,6 @@ public open class CfnLaunchTemplate(
    * .build()))
    * .maintenanceOptions(MaintenanceOptionsProperty.builder()
    * .autoRecovery("autoRecovery")
-   * .rebootMigration("rebootMigration")
    * .build())
    * .metadataOptions(MetadataOptionsProperty.builder()
    * .httpEndpoint("httpEndpoint")
@@ -6093,10 +6092,7 @@ public open class CfnLaunchTemplate(
     public fun monitoring(): Any? = unwrap(this).getMonitoring()
 
     /**
-     * One or more network interfaces.
-     *
-     * If you specify a network interface, you must specify any security groups and subnets as part
-     * of the network interface.
+     * The network interfaces for the instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces)
      */
@@ -6141,14 +6137,19 @@ public open class CfnLaunchTemplate(
      * You can specify the IDs of existing security groups and references to resources created by
      * the stack template.
      *
+     * If you specify a network interface, you must specify any security groups as part of the
+     * network interface instead.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids)
      */
     public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
 
     /**
-     * One or more security group names.
+     * The names of the security groups. For a nondefault VPC, you must use security group IDs
+     * instead.
      *
-     * For a nondefault VPC, you must use security group IDs instead.
+     * If you specify a network interface, you must specify any security groups as part of the
+     * network interface instead of using this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-securitygroups)
      */
@@ -6787,23 +6788,17 @@ public open class CfnLaunchTemplate(
       public fun monitoring(monitoring: MonitoringProperty.Builder.() -> Unit)
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify any security groups and subnets as
-       * part of the network interface.
+       * @param networkInterfaces The network interfaces for the instance.
        */
       public fun networkInterfaces(networkInterfaces: IResolvable)
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify any security groups and subnets as
-       * part of the network interface.
+       * @param networkInterfaces The network interfaces for the instance.
        */
       public fun networkInterfaces(networkInterfaces: List<Any>)
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify any security groups and subnets as
-       * part of the network interface.
+       * @param networkInterfaces The network interfaces for the instance.
        */
       public fun networkInterfaces(vararg networkInterfaces: Any)
 
@@ -6868,6 +6863,9 @@ public open class CfnLaunchTemplate(
        * @param securityGroupIds The IDs of the security groups.
        * You can specify the IDs of existing security groups and references to resources created by
        * the stack template.
+       *
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead.
        */
       public fun securityGroupIds(securityGroupIds: List<String>)
 
@@ -6875,18 +6873,25 @@ public open class CfnLaunchTemplate(
        * @param securityGroupIds The IDs of the security groups.
        * You can specify the IDs of existing security groups and references to resources created by
        * the stack template.
+       *
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead.
        */
       public fun securityGroupIds(vararg securityGroupIds: String)
 
       /**
-       * @param securityGroups One or more security group names.
-       * For a nondefault VPC, you must use security group IDs instead.
+       * @param securityGroups The names of the security groups. For a nondefault VPC, you must use
+       * security group IDs instead.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       public fun securityGroups(securityGroups: List<String>)
 
       /**
-       * @param securityGroups One or more security group names.
-       * For a nondefault VPC, you must use security group IDs instead.
+       * @param securityGroups The names of the security groups. For a nondefault VPC, you must use
+       * security group IDs instead.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       public fun securityGroups(vararg securityGroups: String)
 
@@ -7641,27 +7646,21 @@ public open class CfnLaunchTemplate(
           monitoring(MonitoringProperty(monitoring))
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify any security groups and subnets as
-       * part of the network interface.
+       * @param networkInterfaces The network interfaces for the instance.
        */
       override fun networkInterfaces(networkInterfaces: IResolvable) {
         cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
       }
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify any security groups and subnets as
-       * part of the network interface.
+       * @param networkInterfaces The network interfaces for the instance.
        */
       override fun networkInterfaces(networkInterfaces: List<Any>) {
         cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify any security groups and subnets as
-       * part of the network interface.
+       * @param networkInterfaces The network interfaces for the instance.
        */
       override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
           networkInterfaces(networkInterfaces.toList())
@@ -7739,6 +7738,9 @@ public open class CfnLaunchTemplate(
        * @param securityGroupIds The IDs of the security groups.
        * You can specify the IDs of existing security groups and references to resources created by
        * the stack template.
+       *
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead.
        */
       override fun securityGroupIds(securityGroupIds: List<String>) {
         cdkBuilder.securityGroupIds(securityGroupIds)
@@ -7748,21 +7750,28 @@ public open class CfnLaunchTemplate(
        * @param securityGroupIds The IDs of the security groups.
        * You can specify the IDs of existing security groups and references to resources created by
        * the stack template.
+       *
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead.
        */
       override fun securityGroupIds(vararg securityGroupIds: String): Unit =
           securityGroupIds(securityGroupIds.toList())
 
       /**
-       * @param securityGroups One or more security group names.
-       * For a nondefault VPC, you must use security group IDs instead.
+       * @param securityGroups The names of the security groups. For a nondefault VPC, you must use
+       * security group IDs instead.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
       }
 
       /**
-       * @param securityGroups One or more security group names.
-       * For a nondefault VPC, you must use security group IDs instead.
+       * @param securityGroups The names of the security groups. For a nondefault VPC, you must use
+       * security group IDs instead.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       override fun securityGroups(vararg securityGroups: String): Unit =
           securityGroups(securityGroups.toList())
@@ -8136,10 +8145,7 @@ public open class CfnLaunchTemplate(
       override fun monitoring(): Any? = unwrap(this).getMonitoring()
 
       /**
-       * One or more network interfaces.
-       *
-       * If you specify a network interface, you must specify any security groups and subnets as
-       * part of the network interface.
+       * The network interfaces for the instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-networkinterfaces)
        */
@@ -8184,15 +8190,20 @@ public open class CfnLaunchTemplate(
        * You can specify the IDs of existing security groups and references to resources created by
        * the stack template.
        *
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-securitygroupids)
        */
       override fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?:
           emptyList()
 
       /**
-       * One or more security group names.
+       * The names of the security groups. For a nondefault VPC, you must use security group IDs
+       * instead.
        *
-       * For a nondefault VPC, you must use security group IDs instead.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata.html#cfn-ec2-launchtemplate-launchtemplatedata-securitygroups)
        */
@@ -8612,7 +8623,6 @@ public open class CfnLaunchTemplate(
    * import io.cloudshiftdev.awscdk.services.ec2.*;
    * MaintenanceOptionsProperty maintenanceOptionsProperty = MaintenanceOptionsProperty.builder()
    * .autoRecovery("autoRecovery")
-   * .rebootMigration("rebootMigration")
    * .build();
    * ```
    *
@@ -8627,11 +8637,6 @@ public open class CfnLaunchTemplate(
     public fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
 
     /**
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-rebootmigration)
-     */
-    public fun rebootMigration(): String? = unwrap(this).getRebootMigration()
-
-    /**
      * A builder for [MaintenanceOptionsProperty]
      */
     @CdkDslMarker
@@ -8641,11 +8646,6 @@ public open class CfnLaunchTemplate(
        * default.
        */
       public fun autoRecovery(autoRecovery: String)
-
-      /**
-       * @param rebootMigration the value to be set.
-       */
-      public fun rebootMigration(rebootMigration: String)
     }
 
     private class BuilderImpl : Builder {
@@ -8659,13 +8659,6 @@ public open class CfnLaunchTemplate(
        */
       override fun autoRecovery(autoRecovery: String) {
         cdkBuilder.autoRecovery(autoRecovery)
-      }
-
-      /**
-       * @param rebootMigration the value to be set.
-       */
-      override fun rebootMigration(rebootMigration: String) {
-        cdkBuilder.rebootMigration(rebootMigration)
       }
 
       public fun build():
@@ -8682,11 +8675,6 @@ public open class CfnLaunchTemplate(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-autorecovery)
        */
       override fun autoRecovery(): String? = unwrap(this).getAutoRecovery()
-
-      /**
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-maintenanceoptions.html#cfn-ec2-launchtemplate-maintenanceoptions-rebootmigration)
-       */
-      override fun rebootMigration(): String? = unwrap(this).getRebootMigration()
     }
 
     public companion object {

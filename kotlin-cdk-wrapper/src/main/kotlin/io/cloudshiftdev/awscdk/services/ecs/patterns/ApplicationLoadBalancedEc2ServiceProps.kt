@@ -984,7 +984,7 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
      *
      * Default: false
      */
-    override fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+    override fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
     /**
      * Whether ECS Exec should be enabled.
@@ -1170,7 +1170,7 @@ public interface ApplicationLoadBalancedEc2ServiceProps : ApplicationLoadBalance
      *
      * Default: false
      */
-    override fun redirectHttp(): Boolean? = unwrap(this).getRedirectHTTP()
+    override fun redirectHTTP(): Boolean? = unwrap(this).getRedirectHTTP()
 
     /**
      * The name of the service.

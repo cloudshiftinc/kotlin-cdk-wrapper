@@ -194,7 +194,7 @@ public interface NetworkLoadBalancedServiceBaseProps {
    *
    * Default: false
    */
-  public fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+  public fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
   /**
    * Whether ECS Exec should be enabled.
@@ -822,7 +822,7 @@ public interface NetworkLoadBalancedServiceBaseProps {
      *
      * Default: false
      */
-    override fun enableEcsManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
+    override fun enableECSManagedTags(): Boolean? = unwrap(this).getEnableECSManagedTags()
 
     /**
      * Whether ECS Exec should be enabled.

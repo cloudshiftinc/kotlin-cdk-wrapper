@@ -99,26 +99,26 @@ public open class CfnRecordingConfiguration(
   public open fun attrState(): String = unwrap(this).getAttrState()
 
   /**
-   * A destination configuration contains information about where recorded video will be stored.
+   * A destination configuration describes an S3 bucket where recorded video will be stored.
    */
   public open fun destinationConfiguration(): Any = unwrap(this).getDestinationConfiguration()
 
   /**
-   * A destination configuration contains information about where recorded video will be stored.
+   * A destination configuration describes an S3 bucket where recorded video will be stored.
    */
   public open fun destinationConfiguration(`value`: IResolvable) {
     unwrap(this).setDestinationConfiguration(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * A destination configuration contains information about where recorded video will be stored.
+   * A destination configuration describes an S3 bucket where recorded video will be stored.
    */
   public open fun destinationConfiguration(`value`: DestinationConfigurationProperty) {
     unwrap(this).setDestinationConfiguration(`value`.let(DestinationConfigurationProperty::unwrap))
   }
 
   /**
-   * A destination configuration contains information about where recorded video will be stored.
+   * A destination configuration describes an S3 bucket where recorded video will be stored.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("1921f679292ab1ae792a66300e1e0d230f2f7cba64e28ec7975cc6fc4c92aeac")
@@ -251,34 +251,34 @@ public open class CfnRecordingConfiguration(
   @CdkDslMarker
   public interface Builder {
     /**
-     * A destination configuration contains information about where recorded video will be stored.
+     * A destination configuration describes an S3 bucket where recorded video will be stored.
      *
      * See the DestinationConfiguration property type for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration)
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      */
     public fun destinationConfiguration(destinationConfiguration: IResolvable)
 
     /**
-     * A destination configuration contains information about where recorded video will be stored.
+     * A destination configuration describes an S3 bucket where recorded video will be stored.
      *
      * See the DestinationConfiguration property type for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration)
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      */
     public fun destinationConfiguration(destinationConfiguration: DestinationConfigurationProperty)
 
     /**
-     * A destination configuration contains information about where recorded video will be stored.
+     * A destination configuration describes an S3 bucket where recorded video will be stored.
      *
      * See the DestinationConfiguration property type for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration)
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -422,12 +422,12 @@ public open class CfnRecordingConfiguration(
         software.amazon.awscdk.services.ivs.CfnRecordingConfiguration.Builder.create(scope, id)
 
     /**
-     * A destination configuration contains information about where recorded video will be stored.
+     * A destination configuration describes an S3 bucket where recorded video will be stored.
      *
      * See the DestinationConfiguration property type for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration)
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      */
     override fun destinationConfiguration(destinationConfiguration: IResolvable) {
@@ -435,12 +435,12 @@ public open class CfnRecordingConfiguration(
     }
 
     /**
-     * A destination configuration contains information about where recorded video will be stored.
+     * A destination configuration describes an S3 bucket where recorded video will be stored.
      *
      * See the DestinationConfiguration property type for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration)
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      */
     override
@@ -449,12 +449,12 @@ public open class CfnRecordingConfiguration(
     }
 
     /**
-     * A destination configuration contains information about where recorded video will be stored.
+     * A destination configuration describes an S3 bucket where recorded video will be stored.
      *
      * See the DestinationConfiguration property type for more information.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ivs-recordingconfiguration.html#cfn-ivs-recordingconfiguration-destinationconfiguration)
-     * @param destinationConfiguration A destination configuration contains information about where
+     * @param destinationConfiguration A destination configuration describes an S3 bucket where
      * recorded video will be stored. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")

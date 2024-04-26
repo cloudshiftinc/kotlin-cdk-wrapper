@@ -162,7 +162,6 @@ public open class CfnNode(
      * Ethereum public networks have the following `NetworkId` s:
      *
      * * `n-ethereum-mainnet`
-     * * `n-ethereum-goerli`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-networkid)
      * @param networkId The unique identifier of the network for the node. 
@@ -221,7 +220,6 @@ public open class CfnNode(
      * Ethereum public networks have the following `NetworkId` s:
      *
      * * `n-ethereum-mainnet`
-     * * `n-ethereum-goerli`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-managedblockchain-node.html#cfn-managedblockchain-node-networkid)
      * @param networkId The unique identifier of the network for the node. 

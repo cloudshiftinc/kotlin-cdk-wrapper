@@ -96,7 +96,7 @@ public open class UnmanagedComputeEnvironment(
    * **If this parameter is not provided on a fairshare queue, no capacity is reserved**;
    * that is, the `FairshareSchedulingPolicy` is ignored.
    */
-  public override fun unmanagedvCpUs(): Number? = unwrap(this).getUnmanagedvCPUs()
+  public override fun unmanagedvCPUs(): Number? = unwrap(this).getUnmanagedvCPUs()
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.batch.UnmanagedComputeEnvironment].

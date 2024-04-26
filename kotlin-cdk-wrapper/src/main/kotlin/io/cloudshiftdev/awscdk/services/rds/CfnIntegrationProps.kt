@@ -28,6 +28,8 @@ import kotlin.collections.Map
  * // the properties below are optional
  * .additionalEncryptionContext(Map.of(
  * "additionalEncryptionContextKey", "additionalEncryptionContext"))
+ * .dataFilter("dataFilter")
+ * .description("description")
  * .integrationName("integrationName")
  * .kmsKeyId("kmsKeyId")
  * .tags(List.of(CfnTag.builder()
@@ -53,6 +55,23 @@ public interface CfnIntegrationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-additionalencryptioncontext)
    */
   public fun additionalEncryptionContext(): Any? = unwrap(this).getAdditionalEncryptionContext()
+
+  /**
+   * Data filters for the integration.
+   *
+   * These filters determine which tables from the source database are sent to the target Amazon
+   * Redshift data warehouse.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-datafilter)
+   */
+  public fun dataFilter(): String? = unwrap(this).getDataFilter()
+
+  /**
+   * A description of the integration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-description)
+   */
+  public fun description(): String? = unwrap(this).getDescription()
 
   /**
    * The name of the integration.
@@ -122,6 +141,18 @@ public interface CfnIntegrationProps {
      * You can only include this parameter if you specify the `KMSKeyId` parameter.
      */
     public fun additionalEncryptionContext(additionalEncryptionContext: Map<String, String>)
+
+    /**
+     * @param dataFilter Data filters for the integration.
+     * These filters determine which tables from the source database are sent to the target Amazon
+     * Redshift data warehouse.
+     */
+    public fun dataFilter(dataFilter: String)
+
+    /**
+     * @param description A description of the integration.
+     */
+    public fun description(description: String)
 
     /**
      * @param integrationName The name of the integration.
@@ -195,6 +226,22 @@ public interface CfnIntegrationProps {
     }
 
     /**
+     * @param dataFilter Data filters for the integration.
+     * These filters determine which tables from the source database are sent to the target Amazon
+     * Redshift data warehouse.
+     */
+    override fun dataFilter(dataFilter: String) {
+      cdkBuilder.dataFilter(dataFilter)
+    }
+
+    /**
+     * @param description A description of the integration.
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
+    }
+
+    /**
      * @param integrationName The name of the integration.
      */
     override fun integrationName(integrationName: String) {
@@ -263,6 +310,23 @@ public interface CfnIntegrationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-additionalencryptioncontext)
      */
     override fun additionalEncryptionContext(): Any? = unwrap(this).getAdditionalEncryptionContext()
+
+    /**
+     * Data filters for the integration.
+     *
+     * These filters determine which tables from the source database are sent to the target Amazon
+     * Redshift data warehouse.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-datafilter)
+     */
+    override fun dataFilter(): String? = unwrap(this).getDataFilter()
+
+    /**
+     * A description of the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-integration.html#cfn-rds-integration-description)
+     */
+    override fun description(): String? = unwrap(this).getDescription()
 
     /**
      * The name of the integration.

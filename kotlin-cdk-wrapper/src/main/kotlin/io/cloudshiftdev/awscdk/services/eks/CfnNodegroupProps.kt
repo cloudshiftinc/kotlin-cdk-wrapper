@@ -77,9 +77,10 @@ public interface CfnNodegroupProps {
    * If you specify `launchTemplate` , and your launch template uses a custom AMI, then don't
    * specify `amiType` , or the node group deployment will fail. If your launch template uses a Windows
    * custom AMI, then add `eks:kube-proxy-windows` to your Windows nodes `rolearn` in the `aws-auth`
-   * `ConfigMap` . For more information about using launch templates with Amazon EKS, see [Launch
-   * template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
-   * *Amazon EKS User Guide* .
+   * `ConfigMap` . For more information about using launch templates with Amazon EKS, see [Customizing
+   * managed nodes with launch
+   * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
+   * EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-amitype)
    */
@@ -105,8 +106,9 @@ public interface CfnNodegroupProps {
    * The default disk size is 20 GiB for Linux and Bottlerocket. The default disk size is 50 GiB for
    * Windows. If you specify `launchTemplate` , then don't specify `diskSize` , or the node group
    * deployment will fail. For more information about using launch templates with Amazon EKS, see
-   * [Launch template support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html)
-   * in the *Amazon EKS User Guide* .
+   * [Customizing managed nodes with launch
+   * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
+   * EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-disksize)
    */
@@ -137,8 +139,8 @@ public interface CfnNodegroupProps {
    * `Spot` for `capacityType` , then we recommend specifying multiple values for `instanceTypes` . For
    * more information, see [Managed node group capacity
    * types](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types)
-   * and [Launch template
-   * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
+   * and [Customizing managed nodes with launch
+   * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
    * EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
@@ -160,8 +162,11 @@ public interface CfnNodegroupProps {
   /**
    * An object representing a node group's launch template specification.
    *
-   * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-   * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+   * When using this object, don't directly specify `instanceTypes` , `diskSize` , or `remoteAccess`
+   * . Make sure that the launch template meets the requirements in `launchTemplateSpecification` .
+   * Also refer to [Customizing managed nodes with launch
+   * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
+   * EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-launchtemplate)
    */
@@ -178,8 +183,8 @@ public interface CfnNodegroupProps {
    * User Guide** . If you specify `launchTemplate` , then don't specify
    * `[IamInstanceProfile](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)`
    * in your launch template, or the node group deployment will fail. For more information about using
-   * launch templates with Amazon EKS, see [Launch template
-   * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
+   * launch templates with Amazon EKS, see [Customizing managed nodes with launch
+   * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
    * EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderole)
@@ -214,9 +219,9 @@ public interface CfnNodegroupProps {
    *
    * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
    * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail. For
-   * more information about using launch templates with Amazon EKS, see [Launch template
-   * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-   * EKS User Guide* .
+   * more information about using launch templates with Amazon EKS, see [Customizing managed nodes with
+   * launch templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+   * *Amazon EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-remoteaccess)
    */
@@ -236,8 +241,8 @@ public interface CfnNodegroupProps {
    * If you specify `launchTemplate` , then don't specify
    * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
    * in your launch template, or the node group deployment will fail. For more information about using
-   * launch templates with Amazon EKS, see [Launch template
-   * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
+   * launch templates with Amazon EKS, see [Customizing managed nodes with launch
+   * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
    * EKS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-subnets)
@@ -302,9 +307,9 @@ public interface CfnNodegroupProps {
      * specify `amiType` , or the node group deployment will fail. If your launch template uses a
      * Windows custom AMI, then add `eks:kube-proxy-windows` to your Windows nodes `rolearn` in the
      * `aws-auth` `ConfigMap` . For more information about using launch templates with Amazon EKS, see
-     * [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun amiType(amiType: String)
 
@@ -323,9 +328,9 @@ public interface CfnNodegroupProps {
      * The default disk size is 20 GiB for Linux and Bottlerocket. The default disk size is 50 GiB
      * for Windows. If you specify `launchTemplate` , then don't specify `diskSize` , or the node group
      * deployment will fail. For more information about using launch templates with Amazon EKS, see
-     * [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun diskSize(diskSize: Number)
 
@@ -356,9 +361,9 @@ public interface CfnNodegroupProps {
      * specify `Spot` for `capacityType` , then we recommend specifying multiple values for
      * `instanceTypes` . For more information, see [Managed node group capacity
      * types](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types)
-     * and [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * and [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun instanceTypes(instanceTypes: List<String>)
 
@@ -373,9 +378,9 @@ public interface CfnNodegroupProps {
      * specify `Spot` for `capacityType` , then we recommend specifying multiple values for
      * `instanceTypes` . For more information, see [Managed node group capacity
      * types](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types)
-     * and [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * and [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun instanceTypes(vararg instanceTypes: String)
 
@@ -397,22 +402,31 @@ public interface CfnNodegroupProps {
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
-     * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-     * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
+     * `remoteAccess` . Make sure that the launch template meets the requirements in
+     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun launchTemplate(launchTemplate: IResolvable)
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
-     * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-     * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
+     * `remoteAccess` . Make sure that the launch template meets the requirements in
+     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun launchTemplate(launchTemplate: CfnNodegroup.LaunchTemplateSpecificationProperty)
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
-     * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-     * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
+     * `remoteAccess` . Make sure that the launch template meets the requirements in
+     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18969c3bfdf19d3641486ae46a5013a3e6802b5482a7ebd85b52450aa667aa99")
@@ -430,9 +444,9 @@ public interface CfnNodegroupProps {
      * EKS User Guide** . If you specify `launchTemplate` , then don't specify
      * `[IamInstanceProfile](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun nodeRole(nodeRole: String)
 
@@ -458,9 +472,10 @@ public interface CfnNodegroupProps {
      * @param remoteAccess The remote access configuration to use with your node group.
      * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
      * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail.
-     * For more information about using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * For more information about using launch templates with Amazon EKS, see [Customizing managed
+     * nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun remoteAccess(remoteAccess: IResolvable)
 
@@ -468,9 +483,10 @@ public interface CfnNodegroupProps {
      * @param remoteAccess The remote access configuration to use with your node group.
      * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
      * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail.
-     * For more information about using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * For more information about using launch templates with Amazon EKS, see [Customizing managed
+     * nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun remoteAccess(remoteAccess: CfnNodegroup.RemoteAccessProperty)
 
@@ -478,9 +494,10 @@ public interface CfnNodegroupProps {
      * @param remoteAccess The remote access configuration to use with your node group.
      * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
      * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail.
-     * For more information about using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * For more information about using launch templates with Amazon EKS, see [Customizing managed
+     * nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f39ff54f381c2a00ad3b9e744a041218336b0931c5b42b819859c985d10a3a5")
@@ -512,9 +529,9 @@ public interface CfnNodegroupProps {
      * If you specify `launchTemplate` , then don't specify
      * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun subnets(subnets: List<String>)
 
@@ -524,9 +541,9 @@ public interface CfnNodegroupProps {
      * If you specify `launchTemplate` , then don't specify
      * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     public fun subnets(vararg subnets: String)
 
@@ -609,9 +626,9 @@ public interface CfnNodegroupProps {
      * specify `amiType` , or the node group deployment will fail. If your launch template uses a
      * Windows custom AMI, then add `eks:kube-proxy-windows` to your Windows nodes `rolearn` in the
      * `aws-auth` `ConfigMap` . For more information about using launch templates with Amazon EKS, see
-     * [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun amiType(amiType: String) {
       cdkBuilder.amiType(amiType)
@@ -636,9 +653,9 @@ public interface CfnNodegroupProps {
      * The default disk size is 20 GiB for Linux and Bottlerocket. The default disk size is 50 GiB
      * for Windows. If you specify `launchTemplate` , then don't specify `diskSize` , or the node group
      * deployment will fail. For more information about using launch templates with Amazon EKS, see
-     * [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun diskSize(diskSize: Number) {
       cdkBuilder.diskSize(diskSize)
@@ -675,9 +692,9 @@ public interface CfnNodegroupProps {
      * specify `Spot` for `capacityType` , then we recommend specifying multiple values for
      * `instanceTypes` . For more information, see [Managed node group capacity
      * types](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types)
-     * and [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * and [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun instanceTypes(instanceTypes: List<String>) {
       cdkBuilder.instanceTypes(instanceTypes)
@@ -694,9 +711,9 @@ public interface CfnNodegroupProps {
      * specify `Spot` for `capacityType` , then we recommend specifying multiple values for
      * `instanceTypes` . For more information, see [Managed node group capacity
      * types](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types)
-     * and [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * and [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun instanceTypes(vararg instanceTypes: String): Unit =
         instanceTypes(instanceTypes.toList())
@@ -723,8 +740,11 @@ public interface CfnNodegroupProps {
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
-     * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-     * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
+     * `remoteAccess` . Make sure that the launch template meets the requirements in
+     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun launchTemplate(launchTemplate: IResolvable) {
       cdkBuilder.launchTemplate(launchTemplate.let(IResolvable::unwrap))
@@ -732,8 +752,11 @@ public interface CfnNodegroupProps {
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
-     * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-     * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
+     * `remoteAccess` . Make sure that the launch template meets the requirements in
+     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun launchTemplate(launchTemplate: CfnNodegroup.LaunchTemplateSpecificationProperty) {
       cdkBuilder.launchTemplate(launchTemplate.let(CfnNodegroup.LaunchTemplateSpecificationProperty::unwrap))
@@ -741,8 +764,11 @@ public interface CfnNodegroupProps {
 
     /**
      * @param launchTemplate An object representing a node group's launch template specification.
-     * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-     * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
+     * `remoteAccess` . Make sure that the launch template meets the requirements in
+     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18969c3bfdf19d3641486ae46a5013a3e6802b5482a7ebd85b52450aa667aa99")
@@ -761,9 +787,9 @@ public interface CfnNodegroupProps {
      * EKS User Guide** . If you specify `launchTemplate` , then don't specify
      * `[IamInstanceProfile](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun nodeRole(nodeRole: String) {
       cdkBuilder.nodeRole(nodeRole)
@@ -795,9 +821,10 @@ public interface CfnNodegroupProps {
      * @param remoteAccess The remote access configuration to use with your node group.
      * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
      * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail.
-     * For more information about using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * For more information about using launch templates with Amazon EKS, see [Customizing managed
+     * nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun remoteAccess(remoteAccess: IResolvable) {
       cdkBuilder.remoteAccess(remoteAccess.let(IResolvable::unwrap))
@@ -807,9 +834,10 @@ public interface CfnNodegroupProps {
      * @param remoteAccess The remote access configuration to use with your node group.
      * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
      * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail.
-     * For more information about using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * For more information about using launch templates with Amazon EKS, see [Customizing managed
+     * nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun remoteAccess(remoteAccess: CfnNodegroup.RemoteAccessProperty) {
       cdkBuilder.remoteAccess(remoteAccess.let(CfnNodegroup.RemoteAccessProperty::unwrap))
@@ -819,9 +847,10 @@ public interface CfnNodegroupProps {
      * @param remoteAccess The remote access configuration to use with your node group.
      * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
      * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail.
-     * For more information about using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * For more information about using launch templates with Amazon EKS, see [Customizing managed
+     * nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1f39ff54f381c2a00ad3b9e744a041218336b0931c5b42b819859c985d10a3a5")
@@ -860,9 +889,9 @@ public interface CfnNodegroupProps {
      * If you specify `launchTemplate` , then don't specify
      * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
@@ -874,9 +903,9 @@ public interface CfnNodegroupProps {
      * If you specify `launchTemplate` , then don't specify
      * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      */
     override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
@@ -974,9 +1003,9 @@ public interface CfnNodegroupProps {
      * specify `amiType` , or the node group deployment will fail. If your launch template uses a
      * Windows custom AMI, then add `eks:kube-proxy-windows` to your Windows nodes `rolearn` in the
      * `aws-auth` `ConfigMap` . For more information about using launch templates with Amazon EKS, see
-     * [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-amitype)
      */
@@ -1002,9 +1031,9 @@ public interface CfnNodegroupProps {
      * The default disk size is 20 GiB for Linux and Bottlerocket. The default disk size is 50 GiB
      * for Windows. If you specify `launchTemplate` , then don't specify `diskSize` , or the node group
      * deployment will fail. For more information about using launch templates with Amazon EKS, see
-     * [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-disksize)
      */
@@ -1035,9 +1064,9 @@ public interface CfnNodegroupProps {
      * specify `Spot` for `capacityType` , then we recommend specifying multiple values for
      * `instanceTypes` . For more information, see [Managed node group capacity
      * types](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html#managed-node-group-capacity-types)
-     * and [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * and [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-instancetypes)
      */
@@ -1058,8 +1087,11 @@ public interface CfnNodegroupProps {
     /**
      * An object representing a node group's launch template specification.
      *
-     * If specified, then do not specify `instanceTypes` , `diskSize` , or `remoteAccess` and make
-     * sure that the launch template meets the requirements in `launchTemplateSpecification` .
+     * When using this object, don't directly specify `instanceTypes` , `diskSize` , or
+     * `remoteAccess` . Make sure that the launch template meets the requirements in
+     * `launchTemplateSpecification` . Also refer to [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-launchtemplate)
      */
@@ -1076,9 +1108,9 @@ public interface CfnNodegroupProps {
      * EKS User Guide** . If you specify `launchTemplate` , then don't specify
      * `[IamInstanceProfile](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_IamInstanceProfile.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderole)
      */
@@ -1112,9 +1144,10 @@ public interface CfnNodegroupProps {
      *
      * For Linux, the protocol is SSH. For Windows, the protocol is RDP. If you specify
      * `launchTemplate` , then don't specify `remoteAccess` , or the node group deployment will fail.
-     * For more information about using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * For more information about using launch templates with Amazon EKS, see [Customizing managed
+     * nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-remoteaccess)
      */
@@ -1134,9 +1167,9 @@ public interface CfnNodegroupProps {
      * If you specify `launchTemplate` , then don't specify
      * `[SubnetId](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateNetworkInterface.html)`
      * in your launch template, or the node group deployment will fail. For more information about
-     * using launch templates with Amazon EKS, see [Launch template
-     * support](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the *Amazon
-     * EKS User Guide* .
+     * using launch templates with Amazon EKS, see [Customizing managed nodes with launch
+     * templates](https://docs.aws.amazon.com/eks/latest/userguide/launch-templates.html) in the
+     * *Amazon EKS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-subnets)
      */

@@ -776,9 +776,8 @@ public open class CfnTrail(
     /**
      * Specifies the name of the Amazon S3 bucket designated for publishing log files.
      *
-     * See [Amazon S3 Bucket Naming
-     * Requirements](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html)
-     * .
+     * See [Amazon S3 Bucket naming
+     * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname)
      * @param s3BucketName Specifies the name of the Amazon S3 bucket designated for publishing log
@@ -791,7 +790,7 @@ public open class CfnTrail(
      * designated for log file delivery.
      *
      * For more information, see [Finding Your CloudTrail Log
-     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html)
+     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files)
      * . The maximum length is 200 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix)
@@ -1250,9 +1249,8 @@ public open class CfnTrail(
     /**
      * Specifies the name of the Amazon S3 bucket designated for publishing log files.
      *
-     * See [Amazon S3 Bucket Naming
-     * Requirements](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/create_trail_naming_policy.html)
-     * .
+     * See [Amazon S3 Bucket naming
+     * rules](https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname)
      * @param s3BucketName Specifies the name of the Amazon S3 bucket designated for publishing log
@@ -1267,7 +1265,7 @@ public open class CfnTrail(
      * designated for log file delivery.
      *
      * For more information, see [Finding Your CloudTrail Log
-     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-find-log-files.html)
+     * Files](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/get-and-view-cloudtrail-log-files.html#cloudtrail-find-log-files)
      * . The maximum length is 200 characters.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix)
@@ -1657,24 +1655,33 @@ public open class CfnTrail(
      * * `AWS::SCN::Instance`
      * * `AWS::SNS::PlatformEndpoint`
      * * `AWS::SNS::Topic`
-     * * `AWS::SWF::Domain`
      * * `AWS::SQS::Queue`
+     * * `AWS::SSM::ManagedNode`
      * * `AWS::SSMMessages::ControlChannel`
+     * * `AWS::SWF::Domain`
      * * `AWS::ThinClient::Device`
      * * `AWS::ThinClient::Environment`
      * * `AWS::Timestream::Database`
      * * `AWS::Timestream::Table`
      * * `AWS::VerifiedPermissions::PolicyStore`
+     * * `AWS::XRay::Trace`
      *
      * You can have only one `resources.type` ﬁeld per selector. To log data events on more than one
      * resource type, add another selector.
      *
      * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use `Equals`
      * or `NotEquals` , the value must exactly match the ARN of a valid resource of the type you've
-     * speciﬁed in the template as the value of resources.type. For example, if resources.type equals
-     * `AWS::S3::Object` , the ARN must be in one of the following formats. To log all data events for
-     * all objects in a specific S3 bucket, use the `StartsWith` operator, and include only the bucket
-     * ARN as the matching value.
+     * speciﬁed in the template as the value of resources.type.
+     *
+     *
+     * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
+     *
+     *
+     * The `resources.ARN` field can be set one of the following.
+     *
+     * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following formats.
+     * To log all data events for all objects in a specific S3 bucket, use the `StartsWith` operator,
+     * and include only the bucket ARN as the matching value.
      *
      * The trailing slash is intentional; do not exclude it. Replace the text between less than and
      * greater than symbols (&lt;&gt;) with resource-specific information.
@@ -1971,21 +1978,28 @@ public open class CfnTrail(
      *
      * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
      *
-     * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-     * `NotEquals` , the ARN must be in the following format:
-     *
-     * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-     *
      * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
      * `NotEquals` , the ARN must be in the following format:
      *
      * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
+     *
+     * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals` or
+     * `NotEquals` , the ARN must be in one of the following formats:
+     *
+     * *
+     * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
+     * * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
      *
      * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set to
      * `Equals` or `NotEquals` , the ARN must be in the following format:
      *
      * *
      * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
+     *
+     * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
+     * `NotEquals` , the ARN must be in the following format:
+     *
+     * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
      *
      * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to `Equals`
      * or `NotEquals` , the ARN must be in the following format:
@@ -2171,24 +2185,33 @@ public open class CfnTrail(
        * * `AWS::SCN::Instance`
        * * `AWS::SNS::PlatformEndpoint`
        * * `AWS::SNS::Topic`
-       * * `AWS::SWF::Domain`
        * * `AWS::SQS::Queue`
+       * * `AWS::SSM::ManagedNode`
        * * `AWS::SSMMessages::ControlChannel`
+       * * `AWS::SWF::Domain`
        * * `AWS::ThinClient::Device`
        * * `AWS::ThinClient::Environment`
        * * `AWS::Timestream::Database`
        * * `AWS::Timestream::Table`
        * * `AWS::VerifiedPermissions::PolicyStore`
+       * * `AWS::XRay::Trace`
        *
        * You can have only one `resources.type` ﬁeld per selector. To log data events on more than
        * one resource type, add another selector.
        *
        * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use
        * `Equals` or `NotEquals` , the value must exactly match the ARN of a valid resource of the type
-       * you've speciﬁed in the template as the value of resources.type. For example, if resources.type
-       * equals `AWS::S3::Object` , the ARN must be in one of the following formats. To log all data
-       * events for all objects in a specific S3 bucket, use the `StartsWith` operator, and include
-       * only the bucket ARN as the matching value.
+       * you've speciﬁed in the template as the value of resources.type.
+       *
+       *
+       * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
+       *
+       *
+       * The `resources.ARN` field can be set one of the following.
+       *
+       * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following
+       * formats. To log all data events for all objects in a specific S3 bucket, use the `StartsWith`
+       * operator, and include only the bucket ARN as the matching value.
        *
        * The trailing slash is intentional; do not exclude it. Replace the text between less than
        * and greater than symbols (&lt;&gt;) with resource-specific information.
@@ -2488,21 +2511,29 @@ public open class CfnTrail(
        *
        * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
        *
-       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-       *
        * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
        * `NotEquals` , the ARN must be in the following format:
        *
        * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
+       *
+       * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals`
+       * or `NotEquals` , the ARN must be in one of the following formats:
+       *
+       * *
+       * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
+       * *
+       * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
        *
        * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set
        * to `Equals` or `NotEquals` , the ARN must be in the following format:
        *
        * *
        * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
+       *
+       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
+       * `NotEquals` , the ARN must be in the following format:
+       *
+       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
        *
        * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to
        * `Equals` or `NotEquals` , the ARN must be in the following format:
@@ -2708,24 +2739,33 @@ public open class CfnTrail(
        * * `AWS::SCN::Instance`
        * * `AWS::SNS::PlatformEndpoint`
        * * `AWS::SNS::Topic`
-       * * `AWS::SWF::Domain`
        * * `AWS::SQS::Queue`
+       * * `AWS::SSM::ManagedNode`
        * * `AWS::SSMMessages::ControlChannel`
+       * * `AWS::SWF::Domain`
        * * `AWS::ThinClient::Device`
        * * `AWS::ThinClient::Environment`
        * * `AWS::Timestream::Database`
        * * `AWS::Timestream::Table`
        * * `AWS::VerifiedPermissions::PolicyStore`
+       * * `AWS::XRay::Trace`
        *
        * You can have only one `resources.type` ﬁeld per selector. To log data events on more than
        * one resource type, add another selector.
        *
        * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use
        * `Equals` or `NotEquals` , the value must exactly match the ARN of a valid resource of the type
-       * you've speciﬁed in the template as the value of resources.type. For example, if resources.type
-       * equals `AWS::S3::Object` , the ARN must be in one of the following formats. To log all data
-       * events for all objects in a specific S3 bucket, use the `StartsWith` operator, and include
-       * only the bucket ARN as the matching value.
+       * you've speciﬁed in the template as the value of resources.type.
+       *
+       *
+       * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
+       *
+       *
+       * The `resources.ARN` field can be set one of the following.
+       *
+       * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following
+       * formats. To log all data events for all objects in a specific S3 bucket, use the `StartsWith`
+       * operator, and include only the bucket ARN as the matching value.
        *
        * The trailing slash is intentional; do not exclude it. Replace the text between less than
        * and greater than symbols (&lt;&gt;) with resource-specific information.
@@ -3025,21 +3065,29 @@ public open class CfnTrail(
        *
        * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
        *
-       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-       *
        * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
        * `NotEquals` , the ARN must be in the following format:
        *
        * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
+       *
+       * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals`
+       * or `NotEquals` , the ARN must be in one of the following formats:
+       *
+       * *
+       * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
+       * *
+       * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
        *
        * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set
        * to `Equals` or `NotEquals` , the ARN must be in the following format:
        *
        * *
        * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
+       *
+       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
+       * `NotEquals` , the ARN must be in the following format:
+       *
+       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
        *
        * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to
        * `Equals` or `NotEquals` , the ARN must be in the following format:
@@ -3245,24 +3293,33 @@ public open class CfnTrail(
        * * `AWS::SCN::Instance`
        * * `AWS::SNS::PlatformEndpoint`
        * * `AWS::SNS::Topic`
-       * * `AWS::SWF::Domain`
        * * `AWS::SQS::Queue`
+       * * `AWS::SSM::ManagedNode`
        * * `AWS::SSMMessages::ControlChannel`
+       * * `AWS::SWF::Domain`
        * * `AWS::ThinClient::Device`
        * * `AWS::ThinClient::Environment`
        * * `AWS::Timestream::Database`
        * * `AWS::Timestream::Table`
        * * `AWS::VerifiedPermissions::PolicyStore`
+       * * `AWS::XRay::Trace`
        *
        * You can have only one `resources.type` ﬁeld per selector. To log data events on more than
        * one resource type, add another selector.
        *
        * * *`resources.ARN`* - You can use any operator with `resources.ARN` , but if you use
        * `Equals` or `NotEquals` , the value must exactly match the ARN of a valid resource of the type
-       * you've speciﬁed in the template as the value of resources.type. For example, if resources.type
-       * equals `AWS::S3::Object` , the ARN must be in one of the following formats. To log all data
-       * events for all objects in a specific S3 bucket, use the `StartsWith` operator, and include
-       * only the bucket ARN as the matching value.
+       * you've speciﬁed in the template as the value of resources.type.
+       *
+       *
+       * You can't use the `resources.ARN` field to filter resource types that do not have ARNs.
+       *
+       *
+       * The `resources.ARN` field can be set one of the following.
+       *
+       * If resources.type equals `AWS::S3::Object` , the ARN must be in one of the following
+       * formats. To log all data events for all objects in a specific S3 bucket, use the `StartsWith`
+       * operator, and include only the bucket ARN as the matching value.
        *
        * The trailing slash is intentional; do not exclude it. Replace the text between less than
        * and greater than symbols (&lt;&gt;) with resource-specific information.
@@ -3562,21 +3619,29 @@ public open class CfnTrail(
        *
        * * `arn:&lt;partition&gt;:sns:&lt;region&gt;:&lt;account_ID&gt;:&lt;topic_name&gt;`
        *
-       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
-       * `NotEquals` , the ARN must be in the following format:
-       *
-       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
-       *
        * When `resources.type` equals `AWS::SQS::Queue` , and the operator is set to `Equals` or
        * `NotEquals` , the ARN must be in the following format:
        *
        * * `arn:&lt;partition&gt;:sqs:&lt;region&gt;:&lt;account_ID&gt;:&lt;queue_name&gt;`
+       *
+       * When `resources.type` equals `AWS::SSM::ManagedNode` , and the operator is set to `Equals`
+       * or `NotEquals` , the ARN must be in one of the following formats:
+       *
+       * *
+       * `arn:&lt;partition&gt;:ssm:&lt;region&gt;:&lt;account_ID&gt;:managed-instance/&lt;instance_ID&gt;`
+       * *
+       * `arn:&lt;partition&gt;:ec2:&lt;region&gt;:&lt;account_ID&gt;:instance/&lt;instance_ID&gt;`
        *
        * When `resources.type` equals `AWS::SSMMessages::ControlChannel` , and the operator is set
        * to `Equals` or `NotEquals` , the ARN must be in the following format:
        *
        * *
        * `arn:&lt;partition&gt;:ssmmessages:&lt;region&gt;:&lt;account_ID&gt;:control-channel/&lt;channel_ID&gt;`
+       *
+       * When `resources.type` equals `AWS::SWF::Domain` , and the operator is set to `Equals` or
+       * `NotEquals` , the ARN must be in the following format:
+       *
+       * * `arn:&lt;partition&gt;:swf:&lt;region&gt;:&lt;account_ID&gt;:domain/&lt;domain_name&gt;`
        *
        * When `resources.type` equals `AWS::ThinClient::Device` , and the operator is set to
        * `Equals` or `NotEquals` , the ARN must be in the following format:

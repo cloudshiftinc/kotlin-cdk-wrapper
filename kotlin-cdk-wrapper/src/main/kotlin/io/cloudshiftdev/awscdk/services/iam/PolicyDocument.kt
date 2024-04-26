@@ -106,7 +106,7 @@ public open class PolicyDocument(
    *
    * Used when JSON.stringify() is called
    */
-  public open fun toJson(): Any = unwrap(this).toJSON()
+  public open fun toJSON(): Any = unwrap(this).toJSON()
 
   /**
    * Validate that all policy statements in the policy document satisfies the requirements for any

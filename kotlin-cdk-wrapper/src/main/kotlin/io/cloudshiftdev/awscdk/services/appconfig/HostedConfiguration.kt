@@ -19,11 +19,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Application application;
- * HostedConfiguration.Builder.create(this, "MyHostedConfiguration")
- * .application(application)
+ * Application app = new Application(this, "MyApp");
+ * Environment env = Environment.Builder.create(this, "MyEnv")
+ * .application(app)
+ * .build();
+ * HostedConfiguration.Builder.create(this, "MyHostedConfig")
+ * .application(app)
+ * .deployTo(List.of(env))
  * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
- * .type(ConfigurationType.FEATURE_FLAGS)
  * .build();
  * ```
  */
@@ -469,7 +472,10 @@ public open class HostedConfiguration(
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      *
      * Default: - None.
      *
@@ -481,7 +487,10 @@ public open class HostedConfiguration(
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      *
      * Default: - None.
      *
@@ -601,7 +610,10 @@ public open class HostedConfiguration(
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      *
      * Default: - None.
      *
@@ -615,7 +627,10 @@ public open class HostedConfiguration(
      * The list of environments to deploy the configuration to.
      *
      * If this parameter is not specified, then there will be no
-     * deployment.
+     * deployment created alongside this configuration.
+     *
+     * Deployments can be added later using the `IEnvironment.addDeployment` or
+     * `IEnvironment.addDeployments` methods.
      *
      * Default: - None.
      *

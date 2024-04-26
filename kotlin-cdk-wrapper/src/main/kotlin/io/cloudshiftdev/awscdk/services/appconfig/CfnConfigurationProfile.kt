@@ -38,7 +38,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * Create an application
  * * Create an environment
  * * Create a configuration profile
- * * Create a deployment strategy
+ * * Choose a pre-defined deployment strategy or create your own
  * * Deploy the configuration
  *
  * For more information, see [AWS
@@ -115,7 +115,7 @@ public open class CfnConfigurationProfile(
    * The Amazon Resource Name of the AWS Key Management Service key to encrypt new configuration
    * data versions in the AWS AppConfig hosted configuration store.
    *
-   * This attribute is only used for hosted configuration types. To encrypt data managed in other
+   * This attribute is only used for `hosted` configuration types. To encrypt data managed in other
    * configuration stores, see the documentation for how to specify an AWS KMS key for that particular
    * service.
    */
@@ -588,7 +588,9 @@ public open class CfnConfigurationProfile(
    *
    * To validate your application configuration data, you provide a schema or an AWS Lambda function
    * that runs against the configuration. The configuration deployment or update can only proceed when
-   * the configuration data is valid.
+   * the configuration data is valid. For more information, see [About
+   * validators](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-configuration-profile.html#appconfig-creating-configuration-and-profile-validators)
+   * in the *AWS AppConfig User Guide* .
    *
    * Example:
    *

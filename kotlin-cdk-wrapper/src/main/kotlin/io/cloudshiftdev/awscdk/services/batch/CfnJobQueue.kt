@@ -41,6 +41,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .priority(123)
  * // the properties below are optional
  * .jobQueueName("jobQueueName")
+ * .jobStateTimeLimitActions(List.of(JobStateTimeLimitActionProperty.builder()
+ * .action("action")
+ * .maxTimeSeconds(123)
+ * .reason("reason")
+ * .state("state")
+ * .build()))
  * .schedulingPolicyArn("schedulingPolicyArn")
  * .state("state")
  * .tags(Map.of(
@@ -120,6 +126,35 @@ public open class CfnJobQueue(
   public open fun jobQueueName(`value`: String) {
     unwrap(this).setJobQueueName(`value`)
   }
+
+  /**
+   * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+   * the specified state longer than specified times.
+   */
+  public open fun jobStateTimeLimitActions(): Any? = unwrap(this).getJobStateTimeLimitActions()
+
+  /**
+   * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+   * the specified state longer than specified times.
+   */
+  public open fun jobStateTimeLimitActions(`value`: IResolvable) {
+    unwrap(this).setJobStateTimeLimitActions(`value`.let(IResolvable::unwrap))
+  }
+
+  /**
+   * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+   * the specified state longer than specified times.
+   */
+  public open fun jobStateTimeLimitActions(`value`: List<Any>) {
+    unwrap(this).setJobStateTimeLimitActions(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+   * the specified state longer than specified times.
+   */
+  public open fun jobStateTimeLimitActions(vararg `value`: Any): Unit =
+      jobStateTimeLimitActions(`value`.toList())
 
   /**
    * The priority of the job queue.
@@ -252,6 +287,42 @@ public open class CfnJobQueue(
      * @param jobQueueName The name of the job queue. 
      */
     public fun jobQueueName(jobQueueName: String)
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    public fun jobStateTimeLimitActions(jobStateTimeLimitActions: IResolvable)
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    public fun jobStateTimeLimitActions(jobStateTimeLimitActions: List<Any>)
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    public fun jobStateTimeLimitActions(vararg jobStateTimeLimitActions: Any)
 
     /**
      * The priority of the job queue.
@@ -390,6 +461,47 @@ public open class CfnJobQueue(
     override fun jobQueueName(jobQueueName: String) {
       cdkBuilder.jobQueueName(jobQueueName)
     }
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    override fun jobStateTimeLimitActions(jobStateTimeLimitActions: IResolvable) {
+      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.let(IResolvable::unwrap))
+    }
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    override fun jobStateTimeLimitActions(jobStateTimeLimitActions: List<Any>) {
+      cdkBuilder.jobStateTimeLimitActions(jobStateTimeLimitActions.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The set of actions that AWS Batch perform on jobs that remain at the head of the job queue in
+     * the specified state longer than specified times.
+     *
+     * AWS Batch will perform each action after `maxTimeSeconds` has passed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobqueue.html#cfn-batch-jobqueue-jobstatetimelimitactions)
+     * @param jobStateTimeLimitActions The set of actions that AWS Batch perform on jobs that remain
+     * at the head of the job queue in the specified state longer than specified times. 
+     */
+    override fun jobStateTimeLimitActions(vararg jobStateTimeLimitActions: Any): Unit =
+        jobStateTimeLimitActions(jobStateTimeLimitActions.toList())
 
     /**
      * The priority of the job queue.
@@ -604,6 +716,197 @@ public open class CfnJobQueue(
           software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.batch.CfnJobQueue.ComputeEnvironmentOrderProperty
+    }
+  }
+
+  /**
+   * Specifies an action that AWS Batch will take after the job has remained at the head of the
+   * queue in the specified state for longer than the specified time.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * JobStateTimeLimitActionProperty jobStateTimeLimitActionProperty =
+   * JobStateTimeLimitActionProperty.builder()
+   * .action("action")
+   * .maxTimeSeconds(123)
+   * .reason("reason")
+   * .state("state")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html)
+   */
+  public interface JobStateTimeLimitActionProperty {
+    /**
+     * The action to take when a job is at the head of the job queue in the specified state for the
+     * specified period of time.
+     *
+     * The only supported value is `CANCEL` , which will cancel the job.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-action)
+     */
+    public fun action(): String
+
+    /**
+     * The approximate amount of time, in seconds, that must pass with the job in the specified
+     * state before the action is taken.
+     *
+     * The minimum value is 600 (10 minutes) and the maximum value is 86,400 (24 hours).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-maxtimeseconds)
+     */
+    public fun maxTimeSeconds(): Number
+
+    /**
+     * The reason to log for the action being taken.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-reason)
+     */
+    public fun reason(): String
+
+    /**
+     * The state of the job needed to trigger the action.
+     *
+     * The only supported value is `RUNNABLE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-state)
+     */
+    public fun state(): String
+
+    /**
+     * A builder for [JobStateTimeLimitActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param action The action to take when a job is at the head of the job queue in the
+       * specified state for the specified period of time. 
+       * The only supported value is `CANCEL` , which will cancel the job.
+       */
+      public fun action(action: String)
+
+      /**
+       * @param maxTimeSeconds The approximate amount of time, in seconds, that must pass with the
+       * job in the specified state before the action is taken. 
+       * The minimum value is 600 (10 minutes) and the maximum value is 86,400 (24 hours).
+       */
+      public fun maxTimeSeconds(maxTimeSeconds: Number)
+
+      /**
+       * @param reason The reason to log for the action being taken. 
+       */
+      public fun reason(reason: String)
+
+      /**
+       * @param state The state of the job needed to trigger the action. 
+       * The only supported value is `RUNNABLE` .
+       */
+      public fun state(state: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty.builder()
+
+      /**
+       * @param action The action to take when a job is at the head of the job queue in the
+       * specified state for the specified period of time. 
+       * The only supported value is `CANCEL` , which will cancel the job.
+       */
+      override fun action(action: String) {
+        cdkBuilder.action(action)
+      }
+
+      /**
+       * @param maxTimeSeconds The approximate amount of time, in seconds, that must pass with the
+       * job in the specified state before the action is taken. 
+       * The minimum value is 600 (10 minutes) and the maximum value is 86,400 (24 hours).
+       */
+      override fun maxTimeSeconds(maxTimeSeconds: Number) {
+        cdkBuilder.maxTimeSeconds(maxTimeSeconds)
+      }
+
+      /**
+       * @param reason The reason to log for the action being taken. 
+       */
+      override fun reason(reason: String) {
+        cdkBuilder.reason(reason)
+      }
+
+      /**
+       * @param state The state of the job needed to trigger the action. 
+       * The only supported value is `RUNNABLE` .
+       */
+      override fun state(state: String) {
+        cdkBuilder.state(state)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty,
+    ) : CdkObject(cdkObject), JobStateTimeLimitActionProperty {
+      /**
+       * The action to take when a job is at the head of the job queue in the specified state for
+       * the specified period of time.
+       *
+       * The only supported value is `CANCEL` , which will cancel the job.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-action)
+       */
+      override fun action(): String = unwrap(this).getAction()
+
+      /**
+       * The approximate amount of time, in seconds, that must pass with the job in the specified
+       * state before the action is taken.
+       *
+       * The minimum value is 600 (10 minutes) and the maximum value is 86,400 (24 hours).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-maxtimeseconds)
+       */
+      override fun maxTimeSeconds(): Number = unwrap(this).getMaxTimeSeconds()
+
+      /**
+       * The reason to log for the action being taken.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-reason)
+       */
+      override fun reason(): String = unwrap(this).getReason()
+
+      /**
+       * The state of the job needed to trigger the action.
+       *
+       * The only supported value is `RUNNABLE` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobqueue-jobstatetimelimitaction.html#cfn-batch-jobqueue-jobstatetimelimitaction-state)
+       */
+      override fun state(): String = unwrap(this).getState()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): JobStateTimeLimitActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty):
+          JobStateTimeLimitActionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          JobStateTimeLimitActionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: JobStateTimeLimitActionProperty):
+          software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnJobQueue.JobStateTimeLimitActionProperty
     }
   }
 }

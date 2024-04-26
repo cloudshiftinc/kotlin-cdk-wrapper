@@ -141,6 +141,14 @@ public interface FileSystemProps {
       unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
 
   /**
+   * Replication configuration for the file system.
+   *
+   * Default: - no replication
+   */
+  public fun replicationConfiguration(): ReplicationConfiguration? =
+      unwrap(this).getReplicationConfiguration()?.let(ReplicationConfiguration::wrap)
+
+  /**
    * Whether to enable the filesystem's replication overwrite protection or not.
    *
    * Set false if you want to create a read-only filesystem for use as a replication destination.
@@ -277,6 +285,11 @@ public interface FileSystemProps {
      * @param removalPolicy The removal policy to apply to the file system.
      */
     public fun removalPolicy(removalPolicy: RemovalPolicy)
+
+    /**
+     * @param replicationConfiguration Replication configuration for the file system.
+     */
+    public fun replicationConfiguration(replicationConfiguration: ReplicationConfiguration)
 
     /**
      * @param replicationOverwriteProtection Whether to enable the filesystem's replication
@@ -430,6 +443,13 @@ public interface FileSystemProps {
      */
     override fun removalPolicy(removalPolicy: RemovalPolicy) {
       cdkBuilder.removalPolicy(removalPolicy.let(RemovalPolicy::unwrap))
+    }
+
+    /**
+     * @param replicationConfiguration Replication configuration for the file system.
+     */
+    override fun replicationConfiguration(replicationConfiguration: ReplicationConfiguration) {
+      cdkBuilder.replicationConfiguration(replicationConfiguration.let(ReplicationConfiguration::unwrap))
     }
 
     /**
@@ -600,6 +620,14 @@ public interface FileSystemProps {
      */
     override fun removalPolicy(): RemovalPolicy? =
         unwrap(this).getRemovalPolicy()?.let(RemovalPolicy::wrap)
+
+    /**
+     * Replication configuration for the file system.
+     *
+     * Default: - no replication
+     */
+    override fun replicationConfiguration(): ReplicationConfiguration? =
+        unwrap(this).getReplicationConfiguration()?.let(ReplicationConfiguration::wrap)
 
     /**
      * Whether to enable the filesystem's replication overwrite protection or not.

@@ -12,7 +12,7 @@ import kotlin.String
 import kotlin.Unit
 
 /**
- * Properties for an AppSync RDS datasource.
+ * Properties for an AppSync RDS datasource Aurora Serverless V1.
  *
  * Example:
  *

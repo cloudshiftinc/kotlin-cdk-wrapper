@@ -88,7 +88,11 @@ public interface CfnCertificateProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * Specifies whether this certificate is used for signing or encryption.
+   * Specifies how this certificate is used. It can be used in the following ways:.
+   *
+   * * `SIGNING` : For signing AS2 messages
+   * * `ENCRYPTION` : For encrypting AS2 messages
+   * * `TLS` : For securing AS2 communications sent over HTTPS
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-usage)
    */
@@ -141,7 +145,10 @@ public interface CfnCertificateProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param usage Specifies whether this certificate is used for signing or encryption. 
+     * @param usage Specifies how this certificate is used. It can be used in the following ways:. 
+     * * `SIGNING` : For signing AS2 messages
+     * * `ENCRYPTION` : For encrypting AS2 messages
+     * * `TLS` : For securing AS2 communications sent over HTTPS
      */
     public fun usage(usage: String)
   }
@@ -206,7 +213,10 @@ public interface CfnCertificateProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param usage Specifies whether this certificate is used for signing or encryption. 
+     * @param usage Specifies how this certificate is used. It can be used in the following ways:. 
+     * * `SIGNING` : For signing AS2 messages
+     * * `ENCRYPTION` : For encrypting AS2 messages
+     * * `TLS` : For securing AS2 communications sent over HTTPS
      */
     override fun usage(usage: String) {
       cdkBuilder.usage(usage)
@@ -269,7 +279,11 @@ public interface CfnCertificateProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * Specifies whether this certificate is used for signing or encryption.
+     * Specifies how this certificate is used. It can be used in the following ways:.
+     *
+     * * `SIGNING` : For signing AS2 messages
+     * * `ENCRYPTION` : For encrypting AS2 messages
+     * * `TLS` : For securing AS2 communications sent over HTTPS
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-certificate.html#cfn-transfer-certificate-usage)
      */

@@ -27,20 +27,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Vpc vpc;
- * IInstanceEngine engine =
- * DatabaseInstanceEngine.postgres(PostgresInstanceEngineProps.builder().version(PostgresEngineVersion.VER_15_2).build());
- * Key myKey = new Key(this, "MyKey");
- * DatabaseInstance.Builder.create(this, "InstanceWithCustomizedSecret")
- * .engine(engine)
- * .vpc(vpc)
- * .credentials(Credentials.fromGeneratedSecret("postgres", CredentialsBaseOptions.builder()
- * .secretName("my-cool-name")
- * .encryptionKey(myKey)
- * .excludeCharacters("!&amp;*^#&#64;()")
- * .replicaRegions(List.of(ReplicaRegion.builder().region("eu-west-1").build(),
- * ReplicaRegion.builder().region("eu-west-2").build()))
- * .build()))
+ * Bucket destinationBucket;
+ * IBucket sourceBucket = Bucket.fromBucketAttributes(this, "SourceBucket",
+ * BucketAttributes.builder()
+ * .bucketArn("arn:aws:s3:::my-source-bucket-name")
+ * .encryptionKey(Key.fromKeyArn(this, "SourceBucketEncryptionKey",
+ * "arn:aws:kms:us-east-1:123456789012:key/&lt;key-id&gt;"))
+ * .build());
+ * BucketDeployment deployment = BucketDeployment.Builder.create(this, "DeployFiles")
+ * .sources(List.of(Source.bucket(sourceBucket, "source.zip")))
+ * .destinationBucket(destinationBucket)
  * .build();
  * ```
  */

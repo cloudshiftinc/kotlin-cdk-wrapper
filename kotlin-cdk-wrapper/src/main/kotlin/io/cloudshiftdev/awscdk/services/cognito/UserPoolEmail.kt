@@ -37,13 +37,13 @@ public abstract class UserPoolEmail(
     public fun withCognito(replyTo: String): UserPoolEmail =
         software.amazon.awscdk.services.cognito.UserPoolEmail.withCognito(replyTo).let(UserPoolEmail::wrap)
 
-    public fun withSes(options: UserPoolSESOptions): UserPoolEmail =
+    public fun withSES(options: UserPoolSESOptions): UserPoolEmail =
         software.amazon.awscdk.services.cognito.UserPoolEmail.withSES(options.let(UserPoolSESOptions::unwrap)).let(UserPoolEmail::wrap)
 
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("936601e098b55fdc321a4be6ec6742fa825f535416e14399c65ae36e1d5754de")
-    public fun withSes(options: UserPoolSESOptions.Builder.() -> Unit): UserPoolEmail =
-        withSes(UserPoolSESOptions(options))
+    @JvmName("9e7aea2e201aad045c9833224b0201605c7bf4c957cb5e589fe1dc1de7dbbb79")
+    public fun withSES(options: UserPoolSESOptions.Builder.() -> Unit): UserPoolEmail =
+        withSES(UserPoolSESOptions(options))
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.cognito.UserPoolEmail):
         UserPoolEmail = CdkObjectWrappers.wrap(cdkObject) as? UserPoolEmail ?: Wrapper(cdkObject)

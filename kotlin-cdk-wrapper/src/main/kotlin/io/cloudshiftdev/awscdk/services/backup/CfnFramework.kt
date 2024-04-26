@@ -164,20 +164,20 @@ public open class CfnFramework(
   }
 
   /**
-   * A list of tags with which to tag your framework.
+   * The tags to assign to your framework.
    */
   public open fun frameworkTags(): List<CfnTag> = unwrap(this).getFrameworkTags()?.map(CfnTag::wrap)
       ?: emptyList()
 
   /**
-   * A list of tags with which to tag your framework.
+   * The tags to assign to your framework.
    */
   public open fun frameworkTags(`value`: List<CfnTag>) {
     unwrap(this).setFrameworkTags(`value`.map(CfnTag::unwrap))
   }
 
   /**
-   * A list of tags with which to tag your framework.
+   * The tags to assign to your framework.
    */
   public open fun frameworkTags(vararg `value`: CfnTag): Unit = frameworkTags(`value`.toList())
 
@@ -249,18 +249,18 @@ public open class CfnFramework(
     public fun frameworkName(frameworkName: String)
 
     /**
-     * A list of tags with which to tag your framework.
+     * The tags to assign to your framework.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
+     * @param frameworkTags The tags to assign to your framework. 
      */
     public fun frameworkTags(frameworkTags: List<CfnTag>)
 
     /**
-     * A list of tags with which to tag your framework.
+     * The tags to assign to your framework.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
+     * @param frameworkTags The tags to assign to your framework. 
      */
     public fun frameworkTags(vararg frameworkTags: CfnTag)
   }
@@ -335,20 +335,20 @@ public open class CfnFramework(
     }
 
     /**
-     * A list of tags with which to tag your framework.
+     * The tags to assign to your framework.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
+     * @param frameworkTags The tags to assign to your framework. 
      */
     override fun frameworkTags(frameworkTags: List<CfnTag>) {
       cdkBuilder.frameworkTags(frameworkTags.map(CfnTag::unwrap))
     }
 
     /**
-     * A list of tags with which to tag your framework.
+     * The tags to assign to your framework.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-framework.html#cfn-backup-framework-frameworktags)
-     * @param frameworkTags A list of tags with which to tag your framework. 
+     * @param frameworkTags The tags to assign to your framework. 
      */
     override fun frameworkTags(vararg frameworkTags: CfnTag): Unit =
         frameworkTags(frameworkTags.toList())
@@ -377,7 +377,7 @@ public open class CfnFramework(
   }
 
   /**
-   * A list of parameters for a control.
+   * The parameters for a control.
    *
    * A control can have zero, one, or more than one parameter. An example of a control with two
    * parameters is: "backup plan frequency is at least `daily` and the retention period is at least `1
@@ -748,7 +748,7 @@ public open class CfnFramework(
    */
   public interface FrameworkControlProperty {
     /**
-     * A list of `ParameterName` and `ParameterValue` pairs.
+     * The name/value pairs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
      */
@@ -782,17 +782,17 @@ public open class CfnFramework(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param controlInputParameters The name/value pairs.
        */
       public fun controlInputParameters(controlInputParameters: IResolvable)
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param controlInputParameters The name/value pairs.
        */
       public fun controlInputParameters(controlInputParameters: List<Any>)
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param controlInputParameters The name/value pairs.
        */
       public fun controlInputParameters(vararg controlInputParameters: Any)
 
@@ -819,21 +819,21 @@ public open class CfnFramework(
           software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty.builder()
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param controlInputParameters The name/value pairs.
        */
       override fun controlInputParameters(controlInputParameters: IResolvable) {
         cdkBuilder.controlInputParameters(controlInputParameters.let(IResolvable::unwrap))
       }
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param controlInputParameters The name/value pairs.
        */
       override fun controlInputParameters(controlInputParameters: List<Any>) {
         cdkBuilder.controlInputParameters(controlInputParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param controlInputParameters A list of `ParameterName` and `ParameterValue` pairs.
+       * @param controlInputParameters The name/value pairs.
        */
       override fun controlInputParameters(vararg controlInputParameters: Any): Unit =
           controlInputParameters(controlInputParameters.toList())
@@ -867,7 +867,7 @@ public open class CfnFramework(
       cdkObject: software.amazon.awscdk.services.backup.CfnFramework.FrameworkControlProperty,
     ) : CdkObject(cdkObject), FrameworkControlProperty {
       /**
-       * A list of `ParameterName` and `ParameterValue` pairs.
+       * The name/value pairs.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-framework-frameworkcontrol.html#cfn-backup-framework-frameworkcontrol-controlinputparameters)
        */

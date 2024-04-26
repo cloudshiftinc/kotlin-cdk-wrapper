@@ -187,6 +187,19 @@ public open class FargateTaskDefinition(
     public fun memoryLimitMiB(memoryLimitMiB: Number)
 
     /**
+     * The process namespace to use for the containers in the task.
+     *
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
+     *
+     * Default: - PidMode used by the task is not specified
+     *
+     * @param pidMode The process namespace to use for the containers in the task. 
+     */
+    public fun pidMode(pidMode: PidMode)
+
+    /**
      * The configuration details for the App Mesh proxy.
      *
      * Default: - No proxy configuration.
@@ -376,6 +389,21 @@ public open class FargateTaskDefinition(
      */
     override fun memoryLimitMiB(memoryLimitMiB: Number) {
       cdkBuilder.memoryLimitMiB(memoryLimitMiB)
+    }
+
+    /**
+     * The process namespace to use for the containers in the task.
+     *
+     * Only supported for tasks that are hosted on AWS Fargate if the tasks
+     * are using platform version 1.4.0 or later (Linux).
+     * Not supported in Windows containers.
+     *
+     * Default: - PidMode used by the task is not specified
+     *
+     * @param pidMode The process namespace to use for the containers in the task. 
+     */
+    override fun pidMode(pidMode: PidMode) {
+      cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
     }
 
     /**

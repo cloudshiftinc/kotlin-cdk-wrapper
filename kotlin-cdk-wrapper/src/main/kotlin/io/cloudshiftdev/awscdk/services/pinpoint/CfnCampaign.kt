@@ -4921,9 +4921,13 @@ public open class CfnCampaign(
     public fun defaultMessage(): Any? = unwrap(this).getDefaultMessage()
 
     /**
-     * The message that the campaign sends through the email channel.
+     * The message that the campaign sends through the email channel. If specified, this message
+     * overrides the default message.
      *
-     * If specified, this message overrides the default message.
+     *
+     * The maximum email message size is 200KB. You can use email templates to send larger email
+     * messages.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-messageconfiguration.html#cfn-pinpoint-campaign-messageconfiguration-emailmessage)
      */
@@ -5079,20 +5083,29 @@ public open class CfnCampaign(
       public fun defaultMessage(defaultMessage: MessageProperty.Builder.() -> Unit)
 
       /**
-       * @param emailMessage The message that the campaign sends through the email channel.
-       * If specified, this message overrides the default message.
+       * @param emailMessage The message that the campaign sends through the email channel. If
+       * specified, this message overrides the default message.
+       *
+       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * messages.
        */
       public fun emailMessage(emailMessage: IResolvable)
 
       /**
-       * @param emailMessage The message that the campaign sends through the email channel.
-       * If specified, this message overrides the default message.
+       * @param emailMessage The message that the campaign sends through the email channel. If
+       * specified, this message overrides the default message.
+       *
+       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * messages.
        */
       public fun emailMessage(emailMessage: CampaignEmailMessageProperty)
 
       /**
-       * @param emailMessage The message that the campaign sends through the email channel.
-       * If specified, this message overrides the default message.
+       * @param emailMessage The message that the campaign sends through the email channel. If
+       * specified, this message overrides the default message.
+       *
+       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * messages.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27371de087267f4f96761f1118ec73d5c86b4e657bf26ce2ba84ab880dae2c0d")
@@ -5312,24 +5325,33 @@ public open class CfnCampaign(
           defaultMessage(MessageProperty(defaultMessage))
 
       /**
-       * @param emailMessage The message that the campaign sends through the email channel.
-       * If specified, this message overrides the default message.
+       * @param emailMessage The message that the campaign sends through the email channel. If
+       * specified, this message overrides the default message.
+       *
+       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * messages.
        */
       override fun emailMessage(emailMessage: IResolvable) {
         cdkBuilder.emailMessage(emailMessage.let(IResolvable::unwrap))
       }
 
       /**
-       * @param emailMessage The message that the campaign sends through the email channel.
-       * If specified, this message overrides the default message.
+       * @param emailMessage The message that the campaign sends through the email channel. If
+       * specified, this message overrides the default message.
+       *
+       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * messages.
        */
       override fun emailMessage(emailMessage: CampaignEmailMessageProperty) {
         cdkBuilder.emailMessage(emailMessage.let(CampaignEmailMessageProperty::unwrap))
       }
 
       /**
-       * @param emailMessage The message that the campaign sends through the email channel.
-       * If specified, this message overrides the default message.
+       * @param emailMessage The message that the campaign sends through the email channel. If
+       * specified, this message overrides the default message.
+       *
+       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * messages.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("27371de087267f4f96761f1118ec73d5c86b4e657bf26ce2ba84ab880dae2c0d")
@@ -5472,9 +5494,13 @@ public open class CfnCampaign(
       override fun defaultMessage(): Any? = unwrap(this).getDefaultMessage()
 
       /**
-       * The message that the campaign sends through the email channel.
+       * The message that the campaign sends through the email channel. If specified, this message
+       * overrides the default message.
        *
-       * If specified, this message overrides the default message.
+       *
+       * The maximum email message size is 200KB. You can use email templates to send larger email
+       * messages.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-pinpoint-campaign-messageconfiguration.html#cfn-pinpoint-campaign-messageconfiguration-emailmessage)
        */

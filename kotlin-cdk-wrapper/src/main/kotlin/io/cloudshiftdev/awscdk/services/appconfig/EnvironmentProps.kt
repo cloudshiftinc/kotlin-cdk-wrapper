@@ -19,10 +19,15 @@ import kotlin.collections.List
  * Environment env = Environment.Builder.create(this, "MyEnv")
  * .application(app)
  * .build();
- * HostedConfiguration.Builder.create(this, "MyHostedConfig")
+ * HostedConfiguration.Builder.create(this, "MyFirstHostedConfig")
  * .application(app)
  * .deployTo(List.of(env))
- * .content(ConfigurationContent.fromInlineText("This is my configuration content."))
+ * .content(ConfigurationContent.fromInlineText("This is my first configuration content."))
+ * .build();
+ * HostedConfiguration.Builder.create(this, "MySecondHostedConfig")
+ * .application(app)
+ * .deployTo(List.of(env))
+ * .content(ConfigurationContent.fromInlineText("This is my second configuration content."))
  * .build();
  * ```
  */

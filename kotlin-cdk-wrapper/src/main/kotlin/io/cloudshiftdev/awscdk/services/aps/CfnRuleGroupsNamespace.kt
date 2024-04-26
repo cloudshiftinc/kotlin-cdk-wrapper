@@ -19,7 +19,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * The definition of a rule groups namespace in an Amazon Managed Service for Prometheus workspace.
  *
  * A rule groups namespace is associated with exactly one rules file. A workspace can have multiple
- * rule groups namespaces. For more information about rules files, seee [Creating a rules
+ * rule groups namespaces. For more information about rules files, see [Creating a rules
  * file](https://docs.aws.amazon.com/prometheus/latest/userguide/AMP-ruler-rulesfile.html) , in the
  * *Amazon Managed Service for Prometheus User Guide* .
  *
@@ -129,14 +129,12 @@ public open class CfnRuleGroupsNamespace(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
-   * An Amazon Managed Service for Prometheus workspace is a logical and isolated Prometheus server
-   * dedicated to ingesting, storing, and querying your Prometheus-compatible metrics.
+   * The ID of the workspace to add the rule groups namespace.
    */
   public open fun workspace(): String = unwrap(this).getWorkspace()
 
   /**
-   * An Amazon Managed Service for Prometheus workspace is a logical and isolated Prometheus server
-   * dedicated to ingesting, storing, and querying your Prometheus-compatible metrics.
+   * The ID of the workspace to add the rule groups namespace.
    */
   public open fun workspace(`value`: String) {
     unwrap(this).setWorkspace(`value`)
@@ -186,13 +184,10 @@ public open class CfnRuleGroupsNamespace(
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * An Amazon Managed Service for Prometheus workspace is a logical and isolated Prometheus
-     * server dedicated to ingesting, storing, and querying your Prometheus-compatible metrics.
+     * The ID of the workspace to add the rule groups namespace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-rulegroupsnamespace.html#cfn-aps-rulegroupsnamespace-workspace)
-     * @param workspace An Amazon Managed Service for Prometheus workspace is a logical and isolated
-     * Prometheus server dedicated to ingesting, storing, and querying your Prometheus-compatible
-     * metrics. 
+     * @param workspace The ID of the workspace to add the rule groups namespace. 
      */
     public fun workspace(workspace: String)
   }
@@ -249,13 +244,10 @@ public open class CfnRuleGroupsNamespace(
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * An Amazon Managed Service for Prometheus workspace is a logical and isolated Prometheus
-     * server dedicated to ingesting, storing, and querying your Prometheus-compatible metrics.
+     * The ID of the workspace to add the rule groups namespace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-aps-rulegroupsnamespace.html#cfn-aps-rulegroupsnamespace-workspace)
-     * @param workspace An Amazon Managed Service for Prometheus workspace is a logical and isolated
-     * Prometheus server dedicated to ingesting, storing, and querying your Prometheus-compatible
-     * metrics. 
+     * @param workspace The ID of the workspace to add the rule groups namespace. 
      */
     override fun workspace(workspace: String) {
       cdkBuilder.workspace(workspace)

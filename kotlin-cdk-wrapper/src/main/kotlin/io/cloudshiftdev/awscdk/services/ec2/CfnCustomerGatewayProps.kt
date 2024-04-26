@@ -21,10 +21,12 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * CfnCustomerGatewayProps cfnCustomerGatewayProps = CfnCustomerGatewayProps.builder()
- * .bgpAsn(123)
  * .ipAddress("ipAddress")
  * .type("type")
  * // the properties below are optional
+ * .bgpAsn(123)
+ * .bgpAsnExtended(123)
+ * .certificateArn("certificateArn")
  * .deviceName("deviceName")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -45,7 +47,19 @@ public interface CfnCustomerGatewayProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasn)
    */
-  public fun bgpAsn(): Number
+  public fun bgpAsn(): Number? = unwrap(this).getBgpAsn()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
+   */
+  public fun bgpAsnExtended(): Number? = unwrap(this).getBgpAsnExtended()
+
+  /**
+   * The Amazon Resource Name (ARN) for the customer gateway certificate.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-certificatearn)
+   */
+  public fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
   /**
    * The name of customer gateway device.
@@ -83,10 +97,20 @@ public interface CfnCustomerGatewayProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN. 
+     * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN.
      * Default: 65000
      */
     public fun bgpAsn(bgpAsn: Number)
+
+    /**
+     * @param bgpAsnExtended the value to be set.
+     */
+    public fun bgpAsnExtended(bgpAsnExtended: Number)
+
+    /**
+     * @param certificateArn The Amazon Resource Name (ARN) for the customer gateway certificate.
+     */
+    public fun certificateArn(certificateArn: String)
 
     /**
      * @param deviceName The name of customer gateway device.
@@ -120,11 +144,25 @@ public interface CfnCustomerGatewayProps {
         software.amazon.awscdk.services.ec2.CfnCustomerGatewayProps.builder()
 
     /**
-     * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN. 
+     * @param bgpAsn For devices that support BGP, the customer gateway's BGP ASN.
      * Default: 65000
      */
     override fun bgpAsn(bgpAsn: Number) {
       cdkBuilder.bgpAsn(bgpAsn)
+    }
+
+    /**
+     * @param bgpAsnExtended the value to be set.
+     */
+    override fun bgpAsnExtended(bgpAsnExtended: Number) {
+      cdkBuilder.bgpAsnExtended(bgpAsnExtended)
+    }
+
+    /**
+     * @param certificateArn The Amazon Resource Name (ARN) for the customer gateway certificate.
+     */
+    override fun certificateArn(certificateArn: String) {
+      cdkBuilder.certificateArn(certificateArn)
     }
 
     /**
@@ -177,7 +215,19 @@ public interface CfnCustomerGatewayProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasn)
      */
-    override fun bgpAsn(): Number = unwrap(this).getBgpAsn()
+    override fun bgpAsn(): Number? = unwrap(this).getBgpAsn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-bgpasnextended)
+     */
+    override fun bgpAsnExtended(): Number? = unwrap(this).getBgpAsnExtended()
+
+    /**
+     * The Amazon Resource Name (ARN) for the customer gateway certificate.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customergateway.html#cfn-ec2-customergateway-certificatearn)
+     */
+    override fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
     /**
      * The name of customer gateway device.

@@ -132,20 +132,20 @@ public open class CfnReportPlan(
   }
 
   /**
-   * A list of tags to tag your report plan.
+   * The tags to assign to your report plan.
    */
   public open fun reportPlanTags(): List<CfnTag> =
       unwrap(this).getReportPlanTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * A list of tags to tag your report plan.
+   * The tags to assign to your report plan.
    */
   public open fun reportPlanTags(`value`: List<CfnTag>) {
     unwrap(this).setReportPlanTags(`value`.map(CfnTag::unwrap))
   }
 
   /**
-   * A list of tags to tag your report plan.
+   * The tags to assign to your report plan.
    */
   public open fun reportPlanTags(vararg `value`: CfnTag): Unit = reportPlanTags(`value`.toList())
 
@@ -202,18 +202,18 @@ public open class CfnReportPlan(
     public fun reportPlanName(reportPlanName: String)
 
     /**
-     * A list of tags to tag your report plan.
+     * The tags to assign to your report plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
-     * @param reportPlanTags A list of tags to tag your report plan. 
+     * @param reportPlanTags The tags to assign to your report plan. 
      */
     public fun reportPlanTags(reportPlanTags: List<CfnTag>)
 
     /**
-     * A list of tags to tag your report plan.
+     * The tags to assign to your report plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
-     * @param reportPlanTags A list of tags to tag your report plan. 
+     * @param reportPlanTags The tags to assign to your report plan. 
      */
     public fun reportPlanTags(vararg reportPlanTags: CfnTag)
 
@@ -279,20 +279,20 @@ public open class CfnReportPlan(
     }
 
     /**
-     * A list of tags to tag your report plan.
+     * The tags to assign to your report plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
-     * @param reportPlanTags A list of tags to tag your report plan. 
+     * @param reportPlanTags The tags to assign to your report plan. 
      */
     override fun reportPlanTags(reportPlanTags: List<CfnTag>) {
       cdkBuilder.reportPlanTags(reportPlanTags.map(CfnTag::unwrap))
     }
 
     /**
-     * A list of tags to tag your report plan.
+     * The tags to assign to your report plan.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-reportplan.html#cfn-backup-reportplan-reportplantags)
-     * @param reportPlanTags A list of tags to tag your report plan. 
+     * @param reportPlanTags The tags to assign to your report plan. 
      */
     override fun reportPlanTags(vararg reportPlanTags: CfnTag): Unit =
         reportPlanTags(reportPlanTags.toList())
@@ -362,7 +362,7 @@ public open class CfnReportPlan(
    */
   public interface ReportDeliveryChannelProperty {
     /**
-     * A list of the format of your reports: `CSV` , `JSON` , or both.
+     * The format of your reports: `CSV` , `JSON` , or both.
      *
      * If not specified, the default format is `CSV` .
      *
@@ -393,13 +393,13 @@ public open class CfnReportPlan(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * @param formats The format of your reports: `CSV` , `JSON` , or both.
        * If not specified, the default format is `CSV` .
        */
       public fun formats(formats: List<String>)
 
       /**
-       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * @param formats The format of your reports: `CSV` , `JSON` , or both.
        * If not specified, the default format is `CSV` .
        */
       public fun formats(vararg formats: String)
@@ -425,7 +425,7 @@ public open class CfnReportPlan(
           software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty.builder()
 
       /**
-       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * @param formats The format of your reports: `CSV` , `JSON` , or both.
        * If not specified, the default format is `CSV` .
        */
       override fun formats(formats: List<String>) {
@@ -433,7 +433,7 @@ public open class CfnReportPlan(
       }
 
       /**
-       * @param formats A list of the format of your reports: `CSV` , `JSON` , or both.
+       * @param formats The format of your reports: `CSV` , `JSON` , or both.
        * If not specified, the default format is `CSV` .
        */
       override fun formats(vararg formats: String): Unit = formats(formats.toList())
@@ -464,7 +464,7 @@ public open class CfnReportPlan(
       cdkObject: software.amazon.awscdk.services.backup.CfnReportPlan.ReportDeliveryChannelProperty,
     ) : CdkObject(cdkObject), ReportDeliveryChannelProperty {
       /**
-       * A list of the format of your reports: `CSV` , `JSON` , or both.
+       * The format of your reports: `CSV` , `JSON` , or both.
        *
        * If not specified, the default format is `CSV` .
        *
@@ -533,6 +533,8 @@ public open class CfnReportPlan(
     /**
      * These are the accounts to be included in the report.
      *
+     * Use string value of `ROOT` to include all organizational units.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-accounts)
      */
     public fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
@@ -554,6 +556,8 @@ public open class CfnReportPlan(
 
     /**
      * These are the Regions to be included in the report.
+     *
+     * Use the wildcard as the string value to include all Regions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-regions)
      */
@@ -577,11 +581,13 @@ public open class CfnReportPlan(
     public interface Builder {
       /**
        * @param accounts These are the accounts to be included in the report.
+       * Use string value of `ROOT` to include all organizational units.
        */
       public fun accounts(accounts: List<String>)
 
       /**
        * @param accounts These are the accounts to be included in the report.
+       * Use string value of `ROOT` to include all organizational units.
        */
       public fun accounts(vararg accounts: String)
 
@@ -607,11 +613,13 @@ public open class CfnReportPlan(
 
       /**
        * @param regions These are the Regions to be included in the report.
+       * Use the wildcard as the string value to include all Regions.
        */
       public fun regions(regions: List<String>)
 
       /**
        * @param regions These are the Regions to be included in the report.
+       * Use the wildcard as the string value to include all Regions.
        */
       public fun regions(vararg regions: String)
 
@@ -631,6 +639,7 @@ public open class CfnReportPlan(
 
       /**
        * @param accounts These are the accounts to be included in the report.
+       * Use string value of `ROOT` to include all organizational units.
        */
       override fun accounts(accounts: List<String>) {
         cdkBuilder.accounts(accounts)
@@ -638,6 +647,7 @@ public open class CfnReportPlan(
 
       /**
        * @param accounts These are the accounts to be included in the report.
+       * Use string value of `ROOT` to include all organizational units.
        */
       override fun accounts(vararg accounts: String): Unit = accounts(accounts.toList())
 
@@ -669,6 +679,7 @@ public open class CfnReportPlan(
 
       /**
        * @param regions These are the Regions to be included in the report.
+       * Use the wildcard as the string value to include all Regions.
        */
       override fun regions(regions: List<String>) {
         cdkBuilder.regions(regions)
@@ -676,6 +687,7 @@ public open class CfnReportPlan(
 
       /**
        * @param regions These are the Regions to be included in the report.
+       * Use the wildcard as the string value to include all Regions.
        */
       override fun regions(vararg regions: String): Unit = regions(regions.toList())
 
@@ -699,6 +711,8 @@ public open class CfnReportPlan(
       /**
        * These are the accounts to be included in the report.
        *
+       * Use string value of `ROOT` to include all organizational units.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-accounts)
        */
       override fun accounts(): List<String> = unwrap(this).getAccounts() ?: emptyList()
@@ -720,6 +734,8 @@ public open class CfnReportPlan(
 
       /**
        * These are the Regions to be included in the report.
+       *
+       * Use the wildcard as the string value to include all Regions.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-backup-reportplan-reportsetting.html#cfn-backup-reportplan-reportsetting-regions)
        */

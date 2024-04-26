@@ -18,10 +18,8 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * Topic topic = Topic.Builder.create(this, "Topic")
- * .contentBasedDeduplication(true)
- * .displayName("Customer subscription topic")
- * .fifo(true)
+ * Topic topic = Topic.Builder.create(this, "MyTopic")
+ * .tracingConfig(TracingConfig.ACTIVE)
  * .build();
  * ```
  */
@@ -43,12 +41,11 @@ public interface TopicProps {
   /**
    * Adds a statement to enforce encryption of data in transit when publishing to the topic.
    *
-   * For more information, see
-   * https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.
-   *
    * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.)
    */
-  public fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+  public fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
   /**
    * Set to true to create a FIFO topic.
@@ -60,9 +57,9 @@ public interface TopicProps {
   /**
    * The list of delivery status logging configurations for the topic.
    *
-   * For more information, see https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
-   *
    * Default: None
+   *
+   * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.)
    */
   public fun loggingConfigs(): List<LoggingConfig> =
       unwrap(this).getLoggingConfigs()?.map(LoggingConfig::wrap) ?: emptyList()
@@ -87,6 +84,17 @@ public interface TopicProps {
       unwrap(this).getMessageRetentionPeriodInDays()
 
   /**
+   * The signature version corresponds to the hashing algorithm used while creating the signature of
+   * the notifications, subscription confirmations, or unsubscribe confirmation messages sent by Amazon
+   * SNS.
+   *
+   * Default: 1
+   *
+   * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-verify-signature-of-message.html.)
+   */
+  public fun signatureVersion(): String? = unwrap(this).getSignatureVersion()
+
+  /**
    * A name for the topic.
    *
    * If you don't specify a name, AWS CloudFormation generates a unique
@@ -96,6 +104,16 @@ public interface TopicProps {
    * Default: Generated name
    */
   public fun topicName(): String? = unwrap(this).getTopicName()
+
+  /**
+   * Tracing mode of an Amazon SNS topic.
+   *
+   * Default: TracingConfig.PASS_THROUGH
+   *
+   * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-active-tracing.html)
+   */
+  public fun tracingConfig(): TracingConfig? =
+      unwrap(this).getTracingConfig()?.let(TracingConfig::wrap)
 
   /**
    * A builder for [TopicProps]
@@ -115,8 +133,6 @@ public interface TopicProps {
     /**
      * @param enforceSsl Adds a statement to enforce encryption of data in transit when publishing
      * to the topic.
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.
      */
     public fun enforceSsl(enforceSsl: Boolean)
 
@@ -127,15 +143,11 @@ public interface TopicProps {
 
     /**
      * @param loggingConfigs The list of delivery status logging configurations for the topic.
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
      */
     public fun loggingConfigs(loggingConfigs: List<LoggingConfig>)
 
     /**
      * @param loggingConfigs The list of delivery status logging configurations for the topic.
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
      */
     public fun loggingConfigs(vararg loggingConfigs: LoggingConfig)
 
@@ -151,12 +163,24 @@ public interface TopicProps {
     public fun messageRetentionPeriodInDays(messageRetentionPeriodInDays: Number)
 
     /**
+     * @param signatureVersion The signature version corresponds to the hashing algorithm used while
+     * creating the signature of the notifications, subscription confirmations, or unsubscribe
+     * confirmation messages sent by Amazon SNS.
+     */
+    public fun signatureVersion(signatureVersion: String)
+
+    /**
      * @param topicName A name for the topic.
      * If you don't specify a name, AWS CloudFormation generates a unique
      * physical ID and uses that ID for the topic name. For more information,
      * see Name Type.
      */
     public fun topicName(topicName: String)
+
+    /**
+     * @param tracingConfig Tracing mode of an Amazon SNS topic.
+     */
+    public fun tracingConfig(tracingConfig: TracingConfig)
   }
 
   private class BuilderImpl : Builder {
@@ -180,8 +204,6 @@ public interface TopicProps {
     /**
      * @param enforceSsl Adds a statement to enforce encryption of data in transit when publishing
      * to the topic.
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.
      */
     override fun enforceSsl(enforceSsl: Boolean) {
       cdkBuilder.enforceSsl(enforceSsl)
@@ -196,8 +218,6 @@ public interface TopicProps {
 
     /**
      * @param loggingConfigs The list of delivery status logging configurations for the topic.
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
      */
     override fun loggingConfigs(loggingConfigs: List<LoggingConfig>) {
       cdkBuilder.loggingConfigs(loggingConfigs.map(LoggingConfig::unwrap))
@@ -205,8 +225,6 @@ public interface TopicProps {
 
     /**
      * @param loggingConfigs The list of delivery status logging configurations for the topic.
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
      */
     override fun loggingConfigs(vararg loggingConfigs: LoggingConfig): Unit =
         loggingConfigs(loggingConfigs.toList())
@@ -227,6 +245,15 @@ public interface TopicProps {
     }
 
     /**
+     * @param signatureVersion The signature version corresponds to the hashing algorithm used while
+     * creating the signature of the notifications, subscription confirmations, or unsubscribe
+     * confirmation messages sent by Amazon SNS.
+     */
+    override fun signatureVersion(signatureVersion: String) {
+      cdkBuilder.signatureVersion(signatureVersion)
+    }
+
+    /**
      * @param topicName A name for the topic.
      * If you don't specify a name, AWS CloudFormation generates a unique
      * physical ID and uses that ID for the topic name. For more information,
@@ -234,6 +261,13 @@ public interface TopicProps {
      */
     override fun topicName(topicName: String) {
       cdkBuilder.topicName(topicName)
+    }
+
+    /**
+     * @param tracingConfig Tracing mode of an Amazon SNS topic.
+     */
+    override fun tracingConfig(tracingConfig: TracingConfig) {
+      cdkBuilder.tracingConfig(tracingConfig.let(TracingConfig::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.sns.TopicProps = cdkBuilder.build()
@@ -259,12 +293,11 @@ public interface TopicProps {
     /**
      * Adds a statement to enforce encryption of data in transit when publishing to the topic.
      *
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.
-     *
      * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-security-best-practices.html#enforce-encryption-data-in-transit.)
      */
-    override fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+    override fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
     /**
      * Set to true to create a FIFO topic.
@@ -276,10 +309,9 @@ public interface TopicProps {
     /**
      * The list of delivery status logging configurations for the topic.
      *
-     * For more information, see
-     * https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.
-     *
      * Default: None
+     *
+     * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-topic-attributes.html.)
      */
     override fun loggingConfigs(): List<LoggingConfig> =
         unwrap(this).getLoggingConfigs()?.map(LoggingConfig::wrap) ?: emptyList()
@@ -304,6 +336,17 @@ public interface TopicProps {
         unwrap(this).getMessageRetentionPeriodInDays()
 
     /**
+     * The signature version corresponds to the hashing algorithm used while creating the signature
+     * of the notifications, subscription confirmations, or unsubscribe confirmation messages sent by
+     * Amazon SNS.
+     *
+     * Default: 1
+     *
+     * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-verify-signature-of-message.html.)
+     */
+    override fun signatureVersion(): String? = unwrap(this).getSignatureVersion()
+
+    /**
      * A name for the topic.
      *
      * If you don't specify a name, AWS CloudFormation generates a unique
@@ -313,6 +356,16 @@ public interface TopicProps {
      * Default: Generated name
      */
     override fun topicName(): String? = unwrap(this).getTopicName()
+
+    /**
+     * Tracing mode of an Amazon SNS topic.
+     *
+     * Default: TracingConfig.PASS_THROUGH
+     *
+     * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-active-tracing.html)
+     */
+    override fun tracingConfig(): TracingConfig? =
+        unwrap(this).getTracingConfig()?.let(TracingConfig::wrap)
   }
 
   public companion object {

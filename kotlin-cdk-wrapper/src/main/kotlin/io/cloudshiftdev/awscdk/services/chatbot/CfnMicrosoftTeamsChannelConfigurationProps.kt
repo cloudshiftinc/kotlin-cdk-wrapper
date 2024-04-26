@@ -99,7 +99,11 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
   public fun teamId(): String
 
   /**
-   * The id of the Microsoft Teams channel.
+   * The ID of the Microsoft Teams channel.
+   *
+   * To get the channel ID, open Microsoft Teams, right click on the channel name in the left pane,
+   * then choose Copy. An example of the channel ID syntax is:
+   * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamschannelid)
    */
@@ -185,7 +189,10 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     public fun teamId(teamId: String)
 
     /**
-     * @param teamsChannelId The id of the Microsoft Teams channel. 
+     * @param teamsChannelId The ID of the Microsoft Teams channel. 
+     * To get the channel ID, open Microsoft Teams, right click on the channel name in the left
+     * pane, then choose Copy. An example of the channel ID syntax is:
+     * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
      */
     public fun teamsChannelId(teamsChannelId: String)
 
@@ -282,7 +289,10 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     }
 
     /**
-     * @param teamsChannelId The id of the Microsoft Teams channel. 
+     * @param teamsChannelId The ID of the Microsoft Teams channel. 
+     * To get the channel ID, open Microsoft Teams, right click on the channel name in the left
+     * pane, then choose Copy. An example of the channel ID syntax is:
+     * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
      */
     override fun teamsChannelId(teamsChannelId: String) {
       cdkBuilder.teamsChannelId(teamsChannelId)
@@ -383,7 +393,11 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun teamId(): String = unwrap(this).getTeamId()
 
     /**
-     * The id of the Microsoft Teams channel.
+     * The ID of the Microsoft Teams channel.
+     *
+     * To get the channel ID, open Microsoft Teams, right click on the channel name in the left
+     * pane, then choose Copy. An example of the channel ID syntax is:
+     * `19%3ab6ef35dc342d56ba5654e6fc6d25a071%40thread.tacv2` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-teamschannelid)
      */

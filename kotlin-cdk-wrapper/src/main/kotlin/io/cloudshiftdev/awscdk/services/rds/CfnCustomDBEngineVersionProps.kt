@@ -3,9 +3,12 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -21,19 +24,22 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.rds.*;
  * CfnCustomDBEngineVersionProps cfnCustomDBEngineVersionProps =
  * CfnCustomDBEngineVersionProps.builder()
- * .databaseInstallationFilesS3BucketName("databaseInstallationFilesS3BucketName")
  * .engine("engine")
  * .engineVersion("engineVersion")
  * // the properties below are optional
+ * .databaseInstallationFilesS3BucketName("databaseInstallationFilesS3BucketName")
  * .databaseInstallationFilesS3Prefix("databaseInstallationFilesS3Prefix")
  * .description("description")
+ * .imageId("imageId")
  * .kmsKeyId("kmsKeyId")
  * .manifest("manifest")
+ * .sourceCustomDbEngineVersionIdentifier("sourceCustomDbEngineVersionIdentifier")
  * .status("status")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .useAwsProvidedLatestImage(false)
  * .build();
  * ```
  *
@@ -47,7 +53,8 @@ public interface CfnCustomDBEngineVersionProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-databaseinstallationfiless3bucketname)
    */
-  public fun databaseInstallationFilesS3BucketName(): String
+  public fun databaseInstallationFilesS3BucketName(): String? =
+      unwrap(this).getDatabaseInstallationFilesS3BucketName()
 
   /**
    * The Amazon S3 directory that contains the database installation files for your CEV.
@@ -95,6 +102,13 @@ public interface CfnCustomDBEngineVersionProps {
   public fun engineVersion(): String
 
   /**
+   * A value that indicates the ID of the AMI.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-imageid)
+   */
+  public fun imageId(): String? = unwrap(this).getImageId()
+
+  /**
    * The AWS KMS key identifier for an encrypted CEV.
    *
    * A symmetric encryption KMS key is required for RDS Custom, but optional for Amazon RDS.
@@ -136,6 +150,18 @@ public interface CfnCustomDBEngineVersionProps {
   public fun manifest(): String? = unwrap(this).getManifest()
 
   /**
+   * The ARN of a CEV to use as a source for creating a new CEV.
+   *
+   * You can specify a different Amazon Machine Imagine (AMI) by using either `Source` or
+   * `UseAwsProvidedLatestImage` . You can't specify a different JSON manifest when you specify
+   * `SourceCustomDbEngineVersionIdentifier` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-sourcecustomdbengineversionidentifier)
+   */
+  public fun sourceCustomDbEngineVersionIdentifier(): String? =
+      unwrap(this).getSourceCustomDbEngineVersionIdentifier()
+
+  /**
    * A value that indicates the status of a custom engine version (CEV).
    *
    * Default: - "available"
@@ -156,13 +182,22 @@ public interface CfnCustomDBEngineVersionProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
+   * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV.
+   *
+   * If you specify `UseAwsProvidedLatestImage` , you can't also specify `ImageId` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-useawsprovidedlatestimage)
+   */
+  public fun useAwsProvidedLatestImage(): Any? = unwrap(this).getUseAwsProvidedLatestImage()
+
+  /**
    * A builder for [CfnCustomDBEngineVersionProps]
    */
   @CdkDslMarker
   public interface Builder {
     /**
      * @param databaseInstallationFilesS3BucketName The name of an Amazon S3 bucket that contains
-     * database installation files for your CEV. 
+     * database installation files for your CEV.
      * For example, a valid bucket name is `my-custom-installation-files` .
      */
     public fun databaseInstallationFilesS3BucketName(databaseInstallationFilesS3BucketName: String)
@@ -202,6 +237,11 @@ public interface CfnCustomDBEngineVersionProps {
     public fun engineVersion(engineVersion: String)
 
     /**
+     * @param imageId A value that indicates the ID of the AMI.
+     */
+    public fun imageId(imageId: String)
+
+    /**
      * @param kmsKeyId The AWS KMS key identifier for an encrypted CEV.
      * A symmetric encryption KMS key is required for RDS Custom, but optional for Amazon RDS.
      *
@@ -237,6 +277,15 @@ public interface CfnCustomDBEngineVersionProps {
     public fun manifest(manifest: String)
 
     /**
+     * @param sourceCustomDbEngineVersionIdentifier The ARN of a CEV to use as a source for creating
+     * a new CEV.
+     * You can specify a different Amazon Machine Imagine (AMI) by using either `Source` or
+     * `UseAwsProvidedLatestImage` . You can't specify a different JSON manifest when you specify
+     * `SourceCustomDbEngineVersionIdentifier` .
+     */
+    public fun sourceCustomDbEngineVersionIdentifier(sourceCustomDbEngineVersionIdentifier: String)
+
+    /**
      * @param status A value that indicates the status of a custom engine version (CEV).
      */
     public fun status(status: String)
@@ -256,6 +305,20 @@ public interface CfnCustomDBEngineVersionProps {
      * *Amazon RDS User Guide.*
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * @param useAwsProvidedLatestImage Specifies whether to use the latest service-provided Amazon
+     * Machine Image (AMI) for the CEV.
+     * If you specify `UseAwsProvidedLatestImage` , you can't also specify `ImageId` .
+     */
+    public fun useAwsProvidedLatestImage(useAwsProvidedLatestImage: Boolean)
+
+    /**
+     * @param useAwsProvidedLatestImage Specifies whether to use the latest service-provided Amazon
+     * Machine Image (AMI) for the CEV.
+     * If you specify `UseAwsProvidedLatestImage` , you can't also specify `ImageId` .
+     */
+    public fun useAwsProvidedLatestImage(useAwsProvidedLatestImage: IResolvable)
   }
 
   private class BuilderImpl : Builder {
@@ -265,7 +328,7 @@ public interface CfnCustomDBEngineVersionProps {
 
     /**
      * @param databaseInstallationFilesS3BucketName The name of an Amazon S3 bucket that contains
-     * database installation files for your CEV. 
+     * database installation files for your CEV.
      * For example, a valid bucket name is `my-custom-installation-files` .
      */
     override
@@ -316,6 +379,13 @@ public interface CfnCustomDBEngineVersionProps {
     }
 
     /**
+     * @param imageId A value that indicates the ID of the AMI.
+     */
+    override fun imageId(imageId: String) {
+      cdkBuilder.imageId(imageId)
+    }
+
+    /**
      * @param kmsKeyId The AWS KMS key identifier for an encrypted CEV.
      * A symmetric encryption KMS key is required for RDS Custom, but optional for Amazon RDS.
      *
@@ -355,6 +425,18 @@ public interface CfnCustomDBEngineVersionProps {
     }
 
     /**
+     * @param sourceCustomDbEngineVersionIdentifier The ARN of a CEV to use as a source for creating
+     * a new CEV.
+     * You can specify a different Amazon Machine Imagine (AMI) by using either `Source` or
+     * `UseAwsProvidedLatestImage` . You can't specify a different JSON manifest when you specify
+     * `SourceCustomDbEngineVersionIdentifier` .
+     */
+    override
+        fun sourceCustomDbEngineVersionIdentifier(sourceCustomDbEngineVersionIdentifier: String) {
+      cdkBuilder.sourceCustomDbEngineVersionIdentifier(sourceCustomDbEngineVersionIdentifier)
+    }
+
+    /**
      * @param status A value that indicates the status of a custom engine version (CEV).
      */
     override fun status(status: String) {
@@ -379,6 +461,24 @@ public interface CfnCustomDBEngineVersionProps {
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
+    /**
+     * @param useAwsProvidedLatestImage Specifies whether to use the latest service-provided Amazon
+     * Machine Image (AMI) for the CEV.
+     * If you specify `UseAwsProvidedLatestImage` , you can't also specify `ImageId` .
+     */
+    override fun useAwsProvidedLatestImage(useAwsProvidedLatestImage: Boolean) {
+      cdkBuilder.useAwsProvidedLatestImage(useAwsProvidedLatestImage)
+    }
+
+    /**
+     * @param useAwsProvidedLatestImage Specifies whether to use the latest service-provided Amazon
+     * Machine Image (AMI) for the CEV.
+     * If you specify `UseAwsProvidedLatestImage` , you can't also specify `ImageId` .
+     */
+    override fun useAwsProvidedLatestImage(useAwsProvidedLatestImage: IResolvable) {
+      cdkBuilder.useAwsProvidedLatestImage(useAwsProvidedLatestImage.let(IResolvable::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.rds.CfnCustomDBEngineVersionProps =
         cdkBuilder.build()
   }
@@ -393,7 +493,7 @@ public interface CfnCustomDBEngineVersionProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-databaseinstallationfiless3bucketname)
      */
-    override fun databaseInstallationFilesS3BucketName(): String =
+    override fun databaseInstallationFilesS3BucketName(): String? =
         unwrap(this).getDatabaseInstallationFilesS3BucketName()
 
     /**
@@ -442,6 +542,13 @@ public interface CfnCustomDBEngineVersionProps {
     override fun engineVersion(): String = unwrap(this).getEngineVersion()
 
     /**
+     * A value that indicates the ID of the AMI.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-imageid)
+     */
+    override fun imageId(): String? = unwrap(this).getImageId()
+
+    /**
      * The AWS KMS key identifier for an encrypted CEV.
      *
      * A symmetric encryption KMS key is required for RDS Custom, but optional for Amazon RDS.
@@ -483,6 +590,18 @@ public interface CfnCustomDBEngineVersionProps {
     override fun manifest(): String? = unwrap(this).getManifest()
 
     /**
+     * The ARN of a CEV to use as a source for creating a new CEV.
+     *
+     * You can specify a different Amazon Machine Imagine (AMI) by using either `Source` or
+     * `UseAwsProvidedLatestImage` . You can't specify a different JSON manifest when you specify
+     * `SourceCustomDbEngineVersionIdentifier` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-sourcecustomdbengineversionidentifier)
+     */
+    override fun sourceCustomDbEngineVersionIdentifier(): String? =
+        unwrap(this).getSourceCustomDbEngineVersionIdentifier()
+
+    /**
      * A value that indicates the status of a custom engine version (CEV).
      *
      * Default: - "available"
@@ -501,6 +620,15 @@ public interface CfnCustomDBEngineVersionProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * Specifies whether to use the latest service-provided Amazon Machine Image (AMI) for the CEV.
+     *
+     * If you specify `UseAwsProvidedLatestImage` , you can't also specify `ImageId` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-customdbengineversion.html#cfn-rds-customdbengineversion-useawsprovidedlatestimage)
+     */
+    override fun useAwsProvidedLatestImage(): Any? = unwrap(this).getUseAwsProvidedLatestImage()
   }
 
   public companion object {

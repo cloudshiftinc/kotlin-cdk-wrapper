@@ -59,7 +59,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
   /**
    * The process namespace to use for the containers in the task.
    *
-   * Not supported in Fargate and Windows containers.
+   * Not supported in Windows containers.
    *
    * Default: - PidMode used by the task is not specified
    */
@@ -123,7 +123,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
 
     /**
      * @param pidMode The process namespace to use for the containers in the task.
-     * Not supported in Fargate and Windows containers.
+     * Not supported in Windows containers.
      */
     public fun pidMode(pidMode: PidMode)
 
@@ -227,7 +227,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
 
     /**
      * @param pidMode The process namespace to use for the containers in the task.
-     * Not supported in Fargate and Windows containers.
+     * Not supported in Windows containers.
      */
     override fun pidMode(pidMode: PidMode) {
       cdkBuilder.pidMode(pidMode.let(PidMode::unwrap))
@@ -343,7 +343,7 @@ public interface Ec2TaskDefinitionProps : CommonTaskDefinitionProps {
     /**
      * The process namespace to use for the containers in the task.
      *
-     * Not supported in Fargate and Windows containers.
+     * Not supported in Windows containers.
      *
      * Default: - PidMode used by the task is not specified
      */

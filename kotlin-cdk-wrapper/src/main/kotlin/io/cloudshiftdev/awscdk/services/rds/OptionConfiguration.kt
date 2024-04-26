@@ -121,7 +121,7 @@ public interface OptionConfiguration {
     /**
      * @param settings The settings for the option.
      */
-    public fun tings(settings: Map<String, String>)
+    public fun settings(settings: Map<String, String>)
 
     /**
      * @param version The version for the option.
@@ -176,7 +176,7 @@ public interface OptionConfiguration {
     /**
      * @param settings The settings for the option.
      */
-    override fun tings(settings: Map<String, String>) {
+    override fun settings(settings: Map<String, String>) {
       cdkBuilder.settings(settings)
     }
 

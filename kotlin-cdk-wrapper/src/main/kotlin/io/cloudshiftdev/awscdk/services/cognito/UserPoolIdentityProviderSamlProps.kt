@@ -17,45 +17,37 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.cognito.*;
- * ProviderAttribute providerAttribute;
- * UserPool userPool;
- * UserPoolIdentityProviderSamlMetadata userPoolIdentityProviderSamlMetadata;
- * UserPoolIdentityProviderSamlProps userPoolIdentityProviderSamlProps =
- * UserPoolIdentityProviderSamlProps.builder()
- * .metadata(userPoolIdentityProviderSamlMetadata)
- * .userPool(userPool)
- * // the properties below are optional
- * .attributeMapping(AttributeMapping.builder()
- * .address(providerAttribute)
- * .birthdate(providerAttribute)
- * .custom(Map.of(
- * "customKey", providerAttribute))
- * .email(providerAttribute)
- * .familyName(providerAttribute)
- * .fullname(providerAttribute)
- * .gender(providerAttribute)
- * .givenName(providerAttribute)
- * .lastUpdateTime(providerAttribute)
- * .locale(providerAttribute)
- * .middleName(providerAttribute)
- * .nickname(providerAttribute)
- * .phoneNumber(providerAttribute)
- * .preferredUsername(providerAttribute)
- * .profilePage(providerAttribute)
- * .profilePicture(providerAttribute)
- * .timezone(providerAttribute)
- * .website(providerAttribute)
- * .build())
- * .identifiers(List.of("identifiers"))
- * .idpSignout(false)
- * .name("name")
+ * UserPool userpool = new UserPool(this, "Pool");
+ * // specify the metadata as a file content
+ * // specify the metadata as a file content
+ * UserPoolIdentityProviderSaml.Builder.create(this, "userpoolIdpFile")
+ * .userPool(userpool)
+ * .metadata(UserPoolIdentityProviderSamlMetadata.file("my-file-contents"))
+ * // Whether to require encrypted SAML assertions from IdP
+ * .encryptedResponses(true)
+ * // The signing algorithm for the SAML requests
+ * .requestSigningAlgorithm(SigningAlgorithm.RSA_SHA256)
+ * // Enable IdP initiated SAML auth flow
+ * .idpInitiated(true)
+ * .build();
+ * // specify the metadata as a URL
+ * // specify the metadata as a URL
+ * UserPoolIdentityProviderSaml.Builder.create(this, "userpoolidpUrl")
+ * .userPool(userpool)
+ * .metadata(UserPoolIdentityProviderSamlMetadata.url("https://my-metadata-url.com"))
  * .build();
  * ```
  */
 public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderProps {
+  /**
+   * Whether to require encrypted SAML assertions from IdP.
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-encryption)
+   */
+  public fun encryptedResponses(): Boolean? = unwrap(this).getEncryptedResponses()
+
   /**
    * Identifiers.
    *
@@ -64,6 +56,13 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
    * Default: - no identifiers used
    */
   public fun identifiers(): List<String> = unwrap(this).getIdentifiers() ?: emptyList()
+
+  /**
+   * Whether to enable IdP-initiated SAML auth flows.
+   *
+   * Default: false
+   */
+  public fun idpInitiated(): Boolean? = unwrap(this).getIdpInitiated()
 
   /**
    * Whether to enable the "Sign-out flow" feature.
@@ -87,6 +86,16 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
   public fun name(): String? = unwrap(this).getName()
 
   /**
+   * The signing algorithm for SAML requests.
+   *
+   * Default: - don't sign requests
+   *
+   * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-signing)
+   */
+  public fun requestSigningAlgorithm(): SigningAlgorithm? =
+      unwrap(this).getRequestSigningAlgorithm()?.let(SigningAlgorithm::wrap)
+
+  /**
    * A builder for [UserPoolIdentityProviderSamlProps]
    */
   @CdkDslMarker
@@ -106,6 +115,11 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
     public fun attributeMapping(attributeMapping: AttributeMapping.Builder.() -> Unit)
 
     /**
+     * @param encryptedResponses Whether to require encrypted SAML assertions from IdP.
+     */
+    public fun encryptedResponses(encryptedResponses: Boolean)
+
+    /**
      * @param identifiers Identifiers.
      * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
      */
@@ -116,6 +130,11 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
      */
     public fun identifiers(vararg identifiers: String)
+
+    /**
+     * @param idpInitiated Whether to enable IdP-initiated SAML auth flows.
+     */
+    public fun idpInitiated(idpInitiated: Boolean)
 
     /**
      * @param idpSignout Whether to enable the "Sign-out flow" feature.
@@ -132,6 +151,11 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * Must be between 3 and 32 characters.
      */
     public fun name(name: String)
+
+    /**
+     * @param requestSigningAlgorithm The signing algorithm for SAML requests.
+     */
+    public fun requestSigningAlgorithm(requestSigningAlgorithm: SigningAlgorithm)
 
     /**
      * @param userPool The user pool to which this construct provides identities. 
@@ -162,6 +186,13 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
         attributeMapping(AttributeMapping(attributeMapping))
 
     /**
+     * @param encryptedResponses Whether to require encrypted SAML assertions from IdP.
+     */
+    override fun encryptedResponses(encryptedResponses: Boolean) {
+      cdkBuilder.encryptedResponses(encryptedResponses)
+    }
+
+    /**
      * @param identifiers Identifiers.
      * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
      */
@@ -174,6 +205,13 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
      */
     override fun identifiers(vararg identifiers: String): Unit = identifiers(identifiers.toList())
+
+    /**
+     * @param idpInitiated Whether to enable IdP-initiated SAML auth flows.
+     */
+    override fun idpInitiated(idpInitiated: Boolean) {
+      cdkBuilder.idpInitiated(idpInitiated)
+    }
 
     /**
      * @param idpSignout Whether to enable the "Sign-out flow" feature.
@@ -195,6 +233,13 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * @param requestSigningAlgorithm The signing algorithm for SAML requests.
+     */
+    override fun requestSigningAlgorithm(requestSigningAlgorithm: SigningAlgorithm) {
+      cdkBuilder.requestSigningAlgorithm(requestSigningAlgorithm.let(SigningAlgorithm::unwrap))
     }
 
     /**
@@ -221,6 +266,15 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
         unwrap(this).getAttributeMapping()?.let(AttributeMapping::wrap)
 
     /**
+     * Whether to require encrypted SAML assertions from IdP.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-encryption)
+     */
+    override fun encryptedResponses(): Boolean? = unwrap(this).getEncryptedResponses()
+
+    /**
      * Identifiers.
      *
      * Identifiers can be used to redirect users to the correct IdP in multitenant apps.
@@ -228,6 +282,13 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * Default: - no identifiers used
      */
     override fun identifiers(): List<String> = unwrap(this).getIdentifiers() ?: emptyList()
+
+    /**
+     * Whether to enable IdP-initiated SAML auth flows.
+     *
+     * Default: false
+     */
+    override fun idpInitiated(): Boolean? = unwrap(this).getIdpInitiated()
 
     /**
      * Whether to enable the "Sign-out flow" feature.
@@ -250,6 +311,16 @@ public interface UserPoolIdentityProviderSamlProps : UserPoolIdentityProviderPro
      * Default: - the unique ID of the construct
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The signing algorithm for SAML requests.
+     *
+     * Default: - don't sign requests
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-SAML-signing-encryption.html#cognito-user-pools-SAML-signing)
+     */
+    override fun requestSigningAlgorithm(): SigningAlgorithm? =
+        unwrap(this).getRequestSigningAlgorithm()?.let(SigningAlgorithm::wrap)
 
     /**
      * The user pool to which this construct provides identities.

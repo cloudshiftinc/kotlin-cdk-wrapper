@@ -52,9 +52,9 @@ public interface CfnApplicationOutputV2Props {
   public fun applicationName(): String
 
   /**
-   * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-   * which you identify an in-application stream and a destination where you want the in-application
-   * stream data to be written.
+   * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+   * identify an in-application stream and a destination where you want the in-application stream data
+   * to be written.
    *
    * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
    *
@@ -73,7 +73,7 @@ public interface CfnApplicationOutputV2Props {
     public fun applicationName(applicationName: String)
 
     /**
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
@@ -81,7 +81,7 @@ public interface CfnApplicationOutputV2Props {
     public fun output(output: IResolvable)
 
     /**
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
@@ -89,7 +89,7 @@ public interface CfnApplicationOutputV2Props {
     public fun output(output: CfnApplicationOutputV2.OutputProperty)
 
     /**
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
@@ -112,7 +112,7 @@ public interface CfnApplicationOutputV2Props {
     }
 
     /**
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
@@ -122,7 +122,7 @@ public interface CfnApplicationOutputV2Props {
     }
 
     /**
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
@@ -132,7 +132,7 @@ public interface CfnApplicationOutputV2Props {
     }
 
     /**
-     * @param output Describes a SQL-based Managed Service for Apache Flink application's output
+     * @param output Describes a SQL-based Kinesis Data Analytics application's output
      * configuration, in which you identify an in-application stream and a destination where you want
      * the in-application stream data to be written. 
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
@@ -157,9 +157,9 @@ public interface CfnApplicationOutputV2Props {
     override fun applicationName(): String = unwrap(this).getApplicationName()
 
     /**
-     * Describes a SQL-based Managed Service for Apache Flink application's output configuration, in
-     * which you identify an in-application stream and a destination where you want the in-application
-     * stream data to be written.
+     * Describes a SQL-based Kinesis Data Analytics application's output configuration, in which you
+     * identify an in-application stream and a destination where you want the in-application stream
+     * data to be written.
      *
      * The destination can be a Kinesis data stream or a Kinesis Data Firehose delivery stream.
      *

@@ -64,8 +64,10 @@ public interface CfnDatasetProps {
    * * Interactions
    * * Items
    * * Users
-   * * Actions
-   * * Action_Interactions
+   *
+   *
+   * You can't use CloudFormation to create an Action Interactions or Actions dataset.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html#cfn-personalize-dataset-datasettype)
    */
@@ -127,8 +129,9 @@ public interface CfnDatasetProps {
      * * Interactions
      * * Items
      * * Users
-     * * Actions
-     * * Action_Interactions
+     *
+     *
+     * You can't use CloudFormation to create an Action Interactions or Actions dataset.
      */
     public fun datasetType(datasetType: String)
 
@@ -191,8 +194,9 @@ public interface CfnDatasetProps {
      * * Interactions
      * * Items
      * * Users
-     * * Actions
-     * * Action_Interactions
+     *
+     *
+     * You can't use CloudFormation to create an Action Interactions or Actions dataset.
      */
     override fun datasetType(datasetType: String) {
       cdkBuilder.datasetType(datasetType)
@@ -243,8 +247,10 @@ public interface CfnDatasetProps {
      * * Interactions
      * * Items
      * * Users
-     * * Actions
-     * * Action_Interactions
+     *
+     *
+     * You can't use CloudFormation to create an Action Interactions or Actions dataset.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html#cfn-personalize-dataset-datasettype)
      */

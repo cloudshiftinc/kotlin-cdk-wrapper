@@ -29,14 +29,18 @@ public interface CfnWebACLProps {
    * Specifies custom configurations for the associations between the web ACL and protected
    * resources.
    *
-   * Use this to customize the maximum size of the request body that your protected CloudFront
-   * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+   * Use this to customize the maximum size of the request body that your protected resources
+   * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+   * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+   * bytes).
    *
    *
    * You are charged additional fees when your protected resources forward body sizes that are
    * larger than the default. For more information, see [AWS WAF
    * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
    *
+   *
+   * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
    */
@@ -178,39 +182,54 @@ public interface CfnWebACLProps {
     /**
      * @param associationConfig Specifies custom configurations for the associations between the web
      * ACL and protected resources.
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     public fun associationConfig(associationConfig: IResolvable)
 
     /**
      * @param associationConfig Specifies custom configurations for the associations between the web
      * ACL and protected resources.
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     public fun associationConfig(associationConfig: CfnWebACL.AssociationConfigProperty)
 
     /**
      * @param associationConfig Specifies custom configurations for the associations between the web
      * ACL and protected resources.
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b8cd78ecacaca4f48f827e175e1953db05c9e8605918846e0d9d3a3b204c7513")
@@ -440,13 +459,18 @@ public interface CfnWebACLProps {
     /**
      * @param associationConfig Specifies custom configurations for the associations between the web
      * ACL and protected resources.
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     override fun associationConfig(associationConfig: IResolvable) {
       cdkBuilder.associationConfig(associationConfig.let(IResolvable::unwrap))
@@ -455,13 +479,18 @@ public interface CfnWebACLProps {
     /**
      * @param associationConfig Specifies custom configurations for the associations between the web
      * ACL and protected resources.
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     override fun associationConfig(associationConfig: CfnWebACL.AssociationConfigProperty) {
       cdkBuilder.associationConfig(associationConfig.let(CfnWebACL.AssociationConfigProperty::unwrap))
@@ -470,13 +499,18 @@ public interface CfnWebACLProps {
     /**
      * @param associationConfig Specifies custom configurations for the associations between the web
      * ACL and protected resources.
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
+     *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b8cd78ecacaca4f48f827e175e1953db05c9e8605918846e0d9d3a3b204c7513")
@@ -748,14 +782,18 @@ public interface CfnWebACLProps {
      * Specifies custom configurations for the associations between the web ACL and protected
      * resources.
      *
-     * Use this to customize the maximum size of the request body that your protected CloudFront
-     * distributions forward to AWS WAF for inspection. The default is 16 KB (16,384 bytes).
+     * Use this to customize the maximum size of the request body that your protected resources
+     * forward to AWS WAF for inspection. You can customize this setting for CloudFront, API Gateway,
+     * Amazon Cognito, App Runner, or Verified Access resources. The default setting is 16 KB (16,384
+     * bytes).
      *
      *
      * You are charged additional fees when your protected resources forward body sizes that are
      * larger than the default. For more information, see [AWS WAF
      * Pricing](https://docs.aws.amazon.com/waf/pricing/) .
      *
+     *
+     * For Application Load Balancer and AWS AppSync , the limit is fixed at 8 KB (8,192 bytes).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafv2-webacl.html#cfn-wafv2-webacl-associationconfig)
      */

@@ -56,7 +56,7 @@ public interface ServiceManagedVolumeProps {
    *
    * Default: - undefined
    */
-  public fun managedEbsVolume(): ServiceManagedEBSVolumeConfiguration? =
+  public fun managedEBSVolume(): ServiceManagedEBSVolumeConfiguration? =
       unwrap(this).getManagedEBSVolume()?.let(ServiceManagedEBSVolumeConfiguration::wrap)
 
   /**
@@ -135,7 +135,7 @@ public interface ServiceManagedVolumeProps {
      *
      * Default: - undefined
      */
-    override fun managedEbsVolume(): ServiceManagedEBSVolumeConfiguration? =
+    override fun managedEBSVolume(): ServiceManagedEBSVolumeConfiguration? =
         unwrap(this).getManagedEBSVolume()?.let(ServiceManagedEBSVolumeConfiguration::wrap)
 
     /**

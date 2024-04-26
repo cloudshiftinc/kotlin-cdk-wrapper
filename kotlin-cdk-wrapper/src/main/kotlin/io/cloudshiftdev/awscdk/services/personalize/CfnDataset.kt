@@ -28,8 +28,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * Item interactions
  * * Items
  * * Users
- * * Action interactions
- * * Actions
+ * * Action interactions (you can't use CloudFormation to create an Action interactions dataset)
+ * * Actions (you can't use CloudFormation to create an Actions dataset)
  *
  * Each dataset type has an associated schema with required field types. Only the `Item
  * interactions` dataset is required in order to train a model (also referred to as creating a
@@ -247,8 +247,10 @@ public open class CfnDataset(
      * * Interactions
      * * Items
      * * Users
-     * * Actions
-     * * Action_Interactions
+     *
+     *
+     * You can't use CloudFormation to create an Action Interactions or Actions dataset.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html#cfn-personalize-dataset-datasettype)
      * @param datasetType One of the following values:. 
@@ -341,8 +343,10 @@ public open class CfnDataset(
      * * Interactions
      * * Items
      * * Users
-     * * Actions
-     * * Action_Interactions
+     *
+     *
+     * You can't use CloudFormation to create an Action Interactions or Actions dataset.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-personalize-dataset.html#cfn-personalize-dataset-datasettype)
      * @param datasetType One of the following values:. 

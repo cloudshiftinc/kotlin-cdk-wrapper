@@ -207,18 +207,14 @@ public open class CfnInstance(
   }
 
   /**
-   * The Availability Zone where the specified instance is launched. For example: `us-east-1b` .
    *
-   * You can retrieve a list of all Availability Zones for a Region by using the
-   * [Fn::GetAZs](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-getavailabilityzones.html)
-   * intrinsic function.
    */
   public open fun attrAvailabilityZone(): String = unwrap(this).getAttrAvailabilityZone()
 
   /**
    * The ID of the instance.
    */
-  public open fun attrId(): String = unwrap(this).getAttrId()
+  public open fun attrInstanceId(): String = unwrap(this).getAttrInstanceId()
 
   /**
    * The private DNS name of the specified instance.
@@ -247,6 +243,11 @@ public open class CfnInstance(
    * For example: `192.0.2.0` .
    */
   public open fun attrPublicIp(): String = unwrap(this).getAttrPublicIp()
+
+  /**
+   * The ID of the VPC in which the instance is running.
+   */
+  public open fun attrVpcId(): String = unwrap(this).getAttrVpcId()
 
   /**
    * The Availability Zone of the instance.
@@ -385,26 +386,26 @@ public open class CfnInstance(
   }
 
   /**
-   * Deprecated.
+   * An elastic GPU to associate with the instance.
    */
   public open fun elasticGpuSpecifications(): Any? = unwrap(this).getElasticGpuSpecifications()
 
   /**
-   * Deprecated.
+   * An elastic GPU to associate with the instance.
    */
   public open fun elasticGpuSpecifications(`value`: IResolvable) {
     unwrap(this).setElasticGpuSpecifications(`value`.let(IResolvable::unwrap))
   }
 
   /**
-   * Deprecated.
+   * An elastic GPU to associate with the instance.
    */
   public open fun elasticGpuSpecifications(`value`: List<Any>) {
     unwrap(this).setElasticGpuSpecifications(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Deprecated.
+   * An elastic GPU to associate with the instance.
    */
   public open fun elasticGpuSpecifications(vararg `value`: Any): Unit =
       elasticGpuSpecifications(`value`.toList())
@@ -1311,59 +1312,48 @@ public open class CfnInstance(
     public fun ebsOptimized(ebsOptimized: IResolvable)
 
     /**
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      *
      *
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
-     * @param elasticGpuSpecifications Deprecated. 
+     * @param elasticGpuSpecifications An elastic GPU to associate with the instance. 
      */
     public fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable)
 
     /**
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      *
      *
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
-     * @param elasticGpuSpecifications Deprecated. 
+     * @param elasticGpuSpecifications An elastic GPU to associate with the instance. 
      */
     public fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>)
 
     /**
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      *
      *
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
-     * @param elasticGpuSpecifications Deprecated. 
+     * @param elasticGpuSpecifications An elastic GPU to associate with the instance. 
      */
     public fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any)
 
     /**
      * An elastic inference accelerator to associate with the instance.
      *
-     * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to
-     * accelerate your Deep Learning (DL) inference workloads.
      *
-     * You cannot specify accelerators from different generations in the same request.
-     *
-     *
-     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
-     * and will help current customers migrate their workloads to options that offer better price and
-     * performance. After April 15, 2023, new customers will not be able to launch instances with
-     * Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who
-     * have used Amazon EI at least once during the past 30-day period are considered current customers
-     * and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
+     * see [Amazon Elastic Inference
+     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -1375,18 +1365,10 @@ public open class CfnInstance(
     /**
      * An elastic inference accelerator to associate with the instance.
      *
-     * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to
-     * accelerate your Deep Learning (DL) inference workloads.
      *
-     * You cannot specify accelerators from different generations in the same request.
-     *
-     *
-     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
-     * and will help current customers migrate their workloads to options that offer better price and
-     * performance. After April 15, 2023, new customers will not be able to launch instances with
-     * Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who
-     * have used Amazon EI at least once during the past 30-day period are considered current customers
-     * and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
+     * see [Amazon Elastic Inference
+     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -1398,18 +1380,10 @@ public open class CfnInstance(
     /**
      * An elastic inference accelerator to associate with the instance.
      *
-     * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to
-     * accelerate your Deep Learning (DL) inference workloads.
      *
-     * You cannot specify accelerators from different generations in the same request.
-     *
-     *
-     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
-     * and will help current customers migrate their workloads to options that offer better price and
-     * performance. After April 15, 2023, new customers will not be able to launch instances with
-     * Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who
-     * have used Amazon EI at least once during the past 30-day period are considered current customers
-     * and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
+     * see [Amazon Elastic Inference
+     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -2083,7 +2057,7 @@ public open class CfnInstance(
      * The ID of the subnet to launch the instance into.
      *
      * If you specify a network interface, you must specify any subnets as part of the network
-     * interface.
+     * interface instead of using this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-subnetid)
      * @param subnetId The ID of the subnet to launch the instance into. 
@@ -2471,45 +2445,42 @@ public open class CfnInstance(
     }
 
     /**
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      *
      *
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
-     * @param elasticGpuSpecifications Deprecated. 
+     * @param elasticGpuSpecifications An elastic GPU to associate with the instance. 
      */
     override fun elasticGpuSpecifications(elasticGpuSpecifications: IResolvable) {
       cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.let(IResolvable::unwrap))
     }
 
     /**
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      *
      *
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
-     * @param elasticGpuSpecifications Deprecated. 
+     * @param elasticGpuSpecifications An elastic GPU to associate with the instance. 
      */
     override fun elasticGpuSpecifications(elasticGpuSpecifications: List<Any>) {
       cdkBuilder.elasticGpuSpecifications(elasticGpuSpecifications.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Deprecated.
+     * An elastic GPU to associate with the instance.
      *
      *
-     * Amazon Elastic Graphics reached end of life on January 8, 2024. For workloads that require
-     * graphics acceleration, we recommend that you use Amazon EC2 G4ad, G4dn, or G5 instances.
+     * Amazon Elastic Graphics reached end of life on January 8, 2024.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticgpuspecifications)
-     * @param elasticGpuSpecifications Deprecated. 
+     * @param elasticGpuSpecifications An elastic GPU to associate with the instance. 
      */
     override fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any): Unit =
         elasticGpuSpecifications(elasticGpuSpecifications.toList())
@@ -2517,18 +2488,10 @@ public open class CfnInstance(
     /**
      * An elastic inference accelerator to associate with the instance.
      *
-     * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to
-     * accelerate your Deep Learning (DL) inference workloads.
      *
-     * You cannot specify accelerators from different generations in the same request.
-     *
-     *
-     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
-     * and will help current customers migrate their workloads to options that offer better price and
-     * performance. After April 15, 2023, new customers will not be able to launch instances with
-     * Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who
-     * have used Amazon EI at least once during the past 30-day period are considered current customers
-     * and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
+     * see [Amazon Elastic Inference
+     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -2542,18 +2505,10 @@ public open class CfnInstance(
     /**
      * An elastic inference accelerator to associate with the instance.
      *
-     * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to
-     * accelerate your Deep Learning (DL) inference workloads.
      *
-     * You cannot specify accelerators from different generations in the same request.
-     *
-     *
-     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
-     * and will help current customers migrate their workloads to options that offer better price and
-     * performance. After April 15, 2023, new customers will not be able to launch instances with
-     * Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who
-     * have used Amazon EI at least once during the past 30-day period are considered current customers
-     * and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
+     * see [Amazon Elastic Inference
+     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -2567,18 +2522,10 @@ public open class CfnInstance(
     /**
      * An elastic inference accelerator to associate with the instance.
      *
-     * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to
-     * accelerate your Deep Learning (DL) inference workloads.
      *
-     * You cannot specify accelerators from different generations in the same request.
-     *
-     *
-     * Starting April 15, 2023, AWS will not onboard new customers to Amazon Elastic Inference (EI),
-     * and will help current customers migrate their workloads to options that offer better price and
-     * performance. After April 15, 2023, new customers will not be able to launch instances with
-     * Amazon EI accelerators in Amazon SageMaker, Amazon ECS, or Amazon EC2. However, customers who
-     * have used Amazon EI at least once during the past 30-day period are considered current customers
-     * and will be able to continue using the service.
+     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
+     * see [Amazon Elastic Inference
+     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -3336,7 +3283,7 @@ public open class CfnInstance(
      * The ID of the subnet to launch the instance into.
      *
      * If you specify a network interface, you must specify any subnets as part of the network
-     * interface.
+     * interface instead of using this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-subnetid)
      * @param subnetId The ID of the subnet to launch the instance into. 
@@ -5273,6 +5220,8 @@ public open class CfnInstance(
      *
      * Default: `false`
      *
+     * Default: - false
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html#cfn-ec2-instance-hibernationoptions-configured)
      */
     public fun configured(): Any? = unwrap(this).getConfigured()
@@ -5372,6 +5321,8 @@ public open class CfnInstance(
        * an error.
        *
        * Default: `false`
+       *
+       * Default: - false
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-hibernationoptions.html#cfn-ec2-instance-hibernationoptions-configured)
        */
@@ -5489,19 +5440,15 @@ public open class CfnInstance(
    * * The ID or the name of the launch template, but not both.
    * * The version of the launch template.
    *
-   * `LaunchTemplateSpecification` is a property of the
-   * [AWS::EC2::Instance](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html)
-   * resource.
-   *
    * For information about creating a launch template, see
    * [AWS::EC2::LaunchTemplate](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html)
    * and [Create a launch
    * template](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html#create-launch-template)
    * in the *Amazon EC2 User Guide* .
    *
-   * For examples of launch templates, see
+   * For example launch templates, see the
    * [Examples](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#aws-resource-ec2-launchtemplate--examples)
-   * .
+   * for `AWS::EC2::LaunchTemplate` .
    *
    * Example:
    *
@@ -5933,8 +5880,6 @@ public open class CfnInstance(
     /**
      * The ID of the subnet associated with the network interface.
      *
-     * Applies only if creating a network interface when launching an instance.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-networkinterface.html#cfn-ec2-instance-networkinterface-subnetid)
      */
     public fun subnetId(): String? = unwrap(this).getSubnetId()
@@ -6105,7 +6050,6 @@ public open class CfnInstance(
 
       /**
        * @param subnetId The ID of the subnet associated with the network interface.
-       * Applies only if creating a network interface when launching an instance.
        */
       public fun subnetId(subnetId: String)
     }
@@ -6312,7 +6256,6 @@ public open class CfnInstance(
 
       /**
        * @param subnetId The ID of the subnet associated with the network interface.
-       * Applies only if creating a network interface when launching an instance.
        */
       override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
@@ -6451,8 +6394,6 @@ public open class CfnInstance(
 
       /**
        * The ID of the subnet associated with the network interface.
-       *
-       * Applies only if creating a network interface when launching an instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-networkinterface.html#cfn-ec2-instance-networkinterface-subnetid)
        */

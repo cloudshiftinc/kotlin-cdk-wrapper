@@ -70,7 +70,11 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
    * * Minimum value of 60 seconds
    * * Maximum value of 7 days
    *
-   * Default: - the retention period configured on the stream
+   * The default value is -1, which sets the maximum age to infinite.
+   * When the value is set to infinite, Lambda never discards old records.
+   * Record are valid until it expires in the event source.
+   *
+   * Default: -1
    */
   public fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
 
@@ -105,7 +109,11 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
   /**
    * Maximum number of retry attempts Valid Range: * Minimum value of 0 * Maximum value of 10000.
    *
-   * Default: - retry until the record expires
+   * The default value is -1, which sets the maximum number of retries to infinite.
+   * When MaximumRetryAttempts is infinite, Lambda retries failed records until
+   * the record expires in the event source.
+   *
+   * Default: -1
    */
   public fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
 
@@ -172,6 +180,10 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      *
      * * Minimum value of 60 seconds
      * * Maximum value of 7 days
+     *
+     * The default value is -1, which sets the maximum age to infinite.
+     * When the value is set to infinite, Lambda never discards old records.
+     * Record are valid until it expires in the event source.
      */
     public fun maxRecordAge(maxRecordAge: Duration)
 
@@ -198,6 +210,9 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
     /**
      * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
      * Maximum value of 10000.
+     * The default value is -1, which sets the maximum number of retries to infinite.
+     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
+     * the record expires in the event source.
      */
     public fun retryAttempts(retryAttempts: Number)
 
@@ -278,6 +293,10 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      *
      * * Minimum value of 60 seconds
      * * Maximum value of 7 days
+     *
+     * The default value is -1, which sets the maximum age to infinite.
+     * When the value is set to infinite, Lambda never discards old records.
+     * Record are valid until it expires in the event source.
      */
     override fun maxRecordAge(maxRecordAge: Duration) {
       cdkBuilder.maxRecordAge(maxRecordAge.let(Duration::unwrap))
@@ -312,6 +331,9 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
     /**
      * @param retryAttempts Maximum number of retry attempts Valid Range: * Minimum value of 0 *
      * Maximum value of 10000.
+     * The default value is -1, which sets the maximum number of retries to infinite.
+     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
+     * the record expires in the event source.
      */
     override fun retryAttempts(retryAttempts: Number) {
       cdkBuilder.retryAttempts(retryAttempts)
@@ -401,7 +423,11 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      * * Minimum value of 60 seconds
      * * Maximum value of 7 days
      *
-     * Default: - the retention period configured on the stream
+     * The default value is -1, which sets the maximum age to infinite.
+     * When the value is set to infinite, Lambda never discards old records.
+     * Record are valid until it expires in the event source.
+     *
+     * Default: -1
      */
     override fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
 
@@ -437,7 +463,11 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
     /**
      * Maximum number of retry attempts Valid Range: * Minimum value of 0 * Maximum value of 10000.
      *
-     * Default: - retry until the record expires
+     * The default value is -1, which sets the maximum number of retries to infinite.
+     * When MaximumRetryAttempts is infinite, Lambda retries failed records until
+     * the record expires in the event source.
+     *
+     * Default: -1
      */
     override fun retryAttempts(): Number? = unwrap(this).getRetryAttempts()
 

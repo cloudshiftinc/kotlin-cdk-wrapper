@@ -121,7 +121,7 @@ public interface QueueProps {
    *
    * [Documentation](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-security-best-practices.html#enforce-encryption-data-in-transit)
    */
-  public fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+  public fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
   /**
    * Whether this a first-in-first-out (FIFO) queue.
@@ -658,7 +658,7 @@ public interface QueueProps {
      *
      * [Documentation](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-security-best-practices.html#enforce-encryption-data-in-transit)
      */
-    override fun enforceSsl(): Boolean? = unwrap(this).getEnforceSSL()
+    override fun enforceSSL(): Boolean? = unwrap(this).getEnforceSSL()
 
     /**
      * Whether this a first-in-first-out (FIFO) queue.

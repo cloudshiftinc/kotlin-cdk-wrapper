@@ -33,6 +33,9 @@ import kotlin.jvm.JvmName
  * .name("name")
  * .value("value")
  * .build()))
+ * .metricCharacteristics(MetricCharacteristicsProperty.builder()
+ * .periodicSpikes(false)
+ * .build())
  * .metricMathAnomalyDetector(MetricMathAnomalyDetectorProperty.builder()
  * .metricDataQueries(List.of(MetricDataQueryProperty.builder()
  * .id("id")
@@ -62,6 +65,7 @@ import kotlin.jvm.JvmName
  * .metricName("metricName")
  * .namespace("namespace")
  * .singleMetricAnomalyDetector(SingleMetricAnomalyDetectorProperty.builder()
+ * .accountId("accountId")
  * .dimensions(List.of(DimensionProperty.builder()
  * .name("name")
  * .value("value")
@@ -93,6 +97,16 @@ public interface CfnAnomalyDetectorProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-dimensions)
    */
   public fun dimensions(): Any? = unwrap(this).getDimensions()
+
+  /**
+   * Use this object to include parameters to provide information about your metric to CloudWatch to
+   * help it build more accurate anomaly detection models.
+   *
+   * Currently, it includes the `PeriodicSpikes` parameter.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-metriccharacteristics)
+   */
+  public fun metricCharacteristics(): Any? = unwrap(this).getMetricCharacteristics()
 
   /**
    * The CloudWatch metric math expression for this anomaly detector.
@@ -172,6 +186,31 @@ public interface CfnAnomalyDetectorProps {
      * @param dimensions The dimensions of the metric associated with the anomaly detection band.
      */
     public fun dimensions(vararg dimensions: Any)
+
+    /**
+     * @param metricCharacteristics Use this object to include parameters to provide information
+     * about your metric to CloudWatch to help it build more accurate anomaly detection models.
+     * Currently, it includes the `PeriodicSpikes` parameter.
+     */
+    public fun metricCharacteristics(metricCharacteristics: IResolvable)
+
+    /**
+     * @param metricCharacteristics Use this object to include parameters to provide information
+     * about your metric to CloudWatch to help it build more accurate anomaly detection models.
+     * Currently, it includes the `PeriodicSpikes` parameter.
+     */
+    public
+        fun metricCharacteristics(metricCharacteristics: CfnAnomalyDetector.MetricCharacteristicsProperty)
+
+    /**
+     * @param metricCharacteristics Use this object to include parameters to provide information
+     * about your metric to CloudWatch to help it build more accurate anomaly detection models.
+     * Currently, it includes the `PeriodicSpikes` parameter.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("654cf985810a7c43de41d78bfd9150ff9a04676151f1c39d62bc87069c035555")
+    public
+        fun metricCharacteristics(metricCharacteristics: CfnAnomalyDetector.MetricCharacteristicsProperty.Builder.() -> Unit)
 
     /**
      * @param metricMathAnomalyDetector The CloudWatch metric math expression for this anomaly
@@ -287,6 +326,37 @@ public interface CfnAnomalyDetectorProps {
     override fun dimensions(vararg dimensions: Any): Unit = dimensions(dimensions.toList())
 
     /**
+     * @param metricCharacteristics Use this object to include parameters to provide information
+     * about your metric to CloudWatch to help it build more accurate anomaly detection models.
+     * Currently, it includes the `PeriodicSpikes` parameter.
+     */
+    override fun metricCharacteristics(metricCharacteristics: IResolvable) {
+      cdkBuilder.metricCharacteristics(metricCharacteristics.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param metricCharacteristics Use this object to include parameters to provide information
+     * about your metric to CloudWatch to help it build more accurate anomaly detection models.
+     * Currently, it includes the `PeriodicSpikes` parameter.
+     */
+    override
+        fun metricCharacteristics(metricCharacteristics: CfnAnomalyDetector.MetricCharacteristicsProperty) {
+      cdkBuilder.metricCharacteristics(metricCharacteristics.let(CfnAnomalyDetector.MetricCharacteristicsProperty::unwrap))
+    }
+
+    /**
+     * @param metricCharacteristics Use this object to include parameters to provide information
+     * about your metric to CloudWatch to help it build more accurate anomaly detection models.
+     * Currently, it includes the `PeriodicSpikes` parameter.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("654cf985810a7c43de41d78bfd9150ff9a04676151f1c39d62bc87069c035555")
+    override
+        fun metricCharacteristics(metricCharacteristics: CfnAnomalyDetector.MetricCharacteristicsProperty.Builder.() -> Unit):
+        Unit =
+        metricCharacteristics(CfnAnomalyDetector.MetricCharacteristicsProperty(metricCharacteristics))
+
+    /**
      * @param metricMathAnomalyDetector The CloudWatch metric math expression for this anomaly
      * detector.
      */
@@ -386,6 +456,16 @@ public interface CfnAnomalyDetectorProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-dimensions)
      */
     override fun dimensions(): Any? = unwrap(this).getDimensions()
+
+    /**
+     * Use this object to include parameters to provide information about your metric to CloudWatch
+     * to help it build more accurate anomaly detection models.
+     *
+     * Currently, it includes the `PeriodicSpikes` parameter.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudwatch-anomalydetector.html#cfn-cloudwatch-anomalydetector-metriccharacteristics)
+     */
+    override fun metricCharacteristics(): Any? = unwrap(this).getMetricCharacteristics()
 
     /**
      * The CloudWatch metric math expression for this anomaly detector.

@@ -328,7 +328,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
    *
    * @param props
    */
-  public fun metricSmsMonthToDateSpentUsd(): Metric
+  public fun metricSMSMonthToDateSpentUSD(): Metric
 
   /**
    * The charges you have accrued since the start of the current calendar month for sending SMS
@@ -338,7 +338,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
    *
    * @param props
    */
-  public fun metricSmsMonthToDateSpentUsd(props: MetricOptions): Metric
+  public fun metricSMSMonthToDateSpentUSD(props: MetricOptions): Metric
 
   /**
    * The charges you have accrued since the start of the current calendar month for sending SMS
@@ -349,8 +349,8 @@ public interface ITopic : IResource, INotificationRuleTarget {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("1f5bf7d95644305938cdde06436a98bf86c5b1c175ce1e9a467fda47d6a49663")
-  public fun metricSmsMonthToDateSpentUsd(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("b75f6b19f7160591b65b78c2e814e4c4d9085fa09cbf36be93ab8ebcf59757ed")
+  public fun metricSMSMonthToDateSpentUSD(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * The rate of successful SMS message deliveries.
@@ -359,7 +359,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
    *
    * @param props
    */
-  public fun metricSmsSuccessRate(): Metric
+  public fun metricSMSSuccessRate(): Metric
 
   /**
    * The rate of successful SMS message deliveries.
@@ -368,7 +368,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
    *
    * @param props
    */
-  public fun metricSmsSuccessRate(props: MetricOptions): Metric
+  public fun metricSMSSuccessRate(props: MetricOptions): Metric
 
   /**
    * The rate of successful SMS message deliveries.
@@ -378,8 +378,8 @@ public interface ITopic : IResource, INotificationRuleTarget {
    * @param props
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-  @JvmName("b3a70fccfc4dc7a51391a3c0d2a1a31549ef7b7227b052d7ecbc0e728be4217e")
-  public fun metricSmsSuccessRate(props: MetricOptions.Builder.() -> Unit): Metric
+  @JvmName("111af2ad33e24ca1507cb1296fd551ccb6414bd7dc93a8ad2e286d65fa09c521")
+  public fun metricSMSSuccessRate(props: MetricOptions.Builder.() -> Unit): Metric
 
   /**
    * The ARN of the topic.
@@ -758,7 +758,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      *
      * @param props
      */
-    override fun metricSmsMonthToDateSpentUsd(): Metric =
+    override fun metricSMSMonthToDateSpentUSD(): Metric =
         unwrap(this).metricSMSMonthToDateSpentUSD().let(Metric::wrap)
 
     /**
@@ -769,7 +769,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      *
      * @param props
      */
-    override fun metricSmsMonthToDateSpentUsd(props: MetricOptions): Metric =
+    override fun metricSMSMonthToDateSpentUSD(props: MetricOptions): Metric =
         unwrap(this).metricSMSMonthToDateSpentUSD(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -781,9 +781,9 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("1f5bf7d95644305938cdde06436a98bf86c5b1c175ce1e9a467fda47d6a49663")
-    override fun metricSmsMonthToDateSpentUsd(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricSmsMonthToDateSpentUsd(MetricOptions(props))
+    @JvmName("b75f6b19f7160591b65b78c2e814e4c4d9085fa09cbf36be93ab8ebcf59757ed")
+    override fun metricSMSMonthToDateSpentUSD(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricSMSMonthToDateSpentUSD(MetricOptions(props))
 
     /**
      * The rate of successful SMS message deliveries.
@@ -792,7 +792,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      *
      * @param props
      */
-    override fun metricSmsSuccessRate(): Metric =
+    override fun metricSMSSuccessRate(): Metric =
         unwrap(this).metricSMSSuccessRate().let(Metric::wrap)
 
     /**
@@ -802,7 +802,7 @@ public interface ITopic : IResource, INotificationRuleTarget {
      *
      * @param props
      */
-    override fun metricSmsSuccessRate(props: MetricOptions): Metric =
+    override fun metricSMSSuccessRate(props: MetricOptions): Metric =
         unwrap(this).metricSMSSuccessRate(props.let(MetricOptions::unwrap)).let(Metric::wrap)
 
     /**
@@ -813,9 +813,9 @@ public interface ITopic : IResource, INotificationRuleTarget {
      * @param props
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
-    @JvmName("b3a70fccfc4dc7a51391a3c0d2a1a31549ef7b7227b052d7ecbc0e728be4217e")
-    override fun metricSmsSuccessRate(props: MetricOptions.Builder.() -> Unit): Metric =
-        metricSmsSuccessRate(MetricOptions(props))
+    @JvmName("111af2ad33e24ca1507cb1296fd551ccb6414bd7dc93a8ad2e286d65fa09c521")
+    override fun metricSMSSuccessRate(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricSMSSuccessRate(MetricOptions(props))
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

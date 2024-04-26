@@ -188,7 +188,8 @@ public interface CfnScalingPolicyProps {
    * When a cooldown period is specified here, it overrides the default cooldown.
    *
    * Valid only if the policy type is `SimpleScaling` . For more information, see [Scaling cooldowns
-   * for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html)
+   * for Amazon EC2 Auto
+   * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
    * in the *Amazon EC2 Auto Scaling User Guide* .
    *
    * Default: None
@@ -345,8 +346,8 @@ public interface CfnScalingPolicyProps {
      *
      * Valid only if the policy type is `SimpleScaling` . For more information, see [Scaling
      * cooldowns for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Default: None
      */
@@ -560,8 +561,8 @@ public interface CfnScalingPolicyProps {
      *
      * Valid only if the policy type is `SimpleScaling` . For more information, see [Scaling
      * cooldowns for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Default: None
      */
@@ -806,8 +807,8 @@ public interface CfnScalingPolicyProps {
      *
      * Valid only if the policy type is `SimpleScaling` . For more information, see [Scaling
      * cooldowns for Amazon EC2 Auto
-     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/Cooldown.html) in the *Amazon EC2
-     * Auto Scaling User Guide* .
+     * Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scaling-cooldowns.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
      *
      * Default: None
      *

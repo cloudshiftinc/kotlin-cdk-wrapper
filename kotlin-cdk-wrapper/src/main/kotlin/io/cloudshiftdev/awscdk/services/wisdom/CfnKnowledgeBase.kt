@@ -683,7 +683,7 @@ public open class CfnKnowledgeBase(
     public fun appIntegrationArn(): String
 
     /**
-     * The fields from the source that are made available to your agents in Amazon Q.
+     * The fields from the source that are made available to your agents in Amazon Q in Connect.
      *
      * Optional if ObjectConfiguration is included in the provided DataIntegration.
      *
@@ -746,7 +746,7 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param objectFields The fields from the source that are made available to your agents in
-       * Amazon Q.
+       * Amazon Q in Connect.
        * Optional if ObjectConfiguration is included in the provided DataIntegration.
        *
        * * For
@@ -768,7 +768,7 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param objectFields The fields from the source that are made available to your agents in
-       * Amazon Q.
+       * Amazon Q in Connect.
        * Optional if ObjectConfiguration is included in the provided DataIntegration.
        *
        * * For
@@ -832,7 +832,7 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param objectFields The fields from the source that are made available to your agents in
-       * Amazon Q.
+       * Amazon Q in Connect.
        * Optional if ObjectConfiguration is included in the provided DataIntegration.
        *
        * * For
@@ -856,7 +856,7 @@ public open class CfnKnowledgeBase(
 
       /**
        * @param objectFields The fields from the source that are made available to your agents in
-       * Amazon Q.
+       * Amazon Q in Connect.
        * Optional if ObjectConfiguration is included in the provided DataIntegration.
        *
        * * For
@@ -923,7 +923,7 @@ public open class CfnKnowledgeBase(
       override fun appIntegrationArn(): String = unwrap(this).getAppIntegrationArn()
 
       /**
-       * The fields from the source that are made available to your agents in Amazon Q.
+       * The fields from the source that are made available to your agents in Amazon Q in Connect.
        *
        * Optional if ObjectConfiguration is included in the provided DataIntegration.
        *

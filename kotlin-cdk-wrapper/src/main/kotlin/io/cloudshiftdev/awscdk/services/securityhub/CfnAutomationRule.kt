@@ -1751,9 +1751,15 @@ public open class CfnAutomationRule(
     /**
      * A timestamp that indicates when this finding record was created.
      *
-     * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-     * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The value
-     * cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     *
+     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -1789,9 +1795,15 @@ public open class CfnAutomationRule(
      * A timestamp that indicates when the potential security issue captured by a finding was first
      * observed by the security findings product.
      *
-     * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-     * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The value
-     * cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     *
+     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -1821,9 +1833,15 @@ public open class CfnAutomationRule(
      * A timestamp that indicates when the potential security issue captured by a finding was most
      * recently observed by the security findings product.
      *
-     * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-     * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The value
-     * cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     *
+     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -1843,9 +1861,15 @@ public open class CfnAutomationRule(
     /**
      * The timestamp of when the note was updated.
      *
-     * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-     * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-     * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     *
+     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -2014,9 +2038,15 @@ public open class CfnAutomationRule(
     /**
      * A timestamp that indicates when the finding record was most recently updated.
      *
-     * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-     * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The value
-     * cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     *
+     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -2220,9 +2250,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param createdAt A timestamp that indicates when this finding record was created.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2230,9 +2267,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param createdAt A timestamp that indicates when this finding record was created.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2240,9 +2284,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param createdAt A timestamp that indicates when this finding record was created.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2308,9 +2359,16 @@ public open class CfnAutomationRule(
       /**
        * @param firstObservedAt A timestamp that indicates when the potential security issue
        * captured by a finding was first observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2319,9 +2377,16 @@ public open class CfnAutomationRule(
       /**
        * @param firstObservedAt A timestamp that indicates when the potential security issue
        * captured by a finding was first observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2330,9 +2395,16 @@ public open class CfnAutomationRule(
       /**
        * @param firstObservedAt A timestamp that indicates when the potential security issue
        * captured by a finding was first observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2380,9 +2452,16 @@ public open class CfnAutomationRule(
       /**
        * @param lastObservedAt A timestamp that indicates when the potential security issue captured
        * by a finding was most recently observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2391,9 +2470,16 @@ public open class CfnAutomationRule(
       /**
        * @param lastObservedAt A timestamp that indicates when the potential security issue captured
        * by a finding was most recently observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2402,9 +2488,16 @@ public open class CfnAutomationRule(
       /**
        * @param lastObservedAt A timestamp that indicates when the potential security issue captured
        * by a finding was most recently observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2430,9 +2523,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param noteUpdatedAt The timestamp of when the note was updated.
-       * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2440,9 +2540,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param noteUpdatedAt The timestamp of when the note was updated.
-       * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2450,9 +2557,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param noteUpdatedAt The timestamp of when the note was updated.
-       * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2806,9 +2920,16 @@ public open class CfnAutomationRule(
       /**
        * @param updatedAt A timestamp that indicates when the finding record was most recently
        * updated.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2817,9 +2938,16 @@ public open class CfnAutomationRule(
       /**
        * @param updatedAt A timestamp that indicates when the finding record was most recently
        * updated.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2828,9 +2956,16 @@ public open class CfnAutomationRule(
       /**
        * @param updatedAt A timestamp that indicates when the finding record was most recently
        * updated.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3095,9 +3230,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param createdAt A timestamp that indicates when this finding record was created.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3107,9 +3249,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param createdAt A timestamp that indicates when this finding record was created.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3119,9 +3268,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param createdAt A timestamp that indicates when this finding record was created.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3195,9 +3351,16 @@ public open class CfnAutomationRule(
       /**
        * @param firstObservedAt A timestamp that indicates when the potential security issue
        * captured by a finding was first observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3208,9 +3371,16 @@ public open class CfnAutomationRule(
       /**
        * @param firstObservedAt A timestamp that indicates when the potential security issue
        * captured by a finding was first observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3221,9 +3391,16 @@ public open class CfnAutomationRule(
       /**
        * @param firstObservedAt A timestamp that indicates when the potential security issue
        * captured by a finding was first observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3280,9 +3457,16 @@ public open class CfnAutomationRule(
       /**
        * @param lastObservedAt A timestamp that indicates when the potential security issue captured
        * by a finding was most recently observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3293,9 +3477,16 @@ public open class CfnAutomationRule(
       /**
        * @param lastObservedAt A timestamp that indicates when the potential security issue captured
        * by a finding was most recently observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3306,9 +3497,16 @@ public open class CfnAutomationRule(
       /**
        * @param lastObservedAt A timestamp that indicates when the potential security issue captured
        * by a finding was most recently observed by the security findings product.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3339,9 +3537,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param noteUpdatedAt The timestamp of when the note was updated.
-       * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3351,9 +3556,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param noteUpdatedAt The timestamp of when the note was updated.
-       * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3363,9 +3575,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param noteUpdatedAt The timestamp of when the note was updated.
-       * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3793,9 +4012,16 @@ public open class CfnAutomationRule(
       /**
        * @param updatedAt A timestamp that indicates when the finding record was most recently
        * updated.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3806,9 +4032,16 @@ public open class CfnAutomationRule(
       /**
        * @param updatedAt A timestamp that indicates when the finding record was most recently
        * updated.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3819,9 +4052,16 @@ public open class CfnAutomationRule(
       /**
        * @param updatedAt A timestamp that indicates when the finding record was most recently
        * updated.
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3986,9 +4226,16 @@ public open class CfnAutomationRule(
       /**
        * A timestamp that indicates when this finding record was created.
        *
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4025,9 +4272,16 @@ public open class CfnAutomationRule(
        * A timestamp that indicates when the potential security issue captured by a finding was
        * first observed by the security findings product.
        *
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4057,9 +4311,16 @@ public open class CfnAutomationRule(
        * A timestamp that indicates when the potential security issue captured by a finding was most
        * recently observed by the security findings product.
        *
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4079,9 +4340,16 @@ public open class CfnAutomationRule(
       /**
        * The timestamp of when the note was updated.
        *
-       * Uses the date-time format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4250,9 +4518,16 @@ public open class CfnAutomationRule(
       /**
        * A timestamp that indicates when the finding record was most recently updated.
        *
-       * Uses the `date-time` format specified in [RFC 3339 section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://tools.ietf.org/html/rfc3339#section-5.6) . The
-       * value cannot contain spaces. For example, `2020-03-22T13:22:13.933Z` .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4339,10 +4614,15 @@ public open class CfnAutomationRule(
     /**
      * A timestamp that provides the end date for the date filter.
      *
-     * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-     * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-     * section 5.6, Internet Date/Time
-     * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     *
+     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-end)
      */
@@ -4351,10 +4631,15 @@ public open class CfnAutomationRule(
     /**
      * A timestamp that provides the start date for the date filter.
      *
-     * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-     * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-     * section 5.6, Internet Date/Time
-     * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+     * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+     * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     *
+     * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+     * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+     * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+     * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-start)
      */
@@ -4384,19 +4669,31 @@ public open class CfnAutomationRule(
 
       /**
        * @param end A timestamp that provides the end date for the date filter.
-       * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-       * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-       * section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        */
       public fun end(end: String)
 
       /**
        * @param start A timestamp that provides the start date for the date filter.
-       * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-       * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-       * section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        */
       public fun start(start: String)
     }
@@ -4430,10 +4727,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param end A timestamp that provides the end date for the date filter.
-       * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-       * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-       * section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        */
       override fun end(end: String) {
         cdkBuilder.end(end)
@@ -4441,10 +4744,16 @@ public open class CfnAutomationRule(
 
       /**
        * @param start A timestamp that provides the start date for the date filter.
-       * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-       * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-       * section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        */
       override fun start(start: String) {
         cdkBuilder.start(start)
@@ -4468,10 +4777,16 @@ public open class CfnAutomationRule(
       /**
        * A timestamp that provides the end date for the date filter.
        *
-       * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-       * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-       * section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-end)
        */
@@ -4480,10 +4795,16 @@ public open class CfnAutomationRule(
       /**
        * A timestamp that provides the start date for the date filter.
        *
-       * A correctly formatted example is `2020-05-21T20:16:34.724Z` . The value cannot contain
-       * spaces, and date and time should be separated by `T` . For more information, see [RFC 3339
-       * section 5.6, Internet Date/Time
-       * Format](https://docs.aws.amazon.com/https://www.rfc-editor.org/rfc/rfc3339#section-5.6) .
+       * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
+       * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       *
+       * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
+       * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
+       * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
+       * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
+       * )
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-start)
        */

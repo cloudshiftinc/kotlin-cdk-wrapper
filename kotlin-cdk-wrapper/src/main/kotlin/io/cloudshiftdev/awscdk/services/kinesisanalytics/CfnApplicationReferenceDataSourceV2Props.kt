@@ -68,10 +68,10 @@ public interface CfnApplicationReferenceDataSourceV2Props {
   public fun applicationName(): String
 
   /**
-   * For a SQL-based Managed Service for Apache Flink application, describes the reference data
-   * source by providing the source information (Amazon S3 bucket name and object key name), the
-   * resulting in-application table name that is created, and the necessary schema to map the data
-   * elements in the Amazon S3 object to the in-application table.
+   * For a SQL-based Kinesis Data Analytics application, describes the reference data source by
+   * providing the source information (Amazon S3 bucket name and object key name), the resulting
+   * in-application table name that is created, and the necessary schema to map the data elements in
+   * the Amazon S3 object to the in-application table.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource)
    */
@@ -88,27 +88,27 @@ public interface CfnApplicationReferenceDataSourceV2Props {
     public fun applicationName(applicationName: String)
 
     /**
-     * @param referenceDataSource For a SQL-based Managed Service for Apache Flink application,
-     * describes the reference data source by providing the source information (Amazon S3 bucket name
-     * and object key name), the resulting in-application table name that is created, and the necessary
-     * schema to map the data elements in the Amazon S3 object to the in-application table. 
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     * reference data source by providing the source information (Amazon S3 bucket name and object key
+     * name), the resulting in-application table name that is created, and the necessary schema to map
+     * the data elements in the Amazon S3 object to the in-application table. 
      */
     public fun referenceDataSource(referenceDataSource: IResolvable)
 
     /**
-     * @param referenceDataSource For a SQL-based Managed Service for Apache Flink application,
-     * describes the reference data source by providing the source information (Amazon S3 bucket name
-     * and object key name), the resulting in-application table name that is created, and the necessary
-     * schema to map the data elements in the Amazon S3 object to the in-application table. 
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     * reference data source by providing the source information (Amazon S3 bucket name and object key
+     * name), the resulting in-application table name that is created, and the necessary schema to map
+     * the data elements in the Amazon S3 object to the in-application table. 
      */
     public
         fun referenceDataSource(referenceDataSource: CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty)
 
     /**
-     * @param referenceDataSource For a SQL-based Managed Service for Apache Flink application,
-     * describes the reference data source by providing the source information (Amazon S3 bucket name
-     * and object key name), the resulting in-application table name that is created, and the necessary
-     * schema to map the data elements in the Amazon S3 object to the in-application table. 
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     * reference data source by providing the source information (Amazon S3 bucket name and object key
+     * name), the resulting in-application table name that is created, and the necessary schema to map
+     * the data elements in the Amazon S3 object to the in-application table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("508c0325757aaa27b6e4ab6c3a27227cdb015d60745a26988b93b7c74ac8dc98")
@@ -130,20 +130,20 @@ public interface CfnApplicationReferenceDataSourceV2Props {
     }
 
     /**
-     * @param referenceDataSource For a SQL-based Managed Service for Apache Flink application,
-     * describes the reference data source by providing the source information (Amazon S3 bucket name
-     * and object key name), the resulting in-application table name that is created, and the necessary
-     * schema to map the data elements in the Amazon S3 object to the in-application table. 
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     * reference data source by providing the source information (Amazon S3 bucket name and object key
+     * name), the resulting in-application table name that is created, and the necessary schema to map
+     * the data elements in the Amazon S3 object to the in-application table. 
      */
     override fun referenceDataSource(referenceDataSource: IResolvable) {
       cdkBuilder.referenceDataSource(referenceDataSource.let(IResolvable::unwrap))
     }
 
     /**
-     * @param referenceDataSource For a SQL-based Managed Service for Apache Flink application,
-     * describes the reference data source by providing the source information (Amazon S3 bucket name
-     * and object key name), the resulting in-application table name that is created, and the necessary
-     * schema to map the data elements in the Amazon S3 object to the in-application table. 
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     * reference data source by providing the source information (Amazon S3 bucket name and object key
+     * name), the resulting in-application table name that is created, and the necessary schema to map
+     * the data elements in the Amazon S3 object to the in-application table. 
      */
     override
         fun referenceDataSource(referenceDataSource: CfnApplicationReferenceDataSourceV2.ReferenceDataSourceProperty) {
@@ -151,10 +151,10 @@ public interface CfnApplicationReferenceDataSourceV2Props {
     }
 
     /**
-     * @param referenceDataSource For a SQL-based Managed Service for Apache Flink application,
-     * describes the reference data source by providing the source information (Amazon S3 bucket name
-     * and object key name), the resulting in-application table name that is created, and the necessary
-     * schema to map the data elements in the Amazon S3 object to the in-application table. 
+     * @param referenceDataSource For a SQL-based Kinesis Data Analytics application, describes the
+     * reference data source by providing the source information (Amazon S3 bucket name and object key
+     * name), the resulting in-application table name that is created, and the necessary schema to map
+     * the data elements in the Amazon S3 object to the in-application table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("508c0325757aaa27b6e4ab6c3a27227cdb015d60745a26988b93b7c74ac8dc98")
@@ -179,10 +179,10 @@ public interface CfnApplicationReferenceDataSourceV2Props {
     override fun applicationName(): String = unwrap(this).getApplicationName()
 
     /**
-     * For a SQL-based Managed Service for Apache Flink application, describes the reference data
-     * source by providing the source information (Amazon S3 bucket name and object key name), the
-     * resulting in-application table name that is created, and the necessary schema to map the data
-     * elements in the Amazon S3 object to the in-application table.
+     * For a SQL-based Kinesis Data Analytics application, describes the reference data source by
+     * providing the source information (Amazon S3 bucket name and object key name), the resulting
+     * in-application table name that is created, and the necessary schema to map the data elements in
+     * the Amazon S3 object to the in-application table.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalyticsv2-applicationreferencedatasource.html#cfn-kinesisanalyticsv2-applicationreferencedatasource-referencedatasource)
      */

@@ -32,6 +32,7 @@ import kotlin.collections.List
  * .availabilityZoneId("availabilityZoneId")
  * .cidrBlock("cidrBlock")
  * .enableDns64(false)
+ * .enableLniAtDeviceIndex(123)
  * .ipv4IpamPoolId("ipv4IpamPoolId")
  * .ipv4NetmaskLength(123)
  * .ipv6CidrBlock("ipv6CidrBlock")
@@ -98,6 +99,16 @@ public interface CfnSubnetProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
    */
   public fun enableDns64(): Any? = unwrap(this).getEnableDns64()
+
+  /**
+   * Indicates the device position for local network interfaces in this subnet.
+   *
+   * For example, `1` indicates local network interfaces in this subnet are the secondary network
+   * interface (eth1).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enablelniatdeviceindex)
+   */
+  public fun enableLniAtDeviceIndex(): Number? = unwrap(this).getEnableLniAtDeviceIndex()
 
   /**
    * An IPv4 IPAM pool ID for the subnet.
@@ -260,6 +271,14 @@ public interface CfnSubnetProps {
      * in the *Amazon Virtual Private Cloud User Guide* .
      */
     public fun enableDns64(enableDns64: IResolvable)
+
+    /**
+     * @param enableLniAtDeviceIndex Indicates the device position for local network interfaces in
+     * this subnet.
+     * For example, `1` indicates local network interfaces in this subnet are the secondary network
+     * interface (eth1).
+     */
+    public fun enableLniAtDeviceIndex(enableLniAtDeviceIndex: Number)
 
     /**
      * @param ipv4IpamPoolId An IPv4 IPAM pool ID for the subnet.
@@ -433,6 +452,16 @@ public interface CfnSubnetProps {
      */
     override fun enableDns64(enableDns64: IResolvable) {
       cdkBuilder.enableDns64(enableDns64.let(IResolvable::unwrap))
+    }
+
+    /**
+     * @param enableLniAtDeviceIndex Indicates the device position for local network interfaces in
+     * this subnet.
+     * For example, `1` indicates local network interfaces in this subnet are the secondary network
+     * interface (eth1).
+     */
+    override fun enableLniAtDeviceIndex(enableLniAtDeviceIndex: Number) {
+      cdkBuilder.enableLniAtDeviceIndex(enableLniAtDeviceIndex)
     }
 
     /**
@@ -622,6 +651,16 @@ public interface CfnSubnetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enabledns64)
      */
     override fun enableDns64(): Any? = unwrap(this).getEnableDns64()
+
+    /**
+     * Indicates the device position for local network interfaces in this subnet.
+     *
+     * For example, `1` indicates local network interfaces in this subnet are the secondary network
+     * interface (eth1).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-subnet.html#cfn-ec2-subnet-enablelniatdeviceindex)
+     */
+    override fun enableLniAtDeviceIndex(): Number? = unwrap(this).getEnableLniAtDeviceIndex()
 
     /**
      * An IPv4 IPAM pool ID for the subnet.

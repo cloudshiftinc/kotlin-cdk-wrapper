@@ -44,14 +44,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * For more information, see [Spot
  * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet.html) in the *Amazon EC2 User
- * Guide for Linux Instances* .
- *
- *
- * We strongly discourage using the RequestSpotFleet API because it is a legacy API with no planned
- * investment. For options for requesting Spot Instances, see [Which is the best Spot request method to
- * use?](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-best-practices.html#which-spot-request-method-to-use)
- * in the *Amazon EC2 User Guide for Linux Instances* .
- *
+ * Guide* .
  *
  * Example:
  *
@@ -2369,8 +2362,6 @@ public open class CfnSpotFleet(
     /**
      * The ID of the subnet associated with the network interface.
      *
-     * Applies only if creating a network interface when launching an instance.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
      */
     public fun subnetId(): String? = unwrap(this).getSubnetId()
@@ -2525,7 +2516,6 @@ public open class CfnSpotFleet(
 
       /**
        * @param subnetId The ID of the subnet associated with the network interface.
-       * Applies only if creating a network interface when launching an instance.
        */
       public fun subnetId(subnetId: String)
     }
@@ -2711,7 +2701,6 @@ public open class CfnSpotFleet(
 
       /**
        * @param subnetId The ID of the subnet associated with the network interface.
-       * Applies only if creating a network interface when launching an instance.
        */
       override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
@@ -2838,8 +2827,6 @@ public open class CfnSpotFleet(
 
       /**
        * The ID of the subnet associated with the network interface.
-       *
-       * Applies only if creating a network interface when launching an instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-instancenetworkinterfacespecification.html#cfn-ec2-spotfleet-instancenetworkinterfacespecification-subnetid)
        */
@@ -7102,17 +7089,7 @@ public open class CfnSpotFleet(
     public fun monitoring(): Any? = unwrap(this).getMonitoring()
 
     /**
-     * One or more network interfaces.
-     *
-     * If you specify a network interface, you must specify subnet IDs and security group IDs using
-     * the network interface.
-     *
-     *
-     * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-     * specify an EFA, you must use
-     * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-     * .
-     *
+     * The network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)
      */
@@ -7139,6 +7116,9 @@ public open class CfnSpotFleet(
     /**
      * The security groups.
      *
+     * If you specify a network interface, you must specify any security groups as part of the
+     * network interface instead of using this parameter.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)
      */
     public fun securityGroups(): Any? = unwrap(this).getSecurityGroups()
@@ -7163,6 +7143,9 @@ public open class CfnSpotFleet(
      *
      * To specify multiple subnets, separate them using commas; for example,
      * "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+     *
+     * If you specify a network interface, you must specify any subnets as part of the network
+     * interface instead of using this parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid)
      */
@@ -7335,41 +7318,17 @@ public open class CfnSpotFleet(
       public fun monitoring(monitoring: SpotFleetMonitoringProperty.Builder.() -> Unit)
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify subnet IDs and security group IDs
-       * using the network interface.
-       *
-       *
-       * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-       * specify an EFA, you must use
-       * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-       * .
+       * @param networkInterfaces The network interfaces.
        */
       public fun networkInterfaces(networkInterfaces: IResolvable)
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify subnet IDs and security group IDs
-       * using the network interface.
-       *
-       *
-       * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-       * specify an EFA, you must use
-       * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-       * .
+       * @param networkInterfaces The network interfaces.
        */
       public fun networkInterfaces(networkInterfaces: List<Any>)
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify subnet IDs and security group IDs
-       * using the network interface.
-       *
-       *
-       * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-       * specify an EFA, you must use
-       * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-       * .
+       * @param networkInterfaces The network interfaces.
        */
       public fun networkInterfaces(vararg networkInterfaces: Any)
 
@@ -7400,16 +7359,22 @@ public open class CfnSpotFleet(
 
       /**
        * @param securityGroups The security groups.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       public fun securityGroups(securityGroups: IResolvable)
 
       /**
        * @param securityGroups The security groups.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       public fun securityGroups(securityGroups: List<Any>)
 
       /**
        * @param securityGroups The security groups.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       public fun securityGroups(vararg securityGroups: Any)
 
@@ -7429,6 +7394,9 @@ public open class CfnSpotFleet(
        * @param subnetId The IDs of the subnets in which to launch the instances.
        * To specify multiple subnets, separate them using commas; for example,
        * "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+       *
+       * If you specify a network interface, you must specify any subnets as part of the network
+       * interface instead of using this parameter.
        */
       public fun subnetId(subnetId: String)
 
@@ -7636,45 +7604,21 @@ public open class CfnSpotFleet(
           monitoring(SpotFleetMonitoringProperty(monitoring))
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify subnet IDs and security group IDs
-       * using the network interface.
-       *
-       *
-       * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-       * specify an EFA, you must use
-       * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-       * .
+       * @param networkInterfaces The network interfaces.
        */
       override fun networkInterfaces(networkInterfaces: IResolvable) {
         cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable::unwrap))
       }
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify subnet IDs and security group IDs
-       * using the network interface.
-       *
-       *
-       * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-       * specify an EFA, you must use
-       * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-       * .
+       * @param networkInterfaces The network interfaces.
        */
       override fun networkInterfaces(networkInterfaces: List<Any>) {
         cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param networkInterfaces One or more network interfaces.
-       * If you specify a network interface, you must specify subnet IDs and security group IDs
-       * using the network interface.
-       *
-       *
-       * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-       * specify an EFA, you must use
-       * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-       * .
+       * @param networkInterfaces The network interfaces.
        */
       override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
           networkInterfaces(networkInterfaces.toList())
@@ -7713,6 +7657,8 @@ public open class CfnSpotFleet(
 
       /**
        * @param securityGroups The security groups.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       override fun securityGroups(securityGroups: IResolvable) {
         cdkBuilder.securityGroups(securityGroups.let(IResolvable::unwrap))
@@ -7720,6 +7666,8 @@ public open class CfnSpotFleet(
 
       /**
        * @param securityGroups The security groups.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       override fun securityGroups(securityGroups: List<Any>) {
         cdkBuilder.securityGroups(securityGroups.map{CdkObjectWrappers.unwrap(it)})
@@ -7727,6 +7675,8 @@ public open class CfnSpotFleet(
 
       /**
        * @param securityGroups The security groups.
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
        */
       override fun securityGroups(vararg securityGroups: Any): Unit =
           securityGroups(securityGroups.toList())
@@ -7749,6 +7699,9 @@ public open class CfnSpotFleet(
        * @param subnetId The IDs of the subnets in which to launch the instances.
        * To specify multiple subnets, separate them using commas; for example,
        * "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+       *
+       * If you specify a network interface, you must specify any subnets as part of the network
+       * interface instead of using this parameter.
        */
       override fun subnetId(subnetId: String) {
         cdkBuilder.subnetId(subnetId)
@@ -7886,17 +7839,7 @@ public open class CfnSpotFleet(
       override fun monitoring(): Any? = unwrap(this).getMonitoring()
 
       /**
-       * One or more network interfaces.
-       *
-       * If you specify a network interface, you must specify subnet IDs and security group IDs
-       * using the network interface.
-       *
-       *
-       * `SpotFleetLaunchSpecification` currently does not support Elastic Fabric Adapter (EFA). To
-       * specify an EFA, you must use
-       * [LaunchTemplateConfig](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LaunchTemplateConfig.html)
-       * .
-       *
+       * The network interfaces.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-networkinterfaces)
        */
@@ -7923,6 +7866,9 @@ public open class CfnSpotFleet(
       /**
        * The security groups.
        *
+       * If you specify a network interface, you must specify any security groups as part of the
+       * network interface instead of using this parameter.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-securitygroups)
        */
       override fun securityGroups(): Any? = unwrap(this).getSecurityGroups()
@@ -7947,6 +7893,9 @@ public open class CfnSpotFleet(
        *
        * To specify multiple subnets, separate them using commas; for example,
        * "subnet-1234abcdeexample1, subnet-0987cdef6example2".
+       *
+       * If you specify a network interface, you must specify any subnets as part of the network
+       * interface instead of using this parameter.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetlaunchspecification.html#cfn-ec2-spotfleet-spotfleetlaunchspecification-subnetid)
        */
