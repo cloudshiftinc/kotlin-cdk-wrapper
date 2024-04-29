@@ -28,7 +28,7 @@ jobs:
 
     # https://github.com/actions/checkout
     - name: 'checkout'
-      uses: 'actions/checkout@1d96c772d19495a3b5c517cd2bc0cb401ea0529f' # v4.1.3
+      uses: 'actions/checkout@0ad4b8fadaa221de15dcec353f45205ec38ea70b' # v4.1.4
 
     # https://github.com/actions/setup-java
     - name: 'Set up JDK'
@@ -40,11 +40,11 @@ jobs:
 
     # https://github.com/gradle/wrapper-validation-action
     - name: 'Validate Gradle Wrapper'
-      uses: 'gradle/wrapper-validation-action@5188e9b5527a0a094cee21e2fe9a8ca44b4629af' # v3.3.1
+      uses: 'gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5' # v3.3.2
 
     # https://github.com/gradle/actions/tree/main/setup-gradle
     - name: 'Set up Gradle'
-      uses: 'gradle/actions/setup-gradle@750cdda3edd6d51b7fdfc069d2e2818cf3c44f4c' # v3.3.1
+      uses: 'gradle/actions/setup-gradle@db19848a5fa7950289d3668fb053140cf3028d43' # v3.3.2
       with:
         gradle-version: 'wrapper'
         gradle-home-cache-includes: |-
